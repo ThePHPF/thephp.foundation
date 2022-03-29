@@ -1,0 +1,36 @@
+---
+title: Blog
+layout: default
+permalink: blog
+generator: pagination
+pagination:
+    max_per_page: 5
+use:
+    - posts
+---
+<main class="bg-[#f4f4f4] flex flex-col justify-items-center bg-[#f4f4f4] min-w-[320px] min-h-[100vh] pt-4 w-full">
+    <article class="m-auto max-w-[960px] w-full">
+        <header>
+            <h2>Blog</h2>
+        </header>
+
+        {% for post in page.pagination.items %}
+        <section class="border-b-2 border-black mb-4">
+            <header>
+                <h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
+            </header>
+
+            <div>
+                {{ post.blocks.content|raw }}
+            </div>
+        </section>
+        {% endfor %}
+
+        {% if page.pagination.previous_page or page.pagination.next_page %}
+        <nav class="flex flex-row items-center justify-center list-none mt-4">
+            {% if page.pagination.previous_page %}<a class="max-w-[45%]" href="{{ site.url }}{{ page.pagination.previous_page.url }}">Newer Posts</a>{% endif %}
+            {% if page.pagination.next_page %}<a class="max-w-[45%]" href="{{ site.url }}{{ page.pagination.next_page.url }}">Older Posts</a>{% endif %}
+        </nav>
+        {% endif %}
+    </article>
+</main>

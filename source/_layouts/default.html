@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}{{ page.title }}{% endblock %} &mdash; {{ site.title }} &mdash; {{ site.subtitle }}</title>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block head_meta %}
+        <meta name="robots" content="noindex, follow">
+    {% endblock %}
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="apple-touch-startup-image" href="{{ site.url }}/assets/icons/php_foundation.svg">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" sizes="76x76" href="{{ site.url }}/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="120x120" href="{{ site.url }}/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="128x128" href="{{ site.url }}/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="152x152" href="{{ site.url }}/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="196x196" href="{{ site.url }}/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="512x512" href="{{ site.url }}/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="1024x1024" href="{{ site.url }}/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="2048x2048" href="{{ site.url }}/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ site.url }}/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ site.url }}/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="128x128" href="{{ site.url }}/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ site.url }}/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="196x196" href="{{ site.url }}/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="512x512" href="{{ site.url }}/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="{{ site.url }}/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="2048x2048" href="{{ site.url }}/assets/icons/php_foundation.svg">
+
+    <link rel="alternate" type="application/atom+xml" href="{{ site.url }}/atom.xml" title="{{ site.title }} activity feed" />
+    {% block head_styles %}
+    {% endblock %}
+    {% block head_scripts %}
+    {% endblock %}
+</head>
+<body>
+    <div class="wrapper w-full">
+    <header>
+        <header class="border-b border-hborder box-border z-50 flex items-center
+            justify-between bg-white top-0 px-4 h-12 sticky min-w-[320px]
+            box-border md:h-16 md:px-8">
+            <div class="nav flex items-center h-full">
+                <a aria-current="page" class="no-underline mr-8 flex items-center h-full" href="/">
+                    <div class="flex mr-2 md:mr-4 h-full">
+                        <img class="h-full" src="{{ site.url }}/assets/icons/php_foundation.svg" alt="php-foundation-logo">
+                    </div>
+
+                    <div class="text-[#27282c] font-semibold text-sm md:text-xl ">
+                        The PHP 
+                        <br class="md:hidden"/> Foundation
+                    </div>
+                </a>
+
+                <div class="hidden lg:block text-base">
+                    <a class="text-[rgba(25,25,28,.7)] nav-org"
+                       target="_blank" rel="noopener noreferrer"
+                       href="https://php.net/">
+                        php.net
+                    </a>
+                </div>
+            </div>
+
+           <div class="header-group flex items-center">
+                <div class="hidden lg:block text-base">
+                    <a class="text-[rgba(25,25,28,.7)] mr-4"
+                       href="{{ site.url }}/blog">
+                       Blog
+                    </a>
+                </div>
+
+               <a href="mailto:contact@thephp.foundation">
+                   <button data-test="button" type="button"
+                           class="py-1.5 px-4 text-white bg-[#7f52ff] rounded-3xl
+                            hover:bg-[rgba(127,82,255,.8)]">
+                       Write Us
+                   </button>
+               </a>
+           </div>
+    </header>
+
+    {%block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
+
+    <footer class="bg-[#27282c] py-8 px-4 md:flex items-center justify-between">
+        <ul class="flex flex-wrap list-none mb-6 text-[#27282c] text-base font-normal items-center md:mb-0">
+            <li class="footer-li">
+                <a href="{{ site.url }}/code-of-conduct"
+                    class="text-[rgba(39, 40, 44, .7)] footer-link hover:text-[#27282c]">
+                    Code of Conduct
+                </a>
+            </li>
+
+            <li class="footer-li lg:hidden">
+                <a href="{{ site.url }}/blog"
+                    class="text-[rgba(39, 40, 44, .7)] footer-link hover:text-[#27282c]">
+                    Blog
+                </a>
+            </li>
+
+            <li class="footer-li">
+                <a href="https://php.net" class="group-link footer-link">
+                    PHP website
+                </a>
+            </li>
+        </ul>
+
+        <p class="font-normal flex items-center footer-link">
+            &copy; The PHP Foundation
+        </p>
+    </footer>
+
+    {% block scripts %}
+    {% endblock %}
+
+    {% block scripts_after %}
+    {% endblock %}
+</body>
+</html>

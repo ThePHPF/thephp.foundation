@@ -1,0 +1,42 @@
+{% extends "default" %}
+
+{% block head_meta %}
+    <meta name="robots" content="index, follow">
+{% endblock %}
+
+{% block content_wrapper %}
+<main class="flex flex-row justify-center bg-[#f4f4f4] min-w-[320px] min-h-[100vh] w-full pt-4">
+    <article class="max-w-[960px] w-full">
+        <header class="border-b-2 border-black mb-4">
+            <h2>{{ page.title }}</h2>
+
+            {% if page.author is defined%}
+            <div class="pb-2 ml-4">
+                <span class="text-[rgba(25,25,28,.7)]">by</span> <a href="{{ page.author.url }}">{{ page.author.name }}</a>
+            </div>
+            {% endif %}
+        </header>
+
+        <section class="main_body">
+            {% if page.pagination is not defined %}
+            <p><code>&lt;?php echo 'Hello World!';</code></p>
+            {% endif %}
+
+            {{ page.blocks.content|raw }}
+        </div>
+
+        {% if page.previous_post or page.next_post %}
+        <nav class="flex flex-row items-center justify-center mt-4 article">
+            <ul class="list-none">
+                {% if page.next_post %}
+                    <li>Next: <a class="next" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}"><span class="title">{{ page.next_post.title }}</span></a></li>
+                {% endif %}
+                {% if page.previous_post %}
+                    <li>Previous: <a class="previous" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}"><span class="title">{{ page.previous_post.title }}</span></a></li>
+                {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
+    </article>
+</main>
+{% endblock %}

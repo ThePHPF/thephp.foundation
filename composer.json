@@ -1,0 +1,39 @@
+{
+    "name": "sculpin/blog-skeleton",
+    "description": "A Skeleton for a Sculpin Based Blog",
+    "type": "sculpin-skeleton",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dragonfly Development Inc.",
+            "email": "info@dflydev.com",
+            "homepage": "http://dflydev.com"
+        },
+        {
+            "name": "Beau Simensen",
+            "email": "beau@dflydev.com",
+            "homepage": "http://beausimensen.com"
+        }
+    ],
+    "require": {
+        "sculpin/sculpin": "^3.1"
+    },
+    "scripts": {
+        "publish": [
+            "./publish.sh"
+        ],
+        "sculpin-watch": [
+            "Composer\\Config::disableProcessTimeout",
+            "sculpin generate --watch --server"
+        ],
+        "yarn-watch": [
+            "Composer\\Config::disableProcessTimeout",
+            "yarn encore dev --watch"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "sculpin/sculpin-theme-composer-plugin": true
+        }
+    }
+}

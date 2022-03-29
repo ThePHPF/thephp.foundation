@@ -1,0 +1,27 @@
+{
+  "name": "the-php-foundation",
+  "version": "1.0.0",
+  "description": "Asset toolchain for thephp.foundation website",
+  "main": "tailwind.config.js",
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.6",
+    "postcss-import": "^14.0.2",
+    "tailwindcss": "^3.0.22"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tailwindcss -i ./src/styles/app.css -o ./dist/output.css --watch",
+    "build": "tailwindcss -o ./dist/output.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/thephpf/thephp.foundation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thephpf/thephp.foundation/issues"
+  },
+  "homepage": "https://github.com/thephpf/thephp.foundation"
+}
