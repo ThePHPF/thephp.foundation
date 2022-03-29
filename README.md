@@ -106,6 +106,4 @@ The site defines two top-level pages:
 
 ## Deployment
 
-- This can only be done by maintainers (those with write access to the repository).
-
-Run `./publish.sh` to deploy to production.
+The [deployment workflow](.github/workflows/deploy-site.yml) auto-deploys to gh-pages on a push to the main branch.

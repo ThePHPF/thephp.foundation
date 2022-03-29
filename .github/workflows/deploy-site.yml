@@ -1,0 +1,46 @@
+name: Deploy website
+
+on:
+  push:
+    branches:
+    - "main"
+
+jobs:
+  deploy:
+    name: Deloy website
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@main
+
+    - name: Setup Node
+      uses: actions/setup-node@v2
+      with:
+        node-version: 16
+
+    - name: Install asset deps
+      run: npm install
+
+    - name: Build production assets
+      run: npx tailwind -i assets/css/app.css -o source/assets/css/app.css --minify
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: 8.0
+        extensions: mbstring, intl, readline
+        tools: composer:v2
+
+    - name: Install PHP deps
+      uses: ramsey/composer-install@v2
+
+    - name: Build production site
+      run: ./vendor/bin/sculpin generate --env=prod
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      if: ${{ github.ref == 'refs/heads/main' }}
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./output_prod
+        cname: thephp.foundation
