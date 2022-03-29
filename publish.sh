@@ -22,7 +22,7 @@ git stash push
 git switch gh-pages
 
 cp -R output_prod/* .
-rm -rf output_prod
+rm -rf output_*
 
 git add .
 git commit -m "Rebuild site at ${rev}"
