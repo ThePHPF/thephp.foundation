@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 if ! ./node_modules/.bin/tailwind -i assets/css/app.css -o source/assets/css/app.css --minify; then
     echo "Unable to build assets" >&2
     exit 1
@@ -10,4 +12,21 @@ if ! ./vendor/bin/sculpin generate --env=prod; then
     exit 1
 fi
 
-# Write functionality here for moving into github-pages
+# Get current branch name
+branch=$(git branch --show-current)
+
+# Get current commit revision
+rev=$(git rev-parse --short HEAD)
+
+git stash
+git switch gh-pages
+
+cp -R output_prod/* .
+rm -rf output_prod
+
+git add .
+git commit -m "Rebuild site at ${rev}"
+git push origin HEAD:gh-pages
+
+git switch "${branch}"
+git stash pop

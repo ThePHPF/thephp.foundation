@@ -106,4 +106,6 @@ The site defines two top-level pages:
 
 ## Deployment
 
-Still TBD.
+- This can only be done by maintainers (those with write access to the repository).
+
+Run `./publish.sh` to deploy to production.
