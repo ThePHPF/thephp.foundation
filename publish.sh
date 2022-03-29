@@ -2,7 +2,7 @@
 
 set -e
 
-if ! ./node_modules/.bin/tailwind -i assets/css/app.css -o source/assets/css/app.css --minify; then
+if ! npx tailwind -i assets/css/app.css -o source/assets/css/app.css --minify; then
     echo "Unable to build assets" >&2
     exit 1
 fi
