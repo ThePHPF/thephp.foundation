@@ -18,7 +18,7 @@ branch=$(git branch --show-current)
 # Get current commit revision
 rev=$(git rev-parse --short HEAD)
 
-git stash
+git stash push
 git switch gh-pages
 
 cp -R output_prod/* .
