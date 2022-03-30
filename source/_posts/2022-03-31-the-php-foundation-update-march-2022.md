@@ -49,23 +49,6 @@ So whenever possible, developers will be expected to update the [PHP Internals B
 
 On the administration side, we plan to work on increasing the transparency of our operations: to shed some light on our governance structure, discussions, and so on.
 
-### PHP Foundation’s Statement on Social Responsibility
-
-The PHP Foundation is in the business of moving funds from one part of society to another in order to achieve our goals.
-
-We are essentially a social endeavor, and we are enjoying a modest level of success even at this early stage in the project.
-
-The administration of the Foundation and its major sponsors agree on our that we are obligationed to disperse these funds responsibly, in-line with our conscientious ideology.
-
-We shall start as we mean to go on, own that responsibility, and take action accordingly.
-
-Ukraine is suffering an unprovoked and indiscriminate attack on its citizens. Children are dying while they are hiding.
-
-Whatever your flavor of politics, whatever your thoughts are on whether or not an entity has an obligation to operate with a social conscience, at the end of the day, we are all human beings.
-
-We simply cannot allow the funds raised by the Foundation to be dispersed without some of it going towards helping the humanitarian crisis in Ukraine; we cannot put our selfish goals before the goals of humanity: to live in peace, and should that fail, to survive as best we can.
-
-The PHP Foundation will be donating to the [Support Ukraine](https://opencollective.com/support-ukraine) collective, which is a purely humanitarian effort (inclusive of journalism) – no military organizations will be supported.
 
 Read more about the Support Ukraine collective here:
 
