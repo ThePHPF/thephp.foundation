@@ -1,36 +1,44 @@
 @tailwind base;
 
-p {
-  @apply pb-4;
+p, ol, ul {
+  @apply pb-8;
+}
+
+p, li {
+	@apply font-normal text-zinc-800 text-base leading-relaxed;
 }
 
 a {
-  @apply text-blue-700;
+  @apply text-purple-500 underline
 }
 
 
-a:hover {
-  @apply text-blue-400;
+a:hover, a:visited:hover {
+  @apply text-zinc-400;
 }
 
-a:visited {
-  @apply text-purple-500;
+/*a:visited {*/
+/*  @apply text-purple-500;*/
+/*}*/
+
+h1, h2, h3, h4 {
+	@apply mb-6 mt-6 text-zinc-800;
 }
 
 h1 {
-  @apply font-black font-bold text-4xl mb-2;
+  @apply leading-tight font-bold text-4xl;
 }
 
 h2 {
-  @apply font-black font-bold text-3xl mb-2;
+  @apply font-bold text-3xl;
 }
 
 h3 {
-  @apply font-black font-bold text-2xl mb-2;
+  @apply font-bold text-2xl;
 }
 
 h4 {
-  @apply font-black font-bold text-xl mb-2;
+  @apply font-bold text-xl;
 }
 
 ul {
@@ -45,9 +53,11 @@ ol {
 @tailwind utilities;
 
 body {
-    font-family: "Inter",system-ui,-apple-system,BlinkMacSystemFont,
-    "Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Droid Sans","Helvetica Neue",Arial,sans-serif;
+	font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    /*font-family: "Inter",system-ui,-apple-system,BlinkMacSystemFont,*/
+    /*"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Droid Sans","Helvetica Neue",Arial,sans-serif;*/
     box-sizing: border-box;
+	@apply text-zinc-600;
 }
 
 .li-item:not(:last-child) {

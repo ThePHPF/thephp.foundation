@@ -5,7 +5,8 @@ tags:
     - update
 author:
   name: Roman Pronskiy
-  url: https://opencollective.com/pronskiy
+  url: https://twitter.com/pronskiy
+published_at: 31 March 2022
 ---
 In November, the PHP Foundation was launched publicly and we’ve seen enormous support from the community.
 Thanks to all of you who have already supported the initiative! We’re planning to update you about our workstream activities on a monthly basis, and this is our first update post.

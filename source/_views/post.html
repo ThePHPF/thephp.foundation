@@ -5,25 +5,22 @@
 {% endblock %}
 
 {% block content_wrapper %}
-<main class="flex flex-row justify-center bg-[#f4f4f4] min-w-[320px] min-h-[100vh] w-full pt-4">
-    <article class="max-w-[960px] w-full">
-        <header class="border-b-2 border-black mb-4">
-            <h2>{{ page.title }}</h2>
+<main class="flex flex-row justify-center min-w-[320px] min-h-[100vh] w-full pt-4">
+    <article class="max-w-2xl w-full bg-white">
+        <header class="mb-8">
+            <h1 class="">{{ page.title }}</h1>
 
             {% if page.author is defined%}
-            <div class="pb-2 ml-4">
-                <span class="text-[rgba(25,25,28,.7)]">by</span> <a href="{{ page.author.url }}">{{ page.author.name }}</a>
+            <div class="text-xs">
+				Published on <span>{{ page.published_at|date("M d, Y") }}</span>
+				by <a href="{{ page.author.url }}">{{ page.author.name }}</a>
             </div>
             {% endif %}
         </header>
 
         <section class="main_body">
-            {% if page.pagination is not defined %}
-            <p><code>&lt;?php echo 'Hello World!';</code></p>
-            {% endif %}
-
             {{ page.blocks.content|raw }}
-        </div>
+        </section>
 
         {% if page.previous_post or page.next_post %}
         <nav class="flex flex-row items-center justify-center mt-4 article">
