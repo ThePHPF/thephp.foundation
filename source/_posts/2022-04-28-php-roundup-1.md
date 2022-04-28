@@ -16,11 +16,11 @@ In this series, we highlight some of the interesting and major improvements made
 
 You don’t necessarily have to be a PHP Foundation backer to follow the PHP Roundup. We’ll be publishing the posts on our website, and you can subscribe to a newsletter:
 
-<form method="POST" action="https://php-foundation-mailcoach.com/subscribe/9be4e2bd-f9d8-475c-b00e-2dcc4cf90056">
+<form method="POST" action="https://php-foundation-mailcoach.com/subscribe/9be4e2bd-f9d8-475c-b00e-2dcc4cf90056" class="mb-8 flex justify-center items-center h-screen">
     <div>
-        <label for="email">Email</label>
-        <input type=email name="email">
-        <button type="submit">Subscribe</button>
+        <label for="email" >Email</label>
+        <input type=email name="email" class="form-inp">
+        <button type="submit" class="form-btn">Subscribe</button>
     </div>
 </form>
 
@@ -140,7 +140,6 @@ A special mention goes to [mailcoach.app](https://mailcoach.app/) for providing 
 
 Follow us on Twitter [@ThePHPF](https://twitter.com/thephpf) to get the latest updates from the Foundation.
 
+💜️ 🐘
 
 > PHP Roundup is prepared by Ayesh Karunaratne from **[PHP.Watch](https://php.watch)**, a source for PHP News, Articles, Upcoming Changes, and more.
-
-💜️ 🐘

@@ -9,7 +9,7 @@ p, li {
 }
 
 a {
-  @apply text-purple-500 underline
+  @apply text-blue-500 underline
 }
 
 
@@ -20,6 +20,14 @@ a:hover, a:visited:hover {
 /*a:visited {*/
 /*  @apply text-purple-500;*/
 /*}*/
+
+.form-inp, .form-btn {
+	@apply border border-slate-300 hover:border-indigo-300;
+}
+
+.form-btn {
+	@apply pl-4 pr-4 rounded;
+}
 
 h1, h2, h3, h4 {
 	@apply mb-6 mt-6 text-zinc-800;
@@ -47,6 +55,14 @@ ul {
 
 ol {
   @apply list-decimal list-outside mb-4 ml-5;
+}
+
+blockquote {
+	@apply bg-yellow-50 ;
+}
+
+blockquote p {
+	@apply p-4 pl-8;
 }
 
 @tailwind components;
