@@ -66,7 +66,7 @@ Every major change to PHP is discussed and implemented with the consensus of the
 
 * **Discussion: [Add true type](https://wiki.php.net/rfc/true-type) 💜**
 
-  RFC by George Peter Banyard is currently under discussion, to add true as a type to PHP. In PHP 8.0 Union Types, we added `false `as one of the possible members of Union Types, but left out `true`. This RFC proposes to complete it by adding `true `as a type as well.
+  RFC by George Peter Banyard is currently under discussion, to add true as a type to PHP. In PHP 8.0 Union Types, we added `false` as one of the possible members of Union Types, but left out `true`. This RFC proposes to complete it by adding `true `as a type as well.
 
 
 * **Accepted: [Undefined Variable Error Promotion](https://wiki.php.net/rfc/undefined_variable_error_promotion)**
