@@ -7,6 +7,10 @@
         @apply font-sans text-zinc-600 box-border;
     }
 
+    html {
+        @apply min-h-screen;
+    }
+
     h1, h2, h3, h4 {
         @apply mb-6 mt-6 text-zinc-800;
     }
