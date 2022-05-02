@@ -86,8 +86,8 @@
 
     {%block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
 
-    <footer class="bg-[#27282c] py-8 px-4 md:flex items-center justify-between">
-        <ul class="flex flex-wrap list-none mb-6 text-[#27282c] text-base font-normal items-center md:mb-0">
+    <footer class="py-8 px-4 md:flex md:items-center md:justify-between bg-[#27282c]">
+        <ul class="mb-6 md:mb-0 flex flex-wrap items-center list-none text-[#27282c] text-base font-normal">
             <li class="footer-li">
                 <a href="{{ site.url }}/code-of-conduct"
                     class="footer-link text-white/30 hover:text-slate-900 no-underline hover:no-underline border-b-0 border-transparent">
@@ -109,7 +109,7 @@
             </li>
         </ul>
 
-        <p class="font-normal flex items-center footer-link text-white/30 hover:text-slate-900 no-underline hover:no-underline border-b-0 border-transparent">
+        <p class="font-normal text-center sm:flex sm:items-center footer-link text-white/30 hover:text-slate-900 no-underline hover:no-underline border-b-0 border-transparent">
             &copy; The PHP Foundation
         </p>
     </footer>
