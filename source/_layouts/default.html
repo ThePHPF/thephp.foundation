@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{% block title %}{{ page.title }}{% endblock %} &mdash; {{ site.title }} &mdash; {{ site.subtitle }}</title>
+    <title>{% block title %}{{ page.title|raw }}{% endblock %} &mdash; {{ site.title }} &mdash; {{ site.subtitle }}</title>
     <meta charset="utf-8">
     <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="//unpkg.com/alpinejs" defer></script>
 
     <link rel="apple-touch-startup-image" href="{{ site.url }}/assets/icons/php_foundation.svg">
     <meta name="mobile-web-app-capable" content="yes">
@@ -44,7 +45,8 @@
     <header>
         <header class="border-b border-hborder box-border z-50 flex items-center
             justify-between bg-white top-0 px-4 h-12 sticky min-w-[320px]
-            box-border md:h-16 md:px-8">
+            box-border md:h-16 lg:px-8"
+            x-data="{ isOpen: false }" @keydown.escape="isOpen = false" @click.away="isOpen = false">
             <div class="nav flex items-center h-full">
                 <a aria-current="page" class="no-underline mr-8 flex items-center h-full" href="/">
                     <div class="flex mr-2 md:mr-4 h-full">
@@ -52,7 +54,7 @@
                     </div>
 
                     <div class="text-[#27282c] font-semibold text-sm md:text-xl ">
-                        The PHP 
+                        The PHP
                         <br class="md:hidden"/> Foundation
                     </div>
                 </a>
@@ -67,8 +69,13 @@
             </div>
 
            <div class="header-group flex items-center">
-                <div class="hidden lg:block text-base">
-                    <a class="text-[rgba(25,25,28,.7)] mr-4"
+                <div class="hidden lg:block text-xl lg:text-base font-medium lg:font-normal absolute top-16 left-0 right-0 drop-shadow-xl lg:drop-shadow-none lg:top-0 lg:relative px-4 lg:px-0 bg-white" :class="{ 'block': isOpen, 'hidden': !isOpen }">
+                    <a class="text-[rgba(25,25,28,.7)] mr-0 lg:mr-4 block lg:inline-block py-2 lg:py-0 block lg:hidden"
+                       target="_blank" rel="noopener noreferrer"
+                       href="https://php.net/">
+                        php.net
+                    </a>
+                    <a class="text-[rgba(25,25,28,.7)] mr-0 lg:mr-4 block lg:inline-block py-2 lg:py-0"
                        href="{{ site.url }}/blog">
                        Blog
                     </a>
@@ -81,6 +88,13 @@
                        Write Us
                    </button>
                </a>
+
+               <button :aria-expanded="isOpen" aria-controls="nav-list" aria-label="toggle menu" @click="isOpen = !isOpen" type="button" class="block px-2 text-indigo-900 lg:hidden focus:outline-none">
+                   <svg class="w-8 h-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                       <path x-show.transition="!isOpen" d="M3 7h18a1 1 0 100-2H3a1 1 0 000 2zm18 10H3a1 1 0 000 2h18a1 1 0 000-2zm0-4H3a1 1 0 000 2h18a1 1 0 000-2zm0-4H3a1 1 0 000 2h18a1 1 0 000-2z"></path>
+                       <path x-show="isOpen" d="M13.41 12l6.3-6.29a1.004 1.004 0 00-1.42-1.42L12 10.59l-6.29-6.3a1.004 1.004 0 10-1.42 1.42l6.3 6.29-6.3 6.29a.999.999 0 000 1.42 1 1 0 001.42 0l6.29-6.3 6.29 6.3a1.001 1.001 0 001.639-.325 1 1 0 00-.22-1.095L13.41 12z" style="display: none;"></path>
+                   </svg>
+               </button>
            </div>
     </header>
 
@@ -103,8 +117,8 @@
             </li>
 
             <li class="footer-li">
-                <a href="https://php.net" class="group-link footer-link">
-                    PHP website
+                <a href="https://twitter.com/thephpf" class="group-link footer-link">
+                    Twitter
                 </a>
             </li>
         </ul>

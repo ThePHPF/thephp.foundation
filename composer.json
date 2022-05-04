@@ -16,7 +16,9 @@
         }
     ],
     "require": {
-        "sculpin/sculpin": "^3.1"
+	  	"php": "^8.0",
+        "sculpin/sculpin": "^3.1",
+	  	"twig/twig": "2.14.11"
     },
     "scripts": {
         "publish": [

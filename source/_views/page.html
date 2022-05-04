@@ -1,10 +1,14 @@
 {% extends 'default' %}
 
+{% block head_meta %}
+<meta name="robots" content="index, follow">
+{% endblock %}
+
 {% block content_wrapper %}
-<main class="flex flex-row justify-center bg-[#f4f4f4] min-w-[320px] min-h-[100vh] w-full pt-4">
-    <article class="max-w-[960px] w-full">
+<main class="flex flex-row justify-center min-w-[320px] min-h-[100vh] w-full pt-4">
+    <article class="max-w-3xl w-full px-4 md:px-0">
         <header>
-            <h2>{{ page.title }}</h2>
+            <h1>{{ page.title }}</h1>
         {% if page.subtitle %}
             <h3 class="subtitle">{{ page.subtitle }}</h3>
         {% endif %}
