@@ -8,7 +8,7 @@ author:
     url: https://github.com/sebastianbergmann
 ---
 
-The initial group of sponsored developers have now been "at it" for a month and we thought that you might be interested in who they are and what they work on. I got the opportunity to (virtually) sit down with Derick Rethans, George Peter Banyard, Ilija Tovilo, Jakub Zelenka, and Máté Kocsis for an interview.
+The initial group of sponsored developers has now been "at it" for a month, and we thought that you might be interested in who they are and what they work on. I got the opportunity to (virtually) sit down with Derick Rethans, George Peter Banyard, Ilija Tovilo, Jakub Zelenka, and Máté Kocsis for an interview.
 
 **Sebastian:** Let's start with a round of introductions. Who are you?
 
