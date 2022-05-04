@@ -22,18 +22,29 @@
             {{ page.blocks.content|raw }}
         </section>
 
-        {% if page.previous_post or page.next_post %}
-        <nav class="flex flex-row items-center justify-center mt-4 article">
-            <ul class="list-none">
-                {% if page.next_post %}
-                    <li>Next: <a class="next" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title|raw }}"><span class="title">{{ page.next_post.title|raw }}</span></a></li>
-                {% endif %}
+        <div class="border-t pt-5 my-5">
+            {% if page.previous_post or page.next_post %}
+            <nav class="flex flex-row justify-between article -mx-2 mb-5">
                 {% if page.previous_post %}
-                    <li>Previous: <a class="previous" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title|raw }}"><span class="title">{{ page.previous_post.title|raw }}</span></a></li>
+                <a href="{{ site.url }}{{ page.previous_post.url }}" class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[#7f52ff] transition-all no-underline">
+                    <div class="mb-1 text-sm text-gray-600 font-medium">Previous</div> 
+                    <div class="font-bold text-blue-500">{{ page.previous_post.title|raw }}</div>
+                </a>
                 {% endif %}
-            </ul>
-        </nav>
-        {% endif %}
+                
+                {% if page.next_post %}
+                <a href="{{ site.url }}{{ page.next_post.url }}" class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[rgba(127,82,255,.8)] transition-all no-underline">
+                    <div class="mb-1 text-sm text-gray-600 font-medium">Next</div>
+                    <div class="font-bold text-blue-500">{{ page.next_post.title|raw }}</div>
+                </a>
+                {% endif %}
+            </nav>
+            {% endif %}
+            
+            <div>
+                <a href="https://github.com/ThePHPF/thephp.foundation/edit/main/source/_posts/{{ page.filename }}" class="nav-org" rel="noopener noreferrer" target="_blank">Edit this page on GitHub</a>
+            </div>
+        </div>
     </article>
 </main>
 {% endblock %}
