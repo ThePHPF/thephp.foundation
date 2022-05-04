@@ -48,3 +48,22 @@
     </article>
 </main>
 {% endblock %}
+
+{% block head_scripts %}
+<script src="//cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const anchors = new AnchorJS()
+    anchors.add()
+
+    for (const element of document.getElementsByClassName('anchorjs-link')) {
+      element.addEventListener('click', function () {
+        navigator.clipboard.writeText(window.location.origin + window.location.pathname + element.getAttribute('href'))
+      })
+    }
+  })
+</script>
+{% endblock %}
