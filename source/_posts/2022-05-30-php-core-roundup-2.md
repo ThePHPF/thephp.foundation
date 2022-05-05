@@ -3,7 +3,7 @@
 title: 'PHP Core Roundup #2'
 layout: post
 tags:
-    - update
+    - roundup
 author:
   name: Ayesh Karunaratne
   url: https://aye.sh
