@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <title>{% block title %}{{ page.title|raw }}{% endblock %} &mdash; {{ site.title }} &mdash; {{ site.subtitle }}</title>
+    <meta name="description" content="{{ site.title }} &mdash; {{ site.subtitle }}">
     <meta charset="utf-8">
     <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="//unpkg.com/alpinejs" defer></script>
+
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{% if page.title %}{{ page.title|raw }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:description" content="{{ site.title }} &mdash; {{ site.subtitle }}">
+    <meta property="og:image" content="{{ site.url }}/assets/icons/share.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="{{ site.url }}">
+    <meta property="twitter:url" content="{{ site.url }}{{ page.url }}">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title|raw }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{{ site.title }} &mdash; {{ site.subtitle }}">
+    <meta name="twitter:image" content="{{ site.url }}/assets/icons/share.png">
 
     <link rel="apple-touch-startup-image" href="{{ site.url }}/assets/icons/php_foundation.svg">
     <meta name="mobile-web-app-capable" content="yes">
