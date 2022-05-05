@@ -1,41 +1,27 @@
 ---
-title: Blog
 layout: default
-permalink: blog
-generator: pagination
+title: Tag Archive
+generator: [posts_tag_index, pagination]
 pagination:
-    max_per_page: 100
-use:
-    - posts
+    provider: page.tag_posts
 ---
 
 <main class="flex flex-row justify-center min-w-[320px] min-h-[100vh] w-full pt-4">
-	<section class="max-w-2xl w-full bg-white px-4 md:px-0">
-		<header class="mb-16">
-            <h1>{{ page.title }}</h1>
+    <section class="max-w-2xl w-full bg-white px-4 md:px-0">
+        <header class="mb-16">
+            <h1>Tag: {{ constant('App\\Blog\\Tag::ALLOWED_TAGS')[page.tag] ?? page.tag }}</h1>
         </header>
 
         {% for post in page.pagination.items %}
         <section class="mb-4">
             <header>
                 <h4 class="mb-1"><a href="{{ site.url }}{{ post.url }}">{{ post.title|raw }}</a></h4>
-				{% if post.author is defined%}
-				<div class="text-xs mb-2">
-					Published on <span>{{ post.published_at|date("M d, Y") }}</span>
-					by <a href="{{ post.author.url }}">{{ post.author.name }}</a>
-				</div>
-				{% endif %}
-
-                {% if post.tags is defined%}
-                <div class="mb-4 space-x-1">
-                    {% for tag in post.tags %}
-                    <a href="{{ site.url }}/blog/tag/{{ tag|url_encode(true) }}" class="bg-[#7f52ff] hover:bg-[rgba(127,82,255,.8)] text-white px-2 py-1 rounded no-underline text-sm">
-                        {{ constant('App\\Blog\\Tag::ALLOWED_TAGS')[tag] ?? tag }}
-                    </a>
-                    {% endfor %}
+                {% if post.author is defined%}
+                <div class="text-xs mb-4">
+                    Published on <span>{{ post.published_at|date("M d, Y") }}</span>
+                    by <a href="{{ post.author.url }}">{{ post.author.name }}</a>
                 </div>
                 {% endif %}
-
                 <p class="text-base">{{ post.content|striptags|length > 100 ? (post.content|striptags|slice(0, 150) ~ '...')|raw : post.content|striptags|raw }}</p>
             </header>
         </section>
@@ -49,7 +35,7 @@ use:
                 <div class="font-bold text-blue-500">Older Posts</div>
             </a>
             {% endif %}
-
+            
             {% if page.pagination.previous_page %}
             <a href="{{ site.url }}{{ page.pagination.previous_page.url }}" class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[#7f52ff] transition-all no-underline">
                 <div class="mb-1 text-sm text-gray-600 font-medium">Next</div>

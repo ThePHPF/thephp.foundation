@@ -2,7 +2,7 @@
 title: 'PHP Roundup #1'
 layout: post
 tags:
-    - update
+    - roundup
 author:
   name: Ayesh Karunaratne
   url: https://twitter.com/Ayeshlive
