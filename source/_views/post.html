@@ -8,7 +8,7 @@
 <main class="flex flex-row justify-center min-w-[320px] min-h-[100vh] w-full pt-4">
     <article class="max-w-2xl w-full bg-white px-4 md:px-0">
         <header class="mb-8">
-            <h1 class="">{{ page.title|raw }}</h1>
+            <h1 class="">{{ page.title }}</h1>
 
             {% if page.author is defined%}
             <div class="text-xs">
@@ -27,20 +27,20 @@
             <nav class="flex flex-row justify-between article -mx-2 mb-5">
                 {% if page.previous_post %}
                 <a href="{{ site.url }}{{ page.previous_post.url }}" class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[#7f52ff] transition-all no-underline">
-                    <div class="mb-1 text-sm text-gray-600 font-medium">Previous</div> 
-                    <div class="font-bold text-blue-500">{{ page.previous_post.title|raw }}</div>
+                    <div class="mb-1 text-sm text-gray-600 font-medium">Previous</div>
+                    <div class="font-bold text-blue-500">{{ page.previous_post.title }}</div>
                 </a>
                 {% endif %}
-                
+
                 {% if page.next_post %}
                 <a href="{{ site.url }}{{ page.next_post.url }}" class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[rgba(127,82,255,.8)] transition-all no-underline">
                     <div class="mb-1 text-sm text-gray-600 font-medium">Next</div>
-                    <div class="font-bold text-blue-500">{{ page.next_post.title|raw }}</div>
+                    <div class="font-bold text-blue-500">{{ page.next_post.title }}</div>
                 </a>
                 {% endif %}
             </nav>
             {% endif %}
-            
+
             <div>
                 <a href="https://github.com/ThePHPF/thephp.foundation/edit/main/source/_posts/{{ page.filename }}" class="nav-org" rel="noopener noreferrer" target="_blank">Edit this page on GitHub</a>
             </div>
