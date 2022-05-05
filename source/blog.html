@@ -18,7 +18,7 @@ use:
         {% for post in page.pagination.items %}
         <section class="mb-4">
             <header>
-                <h4 class="mb-1"><a href="{{ site.url }}{{ post.url }}">{{ post.title|raw }}</a></h4>
+                <h4 class="mb-1"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h4>
 				{% if post.author is defined%}
 				<div class="text-xs mb-4">
 					Published on <span>{{ post.published_at|date("M d, Y") }}</span>

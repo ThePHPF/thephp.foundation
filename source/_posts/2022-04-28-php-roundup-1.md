@@ -1,5 +1,5 @@
 ---
-title: PHP Roundup &#35;1
+title: 'PHP Roundup #1'
 layout: post
 tags:
     - update
