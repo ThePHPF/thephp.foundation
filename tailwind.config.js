@@ -2,12 +2,18 @@ module.exports = {
   content: ["./source/**/*.html"],
   theme: {
     extend: {
+      backgroundSize: {
+        'horizontal': 'auto 0',
+      },
       colors: {
         'foundation': 'rgba(25, 25, 28, .3)',
         'baseblack': '#19191c',
         'fbg': 'rgba(25, 25, 28, .1)',
         'hborder': 'rgba(39, 40, 44, .2)',
       },
+      transitionProperty: {
+        'footer': 'background-size, color',
+      }
     },
 
     screens: {
