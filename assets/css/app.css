@@ -123,6 +123,18 @@
     }
 }
 
+:target {
+    scroll-margin-top: 64px;
+}
+
+:target::before {
+    content: "";
+    display: block;
+    margin-top: -64px;
+    height: 64px;
+    width: 1px;
+}
+
 .footer-link {
     background-image: linear-gradient(180deg, #fff 100%, transparent 0);
     background-size: auto 0;
