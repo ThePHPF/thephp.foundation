@@ -10,7 +10,7 @@ author:
 
 The initial group of sponsored developers has now been "at it" for a month, and we thought that you might be interested in who they are and what they work on. I got the opportunity to (virtually) sit down with Derick Rethans, George Peter Banyard, Ilija Tovilo, Jakub Zelenka, and Máté Kocsis for an interview.
 
-**Sebastian:** Let's start with a round of introductions. Who are you?
+#### **Sebastian:** Let's start with a round of introductions. Who are you?
 
 **George:** Hello, my name is George Peter Banyard. I'm studying pure mathematics at Imperial College London and expected to graduate in October. I'm half German, half British, but grew up in the south of France. During my free time I mostly watch anime or play puzzle games and Richii mahjong.
 
@@ -22,7 +22,7 @@ The initial group of sponsored developers has now been "at it" for a month, and 
 
 **Máté:** I am a 31 year old software developer, based in Hungary. Currently, I work for LastPass, and I am responsible for keeping our PHP backend modern as well as bringing it into the cloud. In my free time, I love riding my bike, walking, travelling. But my greatest hobby is certainly programming.
 
-**Sebastian:** What motivates you to work on Open Source?
+#### **Sebastian:** What motivates you to work on Open Source?
 
 **George:** This might be a strange answer, but I would say laziness. In the sense that if I like something from another project or language, I prefer going through the effort of adding that as a feature to what I already know and use instead of learning a whole new tool and ecosystem.
 
@@ -34,7 +34,7 @@ The initial group of sponsored developers has now been "at it" for a month, and 
 
 **Máté:** My first "major" open source contribution was a tiny little feature in Composer. Then I created a few libraries which also gained some traction. Even considering the limited scale my projects achieved, it was a fantastic experience for me that I did my share to improve the PHP ecosystem, and at least a few people found my work useful. In contrast, being able to improve PHP itself day by day may make the life of millions of developers better, which is a truly satisfying feeling.
 
-**Sebastian:** What was your first contribution to PHP?
+#### **Sebastian:** What was your first contribution to PHP?
 
 **Máté:** I have been using PHP since I was 15, and I'm a longtime PHP internals reader. Since finding the mailing list, I have always dreamed about being able to contribute to PHP, even if it is a tiny little change. Then fast-forward to 2019, when Nikita started the so-called "[stubs initiative](https://externals.io/message/106522)". This was a perfect project to get started with my career. By submitting hundreds of PRs, I could learn a lot from Nikita and Christoph, among others, who tirelessly reviewed my code and helped when I was stuck.
 
@@ -46,7 +46,7 @@ The initial group of sponsored developers has now been "at it" for a month, and 
 
 **Jakub:** I used to work as a PHP developer and came across an extension for PHP called fann. As it did not really work, I refactored the whole extension. That taught me a bit about PHP's internals. Some time later I wanted to properly learn tools such as bison and re2c. At that time, there was a need for a new JSON parser for PHP due to licensing issues. So I wrote a new JSON parser and became a PHP core contributor.
 
-**Sebastian:** What do you plan to work on in your time that is sponsored by The PHP Foundation?
+#### **Sebastian:** What do you plan to work on in your time that is sponsored by The PHP Foundation?
 
 **Máté:** First, I would like to finish my projects which I have already started: readonly classes (needs a successful RFC vote), converting resources to objects, adding constants to the stubs, and doing other groundwork for making our documentation more complete and easier to maintain. Then my plan is to improve the developer experience of the built-in extensions as well as continuing our efforts to make PHP a more consistent and reasonable language.
 
