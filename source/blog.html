@@ -1,5 +1,6 @@
 ---
 title: Blog
+description: PHP Foundation blog
 layout: default
 permalink: blog
 generator: pagination
@@ -36,7 +37,7 @@ use:
                 </div>
                 {% endif %}
 
-                <p class="text-base">{{ post.content|striptags|length > 100 ? (post.content|striptags|slice(0, 150) ~ '...')|raw : post.content|striptags|raw }}</p>
+                <p class="text-base">{{ post.description ?: (post.content|striptags|length > 100 ? (post.content|striptags|slice(0, 150) ~ '...')|raw : post.content|striptags|raw) }}</p>
             </header>
         </section>
         {% endfor %}
