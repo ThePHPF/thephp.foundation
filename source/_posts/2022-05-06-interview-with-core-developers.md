@@ -20,7 +20,7 @@ The initial group of sponsored developers has now been "at it" for a month, and 
 
 **Jakub:** I am originally from Prague. I moved to the UK over 10 years ago. I work as a contractor and spend most of my free time with my family. I have got 2 dogs that I often walk.
 
-**Máté:** I am a 31 year old software developer, based in Hungary. Currently, I work for LastPass, and I am responsible for keeping our PHP backend modern as well as bringing it into the cloud. In my free time, I love riding my bike, walking, travelling. But my greatest hobby is certainly programming.
+**Máté:** I am a 31-year-old software developer, based in Hungary. Currently, I work for LastPass, and I am responsible for keeping our PHP backend modern as well as bringing it into the cloud. In my free time, I love riding my bike, walking, travelling. But my greatest hobby is certainly programming.
 
 #### **Sebastian:** What motivates you to work on Open Source?
 
