@@ -38,7 +38,7 @@ The initial group of sponsored developers has now been "at it" for a month, and 
 
 **Máté:** I have been using PHP since I was 15, and I'm a longtime PHP internals reader. Since finding the mailing list, I have always dreamed about being able to contribute to PHP, even if it is a tiny little change. Then fast-forward to 2019, when Nikita started the so-called "[stubs initiative](https://externals.io/message/106522)". This was a perfect project to get started with my career. By submitting hundreds of PRs, I could learn a lot from Nikita and Christoph, among others, who tirelessly reviewed my code and helped when I was stuck.
 
-**Derick:** Back in 2000, I first tried to add "sub query" support for MySQL. MySQL's query language did not support it, and I came up with a naive way of rewriting the query in C, by doing two queries. My first actual contribution was SWF support in the getimagesize() function, followed by adding libmcrypt 2.4 support to the mcrypt extension, which I also ended up mostly rewriting.
+**Derick:** Back in 2000, I first tried to add "sub query" support for MySQL. MySQL's query language did not support it, and I came up with a naive way of rewriting the query in C, by doing two queries. My first actual contribution was SWF support in the `getimagesize()` function, followed by adding libmcrypt 2.4 support to the mcrypt extension, which I also ended up mostly rewriting.
 
 **George:** I first started by contributing to the French translation of the PHP documentation before working on the English docs and making my way to php-src to change some very strange behaviour I discovered while maintaining the docs.
 
