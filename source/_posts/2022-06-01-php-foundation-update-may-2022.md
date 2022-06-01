@@ -2,10 +2,10 @@
 title: PHP Foundation Update, May 2022
 layout: post
 tags:
-- update
+    - update
 author:
-name: Roman Pronskiy
-url: https://twitter.com/pronskiy
+    name: Roman Pronskiy
+    url: https://twitter.com/pronskiy
 published_at: 1 June 2022
 ---
 ```<?php echo 'Hello world!';```
