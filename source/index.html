@@ -138,7 +138,7 @@ title: The PHP Foundation
                 fetch('https://opencollective.com/phpfoundation/members/organizations.json')
                     .then((response) => response.json())
                     .then((json) => {
-                        this.sponsors = json.sort((a, b)=> b.totalAmountDonated - a.totalAmountDonated).slice(0, 24)
+                        this.sponsors = json.sort((a, b) => b.totalAmountDonated - a.totalAmountDonated).slice(0, 24)
                         this.sponsorsCount = json.length
                         this.isLoaded = true
                     });
@@ -148,7 +148,7 @@ title: The PHP Foundation
                 <div class="font-semibold text-xl my-4">We are supported by <span x-text="sponsorsCount"></span> organizations</div>
                 <div class="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-8 gap-4">
                     <template x-for="sponsor in sponsors">
-                        <div class="bg-gray-100 p-2 rounded-lg">
+                        <a :href="sponsor.website ?? sponsor.profile" class="block bg-gray-100 p-2 rounded-lg no-underline" target="_blank" rel="noopener noreferrer">
                             <div class="mb-6 p-2">
                                 <img x-show="sponsor.image"
                                      class="h-24 rounded w-full object-contain object-center"
@@ -156,8 +156,7 @@ title: The PHP Foundation
                                 <span x-show="!sponsor.image" class="inline-block h-24 w-24 rounded-full bg-[rgba(127,82,255,.8)] flex justify-center items-center text-white text-2xl mx-auto" x-text="sponsor.name.split(/\s+/).map(word => word[0].toUpperCase()).join('')"></span>
                             </div>
                             <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4" x-text="sponsor.name"></div>
-                            <div class="leading-relaxed text-base" x-text="new Intl.NumberFormat('en-US', {style: 'currency', currency: sponsor.currency, minimumFractionDigits: 0, maximumFractionDigits: 0}).format(sponsor.totalAmountDonated)"></div>
-                        </div>
+                        </a>
                     </template>
                 </div>
     
@@ -185,17 +184,17 @@ title: The PHP Foundation
                 fetch('https://opencollective.com/phpfoundation/members/users.json')
                     .then((response) => response.json())
                     .then((json) => {
-                        this.sponsors = json.sort((a, b)=> b.totalAmountDonated - a.totalAmountDonated).slice(0, 40)
+                        this.sponsors = json.sort((a, b) => b.totalAmountDonated - a.totalAmountDonated).slice(0, 40)
                         this.sponsorsCount = json.length
                         this.isLoaded = true
                     });
             }
         }" x-init="fetchSponsoringUsers()" class="mt-8">
             <div x-show="isLoaded" style="display: none;">
-                <div class="font-semibold text-xl my-4">...and <span x-text="sponsorsCount"></span> users</div>
+                <div class="font-semibold text-xl my-4">...and <span x-text="sponsorsCount"></span> individuals</div>
                 <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 xl:grid-cols-10 gap-4">
                     <template x-for="sponsor in sponsors">
-                        <div class="bg-gray-100 p-2 rounded-lg">
+                        <a :href="sponsor.website ?? sponsor.profile" class="block bg-gray-100 p-2 rounded-lg no-underline" target="_blank" rel="noopener noreferrer">
                             <div class="mb-6 p-2">
                                 <img x-show="sponsor.image"
                                     class="h-24 rounded w-full object-contain object-center"
@@ -203,13 +202,12 @@ title: The PHP Foundation
                                 <span x-show="!sponsor.image" class="inline-block h-24 w-24 rounded-full bg-[rgba(127,82,255,.8)] flex justify-center items-center text-white text-2xl mx-auto" x-text="sponsor.name.split(/\s+/).map(word => word[0].toUpperCase()).join('')"></span>
                             </div>
                             <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4" x-text="sponsor.name"></div>
-                            <div class="leading-relaxed text-base" x-text="new Intl.NumberFormat('en-US', {style: 'currency', currency: sponsor.currency, minimumFractionDigits: 0, maximumFractionDigits: 0}).format(sponsor.totalAmountDonated)"></div>
-                        </div>
+                        </a>
                     </template>
                 </div>
     
                 <div class="my-6">
-                    <a href="https://opencollective.com/phpfoundation" target="_blank" rel="noopener noreferrer" class="inline-block py-4 no-underline px-6 text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">See all users</a>
+                    <a href="https://opencollective.com/phpfoundation" target="_blank" rel="noopener noreferrer" class="inline-block py-4 no-underline px-6 text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">See all individuals</a>
                 </div>
             </div>
             <div x-show="!isLoaded">
