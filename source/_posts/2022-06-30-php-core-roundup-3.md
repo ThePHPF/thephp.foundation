@@ -167,8 +167,6 @@ Following are some of the changes that did not go through an RFC process because
     * Fully convert `accel_remap_huge_pages` to use zend_result in commit [0429159](https://github.com/php/php-src/commit/0429159775658f9b9f81d67e4206cf449da01679)
     * Remove redundant address comparison in `accel_remap_huge_pages` in commit [1380b65d](https://github.com/php/php-src/commit/1380b65d261d1ab2e2e920173b836cd95325c8a0)
     * Fixed bug[ GH-8847](https://github.com/php/php-src/issues/8847): PHP hanging infinitely at 100% cpu when check php syntaxes of a valid file in commit [7cf6f173](https://github.com/php/php-src/commit/7cf6f173831caea9952a84b9e4a93594aac8ba00)
-    * Fix incorrect constant propagation for `VERIFY_RETURN_TYPE` in commit [fa75bd07](https://github.com/php/php-src/commit/fa75bd078511c80c8be655719c7681fa65798c13)
-    * JIT: Add IBT support in PR [#8774](https://github.com/php/php-src/pull/8774) with Chen, Hu.
 * Several improvements in the Curl extension by Pierrick Charron
     * Add curl_upkeep function in PR [#8720](https://github.com/php/php-src/pull/8720/commits)
     * Fixed `CURLOPT_TLSAUTH_TYPE` is not treated as a string option in commit [d84b972](https://github.com/php/php-src/commit/d84b972658fe623b465ce0f3b6632de1e1875534)
@@ -183,7 +181,7 @@ Following are some of the changes that did not go through an RFC process because
     * Fast text conversion interfaces for several character encodings 
 * Deprecate `zend_atol()` / add `zend_ini_parse_quantity()` in PR [#7951](https://github.com/php/php-src/pull/7951) by Sara Golemon and Arnaud Le Blanc 💜
   
-  Note that this introduces warnings on INI values for data sizes that PHP used to parse without any prior warnings. Some of the examples of these patterns are “_`123GB`_” (interpretted as “_`123`_”, although the the caller likely meant 123 Gigabytes) and “_`123KMG`_” as "_`123G`_" -> _132070244352_”. This is because  `zend_atol()` / add `zend_ini_parse_quantity()` functions accept 'K', 'M', or 'G' as a unit multiplier, but ignore all other non-numeric characters in between.
+  Note that this introduces warnings on INI values for data sizes that PHP used to parse without any prior warnings. Some of the examples of these patterns are “_`123GB`_” (interpretted as “_`123`_”, although the caller likely meant 123 Gigabytes) and “_`123KMG`_” as "_`123G`_" -> _132070244352_”. This is because  `zend_atol()` / add `zend_ini_parse_quantity()` functions accept 'K', 'M', or 'G' as a unit multiplier, but ignore all other non-numeric characters in between.
 * Mark parameters as sensitive (using `SensitiveParameter` attribute [new in PHP 8.2](https://php.watch/versions/8.2/backtrace-parameter-redaction), [RFC](https://wiki.php.net/rfc/redact_parameters_in_back_traces)) in several PHP extensions in PR [#8352](https://github.com/php/php-src/pull/8352) by Tim Düsterhus
 * Don't shortcut empty oparray executions if `zend_execute_ex` has been overridden in commit [5bfc1608](https://github.com/php/php-src/commit/5bfc160817a3b707718cc764661321daffadd402), so that debugging continues working well by Derick Rethans 💜
 * Fix phpize to include `_GNU_SOURCE` by default in commit [2c166647](https://github.com/php/php-src/commit/2c166647f1a54dfa768b4dda680c5953f54b9c3a) by Derick Rethans 💜
@@ -204,7 +202,7 @@ Following are some of the changes that did not go through an RFC process because
 * Use the passed '`this`' pointer instead of `ZEND_THIS `in PR [#8854](https://github.com/php/php-src/pull/8854) by George Peter Banyard 💜 
 * Fixed [GH-8861](https://github.com/php/php-src/issues/8861): correctly handle string lengths in `SplFileinfo` methods in PR [#8861](https://github.com/php/php-src/issues/8861) by M. Vondano and George Peter Banyard 💜 
 * Fix[ GH-8848](https://github.com/php/php-src/issues/8848): `imagecopyresized()` error refers to the wrong argument in commit [9405f43b](https://github.com/php/php-src/commit/9405f43ba927376e02f4023cbfdc0f9bf412396d) by Christoph M. Becker
-* Merged Convert iterable into an internal alias for Traversable|array PR [#7309](https://github.com/php/php-src/pull/7309) by George Peter Banyard 💜 
+* Convert iterable into an internal alias for Traversable|array PR [#7309](https://github.com/php/php-src/pull/7309) by George Peter Banyard 💜 
 * Use same type error wording for alias iterable in ZPP in PR [#8838](https://github.com/php/php-src/pull/8838) by George Peter Banyard 💜 
 * Support the `#[\AllowDynamicProperties]` attribute in stubs in PR [#8776](https://github.com/php/php-src/pull/8776) by Tim Düsterhus
 * Refactor `sapi_getenv()` in PR [#8786](https://github.com/php/php-src/pull/8786) by Heiko Weber
