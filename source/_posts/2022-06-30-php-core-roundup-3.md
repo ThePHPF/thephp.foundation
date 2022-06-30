@@ -29,10 +29,12 @@ You don’t necessarily have to be a PHP Foundation backer to follow the PHP Rou
 </div>
 
 
-The PHP Foundation currently supports six part-time PHP contributors who work on both maintenance and new features for PHP. Maintenance is not limited to fixing bugs, but also includes work to reduce technical debt, making life easier for everyone working on PHP. The contributors funded by the PHP Foundation collaborate with other contributors on code, documentation, and discussions.
+> [The PHP Foundation](https://opencollective.com/phpfoundation) currently supports [six part-time PHP contributors](https://thephp.foundation/blog/2022/05/06/interview-with-core-developers/) who work on both maintenance and new features for PHP. Maintenance is not limited to fixing bugs, but also includes work to reduce technical debt, making life easier for everyone working on PHP. The contributors funded by the PHP Foundation collaborate with other contributors on code, documentation, and discussions.
+> 
+>
+> Things marked with 💜 are done by the PHP Foundation team.
 
-Things marked with 💜 are done by the PHP Foundation team.
-
+<br />
 
 ## PHP 8.2 QA Releases and Feature-freeze
 
@@ -108,9 +110,7 @@ Following are the RFCs discussed, voted, and implemented since our last update.
   #[Attr(E::Foo->name)]
   class C {}
   ```
-  
-
-  
+  <br />
 	 The RFC is to allow expressions above and other similar patterns, which are not currently allowed.
 
 * **Under Discussion: [PDO driver specific sub-classes](https://wiki.php.net/rfc/pdo_driver_specific_subclasses)**
@@ -151,12 +151,12 @@ Following are the RFCs discussed, voted, and implemented since our last update.
 
 Following are some of the changes that did not go through an RFC process because they are either planned, bug fixes, or progressive enhancements. There are automated unit and integration tests for each of these changes, and all pull requests are reviewed by the PHP core developers.
 
-* Bug fixes and improvements in Date extension by Derick Rethans **💜**
+* Bug fixes and improvements in Date extension by Derick Rethans 💜
     * Bug [#80047](https://bugs.php.net/bug.php?id=80047): DatePeriod doesn't warn with custom `DateTimeImmutable` in commit [973c3f6](https://github.com/php/php-src/commit/973c3f6e241227ffc14c3608c774d7636b798cec)
     * Bug [#77243](https://bugs.php.net/bug.php?id=77243): Weekdays are calculated incorrectly for negative years in PR [#8740](https://github.com/php/php-src/pull/8740)
     * Fixed tests that relied on `date.timezone=UTC` to work in commit [242b943](https://github.com/php/php-src/commit/242b9438ea1f9a7f72afe1db5cd8f3bf80152dc5)
     * Bug [#73239](https://bugs.php.net/bug.php?id=73239): DateTime shows strange error message with invalid timezone in PR [#8594](https://github.com/php/php-src/pull/8594)
-* Bug fixes and improvements in Opcache by Dmitry Stogov,  Ilija Tovilo, and Derick Rethans **💜**
+* Bug fixes and improvements in Opcache by Dmitry Stogov,  Ilija Tovilo, and Derick Rethans 💜
     * Bug [GH-8863](https://github.com/php/php-src/issues/8863): RW operation on readonly property doesn't throw with JIT in commit [ad40fffd](https://github.com/php/php-src/commit/ad40fffd36cab87c249c28af6374c72959937dd6) 
     * Fix incorrect constant propagation for `VERIFY_RETURN_TYPE` in commit [fa75bd07](https://github.com/php/php-src/commit/fa75bd078511c80c8be655719c7681fa65798c13)
     * JIT: Fix incorrect reference-counting in commit [971b07ea](https://github.com/php/php-src/commit/971b07ea60172a80ee308e91c7a7912eea8a571f)
@@ -181,12 +181,12 @@ Following are some of the changes that did not go through an RFC process because
     * Fully use available buffer space where converting Base64 in commit [871e61f](https://github.com/php/php-src/commit/871e61f9429f6eeecc46bc210faa7c59704a2c63)
     * Restore backwards-compatible mappings of 0x5C and 0x7E in SJIS in commit [2dc9026c](https://github.com/php/php-src/commit/2dc9026cbc46c1a76bfac4c8436cb6b293b3e4db)
     * Fast text conversion interfaces for several character encodings 
-* Deprecate `zend_atol()` / add `zend_ini_parse_quantity()` in PR [#7951](https://github.com/php/php-src/pull/7951) by Sara Golemon and Arnaud Le Blanc
+* Deprecate `zend_atol()` / add `zend_ini_parse_quantity()` in PR [#7951](https://github.com/php/php-src/pull/7951) by Sara Golemon and Arnaud Le Blanc 💜
   
   Note that this introduces warnings on INI values for data sizes that PHP used to parse without any prior warnings. Some of the examples of these patterns are “_`123GB`_” (interpretted as “_`123`_”, although the the caller likely meant 123 Gigabytes) and “_`123KMG`_” as "_`123G`_" -> _132070244352_”. This is because  `zend_atol()` / add `zend_ini_parse_quantity()` functions accept 'K', 'M', or 'G' as a unit multiplier, but ignore all other non-numeric characters in between.
 * Mark parameters as sensitive (using `SensitiveParameter` attribute [new in PHP 8.2](https://php.watch/versions/8.2/backtrace-parameter-redaction), [RFC](https://wiki.php.net/rfc/redact_parameters_in_back_traces)) in several PHP extensions in PR [#8352](https://github.com/php/php-src/pull/8352) by Tim Düsterhus
-* Don't shortcut empty oparray executions if `zend_execute_ex` has been overridden in commit [5bfc1608](https://github.com/php/php-src/commit/5bfc160817a3b707718cc764661321daffadd402), so that debugging continues working well by Derick Rethans **💜**
-* Fix phpize to include `_GNU_SOURCE` by default in commit [2c166647](https://github.com/php/php-src/commit/2c166647f1a54dfa768b4dda680c5953f54b9c3a) by Derick Rethans **💜**
+* Don't shortcut empty oparray executions if `zend_execute_ex` has been overridden in commit [5bfc1608](https://github.com/php/php-src/commit/5bfc160817a3b707718cc764661321daffadd402), so that debugging continues working well by Derick Rethans 💜
+* Fix phpize to include `_GNU_SOURCE` by default in commit [2c166647](https://github.com/php/php-src/commit/2c166647f1a54dfa768b4dda680c5953f54b9c3a) by Derick Rethans 💜
 * Zip extension: Implement `fseek` for zip stream when possible with libzip 1.9.1 in commit [2223853c](https://github.com/php/php-src/commit/2223853c58087f3c025bf04257f53720e5454036) by Remi Collet 
 * Zip extension: Fix[ GH-8781](https://github.com/php/php-src/issues/8781) `ZipArchive::close` deletes zip file without updating stat cache in commit [390538a](https://github.com/php/php-src/commit/390538af2ed5cd18e3096ad70597035dbca52139) by Remi Collet 
 * FPM: Fixed zlog message prepend, free on incorrect address in commit [325ca31d](https://github.com/php/php-src/commit/325ca31dc) by Heiko Weber and David CARLIER
@@ -198,7 +198,7 @@ Following are some of the changes that did not go through an RFC process because
 * Multiple bug fixes related Enums in commits [bc03deec](https://github.com/php/php-src/commit/bc03deec278923045235f470b4969bab358feaa2), [d9e1871c](https://github.com/php/php-src/commit/bc03deec278923045235f470b4969bab358feaa2), [912c22cc](https://github.com/php/php-src/commit/912c22cca0477a60507a957a835eccedfe1d00fe), [45210b47](https://github.com/php/php-src/commit/45210b47294da6aafee7ca0a1b80db1c76fe4433), and [76fcd70c](https://github.com/php/php-src/commit/76fcd70c13f0c4b66937f381d5313c4f4c4cd548) by Ilija Tovilo 💜
 * Allow arbitrary constant expressions in backed enums in PR [#8190](https://github.com/php/php-src/pull/8190) by Ilija Tovilo 💜
 * Get rid of duplicated rotr3 implementation in PR [#8853](https://github.com/php/php-src/pull/8853) by Ilija Tovilo 💜
-* Declare constants in stubs for several extensions by Máté Kocsis
+* Declare constants in stubs for several extensions by Máté Kocsis 💜
 * Fix lineno in backtrace of multi-line function calls, fixing [GH-8810](https://github.com/php/php-src/issues/8810) in PR [#8818](https://github.com/php/php-src/pull/8818) by Ilija Tovilo 💜
 * Refactoring part of SPL `Directory.c` PR [#8837](https://github.com/php/php-src/pull/8837) by George Peter Banyard 💜 
 * Use the passed '`this`' pointer instead of `ZEND_THIS `in PR [#8854](https://github.com/php/php-src/pull/8854) by George Peter Banyard 💜 
@@ -217,7 +217,7 @@ Following are some of the changes that did not go through an RFC process because
 * Fix[ GH-8563](https://github.com/php/php-src/issues/8563) Different results for `seek()` on `SplFileObject` and `SplTempFileObject` in commit [#6f87a5c6](https://github.com/php/php-src/commit/6f87a5c633) by George Peter Banyard 💜
 * Zend, ext/opcache: use `PR_SET_VMA_ANON_NAME` (Linux 5.17) in PR [#8234](https://github.com/php/php-src/pull/8234) by Max Kellermann
 * Fixed potential use after free in `php_binary_init()` in PR [#8791](https://github.com/php/php-src/pull/8791) by Heiko Weber
-* Implemented: Declare true return types in PR [#8759](https://github.com/php/php-src/pull/8759) by Máté Kocsis
+* Implemented: Declare true return types in PR [#8759](https://github.com/php/php-src/pull/8759) by Máté Kocsis 💜
 * streams/xp_socket: eliminate `poll()` when `MSG_DONTWAIT` is available in PR [#8092](https://github.com/php/php-src/pull/8092) by Max Kellermann
 * Fix[ GH-8778](https://github.com/php/php-src/issues/8778): Integer arithmetic with large number variants fails in PR [#8779](https://github.com/php/php-src/pull/8779) by Christoph M. Becker
 * Fixed [#77726](https://bugs.php.net/bug.php?id=77726): Allow null character in regex patterns in PR [#8114](https://github.com/php/php-src/pull/8114) by @tobil4sk
