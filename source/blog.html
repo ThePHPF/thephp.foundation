@@ -26,7 +26,7 @@ use:
 
 				</div>
 				{% endif %}
-				<p class="text-base">{{ post.content|striptags | length > 100 ? post.content|striptags|slice(0, 150) ~ '...' : post.content|striptags }}</p>
+				<p class="text-base">{{ post.content|striptags|length > 100 ? (post.content|striptags|slice(0, 150) ~ '...')|raw : post.content|striptags|raw }}</p>
             </header>
         </section>
         {% endfor %}
