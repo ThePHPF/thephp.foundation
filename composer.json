@@ -1,41 +1,45 @@
 {
-    "name": "sculpin/blog-skeleton",
-    "description": "A Skeleton for a Sculpin Based Blog",
-    "type": "sculpin-skeleton",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Dragonfly Development Inc.",
-            "email": "info@dflydev.com",
-            "homepage": "http://dflydev.com"
-        },
-        {
-            "name": "Beau Simensen",
-            "email": "beau@dflydev.com",
-            "homepage": "http://beausimensen.com"
-        }
-    ],
-    "require": {
-	  	"php": "^8.0",
-        "sculpin/sculpin": "^3.1",
-	  	"twig/twig": "2.14.11"
-    },
-    "scripts": {
-        "publish": [
-            "./publish.sh"
-        ],
-        "sculpin-watch": [
-            "Composer\\Config::disableProcessTimeout",
-            "sculpin generate --watch --server"
-        ],
-        "yarn-watch": [
-            "Composer\\Config::disableProcessTimeout",
-            "yarn encore dev --watch"
-        ]
-    },
-    "config": {
-        "allow-plugins": {
-            "sculpin/sculpin-theme-composer-plugin": true
-        }
+  "name": "thephpf/thephp.foundation",
+  "description": "A website thephp.foundation",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "PHP Foundation",
+      "email": "contact@thephp.foundation",
+      "homepage": "https://thephp.foundation"
     }
+  ],
+  "require": {
+    "php": "^8.0",
+    "sculpin/sculpin": "^3.1",
+    "twig/twig": "2.14.11",
+    "ext-gd": "*"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest"
+  },
+  "scripts": {
+    "publish": [
+      "./publish.sh"
+    ],
+    "sculpin-watch": [
+      "Composer\\Config::disableProcessTimeout",
+      "sculpin generate --watch --server"
+    ],
+    "yarn-watch": [
+      "Composer\\Config::disableProcessTimeout",
+      "yarn encore dev --watch"
+    ]
+  },
+  "config": {
+    "allow-plugins": {
+      "sculpin/sculpin-theme-composer-plugin": true
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/src"
+    }
+  }
 }
