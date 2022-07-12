@@ -19,14 +19,14 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="{% if page.title %}{{ page.title|raw }}{% else %}{{ site.title }}{% endif %}">
     <meta property="og:description" content="{{ site.title }} &mdash; {{ site.subtitle }}">
-    <meta property="og:image" content="{{ site.url }}/assets/icons/share.png">
+    <meta property="og:image" content="{{ site.url }}{{ sharing_image(page.filename) }}">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="{{ site.url }}">
     <meta property="twitter:url" content="{{ site.url }}{{ page.url }}">
     <meta name="twitter:title" content="{% if page.title %}{{ page.title|raw }}{% else %}{{ site.title }}{% endif %}">
     <meta name="twitter:description" content="{{ site.title }} &mdash; {{ site.subtitle }}">
-    <meta name="twitter:image" content="{{ site.url }}/assets/icons/share.png">
+    <meta name="twitter:image" content="{{ site.url }}{{ sharing_image(page.filename) }}">
 
     <link rel="apple-touch-startup-image" href="{{ site.url }}/assets/icons/php_foundation.svg">
     <meta name="mobile-web-app-capable" content="yes">
@@ -55,9 +55,8 @@
     {% endblock %}
 </head>
 <body>
-    <div class="wrapper w-full">
-    <header>
-        <header class="border-b border-hborder box-border z-50 flex items-center
+    <header class="wrapper w-full">
+        <div class="border-b border-hborder box-border z-50 flex items-center
             justify-between bg-white top-0 px-4 h-12 sticky min-w-[320px]
             box-border md:h-16 lg:px-8"
             x-data="{ isOpen: false }" @keydown.escape="isOpen = false" @click.away="isOpen = false">
@@ -123,10 +122,11 @@
                    </svg>
                </button>
            </div>
+        </div>
     </header>
-
+    
     {%block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
-
+    
     <footer class="py-8 px-4 md:flex md:items-center md:justify-between bg-[#27282c]">
         <ul class="mb-6 md:mb-0 flex flex-wrap items-center list-none text-[#27282c] text-base font-normal">
             <li class="footer-li">
