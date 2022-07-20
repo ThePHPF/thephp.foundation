@@ -66,6 +66,7 @@ class AtomFeedGenerator implements EventSubscriberInterface
                 $post->author = $data->get('author.name');
                 $post->authorURL = $data->get('author.url');
                 $post->description = $data->get('blocks.content');
+                $post->published_at = new \DateTimeImmutable($data->get('published_at'));
 
                 $entries["output_$env/rss/$slug.xml"][] = $post;
             }

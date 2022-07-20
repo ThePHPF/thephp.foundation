@@ -13,4 +13,6 @@ class Entry
     public string $authorURL;
 
     public string $description;
+    
+    public \DateTimeImmutable $published_at;
 }

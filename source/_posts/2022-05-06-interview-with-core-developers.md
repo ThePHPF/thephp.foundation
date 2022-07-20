@@ -6,6 +6,7 @@ tags:
 author:
     name: Sebastian Bergmann
     url: https://github.com/sebastianbergmann
+published_at: 6 May 2022
 ---
 
 The initial group of sponsored developers has now been "at it" for a month, and we thought that you might be interested in who they are and what they work on. I got the opportunity to (virtually) sit down with Derick Rethans, George Peter Banyard, Ilija Tovilo, Jakub Zelenka, Máté Kocsis, and Arnaud Le Blanc for an interview.

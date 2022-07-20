@@ -53,7 +53,9 @@ class SitemapGenerator
             $author->appendChild($dom->createElement('name', $entry->author));
             $author->appendChild($dom->createElement('uri', $entry->authorURL));
 
-            $element->append($title, $content, $link, $id, $author);
+            $pubDate = $dom->createElement('pubDate', $entry->published_at->format(DATE_RSS));
+            
+            $element->append($title, $content, $link, $id, $pubDate, $author);
 
             $feed->append($element);
         }
