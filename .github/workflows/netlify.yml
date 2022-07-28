@@ -1,0 +1,56 @@
+name: Build and Deploy to Netlify
+on:
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+
+      - name: Update Image Version in the related HelmChart values.yaml
+        uses: fjogeleit/yaml-update-action@main
+        with:
+          valueFile: 'app/config/sculpin_site_prod.yml'
+          propertyPath: 'url'
+          value: https://deploy-pr-${{ github.event.number }}--thephpfoundation.netlify.app
+          commitChange: false
+          updateFile: true
+
+      - name: Install asset deps
+        run: npm install
+
+      - name: Build production assets
+        run: npx tailwind -i assets/css/app.css -o source/assets/css/app.css --minify
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.0
+          extensions: mbstring, intl, readline
+          tools: composer:v2
+
+      - name: Install PHP deps
+        uses: ramsey/composer-install@v2
+
+      - name: Build production site
+        run: ./vendor/bin/sculpin generate --env=prod
+
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.2
+        with:
+          publish-dir: './output_prod'
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+          enable-pull-request-comment: true
+          overwrites-pull-request-comment: true
+          alias: deploy-pr-${{ github.event.number }}
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 1
