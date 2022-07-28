@@ -29,7 +29,7 @@ use:
                 {% if post.tags is defined%}
                 <div class="mb-4 space-x-1">
                     {% for tag in post.tags %}
-                    <a href="{{ site.url }}/blog/tag/{{ tag|url_encode(true) }}" class="bg-[#7f52ff] hover:bg-[rgba(127,82,255,.8)] text-white px-2 py-1 rounded no-underline text-sm">
+                    <a href="{{ site.url }}/blog/tag/{{ tag|url_encode(true) }}" class="bg-[#7f52ff] hover:bg-[rgba(127,82,255,.8)] !text-white px-2 py-1 rounded no-underline text-sm">
                         {{ constant('App\\Blog\\Tag::ALLOWED_TAGS')[tag] ?? tag }}
                     </a>
                     {% endfor %}
