@@ -225,7 +225,6 @@ Following are some of the changes that did not go through an RFC process because
 * Fix [GH-8576](https://github.com/php/php-src/issues/8576): Bad interpretation of length when char is UTF-8 in [GH-8926](https://github.com/php/php-src/pull/8926) by Christoph M. Becker
 * Support the actual `#[\SensitiveParameter]` attribute in stubs in [GH-8836](https://github.com/php/php-src/pull/8836) in [342e18f105](https://github.com/php/php-src/commit/342e18f105) by Tim Düsterhus
 * Fix parameter order in `gen_stub.php` in [227a8576d2](https://github.com/php/php-src/commit/227a8576d2) by Máté Kocsis 💜
-* Fix parameter order in `gen_stub.php` in [227a8576d2](https://github.com/php/php-src/commit/227a8576d2) by Máté Kocsis 💜
 * Fix [GH-8923](https://github.com/php/php-src/issues/8923): error_log on Windows can hold the file write lock in [GH-8925](https://github.com/php/php-src/pull/8925) by Christoph M. Becker
 * add compatibility for tentative-return-type in [6e24c16c4a](https://github.com/php/php-src/commit/6e24c16c4a) by Remi Collet
 * Fix [GH-8750](https://github.com/php/php-src/issues/8750): Can not create `VT_ERROR` variant type in [GH-8886](https://github.com/php/php-src/pull/8886) by Christoph M. Becker
@@ -250,9 +249,8 @@ Following are some of the changes that did not go through an RFC process because
 * cleanup unused in [ee1d6188cf](https://github.com/php/php-src/commit/ee1d6188cf) by Remi Collet
 * no need for attributes on legacy in [af72d6e5d9](https://github.com/php/php-src/commit/af72d6e5d9) by Remi Collet
 * in [f0d536844f](https://github.com/php/php-src/commit/f0d536844f) by Máté Kocsis 💜
-* FPM: Downgrade occasional “failed to acquire scoreboard” warning in [3040f75f43](https://github.com/php/php-src/commit/3040f75f43) by Felix Wiedemann
+* FPM: Downgrade occasional “failed to acquire scoreboard” warning in [3040f75f43](https://github.com/php/php-src/commit/3040f75f43), [db5f6713ee](https://github.com/php/php-src/commit/db5f6713ee) by Felix Wiedemann
 * Fix possible crash in case of exception in [c6eb5dc5fd](https://github.com/php/php-src/commit/c6eb5dc5fd) by Dmitry Stogov
-* FPM Downgrade occasional “`failed to acquire scoreboard`” warning in [db5f6713ee](https://github.com/php/php-src/commit/db5f6713ee) by Felix Wiedemann
 * Update request startup error messages in [09237f6126](https://github.com/php/php-src/commit/09237f6126) by Eric Norris
 * `DatePeriod` properties cannot be made readonly in [GH-9013](https://github.com/php/php-src/pull/9013) in [e13d60c039](https://github.com/php/php-src/commit/e13d60c039) by Máté Kocsis 💜
 * Drop support for `SQLITE_COPY` in authorizer callback in [GH-9041](https://github.com/php/php-src/pull/9041) by Christoph M. Becker
