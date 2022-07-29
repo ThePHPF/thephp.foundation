@@ -1,5 +1,6 @@
 ---
 title: Code of Conduct
+description: PHP Foundation Code of Conduct
 permalink: code-of-conduct
 layout: page
 ---

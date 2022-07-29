@@ -1,5 +1,6 @@
 ---
 title: PHP Foundation Update, April 2022
+description: Monthly updates to the PHP Foundation, April 2022
 layout: post
 tags:
     - update
