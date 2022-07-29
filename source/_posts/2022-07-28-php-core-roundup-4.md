@@ -164,8 +164,8 @@ Following are some of the changes that did not go through an RFC process because
     * Fixed memory leaks with `DatePeriod::__unserialise` in [0dbedb3dbd](https://github.com/php/php-src/commit/0dbedb3dbd)
     * Fixed [GH-8730](https://github.com/php/php-src/issues/8730): `DateTime::diff` miscalculation is same time zone of different type in [cc9c57722a](https://github.com/php/php-src/commit/cc9c57722a)
     * Fixed [#81263](https://bugs.php.net/bug.php?id=81263): Wrong result from `DateTimeImmutable::diff` in [37d460b64a](https://github.com/php/php-src/commit/37d460b64a)
-    * Add test case for [GH-8964](https://github.com/php/php-src/issues/8964) in [7831a1cae6](https://github.com/php/php-src/commit/7831a1cae6)
-    * **Import timelib 2022.01 in [8ea587a305](https://github.com/php/php-src/commit/8ea587a305)**
+    * Fixed [GH-8964](https://github.com/php/php-src/issues/8964) in [7831a1cae6](https://github.com/php/php-src/commit/7831a1cae6)
+    * Import timelib 2022.01 in [8ea587a305](https://github.com/php/php-src/commit/8ea587a305)
     * Fixed bug [#80022](https://bugs.php.net/bug.php?id=80022): Support ISO 8601 years outside 0000-9999 range better in [6ae86c2358](https://github.com/php/php-src/commit/6ae86c2358)
     * Add test case for bug [#80483](https://bugs.php.net/bug.php?id=80483)/[#75035](https://bugs.php.net/bug.php?id=75035) in [1d0e5eddd5](https://github.com/php/php-src/commit/1d0e5eddd5)
 	* Fixed bug [#80047](https://bugs.php.net/bug.php?id=80047) (DatePeriod doesn't warn with custom DateTimeImmutable) in [001e7dbb04](https://github.com/php/php-src/commit/001e7dbb04)
