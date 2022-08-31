@@ -7,7 +7,7 @@ tags:
 author:
   name: Ayesh Karunaratne
   url: https://aye.sh
-published_at: 30 August 2022
+published_at: 31 August 2022
 ---
 
 Welcome to the fifth edition of _PHP Core Roundup,_ a [series of posts](https://thephp.foundation/blog/tag/roundup/) that round up updates and news on the latest improvements, discussions, bug fixes, and new features in PHP. 
