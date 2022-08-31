@@ -12,13 +12,14 @@ published_at: 31 August 2022
 
 Welcome to the fifth edition of _PHP Core Roundup,_ a [series of posts](https://thephp.foundation/blog/tag/roundup/) that round up updates and news on the latest improvements, discussions, bug fixes, and new features in PHP. 
 
-The PHP Foundation currently supports six part-time PHP contributors who work on maintenance and new features for PHP. Maintenance is not limited to fixing bugs, but also includes work to reduce technical debt, making life easier for everyone working on PHP. The contributors funded by the PHP Foundation collaborate with other contributors on code, documentation, and discussions.
+> The PHP Foundation currently supports six part-time PHP contributors who work on maintenance and new features for PHP. Maintenance is not limited to fixing bugs, but also includes work to reduce technical debt, making life easier for everyone working on PHP. The contributors funded by the PHP Foundation collaborate with other contributors on code, documentation, and discussions.
 
+<br>
 We publish the posts on our website, and you can subscribe to a newsletter; You don’t necessarily have to be a PHP Foundation backer to follow _PHP Core Roundup_.
 
 <div class="px-4 pt-3 pb-10 mb-6 border-b border-t -mx-4 border-gray-200">
     <div class="max-w-xl mx-auto">
-        <h2 class="text-xl text-left inline-block font-semibold text-gray-800 mb-1">Subscribe to PHP Foundation Updates</h2>
+        <h2 class="text-xl text-left inline-block font-semibold text-gray-800 mb-1">Subscribe to PHP Core Roundup newsletter</h2>
         <form method="POST" action="https://php-foundation-mailcoach.com/subscribe/9be4e2bd-f9d8-475c-b00e-2dcc4cf90056" class="mt-2">
             <div class="flex items-center">
                 <input placeholder="Your email address" type="email" class="w-full px-2 py-4 mr-2  bg-gray-100 shadow-inner rounded-md border border-gray-400 focus:outline-none" name="email" required>
@@ -29,7 +30,7 @@ We publish the posts on our website, and you can subscribe to a newsletter; You 
 </div>
 
 
-[Roman Pronskiy](https://pronskiy.com/), co-founder of the PHP Foundation also writes a monthly series about updates on the PHP Foundation, which are available under [The PHP Foundation Update](https://thephp.foundation/blog/tag/update/) tag on the blog.
+[Roman Pronskiy](https://twitter.com/pronskiy/), administration member of the PHP Foundation, also writes a monthly series about updates on the PHP Foundation, which are available under [The PHP Foundation Update](https://thephp.foundation/blog/tag/update/) tag on the blog.
 
 Elena Rubashevska from Open Collective interviewed Roman about the PHP Foundation, why and how it came to be, and his thoughts on the future of PHP, which you can read at [PHP Foundation: Alive and Kicking](https://blog.opencollective.com/php-foundation-alive-and-kicking/).
 
@@ -109,6 +110,7 @@ Following are the RFCs and major pull-requests discussed, voted, and implemented
 	```php
 	glob('vfs://*.ext')
 	```
+    <br>
 
 - **RFC Implemented: [Constants in Traits](https://wiki.php.net/rfc/constants_in_traits)**
 
@@ -126,6 +128,7 @@ Following are the RFCs and major pull-requests discussed, voted, and implemented
         final protected const QUX = 'qux';
     }
     ```
+   <br>
 
 
 - **New Pull Request: [Allow writing to readonly properties during cloning](https://github.com/php/php-src/pull/9403)**
@@ -231,7 +234,6 @@ Following are some changes that did not go through an RFC process because they a
  - Tracing: Prevent recording types of variables used to pass `zend_class_entry` in [2758ff2a77](https://github.com/php/php-src/commit/2758ff2a77) by Dmitry Stogov
  - SPL: Use new improved `is_line_empty()` function instead of the old one in [GH-9217](https://github.com/php/php-src/pull/9217) by George Peter Banyard 💜
  - Extended `map_ptr` before copying class table in [GH-9188](https://github.com/php/php-src/pull/9188) by Arnaud Le Blanc 💜
- - [ci-skip] Fix for bug [#80047](https://bugs.php.net/bug.php?id=80047) was included in previous release in [a08ffc7052](https://github.com/php/php-src/commit/a08ffc7052) by Gabriel Caruso
  - Fix bug [#65489](https://bugs.php.net/bug.php?id=65489): `glob()` `basedir` check is inconsistent in [e5ab9f45d5](https://github.com/php/php-src/commit/e5ab9f45d5) by Jakub Zelenka 💜
  - Fix [GH-8396](https://github.com/php/php-src/issues/8396): Network online test using https broken in [dc01fce36d](https://github.com/php/php-src/commit/dc01fce36d) by Jakub Zelenka 💜
  - Also fix `?->` on magic consts in const expressions in [7b43d819c8](https://github.com/php/php-src/commit/7b43d819c8) by Ilija Tovilo 💜
@@ -240,7 +242,6 @@ Following are some changes that did not go through an RFC process because they a
  - Convert some macros to `zend_always_inline` functions in [GH-8288](https://github.com/php/php-src/pull/8288) by George Peter Banyard 💜
  - Add conflict markers for dba tests in [f11228cdbe](https://github.com/php/php-src/commit/f11228cdbe) by Christoph M. Becker
  - Remove `ZEND_DVAL_TO_LVAL_CAST_OK` in [GH-9215](https://github.com/php/php-src/pull/9215) by Go Kudo
- - [CI skip] update NEWS in [1ce2b56227](https://github.com/php/php-src/commit/1ce2b56227) by zeriyoshi
  - Save previous observer on the VM stack in [dc5475c191](https://github.com/php/php-src/commit/dc5475c191) by Bob Weinand
  - Add proper handling to observe functions in fibers in [da94baf31a](https://github.com/php/php-src/commit/da94baf31a) by Bob Weinand
  - CI: `macos-10.15` -> `macos-11` in [GH-9087](https://github.com/php/php-src/pull/9087) by Go Kudo
@@ -267,8 +268,6 @@ Following are some changes that did not go through an RFC process because they a
  - Fix [GH-9309](https://github.com/php/php-src/issues/9309): Segfault when connection is used after imap_close() in [GH-9313](https://github.com/php/php-src/pull/9313) by Christoph M. Becker
  - Fix [GH-8409](https://github.com/php/php-src/issues/8409): SSL handshake timeout persistent connections hanging in [d0527427be](https://github.com/php/php-src/commit/d0527427be) by Jakub Zelenka 💜
  - Update expires format for session cookie in [GH-9304](https://github.com/php/php-src/pull/9304) by Tim Düsterhus
- - Revert "Fix [GH-8409](https://github.com/php/php-src/issues/8409): SSL handshake timeout persistent connections hanging" in [897ca85d33](https://github.com/php/php-src/commit/897ca85d33) by Jakub Zelenka 💜
- - Re-fix [GH-8409](https://github.com/php/php-src/issues/8409): SSL handshake timeout persistent connections hanging in [GH-9332](https://github.com/php/php-src/pull/9332) by twosee
  - Remove useless UNEXPECTED around RETURN_VALUE_USED in specialized RETVAL handler in [GH-9329](https://github.com/php/php-src/pull/9329) by Ilija Tovilo 💜
  - Fix unexpected deprecated dynamic property warning in [GH-9324](https://github.com/php/php-src/pull/9324) by twosee
  - Correct IntlDateFormatter::formatObject params in [GH-9341](https://github.com/php/php-src/pull/9341) by Gert de Pagter
