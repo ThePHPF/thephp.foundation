@@ -62,7 +62,7 @@ Although the PHP 8.2 feature-freeze is passed, there are few changes that Jakub 
 
 ## Recent RFCs, Merged PRs, and Commits
 
-Changes and improvements to PHP are discussed, reported, and voted on by the PHP Foundation Team, the PHP development team, and contributors. Bug reports are made to the PHP [issue tracker](https://github.com/php/php-src/issues), changes are discussed in [mailing lists](https://www.php.net/mailing-lists.php), minor code changes are proposed as [pull requests](https://github.com/php/php-src/issues), and major changes are discussed in detail and voted on as [PHP RFCs](https://wiki.php.net/rfc). [Documentation](https://github.com/php/doc-en/) and the [php.net web site](github.com/php/web-php) changes are also discussed and improved at their relevant Git repositories on GitHub.
+Changes and improvements to PHP are discussed, reported, and voted on by the PHP Foundation Team, the PHP development team, and contributors. Bug reports are made to the PHP [issue tracker](https://github.com/php/php-src/issues), changes are discussed in [mailing lists](https://www.php.net/mailing-lists.php), minor code changes are proposed as [pull requests](https://github.com/php/php-src/issues), and major changes are discussed in detail and voted on as [PHP RFCs](https://wiki.php.net/rfc). [Documentation](https://github.com/php/doc-en/) and the [php.net web site](https://github.com/php/web-php) changes are also discussed and improved at their relevant Git repositories on GitHub.
 
 Hundreds of awesome PHP contributors put their efforts into improvements to the PHP code base, documentation, and the php.net website. Here is a summary of some of the changes made by the people behind PHP. Things marked with 💜 are done by the PHP Foundation team.
 
@@ -107,7 +107,7 @@ Following are the RFCs and major pull-requests discussed, voted, and implemented
 	This RFC proposes to add consistently for stream wrappers in glob() function. With stream wrappers supported, glob() function will be able to use any supported and [registered stream wrapper](https://www.php.net/manual/en/wrappers.php) in PHP, similar to how other file system functions: \
 
 	```php
-	`glob('vfs://*.ext')`
+	glob('vfs://*.ext')
 	```
 
 - **RFC Implemented: [Constants in Traits](https://wiki.php.net/rfc/constants_in_traits)**
