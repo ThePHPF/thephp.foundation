@@ -146,6 +146,10 @@
     background-size: auto calc(100% + 4px);
 }
 
+footer > ul, footer > p {
+    padding: 0;
+}
+
 code {
     font-family: Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
     line-height: normal;
