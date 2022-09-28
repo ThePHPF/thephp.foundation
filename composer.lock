@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "11fe9908e7da894b1eb104a6c80bf17a",
+    "content-hash": "7f163a86a91471bb981a9514ae6f7316",
     "packages": [
         {
             "name": "dflydev/ant-path-matcher",
@@ -4382,7 +4382,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^8.0",
+        "php": "^8.1",
         "ext-gd": "*",
         "ext-dom": "*"
     },
