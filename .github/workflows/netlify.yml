@@ -4,6 +4,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: github.repository_owner == 'ThePHPF'
     steps:
       - uses: actions/checkout@v2
         with:
@@ -51,6 +52,7 @@ jobs:
           deploy-message: "Deploy from GitHub Actions"
           enable-pull-request-comment: true
           overwrites-pull-request-comment: true
+          enable-commit-comment: false
           alias: deploy-pr-${{ github.event.number }}
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
