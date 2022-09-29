@@ -74,7 +74,7 @@ Following are the RFCs and major pull-requests discussed, voted, and implemented
 	  * Passing negative `$width`s to `mb_strimwidth()`
 	  * The `NumberFormatter::TYPE_CURRENCY` constant
 	  * `MT_RAND_PHP` constant/mode
-	  * Global Mersenne Twister: This includes deprecating several RNG functions including `rand()`, `mt_rand()`, `array_rand()`, `shuffle()`, and `str_shuffle()` functions in favor of the `\Random\Randomizer` class introduced in PHP 8.2, or `random_int()`/`random_bytes()` functions available since PHP 7.0.functions. Most of the applications can simply switch to `random_int()`/`random_bytes()`, and applications that need to use a seedable Global Mersenne Twister can use the new scoped Mersenne Twister RNG engine through the new `\Random\Randomizer` class.
+	  * Global Mersenne Twister: This includes deprecating several RNG functions including `rand()`, `mt_rand()`, `array_rand()`, `shuffle()`, and `str_shuffle()` functions in favor of the `\Random\Randomizer` class introduced in PHP 8.2, or `random_int()`/`random_bytes()` functions available since PHP 7.0. Most of the applications can simply switch to `random_int()`/`random_bytes()`, and applications that rely on an existing Mersenne Twister sequence can use the scoped Mt19937 engine through the new `\Random\Randomizer` class.
 
 ### Documentation
 
