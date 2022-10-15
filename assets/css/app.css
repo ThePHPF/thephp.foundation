@@ -56,7 +56,7 @@
     }
 
     a {
-        @apply text-blue-500 underline
+        @apply text-blue-600 underline
     }
 
     a:hover, a:visited:hover {
