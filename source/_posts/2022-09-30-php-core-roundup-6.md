@@ -17,18 +17,7 @@ Welcome back to _PHP Core Roundup_, the sixth in the [series](https://thephp.fou
 <br>
 We publish the posts on our website, and you can subscribe to a newsletter; You don’t necessarily have to be a PHP Foundation backer to follow _PHP Core Roundup_.
 
-<div class="px-4 pt-3 pb-10 mb-6 border-b border-t -mx-4 border-gray-200">
-    <div class="max-w-xl mx-auto">
-        <h2 class="text-xl text-left inline-block font-semibold text-gray-800 mb-1">Subscribe to PHP Core Roundup newsletter</h2>
-        <form method="POST" action="https://php-foundation-mailcoach.com/subscribe/9be4e2bd-f9d8-475c-b00e-2dcc4cf90056" class="mt-2">
-            <div class="flex items-center">
-                <input placeholder="Your email address" type="email" class="w-full px-2 py-4 mr-2  bg-gray-100 shadow-inner rounded-md border border-gray-400 focus:outline-none" name="email" required>
-                <button class="bg-[#7f52ff] text-gray-200 px-5 py-2 rounded shadow " style="margin-left: -7.8rem;">Sign Up</button>
-            </div>
-        </form>
-    </div>
-</div>
-
+{% include "newsletter.html" %}
 
 September was a slow month, given that PHP 8.2 reached its feature-freeze, and most of the work is now focused on getting PHP 8.2 ready for its general availability, scheduled for November 24th.
 
