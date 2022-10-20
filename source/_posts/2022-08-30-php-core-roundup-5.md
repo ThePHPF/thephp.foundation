@@ -17,17 +17,7 @@ Welcome to the fifth edition of _PHP Core Roundup,_ a [series of posts](https://
 <br>
 We publish the posts on our website, and you can subscribe to a newsletter; You don’t necessarily have to be a PHP Foundation backer to follow _PHP Core Roundup_.
 
-<div class="px-4 pt-3 pb-10 mb-6 border-b border-t -mx-4 border-gray-200">
-    <div class="max-w-xl mx-auto">
-        <h2 class="text-xl text-left inline-block font-semibold text-gray-800 mb-1">Subscribe to PHP Core Roundup newsletter</h2>
-        <form method="POST" action="https://php-foundation-mailcoach.com/subscribe/9be4e2bd-f9d8-475c-b00e-2dcc4cf90056" class="mt-2">
-            <div class="flex items-center">
-                <input placeholder="Your email address" type="email" class="w-full px-2 py-4 mr-2  bg-gray-100 shadow-inner rounded-md border border-gray-400 focus:outline-none" name="email" required>
-                <button class="bg-[#7f52ff] text-gray-200 px-5 py-2 rounded shadow " style="margin-left: -7.8rem;">Sign Up</button>
-            </div>
-        </form>
-    </div>
-</div>
+{% include "newsletter.html" %}
 
 
 [Roman Pronskiy](https://twitter.com/pronskiy/), administration member of the PHP Foundation, also writes a monthly series about updates on the PHP Foundation, which are available under [The PHP Foundation Update](https://thephp.foundation/blog/tag/update/) tag on the blog.
