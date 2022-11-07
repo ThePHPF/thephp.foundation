@@ -82,7 +82,7 @@ Following are the RFCs and major pull-requests discussed, voted, and implemented
 	<br />
 	Currently, the snippets above result in Parse Error. The RFC proposes adding support for coalesce in array destructing (`list()` function calls, or `[$a, $b, …] = $array` syntax).
 
-	When destructing an array, the `$a` will be assigned ``$b```/"default value"` if `$array[0]` is not set.
+	When destructing an array, the `$a` will be assigned `$b`/`"default value"` if `$array[0]` is not set.
 
 * **RFC Under Discussion: [Randomizer Additions](https://wiki.php.net/rfc/randomizer_additions)**
 	
