@@ -36,7 +36,7 @@ There are quite a few more RFCs under discussion that target PHP 8.3, so it’s 
 
 The first GA PHP version, PHP 8.2.0 is scheduled to be released on 24th of November. PHP 8.2 RC5 is already released, and RC6 (the last one) is scheduled for 10th of November.
 
-PHP 8.2 RC versions are available in Ondrej Sury’s Debian/Ubuntu repos, Remi’s repos for Fedora/RHEL, Docker images on Docker Hub, and compiled Windows binaries on windows.php.net. 
+PHP 8.2 RC versions are available in Ondrej Sury’s Debian/Ubuntu repos, Remi’s repos for Fedora/RHEL, Docker images on Docker Hub, and compiled Windows binaries on [windows.php.net](https://windows.php.net). 
 
 
 ## All PHP 7 Versions Reach EOL Next Month
