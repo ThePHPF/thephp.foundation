@@ -14,10 +14,7 @@ Welcome to the seventh in the _PHP Core Roundup_ series, where we summarize the 
 
 We are merely three weeks away from PHP 8.2 GA release, and we already have changes implemented and being discussed for the next PHP version, PHP 8.3! Exciting times!
 
-> The PHP Foundation currently supports six part-time PHP contributors who work on maintenance and new features for PHP. Maintenance is not limited to fixing bugs, but also includes work to reduce technical debt, making life easier for everyone working on PHP. The contributors funded by the PHP Foundation collaborate with other contributors on code, documentation, and discussions.
-
-<br>
-We publish the posts on our website, and you can subscribe to a newsletter; You don’t necessarily have to be a PHP Foundation backer to follow _PHP Core Roundup_.
+[![Right now, we are working on a transparency report, renewing contracts, and establishing high-level goals for next year. We have a lot of exciting stuff to share soon, so please stay tuned!](/assets/post-images/2022/roundup-7/tweet-thephpf-status.png "The PHP Foundation 💜 on Twitter")](https://twitter.com/ThePHPF/status/1581716848944779264)
 
 {% include "newsletter.html" %}
 
@@ -25,9 +22,9 @@ We publish the posts on our website, and you can subscribe to a newsletter; You 
 
 PHP 8.3 is more than a year away, but the first change for PHP 8.3 is already merged into the `master` branch. 
 
-Juan Carlos Morales’s RFC to add a new `json_validate` function to PHP was voted and is already implemented. The new `json_validate` function returns whether a given JSON string is valid or not, without consuming the memory and processing it takes to decode a JSON string. For quick JSON string validations, `json_validate` can come in handy.
+Juan Carlos Morales’s RFC to add a new `json_validate()` function to PHP was voted and is already implemented. The new `json_validate()` function returns whether a given JSON string is valid or not, without consuming the memory and processing it takes to decode a JSON string. For quick JSON string validations, `json_validate()` can come in handy.
 
-Additionally, Tim Düsterhus’s RFC to improve error handling semantics of the `unserialize` function recently finished the vote.
+Additionally, Tim Düsterhus’s RFC to improve error handling semantics of the `unserialize()` function recently finished the vote.
 
 There are quite a few more RFCs under discussion that target PHP 8.3, so it’s safe to say that the PHP 8.3 development is quite active even before we have the first GA PHP 8.2 release!
 
@@ -36,19 +33,20 @@ There are quite a few more RFCs under discussion that target PHP 8.3, so it’s 
 
 The first GA PHP version, PHP 8.2.0 is scheduled to be released on 24th of November. PHP 8.2 RC5 is already released, and RC6 (the last one) is scheduled for 10th of November.
 
-PHP 8.2 RC versions are available in Ondrej Sury’s Debian/Ubuntu repos, Remi’s repos for Fedora/RHEL, Docker images on Docker Hub, and compiled Windows binaries on [windows.php.net](https://windows.php.net). 
+PHP 8.2 RC versions are available in [Ondrej Sury’s](https://deb.sury.org/#php-packages) Debian/Ubuntu repos, [Remi’s](https://rpms.remirepo.net/) repos for Fedora/RHEL, [Docker images](https://hub.docker.com/_/php/tags?page=1&name=8.2) on Docker Hub, and compiled Windows binaries on [windows.php.net](https://windows.php.net). 
 
 
 ## All PHP 7 Versions Reach EOL Next Month
 
-PHP 7’s journey comes to an end when PHP 8.2 is released. PHP 7.0 through 7.3 are no longer maintained and no longer receive security updates, but PHP 7.4 is currently receiving security updates from the PHP core developers. 
+PHP 7’s journey [comes to an end](https://www.php.net/supported-versions.php) when PHP 8.2 is released. PHP 7.0 through 7.3 are no longer maintained and no longer receive security updates, but PHP 7.4 is currently receiving security updates from the PHP core developers. 
 
 
 ## Recent RFCs, Merged PRs, Discussions, and Commits
 
-Changes and improvements to PHP are discussed, reported, and voted on by the PHP Foundation Team, the PHP development team, and contributors. Bug reports are made to the PHP [issue tracker](https://github.com/php/php-src/issues), changes are discussed in [mailing lists](https://www.php.net/mailing-lists.php), minor code changes are proposed as [pull requests](https://github.com/php/php-src/issues), and major changes are discussed in detail and voted on as [PHP RFCs](https://wiki.php.net/rfc). [Documentation](https://github.com/php/doc-en/) and the [php.net web site](https://github.com/php/web-php) changes are also discussed and improved at their relevant Git repositories on GitHub.
+> Changes and improvements to PHP are discussed, reported, and voted on by the PHP Foundation Team, the PHP development team, and contributors. Bug reports are made to the PHP [issue tracker](https://github.com/php/php-src/issues), changes are discussed in [mailing lists](https://www.php.net/mailing-lists.php), minor code changes are proposed as [pull requests](https://github.com/php/php-src/issues), and major changes are discussed in detail and voted on as [PHP RFCs](https://wiki.php.net/rfc). [Documentation](https://github.com/php/doc-en/) and the [php.net web site](https://github.com/php/web-php) changes are also discussed and improved at their relevant Git repositories on GitHub.
 
-Hundreds of awesome PHP contributors put their efforts into improvements to the PHP code base, documentation, and the php.net website. Here is a summary of some of the changes made by the people behind PHP. Things marked with 💜 are done by the PHP Foundation team.
+<br>
+Hundreds of awesome PHP contributors put their efforts into improvements to the PHP code base, documentation, and the php.net website. Here is a summary of some changes made by the people behind PHP. Things marked with 💜 are done by the PHP Foundation team.
 
 A security release for all current PHP versions (7.4, 8.0, and 8.1) were made fixing an out-of-bounds read vulnerability in the GD extension (CVE-2022-31630), and a buffer overflow vulnerability in PHP’s SHA3 implementation (CVE-2022-37454). The SHA3 [vulnerability](https://mouha.be/sha-3-buffer-overflow/) was in the reference upstream SHA3 implementation written in C. Python and a few libraries were affected along with PHP.
 
@@ -140,8 +138,8 @@ Following are some changes that did not go through an RFC process because they a
  - Replace `reallocarray` with `safe_perealloc` in [138fd5b3c8](https://github.com/php/php-src/commit/138fd5b3c8) by Ilija Tovilo 💜
  - Improve CS in FPM Tester Response in [1ed4303957](https://github.com/php/php-src/commit/1ed4303957) by Jakub Zelenka 💜
  - Do not check `X-Powered-By` header in FPM tester if `expose_php` off in [GH-9508](https://github.com/php/php-src/pull/9508) by Jakub Zelenka 💜
- - fix `php_init_crypt_r`/`php_shutdown_crypt_r` signatures warning in [257f108924](https://github.com/php/php-src/commit/257f108924) by David Carlier
- - add missing CVEs in [b0cc5ed91f](https://github.com/php/php-src/commit/b0cc5ed91f) and [12c3636d01](https://github.com/php/php-src/commit/12c3636d01) by Remi Collet
+ - Fix `php_init_crypt_r`/`php_shutdown_crypt_r` signatures warning in [257f108924](https://github.com/php/php-src/commit/257f108924) by David Carlier
+ - Add missing CVEs in [b0cc5ed91f](https://github.com/php/php-src/commit/b0cc5ed91f) and [12c3636d01](https://github.com/php/php-src/commit/12c3636d01) by Remi Collet
  - Add support for binary and octal number prefixes for INI settings in [GH-9560](https://github.com/php/php-src/pull/9560) by George Peter Banyard 💜
  - Fix UPGRADING by adding DBA constants in [a8d6ca4ef1](https://github.com/php/php-src/commit/a8d6ca4ef1) by George Peter Banyard 💜
  - Move object/class redundancy check into union type handling in [74ae498a4b](https://github.com/php/php-src/commit/74ae498a4b) by George Peter Banyard 💜
@@ -187,7 +185,7 @@ Following are some changes that did not go through an RFC process because they a
  - Test for bug [#78055](https://bugs.php.net/bug.php?id=78055) (`DatePeriod`'s getRecurrences and `->recurrences` don't match) in [011b7f9840](https://github.com/php/php-src/commit/011b7f9840) by Derick Rethans 💜
  - Fix failing date test in [4e8a6554cb](https://github.com/php/php-src/commit/4e8a6554cb) by Ilija Tovilo 💜
  - Fix cli server blocking on accept when using multiple workers in [GH-9693](https://github.com/php/php-src/pull/9693) by Ilija Tovilo 💜
- - opcache: add FrankenPHP to the allow list in [7acb7703e2](https://github.com/php/php-src/commit/7acb7703e2) by Kévin Dunglas
+ - Add FrankenPHP to the allow list of opcache in [7acb7703e2](https://github.com/php/php-src/commit/7acb7703e2) by Kévin Dunglas
  - Fix bug [#81738](https://bugs.php.net/bug.php?id=81738) (buffer overflow in hash_update() on long parameter) in [248f647724](https://github.com/php/php-src/commit/248f647724) by Stanislav Malyshev
  - Revert incorrect PHP-7.4 version constants in [8b919c3175](https://github.com/php/php-src/commit/8b919c3175) by Ilija Tovilo 💜
  - Fix crash when memory limit is exceeded during generator initialization in [26c7c82d32](https://github.com/php/php-src/commit/26c7c82d32) by Arnaud Le Blanc 💜
