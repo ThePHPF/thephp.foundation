@@ -89,7 +89,7 @@ Overall, there are 145 organizations and 1220 individual sponsors [on Open Colle
 
 ## Events Timeline
 
-![Timeline](/assets/post-images/2022/report-2022/php-foundation-timeline-2022_3.svg)
+![Timeline](/assets/post-images/2022/report-2022/php-foundation-timeline-2022.svg)
 
 ## The PHP Foundation Staff
 
@@ -222,21 +222,24 @@ We intend to make the ground rules more clear over the coming year, including th
 
 In 2022, PHP Foundation was financially backed by organizations and individuals with the goal of paying a competitive salary to as many core developers as possible.
 
-- Total contributed by sponsors and individuals: $664,745.43
-- Fees: $84,093.56
-- Total raised: $580,651.87
--
-- From organizations: 77%
-- From individuals: 23%
--
-- Recurring: 39.5% 
-- One-Time: 60.5%
--
-- Paid to developers in 2022: $133,285 
-- Current balance: $476,400.10
--
-- Planned expenses for 2023: $678,000
+|                                                                       |
+|-----------------------------------------------------------------------|
+| • Total contributed by sponsors and individuals before fees: $712,484 |
+| • Fees: $90,273                                                       |
+| • Total raised: $622,211                                              |
+| &nbsp;                                                                |
+| • From organizations: 77%                                             |
+| • From individuals: 23%                                               |
+| &nbsp;                                                                |
+| • Recurring: 39.5%                                                    |
+| • One-Time: 60.5%                                                     |
+| &nbsp;                                                                |
+| • Paid to developers in 2022: $133,285                                | 
+| • Current balance: $488,635                                           |
+| &nbsp;                                                                |
+| • Planned expenses for 2023: $678,000                                 |
 
+<br>
 All incoming and outgoing transactions of The PHP Foundation are publicly available to view for anyone, not just sponsors of the foundation: [https://opencollective.com/phpfoundation#category-BUDGET](https://opencollective.com/phpfoundation#category-BUDGET)
 
 
