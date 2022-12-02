@@ -7,7 +7,7 @@ tags:
 author:
   name: Ayesh Karunaratne
   url: https://aye.sh
-published_at: 30 November 2022
+published_at: 2 December 2022
 ---
 
 Welcome to the eighth issue of _PHP Core Roundup_ series! This issue was supposed to bring the great news of PHP 8.2 release, but the PHP 8.2 release date was pushed to December 8, and yet this issue is still full of exciting new updates about what’s being discussed and improved in PHP. 
@@ -35,7 +35,7 @@ PHP 7.4 is the last version in the PHP 7.4 series, and it reached its end of lif
 
 ## Recent RFCs, Merged PRs, Discussions, and Commits
 
-> Changes and improvements to PHP are discussed, reported, and voted on by the PHP Foundation Team, the PHP development team, and contributors. Bug reports are made to the PHP [issue tracker](https://github.com/php/php-src/issues), changes are discussed in [mailing lists](https://www.php.net/mailing-lists.php), minor code changes are proposed as [pull requests](https://github.com/php/php-src/issues), and major changes are discussed in detail and voted on as [PHP RFCs](https://wiki.php.net/rfc). [Documentation](https://github.com/php/doc-en/) and the [php.net web site](https://github.com/php/web-php) changes are also discussed and improved at their relevant Git repositories on GitHub.
+> Changes and improvements to PHP are discussed, reported, and voted on by the PHP Foundation Team, the PHP development team, and contributors. Bug reports are made to the PHP [issue tracker](https://github.com/php/php-src/issues), changes are discussed in [mailing lists](https://www.php.net/mailing-lists.php), minor code changes are proposed as [pull requests](https://github.com/php/php-src/issues), and major changes are discussed in detail and voted on as [PHP RFCs](https://wiki.php.net/rfc). [Documentation](https://github.com/php/doc-en/) and the [php.net website](https://github.com/php/web-php) changes are also discussed and improved at their relevant Git repositories on GitHub.
 
 <br>
 Hundreds of awesome PHP contributors put their efforts into improvements to the PHP code base, documentation, and the php.net website. Here is a summary of some changes made by the people behind PHP. Things marked with 💜 are done by the PHP Foundation team.
@@ -62,9 +62,41 @@ Following are the RFCs and major pull-requests discussed, voted, and implemented
 
 * **RFC Under Discussion: [Readonly amendments](https://wiki.php.net/rfc/readonly_amendments) 💜**
 	
-	RFC by Nicolas Grekas and Máté Kocsis, attempts to address some of the shortcomings of PHP 8.1 readonly properties and 8.2 readonly classes.
+	RFC by Nicolas Grekas and Máté Kocsis, attempts to address the shortcomings of PHP 8.1 readonly properties and 8.2 readonly classes.
 	
-	This RFC proposes allowing `readonly` classes to be extended by non-readonly classes (currently not allowed, and causes a fatal error), and to allow reinitializing readonly properties during cloning (within the `__clone()` magic method).
+	This RFC proposes allowing `readonly` classes to be extended by non-readonly classes (currently not allowed, and causes a fatal error):
+    ```php
+    readonly class A {}
+    class B extends A {} // Currently this produces a Fatal error
+    ```
+    <br>
+
+    ... and to allow reinitializing readonly properties during cloning (within the `__clone()` magic method):
+    ```php
+    class Foo {
+        public function __construct(
+            public readonly DateTime $bar,
+            public readonly DateTime $baz
+        ) {}
+     
+        public function __clone()
+        {
+            $this->bar = clone $this->bar; // Works
+            $this->cloneBaz();
+        }
+     
+        public function cloneBaz()
+        {
+            $this->baz = clone $this->baz; // Also works
+        }
+    }
+     
+    $foo = new Foo(new DateTime(), new DateTime());
+    $foo2 = clone $foo;
+     
+    // No error, Foo::$bar and Foo::$baz are cloned deeply
+    ```
+    <br>
 
 * **RFC Accepted: [Randomizer Additions](https://wiki.php.net/rfc/randomizer_additions)**
 	
@@ -159,7 +191,7 @@ Following are some changes that did not go through an RFC process because they a
  - Remove code for OS2 in [726d595ec7](https://github.com/php/php-src/commit/726d595ec7) by George Peter Banyard 💜
  - Use `zend_result` return type instead of innacurate ones in [dbf54e1a8b](https://github.com/php/php-src/commit/dbf54e1a8b) by George Peter Banyard 💜
  - Change conditional check in `disk_free_space()` test in [bab9e349cb](https://github.com/php/php-src/commit/bab9e349cb) by George Peter Banyard 💜
- - Add wordpress to community build in [GH-9942](https://github.com/php/php-src/pull/9942) by Ilija Tovilo 💜
+ - Add WordPress to community build in [GH-9942](https://github.com/php/php-src/pull/9942) by Ilija Tovilo 💜
  - Fix caching of default params with side-effects in [GH-9935](https://github.com/php/php-src/pull/9935) by Ilija Tovilo 💜
  - Fix cross-compilation for `shadow_stack_exists` in [05f4b84940](https://github.com/php/php-src/commit/05f4b84940) by Dmitry Stogov
  - Fix [GH-9650](https://github.com/php/php-src/issues/9650): Can't initialize heap: [0x000001e7] in [GH-9721](https://github.com/php/php-src/pull/9721) by Michael Voříšek
