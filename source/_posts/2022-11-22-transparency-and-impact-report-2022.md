@@ -53,6 +53,7 @@ Initial members:
 * Laravel
 * Zend by Perforce
 * Symfony
+* PrestaShop
 
 Representatives of these companies formed the initial administration group.
 
