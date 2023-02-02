@@ -124,6 +124,13 @@ Following are the RFCs and major pull-requests discussed, voted, and implemented
 
 Following are some changes that did not go through an RFC process because they are either planned, bug fixes, or progressive enhancements. There are automated unit and integration tests for each of these changes, the PHP core developers review all pull requests.
 
+---
+
+### Full list of commits since [PHP Core Roundup #8](/blog/2022/11/30/php-core-roundup-8/)
+
+<details markdown="1">
+  <summary>Click here to expand</summary>
+
  - Fix incorrect short-circuiting in constant expressions ([#10030](https://bugs.php.net/bug.php?id=10030)) in [683d81e4bd](https://github.com/php/php-src/commit/683d81e4bd) by Ilija Tovilo 💜
  - Fix [GH-9769](https://github.com/php/php-src/issues/9769): Misleading error message for unpacking of objects in [GH-9776](https://github.com/php/php-src/pull/9776) by 蝦米
  - Fix `zend_fcc_equals()` with trampolines ([#10012](https://bugs.php.net/bug.php?id=10012)) in [c4a0fc62a2](https://github.com/php/php-src/commit/c4a0fc62a2) by George Peter Banyard 💜
@@ -396,7 +403,9 @@ Following are some changes that did not go through an RFC process because they a
  - Fix [GH-10437](https://github.com/php/php-src/issues/10437): Set active fiber to null on bailout ([#10443](https://bugs.php.net/bug.php?id=10443)) in [284c29328e](https://github.com/php/php-src/commit/284c29328e) by Aaron Piotrowski
  - Fix incorrect check in phar tar parsing in [GH-10464](https://github.com/php/php-src/pull/10464) by Niels Dossche
 
+</details>
 
+---
 
 ## Support PHP Foundation
 
