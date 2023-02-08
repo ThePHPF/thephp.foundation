@@ -60,7 +60,7 @@ The Foundation has limited resources to manage the developers we contract to wor
 
 Any external developer who is compensated for their time spent on PHP is, of course, welcome to make use of our public communication channels:
 
-1. Email as: contact@thephp.foundation
+1. Email as: [contact@thephp.foundation](mailto:contact@thephp.foundation)
 2. Communicate via issues on GitHub repos: [github.com/php/php-src](https://github.com/php/php-src), [github.com/php/web-php](https://github.com/php/web-php), etc.
 
 ### How to contribute expertise?

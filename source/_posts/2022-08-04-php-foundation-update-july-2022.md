@@ -44,7 +44,7 @@ _Where else would you like to see us?_
 
 ### **Swag!**
 
-By the way, we’d like to have stickers and other swag for conference attendees. If you would like to help with the design or sponsor the production, please reach out to [contact@thephp.foundation](http://contact@thephp.foundation).
+By the way, we’d like to have stickers and other swag for conference attendees. If you would like to help with the design or sponsor the production, please reach out to [contact@thephp.foundation](mailto:contact@thephp.foundation).
 
 
 ## Website updates
