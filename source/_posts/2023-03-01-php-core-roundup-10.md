@@ -21,7 +21,7 @@ We publish the posts on our website, and you can subscribe to a newsletter; You 
 
 ## Call for PHP 8.3 Release Managers
 
-Sergey Panteleev, one of the PHP 8.2, called for the volunteers to put their names forward to be the release managers for the upcoming PHP 8.3. Typically, each major PHP version gets two or three release managers, one of whom is a "veteran" RM with previous experience being an RM. 
+Sergey Panteleev, one of the PHP 8.2 release managers, called for the volunteers to put their names forward to be the release managers for the upcoming PHP 8.3. Typically, each major PHP version gets two or three release managers, one of whom is a "veteran" RM with previous experience being an RM. 
 
 Release managers will be responsible for tagging releases, coordinating releases, triaging security issues, and will have the ultimate say on last-minute RFCs and the release schedule. The standard PHP support cycle of two years of active support, followed by a year of security support means this position lasts for three years.
 
