@@ -48,6 +48,7 @@ Currently, membership on the Advisory Board has the following benefits:
 * Every month we provide developer plans – a list of tasks that the PHP Foundation developers will work on in the near future. Advisory Board members can discuss these plans among their teams and provide us with feedback that they feel we should consider.
 * Advisory board members are welcome to share their pain points or ideas on behalf of their communities or organizations. Suggestions may be discussed by other members and will be considered by the foundation developers.
 
+⚠️ Note: All language decisions go through the established Request for Comments (RFC) process, which is not affiliated to the PHP Foundation, and the language decisions are the matter of the PHP Internals community. It means that some of the PHP Foundations efforts might not make it to the language. But with the Advisory board discussions, we expect increased quality and acceptance rate of the foundation's RFCs.
 
 We’re also looking into providing some exclusive benefits for individual sponsors and smaller business contributors, as well. What would sound interesting or lucrative to you? Let us know!
 
