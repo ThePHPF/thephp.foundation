@@ -6,7 +6,7 @@ pagination:
     provider: page.tag_posts
 ---
 
-<section class="mx-auto my-16 max-w-7xl w-full bg-white px-4 md:px-0">
+<section class="mx-auto max-w-3xl my-16 w-full bg-white px-4 md:px-0">
     <header class="mb-8">
         <h1 class="text-4xl font-bold">Tag: {{ constant('App\\Blog\\Tag::ALLOWED_TAGS')[page.tag] ?? page.tag }}</h1>
     </header>
@@ -17,7 +17,7 @@ pagination:
     </div>
     {% endif %}
 
-    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+    <div class="space-y-16">
         {% for post in page.pagination.items %}
         <article class="flex max-w-xl flex-col items-start">
             <div class="flex items-center gap-x-4 text-xs">
@@ -55,7 +55,7 @@ pagination:
     </div>
 
     {% if page.pagination.previous_page or page.pagination.next_page %}
-    <nav class="flex flex-row justify-between article -mx-2 mb-5">
+    <nav class="flex flex-row justify-between article -mx-2 mt-8">
         {% if page.pagination.next_page %}
         <a href="{{ site.url }}{{ page.pagination.next_page.url }}"
            class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[rgba(127,82,255,.8)] transition-all no-underline">
