@@ -50,8 +50,6 @@
     <link rel="apple-touch-icon" sizes="1024x1024" href="{{ site.url }}/assets/icons/php_foundation.svg">
     <link rel="apple-touch-icon" sizes="2048x2048" href="{{ site.url }}/assets/icons/php_foundation.svg">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-
     <link rel="alternate" type="application/atom+xml" href="{{ site.url }}/atom.xml"
           title="{{ site.title }} activity feed"/>
     {% block head_styles %}
@@ -82,15 +80,15 @@
             </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-            <a href="{{ site.url }}/blog" class="text-sm font-semibold leading-6 text-gray-900">Blog</a>
+            <a href="{{ site.url }}/blog" class="text-sm font-semibold leading-6 text-gray-900 no-underline">Blog</a>
 
-            <a href="{{ site.url }}/structure" class="text-sm font-semibold leading-6 text-gray-900">Structure</a>
+            <a href="{{ site.url }}/structure" class="text-sm font-semibold leading-6 text-gray-900 no-underline">Structure</a>
 
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Branding</a>
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900 no-underline">Branding</a>
 
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Speakers</a>
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900 no-underline">Speakers</a>
 
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Get involved</a>
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900 no-underline">Get involved</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
             <a href="#" class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">Write Us</a>
@@ -147,23 +145,27 @@
     <div class="mx-auto max-w-7xl overflow-hidden px-6 py-12 lg:px-8">
         <nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
             <div class="pb-6">
-                <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Blog</a>
+                <a href="{{ site.url }}/blog" class="text-sm leading-6 text-gray-600 hover:text-gray-900 no-underline">Blog</a>
             </div>
 
             <div class="pb-6">
-                <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Structure</a>
+                <a href="{{ site.url }}/structure" class="text-sm leading-6 text-gray-600 hover:text-gray-900 no-underline">Structure</a>
             </div>
 
             <div class="pb-6">
-                <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Branding</a>
+                <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900 no-underline">Branding</a>
             </div>
 
             <div class="pb-6">
-                <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Speakers</a>
+                <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900 no-underline">Speakers</a>
             </div>
 
             <div class="pb-6">
-                <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Get involved</a>
+                <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900 no-underline">Get involved</a>
+            </div>
+
+            <div class="pb-6">
+                <a href="{{ site.url }}/code-of-conduct" class="text-sm leading-6 text-gray-600 hover:text-gray-900 no-underline">Code of Conduct</a>
             </div>
         </nav>
 
