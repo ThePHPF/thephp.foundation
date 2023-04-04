@@ -4,625 +4,718 @@ layout: default
 permalink: structure
 ---
 
-<main class="flex flex-row justify-center min-w-[320px] min-h-[100vh] w-full pt-4">
-    <section class="max-w-7xl w-full bg-white px-4 md:px-0">
-        <header class="mb-16">
-            <h1>{{ page.title }}</h1>
-        </header>
+<section class="mx-auto mt-16 max-w-7xl w-full bg-white px-4 md:px-0">
+    <header class="mb-16">
+        <h1 class="text-4xl font-bold">{{ page.title }}</h1>
+    </header>
 
-        <div class="my-16">
-            <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
-                <div class="space-y-5 sm:space-y-4">
-                    <div class="text-3xl text-gray-800 font-bold tracking-tight">Administration</div>
-                    <div class="text-xl text-gray-500">
-                        The Administration consists of veteran PHP core developers, PHP community leaders,
-                        representatives of the founding companies, and other key stakeholders.
-                    </div>
+    <div class="my-16">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
+            <div class="space-y-5 sm:space-y-4">
+                <div class="text-3xl text-gray-800 font-bold tracking-tight">Administration</div>
+                <div class="text-xl text-gray-500">
+                    The Administration consists of veteran PHP core developers, PHP community leaders,
+                    representatives of the founding companies, and other key stakeholders.
                 </div>
-                <div class="lg:col-span-2">
-                    <div class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-12 sm:space-y-0 lg:gap-x-8">
-                        <div class="flex items-center space-x-4 lg:space-x-6">
-                            <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
-                                 src="https://avatars.githubusercontent.com/u/25218?s=200&v=4"
-                                 alt="Sebastian Bergmann">
-                            <div class="leading-6 space-y-1">
-                                <div class="text-lg font-bold text-black">Sebastian Bergmann</div>
-                                <div class="text-[#7f52ff]">Administration</div>
-                                <ul class="flex space-x-4 list-none p-0 m-0">
-                                    <li>
-                                        <a href="https://phpc.social/@sebastian" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">Mastodon</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16">
-                                                <path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/sebastianbergmann" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">GitHub</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                                                <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+            </div>
+            <div class="lg:col-span-2">
+                <div class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-12 sm:space-y-0 lg:gap-x-8">
+                    <div class="flex items-center space-x-4 lg:space-x-6">
+                        <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
+                             src="https://avatars.githubusercontent.com/u/25218?s=200&v=4"
+                             alt="Sebastian Bergmann">
+                        <div class="leading-6 space-y-1">
+                            <div class="text-lg font-bold text-black">Sebastian Bergmann</div>
+                            <div class="text-[#7f52ff]">Administration</div>
+                            <ul class="flex space-x-4 list-none p-0 m-0">
+                                <li>
+                                    <a href="https://phpc.social/@sebastian"
+                                       class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
+                                       target="_blank">
+                                        <span class="sr-only">Mastodon</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16">
+                                            <path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/sebastianbergmann"
+                                       class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
+                                       target="_blank">
+                                        <span class="sr-only">GitHub</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"
+                                             aria-hidden="true">
+                                            <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
+                    </div>
 
-                        <div class="flex items-center space-x-4 lg:space-x-6">
-                            <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
-                                 src="https://avatars.githubusercontent.com/u/2236138?s=200&v=4"
-                                 alt="Joe Watkins">
-                            <div class="leading-6 space-y-1">
-                                <div class="text-lg font-bold text-black">Joe Watkins</div>
-                                <div class="text-[#7f52ff]">Administration</div>
-                                <ul class="flex space-x-4 list-none p-0 m-0">
-                                    <li>
-                                        <a href="https://twitter.com/krakjoe" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">Twitter</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/krakjoe" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">GitHub</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                                                <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="flex items-center space-x-4 lg:space-x-6">
+                        <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
+                             src="https://avatars.githubusercontent.com/u/2236138?s=200&v=4"
+                             alt="Joe Watkins">
+                        <div class="leading-6 space-y-1">
+                            <div class="text-lg font-bold text-black">Joe Watkins</div>
+                            <div class="text-[#7f52ff]">Administration</div>
+                            <ul class="flex space-x-4 list-none p-0 m-0">
+                                <li>
+                                    <a href="https://twitter.com/krakjoe" class="text-gray-400 hover:text-gray-500"
+                                       rel="noreferrer noopener" target="_blank">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                             aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/krakjoe" class="text-gray-400 hover:text-gray-500"
+                                       rel="noreferrer noopener" target="_blank">
+                                        <span class="sr-only">GitHub</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"
+                                             aria-hidden="true">
+                                            <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
+                    </div>
 
-                        <div class="flex items-center space-x-4 lg:space-x-6">
-                            <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
-                                 src="https://avatars.githubusercontent.com/u/154844?s=200&v=4"
-                                 alt="Nils Adermann">
-                            <div class="leading-6 space-y-1">
-                                <div class="text-lg font-bold text-black">Nils Adermann</div>
-                                <div class="text-[#7f52ff]">Administration</div>
-                                <ul class="flex space-x-4 list-none p-0 m-0">
-                                    <li>
-                                        <a href="https://twitter.com/naderman" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">Twitter</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/naderman" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">GitHub</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                                                <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="flex items-center space-x-4 lg:space-x-6">
+                        <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
+                             src="https://avatars.githubusercontent.com/u/154844?s=200&v=4"
+                             alt="Nils Adermann">
+                        <div class="leading-6 space-y-1">
+                            <div class="text-lg font-bold text-black">Nils Adermann</div>
+                            <div class="text-[#7f52ff]">Administration</div>
+                            <ul class="flex space-x-4 list-none p-0 m-0">
+                                <li>
+                                    <a href="https://twitter.com/naderman" class="text-gray-400 hover:text-gray-500"
+                                       rel="noreferrer noopener" target="_blank">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                             aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/naderman" class="text-gray-400 hover:text-gray-500"
+                                       rel="noreferrer noopener" target="_blank">
+                                        <span class="sr-only">GitHub</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"
+                                             aria-hidden="true">
+                                            <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
+                    </div>
 
-                        <div class="flex items-center space-x-4 lg:space-x-6">
-                            <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
-                                 src="https://avatars.githubusercontent.com/u/26936?s=200&v=4"
-                                 alt="Benjamin Eberlei">
-                            <div class="leading-6 space-y-1">
-                                <div class="text-lg font-bold text-black">Benjamin Eberlei</div>
-                                <div class="text-[#7f52ff]">Administration</div>
-                                <ul class="flex space-x-4 list-none p-0 m-0">
-                                    <li>
-                                        <a href="https://twitter.com/beberlei" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">Twitter</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/beberlei" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">GitHub</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                                                <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="flex items-center space-x-4 lg:space-x-6">
+                        <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
+                             src="https://avatars.githubusercontent.com/u/26936?s=200&v=4"
+                             alt="Benjamin Eberlei">
+                        <div class="leading-6 space-y-1">
+                            <div class="text-lg font-bold text-black">Benjamin Eberlei</div>
+                            <div class="text-[#7f52ff]">Administration</div>
+                            <ul class="flex space-x-4 list-none p-0 m-0">
+                                <li>
+                                    <a href="https://twitter.com/beberlei" class="text-gray-400 hover:text-gray-500"
+                                       rel="noreferrer noopener" target="_blank">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                             aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/beberlei" class="text-gray-400 hover:text-gray-500"
+                                       rel="noreferrer noopener" target="_blank">
+                                        <span class="sr-only">GitHub</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"
+                                             aria-hidden="true">
+                                            <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
+                    </div>
 
-                        <div class="flex items-center space-x-4 lg:space-x-6">
-                            <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
-                                 src="https://2.gravatar.com/avatar/b1384df9e94641211dd00e4e8203d80c?s=200"
-                                 alt="Josepha Haden">
-                            <div class="leading-6 space-y-1">
-                                <div class="text-lg font-bold text-black">Josepha Haden</div>
-                                <div class="text-[#7f52ff]">Administration</div>
-                                <ul class="flex space-x-4 list-none p-0 m-0">
-                                    <li>
-                                        <a href="https://twitter.com/JosephaHaden" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">Twitter</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="flex items-center space-x-4 lg:space-x-6">
+                        <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
+                             src="https://2.gravatar.com/avatar/b1384df9e94641211dd00e4e8203d80c?s=200"
+                             alt="Josepha Haden">
+                        <div class="leading-6 space-y-1">
+                            <div class="text-lg font-bold text-black">Josepha Haden</div>
+                            <div class="text-[#7f52ff]">Administration</div>
+                            <ul class="flex space-x-4 list-none p-0 m-0">
+                                <li>
+                                    <a href="https://twitter.com/JosephaHaden"
+                                       class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
+                                       target="_blank">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                             aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
+                    </div>
 
-                        <div class="flex items-center space-x-4 lg:space-x-6">
-                            <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
-                                 src="https://avatars.githubusercontent.com/u/1196825?s=200&v=4"
-                                 alt="Roman Pronskiy">
-                            <div class="leading-6 space-y-1">
-                                <div class="text-lg font-bold text-black">Roman Pronskiy</div>
-                                <div class="text-[#7f52ff]">Administration</div>
-                                <ul class="flex space-x-4 list-none p-0 m-0">
-                                    <li>
-                                        <a href="https://twitter.com/pronskiy" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">Twitter</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/pronskiy" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">GitHub</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                                                <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="flex items-center space-x-4 lg:space-x-6">
+                        <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
+                             src="https://avatars.githubusercontent.com/u/1196825?s=200&v=4"
+                             alt="Roman Pronskiy">
+                        <div class="leading-6 space-y-1">
+                            <div class="text-lg font-bold text-black">Roman Pronskiy</div>
+                            <div class="text-[#7f52ff]">Administration</div>
+                            <ul class="flex space-x-4 list-none p-0 m-0">
+                                <li>
+                                    <a href="https://twitter.com/pronskiy" class="text-gray-400 hover:text-gray-500"
+                                       rel="noreferrer noopener" target="_blank">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                             aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/pronskiy" class="text-gray-400 hover:text-gray-500"
+                                       rel="noreferrer noopener" target="_blank">
+                                        <span class="sr-only">GitHub</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"
+                                             aria-hidden="true">
+                                            <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
+                    </div>
 
-                        <div class="flex items-center space-x-4 lg:space-x-6">
-                            <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
-                                 src="https://avatars.githubusercontent.com/u/243674?s=200&v=4"
-                                 alt="Nicolas Grekas">
-                            <div class="leading-6 space-y-1">
-                                <div class="text-lg font-bold text-black">Nicolas Grekas</div>
-                                <div class="text-[#7f52ff]">Administration</div>
-                                <ul class="flex space-x-4 list-none p-0 m-0">
-                                    <li>
-                                        <a href="https://twitter.com/nicolasgrekas" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">Twitter</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/nicolas-grekas/" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">GitHub</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                                                <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="flex items-center space-x-4 lg:space-x-6">
+                        <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
+                             src="https://avatars.githubusercontent.com/u/243674?s=200&v=4"
+                             alt="Nicolas Grekas">
+                        <div class="leading-6 space-y-1">
+                            <div class="text-lg font-bold text-black">Nicolas Grekas</div>
+                            <div class="text-[#7f52ff]">Administration</div>
+                            <ul class="flex space-x-4 list-none p-0 m-0">
+                                <li>
+                                    <a href="https://twitter.com/nicolasgrekas"
+                                       class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
+                                       target="_blank">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                             aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/nicolas-grekas/"
+                                       class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
+                                       target="_blank">
+                                        <span class="sr-only">GitHub</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"
+                                             aria-hidden="true">
+                                            <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
+                    </div>
 
-                        <div class="flex items-center space-x-4 lg:space-x-6">
-                            <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
-                                 src="https://avatars.githubusercontent.com/u/812538?s=200&v=4"
-                                 alt="Sara Golemon">
-                            <div class="leading-6 space-y-1">
-                                <div class="text-lg font-bold text-black">Sara Golemon</div>
-                                <div class="text-[#7f52ff]">Administration</div>
-                                <ul class="flex space-x-4 list-none p-0 m-0">
-                                    <li>
-                                        <a href="https://phpc.social/@pollita" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">Twitter</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/sgolemon" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">GitHub</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                                                <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="flex items-center space-x-4 lg:space-x-6">
+                        <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
+                             src="https://avatars.githubusercontent.com/u/812538?s=200&v=4"
+                             alt="Sara Golemon">
+                        <div class="leading-6 space-y-1">
+                            <div class="text-lg font-bold text-black">Sara Golemon</div>
+                            <div class="text-[#7f52ff]">Administration</div>
+                            <ul class="flex space-x-4 list-none p-0 m-0">
+                                <li>
+                                    <a href="https://phpc.social/@pollita" class="text-gray-400 hover:text-gray-500"
+                                       rel="noreferrer noopener" target="_blank">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                             aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/sgolemon" class="text-gray-400 hover:text-gray-500"
+                                       rel="noreferrer noopener" target="_blank">
+                                        <span class="sr-only">GitHub</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"
+                                             aria-hidden="true">
+                                            <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
+                    </div>
 
-                        <div class="flex items-center space-x-4 lg:space-x-6">
-                            <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
-                                 src="https://avatars.githubusercontent.com/u/216080?s=200&v=4"
-                                 alt="Nikita Popov">
-                            <div class="leading-6 space-y-1">
-                                <div class="text-lg font-bold text-black">Nikita Popov</div>
-                                <div class="text-[#7f52ff]">Administration</div>
-                                <ul class="flex space-x-4 list-none p-0 m-0">
-                                    <li>
-                                        <a href="https://twitter.com/nikita_ppv" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">Twitter</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/nikic" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">GitHub</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                                                <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="flex items-center space-x-4 lg:space-x-6">
+                        <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
+                             src="https://avatars.githubusercontent.com/u/216080?s=200&v=4"
+                             alt="Nikita Popov">
+                        <div class="leading-6 space-y-1">
+                            <div class="text-lg font-bold text-black">Nikita Popov</div>
+                            <div class="text-[#7f52ff]">Administration</div>
+                            <ul class="flex space-x-4 list-none p-0 m-0">
+                                <li>
+                                    <a href="https://twitter.com/nikita_ppv"
+                                       class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
+                                       target="_blank">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                             aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/nikic" class="text-gray-400 hover:text-gray-500"
+                                       rel="noreferrer noopener" target="_blank">
+                                        <span class="sr-only">GitHub</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"
+                                             aria-hidden="true">
+                                            <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
+                    </div>
 
-                        <div class="flex items-center space-x-4 lg:space-x-6">
-                            <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
-                                 src="https://avatars.githubusercontent.com/u/25943?s=200&v=4"
-                                 alt="Matthew Weier O'Phinney">
-                            <div class="leading-6 space-y-1">
-                                <div class="text-lg font-bold text-black">Matthew Weier O'Phinney</div>
-                                <div class="text-[#7f52ff]">Administration</div>
-                                <ul class="flex space-x-4 list-none p-0 m-0">
-                                    <li>
-                                        <a href="https://twitter.com/mwop" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">Twitter</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/weierophinney" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">GitHub</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                                                <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="flex items-center space-x-4 lg:space-x-6">
+                        <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
+                             src="https://avatars.githubusercontent.com/u/25943?s=200&v=4"
+                             alt="Matthew Weier O'Phinney">
+                        <div class="leading-6 space-y-1">
+                            <div class="text-lg font-bold text-black">Matthew Weier O'Phinney</div>
+                            <div class="text-[#7f52ff]">Administration</div>
+                            <ul class="flex space-x-4 list-none p-0 m-0">
+                                <li>
+                                    <a href="https://twitter.com/mwop" class="text-gray-400 hover:text-gray-500"
+                                       rel="noreferrer noopener" target="_blank">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                             aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/weierophinney"
+                                       class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
+                                       target="_blank">
+                                        <span class="sr-only">GitHub</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"
+                                             aria-hidden="true">
+                                            <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="my-16">
-            <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
-                <div class="space-y-5 sm:space-y-4">
-                    <div class="text-3xl text-gray-800 font-bold tracking-tight">Core Developers</div>
-                    <div class="text-xl text-gray-500">
-                        Core Developers are sponsored by the PHP Foundation and develop the Core of PHP on a part-time or full-time basis.
-                    </div>
+    <div class="my-16">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
+            <div class="space-y-5 sm:space-y-4">
+                <div class="text-3xl text-gray-800 font-bold tracking-tight">Core Developers</div>
+                <div class="text-xl text-gray-500">
+                    Core Developers are sponsored by the PHP Foundation and develop the Core of PHP on a part-time
+                    or full-time basis.
                 </div>
-                <div class="lg:col-span-2">
-                    <div class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-12 sm:space-y-0 lg:gap-x-8">
-                        <div class="flex items-center space-x-4 lg:space-x-6">
-                            <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
-                                 src="https://avatars.githubusercontent.com/u/208074?s=200&v=4"
-                                 alt="Derick Rethans">
-                            <div class="leading-6 space-y-1">
-                                <div class="text-lg font-bold text-black">Derick Rethans</div>
-                                <div class="text-[#7f52ff]">Core Developer</div>
-                                <ul class="flex space-x-4 list-none p-0 m-0">
-                                    <li>
-                                        <a href="https://twitter.com/derickr/" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">Twitter</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/derickr" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">GitHub</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                                                <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+            </div>
+            <div class="lg:col-span-2">
+                <div class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-12 sm:space-y-0 lg:gap-x-8">
+                    <div class="flex items-center space-x-4 lg:space-x-6">
+                        <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
+                             src="https://avatars.githubusercontent.com/u/208074?s=200&v=4"
+                             alt="Derick Rethans">
+                        <div class="leading-6 space-y-1">
+                            <div class="text-lg font-bold text-black">Derick Rethans</div>
+                            <div class="text-[#7f52ff]">Core Developer</div>
+                            <ul class="flex space-x-4 list-none p-0 m-0">
+                                <li>
+                                    <a href="https://twitter.com/derickr/" class="text-gray-400 hover:text-gray-500"
+                                       rel="noreferrer noopener" target="_blank">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                             aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/derickr" class="text-gray-400 hover:text-gray-500"
+                                       rel="noreferrer noopener" target="_blank">
+                                        <span class="sr-only">GitHub</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"
+                                             aria-hidden="true">
+                                            <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
+                    </div>
 
-                        <div class="flex items-center space-x-4 lg:space-x-6">
-                            <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
-                                 src="https://avatars.githubusercontent.com/u/7906688?s=200&v=4"
-                                 alt="George Peter Banyard">
-                            <div class="leading-6 space-y-1">
-                                <div class="text-lg font-bold text-black">George Peter Banyard</div>
-                                <div class="text-[#7f52ff]">Core Developer</div>
-                                <ul class="flex space-x-4 list-none p-0 m-0">
-                                    <li>
-                                        <a href="https://twitter.com/Girgias" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">Twitter</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/girgias" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">GitHub</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                                                <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="flex items-center space-x-4 lg:space-x-6">
+                        <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
+                             src="https://avatars.githubusercontent.com/u/7906688?s=200&v=4"
+                             alt="George Peter Banyard">
+                        <div class="leading-6 space-y-1">
+                            <div class="text-lg font-bold text-black">George Peter Banyard</div>
+                            <div class="text-[#7f52ff]">Core Developer</div>
+                            <ul class="flex space-x-4 list-none p-0 m-0">
+                                <li>
+                                    <a href="https://twitter.com/Girgias" class="text-gray-400 hover:text-gray-500"
+                                       rel="noreferrer noopener" target="_blank">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                             aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/girgias" class="text-gray-400 hover:text-gray-500"
+                                       rel="noreferrer noopener" target="_blank">
+                                        <span class="sr-only">GitHub</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"
+                                             aria-hidden="true">
+                                            <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
+                    </div>
 
-                        <div class="flex items-center space-x-4 lg:space-x-6">
-                            <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
-                                 src="https://avatars.githubusercontent.com/u/1752683?s=200&v=4"
-                                 alt="Ilija Tovilo">
-                            <div class="leading-6 space-y-1">
-                                <div class="text-lg font-bold text-black">Ilija Tovilo</div>
-                                <div class="text-[#7f52ff]">Core Developer</div>
-                                <ul class="flex space-x-4 list-none p-0 m-0">
-                                    <li>
-                                        <a href="https://twitter.com/IlijaTovilo" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">Twitter</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/iluuu1994" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">GitHub</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                                                <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="flex items-center space-x-4 lg:space-x-6">
+                        <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
+                             src="https://avatars.githubusercontent.com/u/1752683?s=200&v=4"
+                             alt="Ilija Tovilo">
+                        <div class="leading-6 space-y-1">
+                            <div class="text-lg font-bold text-black">Ilija Tovilo</div>
+                            <div class="text-[#7f52ff]">Core Developer</div>
+                            <ul class="flex space-x-4 list-none p-0 m-0">
+                                <li>
+                                    <a href="https://twitter.com/IlijaTovilo"
+                                       class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
+                                       target="_blank">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                             aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/iluuu1994" class="text-gray-400 hover:text-gray-500"
+                                       rel="noreferrer noopener" target="_blank">
+                                        <span class="sr-only">GitHub</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"
+                                             aria-hidden="true">
+                                            <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
+                    </div>
 
-                        <div class="flex items-center space-x-4 lg:space-x-6">
-                            <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
-                                 src="https://avatars.githubusercontent.com/u/137594?s=200&v=4"
-                                 alt="Jakub Zelenka">
-                            <div class="leading-6 space-y-1">
-                                <div class="text-lg font-bold text-black">Jakub Zelenka</div>
-                                <div class="text-[#7f52ff]">Core Developer</div>
-                                <ul class="flex space-x-4 list-none p-0 m-0">
-                                    <li>
-                                        <a href="https://github.com/bukka" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">GitHub</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                                                <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="flex items-center space-x-4 lg:space-x-6">
+                        <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
+                             src="https://avatars.githubusercontent.com/u/137594?s=200&v=4"
+                             alt="Jakub Zelenka">
+                        <div class="leading-6 space-y-1">
+                            <div class="text-lg font-bold text-black">Jakub Zelenka</div>
+                            <div class="text-[#7f52ff]">Core Developer</div>
+                            <ul class="flex space-x-4 list-none p-0 m-0">
+                                <li>
+                                    <a href="https://github.com/bukka" class="text-gray-400 hover:text-gray-500"
+                                       rel="noreferrer noopener" target="_blank">
+                                        <span class="sr-only">GitHub</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"
+                                             aria-hidden="true">
+                                            <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
+                    </div>
 
-                        <div class="flex items-center space-x-4 lg:space-x-6">
-                            <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
-                                 src="https://avatars.githubusercontent.com/u/6057627?s=200&v=4"
-                                 alt="Máté Kocsis">
-                            <div class="leading-6 space-y-1">
-                                <div class="text-lg font-bold text-black">Máté Kocsis</div>
-                                <div class="text-[#7f52ff]">Core Developer</div>
-                                <ul class="flex space-x-4 list-none p-0 m-0">
-                                    <li>
-                                        <a href="https://twitter.com/kocsismate90" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">Twitter</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/kocsismate" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">GitHub</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                                                <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="flex items-center space-x-4 lg:space-x-6">
+                        <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
+                             src="https://avatars.githubusercontent.com/u/6057627?s=200&v=4"
+                             alt="Máté Kocsis">
+                        <div class="leading-6 space-y-1">
+                            <div class="text-lg font-bold text-black">Máté Kocsis</div>
+                            <div class="text-[#7f52ff]">Core Developer</div>
+                            <ul class="flex space-x-4 list-none p-0 m-0">
+                                <li>
+                                    <a href="https://twitter.com/kocsismate90"
+                                       class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
+                                       target="_blank">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                             aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/kocsismate"
+                                       class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
+                                       target="_blank">
+                                        <span class="sr-only">GitHub</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"
+                                             aria-hidden="true">
+                                            <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
+                    </div>
 
-                        <div class="flex items-center space-x-4 lg:space-x-6">
-                            <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
-                                 src="https://avatars.githubusercontent.com/u/365207?s=200&v=4"
-                                 alt="Arnaud Le Blanc">
-                            <div class="leading-6 space-y-1">
-                                <div class="text-lg font-bold text-black">Arnaud Le Blanc</div>
-                                <div class="text-[#7f52ff]">Core Developer</div>
-                                <ul class="flex space-x-4 list-none p-0 m-0">
-                                    <li>
-                                        <a href="https://twitter.com/arnaud_lb" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">Twitter</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/arnaud-lb" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">GitHub</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                                                <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="flex items-center space-x-4 lg:space-x-6">
+                        <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
+                             src="https://avatars.githubusercontent.com/u/365207?s=200&v=4"
+                             alt="Arnaud Le Blanc">
+                        <div class="leading-6 space-y-1">
+                            <div class="text-lg font-bold text-black">Arnaud Le Blanc</div>
+                            <div class="text-[#7f52ff]">Core Developer</div>
+                            <ul class="flex space-x-4 list-none p-0 m-0">
+                                <li>
+                                    <a href="https://twitter.com/arnaud_lb"
+                                       class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
+                                       target="_blank">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                             aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/arnaud-lb" class="text-gray-400 hover:text-gray-500"
+                                       rel="noreferrer noopener" target="_blank">
+                                        <span class="sr-only">GitHub</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"
+                                             aria-hidden="true">
+                                            <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="my-16">
-            <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
-                <div class="space-y-5 sm:space-y-4">
-                    <div class="text-3xl text-gray-800 font-bold tracking-tight">Community</div>
-                    <div class="text-xl text-gray-500">
-                        Active community members who help the PHP Foundation.
-                    </div>
+    <div class="my-16">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
+            <div class="space-y-5 sm:space-y-4">
+                <div class="text-3xl text-gray-800 font-bold tracking-tight">Community</div>
+                <div class="text-xl text-gray-500">
+                    Active community members who help the PHP Foundation.
                 </div>
-                <div class="lg:col-span-2">
-                    <div class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-12 sm:space-y-0 lg:gap-x-8">
-                        <div class="flex items-center space-x-4 lg:space-x-6">
-                            <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
-                                 src="https://avatars.githubusercontent.com/u/54641?s=200&v=4"
-                                 alt="Rasmus Lerdorf">
-                            <div class="leading-6 space-y-1">
-                                <div class="text-lg font-bold text-black">Rasmus Lerdorf</div>
-                                <div class="text-[#7f52ff]">PHP Fellow</div>
-                                <ul class="flex space-x-4 list-none p-0 m-0">
-                                    <li>
-                                        <a href="https://twitter.com/rasmus" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">Twitter</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/rlerdorf" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">GitHub</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                                                <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+            </div>
+            <div class="lg:col-span-2">
+                <div class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-12 sm:space-y-0 lg:gap-x-8">
+                    <div class="flex items-center space-x-4 lg:space-x-6">
+                        <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
+                             src="https://avatars.githubusercontent.com/u/54641?s=200&v=4"
+                             alt="Rasmus Lerdorf">
+                        <div class="leading-6 space-y-1">
+                            <div class="text-lg font-bold text-black">Rasmus Lerdorf</div>
+                            <div class="text-[#7f52ff]">PHP Fellow</div>
+                            <ul class="flex space-x-4 list-none p-0 m-0">
+                                <li>
+                                    <a href="https://twitter.com/rasmus" class="text-gray-400 hover:text-gray-500"
+                                       rel="noreferrer noopener" target="_blank">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                             aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/rlerdorf" class="text-gray-400 hover:text-gray-500"
+                                       rel="noreferrer noopener" target="_blank">
+                                        <span class="sr-only">GitHub</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"
+                                             aria-hidden="true">
+                                            <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
+                    </div>
 
-                        <div class="flex items-center space-x-4 lg:space-x-6">
-                            <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
-                                 src="https://avatars.githubusercontent.com/u/2510034?s=200&v=4"
-                                 alt="Dmitry Stogov">
-                            <div class="leading-6 space-y-1">
-                                <div class="text-lg font-bold text-black">Dmitry Stogov</div>
-                                <div class="text-[#7f52ff]">PHP Fellow</div>
-                                <ul class="flex space-x-4 list-none p-0 m-0">
-                                    <li>
-                                        <a href="https://twitter.com/dstogov" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">Twitter</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/dstogov" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">GitHub</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                                                <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="flex items-center space-x-4 lg:space-x-6">
+                        <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
+                             src="https://avatars.githubusercontent.com/u/2510034?s=200&v=4"
+                             alt="Dmitry Stogov">
+                        <div class="leading-6 space-y-1">
+                            <div class="text-lg font-bold text-black">Dmitry Stogov</div>
+                            <div class="text-[#7f52ff]">PHP Fellow</div>
+                            <ul class="flex space-x-4 list-none p-0 m-0">
+                                <li>
+                                    <a href="https://twitter.com/dstogov" class="text-gray-400 hover:text-gray-500"
+                                       rel="noreferrer noopener" target="_blank">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                             aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/dstogov" class="text-gray-400 hover:text-gray-500"
+                                       rel="noreferrer noopener" target="_blank">
+                                        <span class="sr-only">GitHub</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"
+                                             aria-hidden="true">
+                                            <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                        
-                        <div class="flex items-center space-x-4 lg:space-x-6">
-                            <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
-                                 src="https://avatars.githubusercontent.com/u/811553?s=200&v=4"
-                                 alt="Ayesh Karunaratne">
-                            <div class="leading-6 space-y-1">
-                                <div class="text-lg font-bold text-black">Ayesh Karunaratne</div>
-                                <div class="text-[#7f52ff]">PHP Core Roundup</div>
-                                <ul class="flex space-x-4 list-none p-0 m-0">
-                                    <li>
-                                        <a href="https://twitter.com/Ayeshlive" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">Twitter</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/Ayesh" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">GitHub</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                                                <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                    </div>
 
-                        <div class="flex items-center space-x-4 lg:space-x-6">
-                            <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
-                                 src="https://avatars.githubusercontent.com/u/1275206?s=200&v=4"
-                                 alt="Tobias Nyholm">
-                            <div class="leading-6 space-y-1">
-                                <div class="text-lg font-bold text-black">Tobias Nyholm</div>
-                                <div class="text-[#7f52ff]">Code of Conduct Team</div>
-                                <ul class="flex space-x-4 list-none p-0 m-0">
-                                    <li>
-                                        <a href="https://twitter.com/TobiasNyholm" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">Twitter</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/Nyholm" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">GitHub</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                                                <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="flex items-center space-x-4 lg:space-x-6">
+                        <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
+                             src="https://avatars.githubusercontent.com/u/811553?s=200&v=4"
+                             alt="Ayesh Karunaratne">
+                        <div class="leading-6 space-y-1">
+                            <div class="text-lg font-bold text-black">Ayesh Karunaratne</div>
+                            <div class="text-[#7f52ff]">PHP Core Roundup</div>
+                            <ul class="flex space-x-4 list-none p-0 m-0">
+                                <li>
+                                    <a href="https://twitter.com/Ayeshlive"
+                                       class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
+                                       target="_blank">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                             aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/Ayesh" class="text-gray-400 hover:text-gray-500"
+                                       rel="noreferrer noopener" target="_blank">
+                                        <span class="sr-only">GitHub</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"
+                                             aria-hidden="true">
+                                            <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
+                    </div>
 
-                        <div class="flex items-center space-x-4 lg:space-x-6">
-                            <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
-                                 src="https://avatars.githubusercontent.com/u/4685504?s=200&v=4"
-                                 alt="Sergey Panteleev">
-                            <div class="leading-6 space-y-1">
-                                <div class="text-lg font-bold text-black">Sergey Panteleev</div>
-                                <div class="text-[#7f52ff]">Website</div>
-                                <ul class="flex space-x-4 list-none p-0 m-0">
-                                    <li>
-                                        <a href="https://twitter.com/s_panteleev" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">Twitter</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/saundefined" class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener" target="_blank">
-                                            <span class="sr-only">GitHub</span>
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                                                <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="flex items-center space-x-4 lg:space-x-6">
+                        <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
+                             src="https://avatars.githubusercontent.com/u/1275206?s=200&v=4"
+                             alt="Tobias Nyholm">
+                        <div class="leading-6 space-y-1">
+                            <div class="text-lg font-bold text-black">Tobias Nyholm</div>
+                            <div class="text-[#7f52ff]">Code of Conduct Team</div>
+                            <ul class="flex space-x-4 list-none p-0 m-0">
+                                <li>
+                                    <a href="https://twitter.com/TobiasNyholm"
+                                       class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
+                                       target="_blank">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                             aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/Nyholm" class="text-gray-400 hover:text-gray-500"
+                                       rel="noreferrer noopener" target="_blank">
+                                        <span class="sr-only">GitHub</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"
+                                             aria-hidden="true">
+                                            <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-4 lg:space-x-6">
+                        <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20"
+                             src="https://avatars.githubusercontent.com/u/4685504?s=200&v=4"
+                             alt="Sergey Panteleev">
+                        <div class="leading-6 space-y-1">
+                            <div class="text-lg font-bold text-black">Sergey Panteleev</div>
+                            <div class="text-[#7f52ff]">Website</div>
+                            <ul class="flex space-x-4 list-none p-0 m-0">
+                                <li>
+                                    <a href="https://twitter.com/s_panteleev"
+                                       class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
+                                       target="_blank">
+                                        <span class="sr-only">Twitter</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                             aria-hidden="true">
+                                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/saundefined"
+                                       class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
+                                       target="_blank">
+                                        <span class="sr-only">GitHub</span>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"
+                                             aria-hidden="true">
+                                            <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-</main>
+    </div>
+</section>
