@@ -12,7 +12,9 @@ pagination:
     </header>
 
     {% if page.tag == 'roundup' %}
-    {% include "newsletter.html" %}
+    <div class="my-16">
+        {% include "newsletter.html" %}
+    </div>
     {% endif %}
 
     <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
