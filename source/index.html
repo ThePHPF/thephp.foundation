@@ -28,7 +28,6 @@ title: The PHP Foundation
     <div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32"></div>
 </div>
 
-
 <div class="mx-auto max-w-7xl">
     <div class="mx-auto max-w-2xl lg:mx-0">
         <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">What is the foundation</h2>
@@ -126,7 +125,7 @@ title: The PHP Foundation
 </div>
 
 <section class="bg-white text-center py-4">
-    <h2 class="text-5xl" id="sponsors">Sponsors</h2>
+    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4" id="sponsors">Sponsors</h2>
 
     <a href="https://opencollective.com/phpfoundation/contribute/backers-34283/checkout" target="_blank" class="">
         <img src="https://opencollective.com/phpfoundation/donate/button@2x.png?color=blue" width=300
@@ -151,7 +150,7 @@ title: The PHP Foundation
             }
         }" x-init="fetchSponsoringOrganizations()">
             <div x-show="isLoaded" style="display: none;">
-                <div class="font-semibold text-xl my-4">We are supported by <span x-text="sponsorsCount"></span>
+                <div class="font-medium text-xl my-4">We are supported by <span x-text="sponsorsCount"></span>
                     organizations
                 </div>
                 <div class="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-8 gap-4">
@@ -207,7 +206,7 @@ title: The PHP Foundation
             }
         }" x-init="fetchSponsoringUsers()" class="mt-8">
             <div x-show="isLoaded" style="display: none;">
-                <div class="font-semibold text-xl my-4">...and <span x-text="sponsorsCount"></span> individuals</div>
+                <div class="font-medium text-xl my-4">...and <span x-text="sponsorsCount"></span> individuals</div>
                 <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 xl:grid-cols-10 gap-4">
                     <template x-for="sponsor in sponsors">
                         <a :href="sponsor.website ?? sponsor.profile"
@@ -249,14 +248,13 @@ title: The PHP Foundation
 </section>
 
 <section class="max-w-full my-auto sm:mt-24 md:my-8 text-center py-4">
-    <h2 class="text-5xl" id="supporters">Supporters</h2>
-    <div class="font-semibold text-xl my-4">We receive non-financial help from other organisations too</div>
+    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" id="supporters">Supporters</h2>
+    <div class="font-medium text-xl my-4">We receive non-financial help from other organisations too</div>
     <div class="mx-auto max-w-full px-4">
         <div class="grid gap-4 justify-items-center">
             <a class="block bg-gray-200 p-2 rounded-lg no-underline" target="_blank" rel="noopener noreferrer"
                href="https://mule.to/p399">
                 <div class="mb-6 p-2">
-                    <!--                    <img class="h-24 rounded w-full object-contain object-center" src="/assets/sponsors/stickermule_logo_transparent.png" alt="Sticker Mule">-->
                     <img class="h-24 rounded w-full object-contain object-center"
                          src="https://user-images.githubusercontent.com/1196825/191993307-a6f931be-c9a9-4161-ab65-e0cbea5f3621.png"
                          alt="Sticker Mule">
