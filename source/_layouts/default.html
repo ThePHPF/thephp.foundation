@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% block head_meta %}
-        <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow">
     {% endblock %}
     <link rel="stylesheet" href="{{ site.url }}/assets/css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,123 +50,134 @@
     <link rel="apple-touch-icon" sizes="1024x1024" href="{{ site.url }}/assets/icons/php_foundation.svg">
     <link rel="apple-touch-icon" sizes="2048x2048" href="{{ site.url }}/assets/icons/php_foundation.svg">
 
-    <link rel="alternate" type="application/atom+xml" href="{{ site.url }}/atom.xml" title="{{ site.title }} activity feed" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="alternate" type="application/atom+xml" href="{{ site.url }}/atom.xml"
+          title="{{ site.title }} activity feed"/>
     {% block head_styles %}
     {% endblock %}
     {% block head_scripts %}
     {% endblock %}
 </head>
-<body>
-    <header class="wrapper w-full">
-        <div class="border-b border-hborder box-border z-50 flex items-center
-            justify-between bg-white top-0 px-4 h-12 sticky min-w-[320px]
-            box-border md:h-16 lg:px-8"
-            x-data="{ isOpen: false }" @keydown.escape="isOpen = false" @click.away="isOpen = false">
-            <div class="nav flex items-center h-full">
-                <a aria-current="page" class="no-underline mr-8 flex items-center h-full" href="/">
-                    <div class="flex mr-2 md:mr-4 h-full">
-                        <img class="h-full" src="{{ site.url }}/assets/icons/php_foundation.svg" alt="php-foundation-logo">
-                    </div>
+<body class="bg-white">
 
-                    <div class="text-[#27282c] font-semibold text-sm md:text-xl ">
-                        The PHP
-                        <br class="md:hidden"/> Foundation
-                    </div>
+<header class="absolute inset-x-0 top-0 z-50">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class="flex lg:flex-1">
+            <a href="#" class="-m-1.5 p-1.5">
+                <span class="sr-only">Your Company</span>
+                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                     alt="">
+            </a>
+        </div>
+        <div class="flex lg:hidden">
+            <button type="button"
+                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                <span class="sr-only">Open main menu</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                     aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                </svg>
+            </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Blog</a>
+
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Structure</a>
+
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Branding</a>
+
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Speakers</a>
+
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Get involved</a>
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Write Us</a>
+        </div>
+    </nav>
+    <!-- Mobile menu, show/hide based on menu open state. -->
+    <div class="lg:hidden" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-50"></div>
+        <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="flex items-center justify-between">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">Your Company</span>
+                    <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                         alt="">
                 </a>
+                <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                    <span class="sr-only">Close menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                         aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-gray-500/10">
+                    <div class="space-y-2 py-6">
+                        <a href="#"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Product</a>
 
-                <div class="hidden lg:block text-base">
-                    <a class="text-[rgba(25,25,28,.7)] nav-org"
-                       target="_blank" rel="noopener noreferrer"
-                       href="https://php.net/">
-                        php.net
-                    </a>
-                </div>
+                        <a href="#"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Features</a>
 
-                <div class="hidden lg:block text-base lg:ml-4">
-                    <a class="text-[rgba(25,25,28,.7)] nav-org"
-                       target="_blank" rel="noopener noreferrer"
-                       href="https://github.com/ThePHPF/thephp.foundation">
-                        GitHub
-                    </a>
+                        <a href="#"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Marketplace</a>
+
+                        <a href="#"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Company</a>
+                    </div>
+                    <div class="py-6">
+                        <a href="#"
+                           class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log
+                            in</a>
+                    </div>
                 </div>
             </div>
-
-           <div class="header-group flex items-center">
-                <div class="hidden lg:block text-xl lg:text-base font-medium lg:font-normal absolute top-12 left-0 right-0 drop-shadow-xl lg:drop-shadow-none lg:top-0 lg:relative px-4 lg:px-0 bg-white" :class="{ 'block': isOpen, 'hidden': !isOpen }">
-                    <a class="text-[rgba(25,25,28,.7)] mr-0 lg:mr-4 block lg:inline-block py-2 lg:py-0 block lg:hidden"
-                       target="_blank" rel="noopener noreferrer"
-                       href="https://php.net/">
-                        php.net
-                    </a>
-                    <a class="text-[rgba(25,25,28,.7)] mr-0 lg:mr-4 block lg:inline-block py-2 lg:py-0 block lg:hidden"
-                       target="_blank" rel="noopener noreferrer"
-                       href="https://github.com/ThePHPF/thephp.foundation">
-                        GitHub
-                    </a>
-                    <a class="text-[rgba(25,25,28,.7)] mr-0 lg:mr-4 block lg:inline-block py-2 lg:py-0"
-                       href="{{ site.url }}/blog">
-                       Blog
-                    </a>
-                    <a class="text-[rgba(25,25,28,.7)] mr-0 lg:mr-4 block lg:inline-block py-2 lg:py-0"
-                       href="{{ site.url }}/structure">
-                        Structure
-                    </a>
-                </div>
-
-               <a href="mailto:contact@thephp.foundation">
-                   <button data-test="button" type="button"
-                           class="py-1.5 px-4 text-white bg-[#7f52ff] rounded-3xl
-                            hover:bg-[rgba(127,82,255,.8)]">
-                       Write Us
-                   </button>
-               </a>
-
-               <button :aria-expanded="isOpen" aria-controls="nav-list" aria-label="toggle menu" @click="isOpen = !isOpen" type="button" class="block px-2 text-[#7f52ff] lg:hidden focus:outline-none">
-                   <svg class="w-8 h-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                       <path x-show.transition="!isOpen" d="M3 7h18a1 1 0 100-2H3a1 1 0 000 2zm18 10H3a1 1 0 000 2h18a1 1 0 000-2zm0-4H3a1 1 0 000 2h18a1 1 0 000-2zm0-4H3a1 1 0 000 2h18a1 1 0 000-2z"></path>
-                       <path x-show="isOpen" d="M13.41 12l6.3-6.29a1.004 1.004 0 00-1.42-1.42L12 10.59l-6.29-6.3a1.004 1.004 0 10-1.42 1.42l6.3 6.29-6.3 6.29a.999.999 0 000 1.42 1 1 0 001.42 0l6.29-6.3 6.29 6.3a1.001 1.001 0 001.639-.325 1 1 0 00-.22-1.095L13.41 12z" style="display: none;"></path>
-                   </svg>
-               </button>
-           </div>
         </div>
-    </header>
-    
-    {%block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
-    
-    <footer class="py-8 px-4 md:flex md:items-center md:justify-between bg-[#27282c]">
-        <ul class="mb-6 md:mb-0 flex flex-wrap items-center list-none text-[#27282c] text-base font-normal">
-            <li class="footer-li">
-                <a href="{{ site.url }}/code-of-conduct"
-                    class="footer-link text-white/30 hover:text-slate-900 no-underline hover:no-underline border-b-0 border-transparent">
-                    Code of Conduct
-                </a>
-            </li>
+    </div>
+</header>
 
-            <li class="footer-li lg:hidden">
-                <a href="{{ site.url }}/blog"
-                    class="footer-link text-white/30 hover:text-slate-900 no-underline hover:no-underline border-b-0 border-transparent">
-                    Blog
-                </a>
-            </li>
+{%block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
 
-            <li class="footer-li">
-                <a href="https://twitter.com/thephpf" class="group-link footer-link text-white/30 hover:text-slate-900 no-underline hover:no-underline border-b-0 border-transparent">
-                    Twitter
-                </a>
-            </li>
-        </ul>
+<footer class="py-8 px-4 md:flex md:items-center md:justify-between bg-[#27282c]">
+    <ul class="mb-6 md:mb-0 flex flex-wrap items-center list-none text-[#27282c] text-base font-normal">
+        <li class="footer-li">
+            <a href="{{ site.url }}/code-of-conduct"
+               class="footer-link text-white/30 hover:text-slate-900 no-underline hover:no-underline border-b-0 border-transparent">
+                Code of Conduct
+            </a>
+        </li>
 
-        <p class="font-normal text-center sm:flex sm:items-center footer-link text-white/30 hover:text-slate-900 no-underline hover:no-underline border-b-0 border-transparent">
-            &copy; The PHP Foundation
-        </p>
-    </footer>
+        <li class="footer-li lg:hidden">
+            <a href="{{ site.url }}/blog"
+               class="footer-link text-white/30 hover:text-slate-900 no-underline hover:no-underline border-b-0 border-transparent">
+                Blog
+            </a>
+        </li>
 
-    {% block scripts %}
-    {% endblock %}
+        <li class="footer-li">
+            <a href="https://twitter.com/thephpf"
+               class="group-link footer-link text-white/30 hover:text-slate-900 no-underline hover:no-underline border-b-0 border-transparent">
+                Twitter
+            </a>
+        </li>
+    </ul>
 
-    {% block scripts_after %}
-    {% endblock %}
+    <p class="font-normal text-center sm:flex sm:items-center footer-link text-white/30 hover:text-slate-900 no-underline hover:no-underline border-b-0 border-transparent">
+        &copy; The PHP Foundation
+    </p>
+</footer>
 
-    <script>hljs.highlightAll();</script>
+{% block scripts %}
+{% endblock %}
+
+{% block scripts_after %}
+{% endblock %}
+
+<script>hljs.highlightAll();</script>
 </body>
 </html>
