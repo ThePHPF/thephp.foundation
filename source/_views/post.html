@@ -7,7 +7,7 @@
         <div class="mb-3 space-x-1">
             {% for tag in page.tags %}
             <a href="{{ site.url }}/blog/tag/{{ tag|url_encode(true) }}"
-               class="text-base font-semibold leading-7 text-indigo-600">
+               class="text-base font-semibold leading-7 text-indigo-600 no-underline">
                 {{ constant('App\\Blog\\Tag::ALLOWED_TAGS')[tag] ?? tag }}
             </a>
             {% endfor %}
