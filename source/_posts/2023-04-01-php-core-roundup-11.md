@@ -91,7 +91,7 @@ Following are the RFCs and major pull-requests discussed, voted on, and implemen
 
 - **RFC Under [Discussion](https://externals.io/message/119745): [Make unserialize() emit a warning for trailing bytes](https://wiki.php.net/rfc/unserialize_warn_on_trailing_data) by Tim Düsterhus**
   
-  This RFC proposes that `[unserialize](http://www.php.net/unserialize)()` shall emit a new E_WARNING whenever the input string contains additional bytes once the unserialization parser terminates after successfully parsing a value. In other words: A warning shall be emitted if bytes can be removed from the end of the input string without changing the return value of `[unserialize](http://www.php.net/unserialize)()`.
+  This RFC proposes that [`unserialize()`](http://www.php.net/unserialize) shall emit a new `E_WARNING` whenever the input string contains additional bytes once the unserialization parser terminates after successfully parsing a value. In other words: A warning shall be emitted if bytes can be removed from the end of the input string without changing the return value of [`unserialize()`](http://www.php.net/unserialize).
 
 - **RFC Under [Discussion](https://externals.io/message/119749): [Define proper semantics for range() function](https://wiki.php.net/rfc/proper-range-semantics) by George Peter Banyard**
   
