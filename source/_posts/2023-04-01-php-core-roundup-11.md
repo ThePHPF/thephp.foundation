@@ -25,7 +25,7 @@ In February, Sergey Panteleev — one of the PHP 8.2 release managers — called
 
 Pierrick Charron, one of the PHP 8.2 release managers volunteered to be the veteran release manager. Pierrick will be working with two newcomers to this position throughout the lifecycle of PHP 8.3.
 
-For the rookie candidates, Eric Mann, Calvin Buckley, and Jakub Zelenka 💜expressed their interest, and the [vote](https://wiki.php.net/todo/php83) will elect two release managers from this list of three.
+For the rookie candidates, Eric Mann, Calvin Buckley, and Jakub Zelenka 💜 expressed their interest, and the [vote](https://wiki.php.net/todo/php83) will elect two release managers from this list of three.
 
 Voting will be open until Apr 16, 2023.
 
