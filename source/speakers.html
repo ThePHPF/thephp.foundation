@@ -1,0 +1,63 @@
+---
+layout: default
+title: Speakers
+generator: pagination
+pagination:
+    provider: data.speakers
+    max_per_page: 100
+use: [speakers]
+---
+<section class="mx-auto max-w-3xl my-16 w-full bg-white px-4 md:px-0">
+    <header class="mb-8">
+        <h1 class="text-4xl font-bold">{{ page.title }}</h1>
+    </header>
+
+    <div class="space-y-16">
+        {% for conference in page.pagination.items %}
+        <article class="flex max-w-xl flex-col items-start">
+            <div class="flex items-center gap-x-4 text-xs">
+                <div class="text-gray-500">{{ conference.published_at|date("M d, Y") }}</div>
+            </div>
+            <div class="group relative">
+                <h3 class="mt-3 mb-2 text-lg font-semibold leading-6">
+                    <a href="{{ site.url }}{{ conference.url }}" class="no-underline text-gray-900 group-hover:text-gray-600">
+                        {{ conference.title|raw }}
+                    </a>
+                </h3>
+                {% if conference.speakers is defined%}
+                <div class="mt-2 text-xs">
+                    {% for speaker in conference.speakers %}
+                    <a href="{{ speaker.url }}" class="no-underline" target="_blank"
+                       rel="noopener noreferrer">{{ speaker.name }}</a>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                <div class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
+                    {{ conference.content|striptags|length > 100 ? (conference.content|striptags|slice(0, 150) ~ '...')|raw :
+                    conference.content|striptags|raw }}
+                </div>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+
+    {% if page.pagination.previous_page or page.pagination.next_page %}
+    <nav class="flex flex-row justify-between article -mx-2 mt-8">
+        {% if page.pagination.next_page %}
+        <a href="{{ site.url }}{{ page.pagination.next_page.url }}"
+           class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[rgba(127,82,255,.8)] transition-all no-underline">
+            <div class="mb-1 text-sm text-gray-600 font-medium">Previous</div>
+            <div class="font-bold text-blue-500">Older Posts</div>
+        </a>
+        {% endif %}
+
+        {% if page.pagination.previous_page %}
+        <a href="{{ site.url }}{{ page.pagination.previous_page.url }}"
+           class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[#7f52ff] transition-all no-underline">
+            <div class="mb-1 text-sm text-gray-600 font-medium">Next</div>
+            <div class="font-bold text-blue-500">Newer Posts</div>
+        </a>
+        {% endif %}
+    </nav>
+    {% endif %}
+</section>

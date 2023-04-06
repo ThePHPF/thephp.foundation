@@ -1,0 +1,87 @@
+{% extends "default" %}
+
+{% block content_wrapper %}
+<div class="bg-white px-6 lg:px-8 my-16">
+    <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
+
+        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{ page.title }}</h1>
+
+        {% if page.speakers is defined%}
+        <div class="mt-2 text-xs">
+            {% for speaker in page.speakers %}
+            <a href="{{ speaker.url }}" class="no-underline" target="_blank"
+               rel="noopener noreferrer">{{ speaker.name }}</a>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="mt-6 text-xl leading-8">
+            {{ page.blocks.content|raw }}
+        </div>
+
+        {% if page.links is defined%}
+        <div class="grid sm:grid-cols-2 gap-4 sm:divide-y-0">
+            {% for link in page.links %}
+            <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer"
+               class="inline-block no-underline shadow rounded-tl-lg rounded-tr-lg sm:rounded-tr-none group relative bg-white p-6">
+                <span class="text-base font-semibold leading-6 text-gray-900">
+                    {{ link.title }}
+                </span>
+                <span class="pointer-events-none absolute right-6 top-6 text-gray-300 group-hover:text-gray-400">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20 4h1a1 1 0 00-1-1v1zm-1 12a1 1 0 102 0h-2zM8 3a1 1 0 000 2V3zM3.293 19.293a1 1 0 101.414 1.414l-1.414-1.414zM19 4v12h2V4h-2zm1-1H8v2h12V3zm-.707.293l-16 16 1.414 1.414 16-16-1.414-1.414z"/>
+                    </svg>
+                </span>
+            </a>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="border-t pt-5 my-5">
+            {% if page.previous_post or page.next_post %}
+            <nav class="flex flex-row justify-between article -mx-2 mb-5">
+                {% if page.previous_post %}
+                <a href="{{ site.url }}{{ page.previous_post.url }}"
+                   class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[#7f52ff] transition-all no-underline">
+                    <div class="mb-1 text-sm text-gray-600 font-medium">Previous</div>
+                    <div class="font-bold text-blue-500">{{ page.previous_post.title }}</div>
+                </a>
+                {% endif %}
+
+                {% if page.next_post %}
+                <a href="{{ site.url }}{{ page.next_post.url }}"
+                   class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[rgba(127,82,255,.8)] transition-all no-underline">
+                    <div class="mb-1 text-sm text-gray-600 font-medium">Next</div>
+                    <div class="font-bold text-blue-500">{{ page.next_post.title }}</div>
+                </a>
+                {% endif %}
+            </nav>
+            {% endif %}
+
+            <div>
+                <a href="https://github.com/ThePHPF/thephp.foundation/edit/main/source/_posts/{{ page.filename }}"
+                   class="nav-org" rel="noopener noreferrer" target="_blank">Edit this page on GitHub</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block head_scripts %}
+<script src="//cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const anchors = new AnchorJS()
+        anchors.add()
+
+        for (const element of document.getElementsByClassName('anchorjs-link')) {
+            element.addEventListener('click', function () {
+                navigator.clipboard.writeText(window.location.origin + window.location.pathname + element.getAttribute('href'))
+            })
+        }
+    })
+</script>
+{% endblock %}
