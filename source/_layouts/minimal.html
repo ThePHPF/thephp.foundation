@@ -1,0 +1,10 @@
+{% extends "default.html" %}
+
+{%block content_wrapper %}
+<section class="mx-auto mt-16 max-w-7xl w-full bg-white px-4 md:px-0">
+    <header class="mb-8">
+        <h1 class="text-4xl font-bold">{{ page.title }}</h1>
+    </header>
+    {% block content %}{% endblock %}
+</section>
+{% endblock %}
