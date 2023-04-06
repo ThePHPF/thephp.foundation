@@ -21,9 +21,9 @@ We publish the posts on our website, and you can subscribe to a newsletter; You 
 
 ## Call for PHP 8.3 Release Managers In Voting
 
-In February, Sergey Panteleev — one of the PHP 8.2 release managers — called for the volunteers to put their names forward to be the release managers for the upcoming PHP 8.3. [Four volunteers](https://wiki.php.net/todo/php83) stepped in for the three available positions, and a vote is currently under way.
+In February, Sergey Panteleev — one of the PHP 8.2 release managers — called for volunteers to put their names forward to be the release managers for the upcoming PHP 8.3. [Four volunteers](https://wiki.php.net/todo/php83) stepped in for the three available positions, and a vote is currently under way.
 
-Pierrick Charron, one of the PHP 8.2 release managers volunteered to be the veteran release manager. Pierrick will be working with two newcomers to this position throughout the lifecycle of PHP 8.3.
+Pierrick Charron, one of the PHP 8.2 release managers, volunteered to be the veteran release manager. Pierrick will be working with two newcomers to this position throughout the lifecycle of PHP 8.3.
 
 For the rookie candidates, Eric Mann, Calvin Buckley, and Jakub Zelenka 💜 expressed their interest, and the [vote](https://wiki.php.net/todo/php83) will elect two release managers from this list of three.
 
@@ -93,7 +93,7 @@ Following are the RFCs and major pull-requests discussed, voted on, and implemen
   
   This RFC proposes that [`unserialize()`](http://www.php.net/unserialize) shall emit a new `E_WARNING` whenever the input string contains additional bytes once the unserialization parser terminates after successfully parsing a value. In other words: A warning shall be emitted if bytes can be removed from the end of the input string without changing the return value of [`unserialize()`](http://www.php.net/unserialize).
 
-- **RFC Under [Discussion](https://externals.io/message/119749): [Define proper semantics for range() function](https://wiki.php.net/rfc/proper-range-semantics) by George Peter Banyard**
+- **RFC Under [Discussion](https://externals.io/message/119749): [Define proper semantics for range() function](https://wiki.php.net/rfc/proper-range-semantics) by George Peter Banyard** 💜
   
   This RFC attempts to iron out several undesirable and unexpected behaviors of the `range()` function. Introduced in PHP 4, `range()` function attempts to work with various types not only including integers, floats, and strings, but also other types. There are series of behaviors highlighted in the RFC along with several improvements proposed (throwing exceptions, emitting warnings, changing behaviors, etc).
  
@@ -306,11 +306,11 @@ Following are some changes that did not go through an RFC process because they a
 
 ## Support PHP Foundation
 
-At PHP Foundation, we support, promote, and advance the PHP language. We financially support six part-time PHP core developers to contribute to the PHP project. You can help support PHP Foundation at [OpenCollective](https://opencollective.com/phpfoundation).
+At PHP Foundation, we support, promote, and advance the PHP language. We financially support six part-time PHP core developers to contribute to the PHP project. You can help support PHP Foundation at [OpenCollective](https://opencollective.com/phpfoundation) or via [GitHub Sponsors](https://github.com/sponsors/ThePHPF).
 
 A big thanks to all our sponsors — PHP Foundation is all of us!
 
-Follow us on Twitter [@ThePHPF](https://twitter.com/thephpf) to get the latest updates from the Foundation.
+Follow us on Twitter [@ThePHPF](https://twitter.com/thephpf) or Mastodon [phpc.social/@thephpf](https://phpc.social/@thephpf) to get the latest updates from the Foundation.
 
 💜️ 🐘
 
