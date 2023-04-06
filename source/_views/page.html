@@ -2,15 +2,17 @@
 
 {% block content_wrapper %}
 <section class="mx-auto my-16 max-w-7xl w-full bg-white px-4 md:px-0">
-    <header class="mb-8">
-        <h1 class="text-4xl font-bold">{{ page.title }}</h1>
-        {% if page.subtitle %}
-        <h3 class="text-xl font-medium text-gray-600 mt-4">{{ page.subtitle }}</h3>
-        {% endif %}
-    </header>
+    <div class="max-w-3xl">
+        <header class="mb-8">
+            <h1 class="text-4xl font-bold">{{ page.title }}</h1>
+            {% if page.subtitle %}
+            <h3 class="text-xl font-medium text-gray-600 mt-4">{{ page.subtitle }}</h3>
+            {% endif %}
+        </header>
 
-    <div class="mx-auto text-base leading-7 text-gray-700">
-        {{ page.blocks.content|raw }}
+        <div class="mx-auto text-base leading-7 text-gray-700">
+            {{ page.blocks.content|raw }}
+        </div>
     </div>
 </section>
 {% endblock content_wrapper %}
