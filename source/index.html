@@ -150,14 +150,14 @@ title: The PHP Foundation
                 <div class="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-8 gap-4">
                     <template x-for="sponsor in sponsors">
                         <a :href="sponsor.website ?? sponsor.profile"
-                           class="block bg-gray-100 p-2 rounded-lg no-underline" target="_blank"
+                           class="block shadow p-2 rounded-lg no-underline" target="_blank"
                            rel="noopener noreferrer">
                             <div class="mb-6 p-2">
                                 <img x-show="sponsor.image"
                                      class="h-24 rounded w-full object-contain object-center"
                                      :src="sponsor.image" :alt="sponsor.name"/>
                                 <span x-show="!sponsor.image"
-                                      class="inline-block h-24 w-24 rounded-full bg-[rgba(127,82,255,.8)] flex justify-center items-center text-white text-2xl mx-auto"
+                                      class="h-24 w-24 rounded-full bg-[rgba(127,82,255,.8)] flex justify-center items-center text-white text-2xl mx-auto"
                                       x-text="sponsor.name.split(/\s+/).map(word => word[0].toUpperCase()).join('')"></span>
                             </div>
                             <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4"
@@ -168,14 +168,14 @@ title: The PHP Foundation
 
                 <div class="my-6">
                     <a href="https://opencollective.com/phpfoundation" target="_blank" rel="noopener noreferrer"
-                       class="inline-block py-4 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">See
+                       class="inline-block py-4 no-underline px-6 !text-white bg-[#7f52ff] rounded-full hover:bg-[rgba(127,82,255,.8)]">See
                         all organizations</a>
                 </div>
             </div>
             <div x-show="!isLoaded">
-                <div class="bg-gray-100 p-2 rounded-lg animate-pulse w-1/4">
+                <div class="shadow p-2 rounded-lg animate-pulse w-1/4">
                     <div class="mb-6 p-2">
-                        <span class="inline-block h-24 w-24 rounded-full bg-slate-200 flex justify-center items-center text-white text-2xl"></span>
+                        <span class="h-24 w-24 rounded-full bg-slate-200 justify-center items-center text-white text-2xl"></span>
                     </div>
                     <div class="h-4 bg-slate-200 rounded mb-4"></div>
                     <div class="h-2 bg-slate-200 rounded"></div>
@@ -204,14 +204,14 @@ title: The PHP Foundation
                 <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 xl:grid-cols-10 gap-4">
                     <template x-for="sponsor in sponsors">
                         <a :href="sponsor.website ?? sponsor.profile"
-                           class="block bg-gray-100 p-2 rounded-lg no-underline" target="_blank"
+                           class="block shadow p-2 rounded-lg no-underline" target="_blank"
                            rel="noopener noreferrer">
                             <div class="mb-6 p-2">
                                 <img x-show="sponsor.image"
                                      class="h-24 rounded w-full object-contain object-center"
                                      :src="sponsor.image" :alt="sponsor.name"/>
                                 <span x-show="!sponsor.image"
-                                      class="inline-block h-24 w-24 rounded-full bg-[rgba(127,82,255,.8)] flex justify-center items-center text-white text-2xl mx-auto"
+                                      class="h-24 w-24 rounded-full bg-[rgba(127,82,255,.8)] flex justify-center items-center text-white text-2xl mx-auto"
                                       x-text="sponsor.name.split(/\s+/).map(word => word[0].toUpperCase()).join('')"></span>
                             </div>
                             <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4"
@@ -222,15 +222,15 @@ title: The PHP Foundation
 
                 <div class="my-6">
                     <a href="https://opencollective.com/phpfoundation" target="_blank" rel="noopener noreferrer"
-                       class="inline-block py-4 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">See
+                       class="inline-block py-4 no-underline px-6 !text-white bg-[#7f52ff] rounded-full hover:bg-[rgba(127,82,255,.8)]">See
                         all individuals</a>
                 </div>
             </div>
             <div x-show="!isLoaded">
                 <div x-show="!isLoaded">
-                    <div class="bg-gray-100 p-2 rounded-lg animate-pulse w-1/4">
+                    <div class="shadow p-2 rounded-lg animate-pulse w-1/4">
                         <div class="mb-6 p-2">
-                            <span class="inline-block h-24 w-24 rounded-full bg-slate-200 flex justify-center items-center text-white text-2xl"></span>
+                            <span class="inline-block h-24 w-24 rounded-full bg-slate-200 justify-center items-center text-white text-2xl"></span>
                         </div>
                         <div class="h-4 bg-slate-200 rounded mb-4"></div>
                         <div class="h-2 bg-slate-200 rounded"></div>
@@ -246,7 +246,7 @@ title: The PHP Foundation
     <div class="font-medium text-xl my-4">We receive non-financial help from other organisations too</div>
     <div class="mx-auto max-w-full px-4">
         <div class="grid gap-4 justify-items-center">
-            <a class="block bg-gray-200 p-2 rounded-lg no-underline" target="_blank" rel="noopener noreferrer"
+            <a class="block shadow p-2 rounded-lg no-underline" target="_blank" rel="noopener noreferrer"
                href="https://mule.to/p399">
                 <div class="mb-6 p-2">
                     <img class="h-24 rounded w-full object-contain object-center"
