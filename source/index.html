@@ -143,7 +143,7 @@ title: The PHP Foundation
                     });
             }
         }" x-init="fetchSponsoringOrganizations()">
-            <div x-show="isLoaded" style="display: none;">
+            <div x-show="isLoaded" x-cloak>
                 <div class="font-medium text-xl my-4">We are supported by <span x-text="sponsorsCount"></span>
                     organizations
                 </div>
@@ -168,17 +168,16 @@ title: The PHP Foundation
 
                 <div class="my-6">
                     <a href="https://opencollective.com/phpfoundation" target="_blank" rel="noopener noreferrer"
-                       class="inline-block py-4 no-underline px-6 !text-white bg-[#7f52ff] rounded-full hover:bg-[rgba(127,82,255,.8)]">See
+                       class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">See
                         all organizations</a>
                 </div>
             </div>
-            <div x-show="!isLoaded">
+            <div x-show="!isLoaded" x-cloak>
                 <div class="shadow p-2 rounded-lg animate-pulse w-1/4">
-                    <div class="mb-6 p-2">
-                        <span class="h-24 w-24 rounded-full bg-slate-200 justify-center items-center text-white text-2xl"></span>
+                    <div class="mb-4 p-2">
+                        <span class="flex h-24 w-24 rounded-full bg-slate-200 justify-center items-center text-white text-2xl"></span>
                     </div>
-                    <div class="h-4 bg-slate-200 rounded mb-4"></div>
-                    <div class="h-2 bg-slate-200 rounded"></div>
+                    <div class="h-4 bg-slate-200 rounded"></div>
                 </div>
             </div>
         </div>
@@ -199,7 +198,7 @@ title: The PHP Foundation
                     });
             }
         }" x-init="fetchSponsoringUsers()" class="mt-8">
-            <div x-show="isLoaded" style="display: none;">
+            <div x-show="isLoaded" x-cloak>
                 <div class="font-medium text-xl my-4">...and <span x-text="sponsorsCount"></span> individuals</div>
                 <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 xl:grid-cols-10 gap-4">
                     <template x-for="sponsor in sponsors">
@@ -222,18 +221,17 @@ title: The PHP Foundation
 
                 <div class="my-6">
                     <a href="https://opencollective.com/phpfoundation" target="_blank" rel="noopener noreferrer"
-                       class="inline-block py-4 no-underline px-6 !text-white bg-[#7f52ff] rounded-full hover:bg-[rgba(127,82,255,.8)]">See
+                       class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">See
                         all individuals</a>
                 </div>
             </div>
-            <div x-show="!isLoaded">
+            <div x-show="!isLoaded" x-cloak>
                 <div x-show="!isLoaded">
                     <div class="shadow p-2 rounded-lg animate-pulse w-1/4">
-                        <div class="mb-6 p-2">
-                            <span class="inline-block h-24 w-24 rounded-full bg-slate-200 justify-center items-center text-white text-2xl"></span>
+                        <div class="mb-4 p-2">
+                            <span class="flex h-24 w-24 rounded-full bg-slate-200 justify-center items-center text-white text-2xl"></span>
                         </div>
-                        <div class="h-4 bg-slate-200 rounded mb-4"></div>
-                        <div class="h-2 bg-slate-200 rounded"></div>
+                        <div class="h-4 bg-slate-200 rounded"></div>
                     </div>
                 </div>
             </div>
