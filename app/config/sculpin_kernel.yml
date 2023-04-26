@@ -9,13 +9,6 @@ sculpin_content_types:
 
     posts:
         permalink: blog/:year/:month/:day/:filename/
-    
-    speakers:
-        type: path
-        path: _speakers
-        singular_name: speaker
-        enabled: true
-        permalink: speakers/:title
 
 # To disable posts (e.g., if you aren't planning on having any posts and Sculpin's watch mode complains):
 #sculpin_content_types:

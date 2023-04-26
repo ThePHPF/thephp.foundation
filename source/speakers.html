@@ -1,63 +1,59 @@
 ---
 layout: default
 title: Speakers
-generator: pagination
-pagination:
-    provider: data.speakers
-    max_per_page: 100
-use: [speakers]
 ---
-<section class="mx-auto max-w-3xl my-16 w-full bg-white px-4 md:px-0">
+
+<section class="mx-auto mt-16 max-w-7xl w-full bg-white px-4 md:px-0">
     <header class="mb-8">
         <h1 class="text-4xl font-bold">{{ page.title }}</h1>
     </header>
 
-    <div class="space-y-16">
-        {% for conference in page.pagination.items %}
-        <article class="flex max-w-xl flex-col items-start">
-            <div class="flex items-center gap-x-4 text-xs">
-                <div class="text-gray-500">{{ conference.published_at|date("M d, Y") }}</div>
+    <div class="my-16">
+        <article class="relative isolate flex flex-col gap-8 lg:flex-row">
+            <div class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0 flex justify-center items-center inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10">
+                <img src="https://thephp.cc/images/logo.svg"
+                     alt="" class="h-48 w-48 object-contain">
             </div>
-            <div class="group relative">
-                <h3 class="mt-3 mb-2 text-lg font-semibold leading-6">
-                    <a href="{{ site.url }}{{ conference.url }}" class="no-underline text-gray-900 group-hover:text-gray-600">
-                        {{ conference.title|raw }}
-                    </a>
-                </h3>
-                {% if conference.speakers is defined%}
-                <div class="mt-2 text-xs">
-                    {% for speaker in conference.speakers %}
-                    <a href="{{ speaker.url }}" class="no-underline" target="_blank"
-                       rel="noopener noreferrer">{{ speaker.name }}</a>
-                    {% endfor %}
+            <div>
+                <div class="flex items-center gap-x-4 text-xs">
+                    <div class="text-gray-500">Oct 13-14, 2022</div>
                 </div>
-                {% endif %}
-                <div class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
-                    {{ conference.content|striptags|length > 100 ? (conference.content|striptags|slice(0, 150) ~ '...')|raw :
-                    conference.content|striptags|raw }}
+                <div class="relative max-w-xl">
+                    <h3 class="mt-3 text-lg leading-6">
+                        <a href="https://youtu.be/JBPtPy9iSP0"
+                           target="_blank" rel="noopener noreferrer" class="text-gray-900 font-semibold no-underline">
+                            The PHP Foundation: The Past, the Present, and the Future
+                        </a>
+                    </h3>
+                    <div class="mt-5 text-sm leading-6 text-gray-600">
+                        A complex saga of developers scattered around the world, all living under the rule of the
+                        elePHPant technology.
+                    </div>
+                </div>
+                <div class="mt-6 flex border-t border-gray-900/5 pt-6 gap-x-8">
+                    <div class="relative flex items-center gap-x-4">
+                        <img src="https://avatars.githubusercontent.com/u/25218?s=200&v=4"
+                             alt="" class="h-10 w-10 rounded-full bg-gray-50">
+                        <div class="text-sm leading-6">
+                            <a href="https://phpc.social/@sebastian" class="text-gray-900 font-semibold no-underline"
+                               target="_blank" rel="noopener noreferrer">
+                                Sebastian Bergmann</a>
+                            <div class="text-gray-600">Administration</div>
+                        </div>
+                    </div>
+
+                    <div class="relative flex items-center gap-x-4">
+                        <img src="https://avatars.githubusercontent.com/u/1196825?s=200&v=4"
+                             alt="" class="h-10 w-10 rounded-full bg-gray-50">
+                        <div class="text-sm leading-6">
+                            <a href="https://twitter.com/pronskiy" class="text-gray-900 font-semibold no-underline"
+                               target="_blank" rel="noopener noreferrer">
+                                Roman Pronskiy</a>
+                            <div class="text-gray-600">Administration</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </article>
-        {% endfor %}
     </div>
-
-    {% if page.pagination.previous_page or page.pagination.next_page %}
-    <nav class="flex flex-row justify-between article -mx-2 mt-8">
-        {% if page.pagination.next_page %}
-        <a href="{{ site.url }}{{ page.pagination.next_page.url }}"
-           class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[rgba(127,82,255,.8)] transition-all no-underline">
-            <div class="mb-1 text-sm text-gray-600 font-medium">Previous</div>
-            <div class="font-bold text-blue-500">Older Posts</div>
-        </a>
-        {% endif %}
-
-        {% if page.pagination.previous_page %}
-        <a href="{{ site.url }}{{ page.pagination.previous_page.url }}"
-           class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[#7f52ff] transition-all no-underline">
-            <div class="mb-1 text-sm text-gray-600 font-medium">Next</div>
-            <div class="font-bold text-blue-500">Newer Posts</div>
-        </a>
-        {% endif %}
-    </nav>
-    {% endif %}
 </section>
