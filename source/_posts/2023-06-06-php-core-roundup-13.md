@@ -251,7 +251,7 @@ This concludes the list of commits made by the PHP core team in the past month. 
 
 ## Support PHP Foundation
 
-At PHP Foundation, we support, promote, and advance the PHP language. We financially support six part-time PHP core developers to contribute to the PHP project. You can help support PHP Foundation at [OpenCollective](https://opencollective.com/phpfoundation).
+At PHP Foundation, we support, promote, and advance the PHP language. We financially support six part-time PHP core developers to contribute to the PHP project. You can help support PHP Foundation at [OpenCollective](https://opencollective.com/phpfoundation) or via [GitHub Sponsors](https://github.com/sponsors/ThePHPF).
 
 A big thanks to all our sponsors — PHP Foundation is all of us!
 
@@ -259,5 +259,5 @@ Follow us on Twitter [@ThePHPF](https://twitter.com/thephpf) to get the latest u
 
 💜️ 🐘
 
-> PHP Roundup is prepared by Ayesh Karunaratne from **[PHP.Watch](https://php.watch)**, a source for PHP News, Articles, Upcoming Changes, and more. 
+> PHP Roundup is (except for this particular one) prepared by Ayesh Karunaratne from **[PHP.Watch](https://php.watch)**, a source for PHP News, Articles, Upcoming Changes, and more. 
 
