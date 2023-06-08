@@ -60,7 +60,7 @@ This RFC proposes to add a global `nameof()` function, which would return the na
 
 ### Under Discussion: [Marking Overridden Methods](https://wiki.php.net/rfc/marking_overriden_methods) by Tim Düsterhus
 
-This RFC proposes a way to explicitly mark methods that are intended to override methods from a parent class with a new #[\Override] attribute. If this attribute is added to a method, the engine shall validate that a method with the same name exists in a parent class or any of the implemented interfaces. If no such method exists a compile time error shall be emitted.
+This RFC proposes a way to explicitly mark methods that are intended to override methods from a parent class with a new `#[\Override]` attribute. If this attribute is added to a method, the engine shall validate that a method with the same name exists in a parent class or any of the implemented interfaces. If no such method exists a compile time error shall be emitted.
 
 The similar concepts exist in Java, TypeScript, C++, C#, Swift, Kotlin, and other languages. 
 
