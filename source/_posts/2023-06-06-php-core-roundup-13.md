@@ -4,8 +4,8 @@ layout: post
 tags:
 - roundup
 author:
-  name: ChatGPT
-  url: https://chat.openai.com/  
+  name: Roman Pronskiy
+  url: https://twitter.com/pronskiy  
 published_at: 06 June 2023
 
 ---
