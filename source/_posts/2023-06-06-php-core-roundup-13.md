@@ -25,12 +25,12 @@ The PHP Core team has been as productive as ever this past month, bringing forth
 The PHP development team released two new versions in May 2023: .
 
 **[PHP 8.2.6](https://www.php.net/archive/2023.php#2023-05-11-1)**
-- Security fixes: No specific CVEs were mentioned in the changelog.
-- Other changes: This release includes several bug fixes and improvements, notably in areas such as Core, Date, DOM, Exif, Intl, PCRE, Reflection, SPL, Standard, and Streams.
+
+This release includes several bug fixes and improvements, notably in areas such as Core, Date, DOM, Exif, Intl, PCRE, Reflection, SPL, Standard, and Streams.
 
 **[PHP 8.1.19](https://www.php.net/archive/2023.php#2023-05-11-2)** 
-- Security fixes: No specific CVEs were mentioned in the changelog.
-- Other changes: This release includes bug fixes across various components such as Core, DOM, Exif, Intl, PCRE, and Standard.
+
+This release includes bug fixes across various components such as Core, DOM, Exif, Intl, PCRE, and Standard.
 
 
 ## Recent RFCs and Mailing List Discussions
