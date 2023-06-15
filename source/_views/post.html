@@ -3,25 +3,27 @@
 {% block content_wrapper %}
 <div class="bg-white px-6 lg:px-8 my-16">
     <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
+        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{ page.title }}</h1>
+
+        <div class="flex items-center gap-x-4 text-xs mt-2">
+        {% if page.author is defined%}
+        <div>
+            Published on <span>{{ page.published_at|date("M d, Y") }}</span>
+            by <a href="{{ page.author.url }}" target="_blank" rel="noopener noreferrer">{{ page.author.name }}</a>
+        </div>
+        {% endif %}
+        
         {% if page.tags is defined%}
-        <div class="mb-3 space-x-1">
+        <div class="space-x-1">
             {% for tag in page.tags %}
             <a href="{{ site.url }}/blog/tag/{{ tag|url_encode(true) }}"
-               class="text-base font-semibold leading-7 text-indigo-600 no-underline">
+               class="rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
                 {{ constant('App\\Blog\\Tag::ALLOWED_TAGS')[tag] ?? tag }}
             </a>
             {% endfor %}
         </div>
         {% endif %}
-
-        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{ page.title }}</h1>
-
-        {% if page.author is defined%}
-        <div class="text-xs mt-2">
-            Published on <span>{{ page.published_at|date("M d, Y") }}</span>
-            by <a href="{{ page.author.url }}" target="_blank" rel="noopener noreferrer">{{ page.author.name }}</a>
         </div>
-        {% endif %}
 
         <div class="mt-6 text-xl leading-8">
             {{ page.blocks.content|raw }}

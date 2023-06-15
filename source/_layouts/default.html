@@ -60,7 +60,8 @@
 <body class="bg-white">
 
 <header x-data="{ isOpen: false }" @keydown.escape="isOpen = false" @click.away="isOpen = false">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between relative pb-2">
+        <div class="absolute inset-x-0 bottom-0 h-px bg-slate-900/5"></div>
         <div class="flex lg:flex-1">
             <a href="{{ site.url }}/" class="-m-1.5 p-1.5">
                 <img class="h-16 w-auto" src="{{ site.url }}/assets/icons/php_foundation.svg"
@@ -79,19 +80,18 @@
             </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-            <a href="{{ site.url }}/blog" class="text-sm font-semibold leading-6 text-gray-900 no-underline">News</a>
+            <a href="{{ site.url }}/foundation" class="text-sm font-semibold leading-6 text-gray-900 no-underline border-b">Foundation</a>
+            
+            <a href="{{ site.url }}/blog" class="text-sm font-semibold leading-6 text-gray-900 no-underline border-b">News</a>
 
-            <a href="{{ site.url }}/structure" class="text-sm font-semibold leading-6 text-gray-900 no-underline">Structure</a>
+            <a href="{{ site.url }}/structure" class="text-sm font-semibold leading-6 text-gray-900 no-underline border-b">Structure</a>
 
-            <a href="{{ site.url }}/speakers" class="text-sm font-semibold leading-6 text-gray-900 no-underline">Speakers</a>
-
-            <a href="{{ site.url }}/get-involved" class="text-sm font-semibold leading-6 text-gray-900 no-underline">Get
-                involved</a>
+            <a href="{{ site.url }}/presentations" class="text-sm font-semibold leading-6 text-gray-900 no-underline border-b">Presentations</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-8">
             <a href="https://php.net" target="_blank" rel="noopener noreferrer"
-               class="no-underline text-sm font-semibold leading-6 text-gray-900">
-                PHP.net</a>
+               class="no-underline text-sm font-semibold leading-6 text-gray-900 border-b nav-org">
+                php.net</a>
 
             <a href="mailto:contact@thephp.foundation"
                class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">
@@ -184,11 +184,6 @@
             <div class="pb-6">
                 <a href="{{ site.url }}/speakers"
                    class="text-sm leading-6 text-gray-600 hover:text-gray-900 no-underline">Speakers</a>
-            </div>
-
-            <div class="pb-6">
-                <a href="{{ site.url }}/get-involved"
-                   class="text-sm leading-6 text-gray-600 hover:text-gray-900 no-underline">Get involved</a>
             </div>
 
             <div class="pb-6">
