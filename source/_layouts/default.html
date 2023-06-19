@@ -60,7 +60,7 @@
 <body class="bg-white">
 
 <header x-data="{ isOpen: false }" @keydown.escape="isOpen = false" @click.away="isOpen = false">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between relative pb-2">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between relative py-2">
         <div class="absolute inset-x-0 bottom-0 h-px bg-slate-900/5"></div>
         <div class="flex lg:flex-1">
             <a href="{{ site.url }}/" class="-m-1.5 p-1.5">
@@ -131,11 +131,11 @@
                         <a href="{{ site.url }}/structure"
                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Structure</a>
 
-                        <a href="{{ site.url }}/branding"
-                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Branding</a>
-
                         <a href="{{ site.url }}/presentations"
                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Presentations</a>
+                        
+                        <a href="{{ site.url }}/branding"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Branding</a>
 
                         <a href="{{ site.url }}/code-of-conduct"
                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Code
