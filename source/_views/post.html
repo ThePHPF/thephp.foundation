@@ -6,10 +6,18 @@
         <header class="mb-8">
             <h1 class="">{{ page.title }}</h1>
 
-            {% if page.author is defined%}
+            {% if page.author.name is defined%}
             <div class="text-xs">
 				Published on <span>{{ page.published_at|date("M d, Y") }}</span>
 				by <a href="{{ page.author.url }}">{{ page.author.name }}</a>
+            </div>
+            {% elseif page.author is iterable%}
+            <div class="text-xs">
+                Published on <span>{{ page.published_at|date("M d, Y") }}</span>
+                by
+                {% for author in page.author %}
+                <a href="{{ author.url }}">{{ author.name }}</a>{% if loop.last == false  %}, {% endif %}
+                {% endfor %}
             </div>
             {% endif %}
 

@@ -20,10 +20,18 @@ pagination:
         <section class="mb-4">
             <header>
                 <h4 class="mb-1"><a href="{{ site.url }}{{ post.url }}">{{ post.title|raw }}</a></h4>
-                {% if post.author is defined%}
+                {% if post.author.name is defined%}
                 <div class="text-xs mb-4">
                     Published on <span>{{ post.published_at|date("M d, Y") }}</span>
                     by <a href="{{ post.author.url }}">{{ post.author.name }}</a>
+                </div>
+                {% elseif post.author is iterable%}
+                <div class="text-xs mb-4">
+                    Published on <span>{{ post.published_at|date("M d, Y") }}</span>
+                    by
+                    {% for author in post.author %}
+                    <a href="{{ author.url }}">{{ author.name }}</a>{% if loop.last == false  %}, {% endif %}
+                    {% endfor %}
                 </div>
                 {% endif %}
                 <p class="text-base">{{ post.content|striptags|length > 100 ? (post.content|striptags|slice(0, 150) ~ '...')|raw : post.content|striptags|raw }}</p>
