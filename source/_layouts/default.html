@@ -60,7 +60,7 @@
 <body class="bg-white">
 
 <header x-data="{ isOpen: false }" @keydown.escape="isOpen = false" @click.away="isOpen = false">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between relative py-2">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between relative">
         <div class="absolute inset-x-0 bottom-0 h-px bg-slate-900/5"></div>
         <div class="flex lg:flex-1">
             <a href="{{ site.url }}/" class="-m-1.5 p-1.5">
@@ -80,17 +80,17 @@
             </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-            <a href="{{ site.url }}/foundation" class="text-sm font-semibold leading-6 text-gray-900 no-underline border-b">Foundation</a>
-            
-            <a href="{{ site.url }}/blog" class="text-sm font-semibold leading-6 text-gray-900 no-underline border-b">News</a>
+            <a href="{{ site.url }}/structure" class="text-gray-700 hover:underline">Who we are</a>
 
-            <a href="{{ site.url }}/structure" class="text-sm font-semibold leading-6 text-gray-900 no-underline border-b">Structure</a>
+            <a href="{{ site.url }}/foundation" class="text-gray-700 hover:underline">What we do</a>
 
-            <a href="{{ site.url }}/presentations" class="text-sm font-semibold leading-6 text-gray-900 no-underline border-b">Presentations</a>
+            <a href="{{ site.url }}/blog" class="text-gray-700 hover:underline">News</a>
+
+            <a href="{{ site.url }}/presentations" class="text-gray-700 hover:underline">Talks</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-8">
             <a href="https://php.net" target="_blank" rel="noopener noreferrer"
-               class="no-underline text-sm font-semibold leading-6 text-gray-900 border-b nav-org">
+               class="text-sm font-semibold leading-6 text-gray-700 nav-org hover:border-none hover:underline">
                 php.net</a>
 
             <a href="mailto:contact@thephp.foundation"
@@ -101,8 +101,7 @@
     <div x-show="isOpen" x-cloak>
         <div class="fixed inset-0 z-50"></div>
         <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-            <nav class="mx-auto flex max-w-7xl items-center justify-between relative py-2">
-                <div class="absolute inset-x-0 bottom-0 h-px bg-slate-900/5"></div>
+            <div class="mx-auto flex max-w-7xl items-center justify-between relative">
                 <div class="flex lg:flex-1">
                     <a href="{{ site.url }}/" class="-m-1.5 p-1.5">
                         <img class="h-16 w-auto" src="{{ site.url }}/assets/icons/php_foundation.svg"
@@ -119,37 +118,21 @@
                         </svg>
                     </button>
                 </div>
-            </nav>
-            <div class="mt-6 flow-root px-6 py-6">
+            </div>
+            <nav class="mt-6 flow-root px-6 py-6">
                 <div class="-my-6 divide-y divide-gray-500/10">
                     <div class="space-y-2 py-6">
+                        <a href="{{ site.url }}/structure"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Who we are</a>
+
                         <a href="{{ site.url }}/foundation"
-                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Foundation</a>
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">What we do</a>
                         
                         <a href="{{ site.url }}/blog"
-                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Blog</a>
-
-                        <a href="{{ site.url }}/structure"
-                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Structure</a>
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">News</a>
 
                         <a href="{{ site.url }}/presentations"
-                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Presentations</a>
-                        
-                        <a href="{{ site.url }}/branding"
-                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Branding</a>
-
-                        <a href="{{ site.url }}/code-of-conduct"
-                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Code
-                            of Conduct</a>
-                    </div>
-                    <div class="py-6">
-                        <a href="https://github.com/ThePHPF/thephp.foundation"
-                           target="_blank" rel="noopener noreferrer"
-                           class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">GitHub</a>
-
-                        <a href="https://php.net"
-                           target="_blank" rel="noopener noreferrer"
-                           class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">php.net</a>
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Talks</a>
                     </div>
                     <div class="py-6">
                         <a href="mailto:contact@thephp.foundation"
@@ -157,7 +140,7 @@
                             Write Us</a>
                     </div>
                 </div>
-            </div>
+            </nav>
         </div>
     </div>
 </header>
