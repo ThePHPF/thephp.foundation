@@ -33,8 +33,6 @@ class AtomFeedGenerator implements EventSubscriberInterface
 
         $env = $this->configuration->get('env') ?? 'dev';
 
-        $baseUrl = $this->configuration->get('url') ?? 'http://localhost';
-
         $filesystem = new Filesystem();
         if (!$filesystem->exists("output_$env/rss/")) {
             $filesystem->mkdir("output_$env/rss/");
@@ -48,31 +46,49 @@ class AtomFeedGenerator implements EventSubscriberInterface
                 continue;
             }
 
+            $data = $source->data();
+
             if ($source->file()->getExtension() !== 'md') {
                 continue;
             }
 
-            if (!$source->data()->get('author')) {
+            if (!$data->get('author')) {
                 continue;
             }
 
-            if ($data = $source->data()) {
-                $slug = mb_strtolower(preg_replace('/\W/', '_', $data->get('author.name')));
-
-                $post = new Entry();
-
-                $post->title = $data->get('title');
-                $post->link = $baseUrl.$data->get('url');
-                $post->author = $data->get('author.name');
-                $post->authorURL = $data->get('author.url');
-                $post->description = $data->get('blocks.content');
-                $post->published_at = new \DateTimeImmutable($data->get('published_at'));
-
-                $entries["output_$env/rss/$slug.xml"][] = $post;
+            if ($name = $data->get('author.name')) {
+                $slug = $this->slug($name);
+                $entries["output_$env/rss/$slug.xml"][] = $this->fetchEntry($data, $data->get('author'));
+            } else {
+                foreach ($data->get('author') as $author) {
+                    $slug = $this->slug($author['name']);
+                    $entries["output_$env/rss/$slug.xml"][] = $this->fetchEntry($data, $author);
+                }
             }
         }
 
         $this->generateFeed($entries);
+    }
+
+    protected function fetchEntry(Configuration $data, $author): Entry
+    {
+        $baseUrl = $this->configuration->get('url') ?? 'http://localhost';
+
+        $post = new Entry();
+
+        $post->title = $data->get('title');
+        $post->link = $baseUrl . $data->get('url');
+        $post->author = $author['name'];
+        $post->authorURL = $author['url'];
+        $post->description = $data->get('blocks.content');
+        $post->published_at = new \DateTimeImmutable($data->get('published_at'));
+
+        return $post;
+    }
+
+    protected function slug($author): string
+    {
+        return mb_strtolower(preg_replace('/\W/', '_', $author));
     }
 
     protected function generateFeed(array $entries = []): void

@@ -19,12 +19,20 @@ use:
         <section class="mb-4">
             <header>
                 <h4 class="mb-1"><a href="{{ site.url }}{{ post.url }}">{{ post.title|raw }}</a></h4>
-				{% if post.author is defined%}
+				{% if post.author.name is defined%}
 				<div class="text-xs mb-2">
 					Published on <span>{{ post.published_at|date("M d, Y") }}</span>
 					by <a href="{{ post.author.url }}">{{ post.author.name }}</a>
 				</div>
-				{% endif %}
+                {% elseif post.author is iterable%}
+                <div class="text-xs mb-2">
+                    Published on <span>{{ post.published_at|date("M d, Y") }}</span>
+                    by
+                    {% for author in post.author %}
+                    <a href="{{ author.url }}">{{ author.name }}</a>{% if loop.last == false  %}, {% endif %}
+                    {% endfor %}
+                </div>
+                {% endif %}
 
                 {% if post.tags is defined%}
                 <div class="mb-4 space-x-1">
