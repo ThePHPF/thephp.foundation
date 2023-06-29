@@ -62,7 +62,7 @@ Following are the RFCs and major pull-requests discussed, voted on, and implemen
 
 ### Accepted: [Marking Overridden Methods](https://wiki.php.net/rfc/marking_overriden_methods) by Tim Düsterhus
 
-PHP 8.3 will have a new attribute `#[\Override]`. If this attribute is added to a method, the engine shall validate that a method with the same name exists in a parent class or any of the implemented interfaces. If no such method exists, a compile time error shall be emitted.
+PHP 8.3 will have a new attribute `#[\Override]`. If this attribute is added to a method, the engine will validate that a method with the same name exists in a parent class or any of the implemented interfaces. If no such method exists, a compile time error will be emitted.
 
 The similar concepts exist in Java, TypeScript, C++, C#, Swift, Kotlin, and other languages.
 
