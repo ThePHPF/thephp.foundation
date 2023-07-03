@@ -4,8 +4,11 @@ layout: post
 tags:
   - roundup
 author:
-  name: Ayesh Karunaratne
-  url: https://aye.sh
+  - name: Ayesh Karunaratne
+    url: https://aye.sh
+  
+  - name: Sergey Panteleev
+    url: https://sergeypanteleev.com
 published_at: 29 June 2023
 
 ---
