@@ -8,11 +8,10 @@ class Entry
 
     public string $link;
 
-    public string $author;
-
-    public string $authorURL;
+    /** @var Author[] */
+    public array $authors = [];
 
     public string $description;
-    
+
     public \DateTimeImmutable $published_at;
 }
