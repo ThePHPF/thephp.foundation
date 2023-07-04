@@ -2,6 +2,7 @@
 
 namespace App\Bundles\AtomFeedGeneratorBundle;
 
+use App\Sitemap\Author;
 use App\Sitemap\Entry;
 use App\Sitemap\SitemapGenerator;
 use Dflydev\DotAccessConfiguration\Configuration;
@@ -15,7 +16,7 @@ class AtomFeedGenerator implements EventSubscriberInterface
 {
     protected Configuration $configuration;
 
-    public static function getSubscribedEvents()
+    public static function getSubscribedEvents(): array
     {
         return [
             Sculpin::EVENT_AFTER_RUN => 'afterRun',
@@ -27,7 +28,7 @@ class AtomFeedGenerator implements EventSubscriberInterface
         $this->configuration = $configuration;
     }
 
-    public function afterRun(SourceSetEvent $sourceSetEvent)
+    public function afterRun(SourceSetEvent $sourceSetEvent): void
     {
         $sourceSet = $sourceSetEvent->sourceSet();
 
@@ -56,21 +57,25 @@ class AtomFeedGenerator implements EventSubscriberInterface
                 continue;
             }
 
+            $authors = [];
             if ($name = $data->get('author.name')) {
-                $slug = $this->slug($name);
-                $entries["output_$env/rss/$slug.xml"][] = $this->fetchEntry($data, $data->get('author'));
+                $authors[] = new Author($name, $data->get('author.url'));
             } else {
                 foreach ($data->get('author') as $author) {
-                    $slug = $this->slug($author['name']);
-                    $entries["output_$env/rss/$slug.xml"][] = $this->fetchEntry($data, $author);
+                    $authors[] = new Author($author['name'], $author['url']);
                 }
+            }
+
+            foreach ($authors as $author) {
+                $slug = $this->slug($author->name);
+                $entries["output_$env/rss/$slug.xml"][] = $this->fetchEntry($data, $authors);
             }
         }
 
         $this->generateFeed($entries);
     }
 
-    protected function fetchEntry(Configuration $data, $author): Entry
+    protected function fetchEntry(Configuration $data, array $authors): Entry
     {
         $baseUrl = $this->configuration->get('url') ?? 'http://localhost';
 
@@ -78,8 +83,7 @@ class AtomFeedGenerator implements EventSubscriberInterface
 
         $post->title = $data->get('title');
         $post->link = $baseUrl . $data->get('url');
-        $post->author = $author['name'];
-        $post->authorURL = $author['url'];
+        $post->authors = $authors;
         $post->description = $data->get('blocks.content');
         $post->published_at = new \DateTimeImmutable($data->get('published_at'));
 
