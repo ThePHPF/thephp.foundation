@@ -39,10 +39,18 @@ pagination:
                         {{ post.title|raw }}
                     </a>
                 </h3>
-                {% if post.author is defined%}
+                {% if post.author.name is defined%}
                 <div class="mt-2 text-xs">
-                    by <a href="{{ post.author.url }}" target="_blank" rel="noopener noreferrer">
-                    {{ post.author.name }}</a>
+                    Published on <span>{{ post.published_at|date("M d, Y") }}</span>
+                    by by <a href="{{ post.author.url }}" target="_blank" rel="noopener noreferrer">{{ post.author.name }}</a>
+                </div>
+                {% elseif post.author is iterable%}
+                <div class="mt-2 text-xs">
+                    Published on <span>{{ post.published_at|date("M d, Y") }}</span>
+                    by
+                    {% for author in post.author %}
+                    <a href="{{ author.url }}" target="_blank" rel="noopener noreferrer">{{ author.name }}</a>{% if loop.last == false  %}, {% endif %}
+                    {% endfor %}
                 </div>
                 {% endif %}
                 <div class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
