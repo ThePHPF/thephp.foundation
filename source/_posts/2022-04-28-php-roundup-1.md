@@ -1,5 +1,6 @@
 ---
 title: 'PHP Roundup #1'
+description: Welcome to the first PHP Roundup, where we'll make regular updates on the improvements made to PHP by the PHP Foundation and other contributors.
 layout: post
 tags:
     - roundup
