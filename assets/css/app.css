@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+[x-cloak] {
+    display: none !important;
+}
+
 @layer base {
     body {
         @apply font-sans text-zinc-600 box-border;
@@ -139,7 +143,7 @@
     background-image: linear-gradient(180deg, #fff 100%, transparent 0);
     background-size: auto 0;
     background-repeat: repeat-x;
-    transition: background-size .3s,color .3s;
+    transition: background-size .3s, color .3s;
 }
 
 .footer-link:hover {
@@ -153,7 +157,7 @@ footer > ul, footer > p {
 code {
     font-family: Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
     line-height: normal;
-    background: rgba(135,131,120,0.15);
+    background: rgba(135, 131, 120, 0.15);
     color: #EB5757;
     border-radius: 3px;
     font-size: 85%;

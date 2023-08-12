@@ -6,55 +6,79 @@ pagination:
     provider: page.tag_posts
 ---
 
-<main class="flex flex-row justify-center min-w-[320px] min-h-[100vh] w-full pt-4">
-    <section class="max-w-2xl w-full bg-white px-4 md:px-0">
-        <header class="mb-16">
-            <h1>Tag: {{ constant('App\\Blog\\Tag::ALLOWED_TAGS')[page.tag] ?? page.tag }}</h1>
-        </header>
+<section class="mx-auto max-w-3xl my-16 w-full bg-white px-4 md:px-0">
+    <header class="mb-8">
+        <h1 class="text-4xl font-bold">Tag: {{ constant('App\\Blog\\Tag::ALLOWED_TAGS')[page.tag] ?? page.tag }}</h1>
+    </header>
 
-        {% if page.tag == 'roundup' %}
-            {% include "newsletter.html" %}
-        {% endif %}
+    {% if page.tag == 'roundup' %}
+    <div class="my-16">
+        {% include "newsletter.html" %}
+    </div>
+    {% endif %}
 
+    <div class="space-y-16">
         {% for post in page.pagination.items %}
-        <section class="mb-4">
-            <header>
-                <h4 class="mb-1"><a href="{{ site.url }}{{ post.url }}">{{ post.title|raw }}</a></h4>
-                {% if post.author.name is defined%}
-                <div class="text-xs mb-4">
-                    Published on <span>{{ post.published_at|date("M d, Y") }}</span>
-                    by <a href="{{ post.author.url }}">{{ post.author.name }}</a>
-                </div>
-                {% elseif post.author is iterable%}
-                <div class="text-xs mb-4">
-                    Published on <span>{{ post.published_at|date("M d, Y") }}</span>
-                    by
-                    {% for author in post.author %}
-                    <a href="{{ author.url }}">{{ author.name }}</a>{% if loop.last == false  %}, {% endif %}
+        <article class="flex max-w-xl flex-col items-start">
+            <div class="flex items-center gap-x-4 text-xs">
+                <div class="text-gray-500">{{ post.published_at|date("M d, Y") }}</div>
+                {% if post.tags is defined%}
+                <div>
+                    {% for tag in post.tags %}
+                    <a href="{{ site.url }}/blog/tag/{{ tag|url_encode(true) }}"
+                       class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
+                        {{ constant('App\\Blog\\Tag::ALLOWED_TAGS')[tag] ?? tag }}
+                    </a>
                     {% endfor %}
                 </div>
                 {% endif %}
-                <p class="text-base">{{ post.content|striptags|length > 100 ? (post.content|striptags|slice(0, 150) ~ '...')|raw : post.content|striptags|raw }}</p>
-            </header>
-        </section>
+            </div>
+            <div class="group relative">
+                <h3 class="mt-3 mb-2 text-lg font-semibold leading-6">
+                    <a href="{{ site.url }}{{ post.url }}" class="no-underline border-b">
+                        {{ post.title|raw }}
+                    </a>
+                </h3>
+                {% if post.author.name is defined%}
+                <div class="mt-2 text-xs">
+                    Published on <span>{{ post.published_at|date("M d, Y") }}</span>
+                    by by <a href="{{ post.author.url }}" target="_blank" rel="noopener noreferrer">{{ post.author.name }}</a>
+                </div>
+                {% elseif post.author is iterable%}
+                <div class="mt-2 text-xs">
+                    Published on <span>{{ post.published_at|date("M d, Y") }}</span>
+                    by
+                    {% for author in post.author %}
+                    <a href="{{ author.url }}" target="_blank" rel="noopener noreferrer">{{ author.name }}</a>{% if loop.last == false  %}, {% endif %}
+                    {% endfor %}
+                </div>
+                {% endif %}
+                <div class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
+                    {{ post.content|striptags|length > 100 ? (post.content|striptags|slice(0, 150) ~ '...')|raw :
+                    post.content|striptags|raw }}
+                </div>
+            </div>
+        </article>
         {% endfor %}
+    </div>
 
-        {% if page.pagination.previous_page or page.pagination.next_page %}
-        <nav class="flex flex-row justify-between article -mx-2 mb-5">
-            {% if page.pagination.next_page %}
-            <a href="{{ site.url }}{{ page.pagination.next_page.url }}" class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[rgba(127,82,255,.8)] transition-all no-underline">
-                <div class="mb-1 text-sm text-gray-600 font-medium">Previous</div>
-                <div class="font-bold text-blue-500">Older Posts</div>
-            </a>
-            {% endif %}
-            
-            {% if page.pagination.previous_page %}
-            <a href="{{ site.url }}{{ page.pagination.previous_page.url }}" class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[#7f52ff] transition-all no-underline">
-                <div class="mb-1 text-sm text-gray-600 font-medium">Next</div>
-                <div class="font-bold text-blue-500">Newer Posts</div>
-            </a>
-            {% endif %}
-        </nav>
+    {% if page.pagination.previous_page or page.pagination.next_page %}
+    <nav class="flex flex-row justify-between article -mx-2 mt-8">
+        {% if page.pagination.next_page %}
+        <a href="{{ site.url }}{{ page.pagination.next_page.url }}"
+           class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[rgba(127,82,255,.8)] transition-all no-underline">
+            <div class="mb-1 text-sm text-gray-600 font-medium">Previous</div>
+            <div class="font-bold text-blue-500">Older Posts</div>
+        </a>
         {% endif %}
-    </section>
-</main>
+
+        {% if page.pagination.previous_page %}
+        <a href="{{ site.url }}{{ page.pagination.previous_page.url }}"
+           class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[#7f52ff] transition-all no-underline">
+            <div class="mb-1 text-sm text-gray-600 font-medium">Next</div>
+            <div class="font-bold text-blue-500">Newer Posts</div>
+        </a>
+        {% endif %}
+    </nav>
+    {% endif %}
+</section>
