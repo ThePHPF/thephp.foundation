@@ -1,0 +1,33 @@
+name: PHP Core Roundup
+on:
+  schedule:
+    - cron: 0 10 25 * *
+      
+jobs:
+  create_issue:
+    name: Create an issue with roundup checklist
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Create issue
+        uses: imjohnbo/issue-bot@v3.4.3
+        with:
+          assignees: "Ayesh, saundefined, pronskiy"
+          labels: "roundup"
+          title: "Roundup next"
+          body: |
+            - [ ] Prepare draft PR
+            - [ ] Send to #general for review
+            - [ ] Prepare tweet text
+            - [ ] Publish blog post
+            - [ ] Post announcements
+              - [ ] Twitter
+              - [ ] LinkedIn
+              - [ ] Mastodon
+            - [ ] Send out email newsletter
+            
+          pinned: false
+          close-previous: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
