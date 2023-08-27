@@ -52,7 +52,7 @@ Hundreds of awesome PHP contributors put their efforts into improvements to the 
 
 ## RFC Updates
 
-### Under Discussion: [Support optional suffix parameter in tempnam](https://wiki.php.net/rfc/tempnam-suffix-v2) by Athos Ribeiro
+### In Voting: [Support optional suffix parameter in tempnam](https://wiki.php.net/rfc/tempnam-suffix-v2) by Athos Ribeiro
 
 RFC proposes to add a new optional suffix parameter to the `tempnam()` function.
 
