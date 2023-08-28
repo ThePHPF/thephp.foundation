@@ -24,11 +24,11 @@ Welcome back to [PHP Core Roundup](/blog/tag/roundup/) series! This is post #16,
 
 ## PHP 8.3 Branching Out
 
-PHP 8.3 reached its [feature-freeze](/blog/2023/08/01/php-core-roundup-15/#php-8.3-feature-freeze), and [release managers](/blog/2023/05/02/php-core-roundup-12/#php-8.3-release-managers-elected) have branched the PHP-8.3 branch on August 31.
+PHP 8.3 has reached its [feature-freeze](/blog/2023/08/01/php-core-roundup-15/#php-8.3-feature-freeze), and [release managers](/blog/2023/05/02/php-core-roundup-12/#php-8.3-release-managers-elected) branched out the PHP-8.3 branch on August 31.
 
-Now that PHP 8.3 is branched out, the `master` branch will be the development branch for PHP 8.4. Bug fixes and other improvements will be cherry-picked for PHP 8.3 (and older branches) as appropriate, but new features that are made to the master branch will not be merged to the PHP 8.3 branch.
+Now that PHP 8.3 is in a separate branch, the `master` branch will be the development source for PHP 8.4. Bug fixes and other improvements will be cherry-picked for PHP 8.3 (and older branches) as appropriate, but new features that are made to the master branch will not be merged to the PHP 8.3 branch.
 
-Tools that build PHP based on the Git branches will also see the new branch, and the builds from the `master` branch will be named “PHP 8.4” for the first time.
+Tools that build PHP based on the Git branches will also see a new branch, and the builds from the `master` branch will be named “PHP 8.4” for the first time.
 
 ## Releases
 
@@ -40,7 +40,7 @@ All three include security fixes: [GHSA-3qrf-m4j2-pcrr](https://github.com/php/p
 
 PHP 8.2.9 and PHP 8.1.22 additionally include several bug fixes and improvements, notably in areas such as Build, CLI, Core, Curl, Date, DOM, Fileinfo, FTP, GD, Intl, MBString, Opcache, PCNTL, PDO, PDO SQLite, Phar, PHPDBG, Session, Standard, Streams, SQLite3, and XMLReader.
 
-Please note, that Windows binaries for PHP 8.2.9 are not synchronized and don't contain a fix for [GH-11854](https://github.com/php/php-src/issues/11854). Windows binaries for PHP 8.0.30 are missing yet.
+Please note, that Windows binaries for PHP 8.2.9 are not synchronized and don't contain a fix for [GH-11854](https://github.com/php/php-src/issues/11854). Windows binaries for PHP 8.0.30 are missing so far.
 
 ## Recent RFCs and Mailing List Discussions
 
