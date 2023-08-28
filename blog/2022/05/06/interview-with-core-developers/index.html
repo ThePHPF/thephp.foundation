@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Interview with Core Developers &mdash; The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language</title>
+    <meta name="description" content="The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language">
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="index, follow">
+        <link rel="stylesheet" href="https://thephp.foundation/assets/css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/base16/darcula.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+
+    <meta property="og:url" content="https://thephp.foundation/blog/2022/05/06/interview-with-core-developers/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Interview with Core Developers">
+    <meta property="og:description" content="The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language">
+    <meta property="og:image" content="https://thephp.foundation/assets/share/2022-05-06-interview-with-core-developers.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="https://thephp.foundation">
+    <meta property="twitter:url" content="https://thephp.foundation/blog/2022/05/06/interview-with-core-developers/">
+    <meta name="twitter:title" content="Interview with Core Developers">
+    <meta name="twitter:description" content="The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language">
+    <meta name="twitter:image" content="https://thephp.foundation/assets/share/2022-05-06-interview-with-core-developers.png">
+
+    <link rel="apple-touch-startup-image" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" sizes="76x76" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="120x120" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="128x128" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="152x152" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="196x196" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="512x512" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="1024x1024" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="2048x2048" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="128x128" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="196x196" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="512x512" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="2048x2048" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+
+    <link rel="alternate" type="application/atom+xml" href="https://thephp.foundation/atom.xml"
+          title="The PHP Foundation activity feed"/>
+            <script src="//cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+</head>
+<body class="bg-white">
+
+<header x-data="{ isOpen: false }" @keydown.escape="isOpen = false" @click.away="isOpen = false">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between relative">
+        <div class="absolute inset-x-0 bottom-0 h-px bg-slate-900/5"></div>
+        <div class="flex lg:flex-1 items-center gap-4">
+            <a href="https://thephp.foundation/" class="-m-1.5 p-1.5">
+                <img class="h-16 w-auto" src="https://thephp.foundation/assets/icons/php_foundation.svg"
+                     alt="PHP Foundation">
+            </a>
+            <span class="text-[#27282c] font-semibold text-sm md:text-xl">The PHP Foundation</span>
+        </div>
+        <div class="flex lg:hidden">
+            <button type="button"
+                    @click="isOpen = true"
+                    class="m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                     aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                </svg>
+            </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+            <a href="https://thephp.foundation/structure" class="text-gray-700 hover:underline">Who we are</a>
+
+            <a href="https://thephp.foundation/foundation" class="text-gray-700 hover:underline">What we do</a>
+
+            <a href="https://thephp.foundation/blog" class="text-gray-700 hover:underline">News</a>
+
+            <a href="https://thephp.foundation/presentations" class="text-gray-700 hover:underline">Talks</a>
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-8">
+            <a href="https://php.net" target="_blank" rel="noopener noreferrer"
+               class="text-sm font-semibold leading-6 text-gray-700 nav-org hover:border-none hover:underline">
+                php.net</a>
+
+            <a href="mailto:contact@thephp.foundation"
+               class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">
+                Write Us</a>
+        </div>
+    </nav>
+    <div x-show="isOpen" x-cloak>
+        <div class="fixed inset-0 z-50"></div>
+        <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="mx-auto flex max-w-7xl items-center justify-between relative">
+                <div class="flex lg:flex-1 items-center gap-4">
+                    <a href="https://thephp.foundation/" class="-m-1.5 p-1.5">
+                        <img class="h-16 w-auto" src="https://thephp.foundation/assets/icons/php_foundation.svg"
+                             alt="PHP Foundation">
+                    </a>
+                    <span class="text-[#27282c] font-semibold text-sm md:text-xl">The PHP Foundation</span>
+                </div>
+                <div class="flex">
+                    <button type="button"
+                            @click="isOpen = false"
+                            class="m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                             aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <nav class="mt-6 flow-root px-6 py-6">
+                <div class="-my-6 divide-y divide-gray-500/10">
+                    <div class="space-y-2 py-6">
+                        <a href="https://thephp.foundation/structure"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Who we are</a>
+
+                        <a href="https://thephp.foundation/foundation"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">What we do</a>
+                        
+                        <a href="https://thephp.foundation/blog"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">News</a>
+
+                        <a href="https://thephp.foundation/presentations"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Talks</a>
+                    </div>
+                    <div class="py-6">
+                        <a href="mailto:contact@thephp.foundation"
+                           class="block py-2 text-center no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">
+                            Write Us</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div class="bg-white px-6 lg:px-8 my-16">
+    <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
+        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Interview with Core Developers</h1>
+
+        <div class="flex items-center gap-x-4 text-xs mt-2">
+                <div>
+            Published on <span>May 06, 2022</span>
+            by <a href="https://github.com/sebastianbergmann" target="_blank" rel="noopener noreferrer">Sebastian Bergmann</a>
+        </div>
+                    
+        
+                <div class="space-x-1">
+                        <a href="https://thephp.foundation/blog/tag/interview"
+               class="rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
+                Interview
+            </a>
+                    </div>
+                </div>
+
+        <div class="mt-6 text-xl leading-8">
+            <p>The initial group of sponsored developers has now been "at it" for a month, and we thought that you might be interested in who they are and what they work on. I got the opportunity to (virtually) sit down with Derick Rethans, George Peter Banyard, Ilija Tovilo, Jakub Zelenka, Máté Kocsis, and Arnaud Le Blanc for an interview.</p>
+
+<h4 id="%2A%2Asebastian%3A%2A%2A-let%27s-start-with-a-round-of-introductions.-who-are-you%3F"><strong>Sebastian:</strong> Let's start with a round of introductions. Who are you?</h4>
+
+<p><strong>George:</strong> Hello, my name is George Peter Banyard. I'm studying pure mathematics at Imperial College London and expected to graduate in October. I'm half German, half British, but grew up in the south of France. During my free time I mostly watch anime or play puzzle games and Richii mahjong.</p>
+
+<p><strong>Derick:</strong> I am originally from the Netherlands but currently living and enjoying London in the United Kingdom. When I am not behind my computer I will be likely be walking in the countryside or site, with my trusty camera to commit these views to screen.</p>
+
+<p><strong>Ilija:</strong>  I am from Bern, Switzerland. I grew up here, but also have roots and relatives in Croatia. When I am not working, I enjoy spending time with family and friends, being in the sun, and listening to music. I also enjoy solving puzzles and playing chess.</p>
+
+<p><strong>Jakub:</strong> I am originally from Prague. I moved to the UK over 10 years ago. I work as a contractor and spend most of my free time with my family. I have got 2 dogs that I often walk.</p>
+
+<p><strong>Máté:</strong> I am a 31-year-old software developer, based in Hungary. Currently, I work for LastPass, and I am responsible for keeping our PHP backend modern as well as bringing it into the cloud. In my free time, I love riding my bike, walking, travelling. But my greatest hobby is certainly programming.</p>
+
+<p><strong>Arnaud:</strong> I live in France and work at a SaaS company doing awesome things with PHP. When I'm not working there or on PHP, I tend to be in front of my computer or on a bicycle.</p>
+
+<h4 id="%2A%2Asebastian%3A%2A%2A-what-motivates-you-to-work-on-open-source%3F"><strong>Sebastian:</strong> What motivates you to work on Open Source?</h4>
+
+<p><strong>George:</strong> This might be a strange answer, but I would say laziness. In the sense that if I like something from another project or language, I prefer going through the effort of adding that as a feature to what I already know and use instead of learning a whole new tool and ecosystem.</p>
+
+<p><strong>Ilija:</strong> Almost all commercial software is built on Open Source. I think that without Open Source, most tech companies could not exist as they do today. Contributing to Open Source is a way for me to give back for the professional opportunities Open Source has given me.</p>
+
+<p><strong>Arnaud:</strong> To me, Open Source is synonymous with flexibility and freedom. My motivation started maybe 20 years ago, when computers were still very magical to me, and I installed a Linux distro. At some point I discovered that I could download all the magic, hack it, fix it, improve it. This was incredible. Now I'm using mostly Open Source software, so working on Open Source is simultaneously a way to give back and to improve the software I'm using.</p>
+
+<p><strong>Jakub:</strong> Working on Open Source gives me opportunities to learn new things in a useful way and allows me to give back something to the projects that I use.</p>
+
+<p><strong>Derick:</strong> Originally it was a great way to learn how to do new things. Most of my early contributions to PHP were things that I needed myself. I have since then continued to scratch my own itch(es), but that has also resulted in me having to maintain some of the more popular projects, such as Xdebug.</p>
+
+<p><strong>Máté:</strong> My first "major" open source contribution was a tiny little feature in Composer. Then I created a few libraries which also gained some traction. Even considering the limited scale my projects achieved, it was a fantastic experience for me that I did my share to improve the PHP ecosystem, and at least a few people found my work useful. In contrast, being able to improve PHP itself day by day may make the life of millions of developers better, which is a truly satisfying feeling.</p>
+
+<h4 id="%2A%2Asebastian%3A%2A%2A-what-was-your-first-contribution-to-php%3F"><strong>Sebastian:</strong> What was your first contribution to PHP?</h4>
+
+<p><strong>Máté:</strong> I have been using PHP since I was 15, and I'm a longtime PHP internals reader. Since finding the mailing list, I have always dreamed about being able to contribute to PHP, even if it is a tiny little change. Then fast-forward to 2019, when Nikita started the so-called "<a href="https://externals.io/message/106522">stubs initiative</a>". This was a perfect project to get started with my career. By submitting hundreds of PRs, I could learn a lot from Nikita and Christoph, among others, who tirelessly reviewed my code and helped when I was stuck.</p>
+
+<p><strong>Derick:</strong> Back in 2000, I first tried to add "sub query" support for MySQL. MySQL's query language did not support it, and I came up with a naive way of rewriting the query in C, by doing two queries. My first actual contribution was SWF support in the <code>getimagesize()</code> function, followed by adding libmcrypt 2.4 support to the mcrypt extension, which I also ended up mostly rewriting.</p>
+
+<p><strong>Arnaud:</strong> I first explored the PHP codebase because I needed to use the library of a 3rd party provider in a PHP project. I had to write a small extension. I remember that there was a blog post about <code>zval</code>s, it helped me a lot to get started. Later I uploaded another extension on PECL for inotify. After that, I don't remember the exact timeline. I think that I wanted to fix a bug, so I sent a patch on the bug tracker. I also found a TODO on the wiki and decided to go for it. This was in the PHP 5.x era.</p>
+
+<p><strong>George:</strong> I first started by contributing to the French translation of the PHP documentation before working on the English docs and making my way to php-src to change some very strange behaviour I discovered while maintaining the docs.</p>
+
+<p><strong>Ilija:</strong> I have been using PHP professionally for 6 years at that point and contributing has crossed my mind a few times. However, most features I could think of seemed daunting, especially since I did not have any experience with C. Then I saw this <a href="https://twitter.com/nikita_ppv/status/1240309838950866946">tweet</a> from Nikita about how <code>throw</code> could be changed to be allowed in expressions. Being bored in the early COVID-19 days, I was looking for a distraction. This seemed simple enough so I gave it a shot. The actual change was a one-liner but there were issues with OpCache which required help from Nikita and others to solve (recurring theme). Nonetheless, this was enough to pull me in and motivate me to keep making RFCs.</p>
+
+<p><strong>Jakub:</strong> I used to work as a PHP developer and came across an extension for PHP called fann. As it did not really work, I refactored the whole extension. That taught me a bit about PHP's internals. Some time later I wanted to properly learn tools such as bison and re2c. At that time, there was a need for a new JSON parser for PHP due to licensing issues. So I wrote a new JSON parser and became a PHP core contributor.</p>
+
+<h4 id="%2A%2Asebastian%3A%2A%2A-what-do-you-plan-to-work-on-in-your-time-that-is-sponsored-by-the-php-foundation%3F"><strong>Sebastian:</strong> What do you plan to work on in your time that is sponsored by The PHP Foundation?</h4>
+
+<p><strong>Máté:</strong> First, I would like to finish my projects which I have already started: readonly classes (needs a successful RFC vote), converting resources to objects, adding constants to the stubs, and doing other groundwork for making our documentation more complete and easier to maintain. Then my plan is to improve the developer experience of the built-in extensions as well as continuing our efforts to make PHP a more consistent and reasonable language.</p>
+
+<p><strong>George:</strong> I plan to mainly work on the type system as well as refactoring extension code for clarity. For example, I want to continue the effort of converting resources to opaque objects.</p>
+
+<p><strong>Ilija:</strong> I have a few things that I would like to try to tackle: abstract data types, property accessors, type aliases, to name a few. My biggest goal is gaining a deep understanding of the code base (<a href="https://blog.krakjoe.ninja/2021/05/avoiding-busses.html">increasing the bus factor</a>), helping with maintenance, and helping others to the same.</p>
+
+<p><strong>Jakub:</strong> I plan to primarily work on the maintenance and improvements in the areas that I have already been contributing to. Specifically, I would like to use roughly around 50% of my time on the FastCGI Process Manager (FPM), 20% on the OpenSSL extension, 10% on the JSON extension, 10% on the GnuPG extension, and the last 10% on streams as well as possibly other core parts.</p>
+
+<p><strong>Derick:</strong> To begin, I want to clean up all the date/time bugs and reports, dedicate time to fully understanding and assisting new RFCs, professionalising "security@", doing all the server admin tasks, and coming up with some new features such as perhaps a UString (Unicode String) class with all of its operations to have a much nicer interface compared to the clunky intl extension.</p>
+
+<p><strong>Arnaud:</strong> I want to help improve the language and its implementation. One feature that I would like to see in PHP is auto-capturing closures, so I'm working on the implementation for that right now. I also want to make some kinds of programming issues easier to debug. For example, some cases of uncontrolled recursion can lead to segmentation faults when the stack overflows, which is not helpful. Another is that memory exhaustion errors do not display a backtrace. I want to fix these kinds of issues, and bugs in general. I also have some interest in the optimizer and the JIT, so I've been fixing bugs in this area. Lastly, I hope to see generics in PHP, so I may want to work on this at some point.</p>
+
+<p><strong>Sebastian:</strong> Thank you for taking the time to answer my questions. I look forward to seeing your work make PHP better for everyone.</p>
+
+        </div>
+
+        <div class="border-t pt-5 my-5">
+                        <nav class="flex flex-row justify-between article -mx-2 mb-5">
+                                <a href="https://thephp.foundation/blog/2022/05/02/the-php-foundation-update-april-2022/"
+                   class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[#7f52ff] transition-all no-underline">
+                    <div class="mb-1 text-sm text-gray-600 font-medium">Previous</div>
+                    <div class="font-bold text-blue-500">PHP Foundation Update, April 2022</div>
+                </a>
+                
+                                <a href="https://thephp.foundation/blog/2022/05/30/php-core-roundup-2/"
+                   class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[rgba(127,82,255,.8)] transition-all no-underline">
+                    <div class="mb-1 text-sm text-gray-600 font-medium">Next</div>
+                    <div class="font-bold text-blue-500">PHP Core Roundup #2</div>
+                </a>
+                            </nav>
+            
+            <div>
+                <a href="https://github.com/ThePHPF/thephp.foundation/edit/main/source/_posts/2022-05-06-interview-with-core-developers.md"
+                   class="nav-org" rel="noopener noreferrer" target="_blank">Edit this page on GitHub</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-gray-900">
+    <div class="mx-auto max-w-7xl overflow-hidden px-6 py-12 lg:px-8">
+        <nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12">
+            <div class="pb-6">
+                <a href="https://thephp.foundation/blog" class="text-sm leading-6 text-gray-600 hover:text-gray-900 no-underline">News</a>
+            </div>
+
+            <div class="pb-6">
+                <a href="https://thephp.foundation/structure"
+                   class="text-sm leading-6 text-gray-600 hover:text-gray-900 no-underline">Structure</a>
+            </div>
+
+            <div class="pb-6">
+                <a href="https://thephp.foundation/branding"
+                   class="text-sm leading-6 text-gray-600 hover:text-gray-900 no-underline">Branding</a>
+            </div>
+
+            <div class="pb-6">
+                <a href="https://thephp.foundation/presentations"
+                   class="text-sm leading-6 text-gray-600 hover:text-gray-900 no-underline">Presentations</a>
+            </div>
+
+            <div class="pb-6">
+                <a href="https://thephp.foundation/code-of-conduct"
+                   class="text-sm leading-6 text-gray-600 hover:text-gray-900 no-underline">Code of Conduct</a>
+            </div>
+        </nav>
+
+        <div class="mt-10 flex justify-center space-x-10">
+            <a href="https://twitter.com/thephpf" target="_blank" rel="noopener noreferrer"
+               class="text-gray-400 hover:text-gray-500">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
+                </svg>
+            </a>
+
+            <a href="https://github.com/ThePHPF/thephp.foundation" class="text-gray-400 hover:text-gray-500"
+               target="_blank" rel="noopener noreferrer">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                          clip-rule="evenodd"/>
+                </svg>
+            </a>
+
+            <a href="https://phpc.social/@thephpf" class="text-gray-400 hover:text-gray-500" target="_blank"
+               rel="noopener noreferrer">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"/>
+                </svg>
+            </a>
+
+            <a href="https://www.linkedin.com/company/phpfoundation/" class="text-gray-400 hover:text-gray-500"
+               target="_blank" rel="noopener noreferrer">
+                <svg class="h-6 w-6"
+                     viewBox="0 0 56.693 56.693" fill="currentColor"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <path d="M30.071,27.101v-0.077c-0.016,0.026-0.033,0.052-0.05,0.077H30.071z"/>
+                        <path
+                                d="M49.265,4.667H7.145c-2.016,0-3.651,1.596-3.651,3.563v42.613c0,1.966,1.635,3.562,3.651,3.562h42.12   c2.019,0,3.654-1.597,3.654-3.562V8.23C52.919,6.262,51.283,4.667,49.265,4.667z M18.475,46.304h-7.465V23.845h7.465V46.304z    M14.743,20.777h-0.05c-2.504,0-4.124-1.725-4.124-3.88c0-2.203,1.67-3.88,4.223-3.88c2.554,0,4.125,1.677,4.175,3.88   C18.967,19.052,17.345,20.777,14.743,20.777z M45.394,46.304h-7.465V34.286c0-3.018-1.08-5.078-3.781-5.078   c-2.062,0-3.29,1.389-3.831,2.731c-0.197,0.479-0.245,1.149-0.245,1.821v12.543h-7.465c0,0,0.098-20.354,0-22.459h7.465v3.179   c0.992-1.53,2.766-3.709,6.729-3.709c4.911,0,8.594,3.211,8.594,10.11V46.304z"/>
+                    </g>
+                </svg>
+            </a>
+        </div>
+        <div class="mt-10 text-center text-xs leading-5 text-gray-500">&copy; The PHP Foundation</div>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const anchors = new AnchorJS()
+        anchors.add()
+
+        for (const element of document.getElementsByClassName('anchorjs-link')) {
+            element.addEventListener('click', function () {
+                navigator.clipboard.writeText(window.location.origin + window.location.pathname + element.getAttribute('href'))
+            })
+        }
+    })
+</script>
+
+
+<script>hljs.highlightAll();</script>
+
+<script src="https://cdn.usefathom.com/script.js" data-site="PJKRZUTE" defer></script>
+
+</body>
+</html>

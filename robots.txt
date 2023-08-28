@@ -1,0 +1,5 @@
+User-agent: *
+
+Disallow: /404.html
+
+Sitemap: https://thephp.foundation/sitemap.xml

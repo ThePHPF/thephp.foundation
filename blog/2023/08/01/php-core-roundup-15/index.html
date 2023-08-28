@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PHP Core Roundup #15 &mdash; The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language</title>
+    <meta name="description" content="The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language">
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="index, follow">
+        <link rel="stylesheet" href="https://thephp.foundation/assets/css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/base16/darcula.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+
+    <meta property="og:url" content="https://thephp.foundation/blog/2023/08/01/php-core-roundup-15/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="PHP Core Roundup #15">
+    <meta property="og:description" content="The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language">
+    <meta property="og:image" content="https://thephp.foundation/assets/share/2023-08-01-php-core-roundup-15.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="https://thephp.foundation">
+    <meta property="twitter:url" content="https://thephp.foundation/blog/2023/08/01/php-core-roundup-15/">
+    <meta name="twitter:title" content="PHP Core Roundup #15">
+    <meta name="twitter:description" content="The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language">
+    <meta name="twitter:image" content="https://thephp.foundation/assets/share/2023-08-01-php-core-roundup-15.png">
+
+    <link rel="apple-touch-startup-image" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" sizes="76x76" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="120x120" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="128x128" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="152x152" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="196x196" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="512x512" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="1024x1024" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="2048x2048" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="128x128" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="196x196" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="512x512" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="2048x2048" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+
+    <link rel="alternate" type="application/atom+xml" href="https://thephp.foundation/atom.xml"
+          title="The PHP Foundation activity feed"/>
+            <script src="//cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+</head>
+<body class="bg-white">
+
+<header x-data="{ isOpen: false }" @keydown.escape="isOpen = false" @click.away="isOpen = false">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between relative">
+        <div class="absolute inset-x-0 bottom-0 h-px bg-slate-900/5"></div>
+        <div class="flex lg:flex-1 items-center gap-4">
+            <a href="https://thephp.foundation/" class="-m-1.5 p-1.5">
+                <img class="h-16 w-auto" src="https://thephp.foundation/assets/icons/php_foundation.svg"
+                     alt="PHP Foundation">
+            </a>
+            <span class="text-[#27282c] font-semibold text-sm md:text-xl">The PHP Foundation</span>
+        </div>
+        <div class="flex lg:hidden">
+            <button type="button"
+                    @click="isOpen = true"
+                    class="m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                     aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                </svg>
+            </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+            <a href="https://thephp.foundation/structure" class="text-gray-700 hover:underline">Who we are</a>
+
+            <a href="https://thephp.foundation/foundation" class="text-gray-700 hover:underline">What we do</a>
+
+            <a href="https://thephp.foundation/blog" class="text-gray-700 hover:underline">News</a>
+
+            <a href="https://thephp.foundation/presentations" class="text-gray-700 hover:underline">Talks</a>
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-8">
+            <a href="https://php.net" target="_blank" rel="noopener noreferrer"
+               class="text-sm font-semibold leading-6 text-gray-700 nav-org hover:border-none hover:underline">
+                php.net</a>
+
+            <a href="mailto:contact@thephp.foundation"
+               class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">
+                Write Us</a>
+        </div>
+    </nav>
+    <div x-show="isOpen" x-cloak>
+        <div class="fixed inset-0 z-50"></div>
+        <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="mx-auto flex max-w-7xl items-center justify-between relative">
+                <div class="flex lg:flex-1 items-center gap-4">
+                    <a href="https://thephp.foundation/" class="-m-1.5 p-1.5">
+                        <img class="h-16 w-auto" src="https://thephp.foundation/assets/icons/php_foundation.svg"
+                             alt="PHP Foundation">
+                    </a>
+                    <span class="text-[#27282c] font-semibold text-sm md:text-xl">The PHP Foundation</span>
+                </div>
+                <div class="flex">
+                    <button type="button"
+                            @click="isOpen = false"
+                            class="m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                             aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <nav class="mt-6 flow-root px-6 py-6">
+                <div class="-my-6 divide-y divide-gray-500/10">
+                    <div class="space-y-2 py-6">
+                        <a href="https://thephp.foundation/structure"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Who we are</a>
+
+                        <a href="https://thephp.foundation/foundation"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">What we do</a>
+                        
+                        <a href="https://thephp.foundation/blog"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">News</a>
+
+                        <a href="https://thephp.foundation/presentations"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Talks</a>
+                    </div>
+                    <div class="py-6">
+                        <a href="mailto:contact@thephp.foundation"
+                           class="block py-2 text-center no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">
+                            Write Us</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div class="bg-white px-6 lg:px-8 my-16">
+    <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
+        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">PHP Core Roundup #15</h1>
+
+        <div class="flex items-center gap-x-4 text-xs mt-2">
+                <div>
+            Published on <span>Aug 01, 2023</span>
+            by
+                        <a href="https://aye.sh" target="_blank" rel="noopener noreferrer">Ayesh Karunaratne</a>,                         <a href="https://sergeypanteleev.com" target="_blank" rel="noopener noreferrer">Sergey Panteleev</a>                    </div>
+                    
+        
+                <div class="space-x-1">
+                        <a href="https://thephp.foundation/blog/tag/roundup"
+               class="rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
+                PHP Roundup
+            </a>
+                    </div>
+                </div>
+
+        <div class="mt-6 text-xl leading-8">
+            <p>Welcome back to <a href="/blog/tag/roundup/">PHP Core Roundup</a> series! This is post #15, where we highlight and celebrate the improvements made to PHP during the month past by the PHP development team, members of the PHP Foundation, and more.</p>
+
+<blockquote>
+  <p>The PHP Foundation is a collective of PHP contributors, veterans, and companies that collaborate to ensure the long-term sustainability of the PHP programming language. The foundation currently supports six contributors focused on PHP's maintenance, debt reduction, and feature development. These contributors work closely with others on coding, documentation, and discussions.</p>
+  
+  <p>Started over a year ago, the PHP Core Roundup series offers a summary of the latest developments, discussions, and news about PHP Core, contributed by both PHP Foundation members and other participants. This post is the thirteenth in the PHP Core Roundup series.</p>
+</blockquote>
+
+<p><div class="px-4 pt-3 border-b border-t -mx-4 border-gray-200">
+    <div class="bg-white py-8">
+        <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
+            <div class="max-w-xl text-4xl font-medium tracking-tight text-gray-900 lg:col-span-6">
+                Subscribe to PHP Core Roundup newsletter
+            </div>
+            <form method="POST"
+                  action="https://php-foundation.mailcoach.app/subscribe/9be4e2bd-f9d8-475c-b00e-2dcc4cf90056"
+                  class="w-full max-w-md lg:col-span-6">
+                <div class="flex gap-x-4">
+                    <label for="email-address" class="sr-only">Email address</label>
+                    <input id="email-address" name="email" type="email" autocomplete="email" required
+                           class="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                           placeholder="Enter your email">
+                    <button type="submit"
+                            class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">
+                        Subscribe
+                    </button>
+                </div>
+                <div class="mt-4 text-sm leading-6 text-gray-900">
+                    We care about your data.
+                    Read our <a href="https://thephp.foundation/privacy-policy"
+                                class="font-semibold text-indigo-600 hover:text-indigo-500 no-underline">privacy policy</a>.
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</p>
+
+<h2 id="php-8.3-feature-freeze">PHP 8.3 Feature-Freeze</h2>
+
+<p>On July 18, PHP 8.3 branch reached its feature-freeze. As the name suggests, the list of features we plan to ship with PHP 8.3 is now frozen. Contributors who wish to make substantial changes to PHP should now target the next PHP version, PHP 8.4.</p>
+
+<p>In the coming weeks, the PHP Foundation members, the PHP development team, and contributors will be making improvements to get PHP 8.3 ready for production release.</p>
+
+<p>Release managers elected for PHP 8.3, Pierrick Charron, Jakub Zelenka, and Eric Mann will have the final say in case a major change must be made to the PHP 8.3.</p>
+
+<h2 id="php-8.3-beta-release">PHP 8.3 Beta Release</h2>
+
+<p>The second beta release of PHP 8.3 was released this week. Now would be an ideal time to test your PHP applications on PHP 8.3.</p>
+
+<p>Compiled Windows binaries are available at <a href="https://windows.php.net/qa/">windows.php.net/qa</a>, <a href="https://hub.docker.com/_/php/tags?page=1&amp;name=8.3.0">Docker images</a> are available at Docker Hub, and source code at <a href="https://github.com/php/php-src">php/php-src repository on GitHub</a> to compile yourself. On Homebrew, <code>PHP 8.3.0-dev</code> packages are available from <code><a href="https://github.com/shivammathur/homebrew-php">shivammathur/php</a></code> tap.</p>
+
+<p>CI/CD platforms that use Docker images can use the PHP 8.2 docker images available with various base images. GitHub Actions can also make use of <code><a href="https://github.com/shivammathur/setup-php">shivammathur/setup-php</a></code> action, which supports PHP 8.3 builds.</p>
+
+<h2 id="php-bug-fix-releases">PHP Bug Fix Releases</h2>
+
+<p>The PHP development team released two new versions in July 2023:</p>
+
+<p><strong><a href="https://www.php.net/archive/2023.php#2023-07-06-2">PHP 8.2.8</a></strong> and <strong><a href="https://www.php.net/archive/2023.php#2023-07-06-3">PHP 8.1.21</a></strong></p>
+
+<p>These releases include bug fixes across various components such as CLI, Core, Curl, DOM, Opcache, OpenSSL, PGSQL, Phar, SPL, and Standard.</p>
+
+<h2 id="recent-rfcs-and-mailing-list-discussions">Recent RFCs and Mailing List Discussions</h2>
+
+<blockquote>
+  <p>Changes and improvements to PHP are discussed, reported, and voted on by the PHP Foundation Team, the PHP development team, and contributors. Bug reports are made to the PHP <a href="https://github.com/php/php-src/issues">issue tracker</a>, changes are discussed in <a href="https://www.php.net/mailing-lists.php">mailing lists</a>, minor code changes are proposed as <a href="https://github.com/php/php-src/issues">pull requests</a>, and major changes are discussed in detail and voted on as <a href="https://wiki.php.net/rfc">PHP RFCs</a>. <a href="https://github.com/php/doc-en/">Documentation</a> and the <a href="https://github.com/php/web-php">php.net website</a> changes are also discussed and improved at their relevant Git repositories on GitHub.</p>
+</blockquote>
+
+<p><br>
+Hundreds of awesome PHP contributors put their efforts into improvements to the PHP code base, documentation, and the php.net website. Here is a summary of some changes made by the people behind PHP. Things marked with 💜 are done by the PHP Foundation team.</p>
+
+<h2 id="rfc-updates">RFC Updates</h2>
+
+<h3 id="accepted%3A-pdo-driver-specific-sub-classes-by-danack">Accepted: <a href="https://wiki.php.net/rfc/pdo_driver_specific_subclasses">PDO driver specific sub-classes</a> by Danack</h3>
+
+<p>PHP's PDO extension supports connecting to multiple database software by using different database drivers available. Some of these drivers include MySQL, PostgreSQL, and SQLite. Although most of these database support a common set of features, all of these databases have evolved to provide additional features that PDO <em>sometimes</em> can support, but there is no easy way for a library to check for these capabilities without having to inspect the driver and their versions.</p>
+
+<p>This RFC proposes to create driver-specific sub classes of <code>\PDO</code>, so libraries and applications can easily indicate the database driver they expect, and make use of IDE autocompletion and proper error handling.</p>
+
+<p>The vote was unanimously accepted, and is pending implementation.</p>
+
+<h3 id="accepted%3A-deprecate-functions-with-overloaded-signatures-by-m%C3%A1t%C3%A9-kocsis-%F0%9F%92%9C">Accepted: <a href="https://wiki.php.net/rfc/deprecate_functions_with_overloaded_signatures">Deprecate Functions with Overloaded Signatures</a> by Máté Kocsis 💜</h3>
+
+<p>This RFC proposes to deprecate a number of functions that have overloaded signatures, meaning they behave differently based on the number or type of arguments passed to them. The goal is to make PHP's function signatures more consistent and predictable.</p>
+
+<h3 id="implemented%3A-deprecations-for-php-8.3-by-george-peter-banyard-%F0%9F%92%9C%2C-christoph-m.-becker%2C-m%C3%A1t%C3%A9-kocsis-%F0%9F%92%9C%2C-tim-d%C3%BCsterhus%2C-go-kudo%2C-andreas-heigl">Implemented: <a href="https://wiki.php.net/rfc/deprecations_php_8_3">Deprecations for PHP 8.3</a> by George Peter Banyard 💜, Christoph M. Becker, Máté Kocsis 💜, Tim Düsterhus, Go Kudo, Andreas Heigl</h3>
+
+<p>The aim is to clean up some of the older, less consistent parts of PHP to make the language more reliable and predictable. The following list provides a short overview of the functionality targeted for deprecation:</p>
+
+<ul>
+<li>Passing negative <code>$widths</code> to <code>mb_strimwidth()</code></li>
+<li>The <code>NumberFormatter::TYPE_CURRENCY</code> constant</li>
+<li><code>MT_RAND_PHP</code></li>
+<li>Calling <code>ldap_connect</code> with 2 parameters</li>
+</ul>
+
+<h3 id="implemented%3A-marking-overridden-methods-by-tim-d%C3%BCsterhus">Implemented: <a href="https://wiki.php.net/rfc/marking_overriden_methods">Marking Overridden Methods</a> by Tim Düsterhus</h3>
+
+<p>PHP 8.3 will have a new attribute <code>#[\Override]</code>. If this attribute is added to a method, the engine will validate that a method with the same name exists in a parent class or any of the implemented interfaces. If no such method exists, a compile time error will be emitted.</p>
+
+<p>The similar concepts exist in Java, TypeScript, C++, C#, Swift, Kotlin, and other languages.</p>
+
+<h3 id="implemented%3A-path-to-saner-increment%2Fdecrement-operators-by-george-peter-banyard--%F0%9F%92%9C">Implemented: <a href="https://wiki.php.net/rfc/saner-inc-dec-operators">Path to Saner Increment/Decrement operators</a> by George Peter Banyard  💜</h3>
+
+<p>This RFC proposed several improvements to normalize the behavior of <code>$v++</code> and <code>$v--</code> to be the same as <code>$v += 1</code> and <code>$v -= 1</code>, which PHP is currently inconsistent on.</p>
+
+<p>It deprecates certain patterns, and introduces two new functions named <code>str_increment</code> and <code>str_decrement</code> to provide the deprecated behavior in a conscious way.</p>
+
+<p><br></p>
+
+<h2 id="merged-prs-and-commits">Merged PRs and Commits</h2>
+
+<p>Following are some changes that did not go through an RFC process because they are either planned, bug fixes, or progressive enhancements.</p>
+
+<hr />
+
+<h3 id="full-list-of-commits--since-php-core-roundup-%2314">Full list of commits  since <a href="/blog/2023/07/01/php-core-roundup-14/">PHP Core Roundup #14</a></h3>
+
+<p>Commits are in the order they were added, grouped by author in alphabetical order.</p>
+
+<details>
+
+<summary>Click here to expand</summary>
+
+<h3 id="adam-saponara">Adam Saponara</h3>
+
+<ul>
+<li>Fix <a href="https://github.com/php/php-src/issues/9669">GH-9669</a>: phpdbg -h options doesn't list the -z option in <a href="https://github.com/php/php-src/pull/9713">GH-9713</a></li>
+</ul>
+
+<h3 id="anatol-belski">Anatol Belski</h3>
+
+<ul>
+<li>fileinfo: Backport xz detection fix in <a href="https://github.com/php/php-src/commit/86f79b299e">86f79b299e</a></li>
+<li>fileinfo: Backport xz detection patch in <a href="https://github.com/php/php-src/commit/97f0d97d2a">97f0d97d2a</a></li>
+<li>fileinfo: Add test for xz type in <a href="https://github.com/php/php-src/commit/292e10b14b">292e10b14b</a></li>
+<li>NEWS: Add note for #11298 in <a href="https://github.com/php/php-src/commit/928fc68c9e">928fc68c9e</a></li>
+<li>NEWS: Add note for #11298 in <a href="https://github.com/php/php-src/commit/4e8b1ddc53">4e8b1ddc53</a></li>
+</ul>
+
+<h3 id="andreas-heigl">Andreas Heigl</h3>
+
+<ul>
+<li>Deprecate <code>ldap_connect</code> with two parameters in <a href="https://github.com/php/php-src/pull/5177">GH-5177</a></li>
+</ul>
+
+<h3 id="arnaud-le-blanc-%F0%9F%92%9C">Arnaud Le Blanc 💜</h3>
+
+<ul>
+<li>Add stack limit check in <code>zend_eval_const_expr()</code> in <a href="https://github.com/php/php-src/pull/11424">GH-11424</a></li>
+<li>Expose time spent collecting cycles in <code>gc_status()</code> in <a href="https://github.com/php/php-src/pull/11523">GH-11523</a></li>
+<li>Remove WeakMap entries whose key is only reachable through the entry value in <a href="https://github.com/php/php-src/pull/10932">GH-10932</a></li>
+<li>Add AMPHP, ReactPHP, Revolt PHP to community job in <a href="https://github.com/php/php-src/pull/10933">GH-10933</a></li>
+</ul>
+
+<h3 id="athos-ribeiro">Athos Ribeiro</h3>
+
+<ul>
+<li>Fix <a href="https://bugs.php.net/bug.php?id=79026">#79026</a>: Allow <code>PHP_EXTRA_VERSION</code> overrides in <a href="https://github.com/php/php-src/pull/11706">GH-11706</a></li>
+</ul>
+
+<h3 id="bob-weinand">Bob Weinand</h3>
+
+<ul>
+<li>Fix <a href="https://github.com/php/php-src/issues/11548">GH-11548</a> (Argument corruption when calling <code>XMLReader::open</code> or <code>XMLReader::XML</code> non-statically with observer active) in <a href="https://github.com/php/php-src/commit/cad47be8b6">cad47be8b6</a></li>
+</ul>
+
+<h3 id="bohwaz">BohwaZ</h3>
+
+<ul>
+<li>[RFC] Transition SQLite3 to exceptions in <a href="https://github.com/php/php-src/pull/11058">GH-11058</a></li>
+</ul>
+
+<h3 id="cristian-rodr%C3%ADguez">Cristian Rodríguez</h3>
+
+<ul>
+<li>proc_open: Use posix_spawn(3) interface on systems where it is profitable in <a href="https://github.com/php/php-src/pull/7933">GH-7933</a></li>
+</ul>
+
+<h3 id="david-carlier">David CARLIER</h3>
+
+<ul>
+<li><code>ext/intl</code>: intl_CharFromString using <code>zend_string_truncate</code> to adjust th… in <a href="https://github.com/php/php-src/pull/11575">GH-11575</a></li>
+<li>zend stack: prepare <code>zend_call_stack_get</code> implementation for OpenBSD. in <a href="https://github.com/php/php-src/pull/11578">GH-11578</a></li>
+<li>zend call stack fix freebsd code path. in <a href="https://github.com/php/php-src/pull/11766">GH-11766</a></li>
+<li>zend vm savee registers support for riscv 64. in <a href="https://github.com/php/php-src/pull/11773">GH-11773</a></li>
+</ul>
+
+<h3 id="david-carlier">David Carlier</h3>
+
+<ul>
+<li>zend call stack, follow-up on 75e9980 in <a href="https://github.com/php/php-src/commit/343b599747">343b599747</a></li>
+<li><code>zend_gdb</code> disable gdb detection for FreeBSD &lt; 11 in <a href="https://github.com/php/php-src/commit/69b4360e88">69b4360e88</a></li>
+</ul>
+
+<h3 id="derick-rethans-%F0%9F%92%9C">Derick Rethans 💜</h3>
+
+<ul>
+<li>Import timelib 2022.08 in <a href="https://github.com/php/php-src/commit/c02ac26685">c02ac26685</a></li>
+<li>Fix bug <a href="https://github.com/php/php-src/issues/11600">GH-11600</a>: Can't parse time strings which include (narrow) non-breaking space characters in <a href="https://github.com/php/php-src/commit/a4bdaeabf6">a4bdaeabf6</a></li>
+<li>CS in <a href="https://github.com/php/php-src/commit/b669cb4c1b">b669cb4c1b</a></li>
+<li>Make the new <code>DatePeriod::createFromISO8601String</code> method emit DateTimeImmutable objects in <a href="https://github.com/php/php-src/commit/82ff4c5e84">82ff4c5e84</a></li>
+</ul>
+
+<h3 id="dmitry-stogov">Dmitry Stogov</h3>
+
+<ul>
+<li>Fixed incorrect QM_ASSIGN elimination in <a href="https://github.com/php/php-src/commit/9fc0eab4b4">9fc0eab4b4</a></li>
+<li>Fixed incorrect QM_ASSIGN elimination in <a href="https://github.com/php/php-src/commit/b5f8a7270a">b5f8a7270a</a></li>
+</ul>
+
+<h3 id="eno">Eno</h3>
+
+<ul>
+<li>Improve openssl ext to generate EC keys with custom EC parameters in <a href="https://github.com/php/php-src/pull/9991">GH-9991</a></li>
+</ul>
+
+<h3 id="filip-zr%C5%AFst">Filip Zrůst</h3>
+
+<ul>
+<li>Improve DTrace probe generation /w non-default compiler in <a href="https://github.com/php/php-src/pull/11643">GH-11643</a></li>
+</ul>
+
+<h3 id="gabriel-fontes">Gabriel Fontes</h3>
+
+<ul>
+<li>Add fallback value syntax for ini variables in <a href="https://github.com/php/php-src/commit/bc8b9aedf6">bc8b9aedf6</a></li>
+<li>small fixes in <a href="https://github.com/php/php-src/commit/cd9dba81c7">cd9dba81c7</a></li>
+</ul>
+
+<h3 id="george-peter-banyard-%F0%9F%92%9C">George Peter Banyard 💜</h3>
+
+<ul>
+<li>Use binary safe case compare in new <code>zend_string</code> API in <a href="https://github.com/php/php-src/commit/eb5cc1372c">eb5cc1372c</a></li>
+<li>Revert "Use binary safe case compare in new <code>zend_string</code> API" in <a href="https://github.com/php/php-src/commit/a342138e17">a342138e17</a></li>
+<li>Add tests for uncastable streams and dataloss streams in <a href="https://github.com/php/php-src/pull/10173">GH-10173</a></li>
+<li>Remove assert.bail INI setting usage in DOMDocument tests in <a href="https://github.com/php/php-src/commit/d510b5ae3e">d510b5ae3e</a></li>
+<li><code>ext/posix</code>: <code>posix_isatty()</code> fix use-of-uninitialized-value in <a href="https://github.com/php/php-src/pull/11676">GH-11676</a></li>
+<li><code>ext/intl</code>: Fix memory leak in <code>MessageFormatter::format()</code> in <a href="https://github.com/php/php-src/pull/11658">GH-11658</a></li>
+<li>RFC: Deprecate remains of string evaluated code assertions in <a href="https://github.com/php/php-src/pull/11671">GH-11671</a></li>
+<li>Deprecate passing a negative width to <code>mb_strimwidth()</code> in <a href="https://github.com/php/php-src/commit/af3c220abb">af3c220abb</a></li>
+<li>Add support for deprecating class constants in <a href="https://github.com/php/php-src/commit/3e2dbbf9c2">3e2dbbf9c2</a></li>
+<li>Deprecate <code>NumberFormater::TYPE_CURRENCY</code> constant in <a href="https://github.com/php/php-src/commit/d65251e6e8">d65251e6e8</a></li>
+<li>[RFC] Path to Saner Increment/Decrement operators in <a href="https://github.com/php/php-src/pull/10358">GH-10358</a></li>
+<li><code>libxml_get_external_entity_loader()</code>: test for incompatible resource being loaded in <a href="https://github.com/php/php-src/pull/11728">GH-11728</a></li>
+<li>Refactor BCMath bundledlib and extension in <a href="https://github.com/php/php-src/pull/10774">GH-10774</a></li>
+<li><code>ext/mysqli</code>: Remove custom <code>sys_get_temp_dir()</code> function in <a href="https://github.com/php/php-src/commit/17a80eb08b">17a80eb08b</a></li>
+<li><code>ext/mysqli</code>: Remove conditional function declaration in <a href="https://github.com/php/php-src/commit/0c21715935">0c21715935</a></li>
+<li><code>ext/mysqli</code>: Stop using global variable in connection test helper in <a href="https://github.com/php/php-src/commit/8582d97b8c">8582d97b8c</a></li>
+<li><code>ext/mysqli</code>: Remove catchable fatal error handler in <a href="https://github.com/php/php-src/commit/b389846d05">b389846d05</a></li>
+</ul>
+
+<h3 id="ilija-tovilo-%F0%9F%92%9C">Ilija Tovilo 💜</h3>
+
+<ul>
+<li>Fix <code>ext/zip</code> <code>arginfo.h</code> in <a href="https://github.com/php/php-src/commit/73cf12d6ac">73cf12d6ac</a></li>
+<li>Fix mis-compilation of by-reference nullsafe operator in <a href="https://github.com/php/php-src/pull/11540">GH-11540</a></li>
+<li>Fix missing "Optional parameter before required" deprecation on union null type in <a href="https://github.com/php/php-src/pull/11497">GH-11497</a></li>
+<li>Fix serialization of RC1 objects appearing in object graph twice in <a href="https://github.com/php/php-src/pull/11349">GH-11349</a></li>
+<li>xfail socket zerocopy test on Cirrus + arm in <a href="https://github.com/php/php-src/pull/11553">GH-11553</a></li>
+<li>Attempt to fix <code>gh11498.phpt</code> on MSAN in <a href="https://github.com/php/php-src/commit/07dd0c80a8">07dd0c80a8</a></li>
+<li>Revert "Fix <a href="https://github.com/php/php-src/issues/9967">GH-9967</a> Add support for generating custom function, class const, and property attributes in stubs" in <a href="https://github.com/php/php-src/commit/ef4f08832c">ef4f08832c</a></li>
+<li>Revert "Merge branch 'PHP-8.2'" in <a href="https://github.com/php/php-src/commit/7b355e8d34">7b355e8d34</a></li>
+<li>Use waitpid(-1) over WAIT_ANY in <a href="https://github.com/php/php-src/pull/11588">GH-11588</a></li>
+<li>Revert "Revert "Remove name field from the <code>zend_constant</code> struct (#10954)"" in <a href="https://github.com/php/php-src/commit/ad1b70d67e">ad1b70d67e</a></li>
+<li>Revert "Fix test after reverted commit" in <a href="https://github.com/php/php-src/commit/188072a58f">188072a58f</a></li>
+<li>Attempt to improve setup-slapd.sh stability in <a href="https://github.com/php/php-src/pull/11590">GH-11590</a></li>
+<li>Retire AppVeyor in <a href="https://github.com/php/php-src/pull/11566">GH-11566</a></li>
+<li>Fix trailing if element JMP lineno in <a href="https://github.com/php/php-src/pull/11598">GH-11598</a></li>
+<li>Fix use-of-uninitialized-value with ??= on assert in <a href="https://github.com/php/php-src/pull/11581">GH-11581</a></li>
+<li>Implement flaky test section in <a href="https://github.com/php/php-src/pull/11325">GH-11325</a></li>
+<li>Fix incorrect handling of unwind and graceful exit exceptions in <a href="https://github.com/php/php-src/pull/11608">GH-11608</a></li>
+<li>Skip <code>xleak</code> tests on asan in <a href="https://github.com/php/php-src/pull/11610">GH-11610</a></li>
+<li>Refine skipif for cirrus+arm in <a href="https://github.com/php/php-src/pull/11612">GH-11612</a></li>
+<li>Fix double-compilation of arrow-function in <a href="https://github.com/php/php-src/pull/11632">GH-11632</a></li>
+<li>Fix <code>bug-gh11600.phpt</code> in <a href="https://github.com/php/php-src/commit/57229836d4">57229836d4</a></li>
+<li>Always memoize assert in <a href="https://github.com/php/php-src/pull/11686">GH-11686</a></li>
+<li>Fix missing iface class const inheritance type check in <a href="https://github.com/php/php-src/commit/7343ae5d3c">7343ae5d3c</a></li>
+<li>Fix iface const visibility variance check in <a href="https://github.com/php/php-src/commit/d9db446065">d9db446065</a></li>
+<li>Fix use-of-uninitialized-value when calling <code>php_posix_stream_get_fd</code> in <a href="https://github.com/php/php-src/pull/11694">GH-11694</a></li>
+<li>Fix gc_status type info in <a href="https://github.com/php/php-src/pull/11722">GH-11722</a></li>
+<li>Revert "Remove name field from the <code>zend_constant</code> struct (#10954)" in <a href="https://github.com/php/php-src/pull/11604">GH-11604</a></li>
+<li>Fix clang warning in <a href="https://github.com/php/php-src/pull/11729">GH-11729</a></li>
+<li>Use :- as ini interpolation fallback separator in <a href="https://github.com/php/php-src/commit/a48b977d3f">a48b977d3f</a></li>
+<li>Always memoize calls in lhs of coalesce assignment in <a href="https://github.com/php/php-src/pull/11592">GH-11592</a></li>
+<li>Resolve <code>open_basedir</code> paths on ini update in <a href="https://github.com/php/php-src/pull/10987">GH-10987</a></li>
+<li>Fix <code>hash_pbkdf2</code> options parameter in <a href="https://github.com/php/php-src/pull/11731">GH-11731</a></li>
+<li>Fix use-after-free when unregistering user stream wrapper from itself in <a href="https://github.com/php/php-src/pull/11737">GH-11737</a></li>
+<li>Fix leaking definitions on <code>FFI::cdef()</code>->new() in <a href="https://github.com/php/php-src/pull/11751">GH-11751</a></li>
+<li>Fix merge conflict in <a href="https://github.com/php/php-src/commit/ac99f7306c">ac99f7306c</a></li>
+<li>Fix <code>open_basedir</code> leak in <a href="https://github.com/php/php-src/pull/11780">GH-11780</a></li>
+<li>Call cast_object handler from get_properties_for in <a href="https://github.com/php/php-src/pull/11583">GH-11583</a></li>
+<li>Replace xfail with skipif in <code>calendar_clear_variation1.phpt</code> in <a href="https://github.com/php/php-src/pull/11801">GH-11801</a></li>
+<li>Fix uaf of MBSTRG(all_encodings_list) in <a href="https://github.com/php/php-src/pull/11822">GH-11822</a></li>
+<li>Fix uouv in <code>array_column</code> in <a href="https://github.com/php/php-src/commit/2053af6628">2053af6628</a></li>
+<li>Fix uouv in <code>password_needs_rehash()</code> and <code>password_hash()</code> in <a href="https://github.com/php/php-src/commit/a145b40fa6">a145b40fa6</a></li>
+<li>Fix various uouv in intl in <a href="https://github.com/php/php-src/commit/322da7bcc3">322da7bcc3</a></li>
+<li>Fix some uouv in <code>ext/pgsql</code> in <a href="https://github.com/php/php-src/commit/82aa4253f1">82aa4253f1</a></li>
+</ul>
+
+<h3 id="jakub-zelenka-%F0%9F%92%9C">Jakub Zelenka 💜</h3>
+
+<ul>
+<li>Fix <a href="https://github.com/php/php-src/issues/11242">GH-11242</a>: Use dynamic buffer for large length in stream mem copy in <a href="https://github.com/php/php-src/commit/4a5d13e205">4a5d13e205</a></li>
+</ul>
+
+<h3 id="jorg-adam-sowa">Jorg Adam Sowa</h3>
+
+<ul>
+<li>Extend tests of bcmath extension in <a href="https://github.com/php/php-src/pull/11563">GH-11563</a></li>
+<li>Reorder list construction in the function php_intpow10 in <a href="https://github.com/php/php-src/pull/11683">GH-11683</a></li>
+<li>Fix <a href="https://github.com/php/php-src/issues/11761">GH-11761</a>: Bcmath numbers with trailing zeros  in <a href="https://github.com/php/php-src/pull/11798">GH-11798</a></li>
+</ul>
+
+<h3 id="joshua-behrens">Joshua Behrens</h3>
+
+<ul>
+<li>Warn when fpm socket was not registered on the expected path in <a href="https://github.com/php/php-src/pull/11066">GH-11066</a></li>
+</ul>
+
+<h3 id="juliette">Juliette</h3>
+
+<ul>
+<li>GH Actions: auto-skip CI on PRs containing only docs changes in <a href="https://github.com/php/php-src/pull/11839">GH-11839</a></li>
+</ul>
+
+<h3 id="k%C3%A9vin-dunglas">Kévin Dunglas</h3>
+
+<ul>
+<li>tests(ext-curl): fix HTTP/2 Server Push tests in <a href="https://github.com/php/php-src/pull/10669">GH-10669</a></li>
+</ul>
+
+<h3 id="marc-bennewitz">Marc Bennewitz</h3>
+
+<ul>
+<li><code>number_format()</code> Support rounding negative places in <a href="https://github.com/php/php-src/pull/11487">GH-11487</a></li>
+<li>Prevent decimal int precision loss in <code>number_format()</code> in <a href="https://github.com/php/php-src/pull/11584">GH-11584</a></li>
+<li>Prevent int overflow on $decimals in number_format in <a href="https://github.com/php/php-src/pull/11714">GH-11714</a></li>
+</ul>
+
+<h3 id="michael-orlitzky">Michael Orlitzky</h3>
+
+<ul>
+<li>Fix most external GD 2.3.3 compatibility in <a href="https://github.com/php/php-src/pull/11257">GH-11257</a></li>
+<li>ext/session/tests: more lenient expected output checks. in <a href="https://github.com/php/php-src/pull/11631">GH-11631</a></li>
+<li>ext/imap/tests/<em>mutf7</em>.phpt: update for missing utf8_to_mutf7() in <a href="https://github.com/php/php-src/pull/11654">GH-11654</a></li>
+<li>ext/sockets/tests/mcast_ipv6_*.phpt: suppress no-ipv6 warning in <a href="https://github.com/php/php-src/pull/11651">GH-11651</a></li>
+<li>Skip oci8 tests when no database is available in <a href="https://github.com/php/php-src/pull/11820">GH-11820</a></li>
+</ul>
+
+<h3 id="mikhail-galanin">Mikhail Galanin</h3>
+
+<ul>
+<li>Check if restart is pending before trying to lock SHM in <a href="https://github.com/php/php-src/pull/11805">GH-11805</a></li>
+</ul>
+
+<h3 id="m%C3%A1t%C3%A9-kocsis-%F0%9F%92%9C">Máté Kocsis 💜</h3>
+
+<ul>
+<li>Add support for typed class constants in stubs in <a href="https://github.com/php/php-src/commit/3906bccc00">3906bccc00</a></li>
+<li>Fix <a href="https://github.com/php/php-src/issues/9967">GH-9967</a> Add support for generating custom function, class const, and property attributes in stubs in <a href="https://github.com/php/php-src/commit/d7ab0ff0c8">d7ab0ff0c8</a></li>
+<li>Revert "Remove name field from the <code>zend_constant</code> struct (#10954)" in <a href="https://github.com/php/php-src/commit/9f4bd3040d">9f4bd3040d</a></li>
+<li>Add support for extending multiple interfaces in the manual in <a href="https://github.com/php/php-src/commit/3c6590a391">3c6590a391</a></li>
+<li>Display the readonly modifier for readonly classes in <a href="https://github.com/php/php-src/commit/4db4f0ba00">4db4f0ba00</a></li>
+<li>Fix test after reverted commit in <a href="https://github.com/php/php-src/commit/0ce4f91d73">0ce4f91d73</a></li>
+<li>Declare type for <code>ext/ffi</code> internal class constants in <a href="https://github.com/php/php-src/commit/6988973bc6">6988973bc6</a></li>
+<li>Implement <code>DatePeriod::createFromISO8601String</code>() in <a href="https://github.com/php/php-src/commit/9c7c0a0b93">9c7c0a0b93</a></li>
+<li>Deprecate calling <code>dba_fetch()</code> with $dba at the 3rd parameter in <a href="https://github.com/php/php-src/commit/134441efa9">134441efa9</a></li>
+<li>Deprecate calling <code>FFI::cast()</code>, <code>FFI::new()</code>, and <code>FFI::type()</code> statically in <a href="https://github.com/php/php-src/commit/4acf0084dc">4acf0084dc</a></li>
+<li>Deprecate calling <code>get_class()</code> and <code>get_parent_class()</code> without arguments in <a href="https://github.com/php/php-src/commit/1126232053">1126232053</a></li>
+<li>Add <code>IntlCalendar::setDate()</code> and <code>IntlCalendar::setDateTime()</code> in <a href="https://github.com/php/php-src/commit/f236eb83b4">f236eb83b4</a></li>
+<li>Implement <code>IntlGregorianCalendar::createFromDate()</code> and <code>IntlGregorianCalendar::createFromDateTime()</code> in <a href="https://github.com/php/php-src/commit/1486f52a12">1486f52a12</a></li>
+<li>Implement <code>ldap_connect_wallet()</code> in <a href="https://github.com/php/php-src/commit/72aada3c7c">72aada3c7c</a></li>
+<li>Implement <code>ldap_exop_sync</code> in <a href="https://github.com/php/php-src/commit/b3bd55f244">b3bd55f244</a></li>
+<li>Make the $row param of <code>pg_fetch_result()</code>, <code>pg_field_prtlen()</code> and <code>pg_field_is_null()</code> nullable in <a href="https://github.com/php/php-src/commit/7ae0273ba3">7ae0273ba3</a></li>
+<li>Deprecate <code>Phar::setStub</code>(resource $stub, int $length) in <a href="https://github.com/php/php-src/commit/840d665583">840d665583</a></li>
+<li>Implement <code>ReflectionMethod::createFromMethodName()</code> in <a href="https://github.com/php/php-src/commit/f41220fe5d">f41220fe5d</a></li>
+<li>Deprecate <code>ReflectionProperty::setValue()</code> with an incorrect 1st arg type in <a href="https://github.com/php/php-src/commit/d9a7f6741e">d9a7f6741e</a></li>
+<li>Implement <code>stream_context_set_options()</code> in <a href="https://github.com/php/php-src/commit/a5ad7e09d5">a5ad7e09d5</a></li>
+<li>Declare type for <code>ext/snmp</code> internal class constants in <a href="https://github.com/php/php-src/commit/1dcac9619c">1dcac9619c</a></li>
+<li>Add UPGRADING note about SNMP class constant type declarations in <a href="https://github.com/php/php-src/commit/0f64b01aee">0f64b01aee</a></li>
+<li>Fix misleading pass by reference error message in <a href="https://github.com/php/php-src/pull/10639">GH-10639</a></li>
+<li>Use new class synopsis generating markup in <a href="https://github.com/php/php-src/pull/11809">GH-11809</a></li>
+</ul>
+
+<h3 id="niels-dossche">Niels Dossche</h3>
+
+<ul>
+<li>Fix <a href="https://github.com/php/php-src/issues/11567">GH-11567</a>: <code>mb_str_pad</code> causes access violation in <a href="https://github.com/php/php-src/commit/78d98e50c4">78d98e50c4</a></li>
+<li>Fix <a href="https://github.com/php/php-src/issues/11300">GH-11300</a>: license issue: restricted unicode license headers in <a href="https://github.com/php/php-src/pull/11572">GH-11572</a></li>
+<li>Remove always-false check in <a href="https://github.com/php/php-src/commit/45c93c173c">45c93c173c</a></li>
+<li>Add negative test for isElementContentWhitespace() in <a href="https://github.com/php/php-src/commit/2aebca899c">2aebca899c</a></li>
+<li>Add edge-case testcase for offset in DOMNamedNodeMap in <a href="https://github.com/php/php-src/commit/bccd924e3f">bccd924e3f</a></li>
+<li>Add tests for DOMProcessingInstruction class in <a href="https://github.com/php/php-src/commit/f62757e74a">f62757e74a</a></li>
+<li>Fix <a href="https://github.com/php/php-src/issues/9628">GH-9628</a>: Implicitly removing nodes from \DOMDocument breaks existing references in <a href="https://github.com/php/php-src/pull/11576">GH-11576</a></li>
+<li>Cleanup macro usage in <code>ext/dom</code> and <code>ext/libxml</code> in <a href="https://github.com/php/php-src/commit/87e7b61d8f">87e7b61d8f</a></li>
+<li>Implement <a href="https://github.com/php/php-src/issues/10024">GH-10024</a>: support linting multiple files at once using php -l in <a href="https://github.com/php/php-src/pull/10024">GH-10024</a></li>
+<li>Fix replaced error handling in SQLite3Stmt::__construct in <a href="https://github.com/php/php-src/pull/11607">GH-11607</a></li>
+<li>Fix <a href="https://github.com/php/php-src/issues/10562">GH-10562</a>: Memory leak and invalid state with consecutive <code>ftp_nb_fget</code> in <a href="https://github.com/php/php-src/pull/11606">GH-11606</a></li>
+<li>Remove unused is_recursive entry in <a href="https://github.com/php/php-src/commit/1fbbd2b250">1fbbd2b250</a></li>
+<li>Reserve less file space if possible in a directory entry in <a href="https://github.com/php/php-src/commit/00c1e7bf0f">00c1e7bf0f</a></li>
+<li>Cache d_type in directory entry in <a href="https://github.com/php/php-src/commit/0b2e6bc2b0">0b2e6bc2b0</a></li>
+<li>Fix crash when an invalid callback function is passed to CURLMOPT_PUSHFUNCTION in <a href="https://github.com/php/php-src/pull/11639">GH-11639</a></li>
+<li>Fix return value of _php_server_push_callback in case of failure in <a href="https://github.com/php/php-src/commit/dc9adda653">dc9adda653</a></li>
+<li>Add missing check on EVP_VerifyUpdate() in phar util in <a href="https://github.com/php/php-src/pull/11640">GH-11640</a></li>
+<li>Avoid copying the stat buffer on a cache hit in <a href="https://github.com/php/php-src/pull/11628">GH-11628</a></li>
+<li>Update type inference for <code>ZEND_GET_CLASS</code> and <code>ZEND_GET_CALLED_CLASS</code> in <a href="https://github.com/php/php-src/commit/838d80e7ee">838d80e7ee</a></li>
+<li>Update type inference for <code>ZEND_STRLEN</code> in <a href="https://github.com/php/php-src/commit/3d944a367e">3d944a367e</a></li>
+<li>Fix <a href="https://github.com/php/php-src/issues/11625">GH-11625</a>: <code>DOMElement::replaceWith()</code> doesn't replace node with DOMDocumentFragment but just deletes node or causes wrapping &lt;>&lt;/> depending on libxml2 version in <a href="https://github.com/php/php-src/pull/11627">GH-11627</a></li>
+<li>Fix <a href="https://github.com/php/php-src/issues/11629">GH-11629</a>: <code>bug77020.phpt</code> tries to send mail in <a href="https://github.com/php/php-src/pull/11636">GH-11636</a></li>
+<li>Fix <a href="https://github.com/php/php-src/issues/11630">GH-11630</a>: <code>proc_nice_basic.phpt</code> only works at certain nice levels in <a href="https://github.com/php/php-src/pull/11635">GH-11635</a></li>
+<li>Remove always-true condition from <code>php_dom_iterator_move_forward()</code> in <a href="https://github.com/php/php-src/commit/a2fde39169">a2fde39169</a></li>
+<li>Remove always-true condition from xml_utf8_decode() in <a href="https://github.com/php/php-src/commit/6d3433e60f">6d3433e60f</a></li>
+<li>Cleanup <code>php_libxml_node_decrement_resource()</code> in <a href="https://github.com/php/php-src/commit/75229cb127">75229cb127</a></li>
+<li>Fix tests for stat rdev in <a href="https://github.com/php/php-src/commit/6b87e08b82">6b87e08b82</a></li>
+<li>Fix <a href="https://github.com/php/php-src/issues/10914">GH-10914</a>: OPCache with Enum and Callback functions results in segmentation fault in <a href="https://github.com/php/php-src/pull/11675">GH-11675</a></li>
+<li>Add regression test for <a href="https://github.com/php/php-src/issues/11682">GH-11682</a> in <a href="https://github.com/php/php-src/commit/48b246e038">48b246e038</a></li>
+<li>Fix <code>bug-gh11600.phpt</code> to work with different ICU versions in <a href="https://github.com/php/php-src/commit/9c47f33a5f">9c47f33a5f</a></li>
+<li>Implement <code>DOMNode::contains()</code> in <a href="https://github.com/php/php-src/commit/ea794e9cde">ea794e9cde</a></li>
+<li>Avoid string allocation in dom_get_dom1_attribute() for as long as possible in <a href="https://github.com/php/php-src/commit/9880c336be">9880c336be</a></li>
+<li>Avoid allocations in <code>DOMElement::getAttribute()</code> in <a href="https://github.com/php/php-src/commit/f04e5059bb">f04e5059bb</a></li>
+<li>Handle fragments consisting out of multiple children without a single root correctly in <a href="https://github.com/php/php-src/pull/11698">GH-11698</a></li>
+<li>Refactor <code>dom_node_node_name_read()</code> to avoid double allocation in <a href="https://github.com/php/php-src/commit/b3899eb569">b3899eb569</a></li>
+<li>Implement <code>DOMElement::getAttributeNames()</code> in <a href="https://github.com/php/php-src/commit/10d7e8dc3a">10d7e8dc3a</a></li>
+<li>Implement <code>DOMNode::getRootNode()</code> in <a href="https://github.com/php/php-src/pull/11693">GH-11693</a></li>
+<li>Implement <code>DOMElement::className</code> in <a href="https://github.com/php/php-src/pull/11691">GH-11691</a></li>
+<li>Implement <code>DOMParentNode::replaceChildren()</code> in <a href="https://github.com/php/php-src/commit/6560c9bf8e">6560c9bf8e</a></li>
+<li>Fix ? in <a href="https://github.com/php/php-src/commit/e8f0bdc7f1">e8f0bdc7f1</a></li>
+<li>Implement <code>DOMElement::id</code> in <a href="https://github.com/php/php-src/pull/11701">GH-11701</a></li>
+<li>Prevent potential deadlock if accelerated globals cannot be allocated in <a href="https://github.com/php/php-src/pull/11718">GH-11718</a></li>
+<li>Implement <code>DOMNode::isConnected</code> and <code>DOMNameSpaceNode::isConnected</code> in <a href="https://github.com/php/php-src/pull/11677">GH-11677</a></li>
+<li>Implement <code>DOMNode::parentElement</code> and <code>DOMNameSpaceNode::parentElement</code> in <a href="https://github.com/php/php-src/pull/11679">GH-11679</a></li>
+<li>Fix build on Windows in <a href="https://github.com/php/php-src/commit/c97507b5c1">c97507b5c1</a></li>
+<li>Implement <code>DOMNode::isEqualNode()</code> in <a href="https://github.com/php/php-src/pull/11690">GH-11690</a></li>
+<li>Implement <code>DOMElement::insertAdjacent</code>{Element,Text} in <a href="https://github.com/php/php-src/pull/11700">GH-11700</a></li>
+<li>Split off some methods so they can be reused in different places in <a href="https://github.com/php/php-src/commit/5b5a3d79da">5b5a3d79da</a></li>
+<li>Implement <code>DOMElement::toggleAttribute()</code> in <a href="https://github.com/php/php-src/pull/11696">GH-11696</a></li>
+<li>Add new curl constants from curl until (including) 7.87 in <a href="https://github.com/php/php-src/pull/10459">GH-10459</a></li>
+<li>Get rid of some unnecessary string conversion in <a href="https://github.com/php/php-src/pull/11733">GH-11733</a></li>
+<li>Fix <a href="https://github.com/php/php-src/issues/11715">GH-11715</a>: opcache.interned_strings_buffer either has no effect or <code>opcache_get_status()</code> / phpinfo() is wrong in <a href="https://github.com/php/php-src/pull/11717">GH-11717</a></li>
+<li>Fix <a href="https://github.com/php/php-src/issues/11716">GH-11716</a>: cli server crashes on SIGINT when compiled with <code>ZEND_RC_DEBUG</code>=1 in <a href="https://github.com/php/php-src/pull/11757">GH-11757</a></li>
+<li>Use xmlSetNsProp when possible to prevent parsing the name in <a href="https://github.com/php/php-src/commit/c8964b9a08">c8964b9a08</a></li>
+<li>Remove useless readonly checks in <a href="https://github.com/php/php-src/commit/dbe897b73e">dbe897b73e</a></li>
+<li>Simplify configuration getters in <a href="https://github.com/php/php-src/pull/11778">GH-11778</a></li>
+<li>Fix DOMEntity field getter bugs in <a href="https://github.com/php/php-src/pull/11779">GH-11779</a></li>
+<li>Fix incorrect attribute existence check in <code>DOMElement::setAttributeNodeNS()</code> in <a href="https://github.com/php/php-src/pull/11776">GH-11776</a></li>
+<li>Fix <code>DOMCharacterData::replaceWith()</code> with itself in <a href="https://github.com/php/php-src/pull/11770">GH-11770</a></li>
+<li>Fix empty argument cases for DOMParentNode methods in <a href="https://github.com/php/php-src/pull/11768">GH-11768</a></li>
+<li>Fix <a href="https://github.com/php/php-src/issues/11791">GH-11791</a>: Wrong default value of <code>DOMDocument::xmlStandalone</code> in <a href="https://github.com/php/php-src/pull/11793">GH-11793</a></li>
+<li>Fix <a href="https://github.com/php/php-src/issues/11792">GH-11792</a>: LIBXML_NOXMLDECL is not implemented or broken in <a href="https://github.com/php/php-src/pull/11794">GH-11794</a></li>
+<li>Fix DOM test in <a href="https://github.com/php/php-src/commit/bed0e54104">bed0e54104</a></li>
+<li>Corrections to return type of loading DOM documents in <a href="https://github.com/php/php-src/commit/ae66a0d142">ae66a0d142</a></li>
+<li><code>XLEAK</code> XML_SAVE_NO_DECL test for old libxml2 versions in <a href="https://github.com/php/php-src/commit/655f116be5">655f116be5</a></li>
+</ul>
+
+<h3 id="peter-kokot">Peter Kokot</h3>
+
+<ul>
+<li>Fix <a href="https://github.com/php/php-src/issues/11603">GH-11603</a>: Set LDFLAGS in <a href="https://github.com/php/php-src/pull/11605">GH-11605</a></li>
+<li>Fix <a href="https://github.com/php/php-src/issues/9483">GH-9483</a>: Autoconf warnings for newer Autoconf versions in <a href="https://github.com/php/php-src/commit/41a3573fcc">41a3573fcc</a></li>
+<li>Update config.guess to 2023-06-23 and config.sub to 2023-06-26 in <a href="https://github.com/php/php-src/pull/11711">GH-11711</a></li>
+<li>Fix Autoconf check for development versions in <a href="https://github.com/php/php-src/pull/11532">GH-11532</a></li>
+<li>Remove unused <code>PHP_HASH</code> variable in <a href="https://github.com/php/php-src/pull/11653">GH-11653</a></li>
+<li>Remove check for <code>time.h</code> and HAVE_TIME_H in <a href="https://github.com/php/php-src/pull/11726">GH-11726</a></li>
+<li>Remove unused <code>ZEND_STACK_GROWS_DOWNWARDS</code> constant in <a href="https://github.com/php/php-src/pull/11762">GH-11762</a></li>
+<li>Move --enable/--disable-fiber-asm help output in <a href="https://github.com/php/php-src/pull/11827">GH-11827</a></li>
+</ul>
+
+<h3 id="remi-collet">Remi Collet</h3>
+
+<ul>
+<li>The <code>ZipArchive::FL_RECOMPRESS</code> constant is deprecated in <a href="https://github.com/php/php-src/commit/d8dd72fc31">d8dd72fc31</a></li>
+<li>zip extension version 1.22.1 in <a href="https://github.com/php/php-src/commit/b406f7c67a">b406f7c67a</a></li>
+<li>cast _private to avoid [-fpermissive] error in <a href="https://github.com/php/php-src/commit/fde4386648">fde4386648</a></li>
+<li>add <code>ZipArchive::LENGTH_TO_END</code> and <code>ZipArchive::LENGTH_UNCHECKED</code> constants in <a href="https://github.com/php/php-src/commit/0893b4bed5">0893b4bed5</a></li>
+<li>use typed constants in 8.3 in <a href="https://github.com/php/php-src/commit/ae3646db48">ae3646db48</a></li>
+</ul>
+
+<h3 id="sakitakamachi">SakiTakamachi</h3>
+
+<ul>
+<li>Fix <a href="https://github.com/php/php-src/issues/11587">GH-11587</a> <code>PDO::ATTR_STRINGIFY_FETCHES</code> should return strings even in if <code>PDO::ATTR_EMULATE_PREPARES</code> is enabled in <a href="https://github.com/php/php-src/pull/11622">GH-11622</a></li>
+</ul>
+
+<h3 id="tim-d%C3%BCsterhus">Tim Düsterhus</h3>
+
+<ul>
+<li>RFC: Add #[Override] attribute in <a href="https://github.com/php/php-src/pull/9836">GH-9836</a></li>
+<li>Deprecate MT_RAND_PHP in <a href="https://github.com/php/php-src/pull/11560">GH-11560</a></li>
+</ul>
+
+<h3 id="yurun">Yurun</h3>
+
+<ul>
+<li>Fix incorrect function/method names in DBG_ENTER() in <a href="https://github.com/php/php-src/pull/11554">GH-11554</a></li>
+</ul>
+
+<h3 id="eater">eater</h3>
+
+<ul>
+<li><code>ext/gettext</code>: resolve underqouting that breaks with autoconf 2.72 in <a href="https://github.com/php/php-src/pull/11427">GH-11427</a></li>
+</ul>
+
+<h3 id="tekimen">tekimen</h3>
+
+<ul>
+<li>Fix warning <code>crc32.c</code> on function declaration without a prototype. in <a href="https://github.com/php/php-src/pull/11742">GH-11742</a></li>
+<li>Fix <a href="https://github.com/php/php-src/issues/11785">GH-11785</a>: '++nothing+crc' is not a recognized feature for M1 / M2 macOS compile target in <a href="https://github.com/php/php-src/pull/11796">GH-11796</a></li>
+</ul>
+
+</details>
+
+<p><br>
+We are incredibly grateful for the commitment and dedication of all contributors. Stay tuned for next month's roundup as we continue to make PHP better together.</p>
+
+<p><br></p>
+
+<hr />
+
+<h2 id="support-php-foundation">Support PHP Foundation</h2>
+
+<p>At PHP Foundation, we support, promote, and advance the PHP language. We financially support six part-time PHP core developers to contribute to the PHP project. You can help support PHP Foundation at <a href="https://opencollective.com/phpfoundation">OpenCollective</a> or via <a href="https://github.com/sponsors/ThePHPF">GitHub Sponsors</a>.</p>
+
+<p>A big thanks to all our sponsors — PHP Foundation is all of us!</p>
+
+<p>Follow us on Twitter <a href="https://twitter.com/thephpf">@ThePHPF</a> to get the latest updates from the Foundation.</p>
+
+<p>💜️ 🐘</p>
+
+<blockquote>
+  <p>PHP Roundup is prepared by Ayesh Karunaratne from <strong><a href="https://php.watch">PHP.Watch</a></strong>, a source for PHP News, Articles, Upcoming Changes, and more.</p>
+</blockquote>
+
+        </div>
+
+        <div class="border-t pt-5 my-5">
+                        <nav class="flex flex-row justify-between article -mx-2 mb-5">
+                                <a href="https://thephp.foundation/blog/2023/07/01/php-core-roundup-14/"
+                   class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[#7f52ff] transition-all no-underline">
+                    <div class="mb-1 text-sm text-gray-600 font-medium">Previous</div>
+                    <div class="font-bold text-blue-500">PHP Core Roundup #14</div>
+                </a>
+                
+                            </nav>
+            
+            <div>
+                <a href="https://github.com/ThePHPF/thephp.foundation/edit/main/source/_posts/2023-08-01-php-core-roundup-15.md"
+                   class="nav-org" rel="noopener noreferrer" target="_blank">Edit this page on GitHub</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-gray-900">
+    <div class="mx-auto max-w-7xl overflow-hidden px-6 py-12 lg:px-8">
+        <nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12">
+            <div class="pb-6">
+                <a href="https://thephp.foundation/blog" class="text-sm leading-6 text-gray-600 hover:text-gray-900 no-underline">News</a>
+            </div>
+
+            <div class="pb-6">
+                <a href="https://thephp.foundation/structure"
+                   class="text-sm leading-6 text-gray-600 hover:text-gray-900 no-underline">Structure</a>
+            </div>
+
+            <div class="pb-6">
+                <a href="https://thephp.foundation/branding"
+                   class="text-sm leading-6 text-gray-600 hover:text-gray-900 no-underline">Branding</a>
+            </div>
+
+            <div class="pb-6">
+                <a href="https://thephp.foundation/presentations"
+                   class="text-sm leading-6 text-gray-600 hover:text-gray-900 no-underline">Presentations</a>
+            </div>
+
+            <div class="pb-6">
+                <a href="https://thephp.foundation/code-of-conduct"
+                   class="text-sm leading-6 text-gray-600 hover:text-gray-900 no-underline">Code of Conduct</a>
+            </div>
+        </nav>
+
+        <div class="mt-10 flex justify-center space-x-10">
+            <a href="https://twitter.com/thephpf" target="_blank" rel="noopener noreferrer"
+               class="text-gray-400 hover:text-gray-500">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
+                </svg>
+            </a>
+
+            <a href="https://github.com/ThePHPF/thephp.foundation" class="text-gray-400 hover:text-gray-500"
+               target="_blank" rel="noopener noreferrer">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                          clip-rule="evenodd"/>
+                </svg>
+            </a>
+
+            <a href="https://phpc.social/@thephpf" class="text-gray-400 hover:text-gray-500" target="_blank"
+               rel="noopener noreferrer">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"/>
+                </svg>
+            </a>
+
+            <a href="https://www.linkedin.com/company/phpfoundation/" class="text-gray-400 hover:text-gray-500"
+               target="_blank" rel="noopener noreferrer">
+                <svg class="h-6 w-6"
+                     viewBox="0 0 56.693 56.693" fill="currentColor"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <path d="M30.071,27.101v-0.077c-0.016,0.026-0.033,0.052-0.05,0.077H30.071z"/>
+                        <path
+                                d="M49.265,4.667H7.145c-2.016,0-3.651,1.596-3.651,3.563v42.613c0,1.966,1.635,3.562,3.651,3.562h42.12   c2.019,0,3.654-1.597,3.654-3.562V8.23C52.919,6.262,51.283,4.667,49.265,4.667z M18.475,46.304h-7.465V23.845h7.465V46.304z    M14.743,20.777h-0.05c-2.504,0-4.124-1.725-4.124-3.88c0-2.203,1.67-3.88,4.223-3.88c2.554,0,4.125,1.677,4.175,3.88   C18.967,19.052,17.345,20.777,14.743,20.777z M45.394,46.304h-7.465V34.286c0-3.018-1.08-5.078-3.781-5.078   c-2.062,0-3.29,1.389-3.831,2.731c-0.197,0.479-0.245,1.149-0.245,1.821v12.543h-7.465c0,0,0.098-20.354,0-22.459h7.465v3.179   c0.992-1.53,2.766-3.709,6.729-3.709c4.911,0,8.594,3.211,8.594,10.11V46.304z"/>
+                    </g>
+                </svg>
+            </a>
+        </div>
+        <div class="mt-10 text-center text-xs leading-5 text-gray-500">&copy; The PHP Foundation</div>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const anchors = new AnchorJS()
+        anchors.add()
+
+        for (const element of document.getElementsByClassName('anchorjs-link')) {
+            element.addEventListener('click', function () {
+                navigator.clipboard.writeText(window.location.origin + window.location.pathname + element.getAttribute('href'))
+            })
+        }
+    })
+</script>
+
+
+<script>hljs.highlightAll();</script>
+
+<script src="https://cdn.usefathom.com/script.js" data-site="PJKRZUTE" defer></script>
+
+</body>
+</html>
