@@ -32,7 +32,11 @@ Tools that build PHP based on the Git branches will also see a new branch, and t
 
 ## Releases
 
-The PHP development team released three new versions in August 2023:
+The PHP development team released five new versions in August 2023:
+
+**[PHP 8.2.10](https://www.php.net/archive/2023.php#2023-08-31-2)** and **[PHP 8.1.23](https://www.php.net/archive/2023.php#2023-08-31-3)**
+
+These releases include several bug fixes and improvements, notably in areas such as CLI, Date, Core, DOM, FFI, Hash, MySQLnd, Opcache, PCNTL, SPL, and Standard.
 
 **[PHP 8.2.9](https://www.php.net/archive/2023.php#2023-08-16-1)**, **[PHP 8.1.22](https://www.php.net/archive/2023.php#2023-08-03-1)**, and **[PHP 8.0.30](https://www.php.net/archive/2023.php#2023-08-04-1)**
 
