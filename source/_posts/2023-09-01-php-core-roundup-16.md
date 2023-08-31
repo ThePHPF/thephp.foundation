@@ -95,11 +95,18 @@ Commits are in the order they were added, grouped by author in alphabetical orde
 
 ### Alexandre Daubois
 - Improve `ext/pdo_sqlite` tests cleanup in [GH-11900](https://github.com/php/php-src/pull/11900)
+- `ext/pdo_pgsql`: Improve tests cleanup in [GH-11855](https://github.com/php/php-src/pull/11855)
+- Improve database naming in `ext/pdo_pgsql` for better para-tests in [GH-11872](https://github.com/php/php-src/pull/11872)
+- Fix [GH-10964](https://github.com/php/php-src/issues/10964): Improve `man` page about the built-in server in [997a36750b](https://github.com/php/php-src/commit/997a36750b)
 
 
 ### Alex Dowad
 - Improve `mb_detect_encoding` accuracy for text containing vowels with macrons in [81faab9235](https://github.com/php/php-src/commit/81faab9235)
 - Print host CPU and installed package info in CI build log on Linux in [fd462b1e0f](https://github.com/php/php-src/commit/fd462b1e0f)
+
+
+### Arne_
+- Allow easter_date to process years after 2037 on 64bit systems in [GH-11862](https://github.com/php/php-src/pull/11862)
 
 
 ### Athos Ribeiro
@@ -134,6 +141,12 @@ Commits are in the order they were added, grouped by author in alphabetical orde
 - Update initialisation check for new PHP-8.3 API in [e157da11f3](https://github.com/php/php-src/commit/e157da11f3)
 - Fix [GH-11416](https://github.com/php/php-src/issues/11416): Crash with DatePeriod when uninitialised objects are passed in (PHP 8.2+) in [b71d2e16e6](https://github.com/php/php-src/commit/b71d2e16e6)
 - Fix [GH-11416](https://github.com/php/php-src/issues/11416): Crash with DatePeriod when uninitialised objects are passed in in [4833b84854](https://github.com/php/php-src/commit/4833b84854)
+- Fixed bug [GH-11854](https://github.com/php/php-src/issues/11854) (DateTime:createFromFormat stopped parsing datetime with extra space) in [a8f4171655](https://github.com/php/php-src/commit/a8f4171655)
+- Import timelib 2022.09 in [851890bd9c](https://github.com/php/php-src/commit/851890bd9c)
+
+
+### Dmitry Stogov
+- Fixed incorrect tracked malloc deallocation in [4553258df3](https://github.com/php/php-src/commit/4553258df3)
 
 
 ### Filip Zrůst
@@ -144,6 +157,10 @@ Commits are in the order they were added, grouped by author in alphabetical orde
 - Fix [GH-11876](https://github.com/php/php-src/issues/11876): `ini_parse_quantity()` accepts invalid quantities in [d229a480ad](https://github.com/php/php-src/commit/d229a480ad)
 - Fix various bugs related to DNF types in [02a80c5b82](https://github.com/php/php-src/commit/02a80c5b82)
 - Fix `skipif` condition on new test in [4cbc66d5e6](https://github.com/php/php-src/commit/4cbc66d5e6)
+- ext/`zend_test`: Move object handler test objects to their own file in [GH-11852](https://github.com/php/php-src/pull/11852)
+- Zend: Fix memory leak in ++/-- when overloading fetch access in [fc3df283fb](https://github.com/php/php-src/commit/fc3df283fb)
+- Fix OSS Fuzz [#60734](https://bugs.php.net/bug.php?id=60734): use-after-free visible in ASAN build in [2fbec0974f](https://github.com/php/php-src/commit/2fbec0974f)
+- Fix OSS-fuzz [#60709](https://bugs.php.net/bug.php?id=60709) unseting op via globals in [6ae9cf40d1](https://github.com/php/php-src/commit/6ae9cf40d1)
 
 
 ### HypeMC
@@ -172,9 +189,18 @@ Commits are in the order they were added, grouped by author in alphabetical orde
 - Move opnum_start for goto for clarification in [GH-11911](https://github.com/php/php-src/pull/11911)
 - Revert &quot;Call cast_object handler from get_properties_for&quot; in [efc73f24c3](https://github.com/php/php-src/commit/efc73f24c3)
 - Don&#039;t test macOS &amp; i386 without opcache on push in [5cd0208e9f](https://github.com/php/php-src/commit/5cd0208e9f)
+- Assert ptr_ptr value of TMP|CONST isn&#039;t used in [GH-11865](https://github.com/php/php-src/pull/11865)
+- Add typed specialization for `ZEND_COUNT` in [GH-11825](https://github.com/php/php-src/pull/11825)
+- Synchronize `zend_jit_stop_counter_handlers()` in [b80bebc278](https://github.com/php/php-src/commit/b80bebc278)
+- Add block size support for tracked_malloc in [GH-11856](https://github.com/php/php-src/pull/11856)
+- Fix use-of-uninitialized-value in start_fake_frame in [ed27d70d9a](https://github.com/php/php-src/commit/ed27d70d9a)
+- Unpoison opcache mem buf for file cache checksum calc in [35862641ba](https://github.com/php/php-src/commit/35862641ba)
+- Remove `opcache.c`onsistency_checks in [b2dbf0a2c6](https://github.com/php/php-src/commit/b2dbf0a2c6)
+- Fix zend/test arginfo stub hash in [e61dbe54e9](https://github.com/php/php-src/commit/e61dbe54e9)
 
 
 ### Jakub Zelenka
+- Use version of PHP SDK binary tools that uses PHP downloads in [GH-12085](https://github.com/php/php-src/pull/12085)
 - Remove incorrectly updated dtrace change from NEWS in [760367dd70](https://github.com/php/php-src/commit/760367dd70)
 - Fix [GH-12077](https://github.com/php/php-src/issues/12077): Check lsof functionality in socket on close test in [fe30c5098f](https://github.com/php/php-src/commit/fe30c5098f)
 - Fix FPM UDS test for very long name check by extending its length in [ea87501aee](https://github.com/php/php-src/commit/ea87501aee)
@@ -219,14 +245,34 @@ Commits are in the order they were added, grouped by author in alphabetical orde
 - Align highlight_string|file with HTML standard and modern browsers in [f907a009f9](https://github.com/php/php-src/commit/f907a009f9)
 - Fix error checking in mysqlnd in [0d922aa595](https://github.com/php/php-src/commit/0d922aa595)
 - Remove remnant of COM_FIELD_LIST in [788540ef2c](https://github.com/php/php-src/commit/788540ef2c)
+- Add DROP TABLE to clean up after the test in [66b359e4de](https://github.com/php/php-src/commit/66b359e4de)
+- Remove unused CLEAN section in [ab46d2012c](https://github.com/php/php-src/commit/ab46d2012c)
+- Revert changes to `mysqli_get_connection_stats.phpt` in [0c288c4098](https://github.com/php/php-src/commit/0c288c4098)
+- Tidy up new my_mysqli in tests in [aab36a774a](https://github.com/php/php-src/commit/aab36a774a)
+- Improve test for mysqli_result constructor in [1451b9e6f2](https://github.com/php/php-src/commit/1451b9e6f2)
+- Remove unnecessary requires in mysqli tests in [af4eabd8c9](https://github.com/php/php-src/commit/af4eabd8c9)
+- As of 8.2 this SKIP is no longer possible in [548fc6a818](https://github.com/php/php-src/commit/548fc6a818)
+- Remove unnecessary parentheses around language constructs in mysqli in [73d6869337](https://github.com/php/php-src/commit/73d6869337)
+- Remove unnecessary parentheses around language constructs in mysqli in [a21edc52aa](https://github.com/php/php-src/commit/a21edc52aa)
+- Convert CRLF to LF in [c1a085290a](https://github.com/php/php-src/commit/c1a085290a)
+- Remove unnecessary parentheses around language constructs in oci8 in [a53e56176c](https://github.com/php/php-src/commit/a53e56176c)
 
 
 ### Kévin Dunglas
 - fix: handle the GNU specific version of strerror_r in [96885bc04f](https://github.com/php/php-src/commit/96885bc04f)
 
 
+### Levi Morrison
+- Add `php_version` and `php_version_id` PHPAPI funcs in [GH-11875](https://github.com/php/php-src/pull/11875)
+
+
+### Michael Orlitzky
+- `ext/dba/tests/dba_tcadb.phpt`: support pthreadless tokyocabinet in [GH-11648](https://github.com/php/php-src/pull/11648)
+
+
 ### Mikhail Galanin
 - Set CLOEXEC on listened/accepted sockets in the FPM children in [418cdc0bea](https://github.com/php/php-src/commit/418cdc0bea)
+- Add &quot;revalidate&quot; time to opcache scripts list in [958a25e22e](https://github.com/php/php-src/commit/958a25e22e)
 
 
 ### Máté Kocsis
@@ -244,6 +290,7 @@ Commits are in the order they were added, grouped by author in alphabetical orde
 
 
 ### Niels Dossche
+- Fix [GH-11440](https://github.com/php/php-src/issues/11440): authentication to a sha256_password account fails over SSL in [94127c53aa](https://github.com/php/php-src/commit/94127c53aa)
 - Fix [GH-11972](https://github.com/php/php-src/issues/11972): RecursiveCallbackFilterIterator regression in 8.1.18 in [1cdcbc05b0](https://github.com/php/php-src/commit/1cdcbc05b0)
 - Fix [GH-11972](https://github.com/php/php-src/issues/11972): RecursiveCallbackFilterIterator regression in 8.1.18 in [ffd7018fcd](https://github.com/php/php-src/commit/ffd7018fcd)
 - Implement [GH-11934](https://github.com/php/php-src/issues/11934): Allow to pass CData into struct and/or union fields in [0b9702c9ed](https://github.com/php/php-src/commit/0b9702c9ed)
@@ -269,6 +316,17 @@ Commits are in the order they were added, grouped by author in alphabetical orde
 - Fix manually calling __construct() on DOM classes in [08c4db7f36](https://github.com/php/php-src/commit/08c4db7f36)
 - Make `DOMChildNode::remove()` run in O(1) performance in [e701b2fee7](https://github.com/php/php-src/commit/e701b2fee7)
 - Remove useless check in [872bf56fed](https://github.com/php/php-src/commit/872bf56fed)
+- Mark buildFromIterator test as conflicting in [dc586b121a](https://github.com/php/php-src/commit/dc586b121a)
+- Revert the fix for [GH-11498](https://github.com/php/php-src/issues/11498) in [f7be15dbad](https://github.com/php/php-src/commit/f7be15dbad)
+- Fix missing link variable in test in [162bd2a58a](https://github.com/php/php-src/commit/162bd2a58a)
+- Fix [GH-11438](https://github.com/php/php-src/issues/11438): mysqlnd fails to authenticate with sha256_password accounts using passwords longer than 19 characters in [509906b2a5](https://github.com/php/php-src/commit/509906b2a5)
+- Handle strict error properly in adoptNode failure, and add a test in [6f6fedcb46](https://github.com/php/php-src/commit/6f6fedcb46)
+- Deduplicate loading code in [04df77650d](https://github.com/php/php-src/commit/04df77650d)
+- Respect strict error setting for adoptNode in [fa397e0217](https://github.com/php/php-src/commit/fa397e0217)
+- Fix json_encode result on DOMDocument in [6e468bbd3b](https://github.com/php/php-src/commit/6e468bbd3b)
+- NEWS in [d8f2584ebb](https://github.com/php/php-src/commit/d8f2584ebb)
+- Disable global state test on Windows in [62228a2568](https://github.com/php/php-src/commit/62228a2568)
+- Fix buffer mismanagement in `phar_dir_read()` in [80316123f3](https://github.com/php/php-src/commit/80316123f3)
 
 
 ### Peter Kokot
@@ -286,7 +344,12 @@ Commits are in the order they were added, grouped by author in alphabetical orde
 
 
 ### Remi Collet
+- ensure displays_errors is off (default) in [1f2cfd8009](https://github.com/php/php-src/commit/1f2cfd8009)
 - Fix [GH-12063](https://github.com/php/php-src/issues/12063) convert PHP single-quote to C double-quote string in [13d3564a51](https://github.com/php/php-src/commit/13d3564a51)
+
+
+### Yurun
+- Fix MySQL Statement has a empty query result when the response field has changed, also Segmentation fault in [ca5d48213a](https://github.com/php/php-src/commit/ca5d48213a)
 
 </details>
 <br>
