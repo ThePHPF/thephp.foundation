@@ -137,7 +137,7 @@ Commits are in the order they were added, grouped by author in alphabetical orde
 - `ext/iconv`: fix build for netbsd in [fc8d5c72e5](https://github.com/php/php-src/commit/fc8d5c72e5)
 
 
-### Derick Rethans
+### Derick Rethans 💜
 - Update initialisation check for new PHP-8.3 API in [e157da11f3](https://github.com/php/php-src/commit/e157da11f3)
 - Fix [GH-11416](https://github.com/php/php-src/issues/11416): Crash with DatePeriod when uninitialised objects are passed in (PHP 8.2+) in [b71d2e16e6](https://github.com/php/php-src/commit/b71d2e16e6)
 - Fix [GH-11416](https://github.com/php/php-src/issues/11416): Crash with DatePeriod when uninitialised objects are passed in in [4833b84854](https://github.com/php/php-src/commit/4833b84854)
@@ -153,7 +153,7 @@ Commits are in the order they were added, grouped by author in alphabetical orde
 - Remove CPP when invoking dtrace utility in [02b3fb1f6b](https://github.com/php/php-src/commit/02b3fb1f6b)
 
 
-### George Peter Banyard
+### George Peter Banyard 💜
 - Fix [GH-11876](https://github.com/php/php-src/issues/11876): `ini_parse_quantity()` accepts invalid quantities in [d229a480ad](https://github.com/php/php-src/commit/d229a480ad)
 - Fix various bugs related to DNF types in [02a80c5b82](https://github.com/php/php-src/commit/02a80c5b82)
 - Fix `skipif` condition on new test in [4cbc66d5e6](https://github.com/php/php-src/commit/4cbc66d5e6)
@@ -167,7 +167,7 @@ Commits are in the order they were added, grouped by author in alphabetical orde
 - Add before_needle argument to `strrchr()` in [f25474f7f2](https://github.com/php/php-src/commit/f25474f7f2)
 
 
-### Ilija Tovilo
+### Ilija Tovilo 💜
 - Increase `run-tests.php` timeout for asan in [f4a6a6d096](https://github.com/php/php-src/commit/f4a6a6d096)
 - Skip dl() tests on ASAN in [fb0f4215de](https://github.com/php/php-src/commit/fb0f4215de)
 - Make unrepeatable tests retriable in [f2c16b7ba3](https://github.com/php/php-src/commit/f2c16b7ba3)
@@ -199,7 +199,7 @@ Commits are in the order they were added, grouped by author in alphabetical orde
 - Fix zend/test arginfo stub hash in [e61dbe54e9](https://github.com/php/php-src/commit/e61dbe54e9)
 
 
-### Jakub Zelenka
+### Jakub Zelenka 💜
 - Use version of PHP SDK binary tools that uses PHP downloads in [GH-12085](https://github.com/php/php-src/pull/12085)
 - Remove incorrectly updated dtrace change from NEWS in [760367dd70](https://github.com/php/php-src/commit/760367dd70)
 - Fix [GH-12077](https://github.com/php/php-src/issues/12077): Check lsof functionality in socket on close test in [fe30c5098f](https://github.com/php/php-src/commit/fe30c5098f)
@@ -275,7 +275,7 @@ Commits are in the order they were added, grouped by author in alphabetical orde
 - Add &quot;revalidate&quot; time to opcache scripts list in [958a25e22e](https://github.com/php/php-src/commit/958a25e22e)
 
 
-### Máté Kocsis
+### Máté Kocsis 💜
 - Fix the class synopsis of Throwable in [597aeb1246](https://github.com/php/php-src/commit/597aeb1246)
 - Improve test for `odbc_columns()` in [2f9f2928ce](https://github.com/php/php-src/commit/2f9f2928ce)
 - Use correct format specifier in [9dcdfa5e3f](https://github.com/php/php-src/commit/9dcdfa5e3f)
