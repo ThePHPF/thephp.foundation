@@ -60,7 +60,7 @@ RFC proposes to add a new optional suffix parameter to the `tempnam()` function.
 
 A suffix could provide even more semantic value or context for a user inspecting the generated files, and, in specific situations, could even provide more context for software processing such files. Right now, users can only add a prefix.
 
-### Merging postponed: [PDO driver specific sub-classes](https://wiki.php.net/rfc/tempnam-suffix-v2) by Danack
+### Merging postponed: [PDO driver specific sub-classes](https://wiki.php.net/rfc/pdo_driver_specific_subclasses) by Danack
 
 This RFC proposed to introduce driver-specific `\PDO` sub-classes so applications can granular declare the specific PDO drivers they support.
 
