@@ -44,8 +44,6 @@ All three include security fixes: [GHSA-3qrf-m4j2-pcrr](https://github.com/php/p
 
 PHP 8.2.9 and PHP 8.1.22 additionally include several bug fixes and improvements, notably in areas such as Build, CLI, Core, Curl, Date, DOM, Fileinfo, FTP, GD, Intl, MBString, Opcache, PCNTL, PDO, PDO SQLite, Phar, PHPDBG, Session, Standard, Streams, SQLite3, and XMLReader.
 
-Please note, that Windows binaries for PHP 8.2.9 are not synchronized and don't contain a fix for [GH-11854](https://github.com/php/php-src/issues/11854). Windows binaries for PHP 8.0.30 are missing so far.
-
 ## Recent RFCs and Mailing List Discussions
 
 
