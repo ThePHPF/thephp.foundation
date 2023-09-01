@@ -2,9 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://thephp.foundation</loc>
-    <lastmod>2023-08-28</lastmod>
+    <lastmod>2023-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+  </url>
+    <url>
+    <loc>https://thephp.foundation/blog/2023/09/01/php-core-roundup-16/</loc>
+    <lastmod>2023-09-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/blog/2023/08/01/php-core-roundup-15/</loc>
@@ -152,25 +158,25 @@
   </url>
       <url>
     <loc>https://thephp.foundation/branding</loc>
-    <lastmod>2023-08-28T11:54:04+00:00</lastmod>
+    <lastmod>2023-09-01T13:55:49+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/code-of-conduct</loc>
-    <lastmod>2023-08-28T11:54:04+00:00</lastmod>
+    <lastmod>2023-09-01T13:55:49+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/get-involved</loc>
-    <lastmod>2023-08-28T11:54:04+00:00</lastmod>
+    <lastmod>2023-09-01T13:55:49+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/privacy-policy</loc>
-    <lastmod>2023-08-28T11:54:04+00:00</lastmod>
+    <lastmod>2023-09-01T13:55:49+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
