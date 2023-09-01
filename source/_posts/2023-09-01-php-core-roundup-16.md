@@ -74,9 +74,9 @@ This RFC vote was completed and accepted unanimously, but due to the implementat
 
 While PHP 8.3 has moved to the RC cycle, the documentation available on [php.net](https://php.net), requires updating.
 
-George P. Banyard 💜 marked easy pickings issues, which you can find at [GitHub](https://github.com/php/doc-en/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
+George P. Banyard 💜 has triaged issues in the docs and marked several of them as "good first time", which are ideal easy picks if you would like to start contributing to PHP docs. You can find the full list on [GitHub](https://github.com/php/doc-en/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
 
-To make it easier to see the result of changes locally, Anna Filina prepared a Docker Compose. [Check it out](https://github.com/php/doc-en/pull/2638).
+To make it easier to view the results of changes locally, Anna Filina has prepared a Docker Compose set-up. [Check it out](https://github.com/php/doc-en/pull/2638).
 
 <br>
 
