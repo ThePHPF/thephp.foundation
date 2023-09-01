@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2023-09-01T13:58:05+00:00</updated><entry><author><name>Ayesh Karunaratne</name><uri>https://aye.sh</uri></author><author><name>Sergey Panteleev</name><uri>https://sergeypanteleev.com</uri></author><title type="html"><![CDATA[PHP Core Roundup #15]]></title><content type="html"><![CDATA[<p>Welcome back to <a href="/blog/tag/roundup/">PHP Core Roundup</a> series! This is post #15, where we highlight and celebrate the improvements made to PHP during the month past by the PHP development team, members of the PHP Foundation, and more.</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2023-09-01T14:12:01+00:00</updated><entry><author><name>Ayesh Karunaratne</name><uri>https://aye.sh</uri></author><author><name>Sergey Panteleev</name><uri>https://sergeypanteleev.com</uri></author><title type="html"><![CDATA[PHP Core Roundup #15]]></title><content type="html"><![CDATA[<p>Welcome back to <a href="/blog/tag/roundup/">PHP Core Roundup</a> series! This is post #15, where we highlight and celebrate the improvements made to PHP during the month past by the PHP development team, members of the PHP Foundation, and more.</p>
 
 <blockquote>
   <p>The PHP Foundation is a collective of PHP contributors, veterans, and companies that collaborate to ensure the long-term sustainability of the PHP programming language. The foundation currently supports six contributors focused on PHP's maintenance, debt reduction, and feature development. These contributors work closely with others on coding, documentation, and discussions.</p>
@@ -608,7 +608,7 @@ Hundreds of awesome PHP contributors put their efforts into improvements to the 
 
 <p>A suffix could provide even more semantic value or context for a user inspecting the generated files, and, in specific situations, could even provide more context for software processing such files. Right now, users can only add a prefix.</p>
 
-<h3 id="merging-postponed%3A-pdo-driver-specific-sub-classes-by-danack">Merging postponed: <a href="https://wiki.php.net/rfc/tempnam-suffix-v2">PDO driver specific sub-classes</a> by Danack</h3>
+<h3 id="merging-postponed%3A-pdo-driver-specific-sub-classes-by-danack">Merging postponed: <a href="https://wiki.php.net/rfc/pdo_driver_specific_subclasses">PDO driver specific sub-classes</a> by Danack</h3>
 
 <p>This RFC proposed to introduce driver-specific <code>\PDO</code> sub-classes so applications can granular declare the specific PDO drivers they support.</p>
 
