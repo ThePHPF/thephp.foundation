@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2023-09-01T13:55:49+00:00</updated><entry><author><name>Ayesh Karunaratne</name><uri>https://aye.sh</uri></author><author><name>Sergey Panteleev</name><uri>https://sergeypanteleev.com</uri></author><title type="html"><![CDATA[PHP Core Roundup #15]]></title><content type="html"><![CDATA[<p>Welcome back to <a href="/blog/tag/roundup/">PHP Core Roundup</a> series! This is post #15, where we highlight and celebrate the improvements made to PHP during the month past by the PHP development team, members of the PHP Foundation, and more.</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2023-09-01T13:58:05+00:00</updated><entry><author><name>Ayesh Karunaratne</name><uri>https://aye.sh</uri></author><author><name>Sergey Panteleev</name><uri>https://sergeypanteleev.com</uri></author><title type="html"><![CDATA[PHP Core Roundup #15]]></title><content type="html"><![CDATA[<p>Welcome back to <a href="/blog/tag/roundup/">PHP Core Roundup</a> series! This is post #15, where we highlight and celebrate the improvements made to PHP during the month past by the PHP development team, members of the PHP Foundation, and more.</p>
 
 <blockquote>
   <p>The PHP Foundation is a collective of PHP contributors, veterans, and companies that collaborate to ensure the long-term sustainability of the PHP programming language. The foundation currently supports six contributors focused on PHP's maintenance, debt reduction, and feature development. These contributors work closely with others on coding, documentation, and discussions.</p>
@@ -590,8 +590,6 @@ We are incredibly grateful for the commitment and dedication of all contributors
 <p>All three include security fixes: <a href="https://github.com/php/php-src/security/advisories/GHSA-3qrf-m4j2-pcrr">GHSA-3qrf-m4j2-pcrr</a> and <a href="https://github.com/php/php-src/security/advisories/GHSA-jqcx-ccgc-xwhv">GHSA-jqcx-ccgc-xwhv</a>.</p>
 
 <p>PHP 8.2.9 and PHP 8.1.22 additionally include several bug fixes and improvements, notably in areas such as Build, CLI, Core, Curl, Date, DOM, Fileinfo, FTP, GD, Intl, MBString, Opcache, PCNTL, PDO, PDO SQLite, Phar, PHPDBG, Session, Standard, Streams, SQLite3, and XMLReader.</p>
-
-<p>Please note, that Windows binaries for PHP 8.2.9 are not synchronized and don't contain a fix for <a href="https://github.com/php/php-src/issues/11854">GH-11854</a>. Windows binaries for PHP 8.0.30 are missing so far.</p>
 
 <h2 id="recent-rfcs-and-mailing-list-discussions">Recent RFCs and Mailing List Discussions</h2>
 

@@ -3,7 +3,7 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2023-09-01T13:55:49+00:00</updated>
+    <updated>2023-09-01T13:58:05+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
@@ -70,8 +70,6 @@
 <p>All three include security fixes: <a href="https://github.com/php/php-src/security/advisories/GHSA-3qrf-m4j2-pcrr">GHSA-3qrf-m4j2-pcrr</a> and <a href="https://github.com/php/php-src/security/advisories/GHSA-jqcx-ccgc-xwhv">GHSA-jqcx-ccgc-xwhv</a>.</p>
 
 <p>PHP 8.2.9 and PHP 8.1.22 additionally include several bug fixes and improvements, notably in areas such as Build, CLI, Core, Curl, Date, DOM, Fileinfo, FTP, GD, Intl, MBString, Opcache, PCNTL, PDO, PDO SQLite, Phar, PHPDBG, Session, Standard, Streams, SQLite3, and XMLReader.</p>
-
-<p>Please note, that Windows binaries for PHP 8.2.9 are not synchronized and don't contain a fix for <a href="https://github.com/php/php-src/issues/11854">GH-11854</a>. Windows binaries for PHP 8.0.30 are missing so far.</p>
 
 <h2 id="recent-rfcs-and-mailing-list-discussions">Recent RFCs and Mailing List Discussions</h2>
 
