@@ -3,7 +3,7 @@
 title: 'We Are Looking for Developers to Join the PHP Foundation'
 layout: post
 tags:
-  - Team
+  - team
 author:
   - name: Roman Pronskiy
     url: https://twitter.com/pronskiy
