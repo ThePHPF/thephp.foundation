@@ -8,5 +8,6 @@ class Tag
         'interview' => 'Interview',
         'roundup' => 'PHP Roundup',
         'update' => 'The PHP Foundation Update',
+        'team' => 'Team',
     ];
 }
