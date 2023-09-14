@@ -31,8 +31,10 @@ The application form will be **open until September 30, 2023**.
 <a href="https://forms.gle/Ji7Vvj1y2bMf9pUz7" class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">Apply</a>
 </p>
 
-Note: This is not a job for PHP developers or those who want to become one. The development of PHP is done in the С programming language, and requires proficiency in system programming.
-
+<div class="alert">
+    <span class="inline-block font-bold">Note: This is not a job for PHP developers or aspiring PHP developers.</span><br> 
+The development of PHP is done in the С programming language, and requires proficiency in system programming.
+</div>
 
 ## What are the requirements?
 
