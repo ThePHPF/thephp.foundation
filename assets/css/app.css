@@ -163,3 +163,7 @@ code {
     font-size: 85%;
     padding: 0.2em 0.4em;
 }
+
+.alert {
+    @apply bg-red-100 border border-red-400  px-4 py-3 pt-4 pb-4 mb-8 text-xl;
+}
