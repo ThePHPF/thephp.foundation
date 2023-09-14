@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "68af06c55f59dd0dd637e303038046e3",
+    "content-hash": "946a72b1e247d67b19f5dc096bfef5c1",
     "packages": [
         {
             "name": "dflydev/ant-path-matcher",
@@ -1433,16 +1433,16 @@
         },
         {
             "name": "sculpin/sculpin",
-            "version": "dev-PHP82_compat",
+            "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/pronskiy/sculpin.git",
-                "reference": "c0393ffebaf6bc7d39e54805199f6d335c41ce50"
+                "url": "https://github.com/sculpin/sculpin.git",
+                "reference": "467ffd4d7d0e3b28c8b8234d7f29bb3c8caf6c44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pronskiy/sculpin/zipball/c0393ffebaf6bc7d39e54805199f6d335c41ce50",
-                "reference": "c0393ffebaf6bc7d39e54805199f6d335c41ce50",
+                "url": "https://api.github.com/repos/sculpin/sculpin/zipball/467ffd4d7d0e3b28c8b8234d7f29bb3c8caf6c44",
+                "reference": "467ffd4d7d0e3b28c8b8234d7f29bb3c8caf6c44",
                 "shasum": ""
             },
             "require": {
@@ -1493,6 +1493,7 @@
                 "ext-iconv": "To convert non-UTF-8 strings to UTF-8.",
                 "ext-posix": "If you have PCNTL, you'll want the POSIX extension as well."
             },
+            "default-branch": true,
             "bin": [
                 "bin/sculpin",
                 "bin/sculpin.php"
@@ -1553,9 +1554,10 @@
                 "static"
             ],
             "support": {
-                "source": "https://github.com/pronskiy/sculpin/tree/PHP82_compat"
+                "source": "https://github.com/sculpin/sculpin/tree/main",
+                "issues": "https://github.com/sculpin/sculpin/issues"
             },
-            "time": "2023-09-14T10:53:52+00:00"
+            "time": "2023-09-14T14:42:35+00:00"
         },
         {
             "name": "sculpin/sculpin-theme-composer-plugin",
@@ -3624,12 +3626,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "0619000d51429baac52f0b24a90c44779a01e383"
+                "reference": "84d96d6951fa8f93e6ff37fcd8dc7b79eb67ed23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/0619000d51429baac52f0b24a90c44779a01e383",
-                "reference": "0619000d51429baac52f0b24a90c44779a01e383",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/84d96d6951fa8f93e6ff37fcd8dc7b79eb67ed23",
+                "reference": "84d96d6951fa8f93e6ff37fcd8dc7b79eb67ed23",
                 "shasum": ""
             },
             "conflict": {
@@ -3723,6 +3725,7 @@
                 "czproject/git-php": "<4.0.3",
                 "darylldoyle/safe-svg": "<1.9.10",
                 "datadog/dd-trace": ">=0.30,<0.30.2",
+                "datatables/datatables": "<1.10.10",
                 "david-garcia/phpwhois": "<=4.3.1",
                 "dbrisinajumi/d2files": "<1",
                 "dcat/laravel-admin": "<=2.1.3.0-beta",
@@ -3998,7 +4001,7 @@
                 "pimcore/pimcore": "<10.6.8",
                 "pixelfed/pixelfed": "<=0.11.4",
                 "pocketmine/bedrock-protocol": "<8.0.2",
-                "pocketmine/pocketmine-mp": "<4.22.3|>=5,<5.2.1",
+                "pocketmine/pocketmine-mp": "<=4.23|>=5,<5.3.1",
                 "pressbooks/pressbooks": "<5.18",
                 "prestashop/autoupgrade": ">=4,<4.10.1",
                 "prestashop/blockwishlist": ">=2,<2.1.1",
@@ -4284,7 +4287,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-09-12T20:04:25+00:00"
+            "time": "2023-09-14T18:04:30+00:00"
         }
     ],
     "aliases": [],
@@ -4297,7 +4300,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^8.0",
+        "php": "^8.2",
         "ext-gd": "*",
         "ext-dom": "*"
     },
