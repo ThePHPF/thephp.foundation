@@ -10,27 +10,35 @@
       "homepage": "https://thephp.foundation"
     }
   ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/pronskiy/dflydev-canal"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/pronskiy/sculpin"
+    }
+  ],
   "require": {
     "php": "^8.0",
-    "sculpin/sculpin": "^3.1",
-    "twig/twig": "2.15.3",
     "ext-gd": "*",
-    "ext-dom": "*"
+    "ext-dom": "*",
+    "twig/twig": "2.15.3",
+    "sculpin/sculpin": "dev-PHP82_compat",
+    "dflydev/canal": "dev-master"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest"
   },
   "scripts": {
-    "publish": [
-      "./publish.sh"
-    ],
     "sculpin-watch": [
       "Composer\\Config::disableProcessTimeout",
       "sculpin generate --watch --server"
     ],
-    "yarn-watch": [
+    "npx-watch": [
       "Composer\\Config::disableProcessTimeout",
-      "yarn encore dev --watch"
+      "npx tailwind -i assets/css/app.css -o source/assets/css/app.css --watch"
     ]
   },
   "config": {
