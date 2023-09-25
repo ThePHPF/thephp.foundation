@@ -58,7 +58,7 @@ RFC proposes to increase default BCrypt cost, which denotes the algorithmic cost
 
 ### Under Discussion: [DOM HTML5 parsing and serialization](https://wiki.php.net/rfc/domdocument_html5_parser) by Niels Dossche
 
-RFC proposes to add a new class `DOM\HTML5Document` to dom extension. This will add support for HTML5 document parsing while keeping backwards compatibility.
+RFC proposes to add two new classes: `DOM\HTMLDocument` and `DOM\XMLDocument` to the dom extension. Furthermore, existing dom classes in the global namespace get an alias in the new DOM namespace. The `HTMLDocument` class will add support for HTML5 document parsing and serializing. The `XMLDocument` class serves as a modern alternative to `\DOMDocument`, which is retained for compatibility. These new classes also provide a more misuse-resistant API for loading documents.
 
 ### Under Discussion: [XML_OPTION_PARSE_HUGE](https://wiki.php.net/rfc/xml_option_parse_huge) by Niels Dossche
 
