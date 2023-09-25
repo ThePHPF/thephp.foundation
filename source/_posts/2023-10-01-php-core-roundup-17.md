@@ -28,6 +28,10 @@ Although PHP 8.3 is still being ironed out, there are some discussions and even 
 
 [Deprecations for PHP 8.4 RFC](https://wiki.php.net/rfc/deprecations_php_8_4) is currently in draft, which stands to track ideas on deprecating certain features. So far those are related to the `DOMAttr::schemaTypeInfo()`, `DOMElement::schemaTypeInfo()`, `DOMImplementation::getFeature()`, `mysqli_ping()`, `mysqli::ping()` functions, and `DOM_PHP_ERR` constant.
 
+## PHP Security Audit organized by The PHP Foundation 💜
+
+The PHP Foundation is planning to organized a security audit in PHP source code. Derick Rethans 💜 emailed the PHP Internals mailing list requesting opinions to identify the places in the PHP source code where checking this will have the most impact. Feel free to join the [conversation](https://externals.io/message/121135) if you have suggestions.
+
 ## Releases
 
 The PHP development team released two new versions in September 2023:
