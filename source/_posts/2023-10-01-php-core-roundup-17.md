@@ -76,7 +76,7 @@ Dmitry [emailed](https://externals.io/message/121038) PHP Internals mailing list
 
 ### Draft: [Deprecations for PHP 8.4 RFC](https://wiki.php.net/rfc/deprecations_php_8_4) by Niels Dossche
 
-RFC is currently in draft, which stands to track ideas on deprecating certain features. So far those are related to the `DOMAttr::schemaTypeInfo`, `DOMElement::schemaTypeInfo` properties, `DOMImplementation::getFeature()`, `mysqli_ping()`, `mysqli::ping()` functions, and `DOM_PHP_ERR` constant.
+RFC is currently in draft, which stands to track ideas on deprecating certain features. So far those are related to the `DOMAttr::$schemaTypeInfo`, `DOMElement::$schemaTypeInfo` properties, `DOMImplementation::getFeature()`, `mysqli_ping()`, `mysqli::ping()` functions, and `DOM_PHP_ERR` constant.
 
 <br>
 
