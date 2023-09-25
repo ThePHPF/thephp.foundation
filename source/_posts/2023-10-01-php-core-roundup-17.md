@@ -22,7 +22,7 @@ Welcome back to [PHP Core Roundup](/blog/tag/roundup/) series! This is post #17,
 
 {% include "newsletter.html" %}
 
-## Early-developments for PHP 8.3
+## Early-developments for PHP 8.4
 
 Although PHP 8.3 is still being ironed out, there are some discussions and even an RFC currently being voted for proposed changes in PHP 8.4 (scheduled for the end of 2024).
 
@@ -54,7 +54,7 @@ A suffix could provide even more semantic value or context for a user inspecting
 
 ### In Voting: [Increasing the default BCrypt cost](https://wiki.php.net/rfc/bcrypt_cost_2023) by Tim Düsterhus
 
-RFC proposes to increase default BCrypt cost, which denotes the algorithmic cost that should be used, from 10 to 11 (doubling the time) or 12 (quadrupling the time).
+RFC proposes to increase default BCrypt cost, which denotes the algorithmic cost that should be used, from 10 to 11 (doubling the time) or 12 (quadrupling the time). The [RFC](https://wiki.php.net/rfc/bcrypt_cost_2023) and the relevant [mailing list thread](https://externals.io/message/121004) mention several benchmarks showing the execution time differences in various cost levels.
 
 ### Under Discussion: [DOM HTML5 parsing and serialization](https://wiki.php.net/rfc/domdocument_html5_parser) by Niels Dossche
 
@@ -67,6 +67,8 @@ RFC proposes to add 4 new modes to the `round()` function: `PHP_ROUND_CEILING`, 
 ### Under Discussion: [A new JIT implementation based on IR Framework](https://wiki.php.net/rfc/jit-ir) by Dmitry Stogov
 
 RFC proposes a new JIT implementation that is based on a separately developed [IR Framework](https://github.com/dstogov/ir). The main advantage of the new approach is that PHP source code will be freed from the low-level details of JIT compilation. The downside is a longer JIT-compilation time.
+
+Dmitry [emailed](https://externals.io/message/121038) PHP Internals mailing list, which lead to a lengthy discussion on the merits of the new JIT implementation.
 
 <br>
 
