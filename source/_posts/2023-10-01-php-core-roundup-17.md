@@ -22,12 +22,6 @@ Welcome back to [PHP Core Roundup](/blog/tag/roundup/) series! This is post #17,
 
 {% include "newsletter.html" %}
 
-## Early-developments for PHP 8.4
-
-Although PHP 8.3 is still being ironed out, there are some discussions and even an RFC currently being voted for proposed changes in PHP 8.4 (scheduled for the end of 2024).
-
-[Deprecations for PHP 8.4 RFC](https://wiki.php.net/rfc/deprecations_php_8_4) is currently in draft, which stands to track ideas on deprecating certain features. So far those are related to the `DOMAttr::schemaTypeInfo()`, `DOMElement::schemaTypeInfo()`, `DOMImplementation::getFeature()`, `mysqli_ping()`, `mysqli::ping()` functions, and `DOM_PHP_ERR` constant.
-
 ## PHP Security Audit organized by The PHP Foundation 💜
 
 The PHP Foundation is planning to organized a security audit in PHP source code. Derick Rethans 💜 emailed the PHP Internals mailing list requesting opinions to identify the places in the PHP source code where checking this will have the most impact. Feel free to join the [conversation](https://externals.io/message/121135) if you have suggestions.
@@ -48,7 +42,9 @@ These releases include several bug fixes and improvements, notably in areas such
 <br>
 Hundreds of awesome PHP contributors put their efforts into improvements to the PHP code base, documentation, and the php.net website. Here is a summary of some changes made by the people behind PHP. Things marked with 💜 are done by the PHP Foundation team.
 
-## RFC Updates
+## Early-developments for PHP 8.4
+
+Although PHP 8.3 is still being ironed out, there are some discussions and even an RFC currently being voted for proposed changes in PHP 8.4 (scheduled for the end of 2024).
 
 ### Declined: [Support optional suffix parameter in tempnam](https://wiki.php.net/rfc/tempnam-suffix-v2) by Athos Ribeiro
 
@@ -58,11 +54,15 @@ A suffix could provide even more semantic value or context for a user inspecting
 
 ### In Voting: [Increasing the default BCrypt cost](https://wiki.php.net/rfc/bcrypt_cost_2023) by Tim Düsterhus
 
-RFC proposes to increase default BCrypt cost, which denotes the algorithmic cost that should be used, from 10 to 11 (doubling the time) or 12 (quadrupling the time). The [RFC](https://wiki.php.net/rfc/bcrypt_cost_2023) and the relevant [mailing list thread](https://externals.io/message/121004) mention several benchmarks showing the execution time differences in various cost levels.
+RFC proposes to increase default BCrypt cost, which denotes the algorithmic cost that should be used, from 10 to 11 (doubling the time) or 12 (quadrupling the time). The [RFC](https://wiki.php.net/rfc/bcrypt_cost_2023) and the relevant [mailing list thread](https://externals.io/message/121004) mention several benchmarks showing the execution time for various cost levels on different CPUs.
 
 ### Under Discussion: [DOM HTML5 parsing and serialization](https://wiki.php.net/rfc/domdocument_html5_parser) by Niels Dossche
 
 RFC proposes to add a new class `DOM\HTML5Document` to dom extension. This will add support for HTML5 document parsing while keeping backwards compatibility.
+
+### Under Discussion: [XML_OPTION_PARSE_HUGE](https://wiki.php.net/rfc/xml_option_parse_huge) by Niels Dossche
+
+RFC proposes to add a new `XmlParser` option to allow large documents to be parsed.
 
 ### Under Discussion: [Add 4 new rounding modes to round() function](https://wiki.php.net/rfc/new_rounding_modes_to_round_function) by Jorg Sowa
 
@@ -73,6 +73,10 @@ RFC proposes to add 4 new modes to the `round()` function: `PHP_ROUND_CEILING`, 
 RFC proposes a new JIT implementation that is based on a separately developed [IR Framework](https://github.com/dstogov/ir). The main advantage of the new approach is that PHP source code will be freed from the low-level details of JIT compilation. The downside is a longer JIT-compilation time.
 
 Dmitry [emailed](https://externals.io/message/121038) PHP Internals mailing list, which lead to a lengthy discussion on the merits of the new JIT implementation.
+
+### Draft: [Deprecations for PHP 8.4 RFC](https://wiki.php.net/rfc/deprecations_php_8_4) by Niels Dossche
+
+RFC is currently in draft, which stands to track ideas on deprecating certain features. So far those are related to the `DOMAttr::schemaTypeInfo()`, `DOMElement::schemaTypeInfo()`, `DOMImplementation::getFeature()`, `mysqli_ping()`, `mysqli::ping()` functions, and `DOM_PHP_ERR` constant.
 
 <br>
 
