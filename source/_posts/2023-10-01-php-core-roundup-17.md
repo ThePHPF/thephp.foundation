@@ -82,9 +82,9 @@ RFC is currently in draft, which stands to track ideas on deprecating certain fe
 
 ## Documentation
 
-While PHP 8.3 has moved to the RC cycle, the documentation available on [php.net](https://php.net), requires updating.
+While PHP 8.3 has moved to the RC cycle, the documentation available on [php.net](https://php.net), requires updating. An initial version of the [PHP 8.3 migration guide](https://www.php.net/manual/en/migration83.php) has been published by Yoshinari Takaoka.
 
-An initial version of the PHP 8.3 migration guide is preparing by Yoshinari Takaoka in [php/doc-en#2780](https://github.com/php/doc-en/pull/2780), and you can help too!
+George P. Banyard 💜 has triaged issues in the docs and marked several of them as "good first time", which are ideal easy picks if you would like to start contributing to PHP docs. You can find the full list on [GitHub](https://github.com/php/doc-en/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
 
 <br>
 
