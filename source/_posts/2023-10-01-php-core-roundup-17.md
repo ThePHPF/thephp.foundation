@@ -42,6 +42,14 @@ These releases include several bug fixes and improvements, notably in areas such
 <br>
 Hundreds of awesome PHP contributors put their efforts into improvements to the PHP code base, documentation, and the php.net website. Here is a summary of some changes made by the people behind PHP. Things marked with 💜 are done by the PHP Foundation team.
 
+## PHP 8.3 Release Page
+
+A [pull-request](https://github.com/php/web-php/pull/807) for the upcoming PHP 8.3 release page on php.net is in the progress, and you can help with that!
+
+This is a continuation of [a good tradition](https://externals.io/message/112026) started by Roman Pronskiy, Alexander Makarov, and Svetlana Belozerova.
+
+Check out how these pages looked like for [PHP 8.0](https://www.php.net/releases/8.0/en.php), [PHP 8.1](https://www.php.net/releases/8.1/en.php), and [PHP 8.2](https://www.php.net/releases/8.2/en.php).
+
 ## Early-developments for PHP 8.4
 
 Although PHP 8.3 is still being ironed out, there are some discussions and even an RFC currently being voted for proposed changes in PHP 8.4 (scheduled for the end of 2024).
@@ -84,7 +92,7 @@ RFC is currently in draft, which stands to track ideas on deprecating certain fe
 
 While PHP 8.3 has moved to the RC cycle, the documentation available on [php.net](https://php.net), requires updating. An initial version of the [PHP 8.3 migration guide](https://www.php.net/manual/en/migration83.php) has been published by Yoshinari Takaoka.
 
-George P. Banyard 💜 has triaged issues in the docs and marked several of them as "good first time", which are ideal easy picks if you would like to start contributing to PHP docs. You can find the full list on [GitHub](https://github.com/php/doc-en/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
+George P. Banyard 💜 is tracking the progress for PHP 8.3 related changes in [php/doc-en#2796](https://github.com/php/doc-en/issues/2796), and also triaged issues in the docs and marked several of them as "good first time", which are ideal easy picks if you would like to start contributing to PHP docs. You can find the full list on [GitHub](https://github.com/php/doc-en/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
 
 <br>
 
