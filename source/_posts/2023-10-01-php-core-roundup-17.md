@@ -119,11 +119,8 @@ Commits are in the order they were added, grouped by author in alphabetical orde
  - Fix memory leak with failed SQLPrepare in [a022ec53bd](https://github.com/php/php-src/commit/a022ec53bd)
 
 
-### David CARLIER
- - zend call stack support for haiku w/o using posix pthread api but the in [GH-12103](https://github.com/php/php-src/pull/12103)
-
-
 ### David Carlier
+ - zend call stack support for haiku w/o using posix pthread api but the in [GH-12103](https://github.com/php/php-src/pull/12103)
  - Fix [GH-12190](https://github.com/php/php-src/issues/12190): `stream_context_create` with address and port at 0 in [d65c80031a](https://github.com/php/php-src/commit/d65c80031a)
  - Fix [GH-12282](https://github.com/php/php-src/issues/12282): `IntlDateFormatter::construct` should throw an exception is the locale field has an invalid value in [a80db7b52a](https://github.com/php/php-src/commit/a80db7b52a)
  - `ext/intl`: expose dateformat UDAT_PATTERN constant in [f6fae19a10](https://github.com/php/php-src/commit/f6fae19a10)
@@ -148,7 +145,7 @@ Commits are in the order they were added, grouped by author in alphabetical orde
  - Fix [GH-12207](https://github.com/php/php-src/issues/12207) memory leak of doc blocks of static properties in [910f579f14](https://github.com/php/php-src/commit/910f579f14)
 
 
-### George Peter Banyard
+### George Peter Banyard 💜
  - `ext/mysqli`: Work on making tests parallizable in [GH-11814](https://github.com/php/php-src/pull/11814)
  - `ext/pcntl`: Remove useless call to `zend_get_callable_name()` in [GH-12241](https://github.com/php/php-src/pull/12241)
  - Fixed oss-fuzz [#62294](https://bugs.php.net/bug.php?id=62294): Unsetting variable after ++/-- on string variable warning in [0b614a6c2b](https://github.com/php/php-src/commit/0b614a6c2b)
@@ -164,7 +161,7 @@ Commits are in the order they were added, grouped by author in alphabetical orde
  - Removed incorrect news items for things already in 8.3.x or earlier in [58b8393cce](https://github.com/php/php-src/commit/58b8393cce)
 
 
-### Ilija Tovilo
+### Ilija Tovilo 💜
  - Use autoconf for recognizing __builtin_unreachable() in [GH-12266](https://github.com/php/php-src/pull/12266)
  - Fix getpriority test with negative return value in [181598d403](https://github.com/php/php-src/commit/181598d403)
  - Use __builtin_unreachable() directly in `ZEND_UNREACHABLE` in [37ce7199f2](https://github.com/php/php-src/commit/37ce7199f2)
@@ -185,7 +182,7 @@ Commits are in the order they were added, grouped by author in alphabetical orde
  - Include branch in benchmarking information in [ee6f9e294c](https://github.com/php/php-src/commit/ee6f9e294c)
 
 
-### Jakub Zelenka
+### Jakub Zelenka 💜
  - Prepare NEWS for PHP 8.3.0RC4 in [517411d2fb](https://github.com/php/php-src/commit/517411d2fb)
  - Reduce impact of stream file path check in filestat in [5e8c992c78](https://github.com/php/php-src/commit/5e8c992c78)
  - Fix [GH-12151](https://github.com/php/php-src/issues/12151): str_getcsv ending with escape zero segfualt in [64ebadcac5](https://github.com/php/php-src/commit/64ebadcac5)
@@ -214,7 +211,7 @@ Commits are in the order they were added, grouped by author in alphabetical orde
  - Fix [GH-12186](https://github.com/php/php-src/issues/12186): segfault copying/cloning a finalized HashContext in [10f5a06d3c](https://github.com/php/php-src/commit/10f5a06d3c)
 
 
-### Máté Kocsis
+### Máté Kocsis 💜
  - Fix predefined constant page synchonization in [cc2a68e588](https://github.com/php/php-src/commit/cc2a68e588)
  - Fix [GH-12123](https://github.com/php/php-src/issues/12123) Make _ZEND_TYPE_PREFIX apply only for MSVC in [45c7e3b06b](https://github.com/php/php-src/commit/45c7e3b06b)
  - Fix type of the `PHP_FLOAT_DIG` constant in [58657ff26a](https://github.com/php/php-src/commit/58657ff26a)
