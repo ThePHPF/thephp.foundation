@@ -24,7 +24,7 @@ Welcome back to [PHP Core Roundup](/blog/tag/roundup/) series! This is post #17,
 
 ## PHP Security Audit organized by The PHP Foundation 💜
 
-The PHP Foundation is planning to organized a security audit in PHP source code. Derick Rethans 💜 emailed the PHP Internals mailing list requesting opinions to identify the places in the PHP source code where checking this will have the most impact. Feel free to join the [conversation](https://externals.io/message/121135) if you have suggestions.
+The PHP Foundation intends to conduct a security audit of the PHP source code. Derick Rethans 💜 has asked the PHP Internals mailing list for input on which sections of the PHP source code should be prioritized in this audit. Feel free to join the [conversation](https://externals.io/message/121135) if you have suggestions.
 
 ## Releases
 
@@ -44,9 +44,9 @@ Hundreds of awesome PHP contributors put their efforts into improvements to the 
 
 ## PHP 8.3 Release Page
 
-A [pull-request](https://github.com/php/web-php/pull/807) for the upcoming PHP 8.3 release page on php.net is in the progress, and you can help with that!
+A [pull-request](https://github.com/php/web-php/pull/807) for the upcoming PHP 8.3 release page on php.net is in progress, and you can help with that!
 
-This is a continuation of [a good tradition](https://externals.io/message/112026) started by Roman Pronskiy, Alexander Makarov, and Svetlana Belozerova.
+This is a continuation of [a good tradition](https://externals.io/message/112026) started by Roman Pronskiy, Alexander Makarov, and the JetBrains design team.
 
 Check out how these pages looked like for [PHP 8.0](https://www.php.net/releases/8.0/en.php), [PHP 8.1](https://www.php.net/releases/8.1/en.php), and [PHP 8.2](https://www.php.net/releases/8.2/en.php).
 
@@ -62,7 +62,9 @@ A suffix could provide even more semantic value or context for a user inspecting
 
 ### In Voting: [Increasing the default BCrypt cost](https://wiki.php.net/rfc/bcrypt_cost_2023) by Tim Düsterhus
 
-RFC proposes to increase default BCrypt cost, which denotes the algorithmic cost that should be used, from 10 to 11 (doubling the time) or 12 (quadrupling the time). The [RFC](https://wiki.php.net/rfc/bcrypt_cost_2023) and the relevant [mailing list thread](https://externals.io/message/121004) mention several benchmarks showing the execution time for various cost levels on different CPUs.
+The RFC proposes increasing the default BCrypt cost. This is to enhance adaptive security in relation to increased processing power and thus increased possible cracking speed. 
+
+The last time the value was updated 11 years ago. Therefore, Tim suggests updating the default cost from 10 to either 11 (double the time) or 12 (quadruple the time). The [RFC](https://wiki.php.net/rfc/bcrypt_cost_2023) and the relevant [mailing list thread](https://externals.io/message/121004) mention several benchmarks showing the execution time for various cost levels on different CPUs.
 
 ### Under Discussion: [DOM HTML5 parsing and serialization](https://wiki.php.net/rfc/domdocument_html5_parser) by Niels Dossche
 
@@ -70,17 +72,17 @@ RFC proposes to add two new classes: `DOM\HTMLDocument` and `DOM\XMLDocument` to
 
 ### Under Discussion: [XML_OPTION_PARSE_HUGE](https://wiki.php.net/rfc/xml_option_parse_huge) by Niels Dossche
 
-RFC proposes to add a new `XmlParser` option to allow large documents to be parsed.
+RFC proposes to add a new `XmlParser` option to allow large documents to be parsed in an event-driven way (SAX).  
 
 ### Under Discussion: [Add 4 new rounding modes to round() function](https://wiki.php.net/rfc/new_rounding_modes_to_round_function) by Jorg Sowa
 
-RFC proposes to add 4 new modes to the `round()` function: `PHP_ROUND_CEILING`, `PHP_ROUND_FLOOR`, `PHP_ROUND_AWAY_FROM_ZERO`, `PHP_ROUND_TOWARD_ZERO`.
+RFC proposes to add four new modes to the `round()` function: `PHP_ROUND_CEILING`, `PHP_ROUND_FLOOR`, `PHP_ROUND_AWAY_FROM_ZERO`, `PHP_ROUND_TOWARD_ZERO`.
 
 ### Under Discussion: [A new JIT implementation based on IR Framework](https://wiki.php.net/rfc/jit-ir) by Dmitry Stogov
 
 RFC proposes a new JIT implementation that is based on a separately developed [IR Framework](https://github.com/dstogov/ir). The main advantage of the new approach is that PHP source code will be freed from the low-level details of JIT compilation. The downside is a longer JIT-compilation time.
 
-Dmitry [emailed](https://externals.io/message/121038) PHP Internals mailing list, which lead to a lengthy discussion on the merits of the new JIT implementation.
+Dmitry [emailed](https://externals.io/message/121038) PHP Internals mailing list, which led to a lengthy discussion on the merits of the new JIT implementation.
 
 ### Draft: [Deprecations for PHP 8.4 RFC](https://wiki.php.net/rfc/deprecations_php_8_4) by Niels Dossche
 
