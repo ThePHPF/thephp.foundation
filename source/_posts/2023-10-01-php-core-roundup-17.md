@@ -72,7 +72,7 @@ RFC proposes to add two new classes: `DOM\HTMLDocument` and `DOM\XMLDocument` to
 
 ### Under Discussion: [XML_OPTION_PARSE_HUGE](https://wiki.php.net/rfc/xml_option_parse_huge) by Niels Dossche
 
-RFC proposes to add a new `XmlParser` option to allow large documents to be parsed in an event-driven way (SAX).  
+RFC proposes to add a new option to the event-driven (SAX) `XmlParser` that would allow it to parse large documents.
 
 ### Under Discussion: [Add 4 new rounding modes to round() function](https://wiki.php.net/rfc/new_rounding_modes_to_round_function) by Jorg Sowa
 
