@@ -30,7 +30,7 @@ The PHP Foundation is planning to organized a security audit in PHP source code.
 
 The PHP development team released two new versions in September 2023:
 
-**[PHP 8.2.11](TODO)** and **[PHP 8.1.24](TODO)**
+**[PHP 8.2.11](https://www.php.net/archive/2023.php#2023-09-28-1)** and **[PHP 8.1.24](https://www.php.net/archive/2023.php#2023-09-28-3)**
 
 These releases include several bug fixes and improvements, notably in areas such as Core, DOM, Iconv, Intl, MySQLnd, ODBC, SimpleXML, SPL, and SQLite3.
 
