@@ -24,9 +24,7 @@
     "php": "^8.2",
     "ext-gd": "*",
     "ext-dom": "*",
-    "twig/twig": "2.15.3",
-    "sculpin/sculpin": "dev-main#467ffd4d7d0e3b28c8b8234d7f29bb3c8caf6c44",
-    "dflydev/canal": "dev-master"
+    "sculpin/sculpin": "3.3.0-alpha",
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest"
