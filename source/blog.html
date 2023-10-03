@@ -46,7 +46,7 @@ use:
                     Published on <span>{{ post.published_at|date("M d, Y") }}</span>
                     by
                     {% for author in post.author %}
-                    <a href="{{ post.author.url }}" class="no-underline" target="_blank" rel="noopener noreferrer">{{ author.name }}</a>{% if loop.last == false  %}, {% endif %}
+                    <a href="{{ author.url }}" class="no-underline" target="_blank" rel="noopener noreferrer">{{ author.name }}</a>{% if loop.last == false  %}, {% endif %}
                     {% endfor %}
                 </div>
                 {% endif %}
