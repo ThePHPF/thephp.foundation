@@ -10,21 +10,11 @@
       "homepage": "https://thephp.foundation"
     }
   ],
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/pronskiy/dflydev-canal"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/sculpin/sculpin"
-    }
-  ],
   "require": {
     "php": "^8.2",
     "ext-gd": "*",
     "ext-dom": "*",
-    "sculpin/sculpin": "3.3.0-alpha",
+    "sculpin/sculpin": "3.3.0-alpha"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest"
