@@ -8,7 +8,7 @@ on:
 jobs:
   deploy:
     name: Deploy website
-    runs-on: ubuntu-latest
+    runs-on: "ubuntu-20.04"
     steps:
     - name: Checkout
       uses: actions/checkout@main
@@ -27,7 +27,7 @@ jobs:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: 8.0
+        php-version: 8.2
         extensions: mbstring, intl, readline
         tools: composer:v2
 

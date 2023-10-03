@@ -11,26 +11,22 @@
     }
   ],
   "require": {
-    "php": "^8.0",
-    "sculpin/sculpin": "^3.1",
-    "twig/twig": "2.15.3",
+    "php": "^8.2",
     "ext-gd": "*",
-    "ext-dom": "*"
+    "ext-dom": "*",
+    "sculpin/sculpin": "3.3.0-alpha"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest"
   },
   "scripts": {
-    "publish": [
-      "./publish.sh"
-    ],
     "sculpin-watch": [
       "Composer\\Config::disableProcessTimeout",
       "sculpin generate --watch --server"
     ],
-    "yarn-watch": [
+    "npx-watch": [
       "Composer\\Config::disableProcessTimeout",
-      "yarn encore dev --watch"
+      "npx tailwind -i assets/css/app.css -o source/assets/css/app.css --watch"
     ]
   },
   "config": {
