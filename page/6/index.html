@@ -50,7 +50,8 @@
 
     <link rel="alternate" type="application/atom+xml" href="https://thephp.foundation/atom.xml"
           title="The PHP Foundation activity feed"/>
-                </head>
+                <script src="//cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+    </head>
 <body class="bg-white">
 
 <header x-data="{ isOpen: false }" @keydown.escape="isOpen = false" @click.away="isOpen = false">
@@ -504,6 +505,18 @@ Last month, the PHP foundation members continued the work on PHP 8.2 ...
     </div>
 </footer>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const anchors = new AnchorJS()
+        anchors.add()
+
+        for (const element of document.getElementsByClassName('anchorjs-link')) {
+            element.addEventListener('click', function () {
+                navigator.clipboard.writeText(window.location.origin + window.location.pathname + element.getAttribute('href'))
+            })
+        }
+    })
+</script>
 
 
 <script>hljs.highlightAll();</script>
