@@ -4,10 +4,10 @@
   "description": "Asset toolchain for thephp.foundation website",
   "main": "tailwind.config.js",
   "devDependencies": {
-    "autoprefixer": "^10.4.2",
-    "postcss": "^8.4.6",
-    "postcss-import": "^14.0.2",
-    "tailwindcss": "^3.0.22"
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "postcss-import": "^15.1.0",
+    "tailwindcss": "^3.3.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
