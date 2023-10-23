@@ -13,7 +13,7 @@ There are many ways you (or your company) can support the development of the PHP
 * [Bank Transfer (a.k.a. ACH or wire transfer)](https://opencollective.com/phpfoundation/contribute)
 * [GitHub Sponsors](https://github.com/sponsors/ThePHPF)
 
-If you require an invoice for your donation, please contact [invioceme@thephp.foundation](mailto:invioceme@thephp.foundation).
+If you require an invoice for your donation, please contact [invoice@thephp.foundation](mailto:invoice@thephp.foundation).
 
 ## Official Info & Docs
 
