@@ -10,10 +10,10 @@ There are many ways you (or your company) can support the development of the PHP
 
 * [Credit Card](https://opencollective.com/phpfoundation/contribute)
 * [PayPal](https://opencollective.com/phpfoundation/contribute)
-* [Bank Transfer (a.k.a. ACH or wire transfer)](https://opencollective.com/phpfoundation/contribute)
+* [Bank Transfer (ACH, wire transfer, or direct debit)](https://opencollective.com/phpfoundation/contribute)
 * [GitHub Sponsors](https://github.com/sponsors/ThePHPF)
 
-If you require an invoice for your donation, please contact [invoice@thephp.foundation](mailto:invoice@thephp.foundation).
+You will receive a receipt with information on you and the recipient through Open Collective, but if you require an invoice with different inforamtion, please contact [invoice@thephp.foundation](mailto:invoice@thephp.foundation).
 
 ## Official Info & Docs
 
