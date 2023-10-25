@@ -40,9 +40,9 @@ Hundreds of awesome PHP contributors put their efforts into improvements to the 
 
 ## PHP 8.3 GA to be released this month!
 
-PHP 8.3.0 GA is scheduled to be released on November, 23. PHP 8.3.0 RC5 is already released, and RC6 (the last one) is scheduled for November, 9.
+PHP 8.3.0 GA is scheduled to be released on November 23rd. PHP 8.3.0 RC5 is already released, and RC6 (the last one) is scheduled for November, 9.
 
-PHP 8.3.0 RC versions are available in [Remi’s](https://rpms.remirepo.net/) repos for Fedora/RHEL, [Docker images](https://hub.docker.com/_/php/tags?page=1&name=8.3) on Docker Hub, and compiled Windows binaries on [windows.php.net](https://windows.php.net/).
+PHP 8.3.0 RC versions are available in [Remi’s](https://rpms.remirepo.net/) repos for Fedora/RHEL, [Ondrej's](https://deb.sury.org/#php-packages) repos for Debian/Ubuntu LTS, [Docker images](https://hub.docker.com/_/php/tags?page=1&name=8.3) on Docker Hub, and compiled Windows binaries on [windows.php.net](https://windows.php.net/).
 
 ## PHP 8.0 will reach EOL
 
@@ -51,6 +51,10 @@ PHP 8.0 will reach EOL with the release of PHP 8.3 and will no longer get securi
 ## RFC Updates
 
 Following are the RFCs and major pull-requests discussed, voted, and implemented since our last update.
+
+### In Voting: Straw poll - How to name the Process resource after it is converted to an object by Máté Kocsis 💜
+
+As part of PHP's efforts in gradually phrasing out `resource` objects ([php-tasks#6](https://github.com/php/php-tasks/issues/6), [article on PHP.Watch](https://php.watch/articles/resource-object)), this RFC polls the proposed names for the resource object class name that replaces `Process` resources. This ranked-choice poll (following [STV](https://en.wikipedia.org/wiki/Single_transferable_vote#Example)) intends to pick a name from `\Process`, `\Processhandle`, and `\OS\Process`.
 
 ### Implemented: [Increasing the default BCrypt cost](https://wiki.php.net/rfc/bcrypt_cost_2023) by Tim Düsterhus
 
@@ -70,7 +74,7 @@ PHP 8.4 will get new classes: `DOM\HTMLDocument` and `DOM\XMLDocument` to the do
 
 RFC proposes a new JIT implementation that is based on a separately developed [IR Framework](https://github.com/dstogov/ir). The main advantage of the new approach is that PHP source code will be freed from the low-level details of JIT compilation. The downside is a longer JIT-compilation time.
 
-Dmitry [emailed](https://externals.io/message/121038) PHP Internals mailing list, which led to a lengthy discussion on the merits of the new JIT implementation.
+Dmitry [emailed](https://externals.io/message/121038) PHP Internals mailing list, which led to a lengthy discussion on the merits of the new JIT implementation. After the RFC vote was accepted, Dmitry [plans](https://externals.io/message/121239#121437) to merge the changes to `php-src` and remove the old JIT implementation in the next few days.
 
 ### Under discussion: [RFC1867 for non-POST HTTP verbs](https://wiki.php.net/rfc/rfc1867-non-post) by Ilija Tovilo 💜
 
@@ -103,7 +107,7 @@ RFC proposes to change the `round()` behavior, and stop expecting decimal behavi
 
 While PHP 8.3 is just around the corner, the documentation available on [php.net](https://php.net), requires updating.
 
-George P. Banyard 💜 is tracking the progress for PHP 8.3 related changes in [php/doc-en#2796](https://github.com/php/doc-en/issues/2796), and also triaged issues in the docs and marked several of them as "good first time", which are ideal easy picks if you would like to start contributing to PHP docs. You can find the full list on [GitHub](https://github.com/php/doc-en/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
+George P. Banyard 💜 is tracking the progress for PHP 8.3 related changes in [php/doc-en#2796](https://github.com/php/doc-en/issues/2796), and also triaged issues in the docs and marked several of them as "[good first time](https://github.com/php/doc-en/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)", which are ideal easy picks if you would like to start contributing to PHP docs. You can find the full list on [GitHub](https://github.com/php/doc-en/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
 
 <br>
 
