@@ -74,6 +74,8 @@ Dmitry [emailed](https://externals.io/message/121038) PHP Internals mailing list
 
 ### Under discussion: [RFC1867 for non-POST HTTP verbs](https://wiki.php.net/rfc/rfc1867-non-post) by Ilija Tovilo 💜
 
+Now PHP supports the parsing of `multipart/form-data` content type natively, but only for POST requests. If POST request has the `multipart/form-data` content type, the request body is immediately consumed before starting the PHP script and populated into the `$_POST` and `$_FILES` superglobals.
+
 RFC proposes to add a new function `request_parse_body()` to expose the existing functionality to userland so that it may be used for other HTTP verbs.
 
 ### Under discussion: [Rounding Integers as int](https://wiki.php.net/rfc/integer-rounding) by Marc Bennewitz
