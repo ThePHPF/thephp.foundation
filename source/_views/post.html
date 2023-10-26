@@ -1,22 +1,22 @@
 {% extends "default" %}
 
 {% block content_wrapper %}
-<div class="bg-white px-6 lg:px-8 my-16">
+<div class="bg-white px-6 lg:px-8 my-16" itemscope itemtype="https://schema.org/Article">
     <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
-        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{ page.title }}</h1>
+        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" itemprop="name">{{ page.title }}</h1>
 
         <div class="flex items-center gap-x-4 text-xs mt-2">
         {% if page.author.name is defined%}
         <div>
-            Published on <span>{{ page.published_at|date("M d, Y") }}</span>
-            by <a href="{{ page.author.url }}" target="_blank" rel="noopener noreferrer">{{ page.author.name }}</a>
+            Published on <span itemprop="datePublished">{{ page.published_at|date("M d, Y") }}</span>
+            by <span itemprop="publisher" itemscope itemtype="https://schema.org/Person"><a href="{{ page.author.url }}" target="_blank" rel="noopener noreferrer" itemprop="url"><span itemprop="name">{{ page.author.name }}</span></a></span>
         </div>
         {% elseif page.author is iterable%}
         <div>
-            Published on <span>{{ page.published_at|date("M d, Y") }}</span>
+            Published on <span itemprop="datePublished">{{ page.published_at|date("M d, Y") }}</span>
             by
             {% for author in page.author %}
-            <a href="{{ author.url }}" target="_blank" rel="noopener noreferrer">{{ author.name }}</a>{% if loop.last == false  %}, {% endif %}
+            <span itemprop="publisher" itemscope itemtype="https://schema.org/Person"><a href="{{ author.url }}" target="_blank" rel="noopener noreferrer" itemprop="url"><span itemprop="name">{{ author.name }}</span></a></span>{% if loop.last == false  %}, {% endif %}
             {% endfor %}
         </div>
         {% endif %}
@@ -34,7 +34,7 @@
         {% endif %}
         </div>
 
-        <div class="mt-6 text-xl leading-8">
+        <div class="mt-6 text-xl leading-8" itemprop="text">
             {{ page.blocks.content|raw }}
         </div>
 
