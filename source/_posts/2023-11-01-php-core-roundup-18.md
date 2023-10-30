@@ -26,7 +26,7 @@ Welcome back to [PHP Core Roundup](/blog/tag/roundup/) series! This is post #18,
 
 The PHP development team released two new versions in October 2023:
 
-**[PHP 8.2.12](TODO)** and **[PHP 8.1.25](TODO)**
+**[PHP 8.2.12](https://www.php.net/ChangeLog-8.php#8.2.12)** and **[PHP 8.1.25](https://www.php.net/ChangeLog-8.php#8.1.25)**
 
 These releases include several bug fixes and improvements, notably in areas such as Core, CLI, CType, DOM, Fileinfo, Filter, Hash, Intl, MySQLnd, Opcache, PCRE, SimpleXML, Streams, XML, and XSL. 
 
