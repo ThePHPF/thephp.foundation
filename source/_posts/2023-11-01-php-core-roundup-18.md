@@ -107,7 +107,7 @@ RFC proposes to change the `round()` behavior, and stop expecting decimal behavi
 
 While PHP 8.3 is just around the corner, the documentation available on [php.net](https://php.net), requires updating.
 
-George P. Banyard 💜 is tracking the progress for PHP 8.3 related changes in [php/doc-en#2796](https://github.com/php/doc-en/issues/2796), and also triaged issues in the docs and marked several of them as "[good first time](https://github.com/php/doc-en/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)", which are ideal easy picks if you would like to start contributing to PHP docs. You can find the full list on [GitHub](https://github.com/php/doc-en/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
+Gina P. Banyard 💜 is tracking the progress for PHP 8.3 related changes in [php/doc-en#2796](https://github.com/php/doc-en/issues/2796), and also triaged issues in the docs and marked several of them as "[good first time](https://github.com/php/doc-en/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)", which are ideal easy picks if you would like to start contributing to PHP docs. You can find the full list on [GitHub](https://github.com/php/doc-en/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
 
 <br>
 
