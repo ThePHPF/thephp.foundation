@@ -54,7 +54,7 @@ Following are the RFCs and major pull-requests discussed, voted, and implemented
 
 ### In Voting: Straw poll - How to name the Process resource after it is converted to an object by Máté Kocsis 💜
 
-As part of PHP's efforts in gradually phrasing out `resource` objects ([php-tasks#6](https://github.com/php/php-tasks/issues/6), [article on PHP.Watch](https://php.watch/articles/resource-object)), this RFC polls the proposed names for the resource object class name that replaces `Process` resources. This ranked-choice poll (following [STV](https://en.wikipedia.org/wiki/Single_transferable_vote#Example)) intends to pick a name from `\Process`, `\Processhandle`, and `\OS\Process`.
+As part of PHP's efforts in gradually phrasing out `resource` objects ([php-tasks#6](https://github.com/php/php-tasks/issues/6), [article on PHP.Watch](https://php.watch/articles/resource-object)), this RFC polls the proposed names for the resource object class name that replaces `Process` resources. This ranked-choice poll (following [STV](https://en.wikipedia.org/wiki/Single_transferable_vote#Example)) intends to pick a name from `\Process`, `\ProcessHandle`, and `\OS\Process`.
 
 ### Implemented: [Increasing the default BCrypt cost](https://wiki.php.net/rfc/bcrypt_cost_2023) by Tim Düsterhus
 
