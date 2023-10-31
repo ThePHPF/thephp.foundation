@@ -25,7 +25,7 @@ This autumn, you will be able to talk to the foundation administration members a
 
 <br>
 
-**George P. Banyard**, one of the PHP Foundation’s developers, will talk about PHP’s type system internals.
+**Gina P. Banyard**, one of the PHP Foundation’s developers, will talk about PHP’s type system internals.
 
 <blockquote class="twitter-tweet"><p lang="fr" dir="ltr">Nous sommes ravis d&#39;accueillir pour la première fois <a href="https://twitter.com/Girgias?ref_src=twsrc%5Etfw">@Girgias</a>, jeune et talentueux core-contributeur à PHP, pour un talk sur les rouages du typage lors du Forum PHP 2022.<br>🎤 &quot;Typage en PHP comment ça fonctionne ?&quot; - Forum PHP 2022 - 13&amp;14/10, Disneyland Paris <a href="https://t.co/dB0pWflmKB">pic.twitter.com/dB0pWflmKB</a></p>&mdash; AFUP (@afup) <a href="https://twitter.com/afup/status/1546423801998708736?ref_src=twsrc%5Etfw">July 11, 2022</a></blockquote>
 

@@ -140,10 +140,10 @@ Following are some changes that did not go through an RFC process because they a
  - Do not check `X-Powered-By` header in FPM tester if `expose_php` off in [GH-9508](https://github.com/php/php-src/pull/9508) by Jakub Zelenka 💜
  - Fix `php_init_crypt_r`/`php_shutdown_crypt_r` signatures warning in [257f108924](https://github.com/php/php-src/commit/257f108924) by David Carlier
  - Add missing CVEs in [b0cc5ed91f](https://github.com/php/php-src/commit/b0cc5ed91f) and [12c3636d01](https://github.com/php/php-src/commit/12c3636d01) by Remi Collet
- - Add support for binary and octal number prefixes for INI settings in [GH-9560](https://github.com/php/php-src/pull/9560) by George Peter Banyard 💜
- - Fix UPGRADING by adding DBA constants in [a8d6ca4ef1](https://github.com/php/php-src/commit/a8d6ca4ef1) by George Peter Banyard 💜
- - Move object/class redundancy check into union type handling in [74ae498a4b](https://github.com/php/php-src/commit/74ae498a4b) by George Peter Banyard 💜
- - Fix [GH-9556](https://github.com/php/php-src/issues/9556) `iterable` alias `array|Traversable` breaks PHP 8.1 code in [GH-9558](https://github.com/php/php-src/pull/9558) by George Peter Banyard 💜
+ - Add support for binary and octal number prefixes for INI settings in [GH-9560](https://github.com/php/php-src/pull/9560) by Gina Peter Banyard 💜
+ - Fix UPGRADING by adding DBA constants in [a8d6ca4ef1](https://github.com/php/php-src/commit/a8d6ca4ef1) by Gina Peter Banyard 💜
+ - Move object/class redundancy check into union type handling in [74ae498a4b](https://github.com/php/php-src/commit/74ae498a4b) by Gina Peter Banyard 💜
+ - Fix [GH-9556](https://github.com/php/php-src/issues/9556) `iterable` alias `array|Traversable` breaks PHP 8.1 code in [GH-9558](https://github.com/php/php-src/pull/9558) by Gina Peter Banyard 💜
  - Make socket path shorter for `ext/sockets/tests/socket_cmsg_{rights|credentials}.phpt` in [c58241a003](https://github.com/php/php-src/commit/c58241a003) by Andy Postnikov
  - Return immediately when `FD_SETSIZE` is exceeded in [GH-9602](https://github.com/php/php-src/pull/9602) by Arnaud Le Blanc 💜
  - Use `--EXTENSIONS--` section for newly added tests in [47c79a97f5](https://github.com/php/php-src/commit/47c79a97f5) by Christoph M. Becker
@@ -152,13 +152,13 @@ Following are some changes that did not go through an RFC process because they a
  - Fix abstract trace consisency for `FE_FETCH` instruction in [5ca4113386](https://github.com/php/php-src/commit/5ca4113386) by Dmitry Stogov
  - Fix [GH-9626](https://github.com/php/php-src/issues/9626): JIT type assertion failure in Symfony community build in [ec5882e1c3](https://github.com/php/php-src/commit/ec5882e1c3) by Dmitry Stogov
  - Fix register allocation (missing store) in [ed652a514f](https://github.com/php/php-src/commit/ed652a514f) by Dmitry Stogov
- - Follow-up fix for [GH-9655](https://github.com/php/php-src/issues/9655) in [01eb06a0de](https://github.com/php/php-src/commit/01eb06a0de) by George Peter Banyard 💜
+ - Follow-up fix for [GH-9655](https://github.com/php/php-src/issues/9655) in [01eb06a0de](https://github.com/php/php-src/commit/01eb06a0de) by Gina Peter Banyard 💜
  - Restore backwards-compatible mappings of `U+005C` and `U+007E` to `SJIS-2004` in [dd00e2f1e3](https://github.com/php/php-src/commit/dd00e2f1e3) by Alex Dowad
  - Fix typo in [072dc3c857](https://github.com/php/php-src/commit/072dc3c857) by Dmitry Stogov
  - Remove support for `libmysql-client` from mysqli test suite in [GH-9652](https://github.com/php/php-src/pull/9652) by Christoph M. Becker
  - Fix memory-leak in CLI web server in [GH-9680](https://github.com/php/php-src/pull/9680) by Benoit Viguier
  - Reduce scope of `r` in `rand_rangeXX` in [GH-9678](https://github.com/php/php-src/pull/9678) by Tim Düsterhus
- - Actually fix [GH-9583](https://github.com/php/php-src/issues/9583) in [GH-9638](https://github.com/php/php-src/pull/9638) by George Peter Banyard 💜
+ - Actually fix [GH-9583](https://github.com/php/php-src/issues/9583) in [GH-9638](https://github.com/php/php-src/pull/9638) by Gina Peter Banyard 💜
  - Add empty default params to nightly linux matrix in [26499f53fb](https://github.com/php/php-src/commit/26499f53fb) by Ilija Tovilo 💜
  - Prepare for Windows CI with Github Actions in [b43e49437c](https://github.com/php/php-src/commit/b43e49437c) by Michael Voříšek
  - Fix [GH-9697](https://github.com/php/php-src/issues/9697): `array_walk($ffiInstance, function () {})` crashes due to expecting mutable array in [d9651a9419](https://github.com/php/php-src/commit/d9651a9419) by Dmitry Stogov
@@ -200,10 +200,10 @@ Following are some changes that did not go through an RFC process because they a
  - Update NEWS in [2669ed7d77](https://github.com/php/php-src/commit/2669ed7d77) by Stanislav Malyshev
  - JIT: Fix incorrect EX(opline) override in [261a08af65](https://github.com/php/php-src/commit/261a08af65) by Dmitry Stogov
  - Fixed test in [e0d9a29958](https://github.com/php/php-src/commit/e0d9a29958) by Dmitry Stogov
- - Convert Implicitly nullable pure intersection types to DNF in [0b0259a418](https://github.com/php/php-src/commit/0b0259a418) by George Peter Banyard 💜
- - Revert [01eb06a0](https://github.com/php/php-src/commit/01eb06a0def9fb5facf0abf0f4168fcacbbb5789) in [8c2df899d0](https://github.com/php/php-src/commit/8c2df899d0) by George Peter Banyard 💜
+ - Convert Implicitly nullable pure intersection types to DNF in [0b0259a418](https://github.com/php/php-src/commit/0b0259a418) by Gina Peter Banyard 💜
+ - Revert [01eb06a0](https://github.com/php/php-src/commit/01eb06a0def9fb5facf0abf0f4168fcacbbb5789) in [8c2df899d0](https://github.com/php/php-src/commit/8c2df899d0) by Gina Peter Banyard 💜
  - Update new test to use EXTENSIONS section instead of SKIPIF in [b4fb66463b](https://github.com/php/php-src/commit/b4fb66463b) by Christoph M. Becker
- - Fix OpCache build after [0b0259a4](https://github.com/php/php-src/commit/0b0259a418b78c05cd5cd23f756582615d9b5918) in [cb3adf351d](https://github.com/php/php-src/commit/cb3adf351d) by George Peter Banyard 💜
+ - Fix OpCache build after [0b0259a4](https://github.com/php/php-src/commit/0b0259a418b78c05cd5cd23f756582615d9b5918) in [cb3adf351d](https://github.com/php/php-src/commit/cb3adf351d) by Gina Peter Banyard 💜
  - opcache: fix syntax error introduced in [261a08af](https://github.com/php/php-src/commit/261a08af65168e24c43a81321284f3f461f3500d) in [GH-9821](https://github.com/php/php-src/pull/9821) by Kévin Dunglas
  - Fix user path in test in [537a104f14](https://github.com/php/php-src/commit/537a104f14) by Ilija Tovilo 💜
  - Initialize run time cache in PDO methods in [GH-9818](https://github.com/php/php-src/pull/9818) by Florian Sowade
@@ -211,7 +211,7 @@ Following are some changes that did not go through an RFC process because they a
  - move CVEs in 8.0.25 changelog in [db28ee8fd0](https://github.com/php/php-src/commit/db28ee8fd0) by Remi Collet
  - move CVEs in 8.1.12 changelog in [c84d7cc27e](https://github.com/php/php-src/commit/c84d7cc27e) by Remi Collet
  - Remove unnecessary ast eval bailout in [GH-9805](https://github.com/php/php-src/pull/9805) by Ilija Tovilo 💜
- - Add missing EXTENSION section to tests in [a4acba9e52](https://github.com/php/php-src/commit/a4acba9e52) by George Peter Banyard 💜
+ - Add missing EXTENSION section to tests in [a4acba9e52](https://github.com/php/php-src/commit/a4acba9e52) by Gina Peter Banyard 💜
  - mysqli_query throws warning despite using silenced error mode in [GH-9842](https://github.com/php/php-src/pull/9842) by Kamil Tekiela
  - Add a temporary fix for insufficient buffer size in mysqlnd in [GH-9835](https://github.com/php/php-src/pull/9835) by Kamil Tekiela
  - Add NEWS entry for #9841 in [GH-9841](https://github.com/php/php-src/pull/9841) by Kamil Tekiela

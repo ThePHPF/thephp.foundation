@@ -44,7 +44,7 @@ Hundreds of awesome PHP contributors put their efforts into improvements to the 
 
 Following are the RFCs and major pull-requests discussed, voted on, and implemented since our last update.
 
-### In Voting: [Define proper semantics for range() function](https://wiki.php.net/rfc/proper-range-semantics) by George Peter Banyard 💜
+### In Voting: [Define proper semantics for range() function](https://wiki.php.net/rfc/proper-range-semantics) by Gina Peter Banyard 💜
 
 This RFC proposes to adjust the semantics of the `range()` function in PHP to throw exceptions or at least warn when passing unusable arguments to `range()`.
 
@@ -69,7 +69,7 @@ The similar concepts exist in Java, TypeScript, C++, C#, Swift, Kotlin, and othe
 
 This RFC proposes to deprecate a number of functions that have overloaded signatures, meaning they behave differently based on the number or type of arguments passed to them. The goal is to make PHP's function signatures more consistent and predictable.
 
-### Under Discussion: [Deprecations for PHP 8.3](https://wiki.php.net/rfc/deprecations_php_8_3) by George Peter Banyard 💜, Christoph M. Becker, Máté Kocsis 💜, Tim Düsterhus, Go Kudo, Andreas Heigl
+### Under Discussion: [Deprecations for PHP 8.3](https://wiki.php.net/rfc/deprecations_php_8_3) by Gina Peter Banyard 💜, Christoph M. Becker, Máté Kocsis 💜, Tim Düsterhus, Go Kudo, Andreas Heigl
 
 The aim is to clean up some of the older, less consistent parts of PHP to make the language more reliable and predictable. The following list provides a short overview of the functionality targeted for deprecation:
 
@@ -201,7 +201,7 @@ This month, the PHP core team has been hard at work improving the PHP language. 
     - Fix FPM status json encoded value test in [GH-11276](https://github.com/php/php-src/pull/11276)
 - __Florian Moser__
     - Fix [GH-11054](https://github.com/php/php-src/issues/11054): Reset OpenSSL errors when using a PEM public key in [GH-11055](https://github.com/php/php-src/pull/11055)
-- __George Peter Banyard 💜__
+- __Gina Peter Banyard 💜__
     - Prevent unnecessary string duplication in assert() in [GH-11031](https://github.com/php/php-src/pull/11031)
     - ext/standard/array.c: use uint32_t instead of incorrect int type in [646f54b594](https://github.com/php/php-src/commit/646f54b594)
     - Fix assertion warning message when no description is provided in [e35cd34bcd](https://github.com/php/php-src/commit/e35cd34bcd)

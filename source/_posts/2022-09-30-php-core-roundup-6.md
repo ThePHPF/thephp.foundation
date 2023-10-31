@@ -54,7 +54,7 @@ Following are the RFCs and major pull-requests discussed, voted, and implemented
 
 - **RFC In Draft: [Deprecations for PHP 8.3](https://wiki.php.net/rfc/deprecations_php_8_3)**
 
-	RFC Christoph M. Becker and George Peter Banyard 💜 with suggestions from Tim Düsterhus and Go Kudo (so far!), that proposes a series of functionality/syntax to deprecate in PHP 8.3, and eventually remove in PHP 9.0.
+	RFC Christoph M. Becker and Gina Peter Banyard 💜 with suggestions from Tim Düsterhus and Go Kudo (so far!), that proposes a series of functionality/syntax to deprecate in PHP 8.3, and eventually remove in PHP 9.0.
 
 	Each proposed deprecation will be voted to determine if the deprecation makes it to PHP 8.3, but having a consolidated RFC eases the voting and discussions.
 
@@ -69,11 +69,11 @@ Following are the RFCs and major pull-requests discussed, voted, and implemented
 
 Now that PHP 8.2 is being prepared for GA releases, the documentation available on [php.net](https://php.net), requires updating. An initial version of the [PHP 8.2 migration guide](https://www.php.net/manual/en/migration82.php) has been published.
 
-George P. Banyard 💜 is tracking the progress for PHP 8.2 related changes in [php/doc-en#1803](https://github.com/php/doc-en/issues/1803), and you can help too!
+Gina P. Banyard 💜 is tracking the progress for PHP 8.2 related changes in [php/doc-en#1803](https://github.com/php/doc-en/issues/1803), and you can help too!
 
 You can also help with other existing issues, a good starting point are [issues marked as “good first issue”](https://github.com/php/doc-en/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) that George went and triaged in preparation for Hacktoberfest.
 
-[![Did some issue triage on the doc-en GitHub tracker, and labelled a bunch of issues as "good first issue". So if people want to contribute those are probably the best to tackle :)](/assets/post-images/2022/roundup-6/tweet-gbp-php-doc-en-issues.png "George Peter Banyard 💜 on Twitter")](https://twitter.com/Girgias/status/1569626352025747459)
+[![Did some issue triage on the doc-en GitHub tracker, and labelled a bunch of issues as "good first issue". So if people want to contribute those are probably the best to tackle :)](/assets/post-images/2022/roundup-6/tweet-gbp-php-doc-en-issues.png "Gina Peter Banyard 💜 on Twitter")](https://twitter.com/Girgias/status/1569626352025747459)
 
 Derick has gone through all the datetime notes, and integrated them where needed, deleted where not.
 
@@ -145,9 +145,9 @@ Following are some changes that did not go through an RFC process because they a
 * random: Validate that the arrays do not contain extra elements when unserializing in [GH-9458](https://github.com/php/php-src/pull/9458) by Tim Düsterhus
 * Add “Start time”, “Last restart time” and “Last force restart time” to `phpinfo()` for opcache in [GH-9475](https://github.com/php/php-src/pull/9475) by Mikhail Galanin
 * Use `php_info_print_table_header` for actual column headers only in [GH-9485](https://github.com/php/php-src/pull/9485) by Tim Düsterhus
-* Update INI validator and displayers depending on INI type in [GH-9451](https://github.com/php/php-src/pull/9451) by George Peter Banyard 💜
-* Update globals to use bool type in [5011a185b5](https://github.com/php/php-src/commit/5011a185b5) by George Peter Banyard 💜
-* Add `zend_string` INI validators in [GH-9328](https://github.com/php/php-src/pull/9328) by George Peter Banyard 💜
+* Update INI validator and displayers depending on INI type in [GH-9451](https://github.com/php/php-src/pull/9451) by Gina Peter Banyard 💜
+* Update globals to use bool type in [5011a185b5](https://github.com/php/php-src/commit/5011a185b5) by Gina Peter Banyard 💜
+* Add `zend_string` INI validators in [GH-9328](https://github.com/php/php-src/pull/9328) by Gina Peter Banyard 💜
 * intl: use `uspoof_check2UTF8` call when available. in [GH-9478](https://github.com/php/php-src/pull/9478) by David CARLIER
 * Upgrade PHP parser to 4.15.1 in [05aa3b3e0a](https://github.com/php/php-src/commit/05aa3b3e0a) by Máté Kocsis 💜
 * Add support for validation of missing method synopses in [GH-9491](https://github.com/php/php-src/pull/9491) by Máté Kocsis 💜
@@ -167,10 +167,10 @@ Following are some changes that did not go through an RFC process because they a
 * Validate if the refpurpose and the description is in sync in [GH-9510](https://github.com/php/php-src/pull/9510) by Máté Kocsis 💜
 * Security fix [#81727](https://bugs.php.net/bug.php?id=81727), ([CVE-2022-31628](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31628)): Don’t mangle HTTP variable names that clash with ones that have a specific semantic meaning in [0611be4e82](https://github.com/php/php-src/commit/0611be4e82) by Derick Rethans 💜
 * Security fix [#81726](https://bugs.php.net/bug.php?id=81726), ([CVE-2022-31629](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31629)): phar wrapper: DOS when using quine gzip file in [ 404e8bdb68](https://github.com/php/php-src/commit/404e8bdb68) by Christoph M. Becker
-* Introduce `PROGRESS_CACHE_SLOT()` macro in [80315edd58](https://github.com/php/php-src/commit/80315edd58) by George Peter Banyard 💜
-* Fix [GH-9516](https://github.com/php/php-src/issues/9516): `(A&B)|D` as a param should allow `AB` or `D`. Not just `A` in [9286101da4](https://github.com/php/php-src/commit/9286101da4) by George Peter Banyard 💜
-* Use DNF intersection type check also for simple intersection types in [c70a8281e3](https://github.com/php/php-src/commit/c70a8281e3) by George Peter Banyard 💜
-* Update cache slot size calculation in `compact_literals.c` in [6c4d24e4f0](https://github.com/php/php-src/commit/6c4d24e4f0) by George Peter Banyard 💜
+* Introduce `PROGRESS_CACHE_SLOT()` macro in [80315edd58](https://github.com/php/php-src/commit/80315edd58) by Gina Peter Banyard 💜
+* Fix [GH-9516](https://github.com/php/php-src/issues/9516): `(A&B)|D` as a param should allow `AB` or `D`. Not just `A` in [9286101da4](https://github.com/php/php-src/commit/9286101da4) by Gina Peter Banyard 💜
+* Use DNF intersection type check also for simple intersection types in [c70a8281e3](https://github.com/php/php-src/commit/c70a8281e3) by Gina Peter Banyard 💜
+* Update cache slot size calculation in `compact_literals.c` in [6c4d24e4f0](https://github.com/php/php-src/commit/6c4d24e4f0) by Gina Peter Banyard 💜
 * Fix [GH-9518](https://github.com/php/php-src/issues/9518): Disabling IPv6 support disables unrelated constants in [GH-9520](https://github.com/php/php-src/pull/9520) by Christoph M. Becker
 * Check that all preprocessor conditions are terminated in [36fdc6fdc0](https://github.com/php/php-src/commit/36fdc6fdc0) by Nikita Popov
 * Require PHP 7.4 at least for running the build system in [GH-9519](https://github.com/php/php-src/pull/9519) by Máté Kocsis 💜
@@ -181,14 +181,14 @@ Following are some changes that did not go through an RFC process because they a
 * Fix always non-null warning in [9f9042fd43](https://github.com/php/php-src/commit/9f9042fd43) by Nikita Popov
 * Reset `FG(user_stream_current_filename)` at the end of request in [d0b3096ff0](https://github.com/php/php-src/commit/d0b3096ff0) by Dmitry Stogov
 * Fix `ZEND_RC_MOD_CHECK()` for thread local ini parser strings in [9af98cd465](https://github.com/php/php-src/commit/9af98cd465) by Ilija Tovilo 💜
-* Only check classes in intersection type if the type might be valid in [GH-9522](https://github.com/php/php-src/pull/9522) by George Peter Banyard 💜
-* Update NEWS with DNF type check bug fix in [3675041d03](https://github.com/php/php-src/commit/3675041d03) by George Peter Banyard 💜
-* Fix [GH-9308](https://github.com/php/php-src/issues/9308) GMP throws the wrong error when a GMP object is passed to gmp_init() in [GH-9490](https://github.com/php/php-src/pull/9490) by George Peter Banyard 💜
-* Fix [GH-9421](https://github.com/php/php-src/issues/9421) Incorrect argument number for ValueError in NumberFormatter in [GH-9489](https://github.com/php/php-src/pull/9489) by George Peter Banyard 💜
+* Only check classes in intersection type if the type might be valid in [GH-9522](https://github.com/php/php-src/pull/9522) by Gina Peter Banyard 💜
+* Update NEWS with DNF type check bug fix in [3675041d03](https://github.com/php/php-src/commit/3675041d03) by Gina Peter Banyard 💜
+* Fix [GH-9308](https://github.com/php/php-src/issues/9308) GMP throws the wrong error when a GMP object is passed to gmp_init() in [GH-9490](https://github.com/php/php-src/pull/9490) by Gina Peter Banyard 💜
+* Fix [GH-9421](https://github.com/php/php-src/issues/9421) Incorrect argument number for ValueError in NumberFormatter in [GH-9489](https://github.com/php/php-src/pull/9489) by Gina Peter Banyard 💜
 * Always skip randomly failing OCI8 extauth tests in [GH-9524](https://github.com/php/php-src/pull/9524) by Michael Voříšek
-* Refactor `_xml_add_to_info()` in [0b8ad94b91](https://github.com/php/php-src/commit/0b8ad94b91) by George Peter Banyard 💜
-* Mark `_xml_decode_tag()` as taking a `const XML_Char*` in [6aef13402e](https://github.com/php/php-src/commit/6aef13402e) by George Peter Banyard 💜
-* Do early returns in `xml.c` in [951bd74038](https://github.com/php/php-src/commit/951bd74038) by George Peter Banyard 💜
+* Refactor `_xml_add_to_info()` in [0b8ad94b91](https://github.com/php/php-src/commit/0b8ad94b91) by Gina Peter Banyard 💜
+* Mark `_xml_decode_tag()` as taking a `const XML_Char*` in [6aef13402e](https://github.com/php/php-src/commit/6aef13402e) by Gina Peter Banyard 💜
+* Do early returns in `xml.c` in [951bd74038](https://github.com/php/php-src/commit/951bd74038) by Gina Peter Banyard 💜
 * Fix `oci_success_with_info.phpt` test random failures in [GH-9525](https://github.com/php/php-src/pull/9525) by Michael Voříšek
 * PHP-8.1 is now for PHP 8.1.12-dev in [0f575aa698](https://github.com/php/php-src/commit/0f575aa698) by Patrick Allaert
 * Bump for 8.0.25 in [559da529a0](https://github.com/php/php-src/commit/559da529a0) by Sara Golemon
@@ -237,7 +237,7 @@ Following are some changes that did not go through an RFC process because they a
 * Fixed undefined macros warnings in [18cd80c327](https://github.com/php/php-src/commit/18cd80c327) by Patrick Allaert
 * Replace reallocarray with safe_perealloc in [GH-9593](https://github.com/php/php-src/pull/9593) by Ilija Tovilo 💜
 * Check “ssa_op” before dereference (it may be NULL for opcache.jit=51) in [95d9e5157f](https://github.com/php/php-src/commit/95d9e5157f) by Dmitry Stogov
-* Use true return type for XML functions which always return true in [GH-9539](https://github.com/php/php-src/pull/9539) by George Peter Banyard 💜
+* Use true return type for XML functions which always return true in [GH-9539](https://github.com/php/php-src/pull/9539) by Gina Peter Banyard 💜
 * Revert “Fix `parse_url()`: can not recognize port without scheme” in [GH-9569](https://github.com/php/php-src/pull/9569) by Andy Postnikov
 * Migrate community job to GitHub actions in [e10961b27f](https://github.com/php/php-src/commit/e10961b27f) by Ilija Tovilo 💜
 * Fix typo (`from` → `form`) in [GH-9609](https://github.com/php/php-src/pull/9609) by Christoph M. Becker
@@ -263,7 +263,7 @@ Following are some changes that did not go through an RFC process because they a
 * Uniform placing of `init_fcall` guards in [ca93e48b77](https://github.com/php/php-src/commit/ca93e48b77) by Dmitry Stogov
 * Add CVEs in [6f586ef90f](https://github.com/php/php-src/commit/6f586ef90f) by Derick Rethans 💜
 * Fix `run-tests.php` for explicitly given test cases in [GH-9617](https://github.com/php/php-src/pull/9617) by Christoph M. Becker
-* Fix [GH-9583](https://github.com/php/php-src/issues/9583): session_create_id() fails with user defined save handler that doesn’t have a validateId() method in [8b115254c0](https://github.com/php/php-src/commit/8b115254c0) by George Peter Banyard 💜
+* Fix [GH-9583](https://github.com/php/php-src/issues/9583): session_create_id() fails with user defined save handler that doesn’t have a validateId() method in [8b115254c0](https://github.com/php/php-src/commit/8b115254c0) by Gina Peter Banyard 💜
 * Fix regression introduced by fixing bug 81726 in [GH-9620](https://github.com/php/php-src/pull/9620) by Christoph M. Becker
 * Rework FPM tests logging for better debugging in [1e8fa6607d](https://github.com/php/php-src/commit/1e8fa6607d) by Jakub Zelenka 💜
 * Fix new `bug81726.phpt` for PHP 8.0 in [GH-9621](https://github.com/php/php-src/pull/9621) by Christoph M. Becker
