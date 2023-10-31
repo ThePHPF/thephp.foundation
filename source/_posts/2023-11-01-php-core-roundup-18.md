@@ -162,12 +162,8 @@ Commits are in the order they were added, grouped by author in alphabetical orde
  - Report warning if JIT cannot be enabled in [7177461141](https://github.com/php/php-src/commit/7177461141)
  - Trigger JIT tracing&amp;compilation more often in [098d9ca720](https://github.com/php/php-src/commit/098d9ca720)
 
-
-### David Carlier
- - cleanup inet_ntoa usage in [1c8943bc78](https://github.com/php/php-src/commit/1c8943bc78)
-
-
 ### David CARLIER
+ - cleanup inet_ntoa usage in [1c8943bc78](https://github.com/php/php-src/commit/1c8943bc78)
  - `ext/pdo_pgsql`: cleanup the 3rd protocol is supported since circa 2010. in [GH-12464](https://github.com/php/php-src/pull/12464)
  - `ext/pgsql`: cleanup the 3rd protocol is supported since circa 2010. in [GH-12465](https://github.com/php/php-src/pull/12465)
  - CODEOWNERS: adding myself for the pdo_pgsql extension in [GH-12456](https://github.com/php/php-src/pull/12456)
