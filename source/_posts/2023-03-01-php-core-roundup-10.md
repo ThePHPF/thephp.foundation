@@ -46,7 +46,7 @@ Hundreds of awesome PHP contributors put their efforts into improvements to the 
 
 Following are the RFCs and major pull-requests discussed, voted on, and implemented since our last update.
 
-- **RFC In Voting: [Saner array_(sum|product)()](https://wiki.php.net/rfc/saner-array-sum-product) by George Peter Banyard 💜**
+- **RFC In Voting: [Saner array_(sum|product)()](https://wiki.php.net/rfc/saner-array-sum-product) by Gina Peter Banyard 💜**
   
   Proposes to change the current behavior of `array_sum` and `array_product` to properly handle non-numeric values. This results in additional warnings when these functions encounter unsupported types such as certain objects, arrays, and resources. Further, it can result in different return values on objects that support arithmetic operations. 
 
@@ -121,15 +121,15 @@ Following are some changes that did not go through an RFC process because they a
  - Fix type inference in [81607a62ca](https://github.com/php/php-src/commit/81607a62ca) by Dmitry Stogov
  - Fix resetting `ZEND_GENERATOR_IN_FIBER` flag in [b9bca2dadb](https://github.com/php/php-src/commit/b9bca2dadb) by Bob Weinand
  - Look at executing generator for fiber destructor behaviour in [00be6e1aed](https://github.com/php/php-src/commit/00be6e1aed) by Bob Weinand
- - Use `bool` and `zend_result` where it makes sense in sockets extension in [3eb9dd47e0](https://github.com/php/php-src/commit/3eb9dd47e0) by George Peter Banyard 💜
- - Voidify `php_sock_array_from_fd_set()` as result is never used in [735edd1c17](https://github.com/php/php-src/commit/735edd1c17) by George Peter Banyard 💜
+ - Use `bool` and `zend_result` where it makes sense in sockets extension in [3eb9dd47e0](https://github.com/php/php-src/commit/3eb9dd47e0) by Gina Peter Banyard 💜
+ - Voidify `php_sock_array_from_fd_set()` as result is never used in [735edd1c17](https://github.com/php/php-src/commit/735edd1c17) by Gina Peter Banyard 💜
  - Bring minimum precision inline with `spprintf` in [93fb2c12b9](https://github.com/php/php-src/commit/93fb2c12b9) by Derick Rethans 💜
  - Fix [GH-10152](https://github.com/php/php-src/issues/10152): Custom properties of Date's child classes are not serialised in [85fbc6eaa6](https://github.com/php/php-src/commit/85fbc6eaa6) by Derick Rethans 💜
  - Fixed [GH-10447](https://github.com/php/php-src/issues/10447): 'p' format specifier does not yield 'Z' for 00:00 in [a42bf93308](https://github.com/php/php-src/commit/a42bf93308) by Derick Rethans 💜
- - Add macro to check `zend_string` is marked as valid UTF-8 in [0b9fb636d1](https://github.com/php/php-src/commit/0b9fb636d1) by George Peter Banyard 💜
- - Add function in `zend_test` to check UTF8 flag is added in [0c9181b646](https://github.com/php/php-src/commit/0c9181b646) by George Peter Banyard 💜
- - Mark numeric strings as valid UTF-8 in [78720e39a6](https://github.com/php/php-src/commit/78720e39a6) by George Peter Banyard 💜
- - Concatenating two valid UTF-8 strings produces a valid UTF-8 string in [64127b66c6](https://github.com/php/php-src/commit/64127b66c6) by George Peter Banyard 💜
+ - Add macro to check `zend_string` is marked as valid UTF-8 in [0b9fb636d1](https://github.com/php/php-src/commit/0b9fb636d1) by Gina Peter Banyard 💜
+ - Add function in `zend_test` to check UTF8 flag is added in [0c9181b646](https://github.com/php/php-src/commit/0c9181b646) by Gina Peter Banyard 💜
+ - Mark numeric strings as valid UTF-8 in [78720e39a6](https://github.com/php/php-src/commit/78720e39a6) by Gina Peter Banyard 💜
+ - Concatenating two valid UTF-8 strings produces a valid UTF-8 string in [64127b66c6](https://github.com/php/php-src/commit/64127b66c6) by Gina Peter Banyard 💜
  - Ignore generated file on arm64 in [21cab65c00](https://github.com/php/php-src/commit/21cab65c00) by Danack
  - `github/workflows/push.yml`: enable ccache in [GH-10395](https://github.com/php/php-src/pull/10395) by Max Kellermann
  - Fix `lineno` for all constant expressions in [GH-8855](https://github.com/php/php-src/pull/8855) by Ilija Tovilo 💜
@@ -149,7 +149,7 @@ Following are some changes that did not go through an RFC process because they a
  - Implement an SSE2 accelerated version of `zend_adler32` ([#10507](https://bugs.php.net/bug.php?id=10507)) in [722fbd01a3](https://github.com/php/php-src/commit/722fbd01a3) by Niels Dossche
  - Sync boost/context assembly files for fibers in [GH-10407](https://github.com/php/php-src/pull/10407) by Niels Dossche
  - Metaphone performance improvement ([#10501](https://bugs.php.net/bug.php?id=10501)) in [c9cbe525e1](https://github.com/php/php-src/commit/c9cbe525e1) by Niels Dossche
- - Do not build unnecessary FCI in Reflection in [50a2de78a8](https://github.com/php/php-src/commit/50a2de78a8) by George Peter Banyard 💜
+ - Do not build unnecessary FCI in Reflection in [50a2de78a8](https://github.com/php/php-src/commit/50a2de78a8) by Gina Peter Banyard 💜
  - When fuzzing mbstring encoding conversion code, compare output with different intermediate buffer sizes in [d5d9900661](https://github.com/php/php-src/commit/d5d9900661) by Alex Dowad
  - Add AVX2-accelerated UTF-16 decoding/encoding routines in [c8ec2ed730](https://github.com/php/php-src/commit/c8ec2ed730) by Alex Dowad
  - Fix possible `exit_counters` memory leak in ZTS build in [a21195650e](https://github.com/php/php-src/commit/a21195650e) by Dmitry Stogov
@@ -172,7 +172,7 @@ Following are some changes that did not go through an RFC process because they a
  - Fix [GH-10370](https://github.com/php/php-src/issues/10370): File corruption in `_php_stream_copy_to_stream_ex` when using `copy_file_range` ([#10440](https://bugs.php.net/bug.php?id=10440)) in [b4db690cb3](https://github.com/php/php-src/commit/b4db690cb3) by Niels Dossche
  - Fix concurrent testing in [10f2378584](https://github.com/php/php-src/commit/10f2378584) by Arnaud Le Blanc 💜
  - Fixed OSS fuzz issues [#55589](https://bugs.php.net/bug.php?id=55589), [#55599](https://bugs.php.net/bug.php?id=55599), and [#55727](https://bugs.php.net/bug.php?id=55727) in [5d9ee8f920](https://github.com/php/php-src/commit/5d9ee8f920) by Derick Rethans 💜
- - Fix memory leaks in `ext-tidy` in [GH-10545](https://github.com/php/php-src/pull/10545) by George Peter Banyard 💜
+ - Fix memory leaks in `ext-tidy` in [GH-10545](https://github.com/php/php-src/pull/10545) by Gina Peter Banyard 💜
  - Mark test as `XFAIL` in [13c34aac05](https://github.com/php/php-src/commit/13c34aac05) by Ilija Tovilo 💜
  - Temporarily disable odbc in ci in [18b611d6a0](https://github.com/php/php-src/commit/18b611d6a0) by Ilija Tovilo 💜
  - Simplify `php_reflection.c`, class name cannot start with backslash ([#10536](https://bugs.php.net/bug.php?id=10536)) in [a11e9c9d02](https://github.com/php/php-src/commit/a11e9c9d02) by Michael Voříšek
@@ -261,7 +261,7 @@ Following are some changes that did not go through an RFC process because they a
  - Fix segfault when using `ReflectionFiber` (fixes [#10439](https://bugs.php.net/bug.php?id=10439)) in [GH-10478](https://github.com/php/php-src/pull/10478) by Daniil Gentili
  - `ext/opcache/zend_shared_alloc`: use `memfd` for locking if available in [GH-10589](https://github.com/php/php-src/pull/10589) by Max Kellermann
  - `random`: Fix return type of `php_random_(bytes|int)` ([#10687](https://bugs.php.net/bug.php?id=10687)) in [f079aa2e24](https://github.com/php/php-src/commit/f079aa2e24) by Tim Düsterhus
- - Fix [GH-10672](https://github.com/php/php-src/issues/10672) (`pg_lo_open` segfaults in the `strict_types` mode) in [GH-10677](https://github.com/php/php-src/pull/10677) by George Peter Banyard 💜
+ - Fix [GH-10672](https://github.com/php/php-src/issues/10672) (`pg_lo_open` segfaults in the `strict_types` mode) in [GH-10677](https://github.com/php/php-src/pull/10677) by Gina Peter Banyard 💜
  - Fixed bug [GH-10270](https://github.com/php/php-src/issues/10270) Unable to return `CURL_READFUNC_PAUSE` in readfunc callback in [GH-10607](https://github.com/php/php-src/pull/10607) by Pierrick Charron
  - Fix incorrect type for return value of `zend_update_static_property_ex()` in [GH-10691](https://github.com/php/php-src/pull/10691) by nielsdos
  - Fix [GH-10570](https://github.com/php/php-src/issues/10570): Assertion `(key)->h != 0 && "Hash must be known"' failed in [GH-10572](https://github.com/php/php-src/pull/10572) by Niels Dossche
@@ -273,7 +273,7 @@ Following are some changes that did not go through an RFC process because they a
  - Fix incorrect error checking in `php_openssl_set_server_dh_param()` in [GH-10705](https://github.com/php/php-src/pull/10705) by Niels Dossche
  - Use `zend_result` where appropriate in `ext/openssl` Remove dead code in [GH-10704](https://github.com/php/php-src/pull/10704) by Niels Dossche
  - Change implicit enum return value checks to explicit checks ([#10703](https://bugs.php.net/bug.php?id=10703)) in [375e7402af](https://github.com/php/php-src/commit/375e7402af) by Niels Dossche
- - Fix `UBSAN` warning about applying zero offset to null pointer ([#10700](https://bugs.php.net/bug.php?id=10700)) in [382148d7bb](https://github.com/php/php-src/commit/382148d7bb) by George Peter Banyard 💜
+ - Fix `UBSAN` warning about applying zero offset to null pointer ([#10700](https://bugs.php.net/bug.php?id=10700)) in [382148d7bb](https://github.com/php/php-src/commit/382148d7bb) by Gina Peter Banyard 💜
  - Simplify checks and returns in `ext/xmlwriter` ([#10701](https://bugs.php.net/bug.php?id=10701)) in [07fe46fb5d](https://github.com/php/php-src/commit/07fe46fb5d) by Niels Dossche
  - chore: standardize the visibility of functions. ([#10708](https://bugs.php.net/bug.php?id=10708)) in [9004725367](https://github.com/php/php-src/commit/9004725367) by Marcos Marcolin
  - Minor cleanups in Zend execution APIs ([#10699](https://bugs.php.net/bug.php?id=10699)) in [9108a32bfe](https://github.com/php/php-src/commit/9108a32bfe) by Niels Dossche
@@ -284,10 +284,10 @@ Following are some changes that did not go through an RFC process because they a
  - `Zend/zend_types.h`: move `zend_refcounted` to `zend_refcounted.h` in [eb34c28fed](https://github.com/php/php-src/commit/eb34c28fed) by Max Kellermann
  - `Zend/zend_types.h`: move `zend_uchar.h` to `zend_char.h` in [42577c6b6b](https://github.com/php/php-src/commit/42577c6b6b) by Max Kellermann
  - `Zend/zend_types.h`: move `zend_string` to `zend_string.h` in [02690fe3c0](https://github.com/php/php-src/commit/02690fe3c0) by Max Kellermann
- - The userland constants do not start with PHP_ in [6a5b3f0ff9](https://github.com/php/php-src/commit/6a5b3f0ff9) by George Peter Banyard 💜
- - Fixed `ValueError` message in `substr_compare()` in [2133970152](https://github.com/php/php-src/commit/2133970152) by George Peter Banyard 💜
- - Fixed `ValueError` message in count_chars() in [adc5edd411](https://github.com/php/php-src/commit/adc5edd411) by George Peter Banyard 💜
- - Improve handling of XML options in [GH-10675](https://github.com/php/php-src/pull/10675) by George Peter Banyard 💜
+ - The userland constants do not start with PHP_ in [6a5b3f0ff9](https://github.com/php/php-src/commit/6a5b3f0ff9) by Gina Peter Banyard 💜
+ - Fixed `ValueError` message in `substr_compare()` in [2133970152](https://github.com/php/php-src/commit/2133970152) by Gina Peter Banyard 💜
+ - Fixed `ValueError` message in count_chars() in [adc5edd411](https://github.com/php/php-src/commit/adc5edd411) by Gina Peter Banyard 💜
+ - Improve handling of XML options in [GH-10675](https://github.com/php/php-src/pull/10675) by Gina Peter Banyard 💜
  - `Zend/zend_fibers`: change return value to zend_result in [GH-10622](https://github.com/php/php-src/pull/10622) by Max Kellermann
  - Remove unnecessary checks in `ftp_fopen_wrapper.c` ([#10711](https://bugs.php.net/bug.php?id=10711)) in [edacfbd1d4](https://github.com/php/php-src/commit/edacfbd1d4) by Niels Dossche
  - Allow `gen_stub.php` to parse and ignore extended docblock types in [81abd8dc37](https://github.com/php/php-src/commit/81abd8dc37) by Bob Weinand

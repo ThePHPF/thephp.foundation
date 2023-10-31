@@ -61,11 +61,11 @@ This spring, the PHP Foundation admins and developers will attend a few conferen
 
 
 
-* Sebastian Bergmann (thePHP.cc, PHPUnit), Nils Adermann (Packagist Conductors GmbH, Composer), and George Peter Banyard (PHP core developer) will participate in a keynote panel about the PHP Foundation and the State of PHP.
+* Sebastian Bergmann (thePHP.cc, PHPUnit), Nils Adermann (Packagist Conductors GmbH, Composer), and Gina Peter Banyard (PHP core developer) will participate in a keynote panel about the PHP Foundation and the State of PHP.
 * Benjamin Eberlei (Tideways GmbH, Doctrine) and Nils Adermann will give a presentation entitled _The PHP Foundation: Past, Present, and Future_.
-* George Peter Banyard will present a talk called _Contributing to PHP: How?_
+* Gina Peter Banyard will present a talk called _Contributing to PHP: How?_
 
-Benjamin Eberlei, Nils Adermann, and Sebastian Bergmann are members of the PHP Foundation’s administration. George Peter Banyard is one of the PHP core developers paid by the PHP Foundation.
+Benjamin Eberlei, Nils Adermann, and Sebastian Bergmann are members of the PHP Foundation’s administration. Gina Peter Banyard is one of the PHP core developers paid by the PHP Foundation.
 
 **[php[tek] 2023](https://tek.phparch.com/), May 16–18, Chicago, USA**
 

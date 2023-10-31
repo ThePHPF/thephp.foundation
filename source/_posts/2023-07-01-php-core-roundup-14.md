@@ -69,7 +69,7 @@ PHP 8.3 will have a new attribute `#[\Override]`. If this attribute is added to 
 
 The similar concepts exist in Java, TypeScript, C++, C#, Swift, Kotlin, and other languages.
 
-### Implemented: [Define proper semantics for range() function](https://wiki.php.net/rfc/proper-range-semantics) by George Peter Banyard 💜
+### Implemented: [Define proper semantics for range() function](https://wiki.php.net/rfc/proper-range-semantics) by Gina Peter Banyard 💜
 
 In the forthcoming PHP 8.3 release, the `range()` function will have improved behavior. It will now issue warnings or throw exceptions if it receives incompatible or unusable arguments.
 
@@ -77,7 +77,7 @@ In the forthcoming PHP 8.3 release, the `range()` function will have improved be
 
 PHP 8.3 will include a new function that works similarly to the existing `str_pad()` function, but with support for multibyte strings. This is a welcome addition for developers working with multibyte strings, as it will make it easier to manipulate and format these strings in PHP.
 
-### In Voting: [Deprecations for PHP 8.3](https://wiki.php.net/rfc/deprecations_php_8_3) by George Peter Banyard 💜, Christoph M. Becker, Máté Kocsis 💜, Tim Düsterhus, Go Kudo, Andreas Heigl
+### In Voting: [Deprecations for PHP 8.3](https://wiki.php.net/rfc/deprecations_php_8_3) by Gina Peter Banyard 💜, Christoph M. Becker, Máté Kocsis 💜, Tim Düsterhus, Go Kudo, Andreas Heigl
 
 The aim is to clean up some of the older, less consistent parts of PHP to make the language more reliable and predictable. The following list provides a short overview of the functionality targeted for deprecation:
 
@@ -125,7 +125,7 @@ Commits are grouped by author in random order.
 - Fix [GH-11246](https://github.com/php/php-src/issues/11246) cli/get_set_process_title in [GH-11247](https://github.com/php/php-src/pull/11247)
 - Fix bug [GH-9356](https://github.com/php/php-src/issues/9356): Incomplete SAN validation of IPv6 address in [GH-11145](https://github.com/php/php-src/pull/11145)
 
-### George Peter Banyard 💜
+### Gina Peter Banyard 💜
 - Fix [`-Wenum-int-mismatch`] compiler warnings in [GH-11352](https://github.com/php/php-src/pull/11352)
 - `ext/standard/array.c`: Optimize min/max functions for int/float in [GH-11194](https://github.com/php/php-src/pull/11194)
 - `http_fopen_wrapper`: fix [`-Wanalyzer-deref-before-check`] in [810507ab1b](https://github.com/php/php-src/commit/810507ab1b)

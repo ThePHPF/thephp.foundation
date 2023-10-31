@@ -72,7 +72,7 @@ This RFC vote was completed and accepted unanimously, but due to the implementat
 
 While PHP 8.3 has moved to the RC cycle, the documentation available on [php.net](https://php.net), requires updating.
 
-George P. Banyard 💜 has triaged issues in the docs and marked several of them as "good first time", which are ideal easy picks if you would like to start contributing to PHP docs. You can find the full list on [GitHub](https://github.com/php/doc-en/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
+Gina P. Banyard 💜 has triaged issues in the docs and marked several of them as "good first time", which are ideal easy picks if you would like to start contributing to PHP docs. You can find the full list on [GitHub](https://github.com/php/doc-en/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
 
 To make it easier to view the results of changes locally, Anna Filina has prepared a Docker Compose set-up. [Check it out](https://github.com/php/doc-en/pull/2638).
 
@@ -151,7 +151,7 @@ Commits are in the order they were added, grouped by author in alphabetical orde
 - Remove CPP when invoking dtrace utility in [02b3fb1f6b](https://github.com/php/php-src/commit/02b3fb1f6b)
 
 
-### George Peter Banyard 💜
+### Gina Peter Banyard 💜
 - Fix [GH-11876](https://github.com/php/php-src/issues/11876): `ini_parse_quantity()` accepts invalid quantities in [d229a480ad](https://github.com/php/php-src/commit/d229a480ad)
 - Fix various bugs related to DNF types in [02a80c5b82](https://github.com/php/php-src/commit/02a80c5b82)
 - Fix `skipif` condition on new test in [4cbc66d5e6](https://github.com/php/php-src/commit/4cbc66d5e6)

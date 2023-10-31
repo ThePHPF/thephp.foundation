@@ -74,19 +74,19 @@ Following are the RFCs and major pull-requests discussed, voted, and implemented
 
 *	**RFC Under Discussion: [Path to Saner Increment/Decrement operators](https://wiki.php.net/rfc/saner-inc-dec-operators) 💜**
 
-	PHP's increment and decrement operators can have some surprising behaviours when used with types other than int and float. Various previous attempts ([1](https://wiki.php.net/rfc/normalize_inc_dec), [2](https://wiki.php.net/rfc/alpanumeric_decrement), [3](https://wiki.php.net/rfc/increment_decrement_fixes)) have been made to improve the behaviour of these operators, but none have been implemented. The goal of this RFC by George Peter Banyard is to normalize the behaviour of `$v++` and `$v--` to be the same as `$v += 1` and `$v -= 1`, respectively.
+	PHP's increment and decrement operators can have some surprising behaviours when used with types other than int and float. Various previous attempts ([1](https://wiki.php.net/rfc/normalize_inc_dec), [2](https://wiki.php.net/rfc/alpanumeric_decrement), [3](https://wiki.php.net/rfc/increment_decrement_fixes)) have been made to improve the behaviour of these operators, but none have been implemented. The goal of this RFC by Gina Peter Banyard is to normalize the behaviour of `$v++` and `$v--` to be the same as `$v += 1` and `$v -= 1`, respectively.
 	
 *	**RFC Under Discussion: [Saner `array_(sum|product)()`](https://wiki.php.net/rfc/saner-array-sum-product) 💜**
 
-	RFC by George Peter Banyard suggests improvements to the existing `array_sum` and `array_product` functions by emitting a warning when the arrays being summed/multiplied contain invalid types. This can introduce backwards-incompatible effects (apart from the warning) on code that relies on the current behavior of the functions.
+	RFC by Gina Peter Banyard suggests improvements to the existing `array_sum` and `array_product` functions by emitting a warning when the arrays being summed/multiplied contain invalid types. This can introduce backwards-incompatible effects (apart from the warning) on code that relies on the current behavior of the functions.
 
 *	**RFC Under Discussion: [Add SameSite cookie attribute parameter](https://wiki.php.net/rfc/same-site-parameter) 💜**
 
-	RFC by George Peter Banyard proposes adding support for SameSite cookies as a function parameter to `setcookie`, `setrawcookie`, and `session_set_cookie_params` functions. While PHP 7.3 and later supports [SameSite cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) when the cookie options are passed as an array, this RFC proposes to add a new parameter that accepts a `SameSite` enum value. The proposed `SameSite` enum contains `Strict`, `Lax`, and `None` members, which are the only accepted values.
+	RFC by Gina Peter Banyard proposes adding support for SameSite cookies as a function parameter to `setcookie`, `setrawcookie`, and `session_set_cookie_params` functions. While PHP 7.3 and later supports [SameSite cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) when the cookie options are passed as an array, this RFC proposes to add a new parameter that accepts a `SameSite` enum value. The proposed `SameSite` enum contains `Strict`, `Lax`, and `None` members, which are the only accepted values.
 
 *	**RFC Under Discussion: [Add file_descriptor() function](https://wiki.php.net/rfc/file-descriptor-function) 💜**
 
-	RFC by George Peter Banyard proposes a new `file_descriptor()` function that returns the integer file descriptor of a given stream, if the underlying file system supports it.
+	RFC by Gina Peter Banyard proposes a new `file_descriptor()` function that returns the integer file descriptor of a given stream, if the underlying file system supports it.
 
 *	**RFC Declined: [Asymmetric Visibility](https://wiki.php.net/rfc/asymmetric-visibility) 💜**
 
@@ -133,8 +133,8 @@ Following are some changes that did not go through an RFC process because they a
 
  - Fix incorrect short-circuiting in constant expressions ([#10030](https://bugs.php.net/bug.php?id=10030)) in [683d81e4bd](https://github.com/php/php-src/commit/683d81e4bd) by Ilija Tovilo 💜
  - Fix [GH-9769](https://github.com/php/php-src/issues/9769): Misleading error message for unpacking of objects in [GH-9776](https://github.com/php/php-src/pull/9776) by 蝦米
- - Fix `zend_fcc_equals()` with trampolines ([#10012](https://bugs.php.net/bug.php?id=10012)) in [c4a0fc62a2](https://github.com/php/php-src/commit/c4a0fc62a2) by George Peter Banyard 💜
- - Fix [GH-10011](https://github.com/php/php-src/issues/10011) (Trampoline autoloader will get reregistered and cannot be unregistered) in [GH-10033](https://github.com/php/php-src/pull/10033) by George Peter Banyard 💜
+ - Fix `zend_fcc_equals()` with trampolines ([#10012](https://bugs.php.net/bug.php?id=10012)) in [c4a0fc62a2](https://github.com/php/php-src/commit/c4a0fc62a2) by Gina Peter Banyard 💜
+ - Fix [GH-10011](https://github.com/php/php-src/issues/10011) (Trampoline autoloader will get reregistered and cannot be unregistered) in [GH-10033](https://github.com/php/php-src/pull/10033) by Gina Peter Banyard 💜
  - Fallback to first line of function when `ex->opline` is NULL ([#10003](https://bugs.php.net/bug.php?id=10003)) in [adc23828b4](https://github.com/php/php-src/commit/adc23828b4) by Arnaud Le Blanc 💜
  - `ext/mysqli` tests "using password" optional in error messages in [GH-10035](https://github.com/php/php-src/pull/10035) by Daniel Black
  - Drop superfluous check for `imap_stream` in [GH-10053](https://github.com/php/php-src/pull/10053) by Christoph M. Becker
@@ -158,14 +158,14 @@ Following are some changes that did not go through an RFC process because they a
  - Optimize `SJIS-Mobile#DOCOMO` decoder for speed in [43cdfa3190](https://github.com/php/php-src/commit/43cdfa3190) by Alex Dowad
  - Optimize `SJIS-Mobile#KDDI` decoder for speed in [6bf0c44f48](https://github.com/php/php-src/commit/6bf0c44f48) by Alex Dowad
  - Optimize `SJIS-Mobile#SOFTBANK` decoder for speed in [e36c600a31](https://github.com/php/php-src/commit/e36c600a31) by Alex Dowad
- - Add CLEAN section to some IO tests ([#10081](https://bugs.php.net/bug.php?id=10081)) in [3be2b0d0d8](https://github.com/php/php-src/commit/3be2b0d0d8) by George Peter Banyard 💜
- - Fix borked Windows tests after [3be2b0d0](https://github.com/php/php-src/commit/3be2b0d0d83702db409bfcc3fbb4a176d565932d) in [fa3bbf078a](https://github.com/php/php-src/commit/fa3bbf078a) by George Peter Banyard 💜
+ - Add CLEAN section to some IO tests ([#10081](https://bugs.php.net/bug.php?id=10081)) in [3be2b0d0d8](https://github.com/php/php-src/commit/3be2b0d0d8) by Gina Peter Banyard 💜
+ - Fix borked Windows tests after [3be2b0d0](https://github.com/php/php-src/commit/3be2b0d0d83702db409bfcc3fbb4a176d565932d) in [fa3bbf078a](https://github.com/php/php-src/commit/fa3bbf078a) by Gina Peter Banyard 💜
  - `intl` extension, follow up on [#10006](https://bugs.php.net/bug.php?id=10006) for numfmt_set_pattern in [GH-10073](https://github.com/php/php-src/pull/10073) by David Carlier
  - Change if (stack) check to an assertion ([#10090](https://bugs.php.net/bug.php?id=10090)) in [3ab18d4d14](https://github.com/php/php-src/commit/3ab18d4d14) by Niels
  - Fix [GH-9949](https://github.com/php/php-src/issues/9949): Partial content on incomplete POST request in [GH-10059](https://github.com/php/php-src/pull/10059) by Christoph M. Becker
  - Fix Windows `shmget()` wrt. `IPC_PRIVATE` in [GH-9946](https://github.com/php/php-src/pull/9946) by Tyson Andre
  - `shmget()` with IPC_CREAT must not create 0 size SHM in [4631e9de2b](https://github.com/php/php-src/commit/4631e9de2b) by Christoph M. Becker
- - Add a new `imap_is_open()` function to check that a connection object is still valid in [52a891aeaa](https://github.com/php/php-src/commit/52a891aeaa) by George Peter Banyard 💜
+ - Add a new `imap_is_open()` function to check that a connection object is still valid in [52a891aeaa](https://github.com/php/php-src/commit/52a891aeaa) by Gina Peter Banyard 💜
  - Add `Randomizer::nextFloat()` and `Randomizer::getFloat()` in [GH-9679](https://github.com/php/php-src/pull/9679) by Tim Düsterhus
  - Implement `mb_substr_count` using fast text conversion filters in [b9cd1cdb4f](https://github.com/php/php-src/commit/b9cd1cdb4f) by Alex Dowad
  - Replace another root XML element format to the "canonical" one in [60cf9fbee0](https://github.com/php/php-src/commit/60cf9fbee0) by Máté Kocsis 💜
@@ -201,19 +201,19 @@ Following are some changes that did not go through an RFC process because they a
  - Update test for changed behaviour of GMP constructor in [a24659e70c](https://github.com/php/php-src/commit/a24659e70c) by Niels Dossche
  - Fix [GH-10072](https://github.com/php/php-src/issues/10072): PHP crashes when execute_ex is overridden and a __call trampoline is used from internal code in [233ffccc35](https://github.com/php/php-src/commit/233ffccc35) by Derick Rethans 💜
  - Make sure to disable JIT when overriding `execute_ex` in [b489e0f2b8](https://github.com/php/php-src/commit/b489e0f2b8) by Derick Rethans 💜
- - Add secondary test that registers a trampoline as a shutdown function in [44add3c791](https://github.com/php/php-src/commit/44add3c791) by George Peter Banyard 💜
+ - Add secondary test that registers a trampoline as a shutdown function in [44add3c791](https://github.com/php/php-src/commit/44add3c791) by Gina Peter Banyard 💜
  - Fix [GH-9981](https://github.com/php/php-src/issues/9981): FPM does not reset `fastcgi.error_header` in [a3891d9d1a](https://github.com/php/php-src/commit/a3891d9d1a) by Jakub Zelenka 💜
  - Fix memory leak because of incorrect optimization in [0464524292](https://github.com/php/php-src/commit/0464524292) by Dmitry Stogov
  - Fix bug [#68591](https://bugs.php.net/bug.php?id=68591): Configuration test does not perform UID lookups in [GH-10165](https://github.com/php/php-src/pull/10165) by Jakub Zelenka 💜
  - `ext/opcache/jit`: handle `zend_jit_find_trace()` failures in [b26b758952](https://github.com/php/php-src/commit/b26b758952) by Max Kellermann
- - Use proper `int|float` union type instead of `numeric` ([#10162](https://bugs.php.net/bug.php?id=10162)) in [4cee2c0127](https://github.com/php/php-src/commit/4cee2c0127) by George Peter Banyard 💜
+ - Use proper `int|float` union type instead of `numeric` ([#10162](https://bugs.php.net/bug.php?id=10162)) in [4cee2c0127](https://github.com/php/php-src/commit/4cee2c0127) by Gina Peter Banyard 💜
  - Added missed return in [ca5f668f7c](https://github.com/php/php-src/commit/ca5f668f7c) by Dmitry Stogov
  - `ext/opcache/jit/zend_jit_trace`: add missing lock for `EXIT_INVALIDATE` in [e217138b40](https://github.com/php/php-src/commit/e217138b40) by Max Kellermann
  - Allow `h` and `k` flags to be combined for `mb_convert_kana` in [GH-10174](https://github.com/php/php-src/pull/10174) by Alex Dowad
  - Register parameter attributes via stub in `ext/zend_test` ([#10183](https://bugs.php.net/bug.php?id=10183)) in [3e48e52d93](https://github.com/php/php-src/commit/3e48e52d93) by Tim Düsterhus
  - Fix null pointer dereference of param in [3a44c78f14](https://github.com/php/php-src/commit/3a44c78f14) by Niels Dossche
  - Improve `mb_detect_encoding`'s recognition of Turkish text in [f40c3fca88](https://github.com/php/php-src/commit/f40c3fca88) by Alex Dowad
- - Fix memory leak in `posix_ttyname()` in [GH-10190](https://github.com/php/php-src/pull/10190) by George Peter Banyard 💜
+ - Fix memory leak in `posix_ttyname()` in [GH-10190](https://github.com/php/php-src/pull/10190) by Gina Peter Banyard 💜
  - Fix [GH-10187](https://github.com/php/php-src/issues/10187): Segfault in stripslashes() with arm64 in [GH-10188](https://github.com/php/php-src/pull/10188) by Niels Dossche
  - Fix `variation5-win32(-mb).phpt` wrt. parallel test execution in [GH-10189](https://github.com/php/php-src/pull/10189) by Christoph M. Becker
  - Better document constructors in [eebf3bc0ba](https://github.com/php/php-src/commit/eebf3bc0ba) by Máté Kocsis 💜
@@ -245,8 +245,8 @@ Following are some changes that did not go through an RFC process because they a
  - Simplify code for conversion of UHC to Unicode in [ef114f94b9](https://github.com/php/php-src/commit/ef114f94b9) by Alex Dowad
  - Combine uhc1_ucs_table and `uhc2_ucs_table` for UHC/EUC-KR/ISO-2022-KR conversion in [74319de2f9](https://github.com/php/php-src/commit/74319de2f9) by Alex Dowad
  - Remove redundant bounds check for lookup in BIG5 conversion table in [b15d0a9ba5](https://github.com/php/php-src/commit/b15d0a9ba5) by Alex Dowad
- - Manually handle int ZPP for `posix_isatty()`/`posix_ttyname()` in [54767b1047](https://github.com/php/php-src/commit/54767b1047) by George Peter Banyard 💜
- - Check that int file descriptor is valid for `posix_(isatty|ttyname)` in [31e7d6ef05](https://github.com/php/php-src/commit/31e7d6ef05) by George Peter Banyard 💜
+ - Manually handle int ZPP for `posix_isatty()`/`posix_ttyname()` in [54767b1047](https://github.com/php/php-src/commit/54767b1047) by Gina Peter Banyard 💜
+ - Check that int file descriptor is valid for `posix_(isatty|ttyname)` in [31e7d6ef05](https://github.com/php/php-src/commit/31e7d6ef05) by Gina Peter Banyard 💜
  - Optimize conversion of CP936 to Unicode in [703725e43b](https://github.com/php/php-src/commit/703725e43b) by Alex Dowad
  - Optimize conversion of GB18030 to Unicode in [ffbddc4848](https://github.com/php/php-src/commit/ffbddc4848) by Alex Dowad
  - Optimize out bounds check in UHC decoder in [a76658b329](https://github.com/php/php-src/commit/a76658b329) by Alex Dowad
@@ -255,7 +255,7 @@ Following are some changes that did not go through an RFC process because they a
  - Optimize out checks in hot path for SJIS decoding in [d75c78b0c8](https://github.com/php/php-src/commit/d75c78b0c8) by Alex Dowad
  - Optimize out more checks from hot path for BIG5 decoding in [204694cc71](https://github.com/php/php-src/commit/204694cc71) by Alex Dowad
  - Correct entry for `0x80`,`0xFD-FF` in SJIS multi-byte character length table in [d104481af8](https://github.com/php/php-src/commit/d104481af8) by Alex Dowad
- - Add missing `EXTENSIONS` section to test file gh10200 in [de633c31dd](https://github.com/php/php-src/commit/de633c31dd) by George Peter Banyard 💜
+ - Add missing `EXTENSIONS` section to test file gh10200 in [de633c31dd](https://github.com/php/php-src/commit/de633c31dd) by Gina Peter Banyard 💜
  - Close [GH-10217](https://github.com/php/php-src/issues/10217): Use strlen() for determining the class_name length in [GH-10231](https://github.com/php/php-src/pull/10231) by Dennis Buteyn
  - chore: remove semicolon left over in [GH-10236](https://github.com/php/php-src/pull/10236) by Marcos Marcolin
  - Use different `mblen_table` for different SJIS variants in [3152b7b26f](https://github.com/php/php-src/commit/3152b7b26f) by Alex Dowad
@@ -309,20 +309,20 @@ Following are some changes that did not go through an RFC process because they a
  - Fix substr_replace with slots in repl_ht being UNDEF in [GH-10323](https://github.com/php/php-src/pull/10323) by Niels Dossche
  - Fix missing check for `xmlTextWriterEndElement` in [GH-10324](https://github.com/php/php-src/pull/10324) by Niels Dossche
  - Fix wrong flags check for compression method in `phar_object.c` in [GH-10328](https://github.com/php/php-src/pull/10328) by Niels Dossche
- - Move `http_build_query()` tests to the HTTP test folder in [c177ea91d4](https://github.com/php/php-src/commit/c177ea91d4) by George Peter Banyard 💜
- - Add more tests for `http_build_query()` in [ec7c7a7550](https://github.com/php/php-src/commit/ec7c7a7550) by George Peter Banyard 💜
- - Handle floats directly in `http_build_query()` in [7d33a30b40](https://github.com/php/php-src/commit/7d33a30b40) by George Peter Banyard 💜
- - Extract scalar url encoding into its own function in [20a6638e22](https://github.com/php/php-src/commit/20a6638e22) by George Peter Banyard 💜
- - Introduce new INI API to get `zend_string*` value for an INI setting in [098a43dbd0](https://github.com/php/php-src/commit/098a43dbd0) by George Peter Banyard 💜
- - Use a zend_string* for `arg_sep` in `php_url_encode_hash_ex()` in [76eaff080a](https://github.com/php/php-src/commit/76eaff080a) by George Peter Banyard 💜
- - Use `zend_string*` instead of `char*` and `size_t` pair for `key_prefix` in [c9b8d1bfaa](https://github.com/php/php-src/commit/c9b8d1bfaa) by George Peter Banyard 💜
- - Drop `key_suffix` parameter in `php_url_encode_hash_ex()` in [540e5104df](https://github.com/php/php-src/commit/540e5104df) by George Peter Banyard 💜
- - Update `UPGRADING.INTERNALS` with the changes made to `php_url_encode_hash_ex()` in [334ecbed5e](https://github.com/php/php-src/commit/334ecbed5e) by George Peter Banyard 💜
+ - Move `http_build_query()` tests to the HTTP test folder in [c177ea91d4](https://github.com/php/php-src/commit/c177ea91d4) by Gina Peter Banyard 💜
+ - Add more tests for `http_build_query()` in [ec7c7a7550](https://github.com/php/php-src/commit/ec7c7a7550) by Gina Peter Banyard 💜
+ - Handle floats directly in `http_build_query()` in [7d33a30b40](https://github.com/php/php-src/commit/7d33a30b40) by Gina Peter Banyard 💜
+ - Extract scalar url encoding into its own function in [20a6638e22](https://github.com/php/php-src/commit/20a6638e22) by Gina Peter Banyard 💜
+ - Introduce new INI API to get `zend_string*` value for an INI setting in [098a43dbd0](https://github.com/php/php-src/commit/098a43dbd0) by Gina Peter Banyard 💜
+ - Use a zend_string* for `arg_sep` in `php_url_encode_hash_ex()` in [76eaff080a](https://github.com/php/php-src/commit/76eaff080a) by Gina Peter Banyard 💜
+ - Use `zend_string*` instead of `char*` and `size_t` pair for `key_prefix` in [c9b8d1bfaa](https://github.com/php/php-src/commit/c9b8d1bfaa) by Gina Peter Banyard 💜
+ - Drop `key_suffix` parameter in `php_url_encode_hash_ex()` in [540e5104df](https://github.com/php/php-src/commit/540e5104df) by Gina Peter Banyard 💜
+ - Update `UPGRADING.INTERNALS` with the changes made to `php_url_encode_hash_ex()` in [334ecbed5e](https://github.com/php/php-src/commit/334ecbed5e) by Gina Peter Banyard 💜
  - Fix [GH-10271](https://github.com/php/php-src/issues/10271): Incorrect arithmetic calculations when using JIT in [42eed7bb4e](https://github.com/php/php-src/commit/42eed7bb4e) by Dmitry Stogov
  - Remove dead cleanup code ([#10333](https://bugs.php.net/bug.php?id=10333)) in [9006f06a84](https://github.com/php/php-src/commit/9006f06a84) by Niels Dossche
  - Remove `main()` from mysqli warning ([#10321](https://bugs.php.net/bug.php?id=10321)) in [38dfd20526](https://github.com/php/php-src/commit/38dfd20526) by Kamil Tekiela
  - `MYSQL_ATTR_USE_BUFFERED_QUERY` is a bool attribute ([#10320](https://bugs.php.net/bug.php?id=10320)) in [da550e7762](https://github.com/php/php-src/commit/da550e7762) by Kamil Tekiela
- - Add some const qualifiers and better return types to `zend_object_handlers.h` ([#10330](https://bugs.php.net/bug.php?id=10330)) in [6556601b45](https://github.com/php/php-src/commit/6556601b45) by George Peter Banyard 💜
+ - Add some const qualifiers and better return types to `zend_object_handlers.h` ([#10330](https://bugs.php.net/bug.php?id=10330)) in [6556601b45](https://github.com/php/php-src/commit/6556601b45) by Gina Peter Banyard 💜
  - Fix [GH-9675](https://github.com/php/php-src/issues/9675): Re-adjust run_time_cache init for internal enum methods in [GH-10143](https://github.com/php/php-src/pull/10143) by Petar Obradović
  - Fix incorrect comparison in block optimization pass in [dfe9c2af19](https://github.com/php/php-src/commit/dfe9c2af19) by Niels Dossche
  - Add accelerated (SIMD-based) implementation of mb_check_encoding for UTF-8 in [3ae4779305](https://github.com/php/php-src/commit/3ae4779305) by Alex Dowad

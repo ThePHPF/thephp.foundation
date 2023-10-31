@@ -9,11 +9,11 @@ author:
 published_at: 6 May 2022
 ---
 
-The initial group of sponsored developers has now been "at it" for a month, and we thought that you might be interested in who they are and what they work on. I got the opportunity to (virtually) sit down with Derick Rethans, George Peter Banyard, Ilija Tovilo, Jakub Zelenka, Máté Kocsis, and Arnaud Le Blanc for an interview.
+The initial group of sponsored developers has now been "at it" for a month, and we thought that you might be interested in who they are and what they work on. I got the opportunity to (virtually) sit down with Derick Rethans, Gina Peter Banyard, Ilija Tovilo, Jakub Zelenka, Máté Kocsis, and Arnaud Le Blanc for an interview.
 
 #### **Sebastian:** Let's start with a round of introductions. Who are you?
 
-**George:** Hello, my name is George Peter Banyard. I'm studying pure mathematics at Imperial College London and expected to graduate in October. I'm half German, half British, but grew up in the south of France. During my free time I mostly watch anime or play puzzle games and Richii mahjong.
+**George:** Hello, my name is Gina Peter Banyard. I'm studying pure mathematics at Imperial College London and expected to graduate in October. I'm half German, half British, but grew up in the south of France. During my free time I mostly watch anime or play puzzle games and Richii mahjong.
 
 **Derick:** I am originally from the Netherlands but currently living and enjoying London in the United Kingdom. When I am not behind my computer I will be likely be walking in the countryside or site, with my trusty camera to commit these views to screen.
 

@@ -14,7 +14,7 @@ We’re off by two but still happy to bring you an update from the foundation.
 
 It's been a month since the PHP Foundation began to fully deliver on its 2022 goal of hiring developers to work on the PHP core.
 
-Backed by our awesome sponsors, six talented folks have already been doing their work for a whole month. Derick Rethans, Arnaud Le Blanc, George Peter Banyard, Jakub Zelenka, and Máté Kocsis started on April 1, and Ilija Tovilo started even earlier than that.
+Backed by our awesome sponsors, six talented folks have already been doing their work for a whole month. Derick Rethans, Arnaud Le Blanc, Gina Peter Banyard, Jakub Zelenka, and Máté Kocsis started on April 1, and Ilija Tovilo started even earlier than that.
 
 We’ve made the first [payouts](https://opencollective.com/phpfoundation/expenses), and we will continue making them regularly at the end of each month.
 

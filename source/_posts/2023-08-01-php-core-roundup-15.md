@@ -68,7 +68,7 @@ The vote was unanimously accepted, and is pending implementation.
 
 This RFC proposes to deprecate a number of functions that have overloaded signatures, meaning they behave differently based on the number or type of arguments passed to them. The goal is to make PHP's function signatures more consistent and predictable.
 
-### Implemented: [Deprecations for PHP 8.3](https://wiki.php.net/rfc/deprecations_php_8_3) by George Peter Banyard 💜, Christoph M. Becker, Máté Kocsis 💜, Tim Düsterhus, Go Kudo, Andreas Heigl
+### Implemented: [Deprecations for PHP 8.3](https://wiki.php.net/rfc/deprecations_php_8_3) by Gina Peter Banyard 💜, Christoph M. Becker, Máté Kocsis 💜, Tim Düsterhus, Go Kudo, Andreas Heigl
 
 The aim is to clean up some of the older, less consistent parts of PHP to make the language more reliable and predictable. The following list provides a short overview of the functionality targeted for deprecation:
 
@@ -83,7 +83,7 @@ PHP 8.3 will have a new attribute `#[\Override]`. If this attribute is added to 
 
 The similar concepts exist in Java, TypeScript, C++, C#, Swift, Kotlin, and other languages.
 
-### Implemented: [Path to Saner Increment/Decrement operators](https://wiki.php.net/rfc/saner-inc-dec-operators) by George Peter Banyard  💜
+### Implemented: [Path to Saner Increment/Decrement operators](https://wiki.php.net/rfc/saner-inc-dec-operators) by Gina Peter Banyard  💜
 
 This RFC proposed several improvements to normalize the behavior of `$v++` and `$v--` to be the same as `$v += 1` and `$v -= 1`, which PHP is currently inconsistent on.
 
@@ -165,7 +165,7 @@ Commits are in the order they were added, grouped by author in alphabetical orde
  - Add fallback value syntax for ini variables in [bc8b9aedf6](https://github.com/php/php-src/commit/bc8b9aedf6)
  - small fixes in [cd9dba81c7](https://github.com/php/php-src/commit/cd9dba81c7)
 
-### George Peter Banyard 💜
+### Gina Peter Banyard 💜
  - Use binary safe case compare in new `zend_string` API in [eb5cc1372c](https://github.com/php/php-src/commit/eb5cc1372c)
  - Revert "Use binary safe case compare in new `zend_string` API" in [a342138e17](https://github.com/php/php-src/commit/a342138e17)
  - Add tests for uncastable streams and dataloss streams in [GH-10173](https://github.com/php/php-src/pull/10173)

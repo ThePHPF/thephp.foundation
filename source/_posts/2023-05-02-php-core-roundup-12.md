@@ -86,7 +86,7 @@ Following are the RFCs and major pull-requests discussed, voted on, and implemen
 
 <br />
 
-- **RFC Under [Discussion](https://externals.io/message/119851): [New core autoloading mechanism with support for function autoloading](https://wiki.php.net/rfc/core-autoloading) by George Peter Banyard 💜 and Dan Ackroyd**
+- **RFC Under [Discussion](https://externals.io/message/119851): [New core autoloading mechanism with support for function autoloading](https://wiki.php.net/rfc/core-autoloading) by Gina Peter Banyard 💜 and Dan Ackroyd**
   
   PHP has had support for class autoloading since PHP 5 and it is an extremely useful feature that is relied on to only load classes that are being used within the current request. However, the current autoloading mechanism does not support autoloading functions.
 
@@ -170,33 +170,33 @@ Following are some changes that did not go through an RFC process because they a
  - Re-add `GC_DTOR` and `GC_DTOR_NO_REF` in [c796ce5713](https://github.com/php/php-src/commit/c796ce5713) by Dmitry Stogov
  - Fix [GH-9397](https://github.com/php/php-src/issues/9397): exif read : warnings and errors : Potentially invalid endianess, Illegal IFD size and Undefined index in [GH-10470](https://github.com/php/php-src/pull/10470) by Niels Dossche
  - Add separate static property through trait if parent already declares it in [GH-10937](https://github.com/php/php-src/pull/10937) by Ilija Tovilo 💜
- - Use `zend_call_known_instance_method()` instead of building FCI/FCC in serializer subroutine in [GH-9955](https://github.com/php/php-src/pull/9955) by George Peter Banyard 💜
- - Extract common code for phar IO intercept functions in [3fb63f7fa2](https://github.com/php/php-src/commit/3fb63f7fa2) by George Peter Banyard 💜
- - size variable is only used once, move closer to usage in [96ffdd492c](https://github.com/php/php-src/commit/96ffdd492c) by George Peter Banyard 💜
- - Improve locality of stream variable in [06896d1c45](https://github.com/php/php-src/commit/06896d1c45) by George Peter Banyard 💜
- - Use `zend_string_concat` helper instead of `strpprintf` in [8e51cfe0ae](https://github.com/php/php-src/commit/8e51cfe0ae) by George Peter Banyard 💜
- - Convert `char*` + `size_t` parameters to `zend_string*` in `phar_find_in_include_path()` in [7d93ef067f](https://github.com/php/php-src/commit/7d93ef067f) by George Peter Banyard 💜
+ - Use `zend_call_known_instance_method()` instead of building FCI/FCC in serializer subroutine in [GH-9955](https://github.com/php/php-src/pull/9955) by Gina Peter Banyard 💜
+ - Extract common code for phar IO intercept functions in [3fb63f7fa2](https://github.com/php/php-src/commit/3fb63f7fa2) by Gina Peter Banyard 💜
+ - size variable is only used once, move closer to usage in [96ffdd492c](https://github.com/php/php-src/commit/96ffdd492c) by Gina Peter Banyard 💜
+ - Improve locality of stream variable in [06896d1c45](https://github.com/php/php-src/commit/06896d1c45) by Gina Peter Banyard 💜
+ - Use `zend_string_concat` helper instead of `strpprintf` in [8e51cfe0ae](https://github.com/php/php-src/commit/8e51cfe0ae) by Gina Peter Banyard 💜
+ - Convert `char*` + `size_t` parameters to `zend_string*` in `phar_find_in_include_path()` in [7d93ef067f](https://github.com/php/php-src/commit/7d93ef067f) by Gina Peter Banyard 💜
  - Add FPM FastCGI env var test for Apache without path info fix in [15802dfc62](https://github.com/php/php-src/commit/15802dfc62) by Jakub Zelenka 💜
  - Fix number of elements after packed hash filling in [GH-11022](https://github.com/php/php-src/pull/11022) by Niels Dossche
  - Fix [GH-11016](https://github.com/php/php-src/issues/11016): Heap buffer overflow in `ZEND_ADD_ARRAY_UNPACK_SPEC_HANDLER` in [GH-11021](https://github.com/php/php-src/pull/11021) by Niels Dossche
  - Add FPM FCGI env Apache handler UDS test in [ebb3213f79](https://github.com/php/php-src/commit/ebb3213f79) by Jakub Zelenka 💜
  - Fixed tests and remove the `XFAIL` 'Various bugs exist'. They did, but they were in the tests in [e67bb14ab4](https://github.com/php/php-src/commit/e67bb14ab4) by Derick Rethans 💜
  - Fix [GH-10737](https://github.com/php/php-src/issues/10737): PHP 8.1.16 segfaults on line 597 of `sapi/apache2handler/sapi_apache2.c` in [GH-10863](https://github.com/php/php-src/pull/10863) by Niels Dossche
- - Use `zend_string` for DBA path in [GH-10698](https://github.com/php/php-src/pull/10698) by George Peter Banyard 💜
+ - Use `zend_string` for DBA path in [GH-10698](https://github.com/php/php-src/pull/10698) by Gina Peter Banyard 💜
  - `ext/sockets` adding FreeBSD's `SO_REUSEPORT_LB` constant in [6c532df705](https://github.com/php/php-src/commit/6c532df705) by David CARLIER
- - Add case insensitive versions of the `zend_string_starts_with_*` APIs in [GH-11032](https://github.com/php/php-src/pull/11032) by George Peter Banyard 💜
- - `ext/phar`: Prevent unnecessary known string length computation in [GH-11033](https://github.com/php/php-src/pull/11033) by George Peter Banyard 💜
- - `ext/phar`: Remove duplicate cleaning-up code in [4082d425a9](https://github.com/php/php-src/commit/4082d425a9) by George Peter Banyard 💜
+ - Add case insensitive versions of the `zend_string_starts_with_*` APIs in [GH-11032](https://github.com/php/php-src/pull/11032) by Gina Peter Banyard 💜
+ - `ext/phar`: Prevent unnecessary known string length computation in [GH-11033](https://github.com/php/php-src/pull/11033) by Gina Peter Banyard 💜
+ - `ext/phar`: Remove duplicate cleaning-up code in [4082d425a9](https://github.com/php/php-src/commit/4082d425a9) by Gina Peter Banyard 💜
  - Fix unevaluated rhs of class constant fetch in constant expression in [GH-11047](https://github.com/php/php-src/pull/11047) by Ilija Tovilo 💜
  - Remove unneeded occurrences of my name in `UPGRADING` in [d64c7184d4](https://github.com/php/php-src/commit/d64c7184d4) by Alex Dowad
  - Add more details to `NEWS` on `mb_detect_encoding`; also include in UPGRADING in [aa51871adc](https://github.com/php/php-src/commit/aa51871adc) by Alex Dowad
  - Add additional note on `mb_encode_mimeheader` in `UPGRADING` in [a62d192ede](https://github.com/php/php-src/commit/a62d192ede) by Alex Dowad
  - Add more details in `UPGRADING` on `mb_check_encoding` changes in [7cef7cb0ee](https://github.com/php/php-src/commit/7cef7cb0ee) by Alex Dowad
  - Allow `FETCH_OBJ_W` and `FETCH_STATIC_PROP_W` to return `INDIRECT`/`UNDEF` zval for uninitialized typed properties in [GH-11048](https://github.com/php/php-src/pull/11048) by Dmitry Stogov
- - `ext/curl`: Protocol should be a case insensitive check in [GH-11052](https://github.com/php/php-src/pull/11052) by George Peter Banyard 💜
+ - `ext/curl`: Protocol should be a case insensitive check in [GH-11052](https://github.com/php/php-src/pull/11052) by Gina Peter Banyard 💜
  - Use curl from brew on MacOS CI in [GH-11056](https://github.com/php/php-src/pull/11056) by Jakub Zelenka 💜
  - Improve ini number handling with `INI_SCANNER_TYPED` in [GH-11014](https://github.com/php/php-src/pull/11014) by Ilija Tovilo 💜
- - `ext/phar`: Fix recently introduced potential `NULL` dereferencement segfaults in [GH-11065](https://github.com/php/php-src/pull/11065) by George Peter Banyard 💜
+ - `ext/phar`: Fix recently introduced potential `NULL` dereferencement segfaults in [GH-11065](https://github.com/php/php-src/pull/11065) by Gina Peter Banyard 💜
  - Optimize `HT_HASH_RESET` in [GH-11059](https://github.com/php/php-src/pull/11059) by Niels Dossche
  - `mb_parse_str`, `mb_http_input`, and `mb_convert_variables` use fast text conversion code for automatic encoding detection in [6df7557e43](https://github.com/php/php-src/commit/6df7557e43) by Alex Dowad
  - Remove unnecessary memory clearing in virtual_file_ex() in [GH-10963](https://github.com/php/php-src/pull/10963) by Niels Dossche

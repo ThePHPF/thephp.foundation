@@ -46,7 +46,7 @@ Hundreds of awesome PHP contributors put their efforts into improvements to the 
 
 Following are the RFCs and major pull-requests discussed, voted on, and implemented since our last update.
 
-- **RFC Implemented: [Saner array_(sum|product)()](https://wiki.php.net/rfc/saner-array-sum-product) by George Peter Banyard 💜**
+- **RFC Implemented: [Saner array_(sum|product)()](https://wiki.php.net/rfc/saner-array-sum-product) by Gina Peter Banyard 💜**
   
   Proposed to change the current behavior of `array_sum` and `array_product` to properly handle non-numeric values. This results in additional warnings when these functions encounter unsupported types such as certain objects, arrays, and resources. Further, it can result in different return values on objects that support arithmetic operations. 
 
@@ -93,7 +93,7 @@ Following are the RFCs and major pull-requests discussed, voted on, and implemen
   
   This RFC proposes that [`unserialize()`](http://www.php.net/unserialize) shall emit a new `E_WARNING` whenever the input string contains additional bytes once the unserialization parser terminates after successfully parsing a value. In other words: A warning shall be emitted if bytes can be removed from the end of the input string without changing the return value of [`unserialize()`](http://www.php.net/unserialize).
 
-- **RFC Under [Discussion](https://externals.io/message/119749): [Define proper semantics for range() function](https://wiki.php.net/rfc/proper-range-semantics) by George Peter Banyard** 💜
+- **RFC Under [Discussion](https://externals.io/message/119749): [Define proper semantics for range() function](https://wiki.php.net/rfc/proper-range-semantics) by Gina Peter Banyard** 💜
   
   This RFC attempts to iron out several undesirable and unexpected behaviors of the `range()` function. Introduced in PHP 4, `range()` function attempts to work with various types not only including integers, floats, and strings, but also other types. There are series of behaviors highlighted in the RFC along with several improvements proposed (throwing exceptions, emitting warnings, changing behaviors, etc).
  
@@ -151,20 +151,20 @@ Following are some changes that did not go through an RFC process because they a
  - Fix [GH-10709](https://github.com/php/php-src/issues/10709): UAF in recursive AST evaluation in [GH-10718](https://github.com/php/php-src/pull/10718) by Ilija Tovilo 💜
  - Revert "Throw on negative setcookie expiration timestamp" in [9f591c9bf6](https://github.com/php/php-src/commit/9f591c9bf6) by Ilija Tovilo 💜
  - random: Add missing `php.h` include to `php_random.h` ([#10764](https://bugs.php.net/bug.php?id=10764)) in [5087931963](https://github.com/php/php-src/commit/5087931963) by Tim Düsterhus
- - Fix `-Wstrict-prototypes` in DBA in [648e896d0e](https://github.com/php/php-src/commit/648e896d0e) by George Peter Banyard 💜
+ - Fix `-Wstrict-prototypes` in DBA in [648e896d0e](https://github.com/php/php-src/commit/648e896d0e) by Gina Peter Banyard 💜
  - Remove unnecessary workaround for the true type in [368febbf89](https://github.com/php/php-src/commit/368febbf89) by Máté Kocsis 💜
  - `mb_encode_mimeheader` does not crash if provided encoding has no MIME name set in [7c1ee5a02a](https://github.com/php/php-src/commit/7c1ee5a02a) by Alex Dowad
  - Enable GitHub actions cancel-in-progress for PRs in [GH-10799](https://github.com/php/php-src/pull/10799) by Ilija Tovilo 💜
  - Fix readonly+clone JIT issues in [GH-10748](https://github.com/php/php-src/pull/10748) by Ilija Tovilo 💜
  - `*/*.m4`: `update main()` signatures in [fa65873502](https://github.com/php/php-src/commit/fa65873502) by Michael Orlitzky
  - `ext/iconv/config.m4`: add missing `stdio.h` include in [GH-10751](https://github.com/php/php-src/pull/10751) by Michael Orlitzky
- - RFC: Saner `array_(sum|product)()` ([#10161](https://bugs.php.net/bug.php?id=10161)) in [3b06618813](https://github.com/php/php-src/commit/3b06618813) by George Peter Banyard 💜
+ - RFC: Saner `array_(sum|product)()` ([#10161](https://bugs.php.net/bug.php?id=10161)) in [3b06618813](https://github.com/php/php-src/commit/3b06618813) by Gina Peter Banyard 💜
  - Imply UTF8 validity in implode function ([#10780](https://bugs.php.net/bug.php?id=10780)) in [3821938e81](https://github.com/php/php-src/commit/3821938e81) by Michael Voříšek
  - Fix [GH-8646](https://github.com/php/php-src/issues/8646): Memory leak PHP FPM 8.1 in [GH-10783](https://github.com/php/php-src/pull/10783) by Niels Dossche
  - Fix [GH-8065](https://github.com/php/php-src/issues/8065): `opcache.c`onsistency_checks > 0 causes segfaults in PHP >= 8.1.5 in fpm context in [GH-10798](https://github.com/php/php-src/pull/10798) by Niels Dossche
  - Re-add some CTE functions that were removed from being CTE by a mistake in [GH-10768](https://github.com/php/php-src/pull/10768) by Michael Voříšek
  - Update libmysql 5.7 version in [12290b796b](https://github.com/php/php-src/commit/12290b796b) by Ilija Tovilo 💜
- - Suppress `-Wstrict-prototypes` in GD extension ([#10803](https://bugs.php.net/bug.php?id=10803)) in [afd8695a22](https://github.com/php/php-src/commit/afd8695a22) by George Peter Banyard 💜
+ - Suppress `-Wstrict-prototypes` in GD extension ([#10803](https://bugs.php.net/bug.php?id=10803)) in [afd8695a22](https://github.com/php/php-src/commit/afd8695a22) by Gina Peter Banyard 💜
  - Micro optimization: readonly properties always have a type in [574e531127](https://github.com/php/php-src/commit/574e531127) by Máté Kocsis 💜
  - Fixed macro generation for variadics, which don't have a default value in [717335ec63](https://github.com/php/php-src/commit/717335ec63) by Derick Rethans 💜
  - Add test case in [8a9b80cfe0](https://github.com/php/php-src/commit/8a9b80cfe0) by Derick Rethans 💜
@@ -265,7 +265,7 @@ Following are some changes that did not go through an RFC process because they a
  - `ext/pdo_mysql`: mysql_handle_closer nullify some freed data in [f6989df8cc](https://github.com/php/php-src/commit/f6989df8cc) by David CARLIER
  - Fix undefined behaviour in string uppercasing and lowercasing in [GH-10936](https://github.com/php/php-src/pull/10936) by Niels Dossche
  - Fix buffer-overflow in `open_basedir()` in [a7f91e37de](https://github.com/php/php-src/commit/a7f91e37de) by Ilija Tovilo 💜
- - Propagate UTF-8 flag during Rope operations ([#10915](https://bugs.php.net/bug.php?id=10915)) in [d7c351ea54](https://github.com/php/php-src/commit/d7c351ea54) by George Peter Banyard 💜
+ - Propagate UTF-8 flag during Rope operations ([#10915](https://bugs.php.net/bug.php?id=10915)) in [d7c351ea54](https://github.com/php/php-src/commit/d7c351ea54) by Gina Peter Banyard 💜
  - Use `php_random_bytes_silent()` where possible in gmp_init_random() ([#10944](https://bugs.php.net/bug.php?id=10944)) in [8317a147b9](https://github.com/php/php-src/commit/8317a147b9) by Niels Dossche
  - Fix undefined behaviour when writing 32-bit values in phar/tar.c in [GH-10940](https://github.com/php/php-src/pull/10940) by Niels Dossche
  - Fix undefined behaviour in `GENERATE_SEED()` in [GH-10942](https://github.com/php/php-src/pull/10942) by Niels Dossche

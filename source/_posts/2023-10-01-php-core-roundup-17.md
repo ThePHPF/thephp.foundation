@@ -94,7 +94,7 @@ RFC is currently in draft, which stands to track ideas on deprecating certain fe
 
 While PHP 8.3 has moved to the RC cycle, the documentation available on [php.net](https://php.net), requires updating. An initial version of the [PHP 8.3 migration guide](https://www.php.net/manual/en/migration83.php) has been published by Yoshinari Takaoka.
 
-George P. Banyard 💜 is tracking the progress for PHP 8.3 related changes in [php/doc-en#2796](https://github.com/php/doc-en/issues/2796), and also triaged issues in the docs and marked several of them as "good first time", which are ideal easy picks if you would like to start contributing to PHP docs. You can find the full list on [GitHub](https://github.com/php/doc-en/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
+Gina P. Banyard 💜 is tracking the progress for PHP 8.3 related changes in [php/doc-en#2796](https://github.com/php/doc-en/issues/2796), and also triaged issues in the docs and marked several of them as "good first time", which are ideal easy picks if you would like to start contributing to PHP docs. You can find the full list on [GitHub](https://github.com/php/doc-en/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
 
 <br>
 
@@ -147,7 +147,7 @@ Commits are in the order they were added, grouped by author in alphabetical orde
  - Fix [GH-12207](https://github.com/php/php-src/issues/12207) memory leak of doc blocks of static properties in [910f579f14](https://github.com/php/php-src/commit/910f579f14)
 
 
-### George Peter Banyard 💜
+### Gina Peter Banyard 💜
  - `ext/mysqli`: Work on making tests parallizable in [GH-11814](https://github.com/php/php-src/pull/11814)
  - `ext/pcntl`: Remove useless call to `zend_get_callable_name()` in [GH-12241](https://github.com/php/php-src/pull/12241)
  - Fixed oss-fuzz [#62294](https://bugs.php.net/bug.php?id=62294): Unsetting variable after ++/-- on string variable warning in [0b614a6c2b](https://github.com/php/php-src/commit/0b614a6c2b)

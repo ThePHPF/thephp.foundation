@@ -139,8 +139,8 @@ Following are some changes that did not go through an RFC process because they a
  - Fix [GH-9770](https://github.com/php/php-src/issues/9770): Add small timeout in status-listen test in [8229649045](https://github.com/php/php-src/commit/8229649045) by Jakub Zelenka 💜
  - Fix memory leak in [482ae71fda](https://github.com/php/php-src/commit/482ae71fda) by Dmitry Stogov
  - socket add `socket_atmark` support in [4c4e72f149](https://github.com/php/php-src/commit/4c4e72f149) by David CARLIER
- - Use `zend_call_known_function()` in `ext-pgsql` instead of building FCI/FCC in [4f8d10791b](https://github.com/php/php-src/commit/4f8d10791b) by George Peter Banyard 💜
- - Use `zend_call_known_function()` in `ext-mysqli` instead of building FCI/FCC in [c0f2727e55](https://github.com/php/php-src/commit/c0f2727e55) by George Peter Banyard 💜
+ - Use `zend_call_known_function()` in `ext-pgsql` instead of building FCI/FCC in [4f8d10791b](https://github.com/php/php-src/commit/4f8d10791b) by Gina Peter Banyard 💜
+ - Use `zend_call_known_function()` in `ext-mysqli` instead of building FCI/FCC in [c0f2727e55](https://github.com/php/php-src/commit/c0f2727e55) by Gina Peter Banyard 💜
  - `labeler.yml`: set top-level read-only permissions in [GH-9862](https://github.com/php/php-src/pull/9862) by Pedro Nacht
  - Timelib: Updated to version 2022.6 (2022f) in [2b5bed904e](https://github.com/php/php-src/commit/2b5bed904e) by Derick Rethans 💜
  - Don’t reset func in `zend_closure_internal_handler` in [8dabbda8bc](https://github.com/php/php-src/commit/8dabbda8bc) by Florian Sowade
@@ -148,11 +148,11 @@ Following are some changes that did not go through an RFC process because they a
  - Fix [GH-9829](https://github.com/php/php-src/issues/9829): Bug in refactoring Windows shmat() function in [GH-9873](https://github.com/php/php-src/pull/9873) by Christoph M. Becker
  - Fix potential NULL pointer dereference Windows `shm*()` functions in [GH-9872](https://github.com/php/php-src/pull/9872) by Christoph M. Becker
  - Fix observing inherited internal functions in [b30448f48f](https://github.com/php/php-src/commit/b30448f48f) by Bob Weinand
- - Store a reference to closures in the FCC in [7c45b95894](https://github.com/php/php-src/commit/7c45b95894) by George Peter Banyard 💜
- - Add various APIs to handle FCC structures in [de4cfff5f6](https://github.com/php/php-src/commit/de4cfff5f6) by George Peter Banyard 💜
- - Refactor SPL Callback filter to only use FCC in [8d5d3fd035](https://github.com/php/php-src/commit/8d5d3fd035) by George Peter Banyard 💜
- - Only use FCC for SQLite3 user defined functions/collations/authorizer in [29bb426933](https://github.com/php/php-src/commit/29bb426933), [37aea43eed](https://github.com/php/php-src/commit/37aea43eed), and [d105958603](https://github.com/php/php-src/commit/d105958603) by George Peter Banyard 💜
- - Only use FCC for libxml entity loader callback in [fb114bf45b](https://github.com/php/php-src/commit/fb114bf45b) by George Peter Banyard 💜
+ - Store a reference to closures in the FCC in [7c45b95894](https://github.com/php/php-src/commit/7c45b95894) by Gina Peter Banyard 💜
+ - Add various APIs to handle FCC structures in [de4cfff5f6](https://github.com/php/php-src/commit/de4cfff5f6) by Gina Peter Banyard 💜
+ - Refactor SPL Callback filter to only use FCC in [8d5d3fd035](https://github.com/php/php-src/commit/8d5d3fd035) by Gina Peter Banyard 💜
+ - Only use FCC for SQLite3 user defined functions/collations/authorizer in [29bb426933](https://github.com/php/php-src/commit/29bb426933), [37aea43eed](https://github.com/php/php-src/commit/37aea43eed), and [d105958603](https://github.com/php/php-src/commit/d105958603) by Gina Peter Banyard 💜
+ - Only use FCC for libxml entity loader callback in [fb114bf45b](https://github.com/php/php-src/commit/fb114bf45b) by Gina Peter Banyard 💜
  - Fix hardcoded paths in test in [4935e10fc8](https://github.com/php/php-src/commit/4935e10fc8) by Bob Weinand
  - Delay releasing closures until after observer end in [8e49d7f32f](https://github.com/php/php-src/commit/8e49d7f32f) by Bob Weinand
  - Properly deal with internal attributes used on promoted properties in [GH-9661](https://github.com/php/php-src/pull/9661) by Martin Schröder
@@ -188,9 +188,9 @@ Following are some changes that did not go through an RFC process because they a
  - Escape the role attribute of namespaced classes in [GH-9952](https://github.com/php/php-src/pull/9952) by Máté Kocsis 💜
  - Cache UTF-8-validity status of strings in GC flags in [d0d834429f](https://github.com/php/php-src/commit/d0d834429f) by Alex Dowad
  - Promote `unserialize()` notices to warning in [GH-9629](https://github.com/php/php-src/pull/9629) by Tim Düsterhus
- - Remove code for OS2 in [726d595ec7](https://github.com/php/php-src/commit/726d595ec7) by George Peter Banyard 💜
- - Use `zend_result` return type instead of innacurate ones in [dbf54e1a8b](https://github.com/php/php-src/commit/dbf54e1a8b) by George Peter Banyard 💜
- - Change conditional check in `disk_free_space()` test in [bab9e349cb](https://github.com/php/php-src/commit/bab9e349cb) by George Peter Banyard 💜
+ - Remove code for OS2 in [726d595ec7](https://github.com/php/php-src/commit/726d595ec7) by Gina Peter Banyard 💜
+ - Use `zend_result` return type instead of innacurate ones in [dbf54e1a8b](https://github.com/php/php-src/commit/dbf54e1a8b) by Gina Peter Banyard 💜
+ - Change conditional check in `disk_free_space()` test in [bab9e349cb](https://github.com/php/php-src/commit/bab9e349cb) by Gina Peter Banyard 💜
  - Add WordPress to community build in [GH-9942](https://github.com/php/php-src/pull/9942) by Ilija Tovilo 💜
  - Fix caching of default params with side-effects in [GH-9935](https://github.com/php/php-src/pull/9935) by Ilija Tovilo 💜
  - Fix cross-compilation for `shadow_stack_exists` in [05f4b84940](https://github.com/php/php-src/commit/05f4b84940) by Dmitry Stogov
@@ -203,10 +203,10 @@ Following are some changes that did not go through an RFC process because they a
  - Use `__atomic_xxxx()` instead of `__sync_xxxx()` for lsapi in [4bdfce6c1a](https://github.com/php/php-src/commit/4bdfce6c1a) by George Wang
  - For UTF-7, flag unnecessary extra trailing byte in Base64 section as error in [a618682373](https://github.com/php/php-src/commit/a618682373) by Alex Dowad
  - Fix a memory leak in tracig JIT when the same closure is called through `Closure::call()` and natively in [45cb3f917a](https://github.com/php/php-src/commit/45cb3f917a) by Dmitry Stogov
- - Fix [GH-9883](https://github.com/php/php-src/issues/9883): `SplFileObject::__toString()` reads next line in [GH-9912](https://github.com/php/php-src/pull/9912) by George Peter Banyard 💜
- - Fix performance degradation introduced in [c2547ab7](https://github.com/php/php-src/commit/c2547ab7dc67646e287d430e44798cb9f327cf21) in [GH-9876](https://github.com/php/php-src/pull/9876) by George Peter Banyard 💜
+ - Fix [GH-9883](https://github.com/php/php-src/issues/9883): `SplFileObject::__toString()` reads next line in [GH-9912](https://github.com/php/php-src/pull/9912) by Gina Peter Banyard 💜
+ - Fix performance degradation introduced in [c2547ab7](https://github.com/php/php-src/commit/c2547ab7dc67646e287d430e44798cb9f327cf21) in [GH-9876](https://github.com/php/php-src/pull/9876) by Gina Peter Banyard 💜
  - Fix mangled kana output for JIS encoding in [8f84192403](https://github.com/php/php-src/commit/8f84192403) by Alex Dowad
- - Handle trampolines correctly in new FCC API + usages in [GH-9877](https://github.com/php/php-src/pull/9877) by George Peter Banyard 💜
+ - Handle trampolines correctly in new FCC API + usages in [GH-9877](https://github.com/php/php-src/pull/9877) by Gina Peter Banyard 💜
  - php-fpm: fix Solaris port events.mechanism in [GH-9959](https://github.com/php/php-src/pull/9959) by Petr Sumbera
  - Fix bug [#68207](https://bugs.php.net/bug.php?id=68207): Setting fastcgi.error_header can result in a WARNING in [5a4520bc2b](https://github.com/php/php-src/commit/5a4520bc2b) by Jakub Zelenka 💜
  - Fix bug [#80669](https://bugs.php.net/bug.php?id=80669): FPM numeric user fails to set groups in [94702c56e0](https://github.com/php/php-src/commit/94702c56e0) by Jakub Zelenka 💜

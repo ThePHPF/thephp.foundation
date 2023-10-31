@@ -35,7 +35,7 @@ Every major change to PHP is discussed and implemented with the consensus of the
 
 * **Accepted: [Allow null and false as stand-alone types](https://wiki.php.net/rfc/null-false-standalone-types) 💜**
 
-  RFC by George Peter Banyard was accepted unanimously with all 38 votes in favor and is now merged into PHP.
+  RFC by Gina Peter Banyard was accepted unanimously with all 38 votes in favor and is now merged into PHP.
 
 
   Prior to this change, `null `and `false `could only be used as part of a Union Type, but not as stand-alone types. This change further improves PHP’s type system to be more expressive and defensive. See the `true` type RFC below that proposes adding `true `as a type too.
@@ -56,7 +56,7 @@ Every major change to PHP is discussed and implemented with the consensus of the
 
 * **Discussion: [Add true type](https://wiki.php.net/rfc/true-type) 💜**
 
-  RFC by George Peter Banyard is currently under discussion, to add true as a type to PHP. In PHP 8.0 Union Types, we added `false` as one of the possible members of Union Types, but left out `true`. This RFC proposes to complete it by adding `true` as a type as well.
+  RFC by Gina Peter Banyard is currently under discussion, to add true as a type to PHP. In PHP 8.0 Union Types, we added `false` as one of the possible members of Union Types, but left out `true`. This RFC proposes to complete it by adding `true` as a type as well.
 
 
 * **Accepted: [Undefined Variable Error Promotion](https://wiki.php.net/rfc/undefined_variable_error_promotion)**
@@ -98,7 +98,7 @@ Some of the minor changes made to PHP are first made as a pull request to the [P
 
 * New: [Introduce CURLOPT_XFERINFOFUNCTION](https://github.com/php/php-src/pull/7823) by [David CARLIER](https://github.com/devnexen).
 * Fixed: [Constants in Enum classes causes php-fpm worker to segfault](https://github.com/php/php-src/issues/8133) by Ilija Tovilo. 💜
-* Fixed: [SplFileObject: key() returns wrong value](https://github.com/php/php-src/issues/8273) by George Peter Banyard. **💜**
+* Fixed: [SplFileObject: key() returns wrong value](https://github.com/php/php-src/issues/8273) by Gina Peter Banyard. **💜**
 * Fixed: Bug #[76003](https://bugs.php.net/bug.php?id=76003) [FPM /status reports wrong number of active processes](https://github.com/php/php-src/commit/33bb201b3eddbda0cc93c9cd1cb9adb4c77d0df2) by Jakub Zelenka **💜**
 * Fixed: Bug #[77023 PHP-FPM cannot shutdown processes](https://github.com/php/php-src/commit/d8612fb6b7496a4f17e8250037a00b26623c1c77) by Jakub Zelenka **💜**
 * Reviewed and merged various fixes and improvements to FPM by Jakub Zelenka: **💜**
@@ -120,7 +120,7 @@ Apart from the highlighted changes above, there have been more improvements and 
 
 
 
-* [Canonicalize "iterable" into "array|Traversable" and Reflection](https://externals.io/message/117577), started by George Peter Banyard. 💜
+* [Canonicalize "iterable" into "array|Traversable" and Reflection](https://externals.io/message/117577), started by Gina Peter Banyard. 💜
 * [MySQLi Execute Query RFC](https://externals.io/message/117486), started by Craig Francis.
 * [NULL Coercion Consistency](https://externals.io/message/117501), also started by Craig Francis.
 

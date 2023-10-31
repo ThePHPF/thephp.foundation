@@ -25,7 +25,7 @@ We are excited to reveal our initial group of sponsored developers!
 
 * **Arnaud Le Blanc** [@arnaud-lb](https://github.com/arnaud-lb)
 * **Derick Rethans** [@derickr](https://github.com/derickr)
-* **George Peter Banyard** [@Girgias](https://github.com/Girgias)
+* **Gina Peter Banyard** [@Girgias](https://github.com/Girgias)
 * **Ilija Tovilo** [@iluuu1994](https://github.com/iluuu1994)
 * **Jakub Zelenka** [@bukka](https://github.com/bukka)
 * **Máté Kocsis** [@kocsismate](https://github.com/kocsismate)

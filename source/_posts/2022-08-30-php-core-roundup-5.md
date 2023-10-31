@@ -194,10 +194,10 @@ Following are some changes that did not go through an RFC process because they a
    - Fix problems with ISO-2022-KR conversion in [d9269becca](https://github.com/php/php-src/commit/d9269becca)
    - Add test to exercise `_php_mb_encoding_handler_ex` with multiple possible input encodings in [93207535fa](https://github.com/php/php-src/commit/93207535fa)
  - Reintroduce legacy 'SJIS-win' text encoding in mbstring in [371367ce3e](https://github.com/php/php-src/commit/371367ce3e) by Alex Dowad
- - Improve DBA test suite in [GH-8904](https://github.com/php/php-src/pull/8904) by George Peter Banyard 💜
- - Refactor code handling `file.current_zval` in [GH-8934](https://github.com/php/php-src/pull/8934) by George Peter Banyard 💜
+ - Improve DBA test suite in [GH-8904](https://github.com/php/php-src/pull/8904) by Gina Peter Banyard 💜
+ - Refactor code handling `file.current_zval` in [GH-8934](https://github.com/php/php-src/pull/8934) by Gina Peter Banyard 💜
  - Fix parentheses warnings in [ba9debb544](https://github.com/php/php-src/commit/ba9debb544) by Nikita Popov
- - Change `fetch_type` from `int` to `uint32_t` in [GH-9152](https://github.com/php/php-src/pull/9152) by George Peter Banyard 💜
+ - Change `fetch_type` from `int` to `uint32_t` in [GH-9152](https://github.com/php/php-src/pull/9152) by Gina Peter Banyard 💜
  - Fix unused-but-set-variable warnings in timelib in [40af94a24c](https://github.com/php/php-src/commit/40af94a24c) by Nikita Popov
  - Fix unused-but-set-variable warning in `hebrev()` in [6ff662b2e6](https://github.com/php/php-src/commit/6ff662b2e6) by Nikita Popov
  - Avoid K&R style function declarations in `sha1()` in [04f5da4b77](https://github.com/php/php-src/commit/04f5da4b77) by Nikita Popov
@@ -222,14 +222,14 @@ Following are some changes that did not go through an RFC process because they a
  - Fix SSA reconstruction when body of "foreach" loop is removed in [af1a7b7b72](https://github.com/php/php-src/commit/af1a7b7b72) by Dmitry Stogov
  - Fix incorrect guard motion out of the loop in [69c10aed58](https://github.com/php/php-src/commit/69c10aed58) by Dmitry Stogov
  - Tracing: Prevent recording types of variables used to pass `zend_class_entry` in [2758ff2a77](https://github.com/php/php-src/commit/2758ff2a77) by Dmitry Stogov
- - SPL: Use new improved `is_line_empty()` function instead of the old one in [GH-9217](https://github.com/php/php-src/pull/9217) by George Peter Banyard 💜
+ - SPL: Use new improved `is_line_empty()` function instead of the old one in [GH-9217](https://github.com/php/php-src/pull/9217) by Gina Peter Banyard 💜
  - Extended `map_ptr` before copying class table in [GH-9188](https://github.com/php/php-src/pull/9188) by Arnaud Le Blanc 💜
  - Fix bug [#65489](https://bugs.php.net/bug.php?id=65489): `glob()` `basedir` check is inconsistent in [e5ab9f45d5](https://github.com/php/php-src/commit/e5ab9f45d5) by Jakub Zelenka 💜
  - Fix [GH-8396](https://github.com/php/php-src/issues/8396): Network online test using https broken in [dc01fce36d](https://github.com/php/php-src/commit/dc01fce36d) by Jakub Zelenka 💜
  - Also fix `?->` on magic consts in const expressions in [7b43d819c8](https://github.com/php/php-src/commit/7b43d819c8) by Ilija Tovilo 💜
  - DIM on null in const expr should emit warning in [3663f7661a](https://github.com/php/php-src/commit/3663f7661a) by Ilija Tovilo 💜
  - Avoid unnecessary comparison in [GH-9246](https://github.com/php/php-src/pull/9246) by Christoph M. Becker
- - Convert some macros to `zend_always_inline` functions in [GH-8288](https://github.com/php/php-src/pull/8288) by George Peter Banyard 💜
+ - Convert some macros to `zend_always_inline` functions in [GH-8288](https://github.com/php/php-src/pull/8288) by Gina Peter Banyard 💜
  - Add conflict markers for dba tests in [f11228cdbe](https://github.com/php/php-src/commit/f11228cdbe) by Christoph M. Becker
  - Remove `ZEND_DVAL_TO_LVAL_CAST_OK` in [GH-9215](https://github.com/php/php-src/pull/9215) by Go Kudo
  - Save previous observer on the VM stack in [dc5475c191](https://github.com/php/php-src/commit/dc5475c191) by Bob Weinand
@@ -271,9 +271,9 @@ Following are some changes that did not go through an RFC process because they a
  - Fix bug [#79451](https://bugs.php.net/bug.php?id=79451): Using DOMDocument->replaceChild on doctype causes double free in [GH-9201](https://github.com/php/php-src/pull/9201) by NathanFreeman
  - Fix GCC 9.4 uninitialized variable warning in [410e5d48a3](https://github.com/php/php-src/commit/410e5d48a3) by Tim Starling
  - Fix [GH-9323](https://github.com/php/php-src/issues/9323): crash when the VM enters userspace code via the GC in [GH-9323](https://github.com/php/php-src/pull/9323) by Tim Starling
- - Fix bad merge in [5739dd0030](https://github.com/php/php-src/commit/5739dd0030) by George Peter Banyard 💜
+ - Fix bad merge in [5739dd0030](https://github.com/php/php-src/commit/5739dd0030) by Gina Peter Banyard 💜
  - Fix [GH-9227](https://github.com/php/php-src/issues/9227): Trailing dots and spaces in filenames are ignored in [GH-9229](https://github.com/php/php-src/pull/9229) by Christoph M. Becker
- - Revert Fixed bug [#79451](https://bugs.php.net/bug.php?id=79451) in [d6831e9a5c](https://github.com/php/php-src/commit/d6831e9a5c) by George Peter Banyard 💜
+ - Revert Fixed bug [#79451](https://bugs.php.net/bug.php?id=79451) in [d6831e9a5c](https://github.com/php/php-src/commit/d6831e9a5c) by Gina Peter Banyard 💜
  - opcache jit fix message format for OpenBSD in [52e312afb8](https://github.com/php/php-src/commit/52e312afb8) by David Carlier
  - Fix [#79451](https://bugs.php.net/bug.php?id=79451): `DOMDocument->replaceChild` on doctype causes double free in [GH-9201](https://github.com/php/php-src/pull/9201) by NathanFreeman
  - Fix [GH-9285](https://github.com/php/php-src/issues/9285) Traits cannot be used in `readonly` classes in [0897266219](https://github.com/php/php-src/commit/0897266219) by Máté Kocsis 💜
@@ -281,14 +281,14 @@ Following are some changes that did not go through an RFC process because they a
  - Fix `pdo_oci` tests for PHP 8.0 in [305892580e](https://github.com/php/php-src/commit/305892580e) by Michael Voříšek
  - Fix [GH-9361](https://github.com/php/php-src/issues/9361): Segmentation fault on script exit in [GH-9379](https://github.com/php/php-src/pull/9379) by Christoph M. Becker
  - Tracing JIT: Fix incorrect guard elimination in [c9c51eb1f1](https://github.com/php/php-src/commit/c9c51eb1f1) by Dmitry Stogov
- - Add a new zend API to check that strings don't have `NUL` bytes in [GH-9375](https://github.com/php/php-src/pull/9375) by George Peter Banyard 💜
- - Use `bool` instead of `int` in session struct in [e8e015777e](https://github.com/php/php-src/commit/e8e015777e) by George Peter Banyard 💜
- - Add test for negative cookie lifetime in [a75de167bf](https://github.com/php/php-src/commit/a75de167bf) by George Peter Banyard 💜
- - Remove `OnUpdateLazyWrite` validator in [e9749a3c1e](https://github.com/php/php-src/commit/e9749a3c1e) by George Peter Banyard 💜
- - Remove `OnUpdateTransSid` validator in [ad3ee47c6d](https://github.com/php/php-src/commit/ad3ee47c6d) by George Peter Banyard 💜
- - Check sessions are active before output emitted consistently in [a8f8cc207c](https://github.com/php/php-src/commit/a8f8cc207c) by George Peter Banyard 💜
+ - Add a new zend API to check that strings don't have `NUL` bytes in [GH-9375](https://github.com/php/php-src/pull/9375) by Gina Peter Banyard 💜
+ - Use `bool` instead of `int` in session struct in [e8e015777e](https://github.com/php/php-src/commit/e8e015777e) by Gina Peter Banyard 💜
+ - Add test for negative cookie lifetime in [a75de167bf](https://github.com/php/php-src/commit/a75de167bf) by Gina Peter Banyard 💜
+ - Remove `OnUpdateLazyWrite` validator in [e9749a3c1e](https://github.com/php/php-src/commit/e9749a3c1e) by Gina Peter Banyard 💜
+ - Remove `OnUpdateTransSid` validator in [ad3ee47c6d](https://github.com/php/php-src/commit/ad3ee47c6d) by Gina Peter Banyard 💜
+ - Check sessions are active before output emitted consistently in [a8f8cc207c](https://github.com/php/php-src/commit/a8f8cc207c) by Gina Peter Banyard 💜
  - Fix memory leaks in [73c2d79fc5](https://github.com/php/php-src/commit/73c2d79fc5) by Dmitry Stogov
- - `SameSite` session cookie prop should behave like other INI settings in [66aed3a86f](https://github.com/php/php-src/commit/66aed3a86f) by George Peter Banyard 💜
+ - `SameSite` session cookie prop should behave like other INI settings in [66aed3a86f](https://github.com/php/php-src/commit/66aed3a86f) by Gina Peter Banyard 💜
  - Don't enforce 64 hit counter on Windows in [GH-9367](https://github.com/php/php-src/pull/9367) by Christoph M. Becker
  - JIT: Make code generation to be consistent with register allocation in [fd74ee7e90](https://github.com/php/php-src/commit/fd74ee7e90) by Dmitry Stogov
  - Fix type inference in [95befc786a](https://github.com/php/php-src/commit/95befc786a) by Dmitry Stogov
@@ -296,7 +296,7 @@ Following are some changes that did not go through an RFC process because they a
  - Enum error message consistency in [GH-9350](https://github.com/php/php-src/pull/9350) by Ollie Read
  - Add an API to observe functions and classes being linked in [bf427b732a](https://github.com/php/php-src/commit/bf427b732a) by Bob Weinand
  - Wrap observer notify functions into inlined enabled checks in [396b2aab85](https://github.com/php/php-src/commit/396b2aab85) by Bob Weinand
- - Check at compile time that a built-in class is not being aliased in [GH-9402](https://github.com/php/php-src/pull/9402) by George Peter Banyard 💜
+ - Check at compile time that a built-in class is not being aliased in [GH-9402](https://github.com/php/php-src/pull/9402) by Gina Peter Banyard 💜
  - Stop JIT hot spot counting in [GH-9343](https://github.com/php/php-src/pull/9343) by wxue1
  - Fix coding style in [205ad0af29](https://github.com/php/php-src/commit/205ad0af29) by Dmitry Stogov
  - Fix typo (Paletter → Palette) in [GH-9414](https://github.com/php/php-src/pull/9414) by Christoph M. Becker
