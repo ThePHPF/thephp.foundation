@@ -54,7 +54,8 @@
     </head>
 <body class="bg-white">
 
-<header x-data="{ isOpen: false }" @keydown.escape="isOpen = false" @click.away="isOpen = false">
+<header x-data="{ isOpen: false }" @keydown.escape="isOpen = false" @click.away="isOpen = false" itemscope
+        itemtype="https://schema.org/WPHeader">
     <nav class="mx-auto flex max-w-7xl items-center justify-between relative">
         <div class="absolute inset-x-0 bottom-0 h-px bg-slate-900/5"></div>
         <div class="flex lg:flex-1 items-center gap-4">
@@ -62,7 +63,7 @@
                 <img class="h-16 w-auto" src="https://thephp.foundation/assets/icons/php_foundation.svg"
                      alt="PHP Foundation">
             </a>
-            <span class="text-[#27282c] font-semibold text-sm md:text-xl">The PHP Foundation</span>
+            <span class="text-[#27282c] font-semibold text-sm md:text-xl" itemprop="headline">The PHP Foundation</span>
         </div>
         <div class="flex lg:hidden">
             <button type="button"
@@ -75,16 +76,16 @@
                 </svg>
             </button>
         </div>
-        <div class="hidden lg:flex lg:gap-x-12">
-            <a href="https://thephp.foundation/structure" class="text-gray-700 hover:underline">Who we are</a>
+        <div class="hidden lg:flex lg:gap-x-12" itemscope itemtype="https://schema.org/SiteNavigationElement">
+            <a href="https://thephp.foundation/structure" class="text-gray-700 hover:underline" itemprop="url">Who we are</a>
 
-            <a href="https://thephp.foundation/foundation" class="text-gray-700 hover:underline">What we do</a>
+            <a href="https://thephp.foundation/foundation" class="text-gray-700 hover:underline" itemprop="url">What we do</a>
 
-            <a href="https://thephp.foundation/blog" class="text-gray-700 hover:underline">News</a>
+            <a href="https://thephp.foundation/blog" class="text-gray-700 hover:underline" itemprop="url">News</a>
 
-            <a href="https://thephp.foundation/presentations" class="text-gray-700 hover:underline">Talks</a>
-            
-            <a href="https://thephp.foundation/contact" class="text-gray-700 hover:underline">Contact</a>
+            <a href="https://thephp.foundation/presentations" class="text-gray-700 hover:underline" itemprop="url">Talks</a>
+
+            <a href="https://thephp.foundation/contact" class="text-gray-700 hover:underline" itemprop="url">Contact</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-8">
             <a href="https://php.net" target="_blank" rel="noopener noreferrer"
@@ -118,20 +119,22 @@
             </div>
             <nav class="mt-6 flow-root px-6 py-6">
                 <div class="-my-6 divide-y divide-gray-500/10">
-                    <div class="space-y-2 py-6">
-                        <a href="https://thephp.foundation/structure"
-                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Who we are</a>
+                    <div class="space-y-2 py-6" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                        <a href="https://thephp.foundation/structure" itemprop="url"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Who
+                            we are</a>
 
-                        <a href="https://thephp.foundation/foundation"
-                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">What we do</a>
-                        
-                        <a href="https://thephp.foundation/blog"
+                        <a href="https://thephp.foundation/foundation" itemprop="url"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">What
+                            we do</a>
+
+                        <a href="https://thephp.foundation/blog" itemprop="url"
                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">News</a>
 
-                        <a href="https://thephp.foundation/presentations"
+                        <a href="https://thephp.foundation/presentations" itemprop="url"
                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Talks</a>
 
-                        <a href="https://thephp.foundation/contact"
+                        <a href="https://thephp.foundation/contact" itemprop="url"
                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Contact</a>
                     </div>
                     <div class="py-6">
@@ -150,7 +153,8 @@
     </header>
 
     <div class="my-16 gap-8 flex flex-col">
-        <article class="relative isolate flex flex-col gap-8 lg:flex-row">
+        <article class="relative isolate flex flex-col gap-8 lg:flex-row" itemscope
+         itemtype="https://schema.org/Event">
     <div class="relative aspect-[16/9] w-full lg:w-1/3">
         <iframe src="https://media.ccc.de/v/froscon2023-2859-the_php_foundation/oembed"
                 class="w-full h-full"
@@ -160,33 +164,34 @@
     </div>
     <div>
         <div class="flex items-center gap-x-4 text-xs">
-            <div class="text-gray-500">Aug 05-06, 2023</div>
-            <div class="text-gray-500">Sankt Augustin, Germany</div>
+            <div class="text-gray-500" itemprop="startDate">Aug 05-06, 2023</div>
+            <div class="text-gray-500" itemprop="location">Sankt Augustin, Germany</div>
             <div class="text-gray-500">FrOSCon 2023</div>
         </div>
         <div class="relative max-w-xl">
-            <h3 class="mt-3 text-lg leading-6 text-gray-900 font-semibold">
+            <h3 class="mt-3 text-lg leading-6 text-gray-900 font-semibold" itemprop="name">
                 The PHP Foundation
             </h3>
-            <div class="mt-5 text-sm leading-6 text-gray-600">
+            <div class="mt-5 text-sm leading-6 text-gray-600" itemprop="description">
                 The PHP Foundation is a non-profit organization formed in 2021 by well-known PHP folks as well as major companies from the PHP ecosystem. What we have achieved since then and what we are planning next.
             </div>
         </div>
         <div class="mt-6 flex border-t border-gray-900/5 pt-6 gap-x-8">
-                        <div class="relative flex items-center gap-x-4">
-                <img src="https://avatars.githubusercontent.com/u/25218?s=200&amp;v=4"
+                        <div class="relative flex items-center gap-x-4" itemprop="performer" itemscope itemtype="https://schema.org/Person">
+                <img src="https://avatars.githubusercontent.com/u/25218?s=200&amp;v=4" itemprop="image"
                      alt="Sebastian Bergmann" class="h-10 w-10 rounded-full bg-gray-50">
                 <div class="text-sm leading-6">
                     <a href="https://phpc.social/@sebastian" class="text-gray-900 font-semibold no-underline"
-                       target="_blank" rel="noopener noreferrer">Sebastian Bergmann</a>
-                    <div class="text-gray-600">Board member</div>
+                       target="_blank" rel="noopener noreferrer" itemprop="name">Sebastian Bergmann</a>
+                    <div class="text-gray-600" itemprop="jobTitle">Board member</div>
                 </div>
             </div>
                     </div>
     </div>
 </article>
 
-        <article class="relative isolate flex flex-col gap-8 lg:flex-row">
+        <article class="relative isolate flex flex-col gap-8 lg:flex-row" itemscope
+         itemtype="https://schema.org/Event">
     <div class="relative aspect-[16/9] w-full lg:w-1/3">
         <iframe src="https://www.youtube.com/embed/JBPtPy9iSP0"
                 class="w-full h-full"
@@ -196,35 +201,35 @@
     </div>
     <div>
         <div class="flex items-center gap-x-4 text-xs">
-            <div class="text-gray-500">Oct 13-14, 2022</div>
-            <div class="text-gray-500">Paris, France</div>
+            <div class="text-gray-500" itemprop="startDate">Oct 13-14, 2022</div>
+            <div class="text-gray-500" itemprop="location">Paris, France</div>
             <div class="text-gray-500">Forum PHP 2022</div>
         </div>
         <div class="relative max-w-xl">
-            <h3 class="mt-3 text-lg leading-6 text-gray-900 font-semibold">
+            <h3 class="mt-3 text-lg leading-6 text-gray-900 font-semibold" itemprop="name">
                 The PHP Foundation: The Past, the Present, and the Future
             </h3>
-            <div class="mt-5 text-sm leading-6 text-gray-600">
+            <div class="mt-5 text-sm leading-6 text-gray-600" itemprop="description">
                 A complex saga of developers scattered around the world, all living under the rule of the elePHPant technology.
             </div>
         </div>
         <div class="mt-6 flex border-t border-gray-900/5 pt-6 gap-x-8">
-                        <div class="relative flex items-center gap-x-4">
-                <img src="https://avatars.githubusercontent.com/u/25218?s=200&amp;v=4"
+                        <div class="relative flex items-center gap-x-4" itemprop="performer" itemscope itemtype="https://schema.org/Person">
+                <img src="https://avatars.githubusercontent.com/u/25218?s=200&amp;v=4" itemprop="image"
                      alt="Sebastian Bergmann" class="h-10 w-10 rounded-full bg-gray-50">
                 <div class="text-sm leading-6">
                     <a href="https://phpc.social/@sebastian" class="text-gray-900 font-semibold no-underline"
-                       target="_blank" rel="noopener noreferrer">Sebastian Bergmann</a>
-                    <div class="text-gray-600">Board member</div>
+                       target="_blank" rel="noopener noreferrer" itemprop="name">Sebastian Bergmann</a>
+                    <div class="text-gray-600" itemprop="jobTitle">Board member</div>
                 </div>
             </div>
-                        <div class="relative flex items-center gap-x-4">
-                <img src="https://avatars.githubusercontent.com/u/1196825?s=200&amp;v=4"
+                        <div class="relative flex items-center gap-x-4" itemprop="performer" itemscope itemtype="https://schema.org/Person">
+                <img src="https://avatars.githubusercontent.com/u/1196825?s=200&amp;v=4" itemprop="image"
                      alt="Roman Pronskiy" class="h-10 w-10 rounded-full bg-gray-50">
                 <div class="text-sm leading-6">
                     <a href="https://twitter.com/pronskiy" class="text-gray-900 font-semibold no-underline"
-                       target="_blank" rel="noopener noreferrer">Roman Pronskiy</a>
-                    <div class="text-gray-600">Board member, Operations manager</div>
+                       target="_blank" rel="noopener noreferrer" itemprop="name">Roman Pronskiy</a>
+                    <div class="text-gray-600" itemprop="jobTitle">Board member, Operations manager</div>
                 </div>
             </div>
                     </div>
@@ -232,27 +237,28 @@
 </article>
     </div>
 </section>
-<footer class="bg-gray-900">
+<footer class="bg-gray-900" itemtype="https://schema.org/WPFooter">
     <div class="mx-auto max-w-7xl overflow-hidden px-6 py-12 lg:px-8">
-        <nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12">
+        <nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" itemscope
+             itemtype="https://schema.org/SiteNavigationElement">
 
             <div class="pb-6">
-                <a href="https://thephp.foundation/contact"
+                <a href="https://thephp.foundation/contact" itemprop="url"
                    class="text-sm leading-6 text-gray-600 hover:text-gray-900 no-underline">Contact</a>
             </div>
 
             <div class="pb-6">
-                <a href="https://thephp.foundation/structure"
+                <a href="https://thephp.foundation/structure" itemprop="url"
                    class="text-sm leading-6 text-gray-600 hover:text-gray-900 no-underline">Structure</a>
             </div>
 
             <div class="pb-6">
-                <a href="https://thephp.foundation/branding"
+                <a href="https://thephp.foundation/branding" itemprop="url"
                    class="text-sm leading-6 text-gray-600 hover:text-gray-900 no-underline">Branding</a>
             </div>
 
             <div class="pb-6">
-                <a href="https://thephp.foundation/code-of-conduct"
+                <a href="https://thephp.foundation/code-of-conduct" itemprop="url"
                    class="text-sm leading-6 text-gray-600 hover:text-gray-900 no-underline">Code of Conduct</a>
             </div>
         </nav>
@@ -261,7 +267,9 @@
             <a href="https://twitter.com/thephpf" target="_blank" rel="noopener noreferrer"
                class="text-gray-400 hover:text-gray-500">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
-                    <g><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></g>
+                    <g>
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                    </g>
                 </svg>
             </a>
 
@@ -294,7 +302,7 @@
                 </svg>
             </a>
         </div>
-        <div class="mt-10 text-center text-xs leading-5 text-gray-500">&copy; The PHP Foundation</div>
+        <div class="mt-10 text-center text-xs leading-5 text-gray-500" itemprop="copyrightHolder">&copy; The PHP Foundation</div>
     </div>
 </footer>
 
