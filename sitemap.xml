@@ -2,9 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://thephp.foundation</loc>
-    <lastmod>2023-10-31</lastmod>
+    <lastmod>2023-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+  </url>
+    <url>
+    <loc>https://thephp.foundation/blog/2023/11/01/php-core-roundup-18/</loc>
+    <lastmod>2023-11-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/blog/2023/10/01/php-core-roundup-17/</loc>
@@ -170,37 +176,37 @@
   </url>
       <url>
     <loc>https://thephp.foundation/branding</loc>
-    <lastmod>2023-10-31T11:35:21+00:00</lastmod>
+    <lastmod>2023-11-03T11:09:23+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/code-of-conduct</loc>
-    <lastmod>2023-10-31T11:35:21+00:00</lastmod>
+    <lastmod>2023-11-03T11:09:23+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/contact</loc>
-    <lastmod>2023-10-31T11:35:21+00:00</lastmod>
+    <lastmod>2023-11-03T11:09:23+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/donate</loc>
-    <lastmod>2023-10-31T11:35:21+00:00</lastmod>
+    <lastmod>2023-11-03T11:09:23+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/get-involved</loc>
-    <lastmod>2023-10-31T11:35:21+00:00</lastmod>
+    <lastmod>2023-11-03T11:09:23+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/privacy-policy</loc>
-    <lastmod>2023-10-31T11:35:21+00:00</lastmod>
+    <lastmod>2023-11-03T11:09:23+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
