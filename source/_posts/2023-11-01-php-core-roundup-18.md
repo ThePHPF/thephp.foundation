@@ -14,7 +14,7 @@ published_at: 01 November 2023
 
 ---
 
-Welcome back to [PHP Core Roundup](/blog/tag/roundup/) series! This is post #18, where we highlight and celebrate the improvements made to PHP during the month past by the PHP development team, members of the PHP Foundation, and more.
+Welcome back to [PHP Core Roundup](/blog/tag/roundup/) series! This is where we highlight and celebrate the improvements made to PHP during the month past by the PHP development team and members of the PHP Foundation.
 
 > The PHP Foundation is a collective of PHP contributors, veterans, and companies that collaborate to ensure the long-term sustainability of the PHP programming language. The foundation currently supports six contributors focused on PHP's maintenance, debt reduction, and feature development. These contributors work closely with others on coding, documentation, and discussions.
 
@@ -46,7 +46,9 @@ PHP 8.3.0 RC versions are available in [Remi’s](https://rpms.remirepo.net/) re
 
 ## PHP 8.0 will reach EOL
 
-PHP 8.0 will reach EOL with the release of PHP 8.3 and will no longer get security updates.
+PHP 8.0 will reach its End of Life (EOL) and will no longer receive security updates after November 26, 2023. You can always check the release and support schedule at [php.net/supported-versions.php](https://www.php.net/supported-versions.php):
+
+![](/assets/post-images/2023/roundup-18/supported_versions_php.png)
 
 ## RFC Updates
 
@@ -60,21 +62,23 @@ As part of PHP's efforts in gradually phrasing out `resource` objects ([php-task
 
 RFC was approved unanimously, but in the second vote, where a new cost value had to be determined, opinions were divided.
 
-Cost will be raised in PHP 8.4 to a value of 12.
+The cost will be increased to 12 in PHP 8.4.
 
 ### Implemented: [XML_OPTION_PARSE_HUGE](https://wiki.php.net/rfc/xml_option_parse_huge) by Niels Dossche
 
-RFC proposes to add a new option to the event-driven (SAX) `XmlParser` that would allow it to parse large documents.
+A new option will be added to the event-driven (SAX) `XmlParser` that would allow it to parse large documents.
 
 ### Accepted: [DOM HTML5 parsing and serialization](https://wiki.php.net/rfc/domdocument_html5_parser) by Niels Dossche
 
-PHP 8.4 will get new classes: `DOM\HTMLDocument` and `DOM\XMLDocument` to the dom extension. Existing dom classes in the global namespace get an alias in the new DOM namespace. The `HTMLDocument` class will add support for HTML5 document parsing and serializing. The `XMLDocument` class serves as a modern alternative to `\DOMDocument`, which is retained for compatibility. These new classes also provide a more misuse-resistant API for loading documents.
+PHP 8.4 will get new classes: `DOM\HTMLDocument` and `DOM\XMLDocument` to the `dom` extension. Existing `dom` classes in the global namespace get an alias in the new `DOM` namespace. 
+
+The `HTMLDocument` class will add support for HTML5 document parsing and serializing. The `XMLDocument` class serves as a modern alternative to `\DOMDocument`, which is retained for compatibility. These new classes also provide a more misuse-resistant API for loading documents.
 
 ### Accepted: [A new JIT implementation based on IR Framework](https://wiki.php.net/rfc/jit-ir) by Dmitry Stogov
 
-RFC proposes a new JIT implementation that is based on a separately developed [IR Framework](https://github.com/dstogov/ir). The main advantage of the new approach is that PHP source code will be freed from the low-level details of JIT compilation. The downside is a longer JIT-compilation time.
+RFC proposed a new JIT implementation based on a separately developed [IR Framework](https://github.com/dstogov/ir). The main advantage of the new approach is that PHP source code will be freed from the low-level details of JIT compilation. The downside is a longer JIT-compilation time.
 
-Dmitry [emailed](https://externals.io/message/121038) PHP Internals mailing list, which led to a lengthy discussion on the merits of the new JIT implementation. After the RFC vote was accepted, Dmitry [plans](https://externals.io/message/121239#121437) to merge the changes to `php-src` and remove the old JIT implementation in the next few days.
+The proposal was accepted, so Dmitry Stogov [merged](https://github.com/php/php-src/pull/12079) the new JIT into the `master` which means it will be available in PHP 8.4.
 
 ### Under discussion: [RFC1867 for non-POST HTTP verbs](https://wiki.php.net/rfc/rfc1867-non-post) by Ilija Tovilo 💜
 
@@ -420,7 +424,7 @@ We are incredibly grateful for the commitment and dedication of all contributors
 
 ## Support PHP Foundation
 
-At PHP Foundation, we support, promote, and advance the PHP language. We financially support six part-time PHP core developers to contribute to the PHP project. You can help support PHP Foundation at [OpenCollective](https://opencollective.com/phpfoundation) or via [GitHub Sponsors](https://github.com/sponsors/ThePHPF).
+At The PHP Foundation, we support, promote, and advance the PHP language. We financially support six PHP core developers to contribute to the PHP project. You can help support PHP Foundation on [OpenCollective](https://opencollective.com/phpfoundation) or via [GitHub Sponsors](https://github.com/sponsors/ThePHPF).
 
 A big thanks to all our sponsors — PHP Foundation is all of us!
 
