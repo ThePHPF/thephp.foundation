@@ -236,7 +236,7 @@ Hundreds of awesome PHP contributors put their efforts into improvements to the 
 <p>Following are the RFCs and major pull-requests discussed, voted on, and implemented since our last update.</p>
 
 <ul>
-<li><p><strong>RFC In Voting: <a href="https://wiki.php.net/rfc/saner-array-sum-product">Saner array_(sum|product)()</a> by George Peter Banyard 💜</strong></p>
+<li><p><strong>RFC In Voting: <a href="https://wiki.php.net/rfc/saner-array-sum-product">Saner array_(sum|product)()</a> by Gina Peter Banyard 💜</strong></p>
 
 <p>Proposes to change the current behavior of <code>array_sum</code> and <code>array_product</code> to properly handle non-numeric values. This results in additional warnings when these functions encounter unsupported types such as certain objects, arrays, and resources. Further, it can result in different return values on objects that support arithmetic operations.</p></li>
 <li><p><strong>RFC In Voting: <a href="https://wiki.php.net/rfc/typed_class_constants">Typed class constants</a> by Benas Seliuginas and Máté Kocsis 💜</strong></p>
@@ -313,15 +313,15 @@ class C {
 <li>Fix type inference in <a href="https://github.com/php/php-src/commit/81607a62ca">81607a62ca</a> by Dmitry Stogov</li>
 <li>Fix resetting <code>ZEND_GENERATOR_IN_FIBER</code> flag in <a href="https://github.com/php/php-src/commit/b9bca2dadb">b9bca2dadb</a> by Bob Weinand</li>
 <li>Look at executing generator for fiber destructor behaviour in <a href="https://github.com/php/php-src/commit/00be6e1aed">00be6e1aed</a> by Bob Weinand</li>
-<li>Use <code>bool</code> and <code>zend_result</code> where it makes sense in sockets extension in <a href="https://github.com/php/php-src/commit/3eb9dd47e0">3eb9dd47e0</a> by George Peter Banyard 💜</li>
-<li>Voidify <code>php_sock_array_from_fd_set()</code> as result is never used in <a href="https://github.com/php/php-src/commit/735edd1c17">735edd1c17</a> by George Peter Banyard 💜</li>
+<li>Use <code>bool</code> and <code>zend_result</code> where it makes sense in sockets extension in <a href="https://github.com/php/php-src/commit/3eb9dd47e0">3eb9dd47e0</a> by Gina Peter Banyard 💜</li>
+<li>Voidify <code>php_sock_array_from_fd_set()</code> as result is never used in <a href="https://github.com/php/php-src/commit/735edd1c17">735edd1c17</a> by Gina Peter Banyard 💜</li>
 <li>Bring minimum precision inline with <code>spprintf</code> in <a href="https://github.com/php/php-src/commit/93fb2c12b9">93fb2c12b9</a> by Derick Rethans 💜</li>
 <li>Fix <a href="https://github.com/php/php-src/issues/10152">GH-10152</a>: Custom properties of Date's child classes are not serialised in <a href="https://github.com/php/php-src/commit/85fbc6eaa6">85fbc6eaa6</a> by Derick Rethans 💜</li>
 <li>Fixed <a href="https://github.com/php/php-src/issues/10447">GH-10447</a>: 'p' format specifier does not yield 'Z' for 00:00 in <a href="https://github.com/php/php-src/commit/a42bf93308">a42bf93308</a> by Derick Rethans 💜</li>
-<li>Add macro to check <code>zend_string</code> is marked as valid UTF-8 in <a href="https://github.com/php/php-src/commit/0b9fb636d1">0b9fb636d1</a> by George Peter Banyard 💜</li>
-<li>Add function in <code>zend_test</code> to check UTF8 flag is added in <a href="https://github.com/php/php-src/commit/0c9181b646">0c9181b646</a> by George Peter Banyard 💜</li>
-<li>Mark numeric strings as valid UTF-8 in <a href="https://github.com/php/php-src/commit/78720e39a6">78720e39a6</a> by George Peter Banyard 💜</li>
-<li>Concatenating two valid UTF-8 strings produces a valid UTF-8 string in <a href="https://github.com/php/php-src/commit/64127b66c6">64127b66c6</a> by George Peter Banyard 💜</li>
+<li>Add macro to check <code>zend_string</code> is marked as valid UTF-8 in <a href="https://github.com/php/php-src/commit/0b9fb636d1">0b9fb636d1</a> by Gina Peter Banyard 💜</li>
+<li>Add function in <code>zend_test</code> to check UTF8 flag is added in <a href="https://github.com/php/php-src/commit/0c9181b646">0c9181b646</a> by Gina Peter Banyard 💜</li>
+<li>Mark numeric strings as valid UTF-8 in <a href="https://github.com/php/php-src/commit/78720e39a6">78720e39a6</a> by Gina Peter Banyard 💜</li>
+<li>Concatenating two valid UTF-8 strings produces a valid UTF-8 string in <a href="https://github.com/php/php-src/commit/64127b66c6">64127b66c6</a> by Gina Peter Banyard 💜</li>
 <li>Ignore generated file on arm64 in <a href="https://github.com/php/php-src/commit/21cab65c00">21cab65c00</a> by Danack</li>
 <li><code>github/workflows/push.yml</code>: enable ccache in <a href="https://github.com/php/php-src/pull/10395">GH-10395</a> by Max Kellermann</li>
 <li>Fix <code>lineno</code> for all constant expressions in <a href="https://github.com/php/php-src/pull/8855">GH-8855</a> by Ilija Tovilo 💜</li>
@@ -341,7 +341,7 @@ class C {
 <li>Implement an SSE2 accelerated version of <code>zend_adler32</code> (<a href="https://bugs.php.net/bug.php?id=10507">#10507</a>) in <a href="https://github.com/php/php-src/commit/722fbd01a3">722fbd01a3</a> by Niels Dossche</li>
 <li>Sync boost/context assembly files for fibers in <a href="https://github.com/php/php-src/pull/10407">GH-10407</a> by Niels Dossche</li>
 <li>Metaphone performance improvement (<a href="https://bugs.php.net/bug.php?id=10501">#10501</a>) in <a href="https://github.com/php/php-src/commit/c9cbe525e1">c9cbe525e1</a> by Niels Dossche</li>
-<li>Do not build unnecessary FCI in Reflection in <a href="https://github.com/php/php-src/commit/50a2de78a8">50a2de78a8</a> by George Peter Banyard 💜</li>
+<li>Do not build unnecessary FCI in Reflection in <a href="https://github.com/php/php-src/commit/50a2de78a8">50a2de78a8</a> by Gina Peter Banyard 💜</li>
 <li>When fuzzing mbstring encoding conversion code, compare output with different intermediate buffer sizes in <a href="https://github.com/php/php-src/commit/d5d9900661">d5d9900661</a> by Alex Dowad</li>
 <li>Add AVX2-accelerated UTF-16 decoding/encoding routines in <a href="https://github.com/php/php-src/commit/c8ec2ed730">c8ec2ed730</a> by Alex Dowad</li>
 <li>Fix possible <code>exit_counters</code> memory leak in ZTS build in <a href="https://github.com/php/php-src/commit/a21195650e">a21195650e</a> by Dmitry Stogov</li>
@@ -364,7 +364,7 @@ class C {
 <li>Fix <a href="https://github.com/php/php-src/issues/10370">GH-10370</a>: File corruption in <code>_php_stream_copy_to_stream_ex</code> when using <code>copy_file_range</code> (<a href="https://bugs.php.net/bug.php?id=10440">#10440</a>) in <a href="https://github.com/php/php-src/commit/b4db690cb3">b4db690cb3</a> by Niels Dossche</li>
 <li>Fix concurrent testing in <a href="https://github.com/php/php-src/commit/10f2378584">10f2378584</a> by Arnaud Le Blanc 💜</li>
 <li>Fixed OSS fuzz issues <a href="https://bugs.php.net/bug.php?id=55589">#55589</a>, <a href="https://bugs.php.net/bug.php?id=55599">#55599</a>, and <a href="https://bugs.php.net/bug.php?id=55727">#55727</a> in <a href="https://github.com/php/php-src/commit/5d9ee8f920">5d9ee8f920</a> by Derick Rethans 💜</li>
-<li>Fix memory leaks in <code>ext-tidy</code> in <a href="https://github.com/php/php-src/pull/10545">GH-10545</a> by George Peter Banyard 💜</li>
+<li>Fix memory leaks in <code>ext-tidy</code> in <a href="https://github.com/php/php-src/pull/10545">GH-10545</a> by Gina Peter Banyard 💜</li>
 <li>Mark test as <code>XFAIL</code> in <a href="https://github.com/php/php-src/commit/13c34aac05">13c34aac05</a> by Ilija Tovilo 💜</li>
 <li>Temporarily disable odbc in ci in <a href="https://github.com/php/php-src/commit/18b611d6a0">18b611d6a0</a> by Ilija Tovilo 💜</li>
 <li>Simplify <code>php_reflection.c</code>, class name cannot start with backslash (<a href="https://bugs.php.net/bug.php?id=10536">#10536</a>) in <a href="https://github.com/php/php-src/commit/a11e9c9d02">a11e9c9d02</a> by Michael Voříšek</li>
@@ -453,7 +453,7 @@ class C {
 <li>Fix segfault when using <code>ReflectionFiber</code> (fixes <a href="https://bugs.php.net/bug.php?id=10439">#10439</a>) in <a href="https://github.com/php/php-src/pull/10478">GH-10478</a> by Daniil Gentili</li>
 <li><code>ext/opcache/zend_shared_alloc</code>: use <code>memfd</code> for locking if available in <a href="https://github.com/php/php-src/pull/10589">GH-10589</a> by Max Kellermann</li>
 <li><code>random</code>: Fix return type of <code>php_random_(bytes|int)</code> (<a href="https://bugs.php.net/bug.php?id=10687">#10687</a>) in <a href="https://github.com/php/php-src/commit/f079aa2e24">f079aa2e24</a> by Tim Düsterhus</li>
-<li>Fix <a href="https://github.com/php/php-src/issues/10672">GH-10672</a> (<code>pg_lo_open</code> segfaults in the <code>strict_types</code> mode) in <a href="https://github.com/php/php-src/pull/10677">GH-10677</a> by George Peter Banyard 💜</li>
+<li>Fix <a href="https://github.com/php/php-src/issues/10672">GH-10672</a> (<code>pg_lo_open</code> segfaults in the <code>strict_types</code> mode) in <a href="https://github.com/php/php-src/pull/10677">GH-10677</a> by Gina Peter Banyard 💜</li>
 <li>Fixed bug <a href="https://github.com/php/php-src/issues/10270">GH-10270</a> Unable to return <code>CURL_READFUNC_PAUSE</code> in readfunc callback in <a href="https://github.com/php/php-src/pull/10607">GH-10607</a> by Pierrick Charron</li>
 <li>Fix incorrect type for return value of <code>zend_update_static_property_ex()</code> in <a href="https://github.com/php/php-src/pull/10691">GH-10691</a> by nielsdos</li>
 <li>Fix <a href="https://github.com/php/php-src/issues/10570">GH-10570</a>: Assertion `(key)->h != 0 &amp;&amp; "Hash must be known"' failed in <a href="https://github.com/php/php-src/pull/10572">GH-10572</a> by Niels Dossche</li>
@@ -465,7 +465,7 @@ class C {
 <li>Fix incorrect error checking in <code>php_openssl_set_server_dh_param()</code> in <a href="https://github.com/php/php-src/pull/10705">GH-10705</a> by Niels Dossche</li>
 <li>Use <code>zend_result</code> where appropriate in <code>ext/openssl</code> Remove dead code in <a href="https://github.com/php/php-src/pull/10704">GH-10704</a> by Niels Dossche</li>
 <li>Change implicit enum return value checks to explicit checks (<a href="https://bugs.php.net/bug.php?id=10703">#10703</a>) in <a href="https://github.com/php/php-src/commit/375e7402af">375e7402af</a> by Niels Dossche</li>
-<li>Fix <code>UBSAN</code> warning about applying zero offset to null pointer (<a href="https://bugs.php.net/bug.php?id=10700">#10700</a>) in <a href="https://github.com/php/php-src/commit/382148d7bb">382148d7bb</a> by George Peter Banyard 💜</li>
+<li>Fix <code>UBSAN</code> warning about applying zero offset to null pointer (<a href="https://bugs.php.net/bug.php?id=10700">#10700</a>) in <a href="https://github.com/php/php-src/commit/382148d7bb">382148d7bb</a> by Gina Peter Banyard 💜</li>
 <li>Simplify checks and returns in <code>ext/xmlwriter</code> (<a href="https://bugs.php.net/bug.php?id=10701">#10701</a>) in <a href="https://github.com/php/php-src/commit/07fe46fb5d">07fe46fb5d</a> by Niels Dossche</li>
 <li>chore: standardize the visibility of functions. (<a href="https://bugs.php.net/bug.php?id=10708">#10708</a>) in <a href="https://github.com/php/php-src/commit/9004725367">9004725367</a> by Marcos Marcolin</li>
 <li>Minor cleanups in Zend execution APIs (<a href="https://bugs.php.net/bug.php?id=10699">#10699</a>) in <a href="https://github.com/php/php-src/commit/9108a32bfe">9108a32bfe</a> by Niels Dossche</li>
@@ -476,10 +476,10 @@ class C {
 <li><code>Zend/zend_types.h</code>: move <code>zend_refcounted</code> to <code>zend_refcounted.h</code> in <a href="https://github.com/php/php-src/commit/eb34c28fed">eb34c28fed</a> by Max Kellermann</li>
 <li><code>Zend/zend_types.h</code>: move <code>zend_uchar.h</code> to <code>zend_char.h</code> in <a href="https://github.com/php/php-src/commit/42577c6b6b">42577c6b6b</a> by Max Kellermann</li>
 <li><code>Zend/zend_types.h</code>: move <code>zend_string</code> to <code>zend_string.h</code> in <a href="https://github.com/php/php-src/commit/02690fe3c0">02690fe3c0</a> by Max Kellermann</li>
-<li>The userland constants do not start with PHP_ in <a href="https://github.com/php/php-src/commit/6a5b3f0ff9">6a5b3f0ff9</a> by George Peter Banyard 💜</li>
-<li>Fixed <code>ValueError</code> message in <code>substr_compare()</code> in <a href="https://github.com/php/php-src/commit/2133970152">2133970152</a> by George Peter Banyard 💜</li>
-<li>Fixed <code>ValueError</code> message in count_chars() in <a href="https://github.com/php/php-src/commit/adc5edd411">adc5edd411</a> by George Peter Banyard 💜</li>
-<li>Improve handling of XML options in <a href="https://github.com/php/php-src/pull/10675">GH-10675</a> by George Peter Banyard 💜</li>
+<li>The userland constants do not start with PHP_ in <a href="https://github.com/php/php-src/commit/6a5b3f0ff9">6a5b3f0ff9</a> by Gina Peter Banyard 💜</li>
+<li>Fixed <code>ValueError</code> message in <code>substr_compare()</code> in <a href="https://github.com/php/php-src/commit/2133970152">2133970152</a> by Gina Peter Banyard 💜</li>
+<li>Fixed <code>ValueError</code> message in count_chars() in <a href="https://github.com/php/php-src/commit/adc5edd411">adc5edd411</a> by Gina Peter Banyard 💜</li>
+<li>Improve handling of XML options in <a href="https://github.com/php/php-src/pull/10675">GH-10675</a> by Gina Peter Banyard 💜</li>
 <li><code>Zend/zend_fibers</code>: change return value to zend_result in <a href="https://github.com/php/php-src/pull/10622">GH-10622</a> by Max Kellermann</li>
 <li>Remove unnecessary checks in <code>ftp_fopen_wrapper.c</code> (<a href="https://bugs.php.net/bug.php?id=10711">#10711</a>) in <a href="https://github.com/php/php-src/commit/edacfbd1d4">edacfbd1d4</a> by Niels Dossche</li>
 <li>Allow <code>gen_stub.php</code> to parse and ignore extended docblock types in <a href="https://github.com/php/php-src/commit/81abd8dc37">81abd8dc37</a> by Bob Weinand</li>

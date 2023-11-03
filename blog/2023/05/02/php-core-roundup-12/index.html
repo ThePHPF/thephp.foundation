@@ -272,7 +272,7 @@ $response-&gt;withStatus(201)-&gt;withStatus(202);
 <p><br /></p>
 
 <ul>
-<li><p><strong>RFC Under <a href="https://externals.io/message/119851">Discussion</a>: <a href="https://wiki.php.net/rfc/core-autoloading">New core autoloading mechanism with support for function autoloading</a> by George Peter Banyard 💜 and Dan Ackroyd</strong></p>
+<li><p><strong>RFC Under <a href="https://externals.io/message/119851">Discussion</a>: <a href="https://wiki.php.net/rfc/core-autoloading">New core autoloading mechanism with support for function autoloading</a> by Gina Peter Banyard 💜 and Dan Ackroyd</strong></p>
 
 <p>PHP has had support for class autoloading since PHP 5 and it is an extremely useful feature that is relied on to only load classes that are being used within the current request. However, the current autoloading mechanism does not support autoloading functions.</p>
 
@@ -356,33 +356,33 @@ $response-&gt;withStatus(201)-&gt;withStatus(202);
 <li>Re-add <code>GC_DTOR</code> and <code>GC_DTOR_NO_REF</code> in <a href="https://github.com/php/php-src/commit/c796ce5713">c796ce5713</a> by Dmitry Stogov</li>
 <li>Fix <a href="https://github.com/php/php-src/issues/9397">GH-9397</a>: exif read : warnings and errors : Potentially invalid endianess, Illegal IFD size and Undefined index in <a href="https://github.com/php/php-src/pull/10470">GH-10470</a> by Niels Dossche</li>
 <li>Add separate static property through trait if parent already declares it in <a href="https://github.com/php/php-src/pull/10937">GH-10937</a> by Ilija Tovilo 💜</li>
-<li>Use <code>zend_call_known_instance_method()</code> instead of building FCI/FCC in serializer subroutine in <a href="https://github.com/php/php-src/pull/9955">GH-9955</a> by George Peter Banyard 💜</li>
-<li>Extract common code for phar IO intercept functions in <a href="https://github.com/php/php-src/commit/3fb63f7fa2">3fb63f7fa2</a> by George Peter Banyard 💜</li>
-<li>size variable is only used once, move closer to usage in <a href="https://github.com/php/php-src/commit/96ffdd492c">96ffdd492c</a> by George Peter Banyard 💜</li>
-<li>Improve locality of stream variable in <a href="https://github.com/php/php-src/commit/06896d1c45">06896d1c45</a> by George Peter Banyard 💜</li>
-<li>Use <code>zend_string_concat</code> helper instead of <code>strpprintf</code> in <a href="https://github.com/php/php-src/commit/8e51cfe0ae">8e51cfe0ae</a> by George Peter Banyard 💜</li>
-<li>Convert <code>char*</code> + <code>size_t</code> parameters to <code>zend_string*</code> in <code>phar_find_in_include_path()</code> in <a href="https://github.com/php/php-src/commit/7d93ef067f">7d93ef067f</a> by George Peter Banyard 💜</li>
+<li>Use <code>zend_call_known_instance_method()</code> instead of building FCI/FCC in serializer subroutine in <a href="https://github.com/php/php-src/pull/9955">GH-9955</a> by Gina Peter Banyard 💜</li>
+<li>Extract common code for phar IO intercept functions in <a href="https://github.com/php/php-src/commit/3fb63f7fa2">3fb63f7fa2</a> by Gina Peter Banyard 💜</li>
+<li>size variable is only used once, move closer to usage in <a href="https://github.com/php/php-src/commit/96ffdd492c">96ffdd492c</a> by Gina Peter Banyard 💜</li>
+<li>Improve locality of stream variable in <a href="https://github.com/php/php-src/commit/06896d1c45">06896d1c45</a> by Gina Peter Banyard 💜</li>
+<li>Use <code>zend_string_concat</code> helper instead of <code>strpprintf</code> in <a href="https://github.com/php/php-src/commit/8e51cfe0ae">8e51cfe0ae</a> by Gina Peter Banyard 💜</li>
+<li>Convert <code>char*</code> + <code>size_t</code> parameters to <code>zend_string*</code> in <code>phar_find_in_include_path()</code> in <a href="https://github.com/php/php-src/commit/7d93ef067f">7d93ef067f</a> by Gina Peter Banyard 💜</li>
 <li>Add FPM FastCGI env var test for Apache without path info fix in <a href="https://github.com/php/php-src/commit/15802dfc62">15802dfc62</a> by Jakub Zelenka 💜</li>
 <li>Fix number of elements after packed hash filling in <a href="https://github.com/php/php-src/pull/11022">GH-11022</a> by Niels Dossche</li>
 <li>Fix <a href="https://github.com/php/php-src/issues/11016">GH-11016</a>: Heap buffer overflow in <code>ZEND_ADD_ARRAY_UNPACK_SPEC_HANDLER</code> in <a href="https://github.com/php/php-src/pull/11021">GH-11021</a> by Niels Dossche</li>
 <li>Add FPM FCGI env Apache handler UDS test in <a href="https://github.com/php/php-src/commit/ebb3213f79">ebb3213f79</a> by Jakub Zelenka 💜</li>
 <li>Fixed tests and remove the <code>XFAIL</code> 'Various bugs exist'. They did, but they were in the tests in <a href="https://github.com/php/php-src/commit/e67bb14ab4">e67bb14ab4</a> by Derick Rethans 💜</li>
 <li>Fix <a href="https://github.com/php/php-src/issues/10737">GH-10737</a>: PHP 8.1.16 segfaults on line 597 of <code>sapi/apache2handler/sapi_apache2.c</code> in <a href="https://github.com/php/php-src/pull/10863">GH-10863</a> by Niels Dossche</li>
-<li>Use <code>zend_string</code> for DBA path in <a href="https://github.com/php/php-src/pull/10698">GH-10698</a> by George Peter Banyard 💜</li>
+<li>Use <code>zend_string</code> for DBA path in <a href="https://github.com/php/php-src/pull/10698">GH-10698</a> by Gina Peter Banyard 💜</li>
 <li><code>ext/sockets</code> adding FreeBSD's <code>SO_REUSEPORT_LB</code> constant in <a href="https://github.com/php/php-src/commit/6c532df705">6c532df705</a> by David CARLIER</li>
-<li>Add case insensitive versions of the <code>zend_string_starts_with_*</code> APIs in <a href="https://github.com/php/php-src/pull/11032">GH-11032</a> by George Peter Banyard 💜</li>
-<li><code>ext/phar</code>: Prevent unnecessary known string length computation in <a href="https://github.com/php/php-src/pull/11033">GH-11033</a> by George Peter Banyard 💜</li>
-<li><code>ext/phar</code>: Remove duplicate cleaning-up code in <a href="https://github.com/php/php-src/commit/4082d425a9">4082d425a9</a> by George Peter Banyard 💜</li>
+<li>Add case insensitive versions of the <code>zend_string_starts_with_*</code> APIs in <a href="https://github.com/php/php-src/pull/11032">GH-11032</a> by Gina Peter Banyard 💜</li>
+<li><code>ext/phar</code>: Prevent unnecessary known string length computation in <a href="https://github.com/php/php-src/pull/11033">GH-11033</a> by Gina Peter Banyard 💜</li>
+<li><code>ext/phar</code>: Remove duplicate cleaning-up code in <a href="https://github.com/php/php-src/commit/4082d425a9">4082d425a9</a> by Gina Peter Banyard 💜</li>
 <li>Fix unevaluated rhs of class constant fetch in constant expression in <a href="https://github.com/php/php-src/pull/11047">GH-11047</a> by Ilija Tovilo 💜</li>
 <li>Remove unneeded occurrences of my name in <code>UPGRADING</code> in <a href="https://github.com/php/php-src/commit/d64c7184d4">d64c7184d4</a> by Alex Dowad</li>
 <li>Add more details to <code>NEWS</code> on <code>mb_detect_encoding</code>; also include in UPGRADING in <a href="https://github.com/php/php-src/commit/aa51871adc">aa51871adc</a> by Alex Dowad</li>
 <li>Add additional note on <code>mb_encode_mimeheader</code> in <code>UPGRADING</code> in <a href="https://github.com/php/php-src/commit/a62d192ede">a62d192ede</a> by Alex Dowad</li>
 <li>Add more details in <code>UPGRADING</code> on <code>mb_check_encoding</code> changes in <a href="https://github.com/php/php-src/commit/7cef7cb0ee">7cef7cb0ee</a> by Alex Dowad</li>
 <li>Allow <code>FETCH_OBJ_W</code> and <code>FETCH_STATIC_PROP_W</code> to return <code>INDIRECT</code>/<code>UNDEF</code> zval for uninitialized typed properties in <a href="https://github.com/php/php-src/pull/11048">GH-11048</a> by Dmitry Stogov</li>
-<li><code>ext/curl</code>: Protocol should be a case insensitive check in <a href="https://github.com/php/php-src/pull/11052">GH-11052</a> by George Peter Banyard 💜</li>
+<li><code>ext/curl</code>: Protocol should be a case insensitive check in <a href="https://github.com/php/php-src/pull/11052">GH-11052</a> by Gina Peter Banyard 💜</li>
 <li>Use curl from brew on MacOS CI in <a href="https://github.com/php/php-src/pull/11056">GH-11056</a> by Jakub Zelenka 💜</li>
 <li>Improve ini number handling with <code>INI_SCANNER_TYPED</code> in <a href="https://github.com/php/php-src/pull/11014">GH-11014</a> by Ilija Tovilo 💜</li>
-<li><code>ext/phar</code>: Fix recently introduced potential <code>NULL</code> dereferencement segfaults in <a href="https://github.com/php/php-src/pull/11065">GH-11065</a> by George Peter Banyard 💜</li>
+<li><code>ext/phar</code>: Fix recently introduced potential <code>NULL</code> dereferencement segfaults in <a href="https://github.com/php/php-src/pull/11065">GH-11065</a> by Gina Peter Banyard 💜</li>
 <li>Optimize <code>HT_HASH_RESET</code> in <a href="https://github.com/php/php-src/pull/11059">GH-11059</a> by Niels Dossche</li>
 <li><code>mb_parse_str</code>, <code>mb_http_input</code>, and <code>mb_convert_variables</code> use fast text conversion code for automatic encoding detection in <a href="https://github.com/php/php-src/commit/6df7557e43">6df7557e43</a> by Alex Dowad</li>
 <li>Remove unnecessary memory clearing in virtual_file_ex() in <a href="https://github.com/php/php-src/pull/10963">GH-10963</a> by Niels Dossche</li>

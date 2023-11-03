@@ -327,8 +327,8 @@ Further, it also proposes to disallow redeclaring static variables (in the scope
 <li>Fix <a href="https://github.com/php/php-src/issues/9770">GH-9770</a>: Add small timeout in status-listen test in <a href="https://github.com/php/php-src/commit/8229649045">8229649045</a> by Jakub Zelenka 💜</li>
 <li>Fix memory leak in <a href="https://github.com/php/php-src/commit/482ae71fda">482ae71fda</a> by Dmitry Stogov</li>
 <li>socket add <code>socket_atmark</code> support in <a href="https://github.com/php/php-src/commit/4c4e72f149">4c4e72f149</a> by David CARLIER</li>
-<li>Use <code>zend_call_known_function()</code> in <code>ext-pgsql</code> instead of building FCI/FCC in <a href="https://github.com/php/php-src/commit/4f8d10791b">4f8d10791b</a> by George Peter Banyard 💜</li>
-<li>Use <code>zend_call_known_function()</code> in <code>ext-mysqli</code> instead of building FCI/FCC in <a href="https://github.com/php/php-src/commit/c0f2727e55">c0f2727e55</a> by George Peter Banyard 💜</li>
+<li>Use <code>zend_call_known_function()</code> in <code>ext-pgsql</code> instead of building FCI/FCC in <a href="https://github.com/php/php-src/commit/4f8d10791b">4f8d10791b</a> by Gina Peter Banyard 💜</li>
+<li>Use <code>zend_call_known_function()</code> in <code>ext-mysqli</code> instead of building FCI/FCC in <a href="https://github.com/php/php-src/commit/c0f2727e55">c0f2727e55</a> by Gina Peter Banyard 💜</li>
 <li><code>labeler.yml</code>: set top-level read-only permissions in <a href="https://github.com/php/php-src/pull/9862">GH-9862</a> by Pedro Nacht</li>
 <li>Timelib: Updated to version 2022.6 (2022f) in <a href="https://github.com/php/php-src/commit/2b5bed904e">2b5bed904e</a> by Derick Rethans 💜</li>
 <li>Don’t reset func in <code>zend_closure_internal_handler</code> in <a href="https://github.com/php/php-src/commit/8dabbda8bc">8dabbda8bc</a> by Florian Sowade</li>
@@ -336,11 +336,11 @@ Further, it also proposes to disallow redeclaring static variables (in the scope
 <li>Fix <a href="https://github.com/php/php-src/issues/9829">GH-9829</a>: Bug in refactoring Windows shmat() function in <a href="https://github.com/php/php-src/pull/9873">GH-9873</a> by Christoph M. Becker</li>
 <li>Fix potential NULL pointer dereference Windows <code>shm*()</code> functions in <a href="https://github.com/php/php-src/pull/9872">GH-9872</a> by Christoph M. Becker</li>
 <li>Fix observing inherited internal functions in <a href="https://github.com/php/php-src/commit/b30448f48f">b30448f48f</a> by Bob Weinand</li>
-<li>Store a reference to closures in the FCC in <a href="https://github.com/php/php-src/commit/7c45b95894">7c45b95894</a> by George Peter Banyard 💜</li>
-<li>Add various APIs to handle FCC structures in <a href="https://github.com/php/php-src/commit/de4cfff5f6">de4cfff5f6</a> by George Peter Banyard 💜</li>
-<li>Refactor SPL Callback filter to only use FCC in <a href="https://github.com/php/php-src/commit/8d5d3fd035">8d5d3fd035</a> by George Peter Banyard 💜</li>
-<li>Only use FCC for SQLite3 user defined functions/collations/authorizer in <a href="https://github.com/php/php-src/commit/29bb426933">29bb426933</a>, <a href="https://github.com/php/php-src/commit/37aea43eed">37aea43eed</a>, and <a href="https://github.com/php/php-src/commit/d105958603">d105958603</a> by George Peter Banyard 💜</li>
-<li>Only use FCC for libxml entity loader callback in <a href="https://github.com/php/php-src/commit/fb114bf45b">fb114bf45b</a> by George Peter Banyard 💜</li>
+<li>Store a reference to closures in the FCC in <a href="https://github.com/php/php-src/commit/7c45b95894">7c45b95894</a> by Gina Peter Banyard 💜</li>
+<li>Add various APIs to handle FCC structures in <a href="https://github.com/php/php-src/commit/de4cfff5f6">de4cfff5f6</a> by Gina Peter Banyard 💜</li>
+<li>Refactor SPL Callback filter to only use FCC in <a href="https://github.com/php/php-src/commit/8d5d3fd035">8d5d3fd035</a> by Gina Peter Banyard 💜</li>
+<li>Only use FCC for SQLite3 user defined functions/collations/authorizer in <a href="https://github.com/php/php-src/commit/29bb426933">29bb426933</a>, <a href="https://github.com/php/php-src/commit/37aea43eed">37aea43eed</a>, and <a href="https://github.com/php/php-src/commit/d105958603">d105958603</a> by Gina Peter Banyard 💜</li>
+<li>Only use FCC for libxml entity loader callback in <a href="https://github.com/php/php-src/commit/fb114bf45b">fb114bf45b</a> by Gina Peter Banyard 💜</li>
 <li>Fix hardcoded paths in test in <a href="https://github.com/php/php-src/commit/4935e10fc8">4935e10fc8</a> by Bob Weinand</li>
 <li>Delay releasing closures until after observer end in <a href="https://github.com/php/php-src/commit/8e49d7f32f">8e49d7f32f</a> by Bob Weinand</li>
 <li>Properly deal with internal attributes used on promoted properties in <a href="https://github.com/php/php-src/pull/9661">GH-9661</a> by Martin Schröder</li>
@@ -376,9 +376,9 @@ Further, it also proposes to disallow redeclaring static variables (in the scope
 <li>Escape the role attribute of namespaced classes in <a href="https://github.com/php/php-src/pull/9952">GH-9952</a> by Máté Kocsis 💜</li>
 <li>Cache UTF-8-validity status of strings in GC flags in <a href="https://github.com/php/php-src/commit/d0d834429f">d0d834429f</a> by Alex Dowad</li>
 <li>Promote <code>unserialize()</code> notices to warning in <a href="https://github.com/php/php-src/pull/9629">GH-9629</a> by Tim Düsterhus</li>
-<li>Remove code for OS2 in <a href="https://github.com/php/php-src/commit/726d595ec7">726d595ec7</a> by George Peter Banyard 💜</li>
-<li>Use <code>zend_result</code> return type instead of innacurate ones in <a href="https://github.com/php/php-src/commit/dbf54e1a8b">dbf54e1a8b</a> by George Peter Banyard 💜</li>
-<li>Change conditional check in <code>disk_free_space()</code> test in <a href="https://github.com/php/php-src/commit/bab9e349cb">bab9e349cb</a> by George Peter Banyard 💜</li>
+<li>Remove code for OS2 in <a href="https://github.com/php/php-src/commit/726d595ec7">726d595ec7</a> by Gina Peter Banyard 💜</li>
+<li>Use <code>zend_result</code> return type instead of innacurate ones in <a href="https://github.com/php/php-src/commit/dbf54e1a8b">dbf54e1a8b</a> by Gina Peter Banyard 💜</li>
+<li>Change conditional check in <code>disk_free_space()</code> test in <a href="https://github.com/php/php-src/commit/bab9e349cb">bab9e349cb</a> by Gina Peter Banyard 💜</li>
 <li>Add WordPress to community build in <a href="https://github.com/php/php-src/pull/9942">GH-9942</a> by Ilija Tovilo 💜</li>
 <li>Fix caching of default params with side-effects in <a href="https://github.com/php/php-src/pull/9935">GH-9935</a> by Ilija Tovilo 💜</li>
 <li>Fix cross-compilation for <code>shadow_stack_exists</code> in <a href="https://github.com/php/php-src/commit/05f4b84940">05f4b84940</a> by Dmitry Stogov</li>
@@ -391,10 +391,10 @@ Further, it also proposes to disallow redeclaring static variables (in the scope
 <li>Use <code>__atomic_xxxx()</code> instead of <code>__sync_xxxx()</code> for lsapi in <a href="https://github.com/php/php-src/commit/4bdfce6c1a">4bdfce6c1a</a> by George Wang</li>
 <li>For UTF-7, flag unnecessary extra trailing byte in Base64 section as error in <a href="https://github.com/php/php-src/commit/a618682373">a618682373</a> by Alex Dowad</li>
 <li>Fix a memory leak in tracig JIT when the same closure is called through <code>Closure::call()</code> and natively in <a href="https://github.com/php/php-src/commit/45cb3f917a">45cb3f917a</a> by Dmitry Stogov</li>
-<li>Fix <a href="https://github.com/php/php-src/issues/9883">GH-9883</a>: <code>SplFileObject::__toString()</code> reads next line in <a href="https://github.com/php/php-src/pull/9912">GH-9912</a> by George Peter Banyard 💜</li>
-<li>Fix performance degradation introduced in <a href="https://github.com/php/php-src/commit/c2547ab7dc67646e287d430e44798cb9f327cf21">c2547ab7</a> in <a href="https://github.com/php/php-src/pull/9876">GH-9876</a> by George Peter Banyard 💜</li>
+<li>Fix <a href="https://github.com/php/php-src/issues/9883">GH-9883</a>: <code>SplFileObject::__toString()</code> reads next line in <a href="https://github.com/php/php-src/pull/9912">GH-9912</a> by Gina Peter Banyard 💜</li>
+<li>Fix performance degradation introduced in <a href="https://github.com/php/php-src/commit/c2547ab7dc67646e287d430e44798cb9f327cf21">c2547ab7</a> in <a href="https://github.com/php/php-src/pull/9876">GH-9876</a> by Gina Peter Banyard 💜</li>
 <li>Fix mangled kana output for JIS encoding in <a href="https://github.com/php/php-src/commit/8f84192403">8f84192403</a> by Alex Dowad</li>
-<li>Handle trampolines correctly in new FCC API + usages in <a href="https://github.com/php/php-src/pull/9877">GH-9877</a> by George Peter Banyard 💜</li>
+<li>Handle trampolines correctly in new FCC API + usages in <a href="https://github.com/php/php-src/pull/9877">GH-9877</a> by Gina Peter Banyard 💜</li>
 <li>php-fpm: fix Solaris port events.mechanism in <a href="https://github.com/php/php-src/pull/9959">GH-9959</a> by Petr Sumbera</li>
 <li>Fix bug <a href="https://bugs.php.net/bug.php?id=68207">#68207</a>: Setting fastcgi.error_header can result in a WARNING in <a href="https://github.com/php/php-src/commit/5a4520bc2b">5a4520bc2b</a> by Jakub Zelenka 💜</li>
 <li>Fix bug <a href="https://bugs.php.net/bug.php?id=80669">#80669</a>: FPM numeric user fails to set groups in <a href="https://github.com/php/php-src/commit/94702c56e0">94702c56e0</a> by Jakub Zelenka 💜</li>

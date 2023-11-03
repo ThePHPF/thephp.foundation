@@ -228,12 +228,12 @@
 <ul>
 <li><p><strong>Implemented: <a href="https://wiki.php.net/rfc/null-false-standalone-types">Allow null and false as stand-alone types</a> 💜</strong></p>
 
-<p>RFC by George Peter Banyard proposed to allow null and false as standalone types in PHP. With the addition of Union Types in PHP 8.0, it was possible to declare a Union Type with <code>null</code> and <code>false</code>, but not as stand-alone types. With this change, it is now possible to declare class properties, parameters, and return types with <code>null</code> and <code>false</code> as stand-alone types. They are already reserved keywords in PHP, and this change is highly unlikely to cause any backwards compatibility issues.</p>
+<p>RFC by Gina Peter Banyard proposed to allow null and false as standalone types in PHP. With the addition of Union Types in PHP 8.0, it was possible to declare a Union Type with <code>null</code> and <code>false</code>, but not as stand-alone types. With this change, it is now possible to declare class properties, parameters, and return types with <code>null</code> and <code>false</code> as stand-alone types. They are already reserved keywords in PHP, and this change is highly unlikely to cause any backwards compatibility issues.</p>
 
 <p>Learn more about this RFC in <a href="https://phpinternals.news/99">PHP Internals News Podcast #99</a> <strong>💜</strong>, hosted by Derick Rethans, and on <a href="https://php.watch/versions/8.2/null-false-types">PHP.Watch</a>.</p></li>
 <li><p><strong>Implemented: <a href="https://wiki.php.net/rfc/true-type">Add true type</a> 💜</strong></p>
 
-<p>Another RFC by George Peter Banyard proposes to add <code>true</code> as a valid and standalone type to PHP. This RFC, along with RFC to allow <code>null</code> and <code>false</code> as standalone types, makes PHP’s type system more expressive and precise.</p>
+<p>Another RFC by Gina Peter Banyard proposes to add <code>true</code> as a valid and standalone type to PHP. This RFC, along with RFC to allow <code>null</code> and <code>false</code> as standalone types, makes PHP’s type system more expressive and precise.</p>
 
 <p>Learn more about this RFC in <a href="https://phpinternals.news/102">PHP Internals News Podcast #102</a>, hosted by Derick Rethans, and on <a href="https://php.watch/versions/8.2/true-type">PHP.Watch</a>.</p></li>
 <li><p><strong>Accepted: Random Extension 5.x</strong></p>
@@ -248,7 +248,7 @@
 <p>Learn more about this RFC from the <a href="https://phpinternals.news/101">PHP Internals News Podcast #101</a> hosted by Derick Rethans<strong>.</strong></p></li>
 <li><p><strong>Accepted: <a href="https://wiki.php.net/rfc/dnf_types">Disjunctive Normal Form Types</a> 💜</strong></p>
 
-<p>Yet another RFC by George Peter Banyard that proposes to add Disjunctive Normal Form types to the language.</p>
+<p>Yet another RFC by Gina Peter Banyard that proposes to add Disjunctive Normal Form types to the language.</p>
 
 <p>PHP has support for Union Types (<code>foo|bar</code>) since PHP 8.0, and Intersection Types (<code>foo&amp;bar</code>) since PHP 8.1. The DNF Types RFC proposes to add support for combining Union and Intersection types to declare a type in a canonical form.</p>
 
@@ -362,12 +362,12 @@ class C {}
 <li>Get rid of duplicated rotr3 implementation in PR <a href="https://github.com/php/php-src/pull/8853">#8853</a> by Ilija Tovilo 💜</li>
 <li>Declare constants in stubs for several extensions by Máté Kocsis 💜</li>
 <li>Fix lineno in backtrace of multi-line function calls, fixing <a href="https://github.com/php/php-src/issues/8810">GH-8810</a> in PR <a href="https://github.com/php/php-src/pull/8818">#8818</a> by Ilija Tovilo 💜</li>
-<li>Refactoring part of SPL <code>Directory.c</code> PR <a href="https://github.com/php/php-src/pull/8837">#8837</a> by George Peter Banyard 💜</li>
-<li>Use the passed '<code>this</code>' pointer instead of <code>ZEND_THIS</code>in PR <a href="https://github.com/php/php-src/pull/8854">#8854</a> by George Peter Banyard 💜</li>
-<li>Fixed <a href="https://github.com/php/php-src/issues/8861">GH-8861</a>: correctly handle string lengths in <code>SplFileinfo</code> methods in PR <a href="https://github.com/php/php-src/issues/8861">#8861</a> by M. Vondano and George Peter Banyard 💜</li>
+<li>Refactoring part of SPL <code>Directory.c</code> PR <a href="https://github.com/php/php-src/pull/8837">#8837</a> by Gina Peter Banyard 💜</li>
+<li>Use the passed '<code>this</code>' pointer instead of <code>ZEND_THIS</code>in PR <a href="https://github.com/php/php-src/pull/8854">#8854</a> by Gina Peter Banyard 💜</li>
+<li>Fixed <a href="https://github.com/php/php-src/issues/8861">GH-8861</a>: correctly handle string lengths in <code>SplFileinfo</code> methods in PR <a href="https://github.com/php/php-src/issues/8861">#8861</a> by M. Vondano and Gina Peter Banyard 💜</li>
 <li>Fix<a href="https://github.com/php/php-src/issues/8848"> GH-8848</a>: <code>imagecopyresized()</code> error refers to the wrong argument in commit <a href="https://github.com/php/php-src/commit/9405f43ba927376e02f4023cbfdc0f9bf412396d">9405f43b</a> by Christoph M. Becker</li>
-<li>Convert iterable into an internal alias for Traversable|array PR <a href="https://github.com/php/php-src/pull/7309">#7309</a> by George Peter Banyard 💜</li>
-<li>Use same type error wording for alias iterable in ZPP in PR <a href="https://github.com/php/php-src/pull/8838">#8838</a> by George Peter Banyard 💜</li>
+<li>Convert iterable into an internal alias for Traversable|array PR <a href="https://github.com/php/php-src/pull/7309">#7309</a> by Gina Peter Banyard 💜</li>
+<li>Use same type error wording for alias iterable in ZPP in PR <a href="https://github.com/php/php-src/pull/8838">#8838</a> by Gina Peter Banyard 💜</li>
 <li>Support the <code>#[\AllowDynamicProperties]</code> attribute in stubs in PR <a href="https://github.com/php/php-src/pull/8776">#8776</a> by Tim Düsterhus</li>
 <li>Refactor <code>sapi_getenv()</code> in PR <a href="https://github.com/php/php-src/pull/8786">#8786</a> by Heiko Weber</li>
 <li>Specify unit in out of memory error in PR <a href="https://github.com/php/php-src/pull/8820">#8820</a> by Ilija Tovilo 💜</li>
@@ -376,7 +376,7 @@ class C {}
 <li>Introduction of timing attack safe bcmp implementation in commit <a href="https://github.com/php/php-src/commit/bfe6f9e66a65d7c40fd486249097f932e2b237c3">bfe6f9e6</a> by David CARLIER</li>
 <li>Replace the use of <code>ZVAL_BOOL()</code> with <code>ZVAL_TRUE()</code> or<code>ZVAL_FALSE()</code> where the value is fixed in PR <a href="https://github.com/php/php-src/pull/8815">#8815</a> by Yurun</li>
 <li>intl ICU C++ code modernisation, making it closer to C++11 in PR <a href="https://github.com/php/php-src/pull/8650">#8650</a> by David CARLIER</li>
-<li>Fix<a href="https://github.com/php/php-src/issues/8563"> GH-8563</a> Different results for <code>seek()</code> on <code>SplFileObject</code> and <code>SplTempFileObject</code> in commit <a href="https://github.com/php/php-src/commit/6f87a5c633">#6f87a5c6</a> by George Peter Banyard 💜</li>
+<li>Fix<a href="https://github.com/php/php-src/issues/8563"> GH-8563</a> Different results for <code>seek()</code> on <code>SplFileObject</code> and <code>SplTempFileObject</code> in commit <a href="https://github.com/php/php-src/commit/6f87a5c633">#6f87a5c6</a> by Gina Peter Banyard 💜</li>
 <li>Zend, ext/opcache: use <code>PR_SET_VMA_ANON_NAME</code> (Linux 5.17) in PR <a href="https://github.com/php/php-src/pull/8234">#8234</a> by Max Kellermann</li>
 <li>Fixed potential use after free in <code>php_binary_init()</code> in PR <a href="https://github.com/php/php-src/pull/8791">#8791</a> by Heiko Weber</li>
 <li>Implemented: Declare true return types in PR <a href="https://github.com/php/php-src/pull/8759">#8759</a> by Máté Kocsis 💜</li>
@@ -395,7 +395,7 @@ class C {}
 <li>Add <code>SO_SETFIB</code> FreeBSD socket option constant in PR <a href="https://github.com/php/php-src/pull/8742">#8742</a> by David CARLIER. This is a follow-up to several of David’s contributions to the Sockets extension.</li>
 <li>Fix<a href="https://github.com/php/php-src/issues/8661"> GH-8661</a>: Nullsafe in coalesce triggers undefined variable warning in PR <a href="https://github.com/php/php-src/pull/8690">#8690</a> by Ilija Tovilo 💜</li>
 <li>Add function exposing <code>HAVE_GCC_GLOBAL_REGS</code> in PR <a href="https://github.com/php/php-src/pull/8359">#8359</a> by Joe Rowell</li>
-<li>Fix<a href="https://github.com/php/php-src/issues/8691"> GH-8691</a>: Add required extensions for redirected tests in commit <a href="https://github.com/php/php-src/commit/c05c96b3fe2f309b9fe9b118d46681bf00caf798">c05c96b3</a> by George Peter Banyard 💜</li>
+<li>Fix<a href="https://github.com/php/php-src/issues/8691"> GH-8691</a>: Add required extensions for redirected tests in commit <a href="https://github.com/php/php-src/commit/c05c96b3fe2f309b9fe9b118d46681bf00caf798">c05c96b3</a> by Gina Peter Banyard 💜</li>
 <li>Remove code duplication in <code>zend_std_compare_objects</code> in PR <a href="https://github.com/php/php-src/pull/8710">#8710</a> by Ilija Tovilo 💜</li>
 <li>Fix Bug <a href="https://bugs.php.net/bug.php?id=76452">#76452</a>: Crash while parsing blob data in <code>firebird_fetch_blob</code> in commit <a href="https://github.com/php/php-src/commit/a6a13139db">a6a13139</a> by Ben Ramsey</li>
 <li>Fix <a href="https://bugs.php.net/bug.php?id=81720">#81720</a>: Uninitialized array in <code>pg_query_params()</code> leading to RCE in commit <a href="https://github.com/php/php-src/commit/55f6895f4b4c677272fd4ee1113acdbd99c4b5ab">55f6895f</a> by Christoph M. Becker</li>

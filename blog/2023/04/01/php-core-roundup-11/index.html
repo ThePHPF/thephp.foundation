@@ -236,7 +236,7 @@ Hundreds of awesome PHP contributors put their efforts into improvements to the 
 <p>Following are the RFCs and major pull-requests discussed, voted on, and implemented since our last update.</p>
 
 <ul>
-<li><p><strong>RFC Implemented: <a href="https://wiki.php.net/rfc/saner-array-sum-product">Saner array_(sum|product)()</a> by George Peter Banyard 💜</strong></p>
+<li><p><strong>RFC Implemented: <a href="https://wiki.php.net/rfc/saner-array-sum-product">Saner array_(sum|product)()</a> by Gina Peter Banyard 💜</strong></p>
 
 <p>Proposed to change the current behavior of <code>array_sum</code> and <code>array_product</code> to properly handle non-numeric values. This results in additional warnings when these functions encounter unsupported types such as certain objects, arrays, and resources. Further, it can result in different return values on objects that support arithmetic operations.</p>
 
@@ -280,7 +280,7 @@ class C {
 <li><p><strong>RFC Under <a href="https://externals.io/message/119745">Discussion</a>: <a href="https://wiki.php.net/rfc/unserialize_warn_on_trailing_data">Make unserialize() emit a warning for trailing bytes</a> by Tim Düsterhus</strong></p>
 
 <p>This RFC proposes that <a href="http://www.php.net/unserialize"><code>unserialize()</code></a> shall emit a new <code>E_WARNING</code> whenever the input string contains additional bytes once the unserialization parser terminates after successfully parsing a value. In other words: A warning shall be emitted if bytes can be removed from the end of the input string without changing the return value of <a href="http://www.php.net/unserialize"><code>unserialize()</code></a>.</p></li>
-<li><p><strong>RFC Under <a href="https://externals.io/message/119749">Discussion</a>: <a href="https://wiki.php.net/rfc/proper-range-semantics">Define proper semantics for range() function</a> by George Peter Banyard</strong> 💜</p>
+<li><p><strong>RFC Under <a href="https://externals.io/message/119749">Discussion</a>: <a href="https://wiki.php.net/rfc/proper-range-semantics">Define proper semantics for range() function</a> by Gina Peter Banyard</strong> 💜</p>
 
 <p>This RFC attempts to iron out several undesirable and unexpected behaviors of the <code>range()</code> function. Introduced in PHP 4, <code>range()</code> function attempts to work with various types not only including integers, floats, and strings, but also other types. There are series of behaviors highlighted in the RFC along with several improvements proposed (throwing exceptions, emitting warnings, changing behaviors, etc).</p></li>
 </ul>
@@ -342,20 +342,20 @@ class C {
 <li>Fix <a href="https://github.com/php/php-src/issues/10709">GH-10709</a>: UAF in recursive AST evaluation in <a href="https://github.com/php/php-src/pull/10718">GH-10718</a> by Ilija Tovilo 💜</li>
 <li>Revert "Throw on negative setcookie expiration timestamp" in <a href="https://github.com/php/php-src/commit/9f591c9bf6">9f591c9bf6</a> by Ilija Tovilo 💜</li>
 <li>random: Add missing <code>php.h</code> include to <code>php_random.h</code> (<a href="https://bugs.php.net/bug.php?id=10764">#10764</a>) in <a href="https://github.com/php/php-src/commit/5087931963">5087931963</a> by Tim Düsterhus</li>
-<li>Fix <code>-Wstrict-prototypes</code> in DBA in <a href="https://github.com/php/php-src/commit/648e896d0e">648e896d0e</a> by George Peter Banyard 💜</li>
+<li>Fix <code>-Wstrict-prototypes</code> in DBA in <a href="https://github.com/php/php-src/commit/648e896d0e">648e896d0e</a> by Gina Peter Banyard 💜</li>
 <li>Remove unnecessary workaround for the true type in <a href="https://github.com/php/php-src/commit/368febbf89">368febbf89</a> by Máté Kocsis 💜</li>
 <li><code>mb_encode_mimeheader</code> does not crash if provided encoding has no MIME name set in <a href="https://github.com/php/php-src/commit/7c1ee5a02a">7c1ee5a02a</a> by Alex Dowad</li>
 <li>Enable GitHub actions cancel-in-progress for PRs in <a href="https://github.com/php/php-src/pull/10799">GH-10799</a> by Ilija Tovilo 💜</li>
 <li>Fix readonly+clone JIT issues in <a href="https://github.com/php/php-src/pull/10748">GH-10748</a> by Ilija Tovilo 💜</li>
 <li><code>*/*.m4</code>: <code>update main()</code> signatures in <a href="https://github.com/php/php-src/commit/fa65873502">fa65873502</a> by Michael Orlitzky</li>
 <li><code>ext/iconv/config.m4</code>: add missing <code>stdio.h</code> include in <a href="https://github.com/php/php-src/pull/10751">GH-10751</a> by Michael Orlitzky</li>
-<li>RFC: Saner <code>array_(sum|product)()</code> (<a href="https://bugs.php.net/bug.php?id=10161">#10161</a>) in <a href="https://github.com/php/php-src/commit/3b06618813">3b06618813</a> by George Peter Banyard 💜</li>
+<li>RFC: Saner <code>array_(sum|product)()</code> (<a href="https://bugs.php.net/bug.php?id=10161">#10161</a>) in <a href="https://github.com/php/php-src/commit/3b06618813">3b06618813</a> by Gina Peter Banyard 💜</li>
 <li>Imply UTF8 validity in implode function (<a href="https://bugs.php.net/bug.php?id=10780">#10780</a>) in <a href="https://github.com/php/php-src/commit/3821938e81">3821938e81</a> by Michael Voříšek</li>
 <li>Fix <a href="https://github.com/php/php-src/issues/8646">GH-8646</a>: Memory leak PHP FPM 8.1 in <a href="https://github.com/php/php-src/pull/10783">GH-10783</a> by Niels Dossche</li>
 <li>Fix <a href="https://github.com/php/php-src/issues/8065">GH-8065</a>: <code>opcache.c</code>onsistency_checks > 0 causes segfaults in PHP >= 8.1.5 in fpm context in <a href="https://github.com/php/php-src/pull/10798">GH-10798</a> by Niels Dossche</li>
 <li>Re-add some CTE functions that were removed from being CTE by a mistake in <a href="https://github.com/php/php-src/pull/10768">GH-10768</a> by Michael Voříšek</li>
 <li>Update libmysql 5.7 version in <a href="https://github.com/php/php-src/commit/12290b796b">12290b796b</a> by Ilija Tovilo 💜</li>
-<li>Suppress <code>-Wstrict-prototypes</code> in GD extension (<a href="https://bugs.php.net/bug.php?id=10803">#10803</a>) in <a href="https://github.com/php/php-src/commit/afd8695a22">afd8695a22</a> by George Peter Banyard 💜</li>
+<li>Suppress <code>-Wstrict-prototypes</code> in GD extension (<a href="https://bugs.php.net/bug.php?id=10803">#10803</a>) in <a href="https://github.com/php/php-src/commit/afd8695a22">afd8695a22</a> by Gina Peter Banyard 💜</li>
 <li>Micro optimization: readonly properties always have a type in <a href="https://github.com/php/php-src/commit/574e531127">574e531127</a> by Máté Kocsis 💜</li>
 <li>Fixed macro generation for variadics, which don't have a default value in <a href="https://github.com/php/php-src/commit/717335ec63">717335ec63</a> by Derick Rethans 💜</li>
 <li>Add test case in <a href="https://github.com/php/php-src/commit/8a9b80cfe0">8a9b80cfe0</a> by Derick Rethans 💜</li>
@@ -456,7 +456,7 @@ class C {
 <li><code>ext/pdo_mysql</code>: mysql_handle_closer nullify some freed data in <a href="https://github.com/php/php-src/commit/f6989df8cc">f6989df8cc</a> by David CARLIER</li>
 <li>Fix undefined behaviour in string uppercasing and lowercasing in <a href="https://github.com/php/php-src/pull/10936">GH-10936</a> by Niels Dossche</li>
 <li>Fix buffer-overflow in <code>open_basedir()</code> in <a href="https://github.com/php/php-src/commit/a7f91e37de">a7f91e37de</a> by Ilija Tovilo 💜</li>
-<li>Propagate UTF-8 flag during Rope operations (<a href="https://bugs.php.net/bug.php?id=10915">#10915</a>) in <a href="https://github.com/php/php-src/commit/d7c351ea54">d7c351ea54</a> by George Peter Banyard 💜</li>
+<li>Propagate UTF-8 flag during Rope operations (<a href="https://bugs.php.net/bug.php?id=10915">#10915</a>) in <a href="https://github.com/php/php-src/commit/d7c351ea54">d7c351ea54</a> by Gina Peter Banyard 💜</li>
 <li>Use <code>php_random_bytes_silent()</code> where possible in gmp_init_random() (<a href="https://bugs.php.net/bug.php?id=10944">#10944</a>) in <a href="https://github.com/php/php-src/commit/8317a147b9">8317a147b9</a> by Niels Dossche</li>
 <li>Fix undefined behaviour when writing 32-bit values in phar/tar.c in <a href="https://github.com/php/php-src/pull/10940">GH-10940</a> by Niels Dossche</li>
 <li>Fix undefined behaviour in <code>GENERATE_SEED()</code> in <a href="https://github.com/php/php-src/pull/10942">GH-10942</a> by Niels Dossche</li>

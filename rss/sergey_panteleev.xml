@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2023-11-03T11:09:23+00:00</updated><entry><author><name>Ayesh Karunaratne</name><uri>https://aye.sh</uri></author><author><name>Sergey Panteleev</name><uri>https://sergeypanteleev.com</uri></author><title type="html"><![CDATA[PHP Core Roundup #18]]></title><content type="html"><![CDATA[<p>Welcome back to <a href="/blog/tag/roundup/">PHP Core Roundup</a> series! This is where we highlight and celebrate the improvements made to PHP during the month past by the PHP development team and members of the PHP Foundation.</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2023-11-03T12:48:48+00:00</updated><entry><author><name>Ayesh Karunaratne</name><uri>https://aye.sh</uri></author><author><name>Sergey Panteleev</name><uri>https://sergeypanteleev.com</uri></author><title type="html"><![CDATA[PHP Core Roundup #18]]></title><content type="html"><![CDATA[<p>Welcome back to <a href="/blog/tag/roundup/">PHP Core Roundup</a> series! This is where we highlight and celebrate the improvements made to PHP during the month past by the PHP development team and members of the PHP Foundation.</p>
 
 <blockquote>
   <p>The PHP Foundation is a collective of PHP contributors, veterans, and companies that collaborate to ensure the long-term sustainability of the PHP programming language. The foundation currently supports six contributors focused on PHP's maintenance, debt reduction, and feature development. These contributors work closely with others on coding, documentation, and discussions.</p>
@@ -633,7 +633,7 @@ Hundreds of awesome PHP contributors put their efforts into improvements to the 
 
 <p>While PHP 8.3 has moved to the RC cycle, the documentation available on <a href="https://php.net">php.net</a>, requires updating. An initial version of the <a href="https://www.php.net/manual/en/migration83.php">PHP 8.3 migration guide</a> has been published by Yoshinari Takaoka.</p>
 
-<p>George P. Banyard 💜 is tracking the progress for PHP 8.3 related changes in <a href="https://github.com/php/doc-en/issues/2796">php/doc-en#2796</a>, and also triaged issues in the docs and marked several of them as "good first time", which are ideal easy picks if you would like to start contributing to PHP docs. You can find the full list on <a href="https://github.com/php/doc-en/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22">GitHub</a>.</p>
+<p>Gina P. Banyard 💜 is tracking the progress for PHP 8.3 related changes in <a href="https://github.com/php/doc-en/issues/2796">php/doc-en#2796</a>, and also triaged issues in the docs and marked several of them as "good first time", which are ideal easy picks if you would like to start contributing to PHP docs. You can find the full list on <a href="https://github.com/php/doc-en/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22">GitHub</a>.</p>
 
 <p><br></p>
 
@@ -699,7 +699,7 @@ Hundreds of awesome PHP contributors put their efforts into improvements to the 
 <li>Fix <a href="https://github.com/php/php-src/issues/12207">GH-12207</a> memory leak of doc blocks of static properties in <a href="https://github.com/php/php-src/commit/910f579f14">910f579f14</a></li>
 </ul>
 
-<h3 id="george-peter-banyard-%F0%9F%92%9C">George Peter Banyard 💜</h3>
+<h3 id="gina-peter-banyard-%F0%9F%92%9C">Gina Peter Banyard 💜</h3>
 
 <ul>
 <li><code>ext/mysqli</code>: Work on making tests parallizable in <a href="https://github.com/php/php-src/pull/11814">GH-11814</a></li>
@@ -1001,7 +1001,7 @@ Hundreds of awesome PHP contributors put their efforts into improvements to the 
 
 <p>This RFC proposes to deprecate a number of functions that have overloaded signatures, meaning they behave differently based on the number or type of arguments passed to them. The goal is to make PHP's function signatures more consistent and predictable.</p>
 
-<h3 id="implemented%3A-deprecations-for-php-8.3-by-george-peter-banyard-%F0%9F%92%9C%2C-christoph-m.-becker%2C-m%C3%A1t%C3%A9-kocsis-%F0%9F%92%9C%2C-tim-d%C3%BCsterhus%2C-go-kudo%2C-andreas-heigl">Implemented: <a href="https://wiki.php.net/rfc/deprecations_php_8_3">Deprecations for PHP 8.3</a> by George Peter Banyard 💜, Christoph M. Becker, Máté Kocsis 💜, Tim Düsterhus, Go Kudo, Andreas Heigl</h3>
+<h3 id="implemented%3A-deprecations-for-php-8.3-by-gina-peter-banyard-%F0%9F%92%9C%2C-christoph-m.-becker%2C-m%C3%A1t%C3%A9-kocsis-%F0%9F%92%9C%2C-tim-d%C3%BCsterhus%2C-go-kudo%2C-andreas-heigl">Implemented: <a href="https://wiki.php.net/rfc/deprecations_php_8_3">Deprecations for PHP 8.3</a> by Gina Peter Banyard 💜, Christoph M. Becker, Máté Kocsis 💜, Tim Düsterhus, Go Kudo, Andreas Heigl</h3>
 
 <p>The aim is to clean up some of the older, less consistent parts of PHP to make the language more reliable and predictable. The following list provides a short overview of the functionality targeted for deprecation:</p>
 
@@ -1018,7 +1018,7 @@ Hundreds of awesome PHP contributors put their efforts into improvements to the 
 
 <p>The similar concepts exist in Java, TypeScript, C++, C#, Swift, Kotlin, and other languages.</p>
 
-<h3 id="implemented%3A-path-to-saner-increment%2Fdecrement-operators-by-george-peter-banyard--%F0%9F%92%9C">Implemented: <a href="https://wiki.php.net/rfc/saner-inc-dec-operators">Path to Saner Increment/Decrement operators</a> by George Peter Banyard  💜</h3>
+<h3 id="implemented%3A-path-to-saner-increment%2Fdecrement-operators-by-gina-peter-banyard--%F0%9F%92%9C">Implemented: <a href="https://wiki.php.net/rfc/saner-inc-dec-operators">Path to Saner Increment/Decrement operators</a> by Gina Peter Banyard  💜</h3>
 
 <p>This RFC proposed several improvements to normalize the behavior of <code>$v++</code> and <code>$v--</code> to be the same as <code>$v += 1</code> and <code>$v -= 1</code>, which PHP is currently inconsistent on.</p>
 
@@ -1146,7 +1146,7 @@ Hundreds of awesome PHP contributors put their efforts into improvements to the 
 <li>small fixes in <a href="https://github.com/php/php-src/commit/cd9dba81c7">cd9dba81c7</a></li>
 </ul>
 
-<h3 id="george-peter-banyard-%F0%9F%92%9C">George Peter Banyard 💜</h3>
+<h3 id="gina-peter-banyard-%F0%9F%92%9C">Gina Peter Banyard 💜</h3>
 
 <ul>
 <li>Use binary safe case compare in new <code>zend_string</code> API in <a href="https://github.com/php/php-src/commit/eb5cc1372c">eb5cc1372c</a></li>
@@ -1537,7 +1537,7 @@ Hundreds of awesome PHP contributors put their efforts into improvements to the 
 
 <p>While PHP 8.3 has moved to the RC cycle, the documentation available on <a href="https://php.net">php.net</a>, requires updating.</p>
 
-<p>George P. Banyard 💜 has triaged issues in the docs and marked several of them as "good first time", which are ideal easy picks if you would like to start contributing to PHP docs. You can find the full list on <a href="https://github.com/php/doc-en/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22">GitHub</a>.</p>
+<p>Gina P. Banyard 💜 has triaged issues in the docs and marked several of them as "good first time", which are ideal easy picks if you would like to start contributing to PHP docs. You can find the full list on <a href="https://github.com/php/doc-en/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22">GitHub</a>.</p>
 
 <p>To make it easier to view the results of changes locally, Anna Filina has prepared a Docker Compose set-up. <a href="https://github.com/php/doc-en/pull/2638">Check it out</a>.</p>
 
@@ -1639,7 +1639,7 @@ Hundreds of awesome PHP contributors put their efforts into improvements to the 
 <li>Remove CPP when invoking dtrace utility in <a href="https://github.com/php/php-src/commit/02b3fb1f6b">02b3fb1f6b</a></li>
 </ul>
 
-<h3 id="george-peter-banyard-%F0%9F%92%9C">George Peter Banyard 💜</h3>
+<h3 id="gina-peter-banyard-%F0%9F%92%9C">Gina Peter Banyard 💜</h3>
 
 <ul>
 <li>Fix <a href="https://github.com/php/php-src/issues/11876">GH-11876</a>: <code>ini_parse_quantity()</code> accepts invalid quantities in <a href="https://github.com/php/php-src/commit/d229a480ad">d229a480ad</a></li>
@@ -1987,7 +1987,7 @@ Hundreds of awesome PHP contributors put their efforts into improvements to the 
 
 <p>The similar concepts exist in Java, TypeScript, C++, C#, Swift, Kotlin, and other languages.</p>
 
-<h3 id="implemented%3A-define-proper-semantics-for-range-function-by-george-peter-banyard-%F0%9F%92%9C">Implemented: <a href="https://wiki.php.net/rfc/proper-range-semantics">Define proper semantics for range() function</a> by George Peter Banyard 💜</h3>
+<h3 id="implemented%3A-define-proper-semantics-for-range-function-by-gina-peter-banyard-%F0%9F%92%9C">Implemented: <a href="https://wiki.php.net/rfc/proper-range-semantics">Define proper semantics for range() function</a> by Gina Peter Banyard 💜</h3>
 
 <p>In the forthcoming PHP 8.3 release, the <code>range()</code> function will have improved behavior. It will now issue warnings or throw exceptions if it receives incompatible or unusable arguments.</p>
 
@@ -1995,7 +1995,7 @@ Hundreds of awesome PHP contributors put their efforts into improvements to the 
 
 <p>PHP 8.3 will include a new function that works similarly to the existing <code>str_pad()</code> function, but with support for multibyte strings. This is a welcome addition for developers working with multibyte strings, as it will make it easier to manipulate and format these strings in PHP.</p>
 
-<h3 id="in-voting%3A-deprecations-for-php-8.3-by-george-peter-banyard-%F0%9F%92%9C%2C-christoph-m.-becker%2C-m%C3%A1t%C3%A9-kocsis-%F0%9F%92%9C%2C-tim-d%C3%BCsterhus%2C-go-kudo%2C-andreas-heigl">In Voting: <a href="https://wiki.php.net/rfc/deprecations_php_8_3">Deprecations for PHP 8.3</a> by George Peter Banyard 💜, Christoph M. Becker, Máté Kocsis 💜, Tim Düsterhus, Go Kudo, Andreas Heigl</h3>
+<h3 id="in-voting%3A-deprecations-for-php-8.3-by-gina-peter-banyard-%F0%9F%92%9C%2C-christoph-m.-becker%2C-m%C3%A1t%C3%A9-kocsis-%F0%9F%92%9C%2C-tim-d%C3%BCsterhus%2C-go-kudo%2C-andreas-heigl">In Voting: <a href="https://wiki.php.net/rfc/deprecations_php_8_3">Deprecations for PHP 8.3</a> by Gina Peter Banyard 💜, Christoph M. Becker, Máté Kocsis 💜, Tim Düsterhus, Go Kudo, Andreas Heigl</h3>
 
 <p>The aim is to clean up some of the older, less consistent parts of PHP to make the language more reliable and predictable. The following list provides a short overview of the functionality targeted for deprecation:</p>
 
@@ -2049,7 +2049,7 @@ echo $fibonacci(5);
 <li>Fix bug <a href="https://github.com/php/php-src/issues/9356">GH-9356</a>: Incomplete SAN validation of IPv6 address in <a href="https://github.com/php/php-src/pull/11145">GH-11145</a></li>
 </ul>
 
-<h3 id="george-peter-banyard-%F0%9F%92%9C">George Peter Banyard 💜</h3>
+<h3 id="gina-peter-banyard-%F0%9F%92%9C">Gina Peter Banyard 💜</h3>
 
 <ul>
 <li>Fix [<code>-Wenum-int-mismatch</code>] compiler warnings in <a href="https://github.com/php/php-src/pull/11352">GH-11352</a></li>

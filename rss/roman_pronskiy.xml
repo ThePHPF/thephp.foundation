@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2023-11-03T11:09:23+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, May 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2023-11-03T12:48:48+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, May 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
 
 <p>This time our regular update is short. Check the <a href="https://thephp.foundation/blog/2022/05/30/php-core-roundup-2/">PHP Core Roundup</a> series for a detailed development log.</p>
 
 <h2 id="interview-with-core-developers">Interview with core developers</h2>
 
-<p>After the <a href="https://opencollective.com/phpfoundation/updates/php-foundation-update-april-2022">April update</a>, Sebastian Bergmann published an <a href="https://thephp.foundation/blog/2022/05/06/interview-with-core-developers/">interview with our sponsored core developers</a>: Derick Rethans, George Peter Banyard, Jakub Zelenka, Máté Kocsis, and Ilija Tovilo. The other day we updated it and added answers from Arnaud Le Blanc. Check <a href="https://thephp.foundation/blog/2022/05/06/interview-with-core-developers/">the interview</a> to get a high-level picture of what guys are working on.</p>
+<p>After the <a href="https://opencollective.com/phpfoundation/updates/php-foundation-update-april-2022">April update</a>, Sebastian Bergmann published an <a href="https://thephp.foundation/blog/2022/05/06/interview-with-core-developers/">interview with our sponsored core developers</a>: Derick Rethans, Gina Peter Banyard, Jakub Zelenka, Máté Kocsis, and Ilija Tovilo. The other day we updated it and added answers from Arnaud Le Blanc. Check <a href="https://thephp.foundation/blog/2022/05/06/interview-with-core-developers/">the interview</a> to get a high-level picture of what guys are working on.</p>
 
 <h2 id="php-core-roundup">PHP Core Roundup</h2>
 
@@ -101,7 +101,7 @@ Hundreds of awesome PHP contributors put their efforts into improvements to the 
 
 <p>Following are the RFCs and major pull-requests discussed, voted on, and implemented since our last update.</p>
 
-<h3 id="in-voting%3A-define-proper-semantics-for-range-function-by-george-peter-banyard-%F0%9F%92%9C">In Voting: <a href="https://wiki.php.net/rfc/proper-range-semantics">Define proper semantics for range() function</a> by George Peter Banyard 💜</h3>
+<h3 id="in-voting%3A-define-proper-semantics-for-range-function-by-gina-peter-banyard-%F0%9F%92%9C">In Voting: <a href="https://wiki.php.net/rfc/proper-range-semantics">Define proper semantics for range() function</a> by Gina Peter Banyard 💜</h3>
 
 <p>This RFC proposes to adjust the semantics of the <code>range()</code> function in PHP to throw exceptions or at least warn when passing unusable arguments to <code>range()</code>.</p>
 
@@ -125,7 +125,7 @@ Hundreds of awesome PHP contributors put their efforts into improvements to the 
 
 <p>This RFC proposes to deprecate a number of functions that have overloaded signatures, meaning they behave differently based on the number or type of arguments passed to them. The goal is to make PHP's function signatures more consistent and predictable.</p>
 
-<h3 id="under-discussion%3A-deprecations-for-php-8.3-by-george-peter-banyard-%F0%9F%92%9C%2C-christoph-m.-becker%2C-m%C3%A1t%C3%A9-kocsis-%F0%9F%92%9C%2C-tim-d%C3%BCsterhus%2C-go-kudo%2C-andreas-heigl">Under Discussion: <a href="https://wiki.php.net/rfc/deprecations_php_8_3">Deprecations for PHP 8.3</a> by George Peter Banyard 💜, Christoph M. Becker, Máté Kocsis 💜, Tim Düsterhus, Go Kudo, Andreas Heigl</h3>
+<h3 id="under-discussion%3A-deprecations-for-php-8.3-by-gina-peter-banyard-%F0%9F%92%9C%2C-christoph-m.-becker%2C-m%C3%A1t%C3%A9-kocsis-%F0%9F%92%9C%2C-tim-d%C3%BCsterhus%2C-go-kudo%2C-andreas-heigl">Under Discussion: <a href="https://wiki.php.net/rfc/deprecations_php_8_3">Deprecations for PHP 8.3</a> by Gina Peter Banyard 💜, Christoph M. Becker, Máté Kocsis 💜, Tim Düsterhus, Go Kudo, Andreas Heigl</h3>
 
 <p>The aim is to clean up some of the older, less consistent parts of PHP to make the language more reliable and predictable. The following list provides a short overview of the functionality targeted for deprecation:</p>
 
@@ -309,7 +309,7 @@ Hundreds of awesome PHP contributors put their efforts into improvements to the 
 <ul>
 <li>Fix <a href="https://github.com/php/php-src/issues/11054">GH-11054</a>: Reset OpenSSL errors when using a PEM public key in <a href="https://github.com/php/php-src/pull/11055">GH-11055</a></li>
 </ul></li>
-<li><strong>George Peter Banyard 💜</strong>
+<li><strong>Gina Peter Banyard 💜</strong>
 
 <ul>
 <li>Prevent unnecessary string duplication in assert() in <a href="https://github.com/php/php-src/pull/11031">GH-11031</a></li>
@@ -497,12 +497,12 @@ This concludes the list of commits made by the PHP core team in the past month. 
 <p><strong><a href="https://phpconference.com/berlin-en/program-berlin-en/">International PHP Conference</a>, May 22–26, Berlin, Germany</strong></p>
 
 <ul>
-<li>Sebastian Bergmann (thePHP.cc, PHPUnit), Nils Adermann (Packagist Conductors GmbH, Composer), and George Peter Banyard (PHP core developer) will participate in a keynote panel about the PHP Foundation and the State of PHP.</li>
+<li>Sebastian Bergmann (thePHP.cc, PHPUnit), Nils Adermann (Packagist Conductors GmbH, Composer), and Gina Peter Banyard (PHP core developer) will participate in a keynote panel about the PHP Foundation and the State of PHP.</li>
 <li>Benjamin Eberlei (Tideways GmbH, Doctrine) and Nils Adermann will give a presentation entitled <em>The PHP Foundation: Past, Present, and Future</em>.</li>
-<li>George Peter Banyard will present a talk called <em>Contributing to PHP: How?</em></li>
+<li>Gina Peter Banyard will present a talk called <em>Contributing to PHP: How?</em></li>
 </ul>
 
-<p>Benjamin Eberlei, Nils Adermann, and Sebastian Bergmann are members of the PHP Foundation’s administration. George Peter Banyard is one of the PHP core developers paid by the PHP Foundation.</p>
+<p>Benjamin Eberlei, Nils Adermann, and Sebastian Bergmann are members of the PHP Foundation’s administration. Gina Peter Banyard is one of the PHP core developers paid by the PHP Foundation.</p>
 
 <p><strong><a href="https://tek.phparch.com/">php[tek] 2023</a>, May 16–18, Chicago, USA</strong></p>
 
@@ -578,7 +578,7 @@ This concludes the list of commits made by the PHP core team in the past month. 
 
 <p><br></p>
 
-<p><strong>George P. Banyard</strong>, one of the PHP Foundation’s developers, will talk about PHP’s type system internals.</p>
+<p><strong>Gina P. Banyard</strong>, one of the PHP Foundation’s developers, will talk about PHP’s type system internals.</p>
 
 <blockquote class="twitter-tweet"><p lang="fr" dir="ltr">Nous sommes ravis d&#39;accueillir pour la première fois <a href="https://twitter.com/Girgias?ref_src=twsrc%5Etfw">@Girgias</a>, jeune et talentueux core-contributeur à PHP, pour un talk sur les rouages du typage lors du Forum PHP 2022.<br>🎤 &quot;Typage en PHP comment ça fonctionne ?&quot; - Forum PHP 2022 - 13&amp;14/10, Disneyland Paris <a href="https://t.co/dB0pWflmKB">pic.twitter.com/dB0pWflmKB</a></p>&mdash; AFUP (@afup) <a href="https://twitter.com/afup/status/1546423801998708736?ref_src=twsrc%5Etfw">July 11, 2022</a></blockquote>
 
@@ -763,7 +763,7 @@ are nicer.
 
 <p>It's been a month since the PHP Foundation began to fully deliver on its 2022 goal of hiring developers to work on the PHP core.</p>
 
-<p>Backed by our awesome sponsors, six talented folks have already been doing their work for a whole month. Derick Rethans, Arnaud Le Blanc, George Peter Banyard, Jakub Zelenka, and Máté Kocsis started on April 1, and Ilija Tovilo started even earlier than that.</p>
+<p>Backed by our awesome sponsors, six talented folks have already been doing their work for a whole month. Derick Rethans, Arnaud Le Blanc, Gina Peter Banyard, Jakub Zelenka, and Máté Kocsis started on April 1, and Ilija Tovilo started even earlier than that.</p>
 
 <p>We’ve made the first <a href="https://opencollective.com/phpfoundation/expenses">payouts</a>, and we will continue making them regularly at the end of each month.</p>
 
@@ -827,7 +827,7 @@ are nicer.
 <ul>
 <li><strong>Arnaud Le Blanc</strong> <a href="https://github.com/arnaud-lb">@arnaud-lb</a></li>
 <li><strong>Derick Rethans</strong> <a href="https://github.com/derickr">@derickr</a></li>
-<li><strong>George Peter Banyard</strong> <a href="https://github.com/Girgias">@Girgias</a></li>
+<li><strong>Gina Peter Banyard</strong> <a href="https://github.com/Girgias">@Girgias</a></li>
 <li><strong>Ilija Tovilo</strong> <a href="https://github.com/iluuu1994">@iluuu1994</a></li>
 <li><strong>Jakub Zelenka</strong> <a href="https://github.com/bukka">@bukka</a></li>
 <li><strong>Máté Kocsis</strong> <a href="https://github.com/kocsismate">@kocsismate</a></li>
@@ -914,7 +914,7 @@ are nicer.
 <ul>
 <li><p><a href="https://github.com/arnaud-lb">Arnaud Le Blanc</a> revised the RFC and implementation of multi-statement short closures. The proposal is now on vote. Arnaud has also finished the improvements to ini quantity parsing.</p></li>
 <li><p><a href="https://github.com/derickr">Derick Rethans</a> continues to fix bugs in DateTime to make working with dates in PHP as reliable as possible.</p></li>
-<li><p><a href="https://github.com/Girgias">George P. Banyard</a> has made several improvements to the type system: true, null, and false standalaone types have been added, and Disjunctive Normal Form Types put on vote. George also made a few fixes in SPL.</p></li>
+<li><p><a href="https://github.com/Girgias">Gina P. Banyard</a> has made several improvements to the type system: true, null, and false standalaone types have been added, and Disjunctive Normal Form Types put on vote. Gina also made a few fixes in SPL.</p></li>
 <li><p><a href="https://github.com/iluuu1994">Ilija Tovilo</a> implemented multiple improvements for enums and put a couple on vote. He also made many fixes, like for instance fixed line numbers in backtrace of multi-line (fluent) function calls.</p></li>
 <li><p><a href="https://github.com/bukka">Jakub Zelenka</a> made various fixes and improvements to PHP-FPM and OpenSSL extension.</p></li>
 <li><p><a href="https://github.com/kocsismate">Máté Kocsis</a> makes improvements to stubs and other fixes.</p></li>
@@ -1084,7 +1084,7 @@ are nicer.
 <ul>
 <li><strong>Arnaud Le Blanc</strong> <a href="https://github.com/arnaud-lb">@arnaud-lb</a></li>
 <li><strong>Derick Rethans</strong> <a href="https://github.com/derickr">@derickr</a></li>
-<li><strong>George Peter Banyard</strong> <a href="https://github.com/Girgias">@Girgias</a></li>
+<li><strong>Gina Peter Banyard</strong> <a href="https://github.com/Girgias">@Girgias</a></li>
 <li><strong>Ilija Tovilo</strong> <a href="https://github.com/iluuu1994">@iluuu1994</a></li>
 <li><strong>Jakub Zelenka</strong> <a href="https://github.com/bukka">@bukka</a></li>
 <li><strong>Máté Kocsis</strong> <a href="https://github.com/kocsismate">@kocsismate</a></li>

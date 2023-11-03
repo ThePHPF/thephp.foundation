@@ -383,10 +383,10 @@ This RFC proposes to add consistently for stream wrappers in glob() function. Wi
 <li>Add test to exercise <code>_php_mb_encoding_handler_ex</code> with multiple possible input encodings in <a href="https://github.com/php/php-src/commit/93207535fa">93207535fa</a></li>
 </ul></li>
 <li>Reintroduce legacy 'SJIS-win' text encoding in mbstring in <a href="https://github.com/php/php-src/commit/371367ce3e">371367ce3e</a> by Alex Dowad</li>
-<li>Improve DBA test suite in <a href="https://github.com/php/php-src/pull/8904">GH-8904</a> by George Peter Banyard 💜</li>
-<li>Refactor code handling <code>file.current_zval</code> in <a href="https://github.com/php/php-src/pull/8934">GH-8934</a> by George Peter Banyard 💜</li>
+<li>Improve DBA test suite in <a href="https://github.com/php/php-src/pull/8904">GH-8904</a> by Gina Peter Banyard 💜</li>
+<li>Refactor code handling <code>file.current_zval</code> in <a href="https://github.com/php/php-src/pull/8934">GH-8934</a> by Gina Peter Banyard 💜</li>
 <li>Fix parentheses warnings in <a href="https://github.com/php/php-src/commit/ba9debb544">ba9debb544</a> by Nikita Popov</li>
-<li>Change <code>fetch_type</code> from <code>int</code> to <code>uint32_t</code> in <a href="https://github.com/php/php-src/pull/9152">GH-9152</a> by George Peter Banyard 💜</li>
+<li>Change <code>fetch_type</code> from <code>int</code> to <code>uint32_t</code> in <a href="https://github.com/php/php-src/pull/9152">GH-9152</a> by Gina Peter Banyard 💜</li>
 <li>Fix unused-but-set-variable warnings in timelib in <a href="https://github.com/php/php-src/commit/40af94a24c">40af94a24c</a> by Nikita Popov</li>
 <li>Fix unused-but-set-variable warning in <code>hebrev()</code> in <a href="https://github.com/php/php-src/commit/6ff662b2e6">6ff662b2e6</a> by Nikita Popov</li>
 <li>Avoid K&amp;R style function declarations in <code>sha1()</code> in <a href="https://github.com/php/php-src/commit/04f5da4b77">04f5da4b77</a> by Nikita Popov</li>
@@ -411,14 +411,14 @@ This RFC proposes to add consistently for stream wrappers in glob() function. Wi
 <li>Fix SSA reconstruction when body of "foreach" loop is removed in <a href="https://github.com/php/php-src/commit/af1a7b7b72">af1a7b7b72</a> by Dmitry Stogov</li>
 <li>Fix incorrect guard motion out of the loop in <a href="https://github.com/php/php-src/commit/69c10aed58">69c10aed58</a> by Dmitry Stogov</li>
 <li>Tracing: Prevent recording types of variables used to pass <code>zend_class_entry</code> in <a href="https://github.com/php/php-src/commit/2758ff2a77">2758ff2a77</a> by Dmitry Stogov</li>
-<li>SPL: Use new improved <code>is_line_empty()</code> function instead of the old one in <a href="https://github.com/php/php-src/pull/9217">GH-9217</a> by George Peter Banyard 💜</li>
+<li>SPL: Use new improved <code>is_line_empty()</code> function instead of the old one in <a href="https://github.com/php/php-src/pull/9217">GH-9217</a> by Gina Peter Banyard 💜</li>
 <li>Extended <code>map_ptr</code> before copying class table in <a href="https://github.com/php/php-src/pull/9188">GH-9188</a> by Arnaud Le Blanc 💜</li>
 <li>Fix bug <a href="https://bugs.php.net/bug.php?id=65489">#65489</a>: <code>glob()</code> <code>basedir</code> check is inconsistent in <a href="https://github.com/php/php-src/commit/e5ab9f45d5">e5ab9f45d5</a> by Jakub Zelenka 💜</li>
 <li>Fix <a href="https://github.com/php/php-src/issues/8396">GH-8396</a>: Network online test using https broken in <a href="https://github.com/php/php-src/commit/dc01fce36d">dc01fce36d</a> by Jakub Zelenka 💜</li>
 <li>Also fix <code>?-&gt;</code> on magic consts in const expressions in <a href="https://github.com/php/php-src/commit/7b43d819c8">7b43d819c8</a> by Ilija Tovilo 💜</li>
 <li>DIM on null in const expr should emit warning in <a href="https://github.com/php/php-src/commit/3663f7661a">3663f7661a</a> by Ilija Tovilo 💜</li>
 <li>Avoid unnecessary comparison in <a href="https://github.com/php/php-src/pull/9246">GH-9246</a> by Christoph M. Becker</li>
-<li>Convert some macros to <code>zend_always_inline</code> functions in <a href="https://github.com/php/php-src/pull/8288">GH-8288</a> by George Peter Banyard 💜</li>
+<li>Convert some macros to <code>zend_always_inline</code> functions in <a href="https://github.com/php/php-src/pull/8288">GH-8288</a> by Gina Peter Banyard 💜</li>
 <li>Add conflict markers for dba tests in <a href="https://github.com/php/php-src/commit/f11228cdbe">f11228cdbe</a> by Christoph M. Becker</li>
 <li>Remove <code>ZEND_DVAL_TO_LVAL_CAST_OK</code> in <a href="https://github.com/php/php-src/pull/9215">GH-9215</a> by Go Kudo</li>
 <li>Save previous observer on the VM stack in <a href="https://github.com/php/php-src/commit/dc5475c191">dc5475c191</a> by Bob Weinand</li>
@@ -460,9 +460,9 @@ This RFC proposes to add consistently for stream wrappers in glob() function. Wi
 <li>Fix bug <a href="https://bugs.php.net/bug.php?id=79451">#79451</a>: Using DOMDocument->replaceChild on doctype causes double free in <a href="https://github.com/php/php-src/pull/9201">GH-9201</a> by NathanFreeman</li>
 <li>Fix GCC 9.4 uninitialized variable warning in <a href="https://github.com/php/php-src/commit/410e5d48a3">410e5d48a3</a> by Tim Starling</li>
 <li>Fix <a href="https://github.com/php/php-src/issues/9323">GH-9323</a>: crash when the VM enters userspace code via the GC in <a href="https://github.com/php/php-src/pull/9323">GH-9323</a> by Tim Starling</li>
-<li>Fix bad merge in <a href="https://github.com/php/php-src/commit/5739dd0030">5739dd0030</a> by George Peter Banyard 💜</li>
+<li>Fix bad merge in <a href="https://github.com/php/php-src/commit/5739dd0030">5739dd0030</a> by Gina Peter Banyard 💜</li>
 <li>Fix <a href="https://github.com/php/php-src/issues/9227">GH-9227</a>: Trailing dots and spaces in filenames are ignored in <a href="https://github.com/php/php-src/pull/9229">GH-9229</a> by Christoph M. Becker</li>
-<li>Revert Fixed bug <a href="https://bugs.php.net/bug.php?id=79451">#79451</a> in <a href="https://github.com/php/php-src/commit/d6831e9a5c">d6831e9a5c</a> by George Peter Banyard 💜</li>
+<li>Revert Fixed bug <a href="https://bugs.php.net/bug.php?id=79451">#79451</a> in <a href="https://github.com/php/php-src/commit/d6831e9a5c">d6831e9a5c</a> by Gina Peter Banyard 💜</li>
 <li>opcache jit fix message format for OpenBSD in <a href="https://github.com/php/php-src/commit/52e312afb8">52e312afb8</a> by David Carlier</li>
 <li>Fix <a href="https://bugs.php.net/bug.php?id=79451">#79451</a>: <code>DOMDocument-&gt;replaceChild</code> on doctype causes double free in <a href="https://github.com/php/php-src/pull/9201">GH-9201</a> by NathanFreeman</li>
 <li>Fix <a href="https://github.com/php/php-src/issues/9285">GH-9285</a> Traits cannot be used in <code>readonly</code> classes in <a href="https://github.com/php/php-src/commit/0897266219">0897266219</a> by Máté Kocsis 💜</li>
@@ -470,14 +470,14 @@ This RFC proposes to add consistently for stream wrappers in glob() function. Wi
 <li>Fix <code>pdo_oci</code> tests for PHP 8.0 in <a href="https://github.com/php/php-src/commit/305892580e">305892580e</a> by Michael Voříšek</li>
 <li>Fix <a href="https://github.com/php/php-src/issues/9361">GH-9361</a>: Segmentation fault on script exit in <a href="https://github.com/php/php-src/pull/9379">GH-9379</a> by Christoph M. Becker</li>
 <li>Tracing JIT: Fix incorrect guard elimination in <a href="https://github.com/php/php-src/commit/c9c51eb1f1">c9c51eb1f1</a> by Dmitry Stogov</li>
-<li>Add a new zend API to check that strings don't have <code>NUL</code> bytes in <a href="https://github.com/php/php-src/pull/9375">GH-9375</a> by George Peter Banyard 💜</li>
-<li>Use <code>bool</code> instead of <code>int</code> in session struct in <a href="https://github.com/php/php-src/commit/e8e015777e">e8e015777e</a> by George Peter Banyard 💜</li>
-<li>Add test for negative cookie lifetime in <a href="https://github.com/php/php-src/commit/a75de167bf">a75de167bf</a> by George Peter Banyard 💜</li>
-<li>Remove <code>OnUpdateLazyWrite</code> validator in <a href="https://github.com/php/php-src/commit/e9749a3c1e">e9749a3c1e</a> by George Peter Banyard 💜</li>
-<li>Remove <code>OnUpdateTransSid</code> validator in <a href="https://github.com/php/php-src/commit/ad3ee47c6d">ad3ee47c6d</a> by George Peter Banyard 💜</li>
-<li>Check sessions are active before output emitted consistently in <a href="https://github.com/php/php-src/commit/a8f8cc207c">a8f8cc207c</a> by George Peter Banyard 💜</li>
+<li>Add a new zend API to check that strings don't have <code>NUL</code> bytes in <a href="https://github.com/php/php-src/pull/9375">GH-9375</a> by Gina Peter Banyard 💜</li>
+<li>Use <code>bool</code> instead of <code>int</code> in session struct in <a href="https://github.com/php/php-src/commit/e8e015777e">e8e015777e</a> by Gina Peter Banyard 💜</li>
+<li>Add test for negative cookie lifetime in <a href="https://github.com/php/php-src/commit/a75de167bf">a75de167bf</a> by Gina Peter Banyard 💜</li>
+<li>Remove <code>OnUpdateLazyWrite</code> validator in <a href="https://github.com/php/php-src/commit/e9749a3c1e">e9749a3c1e</a> by Gina Peter Banyard 💜</li>
+<li>Remove <code>OnUpdateTransSid</code> validator in <a href="https://github.com/php/php-src/commit/ad3ee47c6d">ad3ee47c6d</a> by Gina Peter Banyard 💜</li>
+<li>Check sessions are active before output emitted consistently in <a href="https://github.com/php/php-src/commit/a8f8cc207c">a8f8cc207c</a> by Gina Peter Banyard 💜</li>
 <li>Fix memory leaks in <a href="https://github.com/php/php-src/commit/73c2d79fc5">73c2d79fc5</a> by Dmitry Stogov</li>
-<li><code>SameSite</code> session cookie prop should behave like other INI settings in <a href="https://github.com/php/php-src/commit/66aed3a86f">66aed3a86f</a> by George Peter Banyard 💜</li>
+<li><code>SameSite</code> session cookie prop should behave like other INI settings in <a href="https://github.com/php/php-src/commit/66aed3a86f">66aed3a86f</a> by Gina Peter Banyard 💜</li>
 <li>Don't enforce 64 hit counter on Windows in <a href="https://github.com/php/php-src/pull/9367">GH-9367</a> by Christoph M. Becker</li>
 <li>JIT: Make code generation to be consistent with register allocation in <a href="https://github.com/php/php-src/commit/fd74ee7e90">fd74ee7e90</a> by Dmitry Stogov</li>
 <li>Fix type inference in <a href="https://github.com/php/php-src/commit/95befc786a">95befc786a</a> by Dmitry Stogov</li>
@@ -485,7 +485,7 @@ This RFC proposes to add consistently for stream wrappers in glob() function. Wi
 <li>Enum error message consistency in <a href="https://github.com/php/php-src/pull/9350">GH-9350</a> by Ollie Read</li>
 <li>Add an API to observe functions and classes being linked in <a href="https://github.com/php/php-src/commit/bf427b732a">bf427b732a</a> by Bob Weinand</li>
 <li>Wrap observer notify functions into inlined enabled checks in <a href="https://github.com/php/php-src/commit/396b2aab85">396b2aab85</a> by Bob Weinand</li>
-<li>Check at compile time that a built-in class is not being aliased in <a href="https://github.com/php/php-src/pull/9402">GH-9402</a> by George Peter Banyard 💜</li>
+<li>Check at compile time that a built-in class is not being aliased in <a href="https://github.com/php/php-src/pull/9402">GH-9402</a> by Gina Peter Banyard 💜</li>
 <li>Stop JIT hot spot counting in <a href="https://github.com/php/php-src/pull/9343">GH-9343</a> by wxue1</li>
 <li>Fix coding style in <a href="https://github.com/php/php-src/commit/205ad0af29">205ad0af29</a> by Dmitry Stogov</li>
 <li>Fix typo (Paletter → Palette) in <a href="https://github.com/php/php-src/pull/9414">GH-9414</a> by Christoph M. Becker</li>

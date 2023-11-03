@@ -243,7 +243,7 @@
 <p>Go Kudo first-proposed <a href="https://wiki.php.net/rfc/object_scope_prng">Object scoped RNG</a>, back in 2020, and proposed a series of RFCs to improve PHP’s Random Number Generator. The RFCs voted and implemented in PHP 8.2 now refactors PHP functions such as <code>random_int()</code>, <code>random_bytes()</code>, <code>rand()</code>, <code>mt_rand()</code> to a new extension called <code>random</code>. This is merely an internal refactor, and it is not possible to compile PHP without the extension.</p>
 
 <p>There is a new PHP class called <code>\Random\Randomizer</code>, that can be instantiated with a class object that implements the <code>\Random\Engine</code> interface. The extension provides a few implementations built-in, such as <code>\Random\Engine\Mt19937</code>, <code>PcgOneseq128XslRr64</code>, and <code>Xoshiro256StarStar</code>.</p></li>
-<li><p><strong>Implemented: <a href="https://wiki.php.net/rfc/dnf_types">Disjunctive Normal Form Types</a> RFC by Larry Garfield and George Peter Banyard 💜</strong></p>
+<li><p><strong>Implemented: <a href="https://wiki.php.net/rfc/dnf_types">Disjunctive Normal Form Types</a> RFC by Larry Garfield and Gina Peter Banyard 💜</strong></p>
 
 <p><a href="https://en.wikipedia.org/wiki/Disjunctive_normal_form">Disjunctive Normal Form</a> (DNF) is now supported in PHP type declarations. It allows combining Union types (PHP 8.0) and Intersection types (PHP 8.1) to precisely declare a type.</p>
 
@@ -355,15 +355,15 @@ The RFC missed the 2/3 vote with 27 votes in favor and 16 against.</p>
 <li>Improve tests on 32bit in <a href="https://github.com/php/php-src/pull/8448">GH-8448</a> by Michael Voříšek</li>
 <li><code>streams/xp_socket</code>: fix clang build error with enum usage on bool condition in <a href="https://github.com/php/php-src/commit/7ceae66182">7ceae66182</a> by David Carlier</li>
 <li>Add test for backtrace with aliased trait in <a href="https://github.com/php/php-src/pull/8705">GH-8705</a> in <a href="https://github.com/php/php-src/commit/f26f6d9479">f26f6d9479</a> by Michael Voříšek</li>
-<li>Use bool and rename variable for ease of comprehension in <code>ps_title.c</code> in <a href="https://github.com/php/php-src/commit/b468d6fb54">b468d6fb54</a> by George Peter Banyard 💜</li>
-<li>Use <code>size_t</code> for <code>get_ps_title()</code> length parameter in <a href="https://github.com/php/php-src/commit/9a7d37ac66">9a7d37ac66</a> by George Peter Banyard 💜</li>
+<li>Use bool and rename variable for ease of comprehension in <code>ps_title.c</code> in <a href="https://github.com/php/php-src/commit/b468d6fb54">b468d6fb54</a> by Gina Peter Banyard 💜</li>
+<li>Use <code>size_t</code> for <code>get_ps_title()</code> length parameter in <a href="https://github.com/php/php-src/commit/9a7d37ac66">9a7d37ac66</a> by Gina Peter Banyard 💜</li>
 <li>Adds <code>TCP_CONGESTION</code> socket option for Linux/FreeBSD in <a href="https://github.com/php/php-src/commit/a193427333">a193427333</a> by David Carlier</li>
 <li>Fix the crypt sha apis build (with recent clang versions) in <a href="https://github.com/php/php-src/commit/b3569865b3">b3569865b3</a> by David Carlier</li>
 <li>Disallow assigning reference to unset readonly property in <a href="https://github.com/php/php-src/pull/7942">GH-7942</a> by Ilija Tovilo 💜</li>
-<li>Abort LMDB transaction when trying to delete non-existing key in <a href="https://github.com/php/php-src/commit/8fce70ae7b">8fce70ae7b</a> and <a href="https://github.com/php/php-src/commit/1d0c287b90">1d0c287b90</a> by George Peter Banyard 💜</li>
-<li>Add <code>php_register_known_variable()</code> for known var names in <a href="https://github.com/php/php-src/commit/55908db007">55908db007</a> by George Peter Banyard 💜</li>
-<li>Refactor registration of variables for the CLI SAPI in <a href="https://github.com/php/php-src/commit/b37245b8da">b37245b8da</a> and by George Peter Banyard 💜</li>
-<li>Pre-compute remote address length in CLI SAPI in <a href="https://github.com/php/php-src/commit/1c753a958b">1c753a958b</a> by George Peter Banyard 💜</li>
+<li>Abort LMDB transaction when trying to delete non-existing key in <a href="https://github.com/php/php-src/commit/8fce70ae7b">8fce70ae7b</a> and <a href="https://github.com/php/php-src/commit/1d0c287b90">1d0c287b90</a> by Gina Peter Banyard 💜</li>
+<li>Add <code>php_register_known_variable()</code> for known var names in <a href="https://github.com/php/php-src/commit/55908db007">55908db007</a> by Gina Peter Banyard 💜</li>
+<li>Refactor registration of variables for the CLI SAPI in <a href="https://github.com/php/php-src/commit/b37245b8da">b37245b8da</a> and by Gina Peter Banyard 💜</li>
+<li>Pre-compute remote address length in CLI SAPI in <a href="https://github.com/php/php-src/commit/1c753a958b">1c753a958b</a> by Gina Peter Banyard 💜</li>
 <li>Fix labeler selection of SAPIs in <a href="https://github.com/php/php-src/commit/583cc01e9e">583cc01e9e</a> by Jakub Zelenka 💜</li>
 <li>Fix <a href="https://github.com/php/php-src/issues/8907">GH-8907</a>: Document forgotten API changes in <a href="https://github.com/php/php-src/commit/fdc09e302a">fdc09e302a</a> by David Carlier</li>
 <li>Use <code>safe_*erealloc*</code> flavor in few places to mitigate possible overflows in <a href="https://github.com/php/php-src/commit/dfbb425295">dfbb425295</a> by David Carlier</li>
@@ -377,11 +377,11 @@ The RFC missed the 2/3 vote with 27 votes in favor and 16 against.</p>
 <li>Fixed bug <a href="https://github.com/php/php-src/issues/8943">GH-8943</a> <code>Reflection::getModifiersNames()</code> with readonly modifier in <a href="https://github.com/php/php-src/commit/c650e67c90">c650e67c90</a> by Pierrick Charron</li>
 <li>FPM add routing view global option (for FreeBSD for now) in <a href="https://github.com/php/php-src/commit/5174ee2353">5174ee2353</a> by David CARLIER</li>
 <li>Update mime-db from 1.45.0 to 1.52.0 in <a href="https://github.com/php/php-src/commit/d3c86527a5">d3c86527a5</a> by Ayesh Karunaratne</li>
-<li>Remove silent argument to <code>spl_filesystem_file_read_line()</code> / <code>spl_filesystem_file_read_line_ex()</code>  in <a href="https://github.com/php/php-src/commit/a055c54801">a055c54801</a> and <a href="https://github.com/php/php-src/commit/bb3d0933af">bb3d0933af</a> by George Peter Banyard 💜</li>
-<li>Use true/false and comment when arg correspond to silent arg in <a href="https://github.com/php/php-src/commit/247de8a4de">247de8a4de</a> by George Peter Banyard 💜</li>
-<li>Make <code>php_fgetcsv()</code> return a <code>HashTale</code> instead of in-out zval param in <a href="https://github.com/php/php-src/pull/8936">GH-8936</a> in <a href="https://github.com/php/php-src/commit/4ccf0b0181">4ccf0b0181</a> by George Peter Banyard 💜</li>
+<li>Remove silent argument to <code>spl_filesystem_file_read_line()</code> / <code>spl_filesystem_file_read_line_ex()</code>  in <a href="https://github.com/php/php-src/commit/a055c54801">a055c54801</a> and <a href="https://github.com/php/php-src/commit/bb3d0933af">bb3d0933af</a> by Gina Peter Banyard 💜</li>
+<li>Use true/false and comment when arg correspond to silent arg in <a href="https://github.com/php/php-src/commit/247de8a4de">247de8a4de</a> by Gina Peter Banyard 💜</li>
+<li>Make <code>php_fgetcsv()</code> return a <code>HashTale</code> instead of in-out zval param in <a href="https://github.com/php/php-src/pull/8936">GH-8936</a> in <a href="https://github.com/php/php-src/commit/4ccf0b0181">4ccf0b0181</a> by Gina Peter Banyard 💜</li>
 <li>FPM: Fix possible double free on configuration load failure in <a href="https://github.com/php/php-src/commit/bd6793372b">bd6793372b</a> by Heiko Weber</li>
-<li>Add upgrading internals entry for <code>fgetcsv()</code> changes in <a href="https://github.com/php/php-src/commit/eacf6f43ed">eacf6f43ed</a> by George Peter Banyard 💜</li>
+<li>Add upgrading internals entry for <code>fgetcsv()</code> changes in <a href="https://github.com/php/php-src/commit/eacf6f43ed">eacf6f43ed</a> by Gina Peter Banyard 💜</li>
 <li>Reduce memory allocated by <code>var_export</code>, <code>json_encode</code>, <code>serialize</code>, and other in <a href="https://github.com/php/php-src/pull/8902">GH-8902</a> in <a href="https://github.com/php/php-src/commit/4df3dd7679">4df3dd7679</a> by Arnaud Le Blanc 💜</li>
 <li><strong>Fix <a href="https://github.com/php/php-src/issues/8924">GH-8924</a> str_split of empty string must return empty array in <a href="https://github.com/php/php-src/commit/e80925445c">e80925445c</a> by Michael Voříšek</strong></li>
 <li>intl extension, build fix for icu >= 69.x release. <code>ubrk/ucnv_safeClone</code> had been deprecated in favor of <code>ubrk/ucnv_clone</code> which does not use user provided stacks but remain thread safe in <a href="https://github.com/php/php-src/commit/7c3dfbb845">7c3dfbb845</a> by David Carlier</li>
@@ -445,31 +445,31 @@ The RFC missed the 2/3 vote with 27 votes in favor and 16 against.</p>
 <li>Port <code>win32/codepage.c</code> codes for windows arm64 in <a href="https://github.com/php/php-src/pull/7702">GH-7702</a> by dixyes</li>
 <li>Sockets disable zerocopy test on ppc based arch in <a href="https://github.com/php/php-src/commit/067a3022f8">067a3022f8</a> by David Carlier</li>
 <li>Fix rc info of iterator_to_array in <a href="https://github.com/php/php-src/pull/9080">GH-9080</a> in <a href="https://github.com/php/php-src/commit/d4a9cc8856">d4a9cc8856</a> by Ilija Tovilo 💜</li>
-<li>Fix memory leak in LMDB driver in <a href="https://github.com/php/php-src/commit/5b83b3a933">5b83b3a933</a> by George Peter Banyard 💜</li>
+<li>Fix memory leak in LMDB driver in <a href="https://github.com/php/php-src/commit/5b83b3a933">5b83b3a933</a> by Gina Peter Banyard 💜</li>
 <li>Fix RC debug of stub attribute in <a href="https://github.com/php/php-src/pull/9082">GH-9082</a> in <a href="https://github.com/php/php-src/commit/41a5b46e7d">41a5b46e7d</a> by Ilija Tovilo 💜</li>
-<li>Remove unnecessary include in SPL in <a href="https://github.com/php/php-src/commit/11c424c9fb">11c424c9fb</a> by George Peter Banyard 💜</li>
+<li>Remove unnecessary include in SPL in <a href="https://github.com/php/php-src/commit/11c424c9fb">11c424c9fb</a> by Gina Peter Banyard 💜</li>
 <li>Re-add MSAN in nightly in <a href="https://github.com/php/php-src/commit/ad136e6a6d">ad136e6a6d</a> by Ilija Tovilo 💜</li>
 <li>Assert all test files are cleaned up in CI in <a href="https://github.com/php/php-src/pull/8977">GH-8977</a> in <a href="https://github.com/php/php-src/commit/b5ab0e06b8">b5ab0e06b8</a> by Ilija Tovilo 💜</li>
 <li>Fix SPL test cleanup in <a href="https://github.com/php/php-src/commit/3962f00b01">3962f00b01</a> by Ilija Tovilo 💜</li>
 <li>Avoid signed integer overflow in <code>php_random_range()</code> in <a href="https://github.com/php/php-src/pull/9066">GH-9066</a> in <a href="https://github.com/php/php-src/commit/133b9b08da">133b9b08da</a> by Go Kudo</li>
-<li>Convert <code>client-&gt;request.request_uri</code> to <code>zend_string</code> in <a href="https://github.com/php/php-src/pull/9086">GH-9086</a> in <a href="https://github.com/php/php-src/commit/c8f4801382">c8f4801382</a> by George Peter Banyard 💜</li>
+<li>Convert <code>client-&gt;request.request_uri</code> to <code>zend_string</code> in <a href="https://github.com/php/php-src/pull/9086">GH-9086</a> in <a href="https://github.com/php/php-src/commit/c8f4801382">c8f4801382</a> by Gina Peter Banyard 💜</li>
 <li>Fix shift in <code>rand_rangeXX()</code> in <a href="https://github.com/php/php-src/pull/9088">GH-9088</a> in <a href="https://github.com/php/php-src/commit/ab5491f505">ab5491f505</a> by Tim Düsterhus</li>
 <li>[<code>run-tests.php</code>] Improve non-optimal nested <code>if</code>/<code>elseif</code>/<code>else</code> blocks with happy path optimizations in <a href="https://github.com/php/php-src/commit/51447fb47d">51447fb47d</a> by Ayesh Karunaratne</li>
 <li>[<code>run-tests.php</code>] Minor optimizations in <code>if</code> blocks by placing simple expressions first in <a href="https://github.com/php/php-src/commit/056afc8daf">056afc8daf</a> by Ayesh Karunaratne</li>
 <li>[<code>run-tests.php</code>] Merge multiple <code>unset()</code> calls to a single call in <a href="https://github.com/php/php-src/commit/f958701dad">f958701dad</a> by Ayesh Karunaratne</li>
 <li>[<code>run-tests.php</code>] Replace backtick operator string literals with <code>shell_exec()</code> calls in <a href="https://github.com/php/php-src/commit/c83a10d8db">c83a10d8db</a> by Ayesh Karunaratne</li>
 <li>[<code>run-tests.php</code>] Combine multiple <code>str_replace</code> calls to a single <code>strtr</code> call in <a href="https://github.com/php/php-src/commit/3483a1f170">3483a1f170</a> by Ayesh Karunaratne</li>
-<li>[<code>run-tests.php</code>] echo call performance optimization in <a href="https://github.com/php/php-src/commit/0490f082e9">0490f082e9</a> by George Peter Banyard 💜</li>
+<li>[<code>run-tests.php</code>] echo call performance optimization in <a href="https://github.com/php/php-src/commit/0490f082e9">0490f082e9</a> by Gina Peter Banyard 💜</li>
 <li>crc32 Aarch64 add crc feature to <code>crc32_aarch64</code> from clang Closes #8916 in <a href="https://github.com/php/php-src/commit/77bd39a116">77bd39a116</a> by David CARLIER</li>
-<li>Add support for stubs to declare intersection type class properties in <a href="https://github.com/php/php-src/pull/8751">GH-8751</a> in <a href="https://github.com/php/php-src/commit/4457dba1fb">4457dba1fb</a> by George Peter Banyard 💜</li>
+<li>Add support for stubs to declare intersection type class properties in <a href="https://github.com/php/php-src/pull/8751">GH-8751</a> in <a href="https://github.com/php/php-src/commit/4457dba1fb">4457dba1fb</a> by Gina Peter Banyard 💜</li>
 <li>Fix memory leak in fiber constructor by throwing an error in <a href="https://github.com/php/php-src/pull/9098">GH-9098</a> in <a href="https://github.com/php/php-src/commit/0adbf9c2d4">0adbf9c2d4</a> by Martin Schröder</li>
 <li>Fix typo in <code>lob_prefetch_ini.phpt</code> test in <a href="https://github.com/php/php-src/pull/9099">GH-9099</a> in <a href="https://github.com/php/php-src/commit/fc42098c23">fc42098c23</a> by Michael Voříšek</li>
 <li>Use <code>-1</code> “precision” in <code>gen_stub.php</code> in <a href="https://github.com/php/php-src/pull/8734">GH-8734</a> by Michael Voříšek</li>
 <li>Remove dead code in <code>ext/random/random.c</code> in <a href="https://github.com/php/php-src/pull/9114">GH-9114</a> in <a href="https://github.com/php/php-src/commit/395b6a9674">395b6a9674</a> by Tim Düsterhus</li>
-<li>Add comment in GDBM informing to what param the 0 org corresponds to in <a href="https://github.com/php/php-src/commit/c8ba00f627">c8ba00f627</a> by George Peter Banyard 💜</li>
-<li>Remove personalisation from write on <code>readonly</code> db DBA error message in <a href="https://github.com/php/php-src/commit/0887a1d7ab">0887a1d7ab</a> by George Peter Banyard 💜</li>
-<li>Pass <code>MDB_RDONLY</code> to the LMDB environment for readonly DBs in <a href="https://github.com/php/php-src/commit/79d831ff9f">79d831ff9f</a> by George Peter Banyard 💜</li>
-<li>Add support to pass driver flags to DBA handlers in <a href="https://github.com/php/php-src/commit/3c372901bd">3c372901bd</a> by George Peter Banyard 💜</li>
+<li>Add comment in GDBM informing to what param the 0 org corresponds to in <a href="https://github.com/php/php-src/commit/c8ba00f627">c8ba00f627</a> by Gina Peter Banyard 💜</li>
+<li>Remove personalisation from write on <code>readonly</code> db DBA error message in <a href="https://github.com/php/php-src/commit/0887a1d7ab">0887a1d7ab</a> by Gina Peter Banyard 💜</li>
+<li>Pass <code>MDB_RDONLY</code> to the LMDB environment for readonly DBs in <a href="https://github.com/php/php-src/commit/79d831ff9f">79d831ff9f</a> by Gina Peter Banyard 💜</li>
+<li>Add support to pass driver flags to DBA handlers in <a href="https://github.com/php/php-src/commit/3c372901bd">3c372901bd</a> by Gina Peter Banyard 💜</li>
 <li>Fix memory leak on <code>Randomizer::__construct()</code> call twice in <a href="https://github.com/php/php-src/pull/9091">GH-9091</a> in <a href="https://github.com/php/php-src/commit/34b352d121">34b352d121</a> by Go Kudo</li>
 <li>Improve error reporting in random extension in <a href="https://github.com/php/php-src/pull/9071">GH-9071</a> in <a href="https://github.com/php/php-src/commit/60f149f7ad">60f149f7ad</a> by Tim Düsterhus</li>
 <li>zend defines attribute malloc for Win32 as returned pointer are not aliased Closes #9118 in <a href="https://github.com/php/php-src/commit/53ae24e435">53ae24e435</a> by David Carlier</li>
@@ -477,10 +477,10 @@ The RFC missed the 2/3 vote with 27 votes in favor and 16 against.</p>
 <li>Initialize <code>blacklist_path_length</code> in <a href="https://github.com/php/php-src/pull/9129">GH-9129</a> by Christoph M. Becker</li>
 <li>sockets ext for solaris update in <a href="https://github.com/php/php-src/commit/9090e2602e">9090e2602e</a> by David Carlier</li>
 <li>Skip locale tests /w musl libc in <a href="https://github.com/php/php-src/pull/9141">GH-9141</a> in <a href="https://github.com/php/php-src/commit/60189aa96a">60189aa96a</a> by Michael Voříšek</li>
-<li>Amend DBA error message to use standard messaging in <a href="https://github.com/php/php-src/commit/04f6fe4b25">04f6fe4b25</a> by George Peter Banyard 💜</li>
+<li>Amend DBA error message to use standard messaging in <a href="https://github.com/php/php-src/commit/04f6fe4b25">04f6fe4b25</a> by Gina Peter Banyard 💜</li>
 <li>Remove <code>-&gt;last_unsafe</code> from <code>php_random_status</code> in <a href="https://github.com/php/php-src/pull/9132">GH-9132</a> in <a href="https://github.com/php/php-src/commit/5c693c770a">5c693c770a</a> by Tim Düsterhus</li>
-<li>The hashvalue/index of a bucket is a <code>zend_ulong</code> in <a href="https://github.com/php/php-src/commit/bdf5a4e478">bdf5a4e478</a> by George Peter Banyard 💜</li>
-<li>Use <code>uint32_t</code> in <code>Z_PARAM_VARIADIC_WITH_NAMED</code> in <a href="https://github.com/php/php-src/commit/9115211ebf">9115211ebf</a> by George Peter Banyard 💜</li>
+<li>The hashvalue/index of a bucket is a <code>zend_ulong</code> in <a href="https://github.com/php/php-src/commit/bdf5a4e478">bdf5a4e478</a> by Gina Peter Banyard 💜</li>
+<li>Use <code>uint32_t</code> in <code>Z_PARAM_VARIADIC_WITH_NAMED</code> in <a href="https://github.com/php/php-src/commit/9115211ebf">9115211ebf</a> by Gina Peter Banyard 💜</li>
 <li>Restrict range of <code>buffer_length</code> on all platforms to <code>INT_MAX</code> in <a href="https://github.com/php/php-src/pull/9126">GH-9126</a> by Christoph M. Becker</li>
 <li>Fix <a href="https://bugs.php.net/bug.php?id=69181">#69181</a>: <code>READ_CSV|DROP_NEW_LINE</code> drops newlines within fields in <a href="https://github.com/php/php-src/pull/7618">GH-7618</a> by Christoph M. Becker</li>
 <li>Use <code>ValueError</code> if an invalid mode is passed to <code>Mt19937</code> in <a href="https://github.com/php/php-src/pull/9159">GH-9159</a> in <a href="https://github.com/php/php-src/commit/d058acb4ac">d058acb4ac</a> by Tim Düsterhus</li>
@@ -496,8 +496,8 @@ The RFC missed the 2/3 vote with 27 votes in favor and 16 against.</p>
 <li>Drop Windows specific implementation of <code>openssl_random_pseudo_bytes()</code> in <a href="https://github.com/php/php-src/pull/9153">GH-9153</a> by Christoph M. Becker</li>
 <li>Do not add inherited interface methods to the class synopsis page in <a href="https://github.com/php/php-src/commit/b56492be9c">b56492be9c</a> by Máté Kocsis 💜</li>
 <li>Improve error messages in <code>php_random_bytes()</code> in <a href="https://github.com/php/php-src/pull/9169">GH-9169</a> by Tim Düsterhus</li>
-<li>Improve DBA test suite in <a href="https://github.com/php/php-src/pull/8904">GH-8904</a> by George Peter Banyard 💜</li>
-<li>Refactor code handling <code>file.current_zval</code> in <a href="https://github.com/php/php-src/pull/8934">GH-8934</a> by George Peter Banyard 💜</li>
+<li>Improve DBA test suite in <a href="https://github.com/php/php-src/pull/8904">GH-8904</a> by Gina Peter Banyard 💜</li>
+<li>Refactor code handling <code>file.current_zval</code> in <a href="https://github.com/php/php-src/pull/8934">GH-8934</a> by Gina Peter Banyard 💜</li>
 </ul>
 
 <h2 id="support-php-foundation">Support PHP Foundation</h2>

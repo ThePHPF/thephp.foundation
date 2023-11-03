@@ -236,7 +236,7 @@ We publish the posts on our website, and you can subscribe to a newsletter; You 
 <p>This RFC is currently under vote, and concludes on 7th of October. The responses have been overwhelmingly positive to add <code>json_validate</code> to PHP 8.3.</p></li>
 <li><p><strong>RFC In Draft: <a href="https://wiki.php.net/rfc/deprecations_php_8_3">Deprecations for PHP 8.3</a></strong></p>
 
-<p>RFC Christoph M. Becker and George Peter Banyard 💜 with suggestions from Tim Düsterhus and Go Kudo (so far!), that proposes a series of functionality/syntax to deprecate in PHP 8.3, and eventually remove in PHP 9.0.</p>
+<p>RFC Christoph M. Becker and Gina Peter Banyard 💜 with suggestions from Tim Düsterhus and Go Kudo (so far!), that proposes a series of functionality/syntax to deprecate in PHP 8.3, and eventually remove in PHP 9.0.</p>
 
 <p>Each proposed deprecation will be voted to determine if the deprecation makes it to PHP 8.3, but having a consolidated RFC eases the voting and discussions.</p>
 
@@ -254,11 +254,11 @@ We publish the posts on our website, and you can subscribe to a newsletter; You 
 
 <p>Now that PHP 8.2 is being prepared for GA releases, the documentation available on <a href="https://php.net">php.net</a>, requires updating. An initial version of the <a href="https://www.php.net/manual/en/migration82.php">PHP 8.2 migration guide</a> has been published.</p>
 
-<p>George P. Banyard 💜 is tracking the progress for PHP 8.2 related changes in <a href="https://github.com/php/doc-en/issues/1803">php/doc-en#1803</a>, and you can help too!</p>
+<p>Gina P. Banyard 💜 is tracking the progress for PHP 8.2 related changes in <a href="https://github.com/php/doc-en/issues/1803">php/doc-en#1803</a>, and you can help too!</p>
 
 <p>You can also help with other existing issues, a good starting point are <a href="https://github.com/php/doc-en/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22">issues marked as “good first issue”</a> that George went and triaged in preparation for Hacktoberfest.</p>
 
-<p><a href="https://twitter.com/Girgias/status/1569626352025747459"><img src="/assets/post-images/2022/roundup-6/tweet-gbp-php-doc-en-issues.png" alt="Did some issue triage on the doc-en GitHub tracker, and labelled a bunch of issues as &quot;good first issue&quot;. So if people want to contribute those are probably the best to tackle :)" title="George Peter Banyard 💜 on Twitter" /></a></p>
+<p><a href="https://twitter.com/Girgias/status/1569626352025747459"><img src="/assets/post-images/2022/roundup-6/tweet-gbp-php-doc-en-issues.png" alt="Did some issue triage on the doc-en GitHub tracker, and labelled a bunch of issues as &quot;good first issue&quot;. So if people want to contribute those are probably the best to tackle :)" title="Gina Peter Banyard 💜 on Twitter" /></a></p>
 
 <p>Derick has gone through all the datetime notes, and integrated them where needed, deleted where not.</p>
 
@@ -331,9 +331,9 @@ We publish the posts on our website, and you can subscribe to a newsletter; You 
 <li>random: Validate that the arrays do not contain extra elements when unserializing in <a href="https://github.com/php/php-src/pull/9458">GH-9458</a> by Tim Düsterhus</li>
 <li>Add “Start time”, “Last restart time” and “Last force restart time” to <code>phpinfo()</code> for opcache in <a href="https://github.com/php/php-src/pull/9475">GH-9475</a> by Mikhail Galanin</li>
 <li>Use <code>php_info_print_table_header</code> for actual column headers only in <a href="https://github.com/php/php-src/pull/9485">GH-9485</a> by Tim Düsterhus</li>
-<li>Update INI validator and displayers depending on INI type in <a href="https://github.com/php/php-src/pull/9451">GH-9451</a> by George Peter Banyard 💜</li>
-<li>Update globals to use bool type in <a href="https://github.com/php/php-src/commit/5011a185b5">5011a185b5</a> by George Peter Banyard 💜</li>
-<li>Add <code>zend_string</code> INI validators in <a href="https://github.com/php/php-src/pull/9328">GH-9328</a> by George Peter Banyard 💜</li>
+<li>Update INI validator and displayers depending on INI type in <a href="https://github.com/php/php-src/pull/9451">GH-9451</a> by Gina Peter Banyard 💜</li>
+<li>Update globals to use bool type in <a href="https://github.com/php/php-src/commit/5011a185b5">5011a185b5</a> by Gina Peter Banyard 💜</li>
+<li>Add <code>zend_string</code> INI validators in <a href="https://github.com/php/php-src/pull/9328">GH-9328</a> by Gina Peter Banyard 💜</li>
 <li>intl: use <code>uspoof_check2UTF8</code> call when available. in <a href="https://github.com/php/php-src/pull/9478">GH-9478</a> by David CARLIER</li>
 <li>Upgrade PHP parser to 4.15.1 in <a href="https://github.com/php/php-src/commit/05aa3b3e0a">05aa3b3e0a</a> by Máté Kocsis 💜</li>
 <li>Add support for validation of missing method synopses in <a href="https://github.com/php/php-src/pull/9491">GH-9491</a> by Máté Kocsis 💜</li>
@@ -353,10 +353,10 @@ We publish the posts on our website, and you can subscribe to a newsletter; You 
 <li>Validate if the refpurpose and the description is in sync in <a href="https://github.com/php/php-src/pull/9510">GH-9510</a> by Máté Kocsis 💜</li>
 <li>Security fix <a href="https://bugs.php.net/bug.php?id=81727">#81727</a>, (<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31628">CVE-2022-31628</a>): Don’t mangle HTTP variable names that clash with ones that have a specific semantic meaning in <a href="https://github.com/php/php-src/commit/0611be4e82">0611be4e82</a> by Derick Rethans 💜</li>
 <li>Security fix <a href="https://bugs.php.net/bug.php?id=81726">#81726</a>, (<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31629">CVE-2022-31629</a>): phar wrapper: DOS when using quine gzip file in <a href="https://github.com/php/php-src/commit/404e8bdb68"> 404e8bdb68</a> by Christoph M. Becker</li>
-<li>Introduce <code>PROGRESS_CACHE_SLOT()</code> macro in <a href="https://github.com/php/php-src/commit/80315edd58">80315edd58</a> by George Peter Banyard 💜</li>
-<li>Fix <a href="https://github.com/php/php-src/issues/9516">GH-9516</a>: <code>(A&amp;B)|D</code> as a param should allow <code>AB</code> or <code>D</code>. Not just <code>A</code> in <a href="https://github.com/php/php-src/commit/9286101da4">9286101da4</a> by George Peter Banyard 💜</li>
-<li>Use DNF intersection type check also for simple intersection types in <a href="https://github.com/php/php-src/commit/c70a8281e3">c70a8281e3</a> by George Peter Banyard 💜</li>
-<li>Update cache slot size calculation in <code>compact_literals.c</code> in <a href="https://github.com/php/php-src/commit/6c4d24e4f0">6c4d24e4f0</a> by George Peter Banyard 💜</li>
+<li>Introduce <code>PROGRESS_CACHE_SLOT()</code> macro in <a href="https://github.com/php/php-src/commit/80315edd58">80315edd58</a> by Gina Peter Banyard 💜</li>
+<li>Fix <a href="https://github.com/php/php-src/issues/9516">GH-9516</a>: <code>(A&amp;B)|D</code> as a param should allow <code>AB</code> or <code>D</code>. Not just <code>A</code> in <a href="https://github.com/php/php-src/commit/9286101da4">9286101da4</a> by Gina Peter Banyard 💜</li>
+<li>Use DNF intersection type check also for simple intersection types in <a href="https://github.com/php/php-src/commit/c70a8281e3">c70a8281e3</a> by Gina Peter Banyard 💜</li>
+<li>Update cache slot size calculation in <code>compact_literals.c</code> in <a href="https://github.com/php/php-src/commit/6c4d24e4f0">6c4d24e4f0</a> by Gina Peter Banyard 💜</li>
 <li>Fix <a href="https://github.com/php/php-src/issues/9518">GH-9518</a>: Disabling IPv6 support disables unrelated constants in <a href="https://github.com/php/php-src/pull/9520">GH-9520</a> by Christoph M. Becker</li>
 <li>Check that all preprocessor conditions are terminated in <a href="https://github.com/php/php-src/commit/36fdc6fdc0">36fdc6fdc0</a> by Nikita Popov</li>
 <li>Require PHP 7.4 at least for running the build system in <a href="https://github.com/php/php-src/pull/9519">GH-9519</a> by Máté Kocsis 💜</li>
@@ -367,14 +367,14 @@ We publish the posts on our website, and you can subscribe to a newsletter; You 
 <li>Fix always non-null warning in <a href="https://github.com/php/php-src/commit/9f9042fd43">9f9042fd43</a> by Nikita Popov</li>
 <li>Reset <code>FG(user_stream_current_filename)</code> at the end of request in <a href="https://github.com/php/php-src/commit/d0b3096ff0">d0b3096ff0</a> by Dmitry Stogov</li>
 <li>Fix <code>ZEND_RC_MOD_CHECK()</code> for thread local ini parser strings in <a href="https://github.com/php/php-src/commit/9af98cd465">9af98cd465</a> by Ilija Tovilo 💜</li>
-<li>Only check classes in intersection type if the type might be valid in <a href="https://github.com/php/php-src/pull/9522">GH-9522</a> by George Peter Banyard 💜</li>
-<li>Update NEWS with DNF type check bug fix in <a href="https://github.com/php/php-src/commit/3675041d03">3675041d03</a> by George Peter Banyard 💜</li>
-<li>Fix <a href="https://github.com/php/php-src/issues/9308">GH-9308</a> GMP throws the wrong error when a GMP object is passed to gmp_init() in <a href="https://github.com/php/php-src/pull/9490">GH-9490</a> by George Peter Banyard 💜</li>
-<li>Fix <a href="https://github.com/php/php-src/issues/9421">GH-9421</a> Incorrect argument number for ValueError in NumberFormatter in <a href="https://github.com/php/php-src/pull/9489">GH-9489</a> by George Peter Banyard 💜</li>
+<li>Only check classes in intersection type if the type might be valid in <a href="https://github.com/php/php-src/pull/9522">GH-9522</a> by Gina Peter Banyard 💜</li>
+<li>Update NEWS with DNF type check bug fix in <a href="https://github.com/php/php-src/commit/3675041d03">3675041d03</a> by Gina Peter Banyard 💜</li>
+<li>Fix <a href="https://github.com/php/php-src/issues/9308">GH-9308</a> GMP throws the wrong error when a GMP object is passed to gmp_init() in <a href="https://github.com/php/php-src/pull/9490">GH-9490</a> by Gina Peter Banyard 💜</li>
+<li>Fix <a href="https://github.com/php/php-src/issues/9421">GH-9421</a> Incorrect argument number for ValueError in NumberFormatter in <a href="https://github.com/php/php-src/pull/9489">GH-9489</a> by Gina Peter Banyard 💜</li>
 <li>Always skip randomly failing OCI8 extauth tests in <a href="https://github.com/php/php-src/pull/9524">GH-9524</a> by Michael Voříšek</li>
-<li>Refactor <code>_xml_add_to_info()</code> in <a href="https://github.com/php/php-src/commit/0b8ad94b91">0b8ad94b91</a> by George Peter Banyard 💜</li>
-<li>Mark <code>_xml_decode_tag()</code> as taking a <code>const XML_Char*</code> in <a href="https://github.com/php/php-src/commit/6aef13402e">6aef13402e</a> by George Peter Banyard 💜</li>
-<li>Do early returns in <code>xml.c</code> in <a href="https://github.com/php/php-src/commit/951bd74038">951bd74038</a> by George Peter Banyard 💜</li>
+<li>Refactor <code>_xml_add_to_info()</code> in <a href="https://github.com/php/php-src/commit/0b8ad94b91">0b8ad94b91</a> by Gina Peter Banyard 💜</li>
+<li>Mark <code>_xml_decode_tag()</code> as taking a <code>const XML_Char*</code> in <a href="https://github.com/php/php-src/commit/6aef13402e">6aef13402e</a> by Gina Peter Banyard 💜</li>
+<li>Do early returns in <code>xml.c</code> in <a href="https://github.com/php/php-src/commit/951bd74038">951bd74038</a> by Gina Peter Banyard 💜</li>
 <li>Fix <code>oci_success_with_info.phpt</code> test random failures in <a href="https://github.com/php/php-src/pull/9525">GH-9525</a> by Michael Voříšek</li>
 <li>PHP-8.1 is now for PHP 8.1.12-dev in <a href="https://github.com/php/php-src/commit/0f575aa698">0f575aa698</a> by Patrick Allaert</li>
 <li>Bump for 8.0.25 in <a href="https://github.com/php/php-src/commit/559da529a0">559da529a0</a> by Sara Golemon</li>
@@ -423,7 +423,7 @@ We publish the posts on our website, and you can subscribe to a newsletter; You 
 <li>Fixed undefined macros warnings in <a href="https://github.com/php/php-src/commit/18cd80c327">18cd80c327</a> by Patrick Allaert</li>
 <li>Replace reallocarray with safe_perealloc in <a href="https://github.com/php/php-src/pull/9593">GH-9593</a> by Ilija Tovilo 💜</li>
 <li>Check “ssa_op” before dereference (it may be NULL for opcache.jit=51) in <a href="https://github.com/php/php-src/commit/95d9e5157f">95d9e5157f</a> by Dmitry Stogov</li>
-<li>Use true return type for XML functions which always return true in <a href="https://github.com/php/php-src/pull/9539">GH-9539</a> by George Peter Banyard 💜</li>
+<li>Use true return type for XML functions which always return true in <a href="https://github.com/php/php-src/pull/9539">GH-9539</a> by Gina Peter Banyard 💜</li>
 <li>Revert “Fix <code>parse_url()</code>: can not recognize port without scheme” in <a href="https://github.com/php/php-src/pull/9569">GH-9569</a> by Andy Postnikov</li>
 <li>Migrate community job to GitHub actions in <a href="https://github.com/php/php-src/commit/e10961b27f">e10961b27f</a> by Ilija Tovilo 💜</li>
 <li>Fix typo (<code>from</code> → <code>form</code>) in <a href="https://github.com/php/php-src/pull/9609">GH-9609</a> by Christoph M. Becker</li>
@@ -449,7 +449,7 @@ We publish the posts on our website, and you can subscribe to a newsletter; You 
 <li>Uniform placing of <code>init_fcall</code> guards in <a href="https://github.com/php/php-src/commit/ca93e48b77">ca93e48b77</a> by Dmitry Stogov</li>
 <li>Add CVEs in <a href="https://github.com/php/php-src/commit/6f586ef90f">6f586ef90f</a> by Derick Rethans 💜</li>
 <li>Fix <code>run-tests.php</code> for explicitly given test cases in <a href="https://github.com/php/php-src/pull/9617">GH-9617</a> by Christoph M. Becker</li>
-<li>Fix <a href="https://github.com/php/php-src/issues/9583">GH-9583</a>: session_create_id() fails with user defined save handler that doesn’t have a validateId() method in <a href="https://github.com/php/php-src/commit/8b115254c0">8b115254c0</a> by George Peter Banyard 💜</li>
+<li>Fix <a href="https://github.com/php/php-src/issues/9583">GH-9583</a>: session_create_id() fails with user defined save handler that doesn’t have a validateId() method in <a href="https://github.com/php/php-src/commit/8b115254c0">8b115254c0</a> by Gina Peter Banyard 💜</li>
 <li>Fix regression introduced by fixing bug 81726 in <a href="https://github.com/php/php-src/pull/9620">GH-9620</a> by Christoph M. Becker</li>
 <li>Rework FPM tests logging for better debugging in <a href="https://github.com/php/php-src/commit/1e8fa6607d">1e8fa6607d</a> by Jakub Zelenka 💜</li>
 <li>Fix new <code>bug81726.phpt</code> for PHP 8.0 in <a href="https://github.com/php/php-src/pull/9621">GH-9621</a> by Christoph M. Becker</li>
