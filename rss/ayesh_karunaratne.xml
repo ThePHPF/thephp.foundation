@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2023-11-22T14:09:04+00:00</updated><entry><author><name>Ayesh Karunaratne</name><uri>https://aye.sh</uri></author><author><name>Sergey Panteleev</name><uri>https://sergeypanteleev.com</uri></author><title type="html"><![CDATA[PHP Core Roundup #18]]></title><content type="html"><![CDATA[<p>Welcome back to <a href="/blog/tag/roundup/">PHP Core Roundup</a> series! This is where we highlight and celebrate the improvements made to PHP during the month past by the PHP development team and members of the PHP Foundation.</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2023-11-23T16:47:08+00:00</updated><entry><author><name>Ayesh Karunaratne</name><uri>https://aye.sh</uri></author><author><name>Sergey Panteleev</name><uri>https://sergeypanteleev.com</uri></author><title type="html"><![CDATA[PHP Core Roundup #18]]></title><content type="html"><![CDATA[<p>Welcome back to <a href="/blog/tag/roundup/">PHP Core Roundup</a> series! This is where we highlight and celebrate the improvements made to PHP during the month past by the PHP development team and members of the PHP Foundation.</p>
 
 <blockquote>
   <p>The PHP Foundation is a collective of PHP contributors, veterans, and companies that collaborate to ensure the long-term sustainability of the PHP programming language. The foundation currently supports six contributors focused on PHP's maintenance, debt reduction, and feature development. These contributors work closely with others on coding, documentation, and discussions.</p>
@@ -5561,7 +5561,98 @@ We are incredibly grateful for the commitment and dedication of all contributors
 <blockquote>
   <p>PHP Roundup is prepared by Ayesh Karunaratne from <strong><a href="https://php.watch">PHP.Watch</a></strong>, a source for PHP News, Articles, Upcoming Changes, and more.</p>
 </blockquote>
-]]></content><link href="https://thephp.foundation/blog/2023/07/01/php-core-roundup-14/"/><id>https://thephp.foundation/blog/2023/07/01/php-core-roundup-14/</id><updated>Thu, 29 Jun 2023 00:00:00 +0000</updated></entry><entry><author><name>Ayesh Karunaratne</name><uri>https://aye.sh</uri></author><title type="html"><![CDATA[PHP Core Roundup #7]]></title><content type="html"><![CDATA[<p>Welcome to the seventh in the <em>PHP Core Roundup</em> series, where we summarize the latest improvements, bug fixes, proposals, and other developments in PHP.</p>
+]]></content><link href="https://thephp.foundation/blog/2023/07/01/php-core-roundup-14/"/><id>https://thephp.foundation/blog/2023/07/01/php-core-roundup-14/</id><updated>Thu, 29 Jun 2023 00:00:00 +0000</updated></entry><entry><author><name>Ayesh Karunaratne</name><uri>https://aye.sh</uri></author><author><name>Sergey Panteleev</name><uri>https://sergeypanteleev.com</uri></author><title type="html"><![CDATA[PHP 8.3 Released!]]></title><content type="html"><![CDATA[<p><br /></p>
+
+<object data="/assets/post-images/2023/php83/php83-fireworks.svg" type="image/svg+xml">
+  <img src="/assets/post-images/2023/php83/php83-fireworks.svg" />
+</object>
+
+<p><br /></p>
+
+<p><a href="https://www.php.net/releases/8.3">PHP 8.3</a> is here! Bringing a handful of new features, performance and functionality improvements, and a healthy amount of deprecations, PHP 8.3 was released today.</p>
+
+<p>PHP 8.3 will continue to receive active support for two years, followed by one year of security updates. Similar to the PHP 8.2 upgrade, the PHP 8.3 upgrade will be smooth as backward compatiblity is maintained. While some functionality is deprecated, there are no syntax, API*, and remove functionality in this release.</p>
+
+<h2 id="what%27s-in-php-8.3">What's in PHP 8.3</h2>
+
+<p>Some of the major new features in PHP 8.3 include support for declaring a type for class constants, improvements to support deep-cloning of <code>readonly</code> properties, improvements to the new Random extension introduced in PHP 8.2, new <a href="https://www.php.net/manual/en/function.json-validate.php"><code>json_validate()</code></a>,<a href="https://www.php.net/manual/en/function.str-increment.php"><code>str_increment()</code></a>, and <a href="https://www.php.net/manual/en/function.str-decrement.php"><code>str_decrement()</code></a>, functions, and a noticeable amount of improvements in DateTime, DOM, and Intl extensions.</p>
+
+<p>See the <a href="https://www.php.net/releases/8.3">PHP 8.3 release page</a> for what's new and changed in PHP 8.3.</p>
+
+<blockquote>
+  <p>(*) Note that some of the PHP core extensions now declare types for built-in class constants. This is technically a BC break in case child classes declare the same constants without type declaration, which is only supported in PHP 8.3.</p>
+</blockquote>
+
+<h2 id="upgrade-to-php-8.3">Upgrade to PHP 8.3</h2>
+
+<p>PHP packages on software repositories such as Debian and Ubuntu repos maintained by <a href="https://launchpad.net/~ondrej">Ondřej Surý</a>, <a href="https://github.com/remicollet">Remi Collet</a> for Fedora/RHEL/EL already contain PHP 8.3 builds ready to install.</p>
+
+<p>Windows builds for PHP 8.3 are available on <a href="https://windows.php.net/download/">windows.php.net</a></p>
+
+<p><a href="https://hub.docker.com/_/php">Docker images</a> with PHP 8.3 will also be available on Docker hub in the coming days.</p>
+
+<h2 id="php-8.3-release-in-numbers">PHP 8.3 Release in Numbers</h2>
+
+<p>The PHP 8.3 release contains <strong>over 1200 code commits</strong> from <strong>114 awesome contributors</strong> to the <code>php-src</code> repository, and several more contributions to the documentation and its translations.</p>
+
+<p>Contributions from the <strong>PHP Foundation members</strong> consist of over <strong>280 commits</strong>.</p>
+
+<p>During the period from the PHP 8.2 release date and today, the <strong>PHP Internals mailing list has received over 2800 emails</strong>.</p>
+
+<p>PHP RFCs, where major changes to PHP are proposed, discussed, and voted on, PHP 8.3 received <strong>23 RFCs that went to a vote</strong>, and <strong>18 RFCs passed</strong>. This includes a number includes "catch-all" RFCs such as Deprecations for PHP 8.3, where multiple changes were voted at the same time. Out of the 23 RFCs with votes, <strong>13 RFCs</strong> were either proposed or implemented by the <strong>PHP Foundation</strong> members.</p>
+
+<p>The PHP documentation and php.net web site contributors have also made several impactful contributions to document the new features in PHP 8.3, prepare release pages, and more.</p>
+
+<h2 id="%F0%9F%92%9C-thank-you-%F0%9F%92%9C">💜 Thank you 💜</h2>
+
+<p>On behalf of the PHP Foundation, we take this post to thank everyone from this milestone in PHP. Your contributions to the PHP Foundation, code and documentation contributions, and several other ways of involvement and contributions help shape PHP to continue to be an exciting, feature-rich, and versatile programming language.</p>
+
+<p>Thank you 💜</p>
+
+<h2 id="php-8.4-outlook">PHP 8.4 Outlook</h2>
+
+<p>PHP 8.4, scheduled for the end of 2024 is already taking shape. Even at the moment PHP 8.3 is released, there are three active RFC votes, and some major changes such as JIT-IR, a brand-new HTML 5 parser in the DOM extension based on <a href="https://github.com/lexbor/lexbor">Lexbor</a>, and Bcrypt default cost increasing already been implemented for PHP 8.4</p>
+
+<p>We look forward to bringing you updates on our <a href="https://thephp.foundation/blog/tag/roundup/">PHP Core Roundup series</a> and our newsletter:</p>
+
+<p><div class="px-4 pt-3 border-b border-t -mx-4 border-gray-200">
+    <div class="bg-white py-8">
+        <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
+            <div class="max-w-xl text-4xl font-medium tracking-tight text-gray-900 lg:col-span-6">
+                Subscribe to PHP Core Roundup newsletter
+            </div>
+            <form method="POST"
+                  action="https://php-foundation.mailcoach.app/subscribe/9be4e2bd-f9d8-475c-b00e-2dcc4cf90056"
+                  class="w-full max-w-md lg:col-span-6">
+                <div class="flex gap-x-4">
+                    <label for="email-address" class="sr-only">Email address</label>
+                    <input id="email-address" name="email" type="email" autocomplete="email" required
+                           class="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                           placeholder="Enter your email">
+                    <button type="submit"
+                            class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">
+                        Subscribe
+                    </button>
+                </div>
+                <div class="mt-4 text-sm leading-6 text-gray-900">
+                    We care about your data.
+                    Read our <a href="https://thephp.foundation/privacy-policy"
+                                class="font-semibold text-indigo-600 hover:text-indigo-500 no-underline">privacy policy</a>.
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</p>
+
+<hr />
+
+<p>💜️ 🐘</p>
+
+<blockquote>
+  <p>PHP Roundup is prepared by Ayesh Karunaratne from <strong><a href="https://php.watch">PHP.Watch</a></strong>, a source for PHP News, Articles, Upcoming Changes, and more.</p>
+</blockquote>
+]]></content><link href="https://thephp.foundation/blog/2023/11/23/php-83/"/><id>https://thephp.foundation/blog/2023/11/23/php-83/</id><updated>Thu, 23 Nov 2023 00:00:00 +0000</updated></entry><entry><author><name>Ayesh Karunaratne</name><uri>https://aye.sh</uri></author><title type="html"><![CDATA[PHP Core Roundup #7]]></title><content type="html"><![CDATA[<p>Welcome to the seventh in the <em>PHP Core Roundup</em> series, where we summarize the latest improvements, bug fixes, proposals, and other developments in PHP.</p>
 
 <p>We are merely three weeks away from PHP 8.2 GA release, and we already have changes implemented and being discussed for the next PHP version, PHP 8.3! Exciting times!</p>
 

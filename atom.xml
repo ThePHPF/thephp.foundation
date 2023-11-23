@@ -3,9 +3,107 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2023-11-22T14:09:04+00:00</updated>
+    <updated>2023-11-23T16:47:08+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[PHP 8.3 Released!]]></title>
+            <link href="https://thephp.foundation/blog/2023/11/23/php-83/"/>
+            <updated>2023-11-23T00:00:00+00:00</updated>
+            <id>https://thephp.foundation/blog/2023/11/23/php-83/</id>
+            <content type="html"><![CDATA[<p><br /></p>
+
+<object data="/assets/post-images/2023/php83/php83-fireworks.svg" type="image/svg+xml">
+  <img src="/assets/post-images/2023/php83/php83-fireworks.svg" />
+</object>
+
+<p><br /></p>
+
+<p><a href="https://www.php.net/releases/8.3">PHP 8.3</a> is here! Bringing a handful of new features, performance and functionality improvements, and a healthy amount of deprecations, PHP 8.3 was released today.</p>
+
+<p>PHP 8.3 will continue to receive active support for two years, followed by one year of security updates. Similar to the PHP 8.2 upgrade, the PHP 8.3 upgrade will be smooth as backward compatiblity is maintained. While some functionality is deprecated, there are no syntax, API*, and remove functionality in this release.</p>
+
+<h2 id="what%27s-in-php-8.3">What's in PHP 8.3</h2>
+
+<p>Some of the major new features in PHP 8.3 include support for declaring a type for class constants, improvements to support deep-cloning of <code>readonly</code> properties, improvements to the new Random extension introduced in PHP 8.2, new <a href="https://www.php.net/manual/en/function.json-validate.php"><code>json_validate()</code></a>,<a href="https://www.php.net/manual/en/function.str-increment.php"><code>str_increment()</code></a>, and <a href="https://www.php.net/manual/en/function.str-decrement.php"><code>str_decrement()</code></a>, functions, and a noticeable amount of improvements in DateTime, DOM, and Intl extensions.</p>
+
+<p>See the <a href="https://www.php.net/releases/8.3">PHP 8.3 release page</a> for what's new and changed in PHP 8.3.</p>
+
+<blockquote>
+  <p>(*) Note that some of the PHP core extensions now declare types for built-in class constants. This is technically a BC break in case child classes declare the same constants without type declaration, which is only supported in PHP 8.3.</p>
+</blockquote>
+
+<h2 id="upgrade-to-php-8.3">Upgrade to PHP 8.3</h2>
+
+<p>PHP packages on software repositories such as Debian and Ubuntu repos maintained by <a href="https://launchpad.net/~ondrej">Ondřej Surý</a>, <a href="https://github.com/remicollet">Remi Collet</a> for Fedora/RHEL/EL already contain PHP 8.3 builds ready to install.</p>
+
+<p>Windows builds for PHP 8.3 are available on <a href="https://windows.php.net/download/">windows.php.net</a></p>
+
+<p><a href="https://hub.docker.com/_/php">Docker images</a> with PHP 8.3 will also be available on Docker hub in the coming days.</p>
+
+<h2 id="php-8.3-release-in-numbers">PHP 8.3 Release in Numbers</h2>
+
+<p>The PHP 8.3 release contains <strong>over 1200 code commits</strong> from <strong>114 awesome contributors</strong> to the <code>php-src</code> repository, and several more contributions to the documentation and its translations.</p>
+
+<p>Contributions from the <strong>PHP Foundation members</strong> consist of over <strong>280 commits</strong>.</p>
+
+<p>During the period from the PHP 8.2 release date and today, the <strong>PHP Internals mailing list has received over 2800 emails</strong>.</p>
+
+<p>PHP RFCs, where major changes to PHP are proposed, discussed, and voted on, PHP 8.3 received <strong>23 RFCs that went to a vote</strong>, and <strong>18 RFCs passed</strong>. This includes a number includes "catch-all" RFCs such as Deprecations for PHP 8.3, where multiple changes were voted at the same time. Out of the 23 RFCs with votes, <strong>13 RFCs</strong> were either proposed or implemented by the <strong>PHP Foundation</strong> members.</p>
+
+<p>The PHP documentation and php.net web site contributors have also made several impactful contributions to document the new features in PHP 8.3, prepare release pages, and more.</p>
+
+<h2 id="%F0%9F%92%9C-thank-you-%F0%9F%92%9C">💜 Thank you 💜</h2>
+
+<p>On behalf of the PHP Foundation, we take this post to thank everyone from this milestone in PHP. Your contributions to the PHP Foundation, code and documentation contributions, and several other ways of involvement and contributions help shape PHP to continue to be an exciting, feature-rich, and versatile programming language.</p>
+
+<p>Thank you 💜</p>
+
+<h2 id="php-8.4-outlook">PHP 8.4 Outlook</h2>
+
+<p>PHP 8.4, scheduled for the end of 2024 is already taking shape. Even at the moment PHP 8.3 is released, there are three active RFC votes, and some major changes such as JIT-IR, a brand-new HTML 5 parser in the DOM extension based on <a href="https://github.com/lexbor/lexbor">Lexbor</a>, and Bcrypt default cost increasing already been implemented for PHP 8.4</p>
+
+<p>We look forward to bringing you updates on our <a href="https://thephp.foundation/blog/tag/roundup/">PHP Core Roundup series</a> and our newsletter:</p>
+
+<p><div class="px-4 pt-3 border-b border-t -mx-4 border-gray-200">
+    <div class="bg-white py-8">
+        <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
+            <div class="max-w-xl text-4xl font-medium tracking-tight text-gray-900 lg:col-span-6">
+                Subscribe to PHP Core Roundup newsletter
+            </div>
+            <form method="POST"
+                  action="https://php-foundation.mailcoach.app/subscribe/9be4e2bd-f9d8-475c-b00e-2dcc4cf90056"
+                  class="w-full max-w-md lg:col-span-6">
+                <div class="flex gap-x-4">
+                    <label for="email-address" class="sr-only">Email address</label>
+                    <input id="email-address" name="email" type="email" autocomplete="email" required
+                           class="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                           placeholder="Enter your email">
+                    <button type="submit"
+                            class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">
+                        Subscribe
+                    </button>
+                </div>
+                <div class="mt-4 text-sm leading-6 text-gray-900">
+                    We care about your data.
+                    Read our <a href="https://thephp.foundation/privacy-policy"
+                                class="font-semibold text-indigo-600 hover:text-indigo-500 no-underline">privacy policy</a>.
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</p>
+
+<hr />
+
+<p>💜️ 🐘</p>
+
+<blockquote>
+  <p>PHP Roundup is prepared by Ayesh Karunaratne from <strong><a href="https://php.watch">PHP.Watch</a></strong>, a source for PHP News, Articles, Upcoming Changes, and more.</p>
+</blockquote>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[PHP Core Roundup #18]]></title>
             <link href="https://thephp.foundation/blog/2023/11/01/php-core-roundup-18/"/>
@@ -3512,126 +3610,6 @@ class C {
 <blockquote>
   <p>PHP Roundup is prepared by Ayesh Karunaratne from <strong><a href="https://php.watch">PHP.Watch</a></strong>, a source for PHP News, Articles, Upcoming Changes, and more.</p>
 </blockquote>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[PHP Foundation Update, March 2023]]></title>
-            <link href="https://thephp.foundation/blog/2023/03/31/php-foundation-update-march-2023/"/>
-            <updated>2023-03-31T00:00:00+00:00</updated>
-            <id>https://thephp.foundation/blog/2023/03/31/php-foundation-update-march-2023/</id>
-            <content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
-
-<p>It's been a while since our last update, so today we’d like to shed some light on what the PHP Foundation has been up to in recent months. Topics include changes to the reporting schedule, a new initiative within the Foundation called the Advisory Board, conferences with Foundation members, and other news.</p>
-
-<h2 id="new-schedule-for-the-foundation%E2%80%99s-updates-and-reports">New schedule for the Foundation’s updates and reports</h2>
-
-<p>Last year we started by publishing monthly updates, followed by an annual report released in October. Check out the <a href="https://thephp.foundation/blog/2022/11/22/transparency-and-impact-report-2022/">Impact and Transparency Report 2022</a> if you haven’t yet had a chance to do so.</p>
-
-<p>Now that the Foundation has moved into a phase of steady growth and there are fewer administrative updates, we will publish an update and report once a quarter. The next report, the PHP Foundation 2023 Q1 Report, will come out in April.</p>
-
-<p>As for the technical details and results of the Foundation’s developer team, nothing has changed. Every month <a href="https://aye.sh/">Ayesh</a> publishes a <a href="https://thephp.foundation/blog/tag/roundup/">PHP Core Roundup</a> where he talks about what’s kept the team busy and the accomplishments of other PHP contributors.</p>
-
-<h2 id="the-php-foundation-is-now-on-github-sponsors">The PHP Foundation is now on GitHub Sponsors</h2>
-
-<p>From the very beginning, we used <a href="https://opencollective.com/">OpenCollective</a> as our financial platform for collecting and distributing funds. We are very happy with and grateful for their service.</p>
-
-<p>For some companies and individuals, though, it’s a lot easier to donate via GitHub Sponsors. To make it easier for them to pitch in, we’ve opened a GitHub Sponsors page: <strong><a href="https://github.com/sponsors/ThePHPF">github.com/sponsors/ThePHPF</a></strong>.</p>
-
-<p>We are going to use GitHub Sponsors only to <em>receive</em> financial support. The funds will then be transferred to OpenCollective on a monthly basis, and we’ll continue to pay developers via OpenCollective, as before.</p>
-
-<h2 id="a-new-benefit-for-major-sponsors-%E2%80%93-advisory-board-membership">A new benefit for major sponsors – Advisory Board membership</h2>
-
-<p>A major goal of the PHP Foundation is to provide a voice for PHP's users in its development, and one initiative is to create an Advisory Board to provide communication between sponsors and the foundation team.</p>
-
-<p>The advisory board's role is to assist in setting priorities for the utilization of the developer time and resources that the foundation provides. In other words, the board helps the foundation determine how best to allocate its funds to support the most critical and beneficial initiatives for the PHP community.</p>
-
-<p>The Advisory Board is a forum for members to discuss shared challenges and propose feedback on developer plans. It provides a platform to exchange ideas and bring forward community concerns. The Foundation will review common requests and sponsor impactful projects, but feedback is provided periodically and not all suggestions will be implemented. It is a shared communication channel for constructive dialogue and common goal-setting.</p>
-
-<p>For the first iteration of the Advisory Board, any company that contributed $10,000 in the early stages of the PHP Foundation will be offered the status of a major sponsor and a seat on the Advisory Board through October 2023. After that, the status and membership will be based on the extent of each member’s contributions and their commitment to continued support.</p>
-
-<p>Currently, membership on the Advisory Board has the following benefits:</p>
-
-<ul>
-<li>Every month we provide developer plans – a list of tasks that the PHP Foundation developers will work on in the near future. Advisory Board members can discuss these plans among their teams and provide us with feedback that they feel we should consider.</li>
-<li>Advisory board members are welcome to share their pain points or ideas on behalf of their communities or organizations. Suggestions may be discussed by other members and will be considered by the foundation developers.</li>
-</ul>
-
-<p>⚠️ Note: All language decisions go through the established Request for Comments (RFC) process, which is not affiliated with the PHP Foundation. Language decisions are the purview of PHP Internals. It means that some of the PHP Foundation’s efforts may not make it into the language. But with the Advisory Board discussions, we expect increased quality and acceptance rate of the foundation’s RFCs.</p>
-
-<p>We’re also looking into providing some exclusive benefits for individual sponsors and smaller business contributors, as well. What would sound interesting or lucrative to you? Let us know!</p>
-
-<h2 id="meet-us-at-the-conferences">Meet us at the conferences</h2>
-
-<p>This spring, the PHP Foundation admins and developers will attend a few conferences.</p>
-
-<p><strong><a href="https://phpconference.com/berlin-en/program-berlin-en/">International PHP Conference</a>, May 22–26, Berlin, Germany</strong></p>
-
-<ul>
-<li>Sebastian Bergmann (thePHP.cc, PHPUnit), Nils Adermann (Packagist Conductors GmbH, Composer), and Gina Peter Banyard (PHP core developer) will participate in a keynote panel about the PHP Foundation and the State of PHP.</li>
-<li>Benjamin Eberlei (Tideways GmbH, Doctrine) and Nils Adermann will give a presentation entitled <em>The PHP Foundation: Past, Present, and Future</em>.</li>
-<li>Gina Peter Banyard will present a talk called <em>Contributing to PHP: How?</em></li>
-</ul>
-
-<p>Benjamin Eberlei, Nils Adermann, and Sebastian Bergmann are members of the PHP Foundation’s administration. Gina Peter Banyard is one of the PHP core developers paid by the PHP Foundation.</p>
-
-<p><strong><a href="https://tek.phparch.com/">php[tek] 2023</a>, May 16–18, Chicago, USA</strong></p>
-
-<ul>
-<li>Sara Golemon, PHP Foundation admin, will talk about <em>Funding PHP</em>.</li>
-</ul>
-
-<h2 id="derick-rethans-made-it-onto-the-openuk%E2%80%99s-honours-list-for-2023">Derick Rethans made it onto the OpenUK’s Honours List for 2023</h2>
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I am happy to announce that over the holidays I was honoured as part of <a href="https://twitter.com/openuk_uk?ref_src=twsrc%5Etfw">@openuk_uk</a>&#39;s 2023 Honours list, partly due to my work with the <a href="https://twitter.com/ThePHPF?ref_src=twsrc%5Etfw">@ThePHPF</a> <a href="https://t.co/AwZmI4iIBh">https://t.co/AwZmI4iIBh</a> <a href="https://t.co/ip01eRBGhG">pic.twitter.com/ip01eRBGhG</a></p>&mdash; Derick Rethans (@derickr) <a href="https://twitter.com/derickr/status/1611014569345912838?ref_src=twsrc%5Etfw">January 5, 2023</a></blockquote>
-
-<p>Congratulations, Derick!</p>
-
-<h2 id="thank-you-to-our-sponsors">Thank you to our sponsors</h2>
-
-<h3 id="renewed-and-new-sponsorships">Renewed and new sponsorships</h3>
-
-<p>We are very grateful to all the sponsors who continue to support the PHP community via the Foundation. Some of the biggest contributors include:</p>
-
-<ul>
-<li>Automattic</li>
-<li>Private Packagist</li>
-<li>Craft CMS</li>
-<li>Tideways</li>
-<li>Zend by Perforce</li>
-<li>Shopware AG</li>
-<li>Aternos GmbH</li>
-<li>Ardennes-étape</li>
-<li>Cybozu Inc.</li>
-<li>Moodle</li>
-<li>Rakus</li>
-<li>Mercari Inc.</li>
-<li>Spryker</li>
-<li>Les-Tilleuls.coop</li>
-</ul>
-
-<p>Check out the <strong><a href="https://thephp.foundation/#sponsors">Sponsors section</a></strong> on our <a href="https://thephp.foundation/">website</a>. It now shows all major contributors sorted by donation amount.</p>
-
-<h3 id="shout-out-to-non-financial-sponsors">Shout-out to non-financial sponsors</h3>
-
-<h4 id="sticker-mule">Sticker Mule</h4>
-
-<p>We’re grateful to <a href="https://www.stickermule.com/">Sticker Mule</a> for official PHP Foundation swag, such as stickers and limited-edition T-shirts. You can find stickers at the conferences where we give talks. Logo and sticker designs are under a CC license, so feel free to use them if you’d like to produce your own merch.</p>
-
-<h4 id="slack">Slack</h4>
-
-<p>Big thanks to <a href="https://slack.com/">Slack</a> who kindly provided us with a pro plan for the messenger. We’d like to personally thank <a href="https://twitter.com/mattbrowndev">Matt Brown</a>, Psalm author and PHP community member, for helping arrange this.</p>
-
-<p>Shout-out to <a href="https://thephp.foundation/#sponsors">everyone</a> for your continued support – the PHP Foundation is all of us!</p>
-
-<hr />
-
-<p><br></p>
-
-<p>That’s all for today. Follow us on Twitter <a href="https://twitter.com/thephpf">@ThePHPF</a> or Mastodon <a href="https://phpc.social/@thephpf">phpc.social/@thephpf</a> to get the latest updates from the Foundation.</p>
-
-<p>💜🐘</p>
-
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 ]]></content>
         </entry>
     </feed>
