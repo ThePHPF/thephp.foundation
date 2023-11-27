@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2023-11-27T11:04:51+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, May 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2023-11-27T11:08:37+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, May 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
 
 <p>This time our regular update is short. Check the <a href="https://thephp.foundation/blog/2022/05/30/php-core-roundup-2/">PHP Core Roundup</a> series for a detailed development log.</p>
 
@@ -630,9 +630,7 @@ Besides Jakub, there will be talks from Niels Dossche and Sebastian Bergmann.</p
 
 <p>Check out the <a href="https://thephp.foundation/#sponsors">Sponsors section</a> on our <a href="https://thephp.foundation/">website</a>. It shows all major contributors sorted by donation amount.</p>
 
-<p><strong><a href="https://sentry.io/">Sentry</a></strong></p>
-
-<p>Big thanks to the Sentry team for sponsoring the PHP foundation!</p>
+<p>Big thanks to the <strong><a href="https://sentry.io/">Sentry</a></strong> team for sponsoring the PHP foundation!</p>
 
 <p>Sentry is a popular application performance monitoring &amp; error tracking tool, and they <a href="https://blog.sentry.io/we-just-gave-500-000-dollars-to-open-source-maintainers/?utm_source=linkedin&amp;utm_content=blog-fundfest23-learnmore">just gave $500,000 to multiple open source maintainers</a>.</p>
 
