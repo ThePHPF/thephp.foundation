@@ -77,7 +77,7 @@ You’ll be able to meet and talk to our board members: Nils Adermann, Sebastian
 
 ## Thank you to our sponsors
 
-Check out the [Sponsors section](https://opencollective.com/redirect?url=https%3A%2F%2Fthephp.foundation%2F%23sponsors) on our [website](https://opencollective.com/redirect?url=https%3A%2F%2Fthephp.foundation%2F). It shows all major contributors sorted by donation amount.
+Check out the [Sponsors section](https://thephp.foundation/#sponsors) on our [website](https://thephp.foundation/). It shows all major contributors sorted by donation amount.
 
 **[Sentry](https://sentry.io/)**
 
@@ -89,8 +89,8 @@ Sentry is a popular application performance monitoring & error tracking tool, an
 
 [Digital Ocean](https://www.digitalocean.com/) has been supporting the PHP project for ages – [php.net](https://www.php.net/) servers run on DigitalOcean boxes. We would like to express our gratitude to DigitalOcean for their ongoing support.
 
-Big thanks to [everyone](https://opencollective.com/redirect?url=https%3A%2F%2Fthephp.foundation%2F%23sponsors) for your continued support – the PHP Foundation is all of us!
+Big thanks to [everyone](https://thephp.foundation/#sponsors) for your continued support – the PHP Foundation is all of us!
 
 ---
-That’s all for today. Follow us on Twitter [@ThePHPF](https://twitter.com/thephpf) or Mastodon [phpc.social/@thephpf](https://opencollective.com/redirect?url=https%3A%2F%2Fphpc.social%2F%40thephpf) to get the latest updates from the PHP Foundation.
+That’s all for today. Follow us on Twitter [@ThePHPF](https://twitter.com/thephpf) or Mastodon [phpc.social/@thephpf](https://phpc.social/@thephpf) to get the latest updates from the PHP Foundation.
 💜🐘
