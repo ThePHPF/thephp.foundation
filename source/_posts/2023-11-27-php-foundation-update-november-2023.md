@@ -1,4 +1,4 @@
----
+d---
 title: PHP Foundation Update, November 2023
 layout: post
 tags:
@@ -6,7 +6,7 @@ tags:
 author:
     name: Roman Pronskiy
     url: https://twitter.com/pronskiy
-published_at: 24 November 2023
+published_at: 27 November 2023
 ---
 ```<?php echo 'Hello world!';```
 
