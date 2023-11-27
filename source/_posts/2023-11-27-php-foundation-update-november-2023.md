@@ -1,4 +1,4 @@
-d---
+---
 title: PHP Foundation Update, November 2023
 layout: post
 tags:
