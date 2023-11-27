@@ -7,7 +7,7 @@ class Tag
     public const ALLOWED_TAGS = [
         'interview' => 'Interview',
         'roundup' => 'PHP Roundup',
-        'update' => 'The PHP Foundation Update',
+        'update' => 'Update',
         'team' => 'Team',
     ];
 }
