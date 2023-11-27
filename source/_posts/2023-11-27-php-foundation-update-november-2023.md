@@ -79,9 +79,7 @@ You’ll be able to meet and talk to our board members: Nils Adermann, Sebastian
 
 Check out the [Sponsors section](https://thephp.foundation/#sponsors) on our [website](https://thephp.foundation/). It shows all major contributors sorted by donation amount.
 
-**[Sentry](https://sentry.io/)**
-
-Big thanks to the Sentry team for sponsoring the PHP foundation!
+Big thanks to the **[Sentry](https://sentry.io/)** team for sponsoring the PHP foundation!
 
 Sentry is a popular application performance monitoring & error tracking tool, and they [just gave $500,000 to multiple open source maintainers](https://blog.sentry.io/we-just-gave-500-000-dollars-to-open-source-maintainers/?utm_source=linkedin&utm_content=blog-fundfest23-learnmore).
 
@@ -92,5 +90,6 @@ Sentry is a popular application performance monitoring & error tracking tool, an
 Big thanks to [everyone](https://thephp.foundation/#sponsors) for your continued support – the PHP Foundation is all of us!
 
 ---
+
 That’s all for today. Follow us on Twitter [@ThePHPF](https://twitter.com/thephpf) or Mastodon [phpc.social/@thephpf](https://phpc.social/@thephpf) to get the latest updates from the PHP Foundation.
 💜🐘
