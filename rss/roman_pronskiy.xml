@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2023-11-27T11:00:15+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, May 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2023-11-27T11:04:10+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, May 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
 
 <p>This time our regular update is short. Check the <a href="https://thephp.foundation/blog/2022/05/30/php-core-roundup-2/">PHP Core Roundup</a> series for a detailed development log.</p>
 
@@ -562,7 +562,91 @@ This concludes the list of commits made by the PHP core team in the past month. 
 <p>💜🐘</p>
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-]]></content><link href="https://thephp.foundation/blog/2023/03/31/php-foundation-update-march-2023/"/><id>https://thephp.foundation/blog/2023/03/31/php-foundation-update-march-2023/</id><updated>Fri, 31 Mar 2023 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, July 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
+]]></content><link href="https://thephp.foundation/blog/2023/03/31/php-foundation-update-march-2023/"/><id>https://thephp.foundation/blog/2023/03/31/php-foundation-update-march-2023/</id><updated>Fri, 31 Mar 2023 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, November 2023]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
+
+<p>This post provides insights into The PHP Foundation's recent activities.</p>
+
+<blockquote>
+  <p>My name is Roman Pronskiy. I’m sponsored by <a href="https://jetbrains.com/">JetBrains</a> to manage operations at the PHP Foundation. Reach out to me at pronskiy@thephp.foundation.</p>
+  
+  <p>You can find the full foundation structure <a href="https://thephp.foundation/structure/">here</a>, including all board members, developers, and the community.</p>
+</blockquote>
+
+<h2 id="team-growth">Team Growth</h2>
+
+<p>In September, we initiated an open call for new developers to join the PHP Foundation by launching an <a href="https://thephp.foundation/blog/2023/09/06/application-form-2023/">application form</a>.</p>
+
+<p>We received a total of 207 applications. From this pool, we selected a shortlist of 12 qualified candidates. Following a comprehensive review and input from existing foundation members, we further refined our selection to 4 outstanding individuals. We will soon announce the new members.</p>
+
+<p>The primary focus for the new developers will be on the maintenance and modernization of PHP’s infrastructure — a critical step towards ensuring PHP being a robust and forward-looking language.</p>
+
+<p>The public work undertaken by our developers can be followed in our monthly <a href="https://thephp.foundation/blog/tag/roundup/">"PHP Core Roundup"</a> series, which highlights the ongoing progress and developments within PHP core.</p>
+
+<h2 id="advisory-board">Advisory Board</h2>
+
+<p>For our major sponsors, we offer exclusive insights through occasional digests that provide a deeper dive into discussions, debates, and early-stage developments. This not only keeps our sponsors abreast of the latest happenings but also allows them to see the direct impact of their support. This is one of the benefits of being an Advisory Board member.</p>
+
+<p>We announced the advisory board initiative <a href="https://thephp.foundation/blog/2023/03/31/php-foundation-update-march-2023/#a-new-benefit-for-major-sponsors-%E2%80%93-advisory-board-membership">in March</a>. Since then, 9 companies have joined the initiative with their representatives.</p>
+
+<p>These are the current Advisory Board members: Moodle, Shopware, Laravel, Automattic, Ardennes-étape, Les-Tilleuls.coop / API Platform, Aternos GmbH, PrestaShop, CraftCMS.</p>
+
+<p>There were several useful discussions within the group. Specifically, we’d like to highlight the one around <a href="https://wiki.php.net/rfc/property-hooks">Property Hooks RFC</a>. The Advisory Board feedback helped to shape the proposal design significantly.</p>
+
+<p>By the way, you can already try property hooks on <a href="https://3v4l.org/">3v4l.org</a>, thanks to <a href="https://github.com/sponsors/SjonHortensius">Sjon Hortensius</a>.
+<a href="https://3v4l.org/Y4KZn/rfc#vrfc.property-hooks"><img src="/assets/post-images/2023/3v4l-property-hooks.png"></a></p>
+
+<h2 id="sovereign-tech-fund-invests-in-php">Sovereign Tech Fund invests in PHP</h2>
+
+<p><a href="https://sovereigntechfund.de/en/">Sovereign Tech Fund</a> is an organization that supports the development, improvement, and maintenance of digital infrastructure. Their goal is to sustainably strengthen the open-source ecosystem, with a focus on security, resilience, technological diversity, and the people behind the projects. STF is financed by the German Federal Ministry of Economic Affairs and Climate Action.</p>
+
+<p>We have collaborated with STF to create work plans for these specific projects: PECL overhaul, Testing tool for FPM, Security Audit, and Documentation improvements.</p>
+
+<p>We’ll share more details on each project early next year, and for now we are thrilled and grateful to the Sovereign Tech Fund for trusting us.</p>
+
+<h2 id="security-audit-of-php-is-coming">Security audit of PHP is coming</h2>
+
+<p>As mentioned above, STF is investing in PHP, and we are going to commission an audit of PHP's C code base. We expect security issues to be found. To mitigate possible bad perception, we aim to publish and fix the revealed security issues at the same time.</p>
+
+<p>For this security audit, we are partnering with <a href="https://ostif.org/">The Open Source Technology Improvement Fund, Inc</a> (OSTIF), a corporate non-profit dedicated to securing critical open-source projects. They have a proven track record of audits for <a href="https://github.com/ostif-org/OSTIF/blob/main/Completed-Engagements.md">popular open-source projects</a> such as cURL, Git, Linux Kernel, OpenSSL, Node.js, and others.</p>
+
+<h2 id="reports-schedule">Reports schedule</h2>
+
+<p>Although we promised to prepare quarterly reports, that unfortunately did not happen to be feasible. So for 2023, we fall back to one yearly report. The 2023 transparency report will be published in December.</p>
+
+<h2 id="meet-us-at-the-conferences">Meet us at the conferences</h2>
+
+<p>You can meet our team at the following conferences in late 2023:</p>
+
+<p><strong><a href="https://php.bettercode.eu/">betterCode(PHP)</a> – Nov 27</strong></p>
+
+<p>Jakub Zalenka will give a talk: "PHP 8.3: Changes and future plans". <br> 
+Besides Jakub, there will be talks from Niels Dossche and Sebastian Bergmann.</p>
+
+<p><strong><a href="https://live.symfony.com/2023-brussels-con/">SymfonyCon Brussels</a> – Dec 7–8</strong></p>
+
+<p>You’ll be able to meet and talk to our board members: Nils Adermann, Sebastian Bergmann, Nicolas Grekas, and Roman Pronskiy.</p>
+
+<h2 id="thank-you-to-our-sponsors">Thank you to our sponsors</h2>
+
+<p>Check out the <a href="https://thephp.foundation/#sponsors">Sponsors section</a> on our <a href="https://thephp.foundation/">website</a>. It shows all major contributors sorted by donation amount.</p>
+
+<p><strong><a href="https://sentry.io/">Sentry</a></strong></p>
+
+<p>Big thanks to the Sentry team for sponsoring the PHP foundation!</p>
+
+<p>Sentry is a popular application performance monitoring &amp; error tracking tool, and they <a href="https://blog.sentry.io/we-just-gave-500-000-dollars-to-open-source-maintainers/?utm_source=linkedin&amp;utm_content=blog-fundfest23-learnmore">just gave $500,000 to multiple open source maintainers</a>.</p>
+
+<p><strong>Shout-out to non-financial sponsors</strong></p>
+
+<p><a href="https://www.digitalocean.com/">Digital Ocean</a> has been supporting the PHP project for ages – <a href="https://www.php.net/">php.net</a> servers run on DigitalOcean boxes. We would like to express our gratitude to DigitalOcean for their ongoing support.</p>
+
+<p>Big thanks to <a href="https://thephp.foundation/#sponsors">everyone</a> for your continued support – the PHP Foundation is all of us!</p>
+
+<hr />
+
+<p>That’s all for today. Follow us on Twitter <a href="https://twitter.com/thephpf">@ThePHPF</a> or Mastodon <a href="https://phpc.social/@thephpf">phpc.social/@thephpf</a> to get the latest updates from the PHP Foundation.
+💜🐘</p>
+]]></content><link href="https://thephp.foundation/blog/2023/11/27/php-foundation-update-november-2023/"/><id>https://thephp.foundation/blog/2023/11/27/php-foundation-update-november-2023/</id><updated>Mon, 27 Nov 2023 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, July 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
 
 <p>Last month, the PHP foundation members continued the work on PHP 8.2 release and more. We are prepared to give a few talks this autumn. Also, besides core developers, we have a growing community of volunteers who help the PHP foundation. Read on to learn more.</p>
 
