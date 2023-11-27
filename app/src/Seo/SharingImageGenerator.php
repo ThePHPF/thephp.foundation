@@ -6,15 +6,15 @@ use GdImage;
 
 class SharingImageGenerator
 {
-    public const IMAGE_WIDTH = 1200;
+    public const int IMAGE_WIDTH = 1200;
 
-    public const IMAGE_HEIGHT = 630;
+    public const int IMAGE_HEIGHT = 630;
 
-    public const IMAGE_MARGINS = 40;
+    public const int IMAGE_MARGINS = 40;
 
-    public const TITLE_FONT_SIZE = 40;
+    public const int TITLE_FONT_SIZE = 40;
 
-    public const AUTHOR_FONT_SIZE = 14;
+    public const int AUTHOR_FONT_SIZE = 14;
 
     protected bool $inverse = false;
 
