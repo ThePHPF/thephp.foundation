@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2023-11-28T11:37:01+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, May 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2023-11-28T15:46:41+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, May 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
 
 <p>This time our regular update is short. Check the <a href="https://thephp.foundation/blog/2022/05/30/php-core-roundup-2/">PHP Core Roundup</a> series for a detailed development log.</p>
 
@@ -588,7 +588,7 @@ This concludes the list of commits made by the PHP core team in the past month. 
 
 <p>We announced the advisory board initiative <a href="https://thephp.foundation/blog/2023/03/31/php-foundation-update-march-2023/#a-new-benefit-for-major-sponsors-%E2%80%93-advisory-board-membership">in March</a>. Since then, 9 companies have joined the initiative with their representatives.</p>
 
-<p>These are the current Advisory Board members: Moodle, Shopware, Laravel, Automattic, Ardennes-étape, Les-Tilleuls.coop / API Platform, Aternos GmbH, PrestaShop, CraftCMS.</p>
+<p>In addition to the <a href="https://thephp.foundation/structure/">Governing Board</a> that includes Automattic, JetBrains, Private Packagist, Symfony, Tideways, Zend by Perforce, and PHP fellows, we now welcome the Advisory Board members: Moodle, Shopware, Laravel, Ardennes-étape, Les-Tilleuls.coop / API Platform, Aternos GmbH, PrestaShop, CraftCMS.</p>
 
 <p>There were several useful discussions within the group. Specifically, we’d like to highlight the one around <a href="https://wiki.php.net/rfc/property-hooks">Property Hooks RFC</a>. The Advisory Board feedback helped to shape the proposal design significantly.</p>
 
