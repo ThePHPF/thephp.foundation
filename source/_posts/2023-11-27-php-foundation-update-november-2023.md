@@ -33,7 +33,7 @@ For our major sponsors, we offer exclusive insights through occasional digests t
 
 We announced the advisory board initiative [in March](https://thephp.foundation/blog/2023/03/31/php-foundation-update-march-2023/#a-new-benefit-for-major-sponsors-%E2%80%93-advisory-board-membership). Since then, 9 companies have joined the initiative with their representatives.
 
-These are the current Advisory Board members: Moodle, Shopware, Laravel, Automattic, Ardennes-étape, Les-Tilleuls.coop / API Platform, Aternos GmbH, PrestaShop, CraftCMS.
+In addition to the [Governing Board](https://thephp.foundation/structure/) that includes Automattic, JetBrains, Private Packagist, Symfony, Tideways, Zend by Perforce, and PHP fellows, we now welcome the Advisory Board members: Moodle, Shopware, Laravel, Ardennes-étape, Les-Tilleuls.coop / API Platform, Aternos GmbH, PrestaShop, CraftCMS.
 
 There were several useful discussions within the group. Specifically, we’d like to highlight the one around [Property Hooks RFC](https://wiki.php.net/rfc/property-hooks). The Advisory Board feedback helped to shape the proposal design significantly.
 
