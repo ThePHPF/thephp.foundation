@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2023-11-27T11:08:37+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, May 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2023-11-28T11:37:01+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, May 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
 
 <p>This time our regular update is short. Check the <a href="https://thephp.foundation/blog/2022/05/30/php-core-roundup-2/">PHP Core Roundup</a> series for a detailed development log.</p>
 
@@ -567,7 +567,7 @@ This concludes the list of commits made by the PHP core team in the past month. 
 <p>This post provides insights into The PHP Foundation's recent activities.</p>
 
 <blockquote>
-  <p>My name is Roman Pronskiy. I’m sponsored by <a href="https://jetbrains.com/">JetBrains</a> to manage operations at the PHP Foundation. Reach out to me at pronskiy@thephp.foundation.</p>
+  <p>My name is Roman Pronskiy. I’m employed by <a href="https://jetbrains.com/">JetBrains</a> to manage operations at the PHP Foundation. Reach out to me at pronskiy@thephp.foundation.</p>
   
   <p>You can find the full foundation structure <a href="https://thephp.foundation/structure/">here</a>, including all board members, developers, and the community.</p>
 </blockquote>
@@ -597,7 +597,7 @@ This concludes the list of commits made by the PHP core team in the past month. 
 
 <h2 id="sovereign-tech-fund-invests-in-php">Sovereign Tech Fund invests in PHP</h2>
 
-<p><a href="https://sovereigntechfund.de/en/">Sovereign Tech Fund</a> is an organization that supports the development, improvement, and maintenance of digital infrastructure. Their goal is to sustainably strengthen the open-source ecosystem, with a focus on security, resilience, technological diversity, and the people behind the projects. STF is financed by the German Federal Ministry of Economic Affairs and Climate Action.</p>
+<p>The <a href="https://sovereigntechfund.de/en/">Sovereign Tech Fund</a> is an organization that supports the development, improvement, and maintenance of open digital infrastructure in the public interest. Its goal to strengthen the open-source ecosystem sustainably, focusing on security, resilience, technological diversity, and the people behind the code. STF is funded by the German Federal Ministry for Economic Affairs and Climate Action (BMWK) and supported by the German Federal Agency for Disruptive Innovation GmbH (SPRIND).</p>
 
 <p>We have collaborated with STF to create work plans for these specific projects: PECL overhaul, Testing tool for FPM, Security Audit, and Documentation improvements.</p>
 
