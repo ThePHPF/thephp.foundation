@@ -12,7 +12,7 @@ published_at: 27 November 2023
 
 This post provides insights into The PHP Foundation's recent activities.
 
-> My name is Roman Pronskiy. I’m sponsored by [JetBrains](https://jetbrains.com/) to manage operations at the PHP Foundation. Reach out to me at pronskiy@thephp.foundation. 
+> My name is Roman Pronskiy. I’m employed by [JetBrains](https://jetbrains.com/) to manage operations at the PHP Foundation. Reach out to me at pronskiy@thephp.foundation. 
 > 
 > You can find the full foundation structure [here](https://thephp.foundation/structure/), including all board members, developers, and the community.
 
@@ -42,7 +42,7 @@ By the way, you can already try property hooks on [3v4l.org](https://3v4l.org/),
 
 ## Sovereign Tech Fund invests in PHP
 
-[Sovereign Tech Fund](https://sovereigntechfund.de/en/) is an organization that supports the development, improvement, and maintenance of digital infrastructure. Their goal is to sustainably strengthen the open-source ecosystem, with a focus on security, resilience, technological diversity, and the people behind the projects. STF is financed by the German Federal Ministry of Economic Affairs and Climate Action.
+The [Sovereign Tech Fund](https://sovereigntechfund.de/en/) is an organization that supports the development, improvement, and maintenance of open digital infrastructure in the public interest. Its goal to strengthen the open-source ecosystem sustainably, focusing on security, resilience, technological diversity, and the people behind the code. STF is funded by the German Federal Ministry for Economic Affairs and Climate Action (BMWK) and supported by the German Federal Agency for Disruptive Innovation GmbH (SPRIND). 
 
 We have collaborated with STF to create work plans for these specific projects: PECL overhaul, Testing tool for FPM, Security Audit, and Documentation improvements.
 
