@@ -3,17 +3,17 @@ on:
   pull_request_target:
 jobs:
   build:
-    runs-on: "ubuntu-20.04"
+    runs-on: "ubuntu-22.04"
     if: github.repository_owner == 'ThePHPF'
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           ref: "refs/pull/${{ github.event.number }}/merge"
 
       - name: Setup Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: 20
 
       - name: Update Image Version in the related HelmChart values.yaml
         uses: fjogeleit/yaml-update-action@main

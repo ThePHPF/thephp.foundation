@@ -3,7 +3,7 @@ name: Twitter, together!
 jobs:
   preview:
     name: Preview
-    runs-on: ubuntu-latest
+    runs-on: "ubuntu-22.04"
     if: github.event_name == 'pull_request'
     steps:
       - uses: twitter-together/action@v3
@@ -11,7 +11,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   tweet:
     name: Tweet
-    runs-on: ubuntu-latest
+    runs-on: "ubuntu-22.04"
     environment: thephpf
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
