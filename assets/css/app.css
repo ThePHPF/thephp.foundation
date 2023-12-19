@@ -167,3 +167,11 @@ code {
 .alert {
     @apply bg-red-100 border border-red-400  px-4 py-3 pt-4 pb-4 mb-8 text-xl;
 }
+
+.button-link {
+    @apply inline-block py-2 no-underline px-6 !text-white bg-[#6858f6] rounded-3xl hover:bg-[rgba(104,88,246,.8)];
+}
+
+.button-link-border {
+    @apply inline-block py-2 no-underline px-6 hover:text-white text-[#6858f6] bg-white border-2 border-[#6858f6] rounded-3xl hover:bg-[#6858f6];
+}
