@@ -86,7 +86,7 @@ class SharingImageGenerator
             self::TITLE_FONT_SIZE,
             0,
             self::IMAGE_MARGINS,
-            self::IMAGE_MARGINS + intval($titleHeight/2),
+            self::IMAGE_MARGINS * 3,
             $whiteColor,
             __DIR__.'/../../../assets/fonts/ArialBold.ttf',
             $title
@@ -100,7 +100,7 @@ class SharingImageGenerator
                 self::AUTHOR_FONT_SIZE,
                 0,
                 self::IMAGE_MARGINS,
-                self::IMAGE_MARGINS + $titleHeight + self::AUTHOR_FONT_SIZE * 4,
+                self::IMAGE_MARGINS * 3 + $titleHeight + self::AUTHOR_FONT_SIZE,
                 $whiteColor,
                 __DIR__.'/../../../assets/fonts/Arial.ttf',
                 $author
