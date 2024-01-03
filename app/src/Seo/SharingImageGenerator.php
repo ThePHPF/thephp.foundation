@@ -6,15 +6,15 @@ use GdImage;
 
 class SharingImageGenerator
 {
-    public const int IMAGE_WIDTH = 1200;
+    public const int IMAGE_WIDTH = 1600;
 
-    public const int IMAGE_HEIGHT = 630;
+    public const int IMAGE_HEIGHT = 900;
 
-    public const int IMAGE_MARGINS = 40;
+    public const int IMAGE_MARGINS = 72;
 
-    public const int TITLE_FONT_SIZE = 40;
+    public const int TITLE_FONT_SIZE = 72;
 
-    public const int AUTHOR_FONT_SIZE = 14;
+    public const int AUTHOR_FONT_SIZE = 24;
 
     protected bool $inverse = false;
 
@@ -72,7 +72,7 @@ class SharingImageGenerator
 
         $whiteColor = imagecolorallocate($image, 255, 255, 255);
 
-        $title = wordwrap($this->title, 40);
+        $title = wordwrap($this->title, 27);
         $titleBounds = imagettfbbox(
             self::TITLE_FONT_SIZE,
             0,
@@ -100,7 +100,7 @@ class SharingImageGenerator
                 self::AUTHOR_FONT_SIZE,
                 0,
                 self::IMAGE_MARGINS,
-                $titleHeight + self::IMAGE_MARGINS * 3 + 10,
+                self::IMAGE_MARGINS * 3 + $titleHeight + self::AUTHOR_FONT_SIZE,
                 $whiteColor,
                 __DIR__.'/../../../assets/fonts/Arial.ttf',
                 $author
@@ -113,7 +113,8 @@ class SharingImageGenerator
             $logo = imagecreatefrompng(__DIR__.'/../../../assets/img/logo_inverse.png');
         }
 
-        imagecopy($image, $logo, 40, 490, 0, 0, 100, 100);
+        $src_height = 100;
+        imagecopy($image, $logo, self::IMAGE_MARGINS, self::IMAGE_HEIGHT-self::IMAGE_MARGINS-$src_height, 0, 0, 100, $src_height);
 
         return $image;
     }
