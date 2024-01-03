@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2023-12-19T11:40:43+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[The PHP Foundation: Impact and Transparency Report 2022]]></title><content type="html"><![CDATA[<h2 id="executive-summary">Executive Summary</h2>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2024-01-03T10:03:05+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[The PHP Foundation: Impact and Transparency Report 2022]]></title><content type="html"><![CDATA[<h2 id="executive-summary">Executive Summary</h2>
 
 <p>At the end of 2022, The PHP Foundation is a collective of 10 volunteer administrators and 6&nbsp;part-time paid developers who make nearly half of the commits to PHP language core and extensions.</p>
 
@@ -1391,7 +1391,37 @@ This concludes the list of commits made by the PHP core team in the past month. 
 <p>That’s all for today. Follow us on Twitter <a href="https://twitter.com/thephpf">@ThePHPF</a> to get the latest updates from the Foundation.</p>
 
 <p>💜🐘</p>
-]]></content><link href="https://thephp.foundation/blog/2022/07/04/php-foundation-update-june-2022/"/><id>https://thephp.foundation/blog/2022/07/04/php-foundation-update-june-2022/</id><updated>Mon, 04 Jul 2022 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, November 2023]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
+]]></content><link href="https://thephp.foundation/blog/2022/07/04/php-foundation-update-june-2022/"/><id>https://thephp.foundation/blog/2022/07/04/php-foundation-update-june-2022/</id><updated>Mon, 04 Jul 2022 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[The PHP Foundation
+Team Update 2024]]></title><content type="html"><![CDATA[<p>Now in our third year, we're gearing up to grow our impact. This year, four more developers are joining the PHP Foundation to further advance PHP.</p>
+
+<p>Since April 2022, the PHP Foundation has contracted six outstanding developers:</p>
+
+<ul>
+<li>Arnaud Le Blanc <a href="https://github.com/arnaud-lb">@arnaud-lb</a></li>
+<li>Derick Rethans <a href="https://github.com/derickr">@derickr</a></li>
+<li>Gina Peter Banyard <a href="https://github.com/Girgias">@Girgias</a></li>
+<li>Ilija Tovilo <a href="https://github.com/iluuu1994">@iluuu1994</a></li>
+<li>Jakub Zelenka <a href="https://github.com/bukka">@bukka</a></li>
+<li>Máté Kocsis <a href="https://github.com/kocsismate">@kocsismate</a></li>
+</ul>
+
+<p>All of them started as part-time contributors, and since then have significantly grown their capacity and dedication to PHP core tasks. We consider it a big achievement that the team continues to collaborate effectively, accumulating more experience and knowledge, and expanding their PHP Core involvement.</p>
+
+<h2 id="team-update-2024">Team Update 2024</h2>
+
+<p>We are happy to announce a team expansion. Four talented developers are joining as part-time team members of the foundation.</p>
+
+<ul>
+<li>David Carlier <a href="https://github.com/devnexen">@devnexen</a></li>
+<li>James Titcumb <a href="https://github.com/asgrim">@asgrim</a></li>
+<li>Saki Takamachi <a href="https://github.com/SakiTakamachi">@SakiTakamachi</a></li>
+<li>Shivam Mathur <a href="https://github.com/shivammathur">@shivammathur</a></li>
+</ul>
+
+<p>Please give them a warm welcome! We are looking forward to the great things we will accomplish together.</p>
+
+<p>Happy New Year! 🎉🐘💜</p>
+]]></content><link href="https://thephp.foundation/blog/2024/01/03/the-php-foundation-team-update-2024/"/><id>https://thephp.foundation/blog/2024/01/03/the-php-foundation-team-update-2024/</id><updated>Wed, 03 Jan 2024 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, November 2023]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
 
 <p>This post provides insights into The PHP Foundation's recent activities.</p>
 
