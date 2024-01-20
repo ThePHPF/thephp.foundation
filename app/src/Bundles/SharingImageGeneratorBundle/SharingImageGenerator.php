@@ -11,21 +11,21 @@ use Symfony\Component\Filesystem\Filesystem;
 
 class SharingImageGenerator implements EventSubscriberInterface
 {
-    protected $configuration;
-
-    public static function getSubscribedEvents()
-    {
-        return [
-            Sculpin::EVENT_BEFORE_RUN => 'beforeRun',
-        ];
-    }
+    private Configuration $configuration;
 
     public function __construct(Configuration $configuration)
     {
         $this->configuration = $configuration;
     }
 
-    public function beforeRun(SourceSetEvent $sourceSetEvent)
+    public static function getSubscribedEvents(): array
+    {
+        return [
+            Sculpin::EVENT_BEFORE_RUN => 'beforeRun',
+        ];
+    }
+
+    public function beforeRun(SourceSetEvent $sourceSetEvent): void
     {
         $sourceSet = $sourceSetEvent->sourceSet();
 

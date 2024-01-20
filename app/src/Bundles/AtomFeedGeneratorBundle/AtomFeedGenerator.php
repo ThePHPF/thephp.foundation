@@ -14,18 +14,18 @@ use Symfony\Component\Filesystem\Filesystem;
 
 class AtomFeedGenerator implements EventSubscriberInterface
 {
-    protected Configuration $configuration;
+    private Configuration $configuration;
+
+    public function __construct(Configuration $configuration)
+    {
+        $this->configuration = $configuration;
+    }
 
     public static function getSubscribedEvents(): array
     {
         return [
             Sculpin::EVENT_AFTER_RUN => 'afterRun',
         ];
-    }
-
-    public function __construct(Configuration $configuration)
-    {
-        $this->configuration = $configuration;
     }
 
     public function afterRun(SourceSetEvent $sourceSetEvent): void
@@ -75,22 +75,23 @@ class AtomFeedGenerator implements EventSubscriberInterface
         $this->generateFeed($entries);
     }
 
+    /**
+     * @param Author[] $entries
+     */
     protected function fetchEntry(Configuration $data, array $authors): Entry
     {
         $baseUrl = $this->configuration->get('url') ?? 'http://localhost';
 
-        $post = new Entry();
-
-        $post->title = $data->get('title');
-        $post->link = $baseUrl . $data->get('url');
-        $post->authors = $authors;
-        $post->description = $data->get('blocks.content');
-        $post->published_at = new \DateTimeImmutable($data->get('published_at'));
-
-        return $post;
+        return new Entry(
+            $data->get('title'),
+            $baseUrl . $data->get('url'),
+            $authors,
+            $data->get('blocks.content'),
+            new \DateTimeImmutable($data->get('published_at')),
+        );
     }
 
-    protected function slug($author): string
+    protected function slug(string $author): string
     {
         return mb_strtolower(preg_replace('/\W/', '_', $author));
     }
@@ -100,10 +101,10 @@ class AtomFeedGenerator implements EventSubscriberInterface
         foreach ($entries as $filePath => $posts) {
             $rss = new SitemapGenerator();
             if ($title = $this->configuration->get('title')) {
-                $rss->title = $title;
+                $rss->setTitle($title);
             }
             if ($subtitle = $this->configuration->get('subtitle')) {
-                $rss->description = $subtitle;
+                $rss->setDescription($subtitle);
             }
 
             foreach ($posts as $post) {

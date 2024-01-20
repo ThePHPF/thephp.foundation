@@ -2,16 +2,18 @@
 
 namespace App\Sitemap;
 
-class Entry
+readonly class Entry
 {
-    public string $title;
-
-    public string $link;
-
-    /** @var Author[] */
-    public array $authors = [];
-
-    public string $description;
-
-    public \DateTimeImmutable $published_at;
+    /**
+     * @param Author[] $authors
+     */
+    public function __construct(
+        public string             $title,
+        public string             $link,
+        public array              $authors,
+        public string             $description,
+        public \DateTimeImmutable $published_at,
+    )
+    {
+    }
 }
