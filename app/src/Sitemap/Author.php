@@ -2,15 +2,12 @@
 
 namespace App\Sitemap;
 
-class Author
+readonly class Author
 {
-    public function __construct($name, $url)
+    public function __construct(
+        public string $name,
+        public string $url
+    )
     {
-        $this->name = $name;
-        $this->url = $url;
     }
-
-    public string $name;
-
-    public string $url;
 }

@@ -4,39 +4,39 @@ namespace App\Seo;
 
 use GdImage;
 
-class SharingImageGenerator
+final class SharingImageGenerator
 {
-    public const int IMAGE_WIDTH = 1600;
+    private const int IMAGE_WIDTH = 1600;
 
-    public const int IMAGE_HEIGHT = 900;
+    private const int IMAGE_HEIGHT = 900;
 
-    public const int IMAGE_MARGINS = 72;
+    private const int IMAGE_MARGINS = 72;
 
-    public const int TITLE_FONT_SIZE = 72;
+    private const int TITLE_FONT_SIZE = 72;
 
-    public const int AUTHOR_FONT_SIZE = 24;
+    private const int AUTHOR_FONT_SIZE = 24;
 
-    protected bool $inverse = false;
+    private bool $inverse = false;
 
-    protected string $title;
+    private string $title;
 
-    protected ?string $author = null;
+    private ?string $author = null;
 
-    public function setTitle($title): SharingImageGenerator
+    public function setTitle(string $title): self
     {
         $this->title = $title;
 
         return $this;
     }
 
-    public function setAuthor($author): SharingImageGenerator
+    public function setAuthor(?string $author): self
     {
         $this->author = $author;
 
         return $this;
     }
 
-    public function setInverse($inverse): SharingImageGenerator
+    public function setInverse(bool $inverse): self
     {
         $this->inverse = $inverse;
 
@@ -52,7 +52,7 @@ class SharingImageGenerator
         imagedestroy($image);
     }
 
-    public function save($path): void
+    public function save(string $path): void
     {
         $image = $this->prepare();
 
@@ -60,7 +60,7 @@ class SharingImageGenerator
         imagedestroy($image);
     }
 
-    protected function prepare(): GdImage
+    private function prepare(): GdImage
     {
         $image = imagecreate(self::IMAGE_WIDTH, self::IMAGE_HEIGHT);
 
@@ -92,7 +92,7 @@ class SharingImageGenerator
             $title
         );
 
-        if ($this->author) {
+        if ($this->author !== null) {
             $author = wordwrap($this->author, 40);
 
             imagettftext(

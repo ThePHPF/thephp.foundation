@@ -4,20 +4,35 @@ namespace App\Sitemap;
 
 use DOMDocument;
 
-class SitemapGenerator
+final class SitemapGenerator
 {
-    public string $title;
+    private string $title;
 
-    public string $description;
+    private string $description;
 
-    protected array $entries = [];
+    /** @var Entry[] */
+    private array $entries = [];
+
+    public function setTitle(string $title): self
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    public function setDescription(string $description): self
+    {
+        $this->description = $description;
+
+        return $this;
+    }
 
     public function addEntry(Entry $entry): void
     {
         $this->entries[] = $entry;
     }
 
-    public function saveFeed($path): void
+    public function saveFeed(string $path): void
     {
         $dom = new DOMDocument('1.0', 'utf-8');
         $feed = $dom->createElement('feed');
@@ -32,7 +47,6 @@ class SitemapGenerator
 
         $feed->append($dom->createElement('updated', date('c')));
 
-        /** @var Entry $entry */
         foreach ($this->entries as $entry) {
             $element = $dom->createElement('entry');
 
