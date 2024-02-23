@@ -61,30 +61,43 @@ Many companies with a vested interest in PHP’s prosperity, made a major financ
 
 Overall, 718 organizations and individuals sponsored the foundation in 2023 [on Open Collective](https://opencollective.com/phpfoundation) and [GitHub Sponsors](https://github.com/sponsors/ThePHPF).
 
-Here is what some of the prominent folks say.
+### Quotes
+Here is what some of the prominent folks say about the foundation.
 
-#### Brandon Kelly, Craft CMS:
-> “We’re proud supporters of the PHP Foundation here at Craft CMS. PHP has played such a huge role in our careers, and it’s an honor to be a part of its story.”
+{{ include('quote.html', {
+name: 'Brandon Kelly',
+title: 'CEO at Craft CMS',
+image: '/assets/post-images/2024/report-2023/brandon_kelly.jpg',
+quote: 'We’re proud supporters of the PHP Foundation here at Craft CMS. PHP has played such a huge role in our careers, and it’s an honor to be a part of its story.'
+}) }}
 
+{{ include('quote.html', {
+name: 'Kevin Dunglas',
+title: 'Les-Tilleuls.coop, FrankenPHP',
+image: '/assets/post-images/2024/report-2023/kevin_dunglas.png',
+quote: 'Les-Tilleuls.coop is proud to support the PHP Foundation. By maintaining the language, the foundation is ensuring the future of PHP and the web. By adding innovative new features, it simplifies knowledge sharing and, in the spirit of free software, makes it easier than ever for everyone to create independent sites and applications.'
+}) }}
 
-#### Kevin Dunglas, Les-Tilleuls.coop, FrankenPHP:
-> “Les-Tilleuls.coop is proud to support the PHP Foundation. By maintaining the language, the foundation is ensuring the future of PHP and the web. By adding innovative new features, it simplifies knowledge sharing and, in the spirit of free software, makes it easier than ever for everyone to create independent sites and applications.”
+{{ include('quote.html', {
+name: 'Ben Marks',
+title: 'Director Global Market Development at shopware AG',
+image: '/assets/post-images/2024/report-2023/ben_marks.jpg',
+quote: 'TODO'
+}) }}
 
+{{ include('quote.html', {
+name: 'Matt Mullenweg',
+title: 'CEO at Automattic, WordPress',
+image: '/assets/post-images/2024/report-2023/matt_mullenweg.jpg',
+quote: 'TODO'
+}) }}
 
-#### Matt Mullenweg, Automattic, WordPress:
-> “”
-
-
-#### … , Zend by Perforce:
-> “”
-
-
-#### Rasmus Lerdorf, the creator of PHP, Etsy:
-> “”
-
-
-#### Ben Marks, Director Global Market Development, shopware AG:
-> “”
+{{ include('quote.html', {
+name: 'Rasmus Lerdorf',
+title: 'The creator of PHP, Etsy',
+image: '/assets/post-images/2024/report-2023/rasmus_lerdorf.jpg',
+quote: 'TODO'
+}) }}
 
 <br>
 
@@ -94,24 +107,24 @@ The [Sovereign Tech Fund](https://sovereigntechfund.de/en/) (STF) supports the d
 
 We have collaborated with STF to create work plans for these specific projects:
 
-**PECL overhaul**<br/>
+#### PECL overhaul
 The current system for distributing PHP extensions, PECL/PEAR, is outdated and prone to supply-chain attacks, making it unreliable for average developers. This leads to the creation of redundant tools and new security issues.
 
 We proposed to rewrite the PECL installer, replacing the messy pear code and the inefficient website.
 
 Follow the progress of **the new tool 🥧PIE** here: [https://github.com/ThePHPF/pie-design](https://github.com/ThePHPF/pie-design).
 
-**Testing tool for FPM**<br/>
+#### Testing tool for FPM
 Currently, the PHP project's testing framework lacks more specialized support for the automated testing of the FastCGI Process Manager (FPM), especially for issues that require higher load. We propose to develop an FPM/SAPI testing tool that can execute all applications and set expectations on the produced logs and server responses. This tool will be connected with a load testing tool (e.g., wrk) to simulate real-world usage and load. 
 
 The work has started in the [https://github.com/bukka/wst](https://github.com/bukka/wst) repository with the plan to move it to the PHP GitHub organization when ready.
 
-**Security Audit**<br/>
+#### Security Audit
 PHP, like any other language, has its share of security issues. We are going to collaborate with a security research group for a comprehensive codebase audit and address the discovered issues. This will significantly improve the security of PHP and make it more reliable for developers and businesses.
 
 The audit is being organized in partnership with [OSTIF](https://ostif.org/).
 
-**Documentation improvements**<br/>
+#### Documentation improvements
 The current PHP documentation has several blind spots, with many functions and methods not covered at all. We propose to update and modernize the English PHP documentation, review and remove user comments, integrate 3v4l.org for interactive examples, and simplify the maintenance process. This will make PHP more accessible to new developers and serve as a reliable reference for experienced ones.
 
 ## The PHP Foundation Governance
@@ -194,9 +207,9 @@ In the previous report we outlined a few organizational and technical goals. Let
   The foundation’s Slack became a hub for the community and helped to move initiatives.<br/><br/>
 * **Improve communication and provide clear benefits for sponsors. ✅** <br/>
   We created a [deck with benefits for sponsors](https://thephp.foundation/join/#membership-deck) and started the advisory board initiative. <br/><br/>
-* **Explore strategic partnerships and marketing opportunities. ✅ / ❌**<br/>
-  We received investment from the Sovereign Tech Fund and collaborated with OSTIF.<br/>
-  We did not explore any marketing opportunities. And there is a room for many more strategic partnerships.
+  * **Explore strategic partnerships and marketing opportunities. ✅ / ❌**<br/>
+    We received investment from the Sovereign Tech Fund and started collaboration with OSTIF.<br/>
+    We did not explore any marketing opportunities. And there is a room for many more strategic partnerships.
 
 ### Technical goals
 
@@ -378,3 +391,11 @@ The PHP language is a living entity and, as such, requires continuous support to
 Based on the strong second year of the foundation, we are excited to continue and multiply the efforts in the next years.
 
 With your help, we continue the mission to support, advance, and develop the PHP language. 
+ 
+<section class="text-center mt-6">
+    <div class="mb-14">
+        <a href="/join" target="_blank" class="inline-block text-xl py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">
+            Join The PHP Foundation
+        </a>
+    </div>
+</section>
