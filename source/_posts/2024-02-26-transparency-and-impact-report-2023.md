@@ -9,25 +9,23 @@ author:
 published_at: 26 February 2024
 ---
 
-
-
 We’re a little late in posting our report from 2023, so we’ll also share some of the things we’re focusing on as we start 2024.
 
 ## Executive Summary
 
-At the beginning of 2024, The PHP Foundation is a collective of 9 volunteer board members, 1 full-time operations manager sponsored by JetBrains, and 10 developers paid part-time/full-time who make more than half of the contributions to the PHP language and its extensions.
+At the beginning of 2024, The PHP Foundation is a collective of **9 volunteer board members**, **1 full-time operations manager** sponsored by JetBrains, and **10 developers** paid part-time/full-time who make more than half of the contributions to the PHP language and its extensions.
 
-In 2023, The PHP Foundation received $418,669 in donations from organizations and individuals.
+In 2023, The PHP Foundation received **$418,669 in donations** from organizations and individuals.
 
 The PHP Foundation’s main focus in 2023 was strengthening the maintenance of PHP core, the project that lives in the [php/php-src](https://github.com/php/php-src) GitHub repository. This project is the home of the PHP language, where PHP’s interpreter is developed. Everyone who uses PHP benefits in one way or another from the work that is done in this repository.
 
-The 6 part-time and full-time developers contracted by The PHP Foundation were responsible for nearly half of the commits and reviews made in the PHP language.
+The PHP Foundation demonstrates its growing impact on the language through an increased volume and velocity of code contributions and reviews. The 6 part-time and full-time developers contracted by The PHP Foundation were responsible for nearly half of the commits and reviews made in the PHP language.
 
-    Todo more achievement numbers: Sustainable, Impactful, Official recognition
+Moreover, the foundation's presence and activities have led to heightened interest and activity in the PHP project overall, with the total number of **contributions to the language growing by 79% compared to 2022**.
 
-At the end of 2023, the German government’s Sovereign Tech Fund chose to invest in The PHP Foundation’s mission by providing funding for a security audit and other long outstanding projects critical for the PHP ecosystem.
+At the end of 2023, the German government’s **Sovereign Tech Fund chose to invest in The PHP Foundation’s mission** by providing funding for a security audit and other long outstanding projects critical for the PHP ecosystem.
 
-The foundation is expanding its development efforts in 2024 by contracting 4 additional developers and increasing the number of hours that current contracted developers are working.
+The foundation is **expanding its development efforts in 2024** by contracting 4 additional developers and increasing the number of hours that current contracted developers are working.
 
 The foundation plans to spend up to $1,045,000, including compensation and fees. We are looking for additional sponsor contributions to allow us to continue these efforts in the next years.
 
@@ -35,7 +33,7 @@ In 2024, we aim to achieve the following strategic goals:
 
 * Ensure sustainable sponsorship for the foundation.
 * Ensure that foundation developers focus on valuable tasks.
-* Revitalize enthusiasm for PHP among developers.
+* Promote PHP within the web development ecosystem.
 
 
 ## The PHP Foundation Mission
@@ -226,8 +224,7 @@ The following chart summarizes the number of commits made to the [php/php-src](h
 | Total other                 | 885  | 1588 |
 
 
-    TODO IMAGE
-![alt_text](images/image1.png "image_tooltip")
+![Commits](/assets/post-images/2024/report-2023/commits.png)
 
 
 Note that the number of commits does not fairly represent the level of effort or the scope of the work. However, it can demonstrate the foundation's relative level of contribution to the PHP core through an objective metric.
@@ -242,8 +239,7 @@ The diagram summarizes the number of pull request reviews made in the [php/php-s
 | Total by The PHP Foundation | 283  | 702  |
 | Total other                 | 551  | 416  |
 
-    TODO IMAGE
-![alt_text](images/image2.png "image_tooltip")
+![Reviews](/assets/post-images/2024/report-2023/reviews.png)
 
 
 
@@ -319,21 +315,16 @@ In 2023, The PHP Foundation was financially backed by organizations and individu
 _* Fees include a 10%  Open Source Collective fiscal host fee (dealing with contracts, expense reviews and payments, bank account management, official registrations and dealing with government requirements, open collective platform development etc), and 1-5% percent of payment processing fees, depending on the payment method used._
 
 
-All incoming and outgoing transactions of The PHP Foundation are publicly available to view for anyone: [https://opencollective.com/phpfoundation#category-BUDGET](https://opencollective.com/phpfoundation#category-BUDGET)
+All incoming and outgoing **transactions of The PHP Foundation are publicly available** to view for anyone: [https://opencollective.com/phpfoundation#category-BUDGET](https://opencollective.com/phpfoundation#category-BUDGET)
 
-
-### All Financial Contributions From Sponsors
-
-    TODO IMAGE
-![alt_text](images/image3.png "image_tooltip")
+![Budget](/assets/post-images/2024/report-2023/budget.png)
 
 
 ### Expenses
 
 [https://opencollective.com/phpfoundation/expenses](https://opencollective.com/phpfoundation/expenses)
 
-    TODO IMAGE
-![alt_text](images/image4.png "image_tooltip")
+![Expenses](/assets/post-images/2024/report-2023/expenses.png)
 
 
 
