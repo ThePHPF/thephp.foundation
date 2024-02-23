@@ -40,7 +40,7 @@ In 2024, we aim to achieve the following strategic goals:
 
 The PHP Foundation was initiated by JetBrains, Automattic, Laravel, Acquia, Zend, Private Packagist, Symfony, Craft CMS, and Tideways. It was publicly [launched](https://blog.jetbrains.com/phpstorm/2021/11/the-php-foundation/) on November 22, 2021.
 
-Since 2021, many companies and individuals have joined the initiative. To make the priorities of the foundation more clear and aligned we’ve **updated the mission statement**:
+Since 2021, many companies and individuals have joined the initiative. To make the priorities of the foundation more clear and aligned, we’ve **updated the mission statement**:
 
 
 > The PHP Foundation’s mission is to ensure the long-term prosperity of the PHP language. The PHP Foundation focuses on providing financial support and guidance to PHP language developers to support its goals of improving the language for its users, providing high-quality maintenance, and improving the PHP language project to retain current contributors and to integrate new contributors. The PHP Foundation aims to promote the public image of the PHP language in the interest of retaining existing and gaining new users and contributors.
@@ -55,7 +55,7 @@ So it defines 4 priorities of the foundation:
 
 ## Organizational Growth
 
-Many companies with a vested interest in PHP’s prosperity, made a major financial contribution during the year. These are the companies that donated $10,000 or more in 2023:
+Many companies with a vested interest in PHP’s prosperity made a major financial contribution during the year. These are the companies that donated $10,000 or more in 2023:
 
 **JetBrains, Automattic, Private Packagist, Craft CMS, Tideways, pixiv Inc., Mercari Inc., Symfony Corp, Aternos GmbH, Sentry, Ardennes-étape, Zend by Perforce, Les-Tilleuls.coop, Cybozu.**
 
@@ -138,11 +138,11 @@ The audit is being organized in partnership with [OSTIF](https://ostif.org/).
 The current PHP documentation has several blind spots, with many functions and methods not covered at all. We propose to update and modernize the English PHP documentation, review and remove user comments, integrate 3v4l.org for interactive examples, and simplify the maintenance process. This will make PHP more accessible to new developers and serve as a reliable reference for experienced ones.
 
 ## The PHP Foundation Governance
-In 2023 we renamed the Administration group to the **Governing Board** to avoid confusions and better align with industry standards.
+In 2023, we renamed the Administration group to the **Governing Board** to avoid confusions and better align with industry standards.
 
 [The lineup](https://thephp.foundation/structure/#admins) of the group has not changed and consists of veteran PHP community leaders, representatives of the founding companies, and other key stakeholders.
 
-One notable change compared to previous year is a full-time operations manager sponsored by JetBrains in addition to the financial contribution.
+One notable change compared to the previous year is a full-time operations manager sponsored by JetBrains in addition to the financial contribution.
 
 We aim to establish a level of involvement for other key stakeholders from the PHP world through the Advisory Board and other initiatives.
 
@@ -161,7 +161,7 @@ Your company can **[become a member](https://thephp.foundation/join/)** by contr
 
 ### Renewing contracts
 
-In 2023, we had a team of 6 developers. All of them demonstrated a high quality of work, and dedication to the mission of the foundation. We were happy to renew the contracts for 2024 as well as extend the total number of hours for developers requesting it.
+In 2023, we had a team of 6 developers. All of them demonstrated a high quality of work and dedication to the mission of the foundation. We were happy to renew the contracts for 2024 as well as extend the total number of hours for developers requesting it.
 
 We have also adjusted the compensation rates for developers to better reflect the market, as the rates had not changed since 2021.
 
@@ -207,7 +207,7 @@ And in 2025 we start the cycle again.
 
 ## Retrospective: Goals of 2023
 
-In the previous report we outlined a few organizational and technical goals. Let’s look back and evaluate the results.
+In the previous report, we outlined a few organizational and technical goals. Let’s look back and evaluate the results.
 
 ### Organization goals
 
@@ -299,13 +299,13 @@ Jakub Zelenka, one of the foundation developers, also volunteered to be a releas
 
 ## The PHP Foundation brand & public channels
 
-The PHP Foundation represents a community of core PHP developers and advocates for the PHP programming language.The channels listed below were used by the PHP Foundation for public communication:
+The PHP Foundation represents a community of core PHP developers and advocates for the PHP programming language. The channels listed below were used by the PHP Foundation for public communication:
 
 * 11,481 Twitter followers [https://twitter.com/thephpf](https://twitter.com/thephpf)
 * 10,320 LinkedIn page followers [https://www.linkedin.com/company/phpfoundation](https://www.linkedin.com/company/phpfoundation)
 * 684 Mastodon followers [https://phpc.social/@thephpf](https://phpc.social/@thephpf)
 
-The PHP Foundation members gave talks on multiple conferences throughout the year:
+The PHP Foundation members gave talks at multiple conferences throughout the year:
 
 * [PHP UK Conference](https://www.phpconference.co.uk/) – Derick Rethans
 * [International PHP Conference](https://phpconference.com/) – Nils Adermann
@@ -335,7 +335,7 @@ In 2023, The PHP Foundation was financially backed by organizations and individu
 | Paid to developers                  | $ 133,285   | $ 275,181 |
 
 <br>
-_* Fees include a 10%  Open Source Collective fiscal host fee (dealing with contracts, expense reviews and payments, bank account management, official registrations and dealing with government requirements, open collective platform development etc), and 1-5% percent of payment processing fees, depending on the payment method used._
+_* Fees include a 10%  Open Source Collective fiscal host fee (dealing with contracts, expense reviews and payments, bank account management, official registrations and dealing with government requirements, open collective platform development etc.), and 1-5% percent of payment processing fees, depending on the payment method used._
 
 
 All incoming and outgoing **transactions of The PHP Foundation are publicly available** to view for anyone: [https://opencollective.com/phpfoundation#category-BUDGET](https://opencollective.com/phpfoundation#category-BUDGET)
@@ -374,7 +374,7 @@ From a technical standpoint, the goal is to ensure that foundation developers wo
 
 
 
-* On-going maintenance and development of the PHP core.
+* Ongoing maintenance and development of the PHP core.
 * Deliver the STF projects.
 * Improve the quality of the ideas and RFCs coming from the foundation.
 * Conduct research and surveys to define priorities.
@@ -391,7 +391,7 @@ With this plan, we estimate our annual spending cap at approximately **$840,000*
 
 Additionally, we anticipate receiving **€205,000** from the STF investment. These funds will be allocated to developer reimbursements and our partnership with OSTIF.org for an external security audit.
 
-Our collaboration with the OpenCollective platform has been positive, and we plan to continue operating under the umbrella of the Open Source Collective in 2024. This means that sponsorships we receive are reduced by 10% for Open Source Collective fees and 1-5% for payment processing fees.
+Our collaboration with the OpenCollective platform has been positive, and we plan to continue operating under the umbrella of the Open Source Collective in 2024. This means that sponsorships we receive are reduced by 10% for Open Source Collective fees and 1–5% for payment processing fees.
 
 
 ## Outro
