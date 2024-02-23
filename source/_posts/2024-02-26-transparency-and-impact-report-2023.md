@@ -217,7 +217,7 @@ In the previous report we outlined a few organizational and technical goals. Let
   The foundation’s Slack became a hub for the community and helped to move initiatives.<br/><br/>
 * **Improve communication and provide clear benefits for sponsors. ✅** <br/>
   We created a [deck with benefits for sponsors](https://thephp.foundation/join/#membership-deck) and started the advisory board initiative. <br/><br/>
-  * **Explore strategic partnerships and marketing opportunities. ✅ / ❌**<br/>
+* **Explore strategic partnerships and marketing opportunities. ✅ / ❌**<br/>
     We received investment from the Sovereign Tech Fund and started collaboration with OSTIF.<br/>
     We did not explore any marketing opportunities. And there is a room for many more strategic partnerships.
 
