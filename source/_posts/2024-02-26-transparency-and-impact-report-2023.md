@@ -79,14 +79,11 @@ quote: 'Les-Tilleuls.coop is proud to support the PHP Foundation. By maintaining
 }) }}
 
 {{ include('quote.html', {
-name: 'Matthew Weier O'Phinney',
+name: 'Matthew Weier O\'Phinney',
 title: 'Senior Product Manager, Zend by Perforce',
 image: '/assets/post-images/2024/report-2023/mwop.jpg',
-quote: 'As longtime contributors to the PHP project, both financially as well as by employing developers on the project, Zend by Perforce is pleased to sponsor the PHP Foundation and support its mission.
-Expanding the pool of maintainers and developers capable of evolving the language will help keep PHP relevant, and expand its reach in the web development ecosystem.'
+quote: 'As longtime contributors to the PHP project, both financially as well as by employing developers on the project, Zend by Perforce is pleased to sponsor the PHP Foundation and support its mission. Expanding the pool of maintainers and developers capable of evolving the language will help keep PHP relevant, and expand its reach in the web development ecosystem.'
 }) }}
-
-
 
 {{ include('quote.html', {
 name: 'Ben Marks',
