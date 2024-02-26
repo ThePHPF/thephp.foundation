@@ -1,143 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2024-02-06T11:22:50+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[The PHP Foundation Update, January 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
-
-<p>In November, the PHP Foundation was launched publicly and we’ve seen enormous support from the community.
-Thanks to all of you who have already supported the initiative! We’re planning to update you about our workstream activities on a monthly basis, and this is our first update post.
-Let’s take a look at what we’ve been working on!</p>
-
-<h3 id="the-first-round-of-applications-is-now-closed">The first round of applications is now closed</h3>
-
-<p>Since November, many developers have applied for sponsorship, and there were quite a few that we would be very happy to sponsor.</p>
-
-<p>We are discussing the details with applicants and planning the budget.
-In order to organize this correctly we need proper documents and agreements.
-The JetBrains legal department and OpenCollective staff are helping us to prepare the required paperwork.</p>
-
-<p>We plan to complete the preparations and sign the necessary documents in January.
-After that, we will announce the list of the first batch of sponsored developers.</p>
-
-<h3 id="how-we%E2%80%99re-making-decisions">How we’re making decisions</h3>
-
-<p>So far, we have held three administration meetings where we discussed the pressing issues.
-Each meeting and the decision-making process are documented in our organization on GitHub at <a href="https://github.com/thephpf">github.com/thephpf</a>.
-For now the details are hidden, but we would like to make these meetings and notes public at some point.</p>
-
-<p>In the next few months, we plan to hold biweekly meetings and work on the foundation’s governance, rules, and bylaws.</p>
-
-<h3 id="shout-out-to-our-sponsors">Shout out to our sponsors</h3>
-
-<p>Many thanks to everyone who has donated to the PHP Foundation!</p>
-
-<p>In addition to the founding sponsors – <a href="https://www.jetbrains.com">JetBrains</a>, <a href="https://automattic.com">Automattic</a>, <a href="https://www.acquia.com">Acquia</a>, <a href="https://www.zend.com">Zend</a>, <a href="https://craftcms.com">Craft CMS</a>, <a href="https://laravel.com">Laravel</a>, <a href="https://symfony.com">Symfony</a>, <a href="https://tideways.com">Tideways</a>, <a href="https://www.prestashop.com/en">PrestaShop</a>, and <a href="https://packagist.com">Private Packagist</a> – we have a whole new group of major sponsors!</p>
-
-<p>A big thanks goes to the following companies who donated $10,000 or more:</p>
-
-<ul>
-<li><a href="https://www.rakus.co.jp/">RAKUS</a></li>
-<li><a href="https://www.livesport.eu/">Livesport s.r.o.</a></li>
-<li><a href="https://op.gg/">OP.GG</a></li>
-<li><a href="https://polcode.com">Polcode</a></li>
-<li><a href="https://www.shopware.com">Shopware</a></li>
-<li><a href="https://binc.jp">BASE, Inc.</a></li>
-<li><a href="https://aternos.org">Aternos GmbH</a></li>
-<li><a href="https://digitalscholar.org">Digital Scholar</a></li>
-<li><a href="https://en.ardennes-etape.be">Ardennes-étape</a></li>
-</ul>
-
-<p>Thank you to everyone else who has contributed – the PHP Foundation is all of us!</p>
-
-<p>That’s all for today. Follow us on Twitter <a href="https://twitter.com/ThePHPF">@ThePHPF</a> to get the latest updates from the foundation.</p>
-
-<p>💖🐘</p>
-
-<p>Feel free to contact us at <a href="&#109;&#x61;i&#108;&#x74;&#111;&#58;&#x63;&#111;&#x6e;&#x74;&#97;&#x63;t&#64;&#x74;&#104;&#101;&#x70;&#104;&#x70;&#x2e;&#102;&#x6f;&#x75;&#110;&#x64;a&#116;&#x69;&#111;&#110;">contact@thephp.foundation</a>.</p>
-]]></content><link href="https://thephp.foundation/blog/2022/01/21/the-php-foundation-update-january-2022/"/><id>https://thephp.foundation/blog/2022/01/21/the-php-foundation-update-january-2022/</id><updated>Fri, 21 Jan 2022 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[The PHP Foundation Update, March 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
-
-<p>We promised to publish monthly updates, but something everything went wrong in February.</p>
-
-<p>Thank you all for being understanding about the lack of update in February. This post will bring you all up to date on everything that's been accomplished since our last post in January.</p>
-
-<h3 id="php-foundation-core-developers">PHP Foundation Core Developers</h3>
-
-<p>One of our primary goals for 2022 is to find and hire developers to work on the core.</p>
-
-<p>We are excited to reveal our initial group of sponsored developers!</p>
-
-<ul>
-<li><strong>Arnaud Le Blanc</strong> <a href="https://github.com/arnaud-lb">@arnaud-lb</a></li>
-<li><strong>Derick Rethans</strong> <a href="https://github.com/derickr">@derickr</a></li>
-<li><strong>Gina Peter Banyard</strong> <a href="https://github.com/Girgias">@Girgias</a></li>
-<li><strong>Ilija Tovilo</strong> <a href="https://github.com/iluuu1994">@iluuu1994</a></li>
-<li><strong>Jakub Zelenka</strong> <a href="https://github.com/bukka">@bukka</a></li>
-<li><strong>Máté Kocsis</strong> <a href="https://github.com/kocsismate">@kocsismate</a></li>
-</ul>
-
-<p>You might be surprised to see Derick Rethans’ name in the list above. After all, he was listed as a PHP Fellow when we announced the Foundation last year. Shortly after we launched the Foundation, Derick informed us of his desire to focus his work on developing and maintaining PHP's core and that he wanted to apply for sponsorship from the Foundation to make this happen. To avoid any conflicts of interest, Derick stepped down from his administrative role before he applied for sponsorship.</p>
-
-<p>We are incredibly happy that these core developers have agreed to join the Foundation, and we are looking forward to the great things we can do together.</p>
-
-<h3 id="code-of-conduct">Code of Conduct</h3>
-
-<p>All participants of the PHP Foundation including administration members and developers are expected to abide by the <a href="https://opencollective.com/redirect?url=https%3A%2F%2Fwww.contributor-covenant.org%2Fversion%2F2%2F1%2Fcode_of_conduct%2F">Code of Conduct</a>.</p>
-
-<p>To ensure enforcement of the Code of Conduct we are setting up a dedicated team. Tobias Nyholm <a href="https://github.com/Nyholm">@Nyholm</a>, who leads <a href="https://opencollective.com/redirect?url=https%3A%2F%2Fsymfony.com%2Fcare">Symfony’s CARE team</a>, will be responsible for assembling and running the Foundation’s CoC team. Welcome aboard, Tobias!</p>
-
-<h3 id="what%E2%80%99s-next">What’s next</h3>
-
-<p>Our main goal for the next month is to set up a proper communication and development process. We will conduct several meetings to discuss technical and organizational matters.</p>
-
-<p>Since the purpose of the Foundation is to train the next generation of internal developers, we want to emphasize maintenance and user-focused features to maximize our impact. As such, we will review the efforts and ensure the plans fall in line with such an agenda.</p>
-
-<p>We would also like to reduce the bus factor of PHP. So whenever possible, developers will be expected to update the <a href="https://opencollective.com/redirect?url=https%3A%2F%2Fwww.phpinternalsbook.com%2F">PHP Internals Book</a> to ensure that no knowledge is lost.</p>
-
-<p>On the administration side, we plan to work on increasing the transparency of our operations: to shed some light on the governance structure, discussions, and so on.</p>
-
-<h3 id="php-foundation-stands-with-ukraine-%F0%9F%87%BA%F0%9F%87%A6">PHP Foundation stands with Ukraine 🇺🇦</h3>
-
-<p>On February 24th, 2022, Vladimir Putin's Regime began an illegal war of aggression in Ukraine. There are no words to truly express our outrage at such disregard for human life.</p>
-
-<p>Many PHP developers have lived in or are living in Ukraine, and the PHP Foundation is supported by many backers from Ukraine, including sponsors <a href="https://opencollective.com/redirect?url=https%3A%2F%2Foroinc.com%2Flets-stop-the-war-together%2F">Oro, Inc.</a> and <a href="https://opencollective.com/redirect?url=https%3A%2F%2Fmacpaw.com%2F">MacPaw</a>.</p>
-
-<p>If you, like many in the PHP Foundation, are desperate to find a way to help, there are some organizations listed below that are working to provide humanitarian aid to people who are caught up in this war.</p>
-
-<p>We are proud that many of our sponsors stand with Ukraine too. Here are just a few examples:</p>
-
-<ul>
-<li><a href="https://opencollective.com/redirect?url=https%3A%2F%2Fsymfony.com%2Fblog%2Fsymfony-stands-with-ukraine">Symfony</a></li>
-<li><a href="https://opencollective.com/redirect?url=https%3A%2F%2Fwww.acquia.com%2Fblog%2Facquia-stands-ukraine">Acquia</a></li>
-<li><a href="https://opencollective.com/redirect?url=https%3A%2F%2Fblog.jetbrains.com%2Fblog%2F2022%2F03%2F11%2Fjetbrains-statement-on-ukraine%2F">JetBrains</a></li>
-<li><a href="https://opencollective.com/redirect?url=https%3A%2F%2Fwordpress.org%2Fnews%2F2022%2F03%2Fepisode-26-matt-mullenweg-on-ukraine-community-and-wordpress%2F">Automattic</a></li>
-<li><a href="https://github.com/composer/packagist/commit/86244a3695fcaaac9c5ba4257a4314eae1c6d981">Composer</a></li>
-<li><a href="https://twitter.com/Livesport_eu/status/1496925425821491208">Livesport.eu</a></li>
-<li><a href="https://opencollective.com/redirect?url=https%3A%2F%2Fwww.shopware.com%2Fen%2Fshopware-and-its-two-founders-support-caritas-international-aid-for-ukraine%2F">Shopware</a></li>
-</ul>
-
-<p>Please consider supporting the people of Ukraine. You can find more information on how to do so on the <a href="https://opencollective.com/redirect?url=https%3A%2F%2Fen.isupportukraine.eu%2F">I Support Ukraine</a> website.</p>
-
-<p>If you’d like to make a donation, consider <a href="https://opencollective.com/redirect?url=https%3A%2F%2Fwww.unicefusa.org%2Fwar-ukraine">UNICEF</a>, <a href="https://opencollective.com/redirect?url=https%3A%2F%2Fwww.peopleinneed.net%2Fdonate%2Fonce%3Famount%3D1000%26accountId%3D7">People in Need</a>, or any <a href="https://opencollective.com/redirect?url=https%3A%2F%2Fwww.globalcitizen.org%2Fen%2Fcontent%2Fways-to-help-ukraine-conflict%2F">other humanitarian organization</a> of your choice helping the people not only in Ukraine.</p>
-
-<p>If you are a PHP developer in need of support, reach out to us at social@thephp.foundation and we’ll do everything we can to help you.</p>
-
-<h3 id="thank-you-to-our-sponsors">Thank you to our sponsors</h3>
-
-<p>Lots of you have kindly donated to the PHP Foundation, and we are extremely grateful!</p>
-
-<p>We’d like to say a massive thanks to the following newly joined major sponsors for their very generous contributions:</p>
-
-<ul>
-<li><a href="https://opencollective.com/redirect?url=https%3A%2F%2Fpaycomonline.com%2F">Paycom</a></li>
-<li><a href="https://opencollective.com/redirect?url=https%3A%2F%2Fwww.ec-cube.net%2F">EC-CUBE</a></li>
-<li><a href="https://opencollective.com/redirect?url=https%3A%2F%2Fwww.cambiumlearning.com%2F">Cambium Learning, Inc.</a> (<a href="https://opencollective.com/redirect?url=https%3A%2F%2Fwww.learninga-z.com%2F">Learning A-Z</a>)</li>
-</ul>
-
-<p>And shout-out to everyone else who has contributed, we are truly grateful to you all – the PHP Foundation is all of us!</p>
-
-<p>A special mention goes to <a href="https://opencollective.com/redirect?url=https%3A%2F%2F1password.com%2F">1password</a> for <a href="https://github.com/1Password/1password-teams-open-source#the-php-foundation">providing us</a> with a free membership to ensure all of our sensitive data is stored and shared securely.</p>
-
-<p>That’s all for today. Follow us on Twitter <a href="https://twitter.com/thephpf">@ThePHPF</a> to get the latest updates from the Foundation.</p>
-
-<p>💙💛 ☮️ 🐘</p>
-]]></content><link href="https://thephp.foundation/blog/2022/03/31/the-php-foundation-update-march-2022/"/><id>https://thephp.foundation/blog/2022/03/31/the-php-foundation-update-march-2022/</id><updated>Thu, 31 Mar 2022 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Core Roundup #13]]></title><content type="html"><![CDATA[<p>The PHP Core team has been as productive as ever this past month, bringing forth a robust collection of updates that promise to shape the future of PHP. From RFCs that are sure to stir up lively debate, to ones that bring small, yet impactful changes, it has been a month filled with interesting developments. Here's what you need to know.</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2024-02-26T13:52:29+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Core Roundup #13]]></title><content type="html"><![CDATA[<p>The PHP Core team has been as productive as ever this past month, bringing forth a robust collection of updates that promise to shape the future of PHP. From RFCs that are sure to stir up lively debate, to ones that bring small, yet impactful changes, it has been a month filled with interesting developments. Here's what you need to know.</p>
 
 <blockquote>
   <p>The PHP Foundation is a collective of PHP contributors, veterans, and companies that collaborate to ensure the long-term sustainability of the PHP programming language. The foundation currently supports six contributors focused on PHP's maintenance, debt reduction, and feature development. These contributors work closely with others on coding, documentation, and discussions.</p>
@@ -552,7 +414,752 @@ This concludes the list of commits made by the PHP core team in the past month. 
 <blockquote>
   <p>PHP Roundup is (except for this particular one) prepared by Ayesh Karunaratne from <strong><a href="https://php.watch">PHP.Watch</a></strong>, a source for PHP News, Articles, Upcoming Changes, and more.</p>
 </blockquote>
-]]></content><link href="https://thephp.foundation/blog/2023/06/06/php-core-roundup-13/"/><id>https://thephp.foundation/blog/2023/06/06/php-core-roundup-13/</id><updated>Tue, 06 Jun 2023 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, April 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
+]]></content><link href="https://thephp.foundation/blog/2023/06/06/php-core-roundup-13/"/><id>https://thephp.foundation/blog/2023/06/06/php-core-roundup-13/</id><updated>Tue, 06 Jun 2023 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, May 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
+
+<p>This time our regular update is short. Check the <a href="https://thephp.foundation/blog/2022/05/30/php-core-roundup-2/">PHP Core Roundup</a> series for a detailed development log.</p>
+
+<h2 id="interview-with-core-developers">Interview with core developers</h2>
+
+<p>After the <a href="https://opencollective.com/phpfoundation/updates/php-foundation-update-april-2022">April update</a>, Sebastian Bergmann published an <a href="https://thephp.foundation/blog/2022/05/06/interview-with-core-developers/">interview with our sponsored core developers</a>: Derick Rethans, Gina Peter Banyard, Jakub Zelenka, Máté Kocsis, and Ilija Tovilo. The other day we updated it and added answers from Arnaud Le Blanc. Check <a href="https://thephp.foundation/blog/2022/05/06/interview-with-core-developers/">the interview</a> to get a high-level picture of what guys are working on.</p>
+
+<h2 id="php-core-roundup">PHP Core Roundup</h2>
+
+<p>In the <a href="https://thephp.foundation/blog/2022/05/30/php-core-roundup-2/">PHP Roundup #2</a> post by Ayesh, you can find a detailed log of what's been done and discussed regarding the PHP engine this month.</p>
+
+<p>We decided to rename the series from <em>PHP Roundup</em> to <em>PHP Core Roundup</em> to reflect the content better and emphasize that the roundup is only about the core of the language.</p>
+
+<p>Send your questions about the roundup directly to roundup@thephp.foundation or simply tweet at us: <a href="https://twitter.com/thephpf">@ThePHPF</a>, <a href="https://twitter.com/Ayeshlive">@Ayeshlive</a>.</p>
+
+<h2 id="thank-you-to-our-sponsors">Thank you to our sponsors</h2>
+
+<p>This month we are glad to welcome new major sponsors who generously support the PHP Foundation:</p>
+
+<ul>
+<li><strong><a href="https://moodle.org/">Moodle</a></strong></li>
+<li><strong><a href="https://spysystem.dk/">SPY</a></strong></li>
+<li><strong><a href="https://symfony.com/">Symfony</a></strong></li>
+</ul>
+
+<p>Thank you, folks!</p>
+
+<p>We’d like to give a shout-out to everyone for your continued support.</p>
+
+<p>We truly appreciate it – the PHP Foundation is all of us!</p>
+
+<p>That’s all for today. Follow us on Twitter <a href="https://twitter.com/thephpf">@ThePHPF</a> to get the latest updates from the Foundation.</p>
+
+<p>💜🐘</p>
+]]></content><link href="https://thephp.foundation/blog/2022/06/01/php-foundation-update-may-2022/"/><id>https://thephp.foundation/blog/2022/06/01/php-foundation-update-may-2022/</id><updated>Wed, 01 Jun 2022 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[The PHP Foundation
+Team Update 2024]]></title><content type="html"><![CDATA[<p>Now in our third year, we're gearing up to grow our impact. This year, four more developers are joining the PHP Foundation to further advance PHP.</p>
+
+<p>Since April 2022, the PHP Foundation has contracted six outstanding developers:</p>
+
+<ul>
+<li>Arnaud Le Blanc <a href="https://github.com/arnaud-lb">@arnaud-lb</a></li>
+<li>Derick Rethans <a href="https://github.com/derickr">@derickr</a></li>
+<li>Gina Peter Banyard <a href="https://github.com/Girgias">@Girgias</a></li>
+<li>Ilija Tovilo <a href="https://github.com/iluuu1994">@iluuu1994</a></li>
+<li>Jakub Zelenka <a href="https://github.com/bukka">@bukka</a></li>
+<li>Máté Kocsis <a href="https://github.com/kocsismate">@kocsismate</a></li>
+</ul>
+
+<p>All of them started as part-time contributors, and since then have significantly grown their capacity and dedication to PHP core tasks. We consider it a big achievement that the team continues to collaborate effectively, accumulating more experience and knowledge, and expanding their PHP Core involvement.</p>
+
+<h2 id="team-update-2024">Team Update 2024</h2>
+
+<p>We are happy to announce a team expansion. Four talented developers are joining as part-time team members of the foundation.</p>
+
+<ul>
+<li>David Carlier <a href="https://github.com/devnexen">@devnexen</a></li>
+<li>James Titcumb <a href="https://github.com/asgrim">@asgrim</a></li>
+<li>Saki Takamachi <a href="https://github.com/SakiTakamachi">@SakiTakamachi</a></li>
+<li>Shivam Mathur <a href="https://github.com/shivammathur">@shivammathur</a></li>
+</ul>
+
+<p>Please give them a warm welcome! We are looking forward to the great things we will accomplish together.</p>
+
+<p>Happy New Year! 🎉🐘💜</p>
+]]></content><link href="https://thephp.foundation/blog/2024/01/03/the-php-foundation-team-update-2024/"/><id>https://thephp.foundation/blog/2024/01/03/the-php-foundation-team-update-2024/</id><updated>Wed, 03 Jan 2024 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, June 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
+
+<p>This month PHP foundation staff continues to work on the PHP core and the development of the initiative as a whole. Read on to learn more about what developers have accomplished, new sponsors, and other than financial ways to contribute to the foundation.</p>
+
+<blockquote>
+  <p>We've created an official LinkedIn page: <a href="https://www.linkedin.com/company/phpfoundation/">linkedin.com/company/phpfoundation</a>.
+  Subscribe to it and follow us on Twitter <a href="https://twitter.com/thePHPF">@ThePHPF</a>.</p>
+</blockquote>
+
+<h2 id="php-core-roundup">PHP Core Roundup</h2>
+
+<p>Here's a summary of what the foundation's developers have been working on lately:</p>
+
+<ul>
+<li><p><a href="https://github.com/arnaud-lb">Arnaud Le Blanc</a> revised the RFC and implementation of multi-statement short closures. The proposal is now on vote. Arnaud has also finished the improvements to ini quantity parsing.</p></li>
+<li><p><a href="https://github.com/derickr">Derick Rethans</a> continues to fix bugs in DateTime to make working with dates in PHP as reliable as possible.</p></li>
+<li><p><a href="https://github.com/Girgias">Gina P. Banyard</a> has made several improvements to the type system: true, null, and false standalaone types have been added, and Disjunctive Normal Form Types put on vote. Gina also made a few fixes in SPL.</p></li>
+<li><p><a href="https://github.com/iluuu1994">Ilija Tovilo</a> implemented multiple improvements for enums and put a couple on vote. He also made many fixes, like for instance fixed line numbers in backtrace of multi-line (fluent) function calls.</p></li>
+<li><p><a href="https://github.com/bukka">Jakub Zelenka</a> made various fixes and improvements to PHP-FPM and OpenSSL extension.</p></li>
+<li><p><a href="https://github.com/kocsismate">Máté Kocsis</a> makes improvements to stubs and other fixes.</p></li>
+</ul>
+
+<p>All developers devote significant time to maintenance, including fixing bugs, reducing technical debt, and making life easier for everyone working on PHP.</p>
+
+<p>In the <strong><a href="https://thephp.foundation/blog/2022/06/30/php-core-roundup-3/">PHP Roundup #3</a></strong> post by Ayesh, you can find a detailed log of what's been done and discussed regarding the PHP engine during the past month.</p>
+
+<p>This time the list of changes is very long! Applause to all the PHP contributors and release managers.</p>
+
+<p>Tweet at us: <a href="https://twitter.com/thephpf">@ThePHPF</a>, <a href="https://twitter.com/Ayeshlive">@Ayeshlive</a>, <a href="https://twitter.com/pronskiy">@pronskiy</a>.</p>
+
+<h2 id="thank-you-to-our-sponsors">Thank you to our sponsors</h2>
+
+<p>This month we are glad to welcome a new major sponsor who joined the PHP Foundation’s sponsors herd: <strong><a href="https://www.mollie.com/en">Mollie</a></strong>.  Thank you, folks!</p>
+
+<p>By the way, we have updated the <strong><a href="https://thephp.foundation/#sponsors">Sponsors section</a></strong> on our <a href="https://thephp.foundation/">website</a>. It now shows all major contributors sorted by the amount of donation. Kudos to <a href="https://twitter.com/s_panteleev">Sergei Panteleev</a> for this tweak.</p>
+
+<p>Shout-out to everyone for your continued support – the PHP Foundation is all of us!</p>
+
+<h2 id="other-ways-to-contribute">Other ways to contribute</h2>
+
+<p>We are receiving many offers of help from every corner of the community. We are grateful for the offers. There are essentially two kinds of offers being made:</p>
+
+<ol>
+<li>An offer of development time</li>
+<li>An offer of expertise</li>
+</ol>
+
+<h3 id="how-to-contribute-development-time%3F">How to contribute development time?</h3>
+
+<p>The Foundation has limited resources to manage the developers we contract to work on PHP. For this reason, it is not sensible to assume the management of external developers.</p>
+
+<p>Any external developer who is compensated for their time spent on PHP is, of course, welcome to make use of our public communication channels:</p>
+
+<ol>
+<li>Email as: <a href="&#109;&#x61;i&#108;&#x74;&#111;&#58;&#x63;&#111;&#x6e;&#x74;&#97;&#x63;t&#64;&#x74;&#104;&#101;&#x70;&#104;&#x70;&#x2e;&#102;&#x6f;&#x75;&#110;&#x64;a&#116;&#x69;&#111;&#110;">contact@thephp.foundation</a></li>
+<li>Communicate via issues on GitHub repos: <a href="https://github.com/php/php-src">github.com/php/php-src</a>, <a href="https://github.com/php/web-php">github.com/php/web-php</a>, etc.</li>
+</ol>
+
+<h3 id="how-to-contribute-expertise%3F">How to contribute expertise?</h3>
+
+<p>As the foundation begins to mature, a couple of currently unfulfilled roles have emerged.</p>
+
+<p>We will soon communicate the details of these roles.</p>
+
+<p>We intend to compile a list of all expertise on offer; If you haven't done so already, please tell what expertise you would like to make available using public communication channels.</p>
+
+<hr />
+
+<p><br></p>
+
+<p>That’s all for today. Follow us on Twitter <a href="https://twitter.com/thephpf">@ThePHPF</a> to get the latest updates from the Foundation.</p>
+
+<p>💜🐘</p>
+]]></content><link href="https://thephp.foundation/blog/2022/07/04/php-foundation-update-june-2022/"/><id>https://thephp.foundation/blog/2022/07/04/php-foundation-update-june-2022/</id><updated>Mon, 04 Jul 2022 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[The PHP Foundation: Impact and Transparency Report 2023]]></title><content type="html"><![CDATA[<p>We’re a little late in posting our report from 2023, so we’ll also share some of the things we’re focusing on as we start 2024.</p>
+
+<h2 id="executive-summary">Executive Summary</h2>
+
+<p>At the beginning of 2024, The PHP Foundation is a collective of <strong>9 volunteer board members</strong>, <strong>1 full-time operations manager</strong> sponsored by JetBrains, and <strong>10 developers</strong> paid part-time/full-time who make more than half of the contributions to the PHP language and its extensions.</p>
+
+<p>In 2023, The PHP Foundation received <strong>$418,669 in financial contributions</strong> from organizations and individuals.</p>
+
+<p>The PHP Foundation’s main focus in 2023 was strengthening the maintenance of PHP core, the project that lives in the <a href="https://github.com/php/php-src">php/php-src</a> GitHub repository. This project is the home of the PHP language, where PHP’s interpreter is developed. Everyone who uses PHP benefits in one way or another from the work that is done in this repository.</p>
+
+<p>The PHP Foundation demonstrates its growing impact on the language through an increased volume and velocity of code contributions and reviews. The 6 part-time and full-time developers contracted by The PHP Foundation were responsible for nearly half of the commits and reviews made in the PHP language.</p>
+
+<p>Moreover, the foundation's presence and activities have led to heightened interest and activity in the PHP project overall, with the total number of <strong>contributions to the language growing by 79% compared to 2022</strong>.</p>
+
+<p>At the end of 2023, the German government’s <strong>Sovereign Tech Fund chose to invest in The PHP Foundation’s mission</strong> by providing funding for a security audit and other long outstanding projects critical for the PHP ecosystem.</p>
+
+<p>The foundation is <strong>expanding its development efforts in 2024</strong> by contracting 4 additional developers and increasing the number of hours that current contracted developers are working.</p>
+
+<p>The foundation plans to spend up to $1,045,000, including compensation and fees. We are looking for additional sponsor contributions to allow us to continue these efforts in the next years.</p>
+
+<p>In 2024, we aim to achieve the following strategic goals:</p>
+
+<ul>
+<li>Ensure sustainable sponsorship for the foundation.</li>
+<li>Ensure that foundation developers focus on valuable tasks.</li>
+<li>Promote PHP within the web development ecosystem.</li>
+</ul>
+
+<h2 id="the-php-foundation-mission">The PHP Foundation Mission</h2>
+
+<p>The PHP Foundation was initiated by JetBrains, Automattic, Laravel, Acquia, Zend, Private Packagist, Symfony, Craft CMS, and Tideways. It was publicly <a href="https://blog.jetbrains.com/phpstorm/2021/11/the-php-foundation/">launched</a> on November 22, 2021.</p>
+
+<p>Since 2021, many companies and individuals have joined the initiative. To make the priorities of the foundation more clear and aligned, we’ve <strong>updated the mission statement</strong>:</p>
+
+<blockquote>
+  <p>The PHP Foundation’s mission is to ensure the long-term prosperity of the PHP language. The PHP Foundation focuses on providing financial support and guidance to PHP language developers to support its goals of improving the language for its users, providing high-quality maintenance, and improving the PHP language project to retain current contributors and to integrate new contributors. The PHP Foundation aims to promote the public image of the PHP language in the interest of retaining existing and gaining new users and contributors.</p>
+</blockquote>
+
+<p><br>
+So it defines 4 priorities of the foundation:</p>
+
+<ol>
+<li>Improve the language for users.</li>
+<li>Provide high-quality maintenance.</li>
+<li>Improve the project to retain current contributors and to integrate new contributors.</li>
+<li>Promote the public image of PHP.</li>
+</ol>
+
+<h2 id="organizational-growth">Organizational Growth</h2>
+
+<p>Many companies with a vested interest in PHP’s prosperity made a major financial contribution during the year. These are the companies that contributed $10,000 or more in 2023:</p>
+
+<p><strong>JetBrains, Automattic, Private Packagist, Craft CMS, Tideways, pixiv Inc., Mercari Inc., Symfony Corp, Aternos GmbH, Sentry, Ardennes-étape, Zend by Perforce, Les-Tilleuls.coop, Cybozu.</strong></p>
+
+<p>Overall, 718 organizations and individuals sponsored the foundation in 2023 <a href="https://opencollective.com/phpfoundation">on Open Collective</a> and <a href="https://github.com/sponsors/ThePHPF">GitHub Sponsors</a>.</p>
+
+<h3 id="quotes">Quotes</h3>
+
+<p>Here is what some of the prominent folks say about the foundation.</p>
+
+<p><figure class="max-w-screen-md mx-auto text-center" id="quote-brandon-kelly">
+    <svg class="w-10 h-10 mx-auto mb-3 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+        <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
+    </svg>
+    <blockquote>
+        <p class="text-xl italic text-gray-900">“We’re proud supporters of the PHP Foundation here at Craft CMS. PHP has played such a huge role in our careers, and it’s an honor to be a part of its story.”</p>
+    </blockquote>
+    <figcaption class="flex items-center justify-center mt-3 space-x-3 rtl:space-x-reverse">
+        <img class="w-10 h-10 rounded-full" src="/assets/post-images/2024/report-2023/brandon_kelly.jpg" alt="profile picture">
+        <div class="flex items-center">
+            <cite class="pl-0.5 font-medium text-gray-900">Brandon Kelly, </cite>
+            <cite class="pl-0.5 text-gray-500">CEO at Craft CMS</cite>
+        </div>
+    </figcaption>
+</figure>
+</p>
+
+<p><figure class="max-w-screen-md mx-auto text-center" id="quote-ben-marks">
+    <svg class="w-10 h-10 mx-auto mb-3 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+        <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
+    </svg>
+    <blockquote>
+        <p class="text-xl italic text-gray-900">“So much of our world - the content we consume (blogs, ecommerce, social media) -  is delivered via PHP applications, enabled by the continuing efforts of the PHP Foundation and the ecosystem it enables. The PHP ecosystem&#039;s success has a significant impact on all of our lives, and we at Shopware are therefore proud supporters of the PHP Foundation.”</p>
+    </blockquote>
+    <figcaption class="flex items-center justify-center mt-3 space-x-3 rtl:space-x-reverse">
+        <img class="w-10 h-10 rounded-full" src="/assets/post-images/2024/report-2023/ben_marks.jpg" alt="profile picture">
+        <div class="flex items-center">
+            <cite class="pl-0.5 font-medium text-gray-900">Ben Marks, </cite>
+            <cite class="pl-0.5 text-gray-500">Director Global Market Development at shopware AG</cite>
+        </div>
+    </figcaption>
+</figure>
+</p>
+
+<p><figure class="max-w-screen-md mx-auto text-center" id="quote-kevin-dunglas">
+    <svg class="w-10 h-10 mx-auto mb-3 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+        <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
+    </svg>
+    <blockquote>
+        <p class="text-xl italic text-gray-900">“Les-Tilleuls.coop is proud to support the PHP Foundation. By maintaining the language, the foundation is ensuring the future of PHP and the web. By adding innovative new features, it simplifies knowledge sharing and, in the spirit of free software, makes it easier than ever for everyone to create independent sites and applications.”</p>
+    </blockquote>
+    <figcaption class="flex items-center justify-center mt-3 space-x-3 rtl:space-x-reverse">
+        <img class="w-10 h-10 rounded-full" src="/assets/post-images/2024/report-2023/kevin_dunglas.png" alt="profile picture">
+        <div class="flex items-center">
+            <cite class="pl-0.5 font-medium text-gray-900">Kevin Dunglas, </cite>
+            <cite class="pl-0.5 text-gray-500">Les-Tilleuls.coop, FrankenPHP</cite>
+        </div>
+    </figcaption>
+</figure>
+</p>
+
+<p><figure class="max-w-screen-md mx-auto text-center" id="quote-matthew-weier-o&#039;phinney">
+    <svg class="w-10 h-10 mx-auto mb-3 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+        <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
+    </svg>
+    <blockquote>
+        <p class="text-xl italic text-gray-900">“As longtime contributors to the PHP project, both financially as well as by employing developers on the project, Zend by Perforce is pleased to sponsor the PHP Foundation and support its mission. Expanding the pool of maintainers and developers capable of evolving the language will help keep PHP relevant, and expand its reach in the web development ecosystem.”</p>
+    </blockquote>
+    <figcaption class="flex items-center justify-center mt-3 space-x-3 rtl:space-x-reverse">
+        <img class="w-10 h-10 rounded-full" src="/assets/post-images/2024/report-2023/mwop.jpg" alt="profile picture">
+        <div class="flex items-center">
+            <cite class="pl-0.5 font-medium text-gray-900">Matthew Weier O&#039;Phinney, </cite>
+            <cite class="pl-0.5 text-gray-500">Senior Product Manager, Zend by Perforce</cite>
+        </div>
+    </figcaption>
+</figure>
+</p>
+
+<p><br></p>
+
+<h2 id="the-sovereign-tech-fund-investment">The Sovereign Tech Fund Investment</h2>
+
+<p>The <a href="https://sovereigntechfund.de/en/">Sovereign Tech Fund</a> (STF) supports the development, improvement, and maintenance of open digital infrastructure in the public interest. Its goal is to strengthen the open-source ecosystem sustainably, focusing on security, resilience, technological diversity, and the people behind the code. STF is funded by the German Federal Ministry for Economic Affairs and Climate Action (BMWK) and supported by the German Federal Agency for Disruptive Innovation GmbH (SPRIND).</p>
+
+<p>We have collaborated with STF to create work plans for these specific projects:</p>
+
+<h4 id="pecl-overhaul">PECL overhaul</h4>
+
+<p>The current system for distributing PHP extensions, PECL/PEAR, is outdated and prone to supply-chain attacks, making it unreliable for average developers. This leads to the creation of redundant tools and new security issues.</p>
+
+<p>We proposed to rewrite the PECL installer, replacing the messy pear code and the inefficient website.</p>
+
+<p>Follow the progress of <strong>the new tool 🥧PIE</strong> here: <a href="https://github.com/ThePHPF/pie-design">https://github.com/ThePHPF/pie-design</a>.</p>
+
+<h4 id="testing-tool-for-fpm">Testing tool for FPM</h4>
+
+<p>Currently, the PHP project's testing framework lacks more specialized support for the automated testing of the FastCGI Process Manager (FPM), especially for issues that require higher load. We propose to develop an FPM/SAPI testing tool that can execute all applications and set expectations on the produced logs and server responses. This tool will be connected with a load testing tool (e.g., wrk) to simulate real-world usage and load.</p>
+
+<p>The work has started in the <a href="https://github.com/bukka/wst">https://github.com/bukka/wst</a> repository with the plan to move it to the PHP GitHub organization when ready.</p>
+
+<h4 id="security-audit">Security Audit</h4>
+
+<p>PHP, like any other language, has its share of security issues. We are going to collaborate with a security research group for a comprehensive codebase audit and address the discovered issues. This will significantly improve the security of PHP and make it more reliable for developers and businesses.</p>
+
+<p>The audit is being organized in partnership with <a href="https://ostif.org/">OSTIF</a>.</p>
+
+<h4 id="documentation-improvements">Documentation improvements</h4>
+
+<p>The current PHP documentation has several blind spots, with many functions and methods not covered at all. We propose to update and modernize the English PHP documentation, review and remove user comments, integrate 3v4l.org for interactive examples, and simplify the maintenance process. This will make PHP more accessible to new developers and serve as a reliable reference for experienced ones.</p>
+
+<h2 id="the-php-foundation-governance">The PHP Foundation Governance</h2>
+
+<p>In 2023, we renamed the Administration group to the <strong>Governing Board</strong> to avoid confusions and better align with industry standards.</p>
+
+<p><a href="https://thephp.foundation/structure/#admins">The lineup</a> of the group has not changed and consists of veteran PHP community leaders, representatives of the founding companies, and other key stakeholders.</p>
+
+<p>One notable change compared to the previous year is a full-time operations manager sponsored by JetBrains in addition to the financial contribution.</p>
+
+<p>We aim to establish a level of involvement for other key stakeholders from the PHP world through the Advisory Board and other initiatives.</p>
+
+<h2 id="the-advisory-board">The Advisory Board</h2>
+
+<p>To keep major sponsors of PHP abreast of the latest happenings in the foundation and allow them to see the direct impact of their support, we announced the advisory board initiative <a href="https://thephp.foundation/blog/2023/03/31/php-foundation-update-march-2023/#a-new-benefit-for-major-sponsors-%E2%80%93-advisory-board-membership">in March</a>.</p>
+
+<p>In addition to the <a href="https://thephp.foundation/structure/">Governing Board</a> representatives from Automattic, JetBrains, Private Packagist, Symfony, Tideways, and Zend by Perforce, the <strong>Advisory Board includes members from</strong> Moodle, Shopware, Laravel, Ardennes-étape, Les-Tilleuls.coop / API Platform, Aternos GmbH, PrestaShop, CraftCMS.</p>
+
+<p>Your company can <strong><a href="https://thephp.foundation/join/">become a member</a></strong> by contributing a minimum of $12,000 to The PHP Foundation as at least a Silver Sponsor.</p>
+
+<h2 id="the-php-foundation-staff">The PHP Foundation Staff</h2>
+
+<h3 id="renewing-contracts">Renewing contracts</h3>
+
+<p>In 2023, we had a team of 6 developers. All of them demonstrated a high quality of work and dedication to the mission of the foundation. We were happy to renew the contracts for 2024 as well as extend the total number of hours for developers requesting it.</p>
+
+<p>We have also adjusted the compensation rates for developers to better reflect the market, as the rates had not changed since 2021.</p>
+
+<p>We aim to review the rates every year based on the available funding and priorities.</p>
+
+<h3 id="team-extension">Team extension</h3>
+
+<p>As was mentioned in the previous transparency report, we aimed to extend the team. It did not happen in 2023 because one of the prospective developers could not join the team for personal reasons, and had to step down from PHP core development entirely. Again, this is <a href="https://blog.jetbrains.com/phpstorm/2021/11/the-php-foundation/#the_bus_factor">the Bus Factor at its worst</a>. However, we were able to extend the team starting with 2024.</p>
+
+<p>We accepted applications for developer positions from September through October 2023. We received about 200 resumes, and we’ve chosen 4 developers with a proven track record of contributions to the PHP language and ecosystem.</p>
+
+<p>We offered the new developers 6-month trial contracts so that the developers and the Governing Board can evaluate the results and then decide whether to continue the engagements.</p>
+
+<h3 id="the-team-as-of-2024">The team as of 2024</h3>
+
+<p>Starting from January, we now contract 10 developers to work on PHP:</p>
+
+<ul>
+<li><strong>Arnaud Le Blanc</strong> <a href="https://github.com/arnaud-lb">@arnaud-lb</a></li>
+<li><strong>David Carlier</strong> <a href="https://github.com/devnexen">@devnexen</a></li>
+<li><strong>Derick Rethans</strong> <a href="https://github.com/derickr">@derickr</a></li>
+<li><strong>Gina Peter Banyard</strong> <a href="https://github.com/Girgias">@Girgias</a></li>
+<li><strong>Ilija Tovilo</strong> <a href="https://github.com/iluuu1994">@iluuu1994</a></li>
+<li><strong>Jakub Zelenka</strong> <a href="https://github.com/bukka">@bukka</a></li>
+<li><strong>James Titcumb</strong> <a href="https://github.com/asgrim">@asgrim</a></li>
+<li><strong>Máté Kocsis</strong> <a href="https://github.com/kocsismate">@kocsismate</a></li>
+<li><strong>Saki Takamachi</strong> <a href="https://github.com/SakiTakamachi">@SakiTakamachi</a></li>
+<li><strong>Shivam Mathur</strong> <a href="https://github.com/shivammathur">@shivammathur</a></li>
+</ul>
+
+<h3 id="team-timeline">Team timeline</h3>
+
+<p>We established the following timeline for team review.</p>
+
+<ul>
+<li>January 2024: Developers start work according to the new contracts.</li>
+<li>May 2024: Evaluate new developers, contracts are extended, expanded, or terminated after the first 6 months.</li>
+<li>September 2024: Open applications for new developers, evaluate performance of the current group of developers.</li>
+<li>October 2024: Evaluate applications, work out updates to compensation, decide on a budget.</li>
+<li>November 2024: Renew contracts with existing developers, potentially sign contracts with new developers.</li>
+</ul>
+
+<p>And in 2025 we start the cycle again.</p>
+
+<h2 id="retrospective%3A-goals-of-2023">Retrospective: Goals of 2023</h2>
+
+<p>In the previous report, we outlined a few organizational and technical goals. Let’s look back and evaluate the results.</p>
+
+<h3 id="organization-goals">Organization goals</h3>
+
+<ul>
+<li><strong>Extend the foundation developers team. ✅</strong><br/>
+We did not grow in 2023 strictly speaking, but the work done in 2023 helped to build the ground for two contracted developers to go full-time, as well as to hire 4 new developers.<br/><br/></li>
+<li><strong>Grow the community of the foundation. ✅</strong><br/>
+The foundation’s Slack became a hub for the community and helped to move initiatives.<br/><br/></li>
+<li><strong>Improve communication and provide clear benefits for sponsors. ✅</strong> <br/>
+We created a <a href="https://thephp.foundation/join/#membership-deck">deck with benefits for sponsors</a> and started the advisory board initiative. <br/><br/></li>
+<li><strong>Explore strategic partnerships and marketing opportunities. ✅ / ❌</strong><br/>
+We received investment from the Sovereign Tech Fund and started collaboration with OSTIF.<br/>
+We did not explore any marketing opportunities. And there is a room for many more strategic partnerships.</li>
+</ul>
+
+<h3 id="technical-goals">Technical goals</h3>
+
+<ul>
+<li><strong>Ongoing maintenance and development of the PHP core.  ✅</strong> <br/><br/></li>
+<li><strong>Improve the quality of the ideas and RFCs coming from the foundation. ✅</strong><br/>
+One of the examples here could be <a href="https://wiki.php.net/rfc/property-hooks">Property Hooks RFC</a>. Although it has not been voted on yet, we have put amazing work into it and consulted many different parties to make it as good as possible.<br/><br/></li>
+<li><strong>Develop a high-level roadmap and vision for PHP changes sponsored by the foundation. ❌</strong><br/>
+The roadmap and vision need further development and discussion. However, we conducted several pieces of research, both quantitative and qualitative. Some of these findings were shared at conferences where we participated, including PHPCon Poland, SymfonyCon, and Laracon EU. We plan to continue this work.</li>
+</ul>
+
+<h2 id="php-language-impact">PHP Language Impact</h2>
+
+<p>On a daily basis, the PHP Foundation staff team contributes to the open-source repositories of the <a href="https://github.com/php">PHP GitHub organization</a>. The foundation team contributes in many forms: filing issues, reviewing pull requests, participating in discussions on mailing lists, triaging issues, submitting RFC proposals.</p>
+
+<p>In this document, four categories of contributions are presented in more detail: commits to php-src, reviews of pull requests on php-src, submitted RFC documents, and documentation work.</p>
+
+<h3 id="commits-to-php">Commits to PHP</h3>
+
+<p>The following chart summarizes the number of commits made to the <a href="https://github.com/php/php-src">php/php-src</a> repository in 2023.</p>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>2022</th>
+  <th>2023</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Total by The PHP Foundation</td>
+  <td>683</td>
+  <td>784</td>
+</tr>
+<tr>
+  <td>Total other</td>
+  <td>885</td>
+  <td>1588</td>
+</tr>
+</tbody>
+</table>
+
+<p><img src="/assets/post-images/2024/report-2023/commits.png" alt="Commits" /></p>
+
+<p>Note that the number of commits does not fairly represent the level of effort or the scope of the work. However, it can demonstrate the foundation's relative level of contribution to the PHP core through an objective metric.</p>
+
+<h3 id="reviews">Reviews</h3>
+
+<p>The diagram summarizes the number of pull request reviews made in the <a href="https://github.com/php/php-src">php/php-src</a> repository from January 1 to December 31, 2023.</p>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>2022</th>
+  <th>2023</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Total by The PHP Foundation</td>
+  <td>283</td>
+  <td>702</td>
+</tr>
+<tr>
+  <td>Total other</td>
+  <td>551</td>
+  <td>416</td>
+</tr>
+</tbody>
+</table>
+
+<p><img src="/assets/post-images/2024/report-2023/reviews.png" alt="Reviews" /></p>
+
+<h3 id="rfcs">RFCs</h3>
+
+<p>Below are the RFC proposals authored or co-authored by The PHP Foundation developers in 2023 (random order).</p>
+
+<table>
+<thead>
+<tr>
+  <th>RFC</th>
+  <th>Proposed</th>
+  <th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/deprecate-implicitly-nullable-types">Deprecate implicitly nullable parameter types</a></td>
+  <td>2023-12-20</td>
+  <td>Under Discussion</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/deprecate_functions_with_overloaded_signatures">Deprecate functions with overloaded signatures</a></td>
+  <td>2023-01-31</td>
+  <td>Implemented</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/datetime-exceptions">More Appropriate Date/Time Exceptions</a></td>
+  <td>2023-02-08</td>
+  <td>Implemented</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/proper-range-semantics">Define proper semantics for range() function</a></td>
+  <td>2023-03-13</td>
+  <td>Implemented</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/typed_class_constants">Typed class constants</a></td>
+  <td>2020-07-06</td>
+  <td>Implemented</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/assert-string-eval-cleanup">Deprecate remains of string evaluated code assertions</a></td>
+  <td>2023-05-31</td>
+  <td>Implemented</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/saner-array-sum-product">Saner array_(sum&#124;product)()</a></td>
+  <td>2023-01-14</td>
+  <td>Implemented</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/saner-inc-dec-operators">Path to Saner Increment/Decrement operators</a></td>
+  <td>2022-11-21</td>
+  <td>Implemented</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/rfc1867-non-post">RFC1867 for non-POST HTTP verbs</a></td>
+  <td>2023-10-06</td>
+  <td>Implemented</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/unbundle_imap_pspell_oci8">Unbundle ext/imap, ext/pspell, ext/oci8, and ext/PDO_OCI</a></td>
+  <td>2023-10-03</td>
+  <td>Accepted</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/policy-repository">Policy Repository</a></td>
+  <td>2023-12-04</td>
+  <td>Implemented</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/access_scope_from_magic_accessors">Access Scope from Magic Accessors</a></td>
+  <td>2023-01-19</td>
+  <td>Withdrawn</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/deprecations_php_8_4">Deprecations for PHP 8.4</a></td>
+  <td>2023-07-25</td>
+  <td>Draft</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/file-descriptor-function">Add file_descriptor() function</a></td>
+  <td>2023-01-16</td>
+  <td>Under Discussion</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/core-autoloading">New core autoloading mechanism with support for function autoloading</a></td>
+  <td>2023-04-03</td>
+  <td>Under Discussion</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/property-hooks">Property hooks</a></td>
+  <td>2023-01-03</td>
+  <td>Under discussion</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/release_cycle_update">Release cycle update</a></td>
+  <td>2023-11-05</td>
+  <td>Under Discussion</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="release-maintenance">Release Maintenance</h3>
+
+<p>Jakub Zelenka, one of the foundation developers, also volunteered to be a release manager for PHP 8.3. The PHP Foundation supported such an initiative.</p>
+
+<h2 id="the-php-foundation-brand-%26-public-channels">The PHP Foundation brand &amp; public channels</h2>
+
+<p>The PHP Foundation represents a community of core PHP developers and advocates for the PHP programming language. The channels listed below were used by the PHP Foundation for public communication:</p>
+
+<ul>
+<li>11,481 Twitter followers <a href="https://twitter.com/thephpf">https://twitter.com/thephpf</a></li>
+<li>10,320 LinkedIn page followers <a href="https://www.linkedin.com/company/phpfoundation">https://www.linkedin.com/company/phpfoundation</a></li>
+<li>684 Mastodon followers <a href="https://phpc.social/@thephpf">https://phpc.social/@thephpf</a></li>
+</ul>
+
+<p>The PHP Foundation members gave talks at multiple conferences throughout the year:</p>
+
+<ul>
+<li><a href="https://www.phpconference.co.uk/">PHP UK Conference</a> – Derick Rethans</li>
+<li><a href="https://phpconference.com/">International PHP Conference</a> – Nils Adermann</li>
+<li><a href="https://froscon.org/en/">FrOSCon</a> – Sebastian Bergmann</li>
+<li><a href="https://tek.phparch.com/">php&#91;tek&#93;</a> – Derick Rethans</li>
+<li><a href="https://events.drupal.org/lille2023/session/php-foundation-0">DrupalCon Lille</a> - Nils Adermann</li>
+<li><a href="https://php.bettercode.eu/">betterCode(PHP)</a> – Jakub Zalenka</li>
+<li><a href="https://event.afup.org/">ForumPHP</a> – Gina P. Banyard</li>
+<li><a href="https://2023.phpcon.pl/en/">PHPCon Poland</a> – Roman Pronskiy</li>
+<li><a href="https://live.symfony.com/2023-brussels-con/">SymfonyCon</a> – Nicolas Grekas</li>
+</ul>
+
+<h2 id="official-recognition-on-the-php-website">Official Recognition on the PHP website</h2>
+
+<p>The PHP Foundation is now officially endorsed on the php.net website. This was the result of a community vote on <a href="https://wiki.php.net/rfc/promote_php_foundation">RFC Promote the PHP Foundation</a>. Big thanks to Jim Winstead and the PHP community for this.</p>
+
+<h2 id="financial-report">Financial report</h2>
+
+<p>In 2023, The PHP Foundation was financially backed by organizations and individuals with the goal of paying a competitive salary to as many core developers as possible.</p>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>2021 - 2022</th>
+  <th>2023</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Total contributed to The PHP Foundation</td>
+  <td>$ 712,484</td>
+  <td>$ 478,767</td>
+</tr>
+<tr>
+  <td>Fees *</td>
+  <td>$ 90,273</td>
+  <td>$ 60,098</td>
+</tr>
+<tr>
+  <td>Total received</td>
+  <td>$ 622,211</td>
+  <td>$ 418,669</td>
+</tr>
+<tr>
+  <td>Paid to developers</td>
+  <td>$ 133,285</td>
+  <td>$ 275,181</td>
+</tr>
+</tbody>
+</table>
+
+<p><br>
+<em>* Fees include a 10%  Open Source Collective fiscal host fee (dealing with contracts, expense reviews and payments, bank account management, official registrations and dealing with government requirements, open collective platform development etc.), and 1-5% percent of payment processing fees, depending on the payment method used.</em></p>
+
+<p>All incoming and outgoing <strong>transactions of The PHP Foundation are publicly available</strong> to view for anyone: <a href="https://opencollective.com/phpfoundation#category-BUDGET">https://opencollective.com/phpfoundation#category-BUDGET</a></p>
+
+<p><img src="/assets/post-images/2024/report-2023/budget.png" alt="Budget" /></p>
+
+<h3 id="expenses">Expenses</h3>
+
+<p><a href="https://opencollective.com/phpfoundation/expenses">https://opencollective.com/phpfoundation/expenses</a></p>
+
+<p><img src="/assets/post-images/2024/report-2023/expenses.png" alt="Expenses" /></p>
+
+<h2 id="goals-for-2024">Goals for 2024</h2>
+
+<p>Our foremost mission remains the same: <strong>maintain and develop the PHP language</strong>. We’d like PHP to be the best platform for users and for businesses creating web applications and APIs.</p>
+
+<p>The main challenge for continuing the work of The PHP Foundation is to ensure sustainable sponsorship.</p>
+
+<p>From a technical standpoint, the goal is to ensure that foundation developers work on valuable tasks.</p>
+
+<h3 id="organization-goals">Organization goals</h3>
+
+<ul>
+<li>Onboard new major sponsors.</li>
+<li>Explore strategic partnerships and marketing opportunities.</li>
+<li>Further develop the Advisory Board initiative.</li>
+<li>Grow the foundation's community.</li>
+</ul>
+
+<h3 id="technical-goals">Technical goals</h3>
+
+<ul>
+<li>Ongoing maintenance and development of the PHP core.</li>
+<li>Deliver the STF projects.</li>
+<li>Improve the quality of the ideas and RFCs coming from the foundation.</li>
+<li>Conduct research and surveys to define priorities.</li>
+<li>Develop a high-level roadmap for PHP changes sponsored by the foundation.</li>
+</ul>
+
+<h2 id="budget-plan-for-2024">Budget plan for 2024</h2>
+
+<p>In 2024, two of our part-time developers extended commitment to go full-time, and we contracted 4 new developers.</p>
+
+<p>We have also adjusted the compensation rates for developers to better reflect the market, as the rates had not changed since 2021. As a result, our budget significantly increased.</p>
+
+<p>With this plan, we estimate our annual spending cap at approximately <strong>$840,000</strong> for developer compensation.</p>
+
+<p>Additionally, we anticipate receiving <strong>€205,000</strong> from the STF investment. These funds will be allocated to developer reimbursements and our partnership with OSTIF.org for an external security audit.</p>
+
+<p>Our collaboration with the OpenCollective platform has been positive, and we plan to continue operating under the umbrella of the Open Source Collective in 2024. This means that sponsorships we receive are reduced by 10% for Open Source Collective fees and 1–5% for payment processing fees.</p>
+
+<h2 id="outro">Outro</h2>
+
+<p>The PHP language is a living entity and, as such, requires continuous support to address developer issues, resolve security vulnerabilities, and has to evolve to meet the needs of the future.</p>
+
+<p>Based on the strong second year of the foundation, we are excited to continue and multiply the efforts in the next years.</p>
+
+<p>With your help, we continue the mission to support, advance, and develop the PHP language.</p>
+
+<section class="text-center mt-6">
+    <div class="mb-14">
+        <a href="/join" target="_blank" class="inline-block text-xl py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">
+            Join The PHP Foundation
+        </a>
+    </div>
+</section>
+]]></content><link href="https://thephp.foundation/blog/2024/02/26/transparency-and-impact-report-2023/"/><id>https://thephp.foundation/blog/2024/02/26/transparency-and-impact-report-2023/</id><updated>Mon, 26 Feb 2024 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[The PHP Foundation Update, January 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
+
+<p>In November, the PHP Foundation was launched publicly and we’ve seen enormous support from the community.
+Thanks to all of you who have already supported the initiative! We’re planning to update you about our workstream activities on a monthly basis, and this is our first update post.
+Let’s take a look at what we’ve been working on!</p>
+
+<h3 id="the-first-round-of-applications-is-now-closed">The first round of applications is now closed</h3>
+
+<p>Since November, many developers have applied for sponsorship, and there were quite a few that we would be very happy to sponsor.</p>
+
+<p>We are discussing the details with applicants and planning the budget.
+In order to organize this correctly we need proper documents and agreements.
+The JetBrains legal department and OpenCollective staff are helping us to prepare the required paperwork.</p>
+
+<p>We plan to complete the preparations and sign the necessary documents in January.
+After that, we will announce the list of the first batch of sponsored developers.</p>
+
+<h3 id="how-we%E2%80%99re-making-decisions">How we’re making decisions</h3>
+
+<p>So far, we have held three administration meetings where we discussed the pressing issues.
+Each meeting and the decision-making process are documented in our organization on GitHub at <a href="https://github.com/thephpf">github.com/thephpf</a>.
+For now the details are hidden, but we would like to make these meetings and notes public at some point.</p>
+
+<p>In the next few months, we plan to hold biweekly meetings and work on the foundation’s governance, rules, and bylaws.</p>
+
+<h3 id="shout-out-to-our-sponsors">Shout out to our sponsors</h3>
+
+<p>Many thanks to everyone who has donated to the PHP Foundation!</p>
+
+<p>In addition to the founding sponsors – <a href="https://www.jetbrains.com">JetBrains</a>, <a href="https://automattic.com">Automattic</a>, <a href="https://www.acquia.com">Acquia</a>, <a href="https://www.zend.com">Zend</a>, <a href="https://craftcms.com">Craft CMS</a>, <a href="https://laravel.com">Laravel</a>, <a href="https://symfony.com">Symfony</a>, <a href="https://tideways.com">Tideways</a>, <a href="https://www.prestashop.com/en">PrestaShop</a>, and <a href="https://packagist.com">Private Packagist</a> – we have a whole new group of major sponsors!</p>
+
+<p>A big thanks goes to the following companies who donated $10,000 or more:</p>
+
+<ul>
+<li><a href="https://www.rakus.co.jp/">RAKUS</a></li>
+<li><a href="https://www.livesport.eu/">Livesport s.r.o.</a></li>
+<li><a href="https://op.gg/">OP.GG</a></li>
+<li><a href="https://polcode.com">Polcode</a></li>
+<li><a href="https://www.shopware.com">Shopware</a></li>
+<li><a href="https://binc.jp">BASE, Inc.</a></li>
+<li><a href="https://aternos.org">Aternos GmbH</a></li>
+<li><a href="https://digitalscholar.org">Digital Scholar</a></li>
+<li><a href="https://en.ardennes-etape.be">Ardennes-étape</a></li>
+</ul>
+
+<p>Thank you to everyone else who has contributed – the PHP Foundation is all of us!</p>
+
+<p>That’s all for today. Follow us on Twitter <a href="https://twitter.com/ThePHPF">@ThePHPF</a> to get the latest updates from the foundation.</p>
+
+<p>💖🐘</p>
+
+<p>Feel free to contact us at <a href="&#109;&#x61;i&#108;&#x74;&#111;&#58;&#x63;&#111;&#x6e;&#x74;&#97;&#x63;t&#64;&#x74;&#104;&#101;&#x70;&#104;&#x70;&#x2e;&#102;&#x6f;&#x75;&#110;&#x64;a&#116;&#x69;&#111;&#110;">contact@thephp.foundation</a>.</p>
+]]></content><link href="https://thephp.foundation/blog/2022/01/21/the-php-foundation-update-january-2022/"/><id>https://thephp.foundation/blog/2022/01/21/the-php-foundation-update-january-2022/</id><updated>Fri, 21 Jan 2022 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, April 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
 
 <p>We’re off by two but still happy to bring you an update from the foundation.</p>
 
@@ -607,154 +1214,93 @@ This concludes the list of commits made by the PHP core team in the past month. 
 <p>That’s all for today. Follow us on Twitter <a href="https://twitter.com/thephpf">@ThePHPF</a> to get the latest updates from the Foundation.</p>
 
 <p>💜🐘</p>
-]]></content><link href="https://thephp.foundation/blog/2022/05/02/the-php-foundation-update-april-2022/"/><id>https://thephp.foundation/blog/2022/05/02/the-php-foundation-update-april-2022/</id><updated>Mon, 02 May 2022 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, May 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
+]]></content><link href="https://thephp.foundation/blog/2022/05/02/the-php-foundation-update-april-2022/"/><id>https://thephp.foundation/blog/2022/05/02/the-php-foundation-update-april-2022/</id><updated>Mon, 02 May 2022 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[The PHP Foundation Update, March 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
 
-<p>This time our regular update is short. Check the <a href="https://thephp.foundation/blog/2022/05/30/php-core-roundup-2/">PHP Core Roundup</a> series for a detailed development log.</p>
+<p>We promised to publish monthly updates, but something everything went wrong in February.</p>
 
-<h2 id="interview-with-core-developers">Interview with core developers</h2>
+<p>Thank you all for being understanding about the lack of update in February. This post will bring you all up to date on everything that's been accomplished since our last post in January.</p>
 
-<p>After the <a href="https://opencollective.com/phpfoundation/updates/php-foundation-update-april-2022">April update</a>, Sebastian Bergmann published an <a href="https://thephp.foundation/blog/2022/05/06/interview-with-core-developers/">interview with our sponsored core developers</a>: Derick Rethans, Gina Peter Banyard, Jakub Zelenka, Máté Kocsis, and Ilija Tovilo. The other day we updated it and added answers from Arnaud Le Blanc. Check <a href="https://thephp.foundation/blog/2022/05/06/interview-with-core-developers/">the interview</a> to get a high-level picture of what guys are working on.</p>
+<h3 id="php-foundation-core-developers">PHP Foundation Core Developers</h3>
 
-<h2 id="php-core-roundup">PHP Core Roundup</h2>
+<p>One of our primary goals for 2022 is to find and hire developers to work on the core.</p>
 
-<p>In the <a href="https://thephp.foundation/blog/2022/05/30/php-core-roundup-2/">PHP Roundup #2</a> post by Ayesh, you can find a detailed log of what's been done and discussed regarding the PHP engine this month.</p>
-
-<p>We decided to rename the series from <em>PHP Roundup</em> to <em>PHP Core Roundup</em> to reflect the content better and emphasize that the roundup is only about the core of the language.</p>
-
-<p>Send your questions about the roundup directly to roundup@thephp.foundation or simply tweet at us: <a href="https://twitter.com/thephpf">@ThePHPF</a>, <a href="https://twitter.com/Ayeshlive">@Ayeshlive</a>.</p>
-
-<h2 id="thank-you-to-our-sponsors">Thank you to our sponsors</h2>
-
-<p>This month we are glad to welcome new major sponsors who generously support the PHP Foundation:</p>
+<p>We are excited to reveal our initial group of sponsored developers!</p>
 
 <ul>
-<li><strong><a href="https://moodle.org/">Moodle</a></strong></li>
-<li><strong><a href="https://spysystem.dk/">SPY</a></strong></li>
-<li><strong><a href="https://symfony.com/">Symfony</a></strong></li>
+<li><strong>Arnaud Le Blanc</strong> <a href="https://github.com/arnaud-lb">@arnaud-lb</a></li>
+<li><strong>Derick Rethans</strong> <a href="https://github.com/derickr">@derickr</a></li>
+<li><strong>Gina Peter Banyard</strong> <a href="https://github.com/Girgias">@Girgias</a></li>
+<li><strong>Ilija Tovilo</strong> <a href="https://github.com/iluuu1994">@iluuu1994</a></li>
+<li><strong>Jakub Zelenka</strong> <a href="https://github.com/bukka">@bukka</a></li>
+<li><strong>Máté Kocsis</strong> <a href="https://github.com/kocsismate">@kocsismate</a></li>
 </ul>
 
-<p>Thank you, folks!</p>
+<p>You might be surprised to see Derick Rethans’ name in the list above. After all, he was listed as a PHP Fellow when we announced the Foundation last year. Shortly after we launched the Foundation, Derick informed us of his desire to focus his work on developing and maintaining PHP's core and that he wanted to apply for sponsorship from the Foundation to make this happen. To avoid any conflicts of interest, Derick stepped down from his administrative role before he applied for sponsorship.</p>
 
-<p>We’d like to give a shout-out to everyone for your continued support.</p>
+<p>We are incredibly happy that these core developers have agreed to join the Foundation, and we are looking forward to the great things we can do together.</p>
 
-<p>We truly appreciate it – the PHP Foundation is all of us!</p>
+<h3 id="code-of-conduct">Code of Conduct</h3>
+
+<p>All participants of the PHP Foundation including administration members and developers are expected to abide by the <a href="https://opencollective.com/redirect?url=https%3A%2F%2Fwww.contributor-covenant.org%2Fversion%2F2%2F1%2Fcode_of_conduct%2F">Code of Conduct</a>.</p>
+
+<p>To ensure enforcement of the Code of Conduct we are setting up a dedicated team. Tobias Nyholm <a href="https://github.com/Nyholm">@Nyholm</a>, who leads <a href="https://opencollective.com/redirect?url=https%3A%2F%2Fsymfony.com%2Fcare">Symfony’s CARE team</a>, will be responsible for assembling and running the Foundation’s CoC team. Welcome aboard, Tobias!</p>
+
+<h3 id="what%E2%80%99s-next">What’s next</h3>
+
+<p>Our main goal for the next month is to set up a proper communication and development process. We will conduct several meetings to discuss technical and organizational matters.</p>
+
+<p>Since the purpose of the Foundation is to train the next generation of internal developers, we want to emphasize maintenance and user-focused features to maximize our impact. As such, we will review the efforts and ensure the plans fall in line with such an agenda.</p>
+
+<p>We would also like to reduce the bus factor of PHP. So whenever possible, developers will be expected to update the <a href="https://opencollective.com/redirect?url=https%3A%2F%2Fwww.phpinternalsbook.com%2F">PHP Internals Book</a> to ensure that no knowledge is lost.</p>
+
+<p>On the administration side, we plan to work on increasing the transparency of our operations: to shed some light on the governance structure, discussions, and so on.</p>
+
+<h3 id="php-foundation-stands-with-ukraine-%F0%9F%87%BA%F0%9F%87%A6">PHP Foundation stands with Ukraine 🇺🇦</h3>
+
+<p>On February 24th, 2022, Vladimir Putin's Regime began an illegal war of aggression in Ukraine. There are no words to truly express our outrage at such disregard for human life.</p>
+
+<p>Many PHP developers have lived in or are living in Ukraine, and the PHP Foundation is supported by many backers from Ukraine, including sponsors <a href="https://opencollective.com/redirect?url=https%3A%2F%2Foroinc.com%2Flets-stop-the-war-together%2F">Oro, Inc.</a> and <a href="https://opencollective.com/redirect?url=https%3A%2F%2Fmacpaw.com%2F">MacPaw</a>.</p>
+
+<p>If you, like many in the PHP Foundation, are desperate to find a way to help, there are some organizations listed below that are working to provide humanitarian aid to people who are caught up in this war.</p>
+
+<p>We are proud that many of our sponsors stand with Ukraine too. Here are just a few examples:</p>
+
+<ul>
+<li><a href="https://opencollective.com/redirect?url=https%3A%2F%2Fsymfony.com%2Fblog%2Fsymfony-stands-with-ukraine">Symfony</a></li>
+<li><a href="https://opencollective.com/redirect?url=https%3A%2F%2Fwww.acquia.com%2Fblog%2Facquia-stands-ukraine">Acquia</a></li>
+<li><a href="https://opencollective.com/redirect?url=https%3A%2F%2Fblog.jetbrains.com%2Fblog%2F2022%2F03%2F11%2Fjetbrains-statement-on-ukraine%2F">JetBrains</a></li>
+<li><a href="https://opencollective.com/redirect?url=https%3A%2F%2Fwordpress.org%2Fnews%2F2022%2F03%2Fepisode-26-matt-mullenweg-on-ukraine-community-and-wordpress%2F">Automattic</a></li>
+<li><a href="https://github.com/composer/packagist/commit/86244a3695fcaaac9c5ba4257a4314eae1c6d981">Composer</a></li>
+<li><a href="https://twitter.com/Livesport_eu/status/1496925425821491208">Livesport.eu</a></li>
+<li><a href="https://opencollective.com/redirect?url=https%3A%2F%2Fwww.shopware.com%2Fen%2Fshopware-and-its-two-founders-support-caritas-international-aid-for-ukraine%2F">Shopware</a></li>
+</ul>
+
+<p>Please consider supporting the people of Ukraine. You can find more information on how to do so on the <a href="https://opencollective.com/redirect?url=https%3A%2F%2Fen.isupportukraine.eu%2F">I Support Ukraine</a> website.</p>
+
+<p>If you’d like to make a donation, consider <a href="https://opencollective.com/redirect?url=https%3A%2F%2Fwww.unicefusa.org%2Fwar-ukraine">UNICEF</a>, <a href="https://opencollective.com/redirect?url=https%3A%2F%2Fwww.peopleinneed.net%2Fdonate%2Fonce%3Famount%3D1000%26accountId%3D7">People in Need</a>, or any <a href="https://opencollective.com/redirect?url=https%3A%2F%2Fwww.globalcitizen.org%2Fen%2Fcontent%2Fways-to-help-ukraine-conflict%2F">other humanitarian organization</a> of your choice helping the people not only in Ukraine.</p>
+
+<p>If you are a PHP developer in need of support, reach out to us at social@thephp.foundation and we’ll do everything we can to help you.</p>
+
+<h3 id="thank-you-to-our-sponsors">Thank you to our sponsors</h3>
+
+<p>Lots of you have kindly donated to the PHP Foundation, and we are extremely grateful!</p>
+
+<p>We’d like to say a massive thanks to the following newly joined major sponsors for their very generous contributions:</p>
+
+<ul>
+<li><a href="https://opencollective.com/redirect?url=https%3A%2F%2Fpaycomonline.com%2F">Paycom</a></li>
+<li><a href="https://opencollective.com/redirect?url=https%3A%2F%2Fwww.ec-cube.net%2F">EC-CUBE</a></li>
+<li><a href="https://opencollective.com/redirect?url=https%3A%2F%2Fwww.cambiumlearning.com%2F">Cambium Learning, Inc.</a> (<a href="https://opencollective.com/redirect?url=https%3A%2F%2Fwww.learninga-z.com%2F">Learning A-Z</a>)</li>
+</ul>
+
+<p>And shout-out to everyone else who has contributed, we are truly grateful to you all – the PHP Foundation is all of us!</p>
+
+<p>A special mention goes to <a href="https://opencollective.com/redirect?url=https%3A%2F%2F1password.com%2F">1password</a> for <a href="https://github.com/1Password/1password-teams-open-source#the-php-foundation">providing us</a> with a free membership to ensure all of our sensitive data is stored and shared securely.</p>
 
 <p>That’s all for today. Follow us on Twitter <a href="https://twitter.com/thephpf">@ThePHPF</a> to get the latest updates from the Foundation.</p>
 
-<p>💜🐘</p>
-]]></content><link href="https://thephp.foundation/blog/2022/06/01/php-foundation-update-may-2022/"/><id>https://thephp.foundation/blog/2022/06/01/php-foundation-update-may-2022/</id><updated>Wed, 01 Jun 2022 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, November 2023]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
-
-<p>This post provides insights into The PHP Foundation's recent activities.</p>
-
-<blockquote>
-  <p>My name is Roman Pronskiy. I’m employed by <a href="https://jetbrains.com/">JetBrains</a> to manage operations at the PHP Foundation. Reach out to me at pronskiy@thephp.foundation.</p>
-  
-  <p>You can find the full foundation structure <a href="https://thephp.foundation/structure/">here</a>, including all board members, developers, and the community.</p>
-</blockquote>
-
-<h2 id="team-growth">Team Growth</h2>
-
-<p>In September, we initiated an open call for new developers to join the PHP Foundation by launching an <a href="https://thephp.foundation/blog/2023/09/06/application-form-2023/">application form</a>.</p>
-
-<p>We received a total of 207 applications. From this pool, we selected a shortlist of 12 qualified candidates. Following a comprehensive review and input from existing foundation members, we further refined our selection to 4 outstanding individuals. We will soon announce the new members.</p>
-
-<p>The primary focus for the new developers will be on the maintenance and modernization of PHP’s infrastructure — a critical step towards ensuring PHP being a robust and forward-looking language.</p>
-
-<p>The public work undertaken by our developers can be followed in our monthly <a href="https://thephp.foundation/blog/tag/roundup/">"PHP Core Roundup"</a> series, which highlights the ongoing progress and developments within PHP core.</p>
-
-<h2 id="advisory-board">Advisory Board</h2>
-
-<p>For our major sponsors, we offer exclusive insights through occasional digests that provide a deeper dive into discussions, debates, and early-stage developments. This not only keeps our sponsors abreast of the latest happenings but also allows them to see the direct impact of their support. This is one of the benefits of being an Advisory Board member.</p>
-
-<p>We announced the advisory board initiative <a href="https://thephp.foundation/blog/2023/03/31/php-foundation-update-march-2023/#a-new-benefit-for-major-sponsors-%E2%80%93-advisory-board-membership">in March</a>. Since then, 9 companies have joined the initiative with their representatives.</p>
-
-<p>In addition to the <a href="https://thephp.foundation/structure/">Governing Board</a> that includes Automattic, JetBrains, Private Packagist, Symfony, Tideways, Zend by Perforce, and PHP fellows, we now welcome the Advisory Board members: Moodle, Shopware, Laravel, Ardennes-étape, Les-Tilleuls.coop / API Platform, Aternos GmbH, PrestaShop, CraftCMS.</p>
-
-<p>There were several useful discussions within the group. Specifically, we’d like to highlight the one around <a href="https://wiki.php.net/rfc/property-hooks">Property Hooks RFC</a>. The Advisory Board feedback helped to shape the proposal design significantly.</p>
-
-<p>By the way, you can already try property hooks on <a href="https://3v4l.org/">3v4l.org</a>, thanks to <a href="https://github.com/sponsors/SjonHortensius">Sjon Hortensius</a>.
-<a href="https://3v4l.org/Y4KZn/rfc#vrfc.property-hooks"><img src="/assets/post-images/2023/3v4l-property-hooks.png"></a></p>
-
-<h2 id="sovereign-tech-fund-invests-in-php">Sovereign Tech Fund invests in PHP</h2>
-
-<p>The <a href="https://sovereigntechfund.de/en/">Sovereign Tech Fund</a> is an organization that supports the development, improvement, and maintenance of open digital infrastructure in the public interest. Its goal to strengthen the open-source ecosystem sustainably, focusing on security, resilience, technological diversity, and the people behind the code. STF is funded by the German Federal Ministry for Economic Affairs and Climate Action (BMWK) and supported by the German Federal Agency for Disruptive Innovation GmbH (SPRIND).</p>
-
-<p>We have collaborated with STF to create work plans for these specific projects: PECL overhaul, Testing tool for FPM, Security Audit, and Documentation improvements.</p>
-
-<p>We’ll share more details on each project early next year, and for now we are thrilled and grateful to the Sovereign Tech Fund for trusting us.</p>
-
-<h2 id="security-audit-of-php-is-coming">Security audit of PHP is coming</h2>
-
-<p>As mentioned above, STF is investing in PHP, and we are going to commission an audit of PHP's C code base. We expect security issues to be found. To mitigate possible bad perception, we aim to publish and fix the revealed security issues at the same time.</p>
-
-<p>For this security audit, we are partnering with <a href="https://ostif.org/">The Open Source Technology Improvement Fund, Inc</a> (OSTIF), a corporate non-profit dedicated to securing critical open-source projects. They have a proven track record of audits for <a href="https://github.com/ostif-org/OSTIF/blob/main/Completed-Engagements.md">popular open-source projects</a> such as cURL, Git, Linux Kernel, OpenSSL, Node.js, and others.</p>
-
-<h2 id="reports-schedule">Reports schedule</h2>
-
-<p>Although we promised to prepare quarterly reports, that unfortunately did not happen to be feasible. So for 2023, we fall back to one yearly report. The 2023 transparency report will be published in December.</p>
-
-<h2 id="meet-us-at-the-conferences">Meet us at the conferences</h2>
-
-<p>You can meet our team at the following conferences in late 2023:</p>
-
-<p><strong><a href="https://php.bettercode.eu/">betterCode(PHP)</a> – Nov 27</strong></p>
-
-<p>Jakub Zalenka will give a talk: "PHP 8.3: Changes and future plans". <br> 
-Besides Jakub, there will be talks from Niels Dossche and Sebastian Bergmann.</p>
-
-<p><strong><a href="https://live.symfony.com/2023-brussels-con/">SymfonyCon Brussels</a> – Dec 7–8</strong></p>
-
-<p>You’ll be able to meet and talk to our board members: Nils Adermann, Sebastian Bergmann, Nicolas Grekas, and Roman Pronskiy.</p>
-
-<h2 id="thank-you-to-our-sponsors">Thank you to our sponsors</h2>
-
-<p>Check out the <a href="https://thephp.foundation/#sponsors">Sponsors section</a> on our <a href="https://thephp.foundation/">website</a>. It shows all major contributors sorted by donation amount.</p>
-
-<p>Big thanks to the <strong><a href="https://sentry.io/">Sentry</a></strong> team for sponsoring the PHP foundation!</p>
-
-<p>Sentry is a popular application performance monitoring &amp; error tracking tool, and they <a href="https://blog.sentry.io/we-just-gave-500-000-dollars-to-open-source-maintainers/?utm_source=linkedin&amp;utm_content=blog-fundfest23-learnmore">just gave $500,000 to multiple open source maintainers</a>.</p>
-
-<p><strong>Shout-out to non-financial sponsors</strong></p>
-
-<p><a href="https://www.digitalocean.com/">Digital Ocean</a> has been supporting the PHP project for ages – <a href="https://www.php.net/">php.net</a> servers run on DigitalOcean boxes. We would like to express our gratitude to DigitalOcean for their ongoing support.</p>
-
-<p>Big thanks to <a href="https://thephp.foundation/#sponsors">everyone</a> for your continued support – the PHP Foundation is all of us!</p>
-
-<hr />
-
-<p>That’s all for today. Follow us on Twitter <a href="https://twitter.com/thephpf">@ThePHPF</a> or Mastodon <a href="https://phpc.social/@thephpf">phpc.social/@thephpf</a> to get the latest updates from the PHP Foundation.
-💜🐘</p>
-]]></content><link href="https://thephp.foundation/blog/2023/11/27/php-foundation-update-november-2023/"/><id>https://thephp.foundation/blog/2023/11/27/php-foundation-update-november-2023/</id><updated>Mon, 27 Nov 2023 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[The PHP Foundation
-Team Update 2024]]></title><content type="html"><![CDATA[<p>Now in our third year, we're gearing up to grow our impact. This year, four more developers are joining the PHP Foundation to further advance PHP.</p>
-
-<p>Since April 2022, the PHP Foundation has contracted six outstanding developers:</p>
-
-<ul>
-<li>Arnaud Le Blanc <a href="https://github.com/arnaud-lb">@arnaud-lb</a></li>
-<li>Derick Rethans <a href="https://github.com/derickr">@derickr</a></li>
-<li>Gina Peter Banyard <a href="https://github.com/Girgias">@Girgias</a></li>
-<li>Ilija Tovilo <a href="https://github.com/iluuu1994">@iluuu1994</a></li>
-<li>Jakub Zelenka <a href="https://github.com/bukka">@bukka</a></li>
-<li>Máté Kocsis <a href="https://github.com/kocsismate">@kocsismate</a></li>
-</ul>
-
-<p>All of them started as part-time contributors, and since then have significantly grown their capacity and dedication to PHP core tasks. We consider it a big achievement that the team continues to collaborate effectively, accumulating more experience and knowledge, and expanding their PHP Core involvement.</p>
-
-<h2 id="team-update-2024">Team Update 2024</h2>
-
-<p>We are happy to announce a team expansion. Four talented developers are joining as part-time team members of the foundation.</p>
-
-<ul>
-<li>David Carlier <a href="https://github.com/devnexen">@devnexen</a></li>
-<li>James Titcumb <a href="https://github.com/asgrim">@asgrim</a></li>
-<li>Saki Takamachi <a href="https://github.com/SakiTakamachi">@SakiTakamachi</a></li>
-<li>Shivam Mathur <a href="https://github.com/shivammathur">@shivammathur</a></li>
-</ul>
-
-<p>Please give them a warm welcome! We are looking forward to the great things we will accomplish together.</p>
-
-<p>Happy New Year! 🎉🐘💜</p>
-]]></content><link href="https://thephp.foundation/blog/2024/01/03/the-php-foundation-team-update-2024/"/><id>https://thephp.foundation/blog/2024/01/03/the-php-foundation-team-update-2024/</id><updated>Wed, 03 Jan 2024 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><author><name>Nils Adermann</name><uri>https://twitter.com/naderman</uri></author><title type="html"><![CDATA[We Are Looking for Developers to Join the PHP Foundation]]></title><content type="html"><![CDATA[<p>Working on an open-source project which is used by millions of developers and which is trusted by hundreds of thousands of businesses around the world. Getting paid for this work and not having a burnout. Sounds like a dream, doesn't it? But this is exactly the opportunity that the PHP Foundation provides to those who would like to develop and maintain the PHP language.</p>
+<p>💙💛 ☮️ 🐘</p>
+]]></content><link href="https://thephp.foundation/blog/2022/03/31/the-php-foundation-update-march-2022/"/><id>https://thephp.foundation/blog/2022/03/31/the-php-foundation-update-march-2022/</id><updated>Thu, 31 Mar 2022 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><author><name>Nils Adermann</name><uri>https://twitter.com/naderman</uri></author><title type="html"><![CDATA[We Are Looking for Developers to Join the PHP Foundation]]></title><content type="html"><![CDATA[<p>Working on an open-source project which is used by millions of developers and which is trusted by hundreds of thousands of businesses around the world. Getting paid for this work and not having a burnout. Sounds like a dream, doesn't it? But this is exactly the opportunity that the PHP Foundation provides to those who would like to develop and maintain the PHP language.</p>
 
 <p>The PHP Foundation is a non-profit organization, started in 2021 by Acquia, Automattic, Craft CMS, JetBrains, Laravel, PrestaShop, Private Packagist, Symfony, Tideways, and Zend by Perforce with a mission to support, advance, and develop the PHP language.</p>
 
@@ -851,92 +1397,107 @@ are nicer.
 </p>
 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeYNVQoK2r9c6EtoMnDaIpLzDc95egt1a1mcfiHTovqMDhFuw/viewform?embedded=true" width="100%" height="1693" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-]]></content><link href="https://thephp.foundation/blog/2023/09/06/application-form-2023/"/><id>https://thephp.foundation/blog/2023/09/06/application-form-2023/</id><updated>Wed, 06 Sep 2023 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, July 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
+]]></content><link href="https://thephp.foundation/blog/2023/09/06/application-form-2023/"/><id>https://thephp.foundation/blog/2023/09/06/application-form-2023/</id><updated>Wed, 06 Sep 2023 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, March 2023]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
 
-<p>Last month, the PHP foundation members continued the work on PHP 8.2 release and more. We are prepared to give a few talks this autumn. Also, besides core developers, we have a growing community of volunteers who help the PHP foundation. Read on to learn more.</p>
+<p>It's been a while since our last update, so today we’d like to shed some light on what the PHP Foundation has been up to in recent months. Topics include changes to the reporting schedule, a new initiative within the Foundation called the Advisory Board, conferences with Foundation members, and other news.</p>
+
+<h2 id="new-schedule-for-the-foundation%E2%80%99s-updates-and-reports">New schedule for the Foundation’s updates and reports</h2>
+
+<p>Last year we started by publishing monthly updates, followed by an annual report released in October. Check out the <a href="https://thephp.foundation/blog/2022/11/22/transparency-and-impact-report-2022/">Impact and Transparency Report 2022</a> if you haven’t yet had a chance to do so.</p>
+
+<p>Now that the Foundation has moved into a phase of steady growth and there are fewer administrative updates, we will publish an update and report once a quarter. The next report, the PHP Foundation 2023 Q1 Report, will come out in April.</p>
+
+<p>As for the technical details and results of the Foundation’s developer team, nothing has changed. Every month <a href="https://aye.sh/">Ayesh</a> publishes a <a href="https://thephp.foundation/blog/tag/roundup/">PHP Core Roundup</a> where he talks about what’s kept the team busy and the accomplishments of other PHP contributors.</p>
+
+<h2 id="the-php-foundation-is-now-on-github-sponsors">The PHP Foundation is now on GitHub Sponsors</h2>
+
+<p>From the very beginning, we used <a href="https://opencollective.com/">OpenCollective</a> as our financial platform for collecting and distributing funds. We are very happy with and grateful for their service.</p>
+
+<p>For some companies and individuals, though, it’s a lot easier to donate via GitHub Sponsors. To make it easier for them to pitch in, we’ve opened a GitHub Sponsors page: <strong><a href="https://github.com/sponsors/ThePHPF">github.com/sponsors/ThePHPF</a></strong>.</p>
+
+<p>We are going to use GitHub Sponsors only to <em>receive</em> financial support. The funds will then be transferred to OpenCollective on a monthly basis, and we’ll continue to pay developers via OpenCollective, as before.</p>
+
+<h2 id="a-new-benefit-for-major-sponsors-%E2%80%93-advisory-board-membership">A new benefit for major sponsors – Advisory Board membership</h2>
+
+<p>A major goal of the PHP Foundation is to provide a voice for PHP's users in its development, and one initiative is to create an Advisory Board to provide communication between sponsors and the foundation team.</p>
+
+<p>The advisory board's role is to assist in setting priorities for the utilization of the developer time and resources that the foundation provides. In other words, the board helps the foundation determine how best to allocate its funds to support the most critical and beneficial initiatives for the PHP community.</p>
+
+<p>The Advisory Board is a forum for members to discuss shared challenges and propose feedback on developer plans. It provides a platform to exchange ideas and bring forward community concerns. The Foundation will review common requests and sponsor impactful projects, but feedback is provided periodically and not all suggestions will be implemented. It is a shared communication channel for constructive dialogue and common goal-setting.</p>
+
+<p>For the first iteration of the Advisory Board, any company that contributed $10,000 in the early stages of the PHP Foundation will be offered the status of a major sponsor and a seat on the Advisory Board through October 2023. After that, the status and membership will be based on the extent of each member’s contributions and their commitment to continued support.</p>
+
+<p>Currently, membership on the Advisory Board has the following benefits:</p>
+
+<ul>
+<li>Every month we provide developer plans – a list of tasks that the PHP Foundation developers will work on in the near future. Advisory Board members can discuss these plans among their teams and provide us with feedback that they feel we should consider.</li>
+<li>Advisory board members are welcome to share their pain points or ideas on behalf of their communities or organizations. Suggestions may be discussed by other members and will be considered by the foundation developers.</li>
+</ul>
+
+<p>⚠️ Note: All language decisions go through the established Request for Comments (RFC) process, which is not affiliated with the PHP Foundation. Language decisions are the purview of PHP Internals. It means that some of the PHP Foundation’s efforts may not make it into the language. But with the Advisory Board discussions, we expect increased quality and acceptance rate of the foundation’s RFCs.</p>
+
+<p>We’re also looking into providing some exclusive benefits for individual sponsors and smaller business contributors, as well. What would sound interesting or lucrative to you? Let us know!</p>
 
 <h2 id="meet-us-at-the-conferences">Meet us at the conferences</h2>
 
-<p>This autumn, you will be able to talk to the foundation administration members and developers at real-life events!</p>
+<p>This spring, the PHP Foundation admins and developers will attend a few conferences.</p>
 
-<p><strong><a href="https://event.afup.org/afup-day-2022/">Forum PHP, Paris – October 13-14</a></strong></p>
-
-<p><strong>Sebastian Bergmann and Roman Pronskiy</strong> will give a talk about the past, the present, and the future of PHP. They will share the status of the Foundation, what has been accomplished in the first year, share some plans, and, of course, answer questions and expect feedback.</p>
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I look forward to talk about <a href="https://twitter.com/ThePHPF?ref_src=twsrc%5Etfw">@ThePHPF</a> at <a href="https://twitter.com/afup?ref_src=twsrc%5Etfw">@afup</a> <a href="https://twitter.com/hashtag/ForumPHP?src=hash&amp;ref_src=twsrc%5Etfw">#ForumPHP</a> together with <a href="https://twitter.com/pronskiy?ref_src=twsrc%5Etfw">@pronskiy</a>!<br><br>We’re eager to answer your questions and look forward to hearing your suggestions! <a href="https://t.co/2x8id0mDZ5">pic.twitter.com/2x8id0mDZ5</a></p>&mdash; Sebastian Bergmann (@s_bergmann) <a href="https://twitter.com/s_bergmann/status/1544184297115947010?ref_src=twsrc%5Etfw">July 5, 2022</a></blockquote>
-
-<p><br></p>
-
-<p><strong>Gina P. Banyard</strong>, one of the PHP Foundation’s developers, will talk about PHP’s type system internals.</p>
-
-<blockquote class="twitter-tweet"><p lang="fr" dir="ltr">Nous sommes ravis d&#39;accueillir pour la première fois <a href="https://twitter.com/Girgias?ref_src=twsrc%5Etfw">@Girgias</a>, jeune et talentueux core-contributeur à PHP, pour un talk sur les rouages du typage lors du Forum PHP 2022.<br>🎤 &quot;Typage en PHP comment ça fonctionne ?&quot; - Forum PHP 2022 - 13&amp;14/10, Disneyland Paris <a href="https://t.co/dB0pWflmKB">pic.twitter.com/dB0pWflmKB</a></p>&mdash; AFUP (@afup) <a href="https://twitter.com/afup/status/1546423801998708736?ref_src=twsrc%5Etfw">July 11, 2022</a></blockquote>
-
-<p><br></p>
-
-<p><strong><a href="https://live.symfony.com/2022-paris-con/">SymfonyCon, Paris – November 17-18</a></strong></p>
-
-<p>At this conference, you’ll be able to catch up with Sebastian Bergmann, Roman Pronskiy, and Nicolas Grekas.</p>
-
-<p><strong><a href="https://phpconference.com/">International PHP Conference, Munich – October 23-24</a></strong></p>
-
-<p>Sebastian Bergmann and Derick Rethans will each talk at the IPC this year.</p>
-
-<p><em>Where else would you like to see us?</em></p>
-
-<h3 id="%2A%2Aswag%21%2A%2A"><strong>Swag!</strong></h3>
-
-<p>By the way, we’d like to have stickers and other swag for conference attendees. If you would like to help with the design or sponsor the production, please reach out to <a href="&#109;&#x61;i&#108;&#x74;&#111;&#58;&#x63;&#111;&#x6e;&#x74;&#97;&#x63;t&#64;&#x74;&#104;&#101;&#x70;&#104;&#x70;&#x2e;&#102;&#x6f;&#x75;&#110;&#x64;a&#116;&#x69;&#111;&#110;">contact@thephp.foundation</a>.</p>
-
-<h2 id="website-updates">Website updates</h2>
-
-<p>Thanks to Sergey Panteleev, one of the PHP 8.2 release managers, we have a few nice additions to our website.</p>
+<p><strong><a href="https://phpconference.com/berlin-en/program-berlin-en/">International PHP Conference</a>, May 22–26, Berlin, Germany</strong></p>
 
 <ul>
-<li>A new <strong><a href="https://thephp.foundation/structure/">structure page</a></strong> where you can see all the people currently actively involved in the PHP Foundation activities.</li>
-<li>Every post has a nicely generated preview image — please, share the links to the PHP Foundation to help spread the word.</li>
+<li>Sebastian Bergmann (thePHP.cc, PHPUnit), Nils Adermann (Packagist Conductors GmbH, Composer), and Gina Peter Banyard (PHP core developer) will participate in a keynote panel about the PHP Foundation and the State of PHP.</li>
+<li>Benjamin Eberlei (Tideways GmbH, Doctrine) and Nils Adermann will give a presentation entitled <em>The PHP Foundation: Past, Present, and Future</em>.</li>
+<li>Gina Peter Banyard will present a talk called <em>Contributing to PHP: How?</em></li>
 </ul>
 
-<p>The <a href="https://github.com/ThePHPF/thephp.foundation">website is open-source</a> and built with <a href="https://github.com/sculpin/sculpin">Sculpin</a> and <a href="https://tailwindcss.com/">Tailwind CSS</a>. So if you stumbled upon a bug, please do not hesitate to report or submit a PR.</p>
+<p>Benjamin Eberlei, Nils Adermann, and Sebastian Bergmann are members of the PHP Foundation’s administration. Gina Peter Banyard is one of the PHP core developers paid by the PHP Foundation.</p>
 
-<h2 id="php-core-roundup">PHP Core Roundup</h2>
+<p><strong><a href="https://tek.phparch.com/">php[tek] 2023</a>, May 16–18, Chicago, USA</strong></p>
 
-<p>In July, we marked the feature-freeze for PHP 8.2, and this next version of PHP is being shaped by PHP Foundation members and all the contributors to be an exciting release!</p>
+<ul>
+<li>Sara Golemon, PHP Foundation admin, will talk about <em>Funding PHP</em>.</li>
+</ul>
 
-<p>Catch up to this month's PHP Core changes on the <strong><a href="https://thephp.foundation/blog/2022/07/28/php-core-roundup-4/">PHP Core Roundup #4</a></strong> post by Ayesh, where you can find a detailed log of what's been done and discussed regarding the PHP engine.</p>
+<h2 id="derick-rethans-made-it-onto-the-openuk%E2%80%99s-honours-list-for-2023">Derick Rethans made it onto the OpenUK’s Honours List for 2023</h2>
 
-<p><strong>What if our proposal did not make it?</strong></p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I am happy to announce that over the holidays I was honoured as part of <a href="https://twitter.com/openuk_uk?ref_src=twsrc%5Etfw">@openuk_uk</a>&#39;s 2023 Honours list, partly due to my work with the <a href="https://twitter.com/ThePHPF?ref_src=twsrc%5Etfw">@ThePHPF</a> <a href="https://t.co/AwZmI4iIBh">https://t.co/AwZmI4iIBh</a> <a href="https://t.co/ip01eRBGhG">pic.twitter.com/ip01eRBGhG</a></p>&mdash; Derick Rethans (@derickr) <a href="https://twitter.com/derickr/status/1611014569345912838?ref_src=twsrc%5Etfw">January 5, 2023</a></blockquote>
 
-<p>Among many fixes and improvements, some suggestions did not pass the RFC voting barrier. For instance, that happened to the <a href="https://wiki.php.net/rfc/auto-capture-closure">Short Closures 2.0</a> proposal.</p>
-
-<p>We consider this a good experience in any case, and developers might reconsider, improve, and suggest it in the next release cycle, i.e., PHP 8.3.</p>
-
-<p>We also consider it to be a good thing that it's difficult to change the language, as these changes are forever.</p>
-
-<p><strong>What about deprecations?</strong></p>
-
-<p>PHP has a long 25-year history, and no wonder it has some old quirks. One of them relates to DateTime and DateTimeImmutable confusion.</p>
-
-<p>Derrick Rethans, a core developer of the PHP Foundation, asks for an opinion about in which way this confusion should be resolved; if it should:</p>
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Making PHP&#39;s DateTime class mutable was one of the bigger mistakes of the Date/Time APIs. I&#39;m considering to change DateTime to be immutable by default in PHP 9, and to drop DateTimeImmutable altogether (or make it an alias). This is likely going to break some code. Opinions?</p>&mdash; Derick Rethans (@derickr) <a href="https://twitter.com/derickr/status/1551611856007069696?ref_src=twsrc%5Etfw">July 25, 2022</a></blockquote>
-
-<p>Let Derick know what you think.</p>
-
-<blockquote>
-  <p>You can find more insights on PHP core development process in&nbsp;<strong><a href="https://thephp.foundation/blog/tag/roundup/">PHP&nbsp;Roundup&nbsp;Series</a></strong>.</p>
-  
-  <p>Tweet at us: <a href="https://twitter.com/thephpf">@ThePHPF</a>, <a href="https://twitter.com/Ayeshlive">@Ayeshlive</a>, <a href="https://twitter.com/pronskiy">@pronskiy</a>.</p>
-</blockquote>
-
-<p><br></p>
+<p>Congratulations, Derick!</p>
 
 <h2 id="thank-you-to-our-sponsors">Thank you to our sponsors</h2>
 
-<p>This month we are glad to welcome a new major sponsor who joined the PHP Foundation’s sponsors herd:</p>
+<h3 id="renewed-and-new-sponsorships">Renewed and new sponsorships</h3>
 
-<p><strong><a href="https://opencollective.com/cybozu">Cybozu, Inc</a></strong></p>
+<p>We are very grateful to all the sponsors who continue to support the PHP community via the Foundation. Some of the biggest contributors include:</p>
 
-<p>Thank you for supporting PHP!</p>
+<ul>
+<li>Automattic</li>
+<li>Private Packagist</li>
+<li>Craft CMS</li>
+<li>Tideways</li>
+<li>Zend by Perforce</li>
+<li>Shopware AG</li>
+<li>Aternos GmbH</li>
+<li>Ardennes-étape</li>
+<li>Cybozu Inc.</li>
+<li>Moodle</li>
+<li>Rakus</li>
+<li>Mercari Inc.</li>
+<li>Spryker</li>
+<li>Les-Tilleuls.coop</li>
+</ul>
+
+<p>Check out the <strong><a href="https://thephp.foundation/#sponsors">Sponsors section</a></strong> on our <a href="https://thephp.foundation/">website</a>. It now shows all major contributors sorted by donation amount.</p>
+
+<h3 id="shout-out-to-non-financial-sponsors">Shout-out to non-financial sponsors</h3>
+
+<h4 id="sticker-mule">Sticker Mule</h4>
+
+<p>We’re grateful to <a href="https://www.stickermule.com/">Sticker Mule</a> for official PHP Foundation swag, such as stickers and limited-edition T-shirts. You can find stickers at the conferences where we give talks. Logo and sticker designs are under a CC license, so feel free to use them if you’d like to produce your own merch.</p>
+
+<h4 id="slack">Slack</h4>
+
+<p>Big thanks to <a href="https://slack.com/">Slack</a> who kindly provided us with a pro plan for the messenger. We’d like to personally thank <a href="https://twitter.com/mattbrowndev">Matt Brown</a>, Psalm author and PHP community member, for helping arrange this.</p>
 
 <p>Shout-out to <a href="https://thephp.foundation/#sponsors">everyone</a> for your continued support – the PHP Foundation is all of us!</p>
 
@@ -944,12 +1505,12 @@ are nicer.
 
 <p><br></p>
 
-<p>That’s all for today. Follow us on Twitter <a href="https://twitter.com/thephpf">@ThePHPF</a> to get the latest updates from the Foundation.</p>
+<p>That’s all for today. Follow us on Twitter <a href="https://twitter.com/thephpf">@ThePHPF</a> or Mastodon <a href="https://phpc.social/@thephpf">phpc.social/@thephpf</a> to get the latest updates from the Foundation.</p>
 
 <p>💜🐘</p>
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-]]></content><link href="https://thephp.foundation/blog/2022/08/04/php-foundation-update-july-2022/"/><id>https://thephp.foundation/blog/2022/08/04/php-foundation-update-july-2022/</id><updated>Thu, 04 Aug 2022 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[The PHP Foundation: Impact and Transparency Report 2022]]></title><content type="html"><![CDATA[<h2 id="executive-summary">Executive Summary</h2>
+]]></content><link href="https://thephp.foundation/blog/2023/03/31/php-foundation-update-march-2023/"/><id>https://thephp.foundation/blog/2023/03/31/php-foundation-update-march-2023/</id><updated>Fri, 31 Mar 2023 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[The PHP Foundation: Impact and Transparency Report 2022]]></title><content type="html"><![CDATA[<h2 id="executive-summary">Executive Summary</h2>
 
 <p>At the end of 2022, The PHP Foundation is a collective of 10 volunteer administrators and 6&nbsp;part-time paid developers who make nearly half of the commits to PHP language core and extensions.</p>
 
@@ -1317,184 +1878,176 @@ All incoming and outgoing transactions of The PHP Foundation are publicly availa
 <p>Based on the strong first year of the foundation, we are excited to continue and multiply the efforts in the next years.</p>
 
 <p>With your help, we continue the mission to support, advance, and develop the PHP language.</p>
-]]></content><link href="https://thephp.foundation/blog/2022/11/22/transparency-and-impact-report-2022/"/><id>https://thephp.foundation/blog/2022/11/22/transparency-and-impact-report-2022/</id><updated>Tue, 22 Nov 2022 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, March 2023]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
+]]></content><link href="https://thephp.foundation/blog/2022/11/22/transparency-and-impact-report-2022/"/><id>https://thephp.foundation/blog/2022/11/22/transparency-and-impact-report-2022/</id><updated>Tue, 22 Nov 2022 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, November 2023]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
 
-<p>It's been a while since our last update, so today we’d like to shed some light on what the PHP Foundation has been up to in recent months. Topics include changes to the reporting schedule, a new initiative within the Foundation called the Advisory Board, conferences with Foundation members, and other news.</p>
+<p>This post provides insights into The PHP Foundation's recent activities.</p>
 
-<h2 id="new-schedule-for-the-foundation%E2%80%99s-updates-and-reports">New schedule for the Foundation’s updates and reports</h2>
+<blockquote>
+  <p>My name is Roman Pronskiy. I’m employed by <a href="https://jetbrains.com/">JetBrains</a> to manage operations at the PHP Foundation. Reach out to me at pronskiy@thephp.foundation.</p>
+  
+  <p>You can find the full foundation structure <a href="https://thephp.foundation/structure/">here</a>, including all board members, developers, and the community.</p>
+</blockquote>
 
-<p>Last year we started by publishing monthly updates, followed by an annual report released in October. Check out the <a href="https://thephp.foundation/blog/2022/11/22/transparency-and-impact-report-2022/">Impact and Transparency Report 2022</a> if you haven’t yet had a chance to do so.</p>
+<h2 id="team-growth">Team Growth</h2>
 
-<p>Now that the Foundation has moved into a phase of steady growth and there are fewer administrative updates, we will publish an update and report once a quarter. The next report, the PHP Foundation 2023 Q1 Report, will come out in April.</p>
+<p>In September, we initiated an open call for new developers to join the PHP Foundation by launching an <a href="https://thephp.foundation/blog/2023/09/06/application-form-2023/">application form</a>.</p>
 
-<p>As for the technical details and results of the Foundation’s developer team, nothing has changed. Every month <a href="https://aye.sh/">Ayesh</a> publishes a <a href="https://thephp.foundation/blog/tag/roundup/">PHP Core Roundup</a> where he talks about what’s kept the team busy and the accomplishments of other PHP contributors.</p>
+<p>We received a total of 207 applications. From this pool, we selected a shortlist of 12 qualified candidates. Following a comprehensive review and input from existing foundation members, we further refined our selection to 4 outstanding individuals. We will soon announce the new members.</p>
 
-<h2 id="the-php-foundation-is-now-on-github-sponsors">The PHP Foundation is now on GitHub Sponsors</h2>
+<p>The primary focus for the new developers will be on the maintenance and modernization of PHP’s infrastructure — a critical step towards ensuring PHP being a robust and forward-looking language.</p>
 
-<p>From the very beginning, we used <a href="https://opencollective.com/">OpenCollective</a> as our financial platform for collecting and distributing funds. We are very happy with and grateful for their service.</p>
+<p>The public work undertaken by our developers can be followed in our monthly <a href="https://thephp.foundation/blog/tag/roundup/">"PHP Core Roundup"</a> series, which highlights the ongoing progress and developments within PHP core.</p>
 
-<p>For some companies and individuals, though, it’s a lot easier to donate via GitHub Sponsors. To make it easier for them to pitch in, we’ve opened a GitHub Sponsors page: <strong><a href="https://github.com/sponsors/ThePHPF">github.com/sponsors/ThePHPF</a></strong>.</p>
+<h2 id="advisory-board">Advisory Board</h2>
 
-<p>We are going to use GitHub Sponsors only to <em>receive</em> financial support. The funds will then be transferred to OpenCollective on a monthly basis, and we’ll continue to pay developers via OpenCollective, as before.</p>
+<p>For our major sponsors, we offer exclusive insights through occasional digests that provide a deeper dive into discussions, debates, and early-stage developments. This not only keeps our sponsors abreast of the latest happenings but also allows them to see the direct impact of their support. This is one of the benefits of being an Advisory Board member.</p>
 
-<h2 id="a-new-benefit-for-major-sponsors-%E2%80%93-advisory-board-membership">A new benefit for major sponsors – Advisory Board membership</h2>
+<p>We announced the advisory board initiative <a href="https://thephp.foundation/blog/2023/03/31/php-foundation-update-march-2023/#a-new-benefit-for-major-sponsors-%E2%80%93-advisory-board-membership">in March</a>. Since then, 9 companies have joined the initiative with their representatives.</p>
 
-<p>A major goal of the PHP Foundation is to provide a voice for PHP's users in its development, and one initiative is to create an Advisory Board to provide communication between sponsors and the foundation team.</p>
+<p>In addition to the <a href="https://thephp.foundation/structure/">Governing Board</a> that includes Automattic, JetBrains, Private Packagist, Symfony, Tideways, Zend by Perforce, and PHP fellows, we now welcome the Advisory Board members: Moodle, Shopware, Laravel, Ardennes-étape, Les-Tilleuls.coop / API Platform, Aternos GmbH, PrestaShop, CraftCMS.</p>
 
-<p>The advisory board's role is to assist in setting priorities for the utilization of the developer time and resources that the foundation provides. In other words, the board helps the foundation determine how best to allocate its funds to support the most critical and beneficial initiatives for the PHP community.</p>
+<p>There were several useful discussions within the group. Specifically, we’d like to highlight the one around <a href="https://wiki.php.net/rfc/property-hooks">Property Hooks RFC</a>. The Advisory Board feedback helped to shape the proposal design significantly.</p>
 
-<p>The Advisory Board is a forum for members to discuss shared challenges and propose feedback on developer plans. It provides a platform to exchange ideas and bring forward community concerns. The Foundation will review common requests and sponsor impactful projects, but feedback is provided periodically and not all suggestions will be implemented. It is a shared communication channel for constructive dialogue and common goal-setting.</p>
+<p>By the way, you can already try property hooks on <a href="https://3v4l.org/">3v4l.org</a>, thanks to <a href="https://github.com/sponsors/SjonHortensius">Sjon Hortensius</a>.
+<a href="https://3v4l.org/Y4KZn/rfc#vrfc.property-hooks"><img src="/assets/post-images/2023/3v4l-property-hooks.png"></a></p>
 
-<p>For the first iteration of the Advisory Board, any company that contributed $10,000 in the early stages of the PHP Foundation will be offered the status of a major sponsor and a seat on the Advisory Board through October 2023. After that, the status and membership will be based on the extent of each member’s contributions and their commitment to continued support.</p>
+<h2 id="sovereign-tech-fund-invests-in-php">Sovereign Tech Fund invests in PHP</h2>
 
-<p>Currently, membership on the Advisory Board has the following benefits:</p>
+<p>The <a href="https://sovereigntechfund.de/en/">Sovereign Tech Fund</a> is an organization that supports the development, improvement, and maintenance of open digital infrastructure in the public interest. Its goal to strengthen the open-source ecosystem sustainably, focusing on security, resilience, technological diversity, and the people behind the code. STF is funded by the German Federal Ministry for Economic Affairs and Climate Action (BMWK) and supported by the German Federal Agency for Disruptive Innovation GmbH (SPRIND).</p>
 
-<ul>
-<li>Every month we provide developer plans – a list of tasks that the PHP Foundation developers will work on in the near future. Advisory Board members can discuss these plans among their teams and provide us with feedback that they feel we should consider.</li>
-<li>Advisory board members are welcome to share their pain points or ideas on behalf of their communities or organizations. Suggestions may be discussed by other members and will be considered by the foundation developers.</li>
-</ul>
+<p>We have collaborated with STF to create work plans for these specific projects: PECL overhaul, Testing tool for FPM, Security Audit, and Documentation improvements.</p>
 
-<p>⚠️ Note: All language decisions go through the established Request for Comments (RFC) process, which is not affiliated with the PHP Foundation. Language decisions are the purview of PHP Internals. It means that some of the PHP Foundation’s efforts may not make it into the language. But with the Advisory Board discussions, we expect increased quality and acceptance rate of the foundation’s RFCs.</p>
+<p>We’ll share more details on each project early next year, and for now we are thrilled and grateful to the Sovereign Tech Fund for trusting us.</p>
 
-<p>We’re also looking into providing some exclusive benefits for individual sponsors and smaller business contributors, as well. What would sound interesting or lucrative to you? Let us know!</p>
+<h2 id="security-audit-of-php-is-coming">Security audit of PHP is coming</h2>
+
+<p>As mentioned above, STF is investing in PHP, and we are going to commission an audit of PHP's C code base. We expect security issues to be found. To mitigate possible bad perception, we aim to publish and fix the revealed security issues at the same time.</p>
+
+<p>For this security audit, we are partnering with <a href="https://ostif.org/">The Open Source Technology Improvement Fund, Inc</a> (OSTIF), a corporate non-profit dedicated to securing critical open-source projects. They have a proven track record of audits for <a href="https://github.com/ostif-org/OSTIF/blob/main/Completed-Engagements.md">popular open-source projects</a> such as cURL, Git, Linux Kernel, OpenSSL, Node.js, and others.</p>
+
+<h2 id="reports-schedule">Reports schedule</h2>
+
+<p>Although we promised to prepare quarterly reports, that unfortunately did not happen to be feasible. So for 2023, we fall back to one yearly report. The 2023 transparency report will be published in December.</p>
 
 <h2 id="meet-us-at-the-conferences">Meet us at the conferences</h2>
 
-<p>This spring, the PHP Foundation admins and developers will attend a few conferences.</p>
+<p>You can meet our team at the following conferences in late 2023:</p>
 
-<p><strong><a href="https://phpconference.com/berlin-en/program-berlin-en/">International PHP Conference</a>, May 22–26, Berlin, Germany</strong></p>
+<p><strong><a href="https://php.bettercode.eu/">betterCode(PHP)</a> – Nov 27</strong></p>
 
-<ul>
-<li>Sebastian Bergmann (thePHP.cc, PHPUnit), Nils Adermann (Packagist Conductors GmbH, Composer), and Gina Peter Banyard (PHP core developer) will participate in a keynote panel about the PHP Foundation and the State of PHP.</li>
-<li>Benjamin Eberlei (Tideways GmbH, Doctrine) and Nils Adermann will give a presentation entitled <em>The PHP Foundation: Past, Present, and Future</em>.</li>
-<li>Gina Peter Banyard will present a talk called <em>Contributing to PHP: How?</em></li>
-</ul>
+<p>Jakub Zalenka will give a talk: "PHP 8.3: Changes and future plans". <br> 
+Besides Jakub, there will be talks from Niels Dossche and Sebastian Bergmann.</p>
 
-<p>Benjamin Eberlei, Nils Adermann, and Sebastian Bergmann are members of the PHP Foundation’s administration. Gina Peter Banyard is one of the PHP core developers paid by the PHP Foundation.</p>
+<p><strong><a href="https://live.symfony.com/2023-brussels-con/">SymfonyCon Brussels</a> – Dec 7–8</strong></p>
 
-<p><strong><a href="https://tek.phparch.com/">php[tek] 2023</a>, May 16–18, Chicago, USA</strong></p>
-
-<ul>
-<li>Sara Golemon, PHP Foundation admin, will talk about <em>Funding PHP</em>.</li>
-</ul>
-
-<h2 id="derick-rethans-made-it-onto-the-openuk%E2%80%99s-honours-list-for-2023">Derick Rethans made it onto the OpenUK’s Honours List for 2023</h2>
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I am happy to announce that over the holidays I was honoured as part of <a href="https://twitter.com/openuk_uk?ref_src=twsrc%5Etfw">@openuk_uk</a>&#39;s 2023 Honours list, partly due to my work with the <a href="https://twitter.com/ThePHPF?ref_src=twsrc%5Etfw">@ThePHPF</a> <a href="https://t.co/AwZmI4iIBh">https://t.co/AwZmI4iIBh</a> <a href="https://t.co/ip01eRBGhG">pic.twitter.com/ip01eRBGhG</a></p>&mdash; Derick Rethans (@derickr) <a href="https://twitter.com/derickr/status/1611014569345912838?ref_src=twsrc%5Etfw">January 5, 2023</a></blockquote>
-
-<p>Congratulations, Derick!</p>
+<p>You’ll be able to meet and talk to our board members: Nils Adermann, Sebastian Bergmann, Nicolas Grekas, and Roman Pronskiy.</p>
 
 <h2 id="thank-you-to-our-sponsors">Thank you to our sponsors</h2>
 
-<h3 id="renewed-and-new-sponsorships">Renewed and new sponsorships</h3>
+<p>Check out the <a href="https://thephp.foundation/#sponsors">Sponsors section</a> on our <a href="https://thephp.foundation/">website</a>. It shows all major contributors sorted by donation amount.</p>
 
-<p>We are very grateful to all the sponsors who continue to support the PHP community via the Foundation. Some of the biggest contributors include:</p>
+<p>Big thanks to the <strong><a href="https://sentry.io/">Sentry</a></strong> team for sponsoring the PHP foundation!</p>
 
-<ul>
-<li>Automattic</li>
-<li>Private Packagist</li>
-<li>Craft CMS</li>
-<li>Tideways</li>
-<li>Zend by Perforce</li>
-<li>Shopware AG</li>
-<li>Aternos GmbH</li>
-<li>Ardennes-étape</li>
-<li>Cybozu Inc.</li>
-<li>Moodle</li>
-<li>Rakus</li>
-<li>Mercari Inc.</li>
-<li>Spryker</li>
-<li>Les-Tilleuls.coop</li>
-</ul>
+<p>Sentry is a popular application performance monitoring &amp; error tracking tool, and they <a href="https://blog.sentry.io/we-just-gave-500-000-dollars-to-open-source-maintainers/?utm_source=linkedin&amp;utm_content=blog-fundfest23-learnmore">just gave $500,000 to multiple open source maintainers</a>.</p>
 
-<p>Check out the <strong><a href="https://thephp.foundation/#sponsors">Sponsors section</a></strong> on our <a href="https://thephp.foundation/">website</a>. It now shows all major contributors sorted by donation amount.</p>
+<p><strong>Shout-out to non-financial sponsors</strong></p>
 
-<h3 id="shout-out-to-non-financial-sponsors">Shout-out to non-financial sponsors</h3>
+<p><a href="https://www.digitalocean.com/">Digital Ocean</a> has been supporting the PHP project for ages – <a href="https://www.php.net/">php.net</a> servers run on DigitalOcean boxes. We would like to express our gratitude to DigitalOcean for their ongoing support.</p>
 
-<h4 id="sticker-mule">Sticker Mule</h4>
-
-<p>We’re grateful to <a href="https://www.stickermule.com/">Sticker Mule</a> for official PHP Foundation swag, such as stickers and limited-edition T-shirts. You can find stickers at the conferences where we give talks. Logo and sticker designs are under a CC license, so feel free to use them if you’d like to produce your own merch.</p>
-
-<h4 id="slack">Slack</h4>
-
-<p>Big thanks to <a href="https://slack.com/">Slack</a> who kindly provided us with a pro plan for the messenger. We’d like to personally thank <a href="https://twitter.com/mattbrowndev">Matt Brown</a>, Psalm author and PHP community member, for helping arrange this.</p>
-
-<p>Shout-out to <a href="https://thephp.foundation/#sponsors">everyone</a> for your continued support – the PHP Foundation is all of us!</p>
+<p>Big thanks to <a href="https://thephp.foundation/#sponsors">everyone</a> for your continued support – the PHP Foundation is all of us!</p>
 
 <hr />
 
+<p>That’s all for today. Follow us on Twitter <a href="https://twitter.com/thephpf">@ThePHPF</a> or Mastodon <a href="https://phpc.social/@thephpf">phpc.social/@thephpf</a> to get the latest updates from the PHP Foundation.
+💜🐘</p>
+]]></content><link href="https://thephp.foundation/blog/2023/11/27/php-foundation-update-november-2023/"/><id>https://thephp.foundation/blog/2023/11/27/php-foundation-update-november-2023/</id><updated>Mon, 27 Nov 2023 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, July 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
+
+<p>Last month, the PHP foundation members continued the work on PHP 8.2 release and more. We are prepared to give a few talks this autumn. Also, besides core developers, we have a growing community of volunteers who help the PHP foundation. Read on to learn more.</p>
+
+<h2 id="meet-us-at-the-conferences">Meet us at the conferences</h2>
+
+<p>This autumn, you will be able to talk to the foundation administration members and developers at real-life events!</p>
+
+<p><strong><a href="https://event.afup.org/afup-day-2022/">Forum PHP, Paris – October 13-14</a></strong></p>
+
+<p><strong>Sebastian Bergmann and Roman Pronskiy</strong> will give a talk about the past, the present, and the future of PHP. They will share the status of the Foundation, what has been accomplished in the first year, share some plans, and, of course, answer questions and expect feedback.</p>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I look forward to talk about <a href="https://twitter.com/ThePHPF?ref_src=twsrc%5Etfw">@ThePHPF</a> at <a href="https://twitter.com/afup?ref_src=twsrc%5Etfw">@afup</a> <a href="https://twitter.com/hashtag/ForumPHP?src=hash&amp;ref_src=twsrc%5Etfw">#ForumPHP</a> together with <a href="https://twitter.com/pronskiy?ref_src=twsrc%5Etfw">@pronskiy</a>!<br><br>We’re eager to answer your questions and look forward to hearing your suggestions! <a href="https://t.co/2x8id0mDZ5">pic.twitter.com/2x8id0mDZ5</a></p>&mdash; Sebastian Bergmann (@s_bergmann) <a href="https://twitter.com/s_bergmann/status/1544184297115947010?ref_src=twsrc%5Etfw">July 5, 2022</a></blockquote>
+
 <p><br></p>
 
-<p>That’s all for today. Follow us on Twitter <a href="https://twitter.com/thephpf">@ThePHPF</a> or Mastodon <a href="https://phpc.social/@thephpf">phpc.social/@thephpf</a> to get the latest updates from the Foundation.</p>
+<p><strong>Gina P. Banyard</strong>, one of the PHP Foundation’s developers, will talk about PHP’s type system internals.</p>
 
-<p>💜🐘</p>
+<blockquote class="twitter-tweet"><p lang="fr" dir="ltr">Nous sommes ravis d&#39;accueillir pour la première fois <a href="https://twitter.com/Girgias?ref_src=twsrc%5Etfw">@Girgias</a>, jeune et talentueux core-contributeur à PHP, pour un talk sur les rouages du typage lors du Forum PHP 2022.<br>🎤 &quot;Typage en PHP comment ça fonctionne ?&quot; - Forum PHP 2022 - 13&amp;14/10, Disneyland Paris <a href="https://t.co/dB0pWflmKB">pic.twitter.com/dB0pWflmKB</a></p>&mdash; AFUP (@afup) <a href="https://twitter.com/afup/status/1546423801998708736?ref_src=twsrc%5Etfw">July 11, 2022</a></blockquote>
 
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-]]></content><link href="https://thephp.foundation/blog/2023/03/31/php-foundation-update-march-2023/"/><id>https://thephp.foundation/blog/2023/03/31/php-foundation-update-march-2023/</id><updated>Fri, 31 Mar 2023 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, June 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
+<p><br></p>
 
-<p>This month PHP foundation staff continues to work on the PHP core and the development of the initiative as a whole. Read on to learn more about what developers have accomplished, new sponsors, and other than financial ways to contribute to the foundation.</p>
+<p><strong><a href="https://live.symfony.com/2022-paris-con/">SymfonyCon, Paris – November 17-18</a></strong></p>
 
-<blockquote>
-  <p>We've created an official LinkedIn page: <a href="https://www.linkedin.com/company/phpfoundation/">linkedin.com/company/phpfoundation</a>.
-  Subscribe to it and follow us on Twitter <a href="https://twitter.com/thePHPF">@ThePHPF</a>.</p>
-</blockquote>
+<p>At this conference, you’ll be able to catch up with Sebastian Bergmann, Roman Pronskiy, and Nicolas Grekas.</p>
+
+<p><strong><a href="https://phpconference.com/">International PHP Conference, Munich – October 23-24</a></strong></p>
+
+<p>Sebastian Bergmann and Derick Rethans will each talk at the IPC this year.</p>
+
+<p><em>Where else would you like to see us?</em></p>
+
+<h3 id="%2A%2Aswag%21%2A%2A"><strong>Swag!</strong></h3>
+
+<p>By the way, we’d like to have stickers and other swag for conference attendees. If you would like to help with the design or sponsor the production, please reach out to <a href="&#109;&#x61;i&#108;&#x74;&#111;&#58;&#x63;&#111;&#x6e;&#x74;&#97;&#x63;t&#64;&#x74;&#104;&#101;&#x70;&#104;&#x70;&#x2e;&#102;&#x6f;&#x75;&#110;&#x64;a&#116;&#x69;&#111;&#110;">contact@thephp.foundation</a>.</p>
+
+<h2 id="website-updates">Website updates</h2>
+
+<p>Thanks to Sergey Panteleev, one of the PHP 8.2 release managers, we have a few nice additions to our website.</p>
+
+<ul>
+<li>A new <strong><a href="https://thephp.foundation/structure/">structure page</a></strong> where you can see all the people currently actively involved in the PHP Foundation activities.</li>
+<li>Every post has a nicely generated preview image — please, share the links to the PHP Foundation to help spread the word.</li>
+</ul>
+
+<p>The <a href="https://github.com/ThePHPF/thephp.foundation">website is open-source</a> and built with <a href="https://github.com/sculpin/sculpin">Sculpin</a> and <a href="https://tailwindcss.com/">Tailwind CSS</a>. So if you stumbled upon a bug, please do not hesitate to report or submit a PR.</p>
 
 <h2 id="php-core-roundup">PHP Core Roundup</h2>
 
-<p>Here's a summary of what the foundation's developers have been working on lately:</p>
+<p>In July, we marked the feature-freeze for PHP 8.2, and this next version of PHP is being shaped by PHP Foundation members and all the contributors to be an exciting release!</p>
 
-<ul>
-<li><p><a href="https://github.com/arnaud-lb">Arnaud Le Blanc</a> revised the RFC and implementation of multi-statement short closures. The proposal is now on vote. Arnaud has also finished the improvements to ini quantity parsing.</p></li>
-<li><p><a href="https://github.com/derickr">Derick Rethans</a> continues to fix bugs in DateTime to make working with dates in PHP as reliable as possible.</p></li>
-<li><p><a href="https://github.com/Girgias">Gina P. Banyard</a> has made several improvements to the type system: true, null, and false standalaone types have been added, and Disjunctive Normal Form Types put on vote. Gina also made a few fixes in SPL.</p></li>
-<li><p><a href="https://github.com/iluuu1994">Ilija Tovilo</a> implemented multiple improvements for enums and put a couple on vote. He also made many fixes, like for instance fixed line numbers in backtrace of multi-line (fluent) function calls.</p></li>
-<li><p><a href="https://github.com/bukka">Jakub Zelenka</a> made various fixes and improvements to PHP-FPM and OpenSSL extension.</p></li>
-<li><p><a href="https://github.com/kocsismate">Máté Kocsis</a> makes improvements to stubs and other fixes.</p></li>
-</ul>
+<p>Catch up to this month's PHP Core changes on the <strong><a href="https://thephp.foundation/blog/2022/07/28/php-core-roundup-4/">PHP Core Roundup #4</a></strong> post by Ayesh, where you can find a detailed log of what's been done and discussed regarding the PHP engine.</p>
 
-<p>All developers devote significant time to maintenance, including fixing bugs, reducing technical debt, and making life easier for everyone working on PHP.</p>
+<p><strong>What if our proposal did not make it?</strong></p>
 
-<p>In the <strong><a href="https://thephp.foundation/blog/2022/06/30/php-core-roundup-3/">PHP Roundup #3</a></strong> post by Ayesh, you can find a detailed log of what's been done and discussed regarding the PHP engine during the past month.</p>
+<p>Among many fixes and improvements, some suggestions did not pass the RFC voting barrier. For instance, that happened to the <a href="https://wiki.php.net/rfc/auto-capture-closure">Short Closures 2.0</a> proposal.</p>
 
-<p>This time the list of changes is very long! Applause to all the PHP contributors and release managers.</p>
+<p>We consider this a good experience in any case, and developers might reconsider, improve, and suggest it in the next release cycle, i.e., PHP 8.3.</p>
 
-<p>Tweet at us: <a href="https://twitter.com/thephpf">@ThePHPF</a>, <a href="https://twitter.com/Ayeshlive">@Ayeshlive</a>, <a href="https://twitter.com/pronskiy">@pronskiy</a>.</p>
+<p>We also consider it to be a good thing that it's difficult to change the language, as these changes are forever.</p>
+
+<p><strong>What about deprecations?</strong></p>
+
+<p>PHP has a long 25-year history, and no wonder it has some old quirks. One of them relates to DateTime and DateTimeImmutable confusion.</p>
+
+<p>Derrick Rethans, a core developer of the PHP Foundation, asks for an opinion about in which way this confusion should be resolved; if it should:</p>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Making PHP&#39;s DateTime class mutable was one of the bigger mistakes of the Date/Time APIs. I&#39;m considering to change DateTime to be immutable by default in PHP 9, and to drop DateTimeImmutable altogether (or make it an alias). This is likely going to break some code. Opinions?</p>&mdash; Derick Rethans (@derickr) <a href="https://twitter.com/derickr/status/1551611856007069696?ref_src=twsrc%5Etfw">July 25, 2022</a></blockquote>
+
+<p>Let Derick know what you think.</p>
+
+<blockquote>
+  <p>You can find more insights on PHP core development process in&nbsp;<strong><a href="https://thephp.foundation/blog/tag/roundup/">PHP&nbsp;Roundup&nbsp;Series</a></strong>.</p>
+  
+  <p>Tweet at us: <a href="https://twitter.com/thephpf">@ThePHPF</a>, <a href="https://twitter.com/Ayeshlive">@Ayeshlive</a>, <a href="https://twitter.com/pronskiy">@pronskiy</a>.</p>
+</blockquote>
+
+<p><br></p>
 
 <h2 id="thank-you-to-our-sponsors">Thank you to our sponsors</h2>
 
-<p>This month we are glad to welcome a new major sponsor who joined the PHP Foundation’s sponsors herd: <strong><a href="https://www.mollie.com/en">Mollie</a></strong>.  Thank you, folks!</p>
+<p>This month we are glad to welcome a new major sponsor who joined the PHP Foundation’s sponsors herd:</p>
 
-<p>By the way, we have updated the <strong><a href="https://thephp.foundation/#sponsors">Sponsors section</a></strong> on our <a href="https://thephp.foundation/">website</a>. It now shows all major contributors sorted by the amount of donation. Kudos to <a href="https://twitter.com/s_panteleev">Sergei Panteleev</a> for this tweak.</p>
+<p><strong><a href="https://opencollective.com/cybozu">Cybozu, Inc</a></strong></p>
 
-<p>Shout-out to everyone for your continued support – the PHP Foundation is all of us!</p>
+<p>Thank you for supporting PHP!</p>
 
-<h2 id="other-ways-to-contribute">Other ways to contribute</h2>
-
-<p>We are receiving many offers of help from every corner of the community. We are grateful for the offers. There are essentially two kinds of offers being made:</p>
-
-<ol>
-<li>An offer of development time</li>
-<li>An offer of expertise</li>
-</ol>
-
-<h3 id="how-to-contribute-development-time%3F">How to contribute development time?</h3>
-
-<p>The Foundation has limited resources to manage the developers we contract to work on PHP. For this reason, it is not sensible to assume the management of external developers.</p>
-
-<p>Any external developer who is compensated for their time spent on PHP is, of course, welcome to make use of our public communication channels:</p>
-
-<ol>
-<li>Email as: <a href="&#109;&#x61;i&#108;&#x74;&#111;&#58;&#x63;&#111;&#x6e;&#x74;&#97;&#x63;t&#64;&#x74;&#104;&#101;&#x70;&#104;&#x70;&#x2e;&#102;&#x6f;&#x75;&#110;&#x64;a&#116;&#x69;&#111;&#110;">contact@thephp.foundation</a></li>
-<li>Communicate via issues on GitHub repos: <a href="https://github.com/php/php-src">github.com/php/php-src</a>, <a href="https://github.com/php/web-php">github.com/php/web-php</a>, etc.</li>
-</ol>
-
-<h3 id="how-to-contribute-expertise%3F">How to contribute expertise?</h3>
-
-<p>As the foundation begins to mature, a couple of currently unfulfilled roles have emerged.</p>
-
-<p>We will soon communicate the details of these roles.</p>
-
-<p>We intend to compile a list of all expertise on offer; If you haven't done so already, please tell what expertise you would like to make available using public communication channels.</p>
+<p>Shout-out to <a href="https://thephp.foundation/#sponsors">everyone</a> for your continued support – the PHP Foundation is all of us!</p>
 
 <hr />
 
@@ -1503,4 +2056,6 @@ All incoming and outgoing transactions of The PHP Foundation are publicly availa
 <p>That’s all for today. Follow us on Twitter <a href="https://twitter.com/thephpf">@ThePHPF</a> to get the latest updates from the Foundation.</p>
 
 <p>💜🐘</p>
-]]></content><link href="https://thephp.foundation/blog/2022/07/04/php-foundation-update-june-2022/"/><id>https://thephp.foundation/blog/2022/07/04/php-foundation-update-june-2022/</id><updated>Mon, 04 Jul 2022 00:00:00 +0000</updated></entry></feed>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+]]></content><link href="https://thephp.foundation/blog/2022/08/04/php-foundation-update-july-2022/"/><id>https://thephp.foundation/blog/2022/08/04/php-foundation-update-july-2022/</id><updated>Thu, 04 Aug 2022 00:00:00 +0000</updated></entry></feed>

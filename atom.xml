@@ -3,9 +3,571 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2024-02-06T11:22:50+00:00</updated>
+    <updated>2024-02-26T13:52:29+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[The PHP Foundation: Impact and Transparency Report 2023]]></title>
+            <link href="https://thephp.foundation/blog/2024/02/26/transparency-and-impact-report-2023/"/>
+            <updated>2024-02-26T00:00:00+00:00</updated>
+            <id>https://thephp.foundation/blog/2024/02/26/transparency-and-impact-report-2023/</id>
+            <content type="html"><![CDATA[<p>We’re a little late in posting our report from 2023, so we’ll also share some of the things we’re focusing on as we start 2024.</p>
+
+<h2 id="executive-summary">Executive Summary</h2>
+
+<p>At the beginning of 2024, The PHP Foundation is a collective of <strong>9 volunteer board members</strong>, <strong>1 full-time operations manager</strong> sponsored by JetBrains, and <strong>10 developers</strong> paid part-time/full-time who make more than half of the contributions to the PHP language and its extensions.</p>
+
+<p>In 2023, The PHP Foundation received <strong>$418,669 in financial contributions</strong> from organizations and individuals.</p>
+
+<p>The PHP Foundation’s main focus in 2023 was strengthening the maintenance of PHP core, the project that lives in the <a href="https://github.com/php/php-src">php/php-src</a> GitHub repository. This project is the home of the PHP language, where PHP’s interpreter is developed. Everyone who uses PHP benefits in one way or another from the work that is done in this repository.</p>
+
+<p>The PHP Foundation demonstrates its growing impact on the language through an increased volume and velocity of code contributions and reviews. The 6 part-time and full-time developers contracted by The PHP Foundation were responsible for nearly half of the commits and reviews made in the PHP language.</p>
+
+<p>Moreover, the foundation's presence and activities have led to heightened interest and activity in the PHP project overall, with the total number of <strong>contributions to the language growing by 79% compared to 2022</strong>.</p>
+
+<p>At the end of 2023, the German government’s <strong>Sovereign Tech Fund chose to invest in The PHP Foundation’s mission</strong> by providing funding for a security audit and other long outstanding projects critical for the PHP ecosystem.</p>
+
+<p>The foundation is <strong>expanding its development efforts in 2024</strong> by contracting 4 additional developers and increasing the number of hours that current contracted developers are working.</p>
+
+<p>The foundation plans to spend up to $1,045,000, including compensation and fees. We are looking for additional sponsor contributions to allow us to continue these efforts in the next years.</p>
+
+<p>In 2024, we aim to achieve the following strategic goals:</p>
+
+<ul>
+<li>Ensure sustainable sponsorship for the foundation.</li>
+<li>Ensure that foundation developers focus on valuable tasks.</li>
+<li>Promote PHP within the web development ecosystem.</li>
+</ul>
+
+<h2 id="the-php-foundation-mission">The PHP Foundation Mission</h2>
+
+<p>The PHP Foundation was initiated by JetBrains, Automattic, Laravel, Acquia, Zend, Private Packagist, Symfony, Craft CMS, and Tideways. It was publicly <a href="https://blog.jetbrains.com/phpstorm/2021/11/the-php-foundation/">launched</a> on November 22, 2021.</p>
+
+<p>Since 2021, many companies and individuals have joined the initiative. To make the priorities of the foundation more clear and aligned, we’ve <strong>updated the mission statement</strong>:</p>
+
+<blockquote>
+  <p>The PHP Foundation’s mission is to ensure the long-term prosperity of the PHP language. The PHP Foundation focuses on providing financial support and guidance to PHP language developers to support its goals of improving the language for its users, providing high-quality maintenance, and improving the PHP language project to retain current contributors and to integrate new contributors. The PHP Foundation aims to promote the public image of the PHP language in the interest of retaining existing and gaining new users and contributors.</p>
+</blockquote>
+
+<p><br>
+So it defines 4 priorities of the foundation:</p>
+
+<ol>
+<li>Improve the language for users.</li>
+<li>Provide high-quality maintenance.</li>
+<li>Improve the project to retain current contributors and to integrate new contributors.</li>
+<li>Promote the public image of PHP.</li>
+</ol>
+
+<h2 id="organizational-growth">Organizational Growth</h2>
+
+<p>Many companies with a vested interest in PHP’s prosperity made a major financial contribution during the year. These are the companies that contributed $10,000 or more in 2023:</p>
+
+<p><strong>JetBrains, Automattic, Private Packagist, Craft CMS, Tideways, pixiv Inc., Mercari Inc., Symfony Corp, Aternos GmbH, Sentry, Ardennes-étape, Zend by Perforce, Les-Tilleuls.coop, Cybozu.</strong></p>
+
+<p>Overall, 718 organizations and individuals sponsored the foundation in 2023 <a href="https://opencollective.com/phpfoundation">on Open Collective</a> and <a href="https://github.com/sponsors/ThePHPF">GitHub Sponsors</a>.</p>
+
+<h3 id="quotes">Quotes</h3>
+
+<p>Here is what some of the prominent folks say about the foundation.</p>
+
+<p><figure class="max-w-screen-md mx-auto text-center" id="quote-brandon-kelly">
+    <svg class="w-10 h-10 mx-auto mb-3 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+        <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
+    </svg>
+    <blockquote>
+        <p class="text-xl italic text-gray-900">“We’re proud supporters of the PHP Foundation here at Craft CMS. PHP has played such a huge role in our careers, and it’s an honor to be a part of its story.”</p>
+    </blockquote>
+    <figcaption class="flex items-center justify-center mt-3 space-x-3 rtl:space-x-reverse">
+        <img class="w-10 h-10 rounded-full" src="/assets/post-images/2024/report-2023/brandon_kelly.jpg" alt="profile picture">
+        <div class="flex items-center">
+            <cite class="pl-0.5 font-medium text-gray-900">Brandon Kelly, </cite>
+            <cite class="pl-0.5 text-gray-500">CEO at Craft CMS</cite>
+        </div>
+    </figcaption>
+</figure>
+</p>
+
+<p><figure class="max-w-screen-md mx-auto text-center" id="quote-ben-marks">
+    <svg class="w-10 h-10 mx-auto mb-3 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+        <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
+    </svg>
+    <blockquote>
+        <p class="text-xl italic text-gray-900">“So much of our world - the content we consume (blogs, ecommerce, social media) -  is delivered via PHP applications, enabled by the continuing efforts of the PHP Foundation and the ecosystem it enables. The PHP ecosystem&#039;s success has a significant impact on all of our lives, and we at Shopware are therefore proud supporters of the PHP Foundation.”</p>
+    </blockquote>
+    <figcaption class="flex items-center justify-center mt-3 space-x-3 rtl:space-x-reverse">
+        <img class="w-10 h-10 rounded-full" src="/assets/post-images/2024/report-2023/ben_marks.jpg" alt="profile picture">
+        <div class="flex items-center">
+            <cite class="pl-0.5 font-medium text-gray-900">Ben Marks, </cite>
+            <cite class="pl-0.5 text-gray-500">Director Global Market Development at shopware AG</cite>
+        </div>
+    </figcaption>
+</figure>
+</p>
+
+<p><figure class="max-w-screen-md mx-auto text-center" id="quote-kevin-dunglas">
+    <svg class="w-10 h-10 mx-auto mb-3 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+        <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
+    </svg>
+    <blockquote>
+        <p class="text-xl italic text-gray-900">“Les-Tilleuls.coop is proud to support the PHP Foundation. By maintaining the language, the foundation is ensuring the future of PHP and the web. By adding innovative new features, it simplifies knowledge sharing and, in the spirit of free software, makes it easier than ever for everyone to create independent sites and applications.”</p>
+    </blockquote>
+    <figcaption class="flex items-center justify-center mt-3 space-x-3 rtl:space-x-reverse">
+        <img class="w-10 h-10 rounded-full" src="/assets/post-images/2024/report-2023/kevin_dunglas.png" alt="profile picture">
+        <div class="flex items-center">
+            <cite class="pl-0.5 font-medium text-gray-900">Kevin Dunglas, </cite>
+            <cite class="pl-0.5 text-gray-500">Les-Tilleuls.coop, FrankenPHP</cite>
+        </div>
+    </figcaption>
+</figure>
+</p>
+
+<p><figure class="max-w-screen-md mx-auto text-center" id="quote-matthew-weier-o&#039;phinney">
+    <svg class="w-10 h-10 mx-auto mb-3 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+        <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
+    </svg>
+    <blockquote>
+        <p class="text-xl italic text-gray-900">“As longtime contributors to the PHP project, both financially as well as by employing developers on the project, Zend by Perforce is pleased to sponsor the PHP Foundation and support its mission. Expanding the pool of maintainers and developers capable of evolving the language will help keep PHP relevant, and expand its reach in the web development ecosystem.”</p>
+    </blockquote>
+    <figcaption class="flex items-center justify-center mt-3 space-x-3 rtl:space-x-reverse">
+        <img class="w-10 h-10 rounded-full" src="/assets/post-images/2024/report-2023/mwop.jpg" alt="profile picture">
+        <div class="flex items-center">
+            <cite class="pl-0.5 font-medium text-gray-900">Matthew Weier O&#039;Phinney, </cite>
+            <cite class="pl-0.5 text-gray-500">Senior Product Manager, Zend by Perforce</cite>
+        </div>
+    </figcaption>
+</figure>
+</p>
+
+<p><br></p>
+
+<h2 id="the-sovereign-tech-fund-investment">The Sovereign Tech Fund Investment</h2>
+
+<p>The <a href="https://sovereigntechfund.de/en/">Sovereign Tech Fund</a> (STF) supports the development, improvement, and maintenance of open digital infrastructure in the public interest. Its goal is to strengthen the open-source ecosystem sustainably, focusing on security, resilience, technological diversity, and the people behind the code. STF is funded by the German Federal Ministry for Economic Affairs and Climate Action (BMWK) and supported by the German Federal Agency for Disruptive Innovation GmbH (SPRIND).</p>
+
+<p>We have collaborated with STF to create work plans for these specific projects:</p>
+
+<h4 id="pecl-overhaul">PECL overhaul</h4>
+
+<p>The current system for distributing PHP extensions, PECL/PEAR, is outdated and prone to supply-chain attacks, making it unreliable for average developers. This leads to the creation of redundant tools and new security issues.</p>
+
+<p>We proposed to rewrite the PECL installer, replacing the messy pear code and the inefficient website.</p>
+
+<p>Follow the progress of <strong>the new tool 🥧PIE</strong> here: <a href="https://github.com/ThePHPF/pie-design">https://github.com/ThePHPF/pie-design</a>.</p>
+
+<h4 id="testing-tool-for-fpm">Testing tool for FPM</h4>
+
+<p>Currently, the PHP project's testing framework lacks more specialized support for the automated testing of the FastCGI Process Manager (FPM), especially for issues that require higher load. We propose to develop an FPM/SAPI testing tool that can execute all applications and set expectations on the produced logs and server responses. This tool will be connected with a load testing tool (e.g., wrk) to simulate real-world usage and load.</p>
+
+<p>The work has started in the <a href="https://github.com/bukka/wst">https://github.com/bukka/wst</a> repository with the plan to move it to the PHP GitHub organization when ready.</p>
+
+<h4 id="security-audit">Security Audit</h4>
+
+<p>PHP, like any other language, has its share of security issues. We are going to collaborate with a security research group for a comprehensive codebase audit and address the discovered issues. This will significantly improve the security of PHP and make it more reliable for developers and businesses.</p>
+
+<p>The audit is being organized in partnership with <a href="https://ostif.org/">OSTIF</a>.</p>
+
+<h4 id="documentation-improvements">Documentation improvements</h4>
+
+<p>The current PHP documentation has several blind spots, with many functions and methods not covered at all. We propose to update and modernize the English PHP documentation, review and remove user comments, integrate 3v4l.org for interactive examples, and simplify the maintenance process. This will make PHP more accessible to new developers and serve as a reliable reference for experienced ones.</p>
+
+<h2 id="the-php-foundation-governance">The PHP Foundation Governance</h2>
+
+<p>In 2023, we renamed the Administration group to the <strong>Governing Board</strong> to avoid confusions and better align with industry standards.</p>
+
+<p><a href="https://thephp.foundation/structure/#admins">The lineup</a> of the group has not changed and consists of veteran PHP community leaders, representatives of the founding companies, and other key stakeholders.</p>
+
+<p>One notable change compared to the previous year is a full-time operations manager sponsored by JetBrains in addition to the financial contribution.</p>
+
+<p>We aim to establish a level of involvement for other key stakeholders from the PHP world through the Advisory Board and other initiatives.</p>
+
+<h2 id="the-advisory-board">The Advisory Board</h2>
+
+<p>To keep major sponsors of PHP abreast of the latest happenings in the foundation and allow them to see the direct impact of their support, we announced the advisory board initiative <a href="https://thephp.foundation/blog/2023/03/31/php-foundation-update-march-2023/#a-new-benefit-for-major-sponsors-%E2%80%93-advisory-board-membership">in March</a>.</p>
+
+<p>In addition to the <a href="https://thephp.foundation/structure/">Governing Board</a> representatives from Automattic, JetBrains, Private Packagist, Symfony, Tideways, and Zend by Perforce, the <strong>Advisory Board includes members from</strong> Moodle, Shopware, Laravel, Ardennes-étape, Les-Tilleuls.coop / API Platform, Aternos GmbH, PrestaShop, CraftCMS.</p>
+
+<p>Your company can <strong><a href="https://thephp.foundation/join/">become a member</a></strong> by contributing a minimum of $12,000 to The PHP Foundation as at least a Silver Sponsor.</p>
+
+<h2 id="the-php-foundation-staff">The PHP Foundation Staff</h2>
+
+<h3 id="renewing-contracts">Renewing contracts</h3>
+
+<p>In 2023, we had a team of 6 developers. All of them demonstrated a high quality of work and dedication to the mission of the foundation. We were happy to renew the contracts for 2024 as well as extend the total number of hours for developers requesting it.</p>
+
+<p>We have also adjusted the compensation rates for developers to better reflect the market, as the rates had not changed since 2021.</p>
+
+<p>We aim to review the rates every year based on the available funding and priorities.</p>
+
+<h3 id="team-extension">Team extension</h3>
+
+<p>As was mentioned in the previous transparency report, we aimed to extend the team. It did not happen in 2023 because one of the prospective developers could not join the team for personal reasons, and had to step down from PHP core development entirely. Again, this is <a href="https://blog.jetbrains.com/phpstorm/2021/11/the-php-foundation/#the_bus_factor">the Bus Factor at its worst</a>. However, we were able to extend the team starting with 2024.</p>
+
+<p>We accepted applications for developer positions from September through October 2023. We received about 200 resumes, and we’ve chosen 4 developers with a proven track record of contributions to the PHP language and ecosystem.</p>
+
+<p>We offered the new developers 6-month trial contracts so that the developers and the Governing Board can evaluate the results and then decide whether to continue the engagements.</p>
+
+<h3 id="the-team-as-of-2024">The team as of 2024</h3>
+
+<p>Starting from January, we now contract 10 developers to work on PHP:</p>
+
+<ul>
+<li><strong>Arnaud Le Blanc</strong> <a href="https://github.com/arnaud-lb">@arnaud-lb</a></li>
+<li><strong>David Carlier</strong> <a href="https://github.com/devnexen">@devnexen</a></li>
+<li><strong>Derick Rethans</strong> <a href="https://github.com/derickr">@derickr</a></li>
+<li><strong>Gina Peter Banyard</strong> <a href="https://github.com/Girgias">@Girgias</a></li>
+<li><strong>Ilija Tovilo</strong> <a href="https://github.com/iluuu1994">@iluuu1994</a></li>
+<li><strong>Jakub Zelenka</strong> <a href="https://github.com/bukka">@bukka</a></li>
+<li><strong>James Titcumb</strong> <a href="https://github.com/asgrim">@asgrim</a></li>
+<li><strong>Máté Kocsis</strong> <a href="https://github.com/kocsismate">@kocsismate</a></li>
+<li><strong>Saki Takamachi</strong> <a href="https://github.com/SakiTakamachi">@SakiTakamachi</a></li>
+<li><strong>Shivam Mathur</strong> <a href="https://github.com/shivammathur">@shivammathur</a></li>
+</ul>
+
+<h3 id="team-timeline">Team timeline</h3>
+
+<p>We established the following timeline for team review.</p>
+
+<ul>
+<li>January 2024: Developers start work according to the new contracts.</li>
+<li>May 2024: Evaluate new developers, contracts are extended, expanded, or terminated after the first 6 months.</li>
+<li>September 2024: Open applications for new developers, evaluate performance of the current group of developers.</li>
+<li>October 2024: Evaluate applications, work out updates to compensation, decide on a budget.</li>
+<li>November 2024: Renew contracts with existing developers, potentially sign contracts with new developers.</li>
+</ul>
+
+<p>And in 2025 we start the cycle again.</p>
+
+<h2 id="retrospective%3A-goals-of-2023">Retrospective: Goals of 2023</h2>
+
+<p>In the previous report, we outlined a few organizational and technical goals. Let’s look back and evaluate the results.</p>
+
+<h3 id="organization-goals">Organization goals</h3>
+
+<ul>
+<li><strong>Extend the foundation developers team. ✅</strong><br/>
+We did not grow in 2023 strictly speaking, but the work done in 2023 helped to build the ground for two contracted developers to go full-time, as well as to hire 4 new developers.<br/><br/></li>
+<li><strong>Grow the community of the foundation. ✅</strong><br/>
+The foundation’s Slack became a hub for the community and helped to move initiatives.<br/><br/></li>
+<li><strong>Improve communication and provide clear benefits for sponsors. ✅</strong> <br/>
+We created a <a href="https://thephp.foundation/join/#membership-deck">deck with benefits for sponsors</a> and started the advisory board initiative. <br/><br/></li>
+<li><strong>Explore strategic partnerships and marketing opportunities. ✅ / ❌</strong><br/>
+We received investment from the Sovereign Tech Fund and started collaboration with OSTIF.<br/>
+We did not explore any marketing opportunities. And there is a room for many more strategic partnerships.</li>
+</ul>
+
+<h3 id="technical-goals">Technical goals</h3>
+
+<ul>
+<li><strong>Ongoing maintenance and development of the PHP core.  ✅</strong> <br/><br/></li>
+<li><strong>Improve the quality of the ideas and RFCs coming from the foundation. ✅</strong><br/>
+One of the examples here could be <a href="https://wiki.php.net/rfc/property-hooks">Property Hooks RFC</a>. Although it has not been voted on yet, we have put amazing work into it and consulted many different parties to make it as good as possible.<br/><br/></li>
+<li><strong>Develop a high-level roadmap and vision for PHP changes sponsored by the foundation. ❌</strong><br/>
+The roadmap and vision need further development and discussion. However, we conducted several pieces of research, both quantitative and qualitative. Some of these findings were shared at conferences where we participated, including PHPCon Poland, SymfonyCon, and Laracon EU. We plan to continue this work.</li>
+</ul>
+
+<h2 id="php-language-impact">PHP Language Impact</h2>
+
+<p>On a daily basis, the PHP Foundation staff team contributes to the open-source repositories of the <a href="https://github.com/php">PHP GitHub organization</a>. The foundation team contributes in many forms: filing issues, reviewing pull requests, participating in discussions on mailing lists, triaging issues, submitting RFC proposals.</p>
+
+<p>In this document, four categories of contributions are presented in more detail: commits to php-src, reviews of pull requests on php-src, submitted RFC documents, and documentation work.</p>
+
+<h3 id="commits-to-php">Commits to PHP</h3>
+
+<p>The following chart summarizes the number of commits made to the <a href="https://github.com/php/php-src">php/php-src</a> repository in 2023.</p>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>2022</th>
+  <th>2023</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Total by The PHP Foundation</td>
+  <td>683</td>
+  <td>784</td>
+</tr>
+<tr>
+  <td>Total other</td>
+  <td>885</td>
+  <td>1588</td>
+</tr>
+</tbody>
+</table>
+
+<p><img src="/assets/post-images/2024/report-2023/commits.png" alt="Commits" /></p>
+
+<p>Note that the number of commits does not fairly represent the level of effort or the scope of the work. However, it can demonstrate the foundation's relative level of contribution to the PHP core through an objective metric.</p>
+
+<h3 id="reviews">Reviews</h3>
+
+<p>The diagram summarizes the number of pull request reviews made in the <a href="https://github.com/php/php-src">php/php-src</a> repository from January 1 to December 31, 2023.</p>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>2022</th>
+  <th>2023</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Total by The PHP Foundation</td>
+  <td>283</td>
+  <td>702</td>
+</tr>
+<tr>
+  <td>Total other</td>
+  <td>551</td>
+  <td>416</td>
+</tr>
+</tbody>
+</table>
+
+<p><img src="/assets/post-images/2024/report-2023/reviews.png" alt="Reviews" /></p>
+
+<h3 id="rfcs">RFCs</h3>
+
+<p>Below are the RFC proposals authored or co-authored by The PHP Foundation developers in 2023 (random order).</p>
+
+<table>
+<thead>
+<tr>
+  <th>RFC</th>
+  <th>Proposed</th>
+  <th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/deprecate-implicitly-nullable-types">Deprecate implicitly nullable parameter types</a></td>
+  <td>2023-12-20</td>
+  <td>Under Discussion</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/deprecate_functions_with_overloaded_signatures">Deprecate functions with overloaded signatures</a></td>
+  <td>2023-01-31</td>
+  <td>Implemented</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/datetime-exceptions">More Appropriate Date/Time Exceptions</a></td>
+  <td>2023-02-08</td>
+  <td>Implemented</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/proper-range-semantics">Define proper semantics for range() function</a></td>
+  <td>2023-03-13</td>
+  <td>Implemented</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/typed_class_constants">Typed class constants</a></td>
+  <td>2020-07-06</td>
+  <td>Implemented</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/assert-string-eval-cleanup">Deprecate remains of string evaluated code assertions</a></td>
+  <td>2023-05-31</td>
+  <td>Implemented</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/saner-array-sum-product">Saner array_(sum&#124;product)()</a></td>
+  <td>2023-01-14</td>
+  <td>Implemented</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/saner-inc-dec-operators">Path to Saner Increment/Decrement operators</a></td>
+  <td>2022-11-21</td>
+  <td>Implemented</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/rfc1867-non-post">RFC1867 for non-POST HTTP verbs</a></td>
+  <td>2023-10-06</td>
+  <td>Implemented</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/unbundle_imap_pspell_oci8">Unbundle ext/imap, ext/pspell, ext/oci8, and ext/PDO_OCI</a></td>
+  <td>2023-10-03</td>
+  <td>Accepted</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/policy-repository">Policy Repository</a></td>
+  <td>2023-12-04</td>
+  <td>Implemented</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/access_scope_from_magic_accessors">Access Scope from Magic Accessors</a></td>
+  <td>2023-01-19</td>
+  <td>Withdrawn</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/deprecations_php_8_4">Deprecations for PHP 8.4</a></td>
+  <td>2023-07-25</td>
+  <td>Draft</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/file-descriptor-function">Add file_descriptor() function</a></td>
+  <td>2023-01-16</td>
+  <td>Under Discussion</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/core-autoloading">New core autoloading mechanism with support for function autoloading</a></td>
+  <td>2023-04-03</td>
+  <td>Under Discussion</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/property-hooks">Property hooks</a></td>
+  <td>2023-01-03</td>
+  <td>Under discussion</td>
+</tr>
+<tr>
+  <td><a href="https://wiki.php.net/rfc/release_cycle_update">Release cycle update</a></td>
+  <td>2023-11-05</td>
+  <td>Under Discussion</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="release-maintenance">Release Maintenance</h3>
+
+<p>Jakub Zelenka, one of the foundation developers, also volunteered to be a release manager for PHP 8.3. The PHP Foundation supported such an initiative.</p>
+
+<h2 id="the-php-foundation-brand-%26-public-channels">The PHP Foundation brand &amp; public channels</h2>
+
+<p>The PHP Foundation represents a community of core PHP developers and advocates for the PHP programming language. The channels listed below were used by the PHP Foundation for public communication:</p>
+
+<ul>
+<li>11,481 Twitter followers <a href="https://twitter.com/thephpf">https://twitter.com/thephpf</a></li>
+<li>10,320 LinkedIn page followers <a href="https://www.linkedin.com/company/phpfoundation">https://www.linkedin.com/company/phpfoundation</a></li>
+<li>684 Mastodon followers <a href="https://phpc.social/@thephpf">https://phpc.social/@thephpf</a></li>
+</ul>
+
+<p>The PHP Foundation members gave talks at multiple conferences throughout the year:</p>
+
+<ul>
+<li><a href="https://www.phpconference.co.uk/">PHP UK Conference</a> – Derick Rethans</li>
+<li><a href="https://phpconference.com/">International PHP Conference</a> – Nils Adermann</li>
+<li><a href="https://froscon.org/en/">FrOSCon</a> – Sebastian Bergmann</li>
+<li><a href="https://tek.phparch.com/">php&#91;tek&#93;</a> – Derick Rethans</li>
+<li><a href="https://events.drupal.org/lille2023/session/php-foundation-0">DrupalCon Lille</a> - Nils Adermann</li>
+<li><a href="https://php.bettercode.eu/">betterCode(PHP)</a> – Jakub Zalenka</li>
+<li><a href="https://event.afup.org/">ForumPHP</a> – Gina P. Banyard</li>
+<li><a href="https://2023.phpcon.pl/en/">PHPCon Poland</a> – Roman Pronskiy</li>
+<li><a href="https://live.symfony.com/2023-brussels-con/">SymfonyCon</a> – Nicolas Grekas</li>
+</ul>
+
+<h2 id="official-recognition-on-the-php-website">Official Recognition on the PHP website</h2>
+
+<p>The PHP Foundation is now officially endorsed on the php.net website. This was the result of a community vote on <a href="https://wiki.php.net/rfc/promote_php_foundation">RFC Promote the PHP Foundation</a>. Big thanks to Jim Winstead and the PHP community for this.</p>
+
+<h2 id="financial-report">Financial report</h2>
+
+<p>In 2023, The PHP Foundation was financially backed by organizations and individuals with the goal of paying a competitive salary to as many core developers as possible.</p>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>2021 - 2022</th>
+  <th>2023</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Total contributed to The PHP Foundation</td>
+  <td>$ 712,484</td>
+  <td>$ 478,767</td>
+</tr>
+<tr>
+  <td>Fees *</td>
+  <td>$ 90,273</td>
+  <td>$ 60,098</td>
+</tr>
+<tr>
+  <td>Total received</td>
+  <td>$ 622,211</td>
+  <td>$ 418,669</td>
+</tr>
+<tr>
+  <td>Paid to developers</td>
+  <td>$ 133,285</td>
+  <td>$ 275,181</td>
+</tr>
+</tbody>
+</table>
+
+<p><br>
+<em>* Fees include a 10%  Open Source Collective fiscal host fee (dealing with contracts, expense reviews and payments, bank account management, official registrations and dealing with government requirements, open collective platform development etc.), and 1-5% percent of payment processing fees, depending on the payment method used.</em></p>
+
+<p>All incoming and outgoing <strong>transactions of The PHP Foundation are publicly available</strong> to view for anyone: <a href="https://opencollective.com/phpfoundation#category-BUDGET">https://opencollective.com/phpfoundation#category-BUDGET</a></p>
+
+<p><img src="/assets/post-images/2024/report-2023/budget.png" alt="Budget" /></p>
+
+<h3 id="expenses">Expenses</h3>
+
+<p><a href="https://opencollective.com/phpfoundation/expenses">https://opencollective.com/phpfoundation/expenses</a></p>
+
+<p><img src="/assets/post-images/2024/report-2023/expenses.png" alt="Expenses" /></p>
+
+<h2 id="goals-for-2024">Goals for 2024</h2>
+
+<p>Our foremost mission remains the same: <strong>maintain and develop the PHP language</strong>. We’d like PHP to be the best platform for users and for businesses creating web applications and APIs.</p>
+
+<p>The main challenge for continuing the work of The PHP Foundation is to ensure sustainable sponsorship.</p>
+
+<p>From a technical standpoint, the goal is to ensure that foundation developers work on valuable tasks.</p>
+
+<h3 id="organization-goals">Organization goals</h3>
+
+<ul>
+<li>Onboard new major sponsors.</li>
+<li>Explore strategic partnerships and marketing opportunities.</li>
+<li>Further develop the Advisory Board initiative.</li>
+<li>Grow the foundation's community.</li>
+</ul>
+
+<h3 id="technical-goals">Technical goals</h3>
+
+<ul>
+<li>Ongoing maintenance and development of the PHP core.</li>
+<li>Deliver the STF projects.</li>
+<li>Improve the quality of the ideas and RFCs coming from the foundation.</li>
+<li>Conduct research and surveys to define priorities.</li>
+<li>Develop a high-level roadmap for PHP changes sponsored by the foundation.</li>
+</ul>
+
+<h2 id="budget-plan-for-2024">Budget plan for 2024</h2>
+
+<p>In 2024, two of our part-time developers extended commitment to go full-time, and we contracted 4 new developers.</p>
+
+<p>We have also adjusted the compensation rates for developers to better reflect the market, as the rates had not changed since 2021. As a result, our budget significantly increased.</p>
+
+<p>With this plan, we estimate our annual spending cap at approximately <strong>$840,000</strong> for developer compensation.</p>
+
+<p>Additionally, we anticipate receiving <strong>€205,000</strong> from the STF investment. These funds will be allocated to developer reimbursements and our partnership with OSTIF.org for an external security audit.</p>
+
+<p>Our collaboration with the OpenCollective platform has been positive, and we plan to continue operating under the umbrella of the Open Source Collective in 2024. This means that sponsorships we receive are reduced by 10% for Open Source Collective fees and 1–5% for payment processing fees.</p>
+
+<h2 id="outro">Outro</h2>
+
+<p>The PHP language is a living entity and, as such, requires continuous support to address developer issues, resolve security vulnerabilities, and has to evolve to meet the needs of the future.</p>
+
+<p>Based on the strong second year of the foundation, we are excited to continue and multiply the efforts in the next years.</p>
+
+<p>With your help, we continue the mission to support, advance, and develop the PHP language.</p>
+
+<section class="text-center mt-6">
+    <div class="mb-14">
+        <a href="/join" target="_blank" class="inline-block text-xl py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">
+            Join The PHP Foundation
+        </a>
+    </div>
+</section>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[The PHP Foundation
 Team Update 2024]]></title>
@@ -2675,428 +3237,6 @@ We are incredibly grateful for the commitment and dedication of all contributors
 
 <blockquote>
   <p>PHP Roundup is prepared by Ayesh Karunaratne from <strong><a href="https://php.watch">PHP.Watch</a></strong>, a source for PHP News, Articles, Upcoming Changes, and more.</p>
-</blockquote>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[PHP Core Roundup #13]]></title>
-            <link href="https://thephp.foundation/blog/2023/06/06/php-core-roundup-13/"/>
-            <updated>2023-06-06T00:00:00+00:00</updated>
-            <id>https://thephp.foundation/blog/2023/06/06/php-core-roundup-13/</id>
-            <content type="html"><![CDATA[<p>The PHP Core team has been as productive as ever this past month, bringing forth a robust collection of updates that promise to shape the future of PHP. From RFCs that are sure to stir up lively debate, to ones that bring small, yet impactful changes, it has been a month filled with interesting developments. Here's what you need to know.</p>
-
-<blockquote>
-  <p>The PHP Foundation is a collective of PHP contributors, veterans, and companies that collaborate to ensure the long-term sustainability of the PHP programming language. The foundation currently supports six contributors focused on PHP's maintenance, debt reduction, and feature development. These contributors work closely with others on coding, documentation, and discussions.</p>
-</blockquote>
-
-<p><br></p>
-
-<blockquote>
-  <p>Started over a year ago, the PHP Core Roundup series offers a summary of the latest developments, discussions, and news about PHP Core, contributed by both PHP Foundation members and other participants. This post is the thirteenth in the PHP Core Roundup series.</p>
-</blockquote>
-
-<p><div class="px-4 pt-3 border-b border-t -mx-4 border-gray-200">
-    <div class="bg-white py-8">
-        <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
-            <div class="max-w-xl text-4xl font-medium tracking-tight text-gray-900 lg:col-span-6">
-                Subscribe to PHP Core Roundup newsletter
-            </div>
-            <form method="POST"
-                  action="https://php-foundation.mailcoach.app/subscribe/9be4e2bd-f9d8-475c-b00e-2dcc4cf90056"
-                  class="w-full max-w-md lg:col-span-6">
-                <div class="flex gap-x-4">
-                    <label for="email-address" class="sr-only">Email address</label>
-                    <input id="email-address" name="email" type="email" autocomplete="email" required
-                           class="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                           placeholder="Enter your email">
-                    <button type="submit"
-                            class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">
-                        Subscribe
-                    </button>
-                </div>
-                <div class="mt-4 text-sm leading-6 text-gray-900">
-                    We care about your data.
-                    Read our <a href="https://thephp.foundation/privacy-policy"
-                                class="font-semibold text-indigo-600 hover:text-indigo-500 no-underline">privacy policy</a>.
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-</p>
-
-<h2 id="releases">Releases</h2>
-
-<p>The PHP development team released two new versions in May 2023: .</p>
-
-<p><strong><a href="https://www.php.net/archive/2023.php#2023-05-11-1">PHP 8.2.6</a></strong></p>
-
-<p>This release includes several bug fixes and improvements, notably in areas such as Core, Date, DOM, Exif, Intl, PCRE, Reflection, SPL, Standard, and Streams.</p>
-
-<p><strong><a href="https://www.php.net/archive/2023.php#2023-05-11-2">PHP 8.1.19</a></strong></p>
-
-<p>This release includes bug fixes across various components such as Core, DOM, Exif, Intl, PCRE, and Standard.</p>
-
-<h2 id="recent-rfcs-and-mailing-list-discussions">Recent RFCs and Mailing List Discussions</h2>
-
-<blockquote>
-  <p>Changes and improvements to PHP are discussed, reported, and voted on by the PHP Foundation Team, the PHP development team, and contributors. Bug reports are made to the PHP <a href="https://github.com/php/php-src/issues">issue tracker</a>, changes are discussed in <a href="https://www.php.net/mailing-lists.php">mailing lists</a>, minor code changes are proposed as <a href="https://github.com/php/php-src/issues">pull requests</a>, and major changes are discussed in detail and voted on as <a href="https://wiki.php.net/rfc">PHP RFCs</a>. <a href="https://github.com/php/doc-en/">Documentation</a> and the <a href="https://github.com/php/web-php">php.net website</a> changes are also discussed and improved at their relevant Git repositories on GitHub.</p>
-</blockquote>
-
-<p><br>
-Hundreds of awesome PHP contributors put their efforts into improvements to the PHP code base, documentation, and the php.net website. Here is a summary of some changes made by the people behind PHP. Things marked with 💜 are done by the PHP Foundation team.</p>
-
-<h2 id="rfc-updates">RFC Updates</h2>
-
-<p>Following are the RFCs and major pull-requests discussed, voted on, and implemented since our last update.</p>
-
-<h3 id="in-voting%3A-define-proper-semantics-for-range-function-by-gina-peter-banyard-%F0%9F%92%9C">In Voting: <a href="https://wiki.php.net/rfc/proper-range-semantics">Define proper semantics for range() function</a> by Gina Peter Banyard 💜</h3>
-
-<p>This RFC proposes to adjust the semantics of the <code>range()</code> function in PHP to throw exceptions or at least warn when passing unusable arguments to <code>range()</code>.</p>
-
-<p>The <code>range()</code> function in PHP generates an array of values going from a start value to an end value. However, the current behavior of the function is complex and can lead to unexpected results. For example, if one of the boundary inputs is a string digit (e.g. "1"), both inputs will be interpreted as numbers. This RFC aims to address these issues and make the behavior of the <code>range()</code> function more predictable and consistent.</p>
-
-<h3 id="in-voting%3A-mb_str_pad-by-niels-dossche">In Voting: <a href="https://wiki.php.net/rfc/mb_str_pad">mb_str_pad()</a> by Niels Dossche</h3>
-
-<p>This RFC proposes the addition of a multibyte string pad function to the mbstring extension. This function would work similarly to the existing <code>str_pad()</code> function, but with support for multibyte strings. This is a welcome addition for developers working with multibyte strings, as it will make it easier to manipulate and format these strings in PHP.</p>
-
-<h3 id="under-discussion%3A-nameof-operator-by-robert-landers">Under Discussion: <a href="https://wiki.php.net/rfc/nameof">Nameof Operator</a> by Robert Landers</h3>
-
-<p>This RFC proposes to add a global <code>nameof()</code> function, which would return the name of a variable, class, function, or method as a string. This could be useful in a variety of scenarios, such as debugging, logging, or creating more informative error messages.</p>
-
-<h3 id="under-discussion%3A-marking-overridden-methods-by-tim-d%C3%BCsterhus">Under Discussion: <a href="https://wiki.php.net/rfc/marking_overriden_methods">Marking Overridden Methods</a> by Tim Düsterhus</h3>
-
-<p>This RFC proposes a way to explicitly mark methods that are intended to override methods from a parent class with a new <code>#[\Override]</code> attribute. If this attribute is added to a method, the engine shall validate that a method with the same name exists in a parent class or any of the implemented interfaces. If no such method exists a compile time error shall be emitted.</p>
-
-<p>The similar concepts exist in Java, TypeScript, C++, C#, Swift, Kotlin, and other languages.</p>
-
-<h3 id="under-discussion%3A-deprecate-functions-with-overloaded-signatures-by-m%C3%A1t%C3%A9-kocsis-%F0%9F%92%9C">Under Discussion: <a href="https://wiki.php.net/rfc/deprecate_functions_with_overloaded_signatures">Deprecate Functions with Overloaded Signatures</a> by Máté Kocsis 💜</h3>
-
-<p>This RFC proposes to deprecate a number of functions that have overloaded signatures, meaning they behave differently based on the number or type of arguments passed to them. The goal is to make PHP's function signatures more consistent and predictable.</p>
-
-<h3 id="under-discussion%3A-deprecations-for-php-8.3-by-gina-peter-banyard-%F0%9F%92%9C%2C-christoph-m.-becker%2C-m%C3%A1t%C3%A9-kocsis-%F0%9F%92%9C%2C-tim-d%C3%BCsterhus%2C-go-kudo%2C-andreas-heigl">Under Discussion: <a href="https://wiki.php.net/rfc/deprecations_php_8_3">Deprecations for PHP 8.3</a> by Gina Peter Banyard 💜, Christoph M. Becker, Máté Kocsis 💜, Tim Düsterhus, Go Kudo, Andreas Heigl</h3>
-
-<p>The aim is to clean up some of the older, less consistent parts of PHP to make the language more reliable and predictable. The following list provides a short overview of the functionality targeted for deprecation:</p>
-
-<ul>
-<li>Passing negative <code>$widths</code> to <code>mb_strimwidth()</code></li>
-<li>The <code>NumberFormatter::TYPE_CURRENCY</code> constant</li>
-<li>Unnecessary <code>crypt()</code> related constants</li>
-<li><code>MT_RAND_PHP</code></li>
-<li>Global Mersenne Twister</li>
-</ul>
-
-<h3 id="declined%3A-php-technical-committee-by-jakub-zelenka-%F0%9F%92%9C-and-larry-garfield">Declined: <a href="https://wiki.php.net/rfc/php_technical_committee">PHP Technical Committee</a> by Jakub Zelenka 💜 and Larry Garfield</h3>
-
-<p>This RFC proposed the creation of a PHP Technical Committee (TC) that would make decisions about technical aspects of the PHP language and its reference implementation. The TC would have been responsible for resolving technical conflicts between core developers. Despite the potential benefits, the community decided not to move forward with this proposal.</p>
-
-<h2 id="notable-mailing-list-discussions">Notable Mailing List Discussions</h2>
-
-<h3 id="callable-types-via-interfaces"><a href="https://externals.io/message/120083">Callable types via Interfaces</a></h3>
-
-<p>The proposal suggests that callable types should be allowed to be represented as interfaces, which would allow for more precise type hinting and better static analysis. The sentiment in the thread is generally positive, with many participants expressing support for the idea. However, some concerns were raised about potential complexity and the need for careful implementation to avoid breaking existing code.</p>
-
-<h3 id="interface-properties"><a href="https://externals.io/message/120403">Interface Properties</a></h3>
-
-<p>The discussion starter suggests making it possible to define properties in interfaces and argues that this feature would align well with the deprecation of dynamic properties and could replace the current practice of specifying these properties in doc blocks.</p>
-
-<p>Larry Garfield pointed out that interface properties are already included in the <a href="https://wiki.php.net/rfc/property-hooks">Property Hooks RFC</a>, which is expected to go to a vote soon.</p>
-
-<p>David Gebler expressed his disagreement with the proposal, stating that interfaces in most languages don't support defining properties because they are generally seen as an implementation detail rather than a promise about supported behavior. He also mentioned that interfaces are essentially an alternative to multiple inheritance, and mandating fields as well as method signatures brings them very close to abstract classes. He also expressed concerns about multiple interfaces defining the same property, which could lead to conceptual confusion.</p>
-
-<p>Some participants expressed support, noting that it could improve code clarity and reduce the need for doc blocks.</p>
-
-<h2 id="merged-prs-and-commits">Merged PRs and Commits</h2>
-
-<p>This month, the PHP core team has been hard at work improving the PHP language. Here's a list of the commits made by the team, grouped by author:</p>
-
-<details>
-
-<summary>Click here to expand</summary>
-
-<ul>
-<li><strong>Tim Düsterhus</strong>
-
-<ul>
-<li>RFC: Make unserialize() emit a warning for trailing bytes in <a href="https://github.com/php/php-src/pull/9630">GH-9630</a></li>
-</ul></li>
-<li><strong>Dmitry Stogov</strong>
-
-<ul>
-<li>JIT: Fixed inaccurate range inference usage for UNDEF/NULL/FALSE in <a href="https://github.com/php/php-src/commit/25ad171f63">25ad171f63</a></li>
-<li>Fixed <a href="https://github.com/php/php-src/issues/11127">GH-11127</a> (JIT fault) in <a href="https://github.com/php/php-src/commit/ed0b593c11">ed0b593c11</a></li>
-</ul></li>
-<li><strong>yang yuhan</strong>
-
-<ul>
-<li>JIT: Align JIT stubs in <a href="https://github.com/php/php-src/pull/11149">GH-11149</a></li>
-</ul></li>
-<li><strong>ColinHDev</strong>
-
-<ul>
-<li>Fix negative indices on empty array not affecting next chosen index in <a href="https://github.com/php/php-src/pull/11157">GH-11157</a></li>
-</ul></li>
-<li><strong>Sara</strong>
-
-<ul>
-<li>Add configuration opcache.jit_max_trace_length in <a href="https://github.com/php/php-src/pull/11173">GH-11173</a></li>
-<li>Cacheline demote to improve performance in <a href="https://github.com/php/php-src/pull/11101">GH-11101</a></li>
-</ul></li>
-<li><strong>Niels Dossche</strong>
-
-<ul>
-<li>Fix too wide OR and AND range inference in <a href="https://github.com/php/php-src/pull/11170">GH-11170</a></li>
-<li>Fix <a href="https://github.com/php/php-src/issues/9068">GH-9068</a>: Conditional jump or move depends on uninitialised value(s) in <a href="https://github.com/php/php-src/pull/10221">GH-10221</a></li>
-<li>Fix <a href="https://github.com/php/php-src/issues/11175">GH-11175</a> and <a href="https://github.com/php/php-src/issues/11177">GH-11177</a>: Stream socket timeout undefined behaviour in <a href="https://github.com/php/php-src/pull/11183">GH-11183</a></li>
-<li>Fix <a href="https://github.com/php/php-src/issues/11178">GH-11178</a>: Segmentation fault in spl_array_it_get_current_data (PHP 8.1.18) in <a href="https://github.com/php/php-src/pull/11182">GH-11182</a></li>
-<li>Fix <a href="https://github.com/php/php-src/issues/11104">GH-11104</a>: STDIN/STDOUT/STDERR is not available for CLI without a script in <a href="https://github.com/php/php-src/commit/f6c0c60ef6">f6c0c60ef6</a></li>
-<li>Implement NEON-accelerated version of BLOCKCONV for lowercasing and uppercasing strings in <a href="https://github.com/php/php-src/pull/11161">GH-11161</a></li>
-<li>Fix <a href="https://github.com/php/php-src/issues/10031">GH-10031</a>: [Stream] STREAM_NOTIFY_PROGRESS over HTTP emitted irregularly for last chunk of data in <a href="https://github.com/php/php-src/pull/10492">GH-10492</a></li>
-<li>Fix <a href="https://github.com/php/php-src/issues/11141">GH-11141</a>: Could not open input file: should be sent to stderr in <a href="https://github.com/php/php-src/pull/11163">GH-11163</a></li>
-<li>Fix maximum argument count of pcntl_forkx() in <a href="https://github.com/php/php-src/pull/11199">GH-11199</a></li>
-<li>Fix <a href="https://github.com/php/php-src/issues/11160">GH-11160</a>: Few tests failed building with new libxml 2.11.0 in <a href="https://github.com/php/php-src/pull/11162">GH-11162</a></li>
-<li>Fix <a href="https://github.com/php/php-src/issues/11180">GH-11180</a>: hash_file() appears to be restricted to 3 arguments in <a href="https://github.com/php/php-src/pull/11198">GH-11198</a></li>
-<li>Remove unnecessary NULL assignments after ecalloc in streams in <a href="https://github.com/php/php-src/pull/11209">GH-11209</a></li>
-<li>Fix <a href="https://github.com/php/php-src/issues/8426">GH-8426</a>: make test fail while soap extension build in <a href="https://github.com/php/php-src/pull/11211">GH-11211</a></li>
-<li>Fix <a href="https://github.com/php/php-src/issues/10834">GH-10834</a>: exif_read_data() cannot read smaller stream wrapper chunk sizes in <a href="https://github.com/php/php-src/pull/10924">GH-10924</a></li>
-<li>Fix <a href="https://bugs.php.net/bug.php?id=97836">#97836</a> and <a href="https://bugs.php.net/bug.php?id=81705">#81705</a>: Segfault / type confusion in concat_function in <a href="https://github.com/php/php-src/pull/10049">GH-10049</a></li>
-<li>Fix <a href="https://github.com/php/php-src/issues/11274">GH-11274</a>: POST/PATCH request via file_get_contents + stream_context_create switches to GET after a HTTP 308 redirect in <a href="https://github.com/php/php-src/pull/11275">GH-11275</a></li>
-<li>Fix -Wstrict-prototypes warnings in fuzzer SAPI in <a href="https://github.com/php/php-src/pull/11277">GH-11277</a></li>
-<li>Remove unused variable err in mb_send_mail() in <a href="https://github.com/php/php-src/pull/11285">GH-11285</a></li>
-<li>Fix <a href="https://github.com/php/php-src/issues/11245">GH-11245</a> (In some specific cases SWITCH with one default statement will cause segfault) in <a href="https://github.com/php/php-src/pull/11251">GH-11251</a></li>
-<li>Fix <a href="https://github.com/php/php-src/issues/11281">GH-11281</a>: DateTimeZone::getName() does not include seconds in offset in <a href="https://github.com/php/php-src/pull/11282">GH-11282</a></li>
-<li>Fix allocation loop in <code>zend_shared_alloc_startup()</code> in <a href="https://github.com/php/php-src/pull/11306">GH-11306</a></li>
-<li>Fix <a href="https://github.com/php/php-src/issues/11288">GH-11288</a> and <a href="https://github.com/php/php-src/issues/11289">GH-11289</a> and <a href="https://github.com/php/php-src/issues/11290">GH-11290</a> and <a href="https://github.com/php/php-src/issues/9142">GH-9142</a>: DOMExceptions and segfaults with replaceWith in <a href="https://github.com/php/php-src/pull/11299">GH-11299</a></li>
-<li>Shrink libxml_doc_props struct in <a href="https://github.com/php/php-src/pull/11326">GH-11326</a></li>
-<li>Fix <a href="https://github.com/php/php-src/issues/10234">GH-10234</a>: Setting DOMAttr::textContent results in an empty attribute value in <a href="https://github.com/php/php-src/pull/10245">GH-10245</a></li>
-<li>Fix <a href="https://github.com/php/php-src/issues/11338">GH-11338</a>: SplFileInfo empty getBasename with more than one slash in <a href="https://github.com/php/php-src/pull/11340">GH-11340</a></li>
-<li>Fix <a href="https://github.com/php/php-src/issues/11336">GH-11336</a>: php still tries to unlock the shared memory ZendSem with opcache.file_cache_only=1 but it was never locked in <a href="https://github.com/php/php-src/pull/11341">GH-11341</a></li>
-<li>Fix spec compliance error for DOMDocument::getElementsByTagNameNS in <a href="https://github.com/php/php-src/pull/11343">GH-11343</a></li>
-<li>Fix DOMElement::append() and DOMElement::prepend() hierarchy checks in <a href="https://github.com/php/php-src/pull/11344">GH-11344</a></li>
-<li>Remove unnecessary tree setting in dom_zvals_to_fragment() in <a href="https://github.com/php/php-src/pull/11345">GH-11345</a></li>
-<li>Implement dom_get_doc_props_read_only() in <a href="https://github.com/php/php-src/pull/11345">GH-11345</a></li>
-<li>Fix <a href="https://github.com/php/php-src/issues/11347">GH-11347</a>: Memory leak when calling a static method inside an xpath query in <a href="https://github.com/php/php-src/pull/11350">GH-11350</a></li>
-</ul></li>
-<li><strong>Ilija Tovilo 💜</strong>
-
-<ul>
-<li>Add retry mechanism in <code>run-tests.php</code> in <a href="https://github.com/php/php-src/pull/10892">GH-10892</a></li>
-<li>Downgrade to Ubuntu 20.04 for ASAN nightly for now in <a href="https://github.com/php/php-src/commit/ef6bbaa1ec">ef6bbaa1ec</a></li>
-<li>Correctly copy lineno for zval asts in <a href="https://github.com/php/php-src/pull/11203">GH-11203</a></li>
-<li>Fix use-of-uninitialized value in <code>phar_object.c</code> in <a href="https://github.com/php/php-src/pull/11202">GH-11202</a></li>
-<li>Fix use-of-undefined in zend_fiber_object_gc of ex->call in <a href="https://github.com/php/php-src/pull/11208">GH-11208</a></li>
-<li>Fix compilation for PHP 8.1 in <a href="https://github.com/php/php-src/commit/8f66b67ccf">8f66b67ccf</a></li>
-<li>Fix potential NULL pointer access in zend_fiber_object_gc in <a href="https://github.com/php/php-src/commit/0a04c008d0">0a04c008d0</a></li>
-<li>Fix delayed early binding class redeclaration error in <a href="https://github.com/php/php-src/pull/11226">GH-11226</a></li>
-<li>Fix -Wenum-int-mismatch warning in ext/json/php_json_encoder.h in <a href="https://github.com/php/php-src/commit/ac41608797">ac41608797</a></li>
-<li>Implement delayed early binding for classes without parents in <a href="https://github.com/php/php-src/commit/0600f513b3">0600f513b3</a></li>
-<li>Fix segfault in mb_strrpos/mb_strripos with ASCII encoding and negative offset in <a href="https://github.com/php/php-src/pull/11220">GH-11220</a></li>
-<li>Fix string coercion for $a .= $a in <a href="https://github.com/php/php-src/pull/11296">GH-11296</a></li>
-<li>Fix concat_function use-after-free on out-of-memory error in <a href="https://github.com/php/php-src/pull/11297">GH-11297</a></li>
-<li>Fix access on NULL pointer in array_merge_recursive() in <a href="https://github.com/php/php-src/pull/11303">GH-11303</a></li>
-<li>Fix preg_replace_callback_array() pattern validation in <a href="https://github.com/php/php-src/pull/11301">GH-11301</a></li>
-<li>Fix exception handling in array_multisort() in <a href="https://github.com/php/php-src/pull/11302">GH-11302</a></li>
-<li>Use zend_ast_apply in zend_eval_const_expr in <a href="https://github.com/php/php-src/pull/11261">GH-11261</a></li>
-<li>Allow arbitrary expressions in static variable initializer in <a href="https://github.com/php/php-src/pull/9301">GH-9301</a></li>
-<li>Use single allocation for indirect values in array_multisort in <a href="https://github.com/php/php-src/pull/11309">GH-11309</a></li>
-<li>Fix <code>zend_jit_stop_counter_handlers()</code> performance issues with protect_memory=1 in <a href="https://github.com/php/php-src/pull/11323">GH-11323</a></li>
-<li>Add tests for list() in assignment in array literals in <a href="https://github.com/php/php-src/commit/8ed66b4347">8ed66b4347</a></li>
-<li>Revert "Use zend_ast_apply in zend_eval_const_expr (#11261)" in <a href="https://github.com/php/php-src/commit/fbe6696d49">fbe6696d49</a></li>
-</ul></li>
-<li><strong>Nils</strong>
-
-<ul>
-<li>Remove unused macro PHP_FNV1_32A_INIT and PHP_FNV1A_64_INIT in <a href="https://github.com/php/php-src/pull/11114">GH-11114</a></li>
-</ul></li>
-<li><strong>David CARLIER</strong>
-
-<ul>
-<li><code>ext/pgsql</code>: pg_cancel_query internal update in <a href="https://github.com/php/php-src/commit/84c185c8ba">84c185c8ba</a></li>
-<li><code>ext/pgsql</code>: pg_trace allow to refine its trace mode via 2 new constants in <a href="https://github.com/php/php-src/commit/7ec8ae12c4">7ec8ae12c4</a></li>
-<li><code>ext/pgsql</code>: pg_lo_read addressing the todo. in <a href="https://github.com/php/php-src/pull/11159">GH-11159</a></li>
-<li><code>ext/pgsql</code> adding PGSQL_ERRORS_SQLSTATE constant support in <a href="https://github.com/php/php-src/commit/f31d253849">f31d253849</a></li>
-<li><code>ext/pgsql</code>: fix pg_trace test when trace mode is supported. in <a href="https://github.com/php/php-src/pull/11191">GH-11191</a></li>
-</ul></li>
-<li><strong>Bob Weinand</strong>
-
-<ul>
-<li>Fix <a href="https://github.com/php/php-src/issues/11189">GH-11189</a>: Exceeding memory limit in zend_hash_do_resize leaves the array in an invalid state in <a href="https://github.com/php/php-src/commit/05bd1423ee">05bd1423ee</a></li>
-<li>Fix <a href="https://github.com/php/php-src/issues/11222">GH-11222</a>: foreach by-ref may jump over keys during a rehash in <a href="https://github.com/php/php-src/commit/975d28e278">975d28e278</a></li>
-</ul></li>
-<li><strong>Julien Quiaios</strong>
-
-<ul>
-<li>Add new test for array_fill() to cover the case when the parameter count is too large in <a href="https://github.com/php/php-src/pull/11184">GH-11184</a></li>
-</ul></li>
-<li><strong>Cédric Anne</strong>
-
-<ul>
-<li>Make SERVER_SOFTWARE compliant with RFC3875 in <a href="https://github.com/php/php-src/pull/11093">GH-11093</a></li>
-</ul></li>
-<li><strong>Calvin Buckley</strong>
-
-<ul>
-<li><code>http_response_code</code> should warn if headers were already sent in <a href="https://github.com/php/php-src/pull/10744">GH-10744</a></li>
-</ul></li>
-<li><strong>Daniel Kesselberg</strong>
-
-<ul>
-<li>Add PKCS7_NOOLDMIMETYPE and OPENSSL_CMS_OLDMIMETYPE in <a href="https://github.com/php/php-src/commit/fa10dfcc81">fa10dfcc81</a></li>
-</ul></li>
-<li><strong>Jakub Zelenka 💜</strong>
-
-<ul>
-<li>Add myself as a standard CODEOWNER to not miss some changes in <a href="https://github.com/php/php-src/commit/5690e8baea">5690e8baea</a></li>
-<li>Fix <a href="https://github.com/php/php-src/issues/10461">GH-10461</a>: Postpone FPM child freeing in event loop in <a href="https://github.com/php/php-src/commit/102953735c">102953735c</a></li>
-<li>Expose JSON internal function to escape string in <a href="https://github.com/php/php-src/commit/e8a836eb39">e8a836eb39</a></li>
-<li>Fix bug <a href="https://bugs.php.net/bug.php?id=64539">#64539</a>: FPM status - query_string not properly JSON encoded in <a href="https://github.com/php/php-src/pull/11050">GH-11050</a></li>
-<li>FPM: Fix memory leak for invalid primary script file handle in <a href="https://github.com/php/php-src/pull/11088">GH-11088</a></li>
-<li>Fix FPM status json encoded value test in <a href="https://github.com/php/php-src/pull/11276">GH-11276</a></li>
-</ul></li>
-<li><strong>Florian Moser</strong>
-
-<ul>
-<li>Fix <a href="https://github.com/php/php-src/issues/11054">GH-11054</a>: Reset OpenSSL errors when using a PEM public key in <a href="https://github.com/php/php-src/pull/11055">GH-11055</a></li>
-</ul></li>
-<li><strong>Gina Peter Banyard 💜</strong>
-
-<ul>
-<li>Prevent unnecessary string duplication in assert() in <a href="https://github.com/php/php-src/pull/11031">GH-11031</a></li>
-<li>ext/standard/array.c: use uint32_t instead of incorrect int type in <a href="https://github.com/php/php-src/commit/646f54b594">646f54b594</a></li>
-<li>Fix assertion warning message when no description is provided in <a href="https://github.com/php/php-src/commit/e35cd34bcd">e35cd34bcd</a></li>
-<li>Use uint32_t for variable storing <code>ZEND_NUM_ARGS()</code> in <a href="https://github.com/php/php-src/commit/80c8ca9c8f">80c8ca9c8f</a></li>
-<li>FPM: refactor fpm_php_get_string_from_table() to better match usage in <a href="https://github.com/php/php-src/pull/11051">GH-11051</a></li>
-</ul></li>
-<li><strong>Máté Kocsis 💜</strong>
-
-<ul>
-<li>Narrow bool return types to true when possible in <a href="https://github.com/php/php-src/commit/85338569de">85338569de</a></li>
-<li>Add support for true standalone type when generating methodsynopsis in <a href="https://github.com/php/php-src/commit/281669aeb4">281669aeb4</a></li>
-<li>Narrow some more return types to true in <a href="https://github.com/php/php-src/commit/09dd3e3daf">09dd3e3daf</a></li>
-</ul></li>
-<li><strong>Michael Voříšek</strong>
-
-<ul>
-<li>Fix gmp_long/gmp_ulong typedef warning on Windows x86 in <a href="https://github.com/php/php-src/pull/11112">GH-11112</a></li>
-<li>Allow CTE on more CTE safe functions in <a href="https://github.com/php/php-src/pull/10771">GH-10771</a></li>
-</ul></li>
-<li><strong>Amedeo Baragiola</strong>
-
-<ul>
-<li>Fix compilation error on old GCC versions in <a href="https://github.com/php/php-src/pull/11212">GH-11212</a></li>
-</ul></li>
-<li><strong>Luc Vieillescazes</strong>
-
-<ul>
-<li>Keep the orig_path for xport stream in <a href="https://github.com/php/php-src/pull/11113">GH-11113</a></li>
-</ul></li>
-<li><strong>Randy Geraads</strong>
-
-<ul>
-<li>Added negative offset test for mb_strrpos in <a href="https://github.com/php/php-src/commit/c5a623ba5e">c5a623ba5e</a></li>
-</ul></li>
-<li><strong>Peter Kokot</strong>
-
-<ul>
-<li>Fix #9483: Fix autoconf warnings due to old libtool in <a href="https://github.com/php/php-src/pull/11207">GH-11207</a></li>
-</ul></li>
-<li><strong>Alex Dowad</strong>
-
-<ul>
-<li>Use shared, immutable array for return value of mb_list_encodings in <a href="https://github.com/php/php-src/commit/97e29bed9e">97e29bed9e</a></li>
-<li>Take order of candidate encodings into account when guessing text encoding in <a href="https://github.com/php/php-src/commit/3ab10da758">3ab10da758</a></li>
-<li>Use pakutoma's encoding check functions for mb_detect_encoding even in non-strict mode in <a href="https://github.com/php/php-src/commit/7914b8cefd">7914b8cefd</a></li>
-<li>Combine CJK encoding conversion code in a single source file in <a href="https://github.com/php/php-src/commit/c717c79a09">c717c79a09</a></li>
-<li>Optimize conversion of SJIS-2004 text to Unicode in <a href="https://github.com/php/php-src/commit/73633bf1c3">73633bf1c3</a></li>
-<li>Optimize conversion of CP932 text to Unicode in <a href="https://github.com/php/php-src/commit/175154dbcc">175154dbcc</a></li>
-<li>Move kana translation tables to <code>mbfilter_cjk.c</code> in <a href="https://github.com/php/php-src/commit/245daedb41">245daedb41</a></li>
-<li>Test mb_strlen for all text encodings supported by mbstring in <a href="https://github.com/php/php-src/commit/f337c92050">f337c92050</a></li>
-<li>Fix problem with CP949 conversion when 0xC9 precedes byte lower than 0xA1 in <a href="https://github.com/php/php-src/commit/8e6be14372">8e6be14372</a></li>
-<li>Convert mbfilter_conv{,_r}_map_tbl to return bool in <a href="https://github.com/php/php-src/commit/18ca489347">18ca489347</a></li>
-</ul></li>
-<li><strong>Peter Chun-Sheng, Li</strong>
-
-<ul>
-<li>Fix <a href="https://github.com/php/php-src/issues/11099">GH-11099</a>: Generating <code>phar.php</code> during cross-compile can't be done in <a href="https://github.com/php/php-src/pull/11243">GH-11243</a></li>
-</ul></li>
-<li><strong>Nikita Popov</strong>
-
-<ul>
-<li>Correctly handle multiple constants in typed declaration in <a href="https://github.com/php/php-src/commit/c230aa9be3">c230aa9be3</a></li>
-</ul></li>
-<li><strong>LoongT4o</strong>
-
-<ul>
-<li>Fix the JIT buffer relocation failure at the corner case in <a href="https://github.com/php/php-src/pull/11266">GH-11266</a></li>
-</ul></li>
-<li><strong>Pierrick Charron</strong>
-
-<ul>
-<li>PHP-8.2 is now for PHP 8.2.8-dev in <a href="https://github.com/php/php-src/commit/d5f68b50fc">d5f68b50fc</a></li>
-</ul></li>
-<li><strong>Ben Ramsey</strong>
-
-<ul>
-<li>PHP-8.1 is now for PHP 8.1.21-dev in <a href="https://github.com/php/php-src/commit/2f2fd06be0">2f2fd06be0</a></li>
-</ul></li>
-<li><strong>Mikhail Galanin</strong>
-
-<ul>
-<li><code>ext/session</code>: pass ini options to extra processes in tests in <a href="https://github.com/php/php-src/pull/11294">GH-11294</a></li>
-</ul></li>
-<li><strong>KoudelkaB</strong>
-
-<ul>
-<li>Access violation when ALLOC_FALLBACK fixed in <a href="https://github.com/php/php-src/commit/8946b7b141">8946b7b141</a></li>
-</ul></li>
-<li><strong>Daniil Gentili</strong>
-
-<ul>
-<li>Fix GCC 12 compilation on riscv64 in <a href="https://github.com/php/php-src/commit/1dfa277a96">1dfa277a96</a></li>
-</ul></li>
-<li><strong>Kirill Nesmeyanov</strong>
-
-<ul>
-<li>Add string output escaping into zend dump (phpdbg + opcache debug) in <a href="https://github.com/php/php-src/pull/11337">GH-11337</a></li>
-</ul></li>
-<li><strong>divinity76</strong>
-
-<ul>
-<li>Fix return value in stub file for DOMNodeList::item in <a href="https://github.com/php/php-src/pull/11342">GH-11342</a></li>
-</ul></li>
-<li><strong>Yuya Hamada</strong>
-
-<ul>
-<li>Fix mb_strlen is wrong length for CP932 when 0x80 in <a href="https://github.com/php/php-src/commit/c50172e812">c50172e812</a></li>
-</ul></li>
-<li><strong>James Lucas</strong>
-
-<ul>
-<li>Fix bug <a href="https://github.com/php/php-src/issues/11246">GH-11246</a> cli/get_set_process_title in <a href="https://github.com/php/php-src/pull/11247">GH-11247</a></li>
-</ul></li>
-</ul>
-
-</details>
-
-<p><br>
-This concludes the list of commits made by the PHP core team in the past month. We're grateful for their hard work and dedication to improving PHP.</p>
-
-<p><br></p>
-
-<hr />
-
-<h2 id="support-php-foundation">Support PHP Foundation</h2>
-
-<p>At PHP Foundation, we support, promote, and advance the PHP language. We financially support six part-time PHP core developers to contribute to the PHP project. You can help support PHP Foundation at <a href="https://opencollective.com/phpfoundation">OpenCollective</a> or via <a href="https://github.com/sponsors/ThePHPF">GitHub Sponsors</a>.</p>
-
-<p>A big thanks to all our sponsors — PHP Foundation is all of us!</p>
-
-<p>Follow us on Twitter <a href="https://twitter.com/thephpf">@ThePHPF</a> to get the latest updates from the Foundation.</p>
-
-<p>💜️ 🐘</p>
-
-<blockquote>
-  <p>PHP Roundup is (except for this particular one) prepared by Ayesh Karunaratne from <strong><a href="https://php.watch">PHP.Watch</a></strong>, a source for PHP News, Articles, Upcoming Changes, and more.</p>
 </blockquote>
 ]]></content>
         </entry>
