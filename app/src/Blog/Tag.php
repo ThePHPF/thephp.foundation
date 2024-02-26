@@ -9,5 +9,6 @@ class Tag
         'roundup' => 'PHP Roundup',
         'update' => 'Update',
         'team' => 'Team',
+        'report' => 'Report',
     ];
 }

@@ -3,6 +3,7 @@
 title: 'The PHP Foundation: Impact and Transparency Report 2022'
 layout: post
 tags:
+    - report
 author:
   name: Roman Pronskiy
   url: https://twitter.com/pronskiy

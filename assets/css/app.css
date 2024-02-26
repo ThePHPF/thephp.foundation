@@ -175,3 +175,15 @@ code {
 .button-link-border {
     @apply inline-block py-2 no-underline px-6 hover:text-white text-[#6858f6] bg-white border-2 border-[#6858f6] rounded-3xl hover:bg-[#6858f6];
 }
+
+table tr th {
+    @apply text-center font-bold;
+}
+
+table tr td, table tr th {
+    @apply border-solid border border-gray-300 p-1.5;
+}
+
+table tr, td {
+    @apply text-base;
+}
