@@ -15,7 +15,7 @@ We’re a little late in posting our report from 2023, so we’ll also share som
 
 At the beginning of 2024, The PHP Foundation is a collective of **9 volunteer board members**, **1 full-time operations manager** sponsored by JetBrains, and **10 developers** paid part-time/full-time who make more than half of the contributions to the PHP language and its extensions.
 
-In 2023, The PHP Foundation received **$418,669 in donations** from organizations and individuals.
+In 2023, The PHP Foundation received **$418,669 in financial contributions** from organizations and individuals.
 
 The PHP Foundation’s main focus in 2023 was strengthening the maintenance of PHP core, the project that lives in the [php/php-src](https://github.com/php/php-src) GitHub repository. This project is the home of the PHP language, where PHP’s interpreter is developed. Everyone who uses PHP benefits in one way or another from the work that is done in this repository.
 
@@ -55,7 +55,7 @@ So it defines 4 priorities of the foundation:
 
 ## Organizational Growth
 
-Many companies with a vested interest in PHP’s prosperity made a major financial contribution during the year. These are the companies that donated $10,000 or more in 2023:
+Many companies with a vested interest in PHP’s prosperity made a major financial contribution during the year. These are the companies that contributed $10,000 or more in 2023:
 
 **JetBrains, Automattic, Private Packagist, Craft CMS, Tideways, pixiv Inc., Mercari Inc., Symfony Corp, Aternos GmbH, Sentry, Ardennes-étape, Zend by Perforce, Les-Tilleuls.coop, Cybozu.**
 
@@ -310,12 +310,12 @@ The PHP Foundation is now officially endorsed on the php.net website. This was t
 
 In 2023, The PHP Foundation was financially backed by organizations and individuals with the goal of paying a competitive salary to as many core developers as possible.
 
-|                                     | 2021 - 2022 | 2023      |
-|-------------------------------------|-------------|-----------|
-| Total donated to The PHP Foundation | $ 712,484   | $ 478,767 |
-| Fees *                              | $ 90,273    | $ 60,098  |
-| Total received                      | $ 622,211   | $ 418,669 |
-| Paid to developers                  | $ 133,285   | $ 275,181 |
+|                                         | 2021 - 2022 | 2023      |
+|-----------------------------------------|-------------|-----------|
+| Total contributed to The PHP Foundation | $ 712,484   | $ 478,767 |
+| Fees *                                  | $ 90,273    | $ 60,098  |
+| Total received                          | $ 622,211   | $ 418,669 |
+| Paid to developers                      | $ 133,285   | $ 275,181 |
 
 <br>
 _* Fees include a 10%  Open Source Collective fiscal host fee (dealing with contracts, expense reviews and payments, bank account management, official registrations and dealing with government requirements, open collective platform development etc.), and 1-5% percent of payment processing fees, depending on the payment method used._
