@@ -72,6 +72,13 @@ quote: 'We’re proud supporters of the PHP Foundation here at Craft CMS. PHP ha
 }) }}
 
 {{ include('quote.html', {
+name: 'Ben Marks',
+title: 'Director Global Market Development at shopware AG',
+image: '/assets/post-images/2024/report-2023/ben_marks.jpg',
+quote: 'So much of our world - the content we consume (blogs, ecommerce, social media) -  is delivered via PHP applications, enabled by the continuing efforts of the PHP Foundation and the ecosystem it enables. The PHP ecosystem\'s success has a significant impact on all of our lives, and we at Shopware are therefore proud supporters of the PHP Foundation.'
+}) }}
+
+{{ include('quote.html', {
 name: 'Kevin Dunglas',
 title: 'Les-Tilleuls.coop, FrankenPHP',
 image: '/assets/post-images/2024/report-2023/kevin_dunglas.png',
@@ -83,27 +90,6 @@ name: 'Matthew Weier O\'Phinney',
 title: 'Senior Product Manager, Zend by Perforce',
 image: '/assets/post-images/2024/report-2023/mwop.jpg',
 quote: 'As longtime contributors to the PHP project, both financially as well as by employing developers on the project, Zend by Perforce is pleased to sponsor the PHP Foundation and support its mission. Expanding the pool of maintainers and developers capable of evolving the language will help keep PHP relevant, and expand its reach in the web development ecosystem.'
-}) }}
-
-{{ include('quote.html', {
-name: 'Ben Marks',
-title: 'Director Global Market Development at shopware AG',
-image: '/assets/post-images/2024/report-2023/ben_marks.jpg',
-quote: 'TODO'
-}) }}
-
-{{ include('quote.html', {
-name: 'Matt Mullenweg',
-title: 'CEO at Automattic, WordPress',
-image: '/assets/post-images/2024/report-2023/matt_mullenweg.jpg',
-quote: 'TODO'
-}) }}
-
-{{ include('quote.html', {
-name: 'Rasmus Lerdorf',
-title: 'The creator of PHP, Etsy',
-image: '/assets/post-images/2024/report-2023/rasmus_lerdorf.jpg',
-quote: 'TODO'
 }) }}
 
 <br>
