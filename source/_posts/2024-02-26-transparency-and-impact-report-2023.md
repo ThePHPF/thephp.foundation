@@ -291,7 +291,7 @@ The PHP Foundation represents a community of core PHP developers and advocates f
 The PHP Foundation members gave talks at multiple conferences throughout the year:
 
 * [PHP UK Conference](https://www.phpconference.co.uk/) – Derick Rethans
-* [International PHP Conference](https://phpconference.com/) – Nils Adermann
+* [International PHP Conference](https://phpconference.com/) – Nils Adermann, Benjamin Eberlei
 * [FrOSCon](https://froscon.org/en/) – Sebastian Bergmann
 * [php\[tek\]](https://tek.phparch.com/) – Derick Rethans
 * [DrupalCon Lille](https://events.drupal.org/lille2023/session/php-foundation-0) - Nils Adermann
