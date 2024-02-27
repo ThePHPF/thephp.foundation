@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2024-02-26T13:52:29+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Core Roundup #13]]></title><content type="html"><![CDATA[<p>The PHP Core team has been as productive as ever this past month, bringing forth a robust collection of updates that promise to shape the future of PHP. From RFCs that are sure to stir up lively debate, to ones that bring small, yet impactful changes, it has been a month filled with interesting developments. Here's what you need to know.</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2024-02-27T09:43:20+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Core Roundup #13]]></title><content type="html"><![CDATA[<p>The PHP Core team has been as productive as ever this past month, bringing forth a robust collection of updates that promise to shape the future of PHP. From RFCs that are sure to stir up lively debate, to ones that bring small, yet impactful changes, it has been a month filled with interesting developments. Here's what you need to know.</p>
 
 <blockquote>
   <p>The PHP Foundation is a collective of PHP contributors, veterans, and companies that collaborate to ensure the long-term sustainability of the PHP programming language. The foundation currently supports six contributors focused on PHP's maintenance, debt reduction, and feature development. These contributors work closely with others on coding, documentation, and discussions.</p>
@@ -990,7 +990,7 @@ The roadmap and vision need further development and discussion. However, we cond
 
 <ul>
 <li><a href="https://www.phpconference.co.uk/">PHP UK Conference</a> – Derick Rethans</li>
-<li><a href="https://phpconference.com/">International PHP Conference</a> – Nils Adermann</li>
+<li><a href="https://phpconference.com/">International PHP Conference</a> – Nils Adermann, Benjamin Eberlei</li>
 <li><a href="https://froscon.org/en/">FrOSCon</a> – Sebastian Bergmann</li>
 <li><a href="https://tek.phparch.com/">php&#91;tek&#93;</a> – Derick Rethans</li>
 <li><a href="https://events.drupal.org/lille2023/session/php-foundation-0">DrupalCon Lille</a> - Nils Adermann</li>
