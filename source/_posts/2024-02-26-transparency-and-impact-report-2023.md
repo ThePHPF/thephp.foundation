@@ -9,8 +9,6 @@ author:
 published_at: 26 February 2024
 ---
 
-We’re a little late in posting our report from 2023, so we’ll also share some of the things we’re focusing on as we start 2024.
-
 ## Executive Summary
 
 At the beginning of 2024, The PHP Foundation is a collective of **9 volunteer board members**, **1 full-time operations manager** sponsored by JetBrains, and **10 developers** paid part-time/full-time who make more than half of the contributions to the PHP language and its extensions.
