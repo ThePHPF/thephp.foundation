@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://thephp.foundation</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -200,43 +200,43 @@
   </url>
       <url>
     <loc>https://thephp.foundation/branding</loc>
-    <lastmod>2024-02-28T06:21:02+00:00</lastmod>
+    <lastmod>2024-03-12T15:08:34+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/code-of-conduct</loc>
-    <lastmod>2024-02-28T06:21:02+00:00</lastmod>
+    <lastmod>2024-03-12T15:08:34+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/contact</loc>
-    <lastmod>2024-02-28T06:21:02+00:00</lastmod>
+    <lastmod>2024-03-12T15:08:34+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/donate</loc>
-    <lastmod>2024-02-28T06:21:02+00:00</lastmod>
+    <lastmod>2024-03-12T15:08:34+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/get-involved</loc>
-    <lastmod>2024-02-28T06:21:02+00:00</lastmod>
+    <lastmod>2024-03-12T15:08:34+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/join</loc>
-    <lastmod>2024-02-28T06:21:02+00:00</lastmod>
+    <lastmod>2024-03-12T15:08:34+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/privacy-policy</loc>
-    <lastmod>2024-02-28T06:21:02+00:00</lastmod>
+    <lastmod>2024-03-12T15:08:34+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
