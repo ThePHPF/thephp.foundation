@@ -10,6 +10,23 @@ title: Presentations
 
     <div class="my-16 gap-8 flex flex-col">
         {{ include('presentations-item.html', {
+            iframe: 'https://www.youtube.com/embed/XE4g1Tl6RQw',
+            date: 'Feb 05-06, 2024',
+            place: 'Amsterdam, Netherlands',
+            conference: 'Laracon EU 2024',
+            title: 'The PHP Foundation',
+            description: 'The PHP Foundation is a non-profit organization formed in 2021 by well-known PHP folks as well as major companies from the PHP ecosystem. What we have achieved since then and what we are planning next.',
+            team: [
+                {
+                    image: 'https://avatars.githubusercontent.com/u/1196825?s=200&v=4',
+                    url: 'https://twitter.com/pronskiy',
+                    name: 'Roman Pronskiy',
+                    job: 'Board member, Operations manager',
+                }
+            ]
+        }) }}
+        
+        {{ include('presentations-item.html', {
             iframe: 'https://media.ccc.de/v/froscon2023-2859-the_php_foundation/oembed',
             date: 'Aug 05-06, 2023',
             place: 'Sankt Augustin, Germany',
