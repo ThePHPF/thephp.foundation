@@ -25,7 +25,24 @@ title: Presentations
                 }
             ]
         }) }}
-        
+
+        {{ include('presentations-item.html', {
+            iframe: 'https://speakerdeck.com/player/a151df6d6f35473589cebb7b17caa92d',
+            date: 'Dec 07-08, 2023',
+            place: 'Brussels, Belgium',
+            conference: 'SymfonyCon 2023',
+            title: 'Symfony, PHP and its Foundation',
+            description: 'The PHP Foundation supports PHP's growth and core developers, emphasizing its vital link with Symfony to ensure the language's evolution and relevance.',
+            team: [
+                {
+                    image: 'https://avatars.githubusercontent.com/u/243674?v=4',
+                    url: 'https://twitter.com/nicolasgrekas',
+                    name: 'Nicolas Grekas',
+                    job: 'Board member, Symfony Core Team',
+                }
+            ]
+        }) }}
+
         {{ include('presentations-item.html', {
             iframe: 'https://media.ccc.de/v/froscon2023-2859-the_php_foundation/oembed',
             date: 'Aug 05-06, 2023',
