@@ -228,8 +228,28 @@ The following chart summarizes the number of commits made to the [php/php-src](h
 | Total other                 | 885  | 1588 |
 
 
-![Commits](/assets/post-images/2024/report-2023/commits.png)
-
+```mermaid
+%%{init: {
+    "theme":"base", 
+    "pie": {"textPosition": 0.5}, 
+    "themeVariables": {
+      "pieOuterStrokeWidth": "0px",
+      "pieStrokeWidth": "0px",
+      "pieOpacity": "1",
+      "fontSize": "26px",
+      "primaryColor": "#FE4D7F",
+      "secondaryColor": "#6758F5",
+      "tertiaryColor": "#f5ab00",
+      "pieLegendTextColor": "#000",
+      "pieLegendTextSize": "20px",
+      "pieSectionTextColor": "#FFF",
+      "pieSectionTextSize": "26px"
+    }
+}}%%
+pie
+    "The PHP Foundation" : 784
+    "Other" : 1588
+```
 
 Note that the number of commits does not fairly represent the level of effort or the scope of the work. However, it can demonstrate the foundation's relative level of contribution to the PHP core through an objective metric.
 
@@ -243,8 +263,28 @@ The diagram summarizes the number of pull request reviews made in the [php/php-s
 | Total by The PHP Foundation | 283  | 702  |
 | Total other                 | 551  | 416  |
 
-![Reviews](/assets/post-images/2024/report-2023/reviews.png)
-
+```mermaid
+%%{init: {
+    "theme":"base", 
+    "pie": {"textPosition": 0.5}, 
+    "themeVariables": {
+      "pieOuterStrokeWidth": "0px",
+      "pieStrokeWidth": "0px",
+      "pieOpacity": "1",
+      "fontSize": "26px",
+      "primaryColor": "#6758F5",
+      "secondaryColor": "#FE4D7F",
+      "tertiaryColor": "#f5ab00",
+      "pieLegendTextColor": "#000",
+      "pieLegendTextSize": "20px",
+      "pieSectionTextColor": "#FFF",
+      "pieSectionTextSize": "26px"
+    }
+}}%%
+pie
+    "The PHP Foundation" : 702
+    "Other" : 416
+```
 
 
 ### RFCs

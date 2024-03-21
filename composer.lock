@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a061ee75ec6535acd46c1d30cd0438b1",
+    "content-hash": "17b459f4dce72b50545c90b070eee13a",
     "packages": [
         {
             "name": "dflydev/ant-path-matcher",
@@ -2970,6 +2970,67 @@
                 }
             ],
             "time": "2024-01-29T20:11:03+00:00"
+        },
+        {
+            "name": "symfony/process",
+            "version": "v7.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/process.git",
+                "reference": "0e7727191c3b71ebec6d529fa0e50a01ca5679e9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/process/zipball/0e7727191c3b71ebec6d529fa0e50a01ca5679e9",
+                "reference": "0e7727191c3b71ebec6d529fa0e50a01ca5679e9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Process\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Executes commands in sub-processes",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/process/tree/v7.0.4"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-02-22T20:27:20+00:00"
         },
         {
             "name": "symfony/service-contracts",

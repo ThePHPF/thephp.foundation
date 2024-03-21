@@ -14,7 +14,8 @@
     "php": "^8.3",
     "ext-gd": "*",
     "ext-dom": "*",
-    "sculpin/sculpin": "3.3.0-alpha"
+    "sculpin/sculpin": "3.3.0-alpha",
+    "symfony/process": "^6.4|^7.0"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest"
