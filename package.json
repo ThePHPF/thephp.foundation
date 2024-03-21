@@ -4,6 +4,7 @@
   "description": "Asset toolchain for thephp.foundation website",
   "main": "tailwind.config.js",
   "devDependencies": {
+    "@mermaid-js/mermaid-cli": "^10.8.0",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.31",
     "postcss-import": "^15.1.0",
