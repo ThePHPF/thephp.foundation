@@ -55,7 +55,7 @@ class MermaidConverter implements EventSubscriberInterface
         $process->run(function($type, $buffer) { echo($buffer); });
 
         $finder = new Finder();
-        $finder->files()->in(dirname($source->file()->getRealPath()))->name('*.svg');
+        $finder->files()->in(dirname($source->file()->getRealPath()))->name('*.svg')->sortByName(true);
 
         $mermaid_block_regex = '/```mermaid([^\S\n]*\r?\n([\s\S]*?))```/';
         
