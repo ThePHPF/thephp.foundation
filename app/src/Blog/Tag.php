@@ -10,5 +10,6 @@ class Tag
         'update' => 'Update',
         'team' => 'Team',
         'report' => 'Report',
+        'news' => 'News',
     ];
 }
