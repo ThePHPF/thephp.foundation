@@ -2,9 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://thephp.foundation</loc>
-    <lastmod>2024-03-24</lastmod>
+    <lastmod>2024-04-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+  </url>
+    <url>
+    <loc>https://thephp.foundation/blog/2024/04/02/open-source-community-cra-compliance-initiative/</loc>
+    <lastmod>2024-04-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/blog/2024/02/26/transparency-and-impact-report-2023/</loc>
@@ -200,43 +206,43 @@
   </url>
       <url>
     <loc>https://thephp.foundation/branding</loc>
-    <lastmod>2024-03-24T23:26:36+00:00</lastmod>
+    <lastmod>2024-04-02T07:09:50+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/code-of-conduct</loc>
-    <lastmod>2024-03-24T23:26:36+00:00</lastmod>
+    <lastmod>2024-04-02T07:09:50+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/contact</loc>
-    <lastmod>2024-03-24T23:26:36+00:00</lastmod>
+    <lastmod>2024-04-02T07:09:50+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/donate</loc>
-    <lastmod>2024-03-24T23:26:36+00:00</lastmod>
+    <lastmod>2024-04-02T07:09:50+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/get-involved</loc>
-    <lastmod>2024-03-24T23:26:36+00:00</lastmod>
+    <lastmod>2024-04-02T07:09:50+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/join</loc>
-    <lastmod>2024-03-24T23:26:36+00:00</lastmod>
+    <lastmod>2024-04-02T07:09:50+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/privacy-policy</loc>
-    <lastmod>2024-03-24T23:26:36+00:00</lastmod>
+    <lastmod>2024-04-02T07:09:50+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
