@@ -6,7 +6,7 @@ tags:
 author:
   name: Roman Pronskiy
   url: https://twitter.com/pronskiy
-published_at: 02 March 2024
+published_at: 02 April 2024
 ---
 
 The PHP Foundation, alongside leading open source organizations including the [Apache Software Foundation](https://www.apache.org/), [Blender Foundation](https://www.blender.org/about/foundation/), [OpenSSL Software Foundation](https://www.openssl.org/), [Python Software Foundation](https://www.python.org/psf-landing/), [Rust Foundation](https://foundation.rust-lang.org/), and [Eclipse Foundation](https://www.eclipse.org/), is excited to announce a collaborative initiative aimed at establishing common cybersecurity standards in alignment with the European Union’s [Cyber Resilience Act (CRA)](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act). 
