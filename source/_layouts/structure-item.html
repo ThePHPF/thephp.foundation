@@ -4,6 +4,9 @@
          alt="{{ name }}">
     <div class="leading-6 space-y-1">
         <div class="text-lg font-bold text-black" itemprop="name">{{ name }}</div>
+        {% if company %}
+            <div class="text-black" itemprop="company">{{ company }}</div>
+        {% endif %}
         <div class="text-[#7f52ff]" itemprop="jobTitle">{{ job }}</div>
         <ul class="flex space-x-4 list-none p-0 m-0">
             {% if mastodon %}
