@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+               http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="inline_theme" class="Tempest\Highlight\Themes\InlineTheme">
+            <argument>%kernel.project_dir%/vendor/tempest/highlight/src/Themes/Css/highlight-light-lite.css</argument>
+        </service>
+
+        <service id="highlighter" class="Tempest\Highlight\Highlighter">
+            <argument type="service" id="inline_theme"/>
+        </service>
+
+        <service id="sculpin_highlight_extension" class="App\Bundles\HighlightBundle\TwigHighlightExtension">
+            <argument type="service" id="highlighter"/>
+            <tag name="twig.extension"/>
+        </service>
+    </services>
+</container>

@@ -154,14 +154,29 @@ footer > ul, footer > p {
     padding: 0;
 }
 
+pre {
+    max-width: 100%;
+    overflow-x: auto;
+    width: 100%;
+    padding: 0.2em 0.4em;
+    margin: 0.5em 0;
+    border-radius: 0.375rem;
+    font-size: 85%;
+    background: rgba(135, 131, 120, 0.15);
+}
+
+pre code {
+    padding: 0;
+    background: transparent;
+}
+
 code {
     font-family: Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
     line-height: normal;
-    background: rgba(135, 131, 120, 0.15);
-    color: #EB5757;
     border-radius: 3px;
     font-size: 85%;
     padding: 0.2em 0.4em;
+    background: rgba(135, 131, 120, 0.15);
 }
 
 .alert {
