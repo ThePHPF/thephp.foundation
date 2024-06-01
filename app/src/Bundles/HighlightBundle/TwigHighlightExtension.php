@@ -10,6 +10,9 @@ use Twig\TwigFilter;
 
 class TwigHighlightExtension extends AbstractExtension
 {
+    # Regular expression pattern to extract content between <code> tags, with optional class attribute.
+    private const string CODE_CONTENT_PATTERN = '/<code(?: class="([^"]*)")?>(.*?)<\/code>/s';
+
     public function __construct(
         private readonly Highlighter $highlighter
     ) {
@@ -22,14 +25,22 @@ class TwigHighlightExtension extends AbstractExtension
         ];
     }
 
-    public function highlight($content, $language = 'php'): array|string|null
+    public function highlight(?string $content, string $defaultLanguage = 'php'): string
     {
+        if ($content === null) {
+            return '';
+        }
+
         return preg_replace_callback(
-            '/<code>(.*?)<\/code>/s',
-            function ($matches) use ($language) {
-                return '<code>' . $this->highlighter->parse(htmlspecialchars_decode($matches[1]), $language) . '</code>';
+            self::CODE_CONTENT_PATTERN,
+            function ($matches) use ($defaultLanguage) {
+                [, $code_language, $code] = $matches;
+                $language = $code_language ?: $defaultLanguage;
+                $code = htmlspecialchars_decode($code);
+
+                return sprintf('<code>%s</code>', $this->highlighter->parse($code, $language));
             },
-            $content ?? ''
+            $content
         );
     }
 }
