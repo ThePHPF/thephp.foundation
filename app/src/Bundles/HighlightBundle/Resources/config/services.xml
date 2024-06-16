@@ -14,9 +14,11 @@
             <argument type="service" id="inline_theme"/>
         </service>
 
-        <service id="sculpin_highlight_extension" class="App\Bundles\HighlightBundle\TwigHighlightExtension">
+        <service id="sculpin_highlight.code_highlighting" class="App\Bundles\HighlightBundle\CodeHighlighting">
+            <argument type="service" id="sculpin.site_configuration"/>
             <argument type="service" id="highlighter"/>
-            <tag name="twig.extension"/>
+
+            <tag name="kernel.event_subscriber"/>
         </service>
     </services>
 </container>

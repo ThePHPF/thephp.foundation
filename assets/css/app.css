@@ -162,6 +162,7 @@ pre {
     border-radius: 0.375rem;
     font-size: 85%;
     background: rgba(135, 131, 120, 0.15);
+    margin-bottom: 1em;
 }
 
 pre code {
