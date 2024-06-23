@@ -45,6 +45,8 @@ readonly class CodeHighlighting implements EventSubscriberInterface
         $content = $source->content();
 
         if ($content !== null && $source->file()->getExtension() === 'md') {
+            $content = $this->removeLeadingIndentation($content);
+
             $htmlContent = preg_replace_callback(self::CODE_PATTERN, function ($matches) {
                 [$codeBlock] = $matches;
 
@@ -54,9 +56,7 @@ readonly class CodeHighlighting implements EventSubscriberInterface
 
                 $convertedContent = $this->markdownConverter->convert($codeBlock)->getContent();
 
-                $convertedContent = preg_replace('/^<p>(.*)<\/p>$/s', '$1', $convertedContent);
-
-                return $convertedContent;
+                return preg_replace('/^<p>(.*)<\/p>$/s', '$1', $convertedContent);
             }, $content);
 
             $source->setContent($htmlContent);
@@ -66,5 +66,10 @@ readonly class CodeHighlighting implements EventSubscriberInterface
     private function isInlineCodeBlock(string $codeBlock): bool
     {
         return preg_match(self::INLINE_CODE_PATTERN, $codeBlock) && !preg_match('/{php}/', $codeBlock);
+    }
+
+    private function removeLeadingIndentation(string $content): string
+    {
+        return preg_replace('/^(?:\t|    )/m', '', $content);
     }
 }
