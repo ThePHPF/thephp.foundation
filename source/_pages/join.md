@@ -6,7 +6,7 @@ layout: page-wide
 
 _Shape the future of the language ecosystem and help make PHP sustainable._
 
-Contact [contact@thephp.foundation](mailto:contact@thephp.foundation) to apply.
+Contact [contact@thephp.foundation](mailto:contact@thephp.foundation) to discuss your membership
 Or sponsor right away [via OpenCollective](https://opencollective.com/phpfoundation) to become a member.
 
 {% include "sponsorship-tiers.html" %}
