@@ -6,7 +6,9 @@ layout: page-wide
 
 The PHP Foundation operates under the umbrella of [OpenSourceCollective](https://www.oscollective.org/), and we rely on [OpenCollective](https://opencollective.com/phpfoundation) to receive and distribute funds. Our donations and expenses are [public and fully transparent](https://opencollective.com/phpfoundation#category-BUDGET).
 
-There are many ways you (or your company) can support the development of the PHP language via&nbsp;The&nbsp;PHP&nbsp;Foundation:
+Are you looking to sponsor The PHP Foundation as a company? [Become a member](/join) and earn additional benefits at the Silver, Gold or Platinum levels.
+
+There are many ways you can support the development of the PHP language through&nbsp;The&nbsp;PHP&nbsp;Foundation:
 
 * [Credit Card](https://opencollective.com/phpfoundation/contribute)
 * [PayPal](https://opencollective.com/phpfoundation/contribute)
