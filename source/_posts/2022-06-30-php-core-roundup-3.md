@@ -16,17 +16,7 @@ In this edition, we have news about PHP 8.2 that is only three weeks away from i
 
 You don’t necessarily have to be a PHP Foundation backer to follow the PHP Roundup. We’ll be publishing the posts on our website, and you can subscribe to the newsletter:
 
-<div class="px-4 pt-3 pb-10 mb-6 border-b border-t -mx-4 border-gray-200">
-    <div class="max-w-xl mx-auto">
-        <h2 class="text-xl text-left inline-block font-semibold text-gray-800 mb-1">Subscribe to PHP Foundation Updates</h2>
-        <form method="POST" action="https://php-foundation-mailcoach.com/subscribe/9be4e2bd-f9d8-475c-b00e-2dcc4cf90056" class="mt-2">
-            <div class="flex items-center">
-                <input placeholder="Your email address" type="email" class="w-full px-2 py-4 mr-2  bg-gray-100 shadow-inner rounded-md border border-gray-400 focus:outline-none" name="email" required>
-                <button class="bg-[#7f52ff] text-gray-200 px-5 py-2 rounded shadow " style="margin-left: -7.8rem;">Sign Up</button>
-            </div>
-        </form>
-    </div>
-</div>
+{% include "newsletter.html" %}
 
 
 > [The PHP Foundation](https://opencollective.com/phpfoundation) currently supports [six part-time PHP contributors](https://thephp.foundation/blog/2022/05/06/interview-with-core-developers/) who work on both maintenance and new features for PHP. Maintenance is not limited to fixing bugs, but also includes work to reduce technical debt, making life easier for everyone working on PHP. The contributors funded by the PHP Foundation collaborate with other contributors on code, documentation, and discussions.
@@ -54,14 +44,14 @@ Following are the RFCs discussed, voted, and implemented since our last update.
 
 * **Implemented: [Allow null and false as stand-alone types](https://wiki.php.net/rfc/null-false-standalone-types) 💜**
 
-    RFC by George Peter Banyard proposed to allow null and false as standalone types in PHP. With the addition of Union Types in PHP 8.0, it was possible to declare a Union Type with `null` and `false`, but not as stand-alone types. With this change, it is now possible to declare class properties, parameters, and return types with `null` and `false` as stand-alone types. They are already reserved keywords in PHP, and this change is highly unlikely to cause any backwards compatibility issues. 
+    RFC by Gina Peter Banyard proposed to allow null and false as standalone types in PHP. With the addition of Union Types in PHP 8.0, it was possible to declare a Union Type with `null` and `false`, but not as stand-alone types. With this change, it is now possible to declare class properties, parameters, and return types with `null` and `false` as stand-alone types. They are already reserved keywords in PHP, and this change is highly unlikely to cause any backwards compatibility issues. 
 
 
     Learn more about this RFC in [PHP Internals News Podcast #99](https://phpinternals.news/99) **💜**, hosted by Derick Rethans, and on [PHP.Watch](https://php.watch/versions/8.2/null-false-types).
 
 * **Implemented: [Add true type](https://wiki.php.net/rfc/true-type) 💜**
 
-    Another RFC by George Peter Banyard proposes to add `true` as a valid and standalone type to PHP. This RFC, along with RFC to allow `null` and `false` as standalone types, makes PHP’s type system more expressive and precise. 
+    Another RFC by Gina Peter Banyard proposes to add `true` as a valid and standalone type to PHP. This RFC, along with RFC to allow `null` and `false` as standalone types, makes PHP’s type system more expressive and precise. 
 
 
     Learn more about this RFC in [PHP Internals News Podcast #102](https://phpinternals.news/102), hosted by Derick Rethans, and on [PHP.Watch](https://php.watch/versions/8.2/true-type).
@@ -82,7 +72,7 @@ Following are the RFCs discussed, voted, and implemented since our last update.
 
 * **Accepted: [Disjunctive Normal Form Types](https://wiki.php.net/rfc/dnf_types) 💜**
 
-    Yet another RFC by George Peter Banyard that proposes to add Disjunctive Normal Form types to the language. 
+    Yet another RFC by Gina Peter Banyard that proposes to add Disjunctive Normal Form types to the language. 
 
 
     PHP has support for Union Types (`foo|bar`) since PHP 8.0, and Intersection Types (`foo&bar`) since PHP 8.1. The DNF Types RFC proposes to add support for combining Union and Intersection types to declare a type in a canonical form. 
@@ -198,12 +188,12 @@ Following are some of the changes that did not go through an RFC process because
 * Get rid of duplicated rotr3 implementation in PR [#8853](https://github.com/php/php-src/pull/8853) by Ilija Tovilo 💜
 * Declare constants in stubs for several extensions by Máté Kocsis 💜
 * Fix lineno in backtrace of multi-line function calls, fixing [GH-8810](https://github.com/php/php-src/issues/8810) in PR [#8818](https://github.com/php/php-src/pull/8818) by Ilija Tovilo 💜
-* Refactoring part of SPL `Directory.c` PR [#8837](https://github.com/php/php-src/pull/8837) by George Peter Banyard 💜 
-* Use the passed '`this`' pointer instead of `ZEND_THIS `in PR [#8854](https://github.com/php/php-src/pull/8854) by George Peter Banyard 💜 
-* Fixed [GH-8861](https://github.com/php/php-src/issues/8861): correctly handle string lengths in `SplFileinfo` methods in PR [#8861](https://github.com/php/php-src/issues/8861) by M. Vondano and George Peter Banyard 💜 
+* Refactoring part of SPL `Directory.c` PR [#8837](https://github.com/php/php-src/pull/8837) by Gina Peter Banyard 💜 
+* Use the passed '`this`' pointer instead of `ZEND_THIS `in PR [#8854](https://github.com/php/php-src/pull/8854) by Gina Peter Banyard 💜 
+* Fixed [GH-8861](https://github.com/php/php-src/issues/8861): correctly handle string lengths in `SplFileinfo` methods in PR [#8861](https://github.com/php/php-src/issues/8861) by M. Vondano and Gina Peter Banyard 💜 
 * Fix[ GH-8848](https://github.com/php/php-src/issues/8848): `imagecopyresized()` error refers to the wrong argument in commit [9405f43b](https://github.com/php/php-src/commit/9405f43ba927376e02f4023cbfdc0f9bf412396d) by Christoph M. Becker
-* Convert iterable into an internal alias for Traversable|array PR [#7309](https://github.com/php/php-src/pull/7309) by George Peter Banyard 💜 
-* Use same type error wording for alias iterable in ZPP in PR [#8838](https://github.com/php/php-src/pull/8838) by George Peter Banyard 💜 
+* Convert iterable into an internal alias for Traversable|array PR [#7309](https://github.com/php/php-src/pull/7309) by Gina Peter Banyard 💜 
+* Use same type error wording for alias iterable in ZPP in PR [#8838](https://github.com/php/php-src/pull/8838) by Gina Peter Banyard 💜 
 * Support the `#[\AllowDynamicProperties]` attribute in stubs in PR [#8776](https://github.com/php/php-src/pull/8776) by Tim Düsterhus
 * Refactor `sapi_getenv()` in PR [#8786](https://github.com/php/php-src/pull/8786) by Heiko Weber
 * Specify unit in out of memory error in PR [#8820](https://github.com/php/php-src/pull/8820) by Ilija Tovilo 💜
@@ -212,7 +202,7 @@ Following are some of the changes that did not go through an RFC process because
 * Introduction of timing attack safe bcmp implementation in commit [bfe6f9e6](https://github.com/php/php-src/commit/bfe6f9e66a65d7c40fd486249097f932e2b237c3) by David CARLIER
 * Replace the use of `ZVAL_BOOL()` with `ZVAL_TRUE()` or` ZVAL_FALSE()` where the value is fixed in PR [#8815](https://github.com/php/php-src/pull/8815) by Yurun
 * intl ICU C++ code modernisation, making it closer to C++11 in PR [#8650](https://github.com/php/php-src/pull/8650) by David CARLIER
-* Fix[ GH-8563](https://github.com/php/php-src/issues/8563) Different results for `seek()` on `SplFileObject` and `SplTempFileObject` in commit [#6f87a5c6](https://github.com/php/php-src/commit/6f87a5c633) by George Peter Banyard 💜
+* Fix[ GH-8563](https://github.com/php/php-src/issues/8563) Different results for `seek()` on `SplFileObject` and `SplTempFileObject` in commit [#6f87a5c6](https://github.com/php/php-src/commit/6f87a5c633) by Gina Peter Banyard 💜
 * Zend, ext/opcache: use `PR_SET_VMA_ANON_NAME` (Linux 5.17) in PR [#8234](https://github.com/php/php-src/pull/8234) by Max Kellermann
 * Fixed potential use after free in `php_binary_init()` in PR [#8791](https://github.com/php/php-src/pull/8791) by Heiko Weber
 * Implemented: Declare true return types in PR [#8759](https://github.com/php/php-src/pull/8759) by Máté Kocsis 💜
@@ -231,7 +221,7 @@ Following are some of the changes that did not go through an RFC process because
 * Add `SO_SETFIB` FreeBSD socket option constant in PR [#8742](https://github.com/php/php-src/pull/8742) by David CARLIER. This is a follow-up to several of David’s contributions to the Sockets extension.
 * Fix[ GH-8661](https://github.com/php/php-src/issues/8661): Nullsafe in coalesce triggers undefined variable warning in PR [#8690](https://github.com/php/php-src/pull/8690) by Ilija Tovilo 💜
 * Add function exposing `HAVE_GCC_GLOBAL_REGS` in PR [#8359](https://github.com/php/php-src/pull/8359) by Joe Rowell
-* Fix[ GH-8691](https://github.com/php/php-src/issues/8691): Add required extensions for redirected tests in commit [c05c96b3](https://github.com/php/php-src/commit/c05c96b3fe2f309b9fe9b118d46681bf00caf798) by George Peter Banyard 💜 
+* Fix[ GH-8691](https://github.com/php/php-src/issues/8691): Add required extensions for redirected tests in commit [c05c96b3](https://github.com/php/php-src/commit/c05c96b3fe2f309b9fe9b118d46681bf00caf798) by Gina Peter Banyard 💜 
 * Remove code duplication in `zend_std_compare_objects` in PR [#8710](https://github.com/php/php-src/pull/8710) by Ilija Tovilo 💜
 * Fix Bug [#76452](https://bugs.php.net/bug.php?id=76452): Crash while parsing blob data in `firebird_fetch_blob` in commit [a6a13139](https://github.com/php/php-src/commit/a6a13139db) by Ben Ramsey
 * Fix [#81720](https://bugs.php.net/bug.php?id=81720): Uninitialized array in `pg_query_params()` leading to RCE in commit [55f6895f](https://github.com/php/php-src/commit/55f6895f4b4c677272fd4ee1113acdbd99c4b5ab) by Christoph M. Becker

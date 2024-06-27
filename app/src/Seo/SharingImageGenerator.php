@@ -4,39 +4,39 @@ namespace App\Seo;
 
 use GdImage;
 
-class SharingImageGenerator
+final class SharingImageGenerator
 {
-    public const IMAGE_WIDTH = 1200;
+    private const int IMAGE_WIDTH = 1600;
 
-    public const IMAGE_HEIGHT = 630;
+    private const int IMAGE_HEIGHT = 900;
 
-    public const IMAGE_MARGINS = 40;
+    private const int IMAGE_MARGINS = 72;
 
-    public const TITLE_FONT_SIZE = 40;
+    private const int TITLE_FONT_SIZE = 72;
 
-    public const AUTHOR_FONT_SIZE = 14;
+    private const int AUTHOR_FONT_SIZE = 24;
 
-    protected bool $inverse = false;
+    private bool $inverse = false;
 
-    protected string $title;
+    private string $title;
 
-    protected ?string $author = null;
+    private ?string $author = null;
 
-    public function setTitle($title): SharingImageGenerator
+    public function setTitle(string $title): self
     {
         $this->title = $title;
 
         return $this;
     }
 
-    public function setAuthor($author): SharingImageGenerator
+    public function setAuthor(?string $author): self
     {
         $this->author = $author;
 
         return $this;
     }
 
-    public function setInverse($inverse): SharingImageGenerator
+    public function setInverse(bool $inverse): self
     {
         $this->inverse = $inverse;
 
@@ -52,7 +52,7 @@ class SharingImageGenerator
         imagedestroy($image);
     }
 
-    public function save($path): void
+    public function save(string $path): void
     {
         $image = $this->prepare();
 
@@ -60,7 +60,7 @@ class SharingImageGenerator
         imagedestroy($image);
     }
 
-    protected function prepare(): GdImage
+    private function prepare(): GdImage
     {
         $image = imagecreate(self::IMAGE_WIDTH, self::IMAGE_HEIGHT);
 
@@ -72,7 +72,7 @@ class SharingImageGenerator
 
         $whiteColor = imagecolorallocate($image, 255, 255, 255);
 
-        $title = wordwrap($this->title, 40);
+        $title = wordwrap($this->title, 27);
         $titleBounds = imagettfbbox(
             self::TITLE_FONT_SIZE,
             0,
@@ -92,7 +92,7 @@ class SharingImageGenerator
             $title
         );
 
-        if ($this->author) {
+        if ($this->author !== null) {
             $author = wordwrap($this->author, 40);
 
             imagettftext(
@@ -100,7 +100,7 @@ class SharingImageGenerator
                 self::AUTHOR_FONT_SIZE,
                 0,
                 self::IMAGE_MARGINS,
-                $titleHeight + self::IMAGE_MARGINS * 3 + 10,
+                self::IMAGE_MARGINS * 3 + $titleHeight + self::AUTHOR_FONT_SIZE,
                 $whiteColor,
                 __DIR__.'/../../../assets/fonts/Arial.ttf',
                 $author
@@ -113,7 +113,8 @@ class SharingImageGenerator
             $logo = imagecreatefrompng(__DIR__.'/../../../assets/img/logo_inverse.png');
         }
 
-        imagecopy($image, $logo, 40, 490, 0, 0, 100, 100);
+        $src_height = 100;
+        imagecopy($image, $logo, self::IMAGE_MARGINS, self::IMAGE_HEIGHT-self::IMAGE_MARGINS-$src_height, 0, 0, 100, $src_height);
 
         return $image;
     }

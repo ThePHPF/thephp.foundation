@@ -23,7 +23,7 @@ Here's a summary of what the foundation's developers have been working on lately
 
 * [Derick Rethans](https://github.com/derickr) continues to fix bugs in DateTime to make working with dates in PHP as reliable as possible.
 
-* [George P. Banyard](https://github.com/Girgias) has made several improvements to the type system: true, null, and false standalaone types have been added, and Disjunctive Normal Form Types put on vote. George also made a few fixes in SPL.
+* [Gina P. Banyard](https://github.com/Girgias) has made several improvements to the type system: true, null, and false standalaone types have been added, and Disjunctive Normal Form Types put on vote. Gina also made a few fixes in SPL.
 
 * [Ilija Tovilo](https://github.com/iluuu1994) implemented multiple improvements for enums and put a couple on vote. He also made many fixes, like for instance fixed line numbers in backtrace of multi-line (fluent) function calls.
 
@@ -60,7 +60,7 @@ The Foundation has limited resources to manage the developers we contract to wor
 
 Any external developer who is compensated for their time spent on PHP is, of course, welcome to make use of our public communication channels:
 
-1. Email as: contact@thephp.foundation
+1. Email as: [contact@thephp.foundation](mailto:contact@thephp.foundation)
 2. Communicate via issues on GitHub repos: [github.com/php/php-src](https://github.com/php/php-src), [github.com/php/web-php](https://github.com/php/web-php), etc.
 
 ### How to contribute expertise?

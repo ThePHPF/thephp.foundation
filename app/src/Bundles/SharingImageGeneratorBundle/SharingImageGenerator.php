@@ -11,21 +11,21 @@ use Symfony\Component\Filesystem\Filesystem;
 
 class SharingImageGenerator implements EventSubscriberInterface
 {
-    protected $configuration;
-
-    public static function getSubscribedEvents()
-    {
-        return [
-            Sculpin::EVENT_BEFORE_RUN => 'beforeRun',
-        ];
-    }
+    private Configuration $configuration;
 
     public function __construct(Configuration $configuration)
     {
         $this->configuration = $configuration;
     }
 
-    public function beforeRun(SourceSetEvent $sourceSetEvent)
+    public static function getSubscribedEvents(): array
+    {
+        return [
+            Sculpin::EVENT_BEFORE_RUN => 'beforeRun',
+        ];
+    }
+
+    public function beforeRun(SourceSetEvent $sourceSetEvent): void
     {
         $sourceSet = $sourceSetEvent->sourceSet();
 
@@ -46,19 +46,23 @@ class SharingImageGenerator implements EventSubscriberInterface
                 continue;
             }
 
-            if (!$source->data()->get('title')) {
+            $data = $source->data();
+
+            if (!$data->get('title')) {
                 continue;
             }
 
             $filename = str_replace('.md', '.png', $source->file()->getFilename());
 
             $image = new \App\Seo\SharingImageGenerator();
-            if ($title = $source->data()->get('title')) {
+            if ($title = $data->get('title')) {
                 $image->setTitle($title);
             }
 
-            if ($author = $source->data()->get('author.name')) {
-                $image->setAuthor("by $author");
+            if ($name = $data->get('author.name')) {
+                $image->setAuthor("by $name");
+            } elseif (!empty($data->get('author'))) {
+                $image->setAuthor('by ' . implode(', ', array_column($data->get('author'), 'name')));
             }
 
             $image->save("output_$env/assets/share/$filename");

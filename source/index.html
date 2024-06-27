@@ -1,133 +1,138 @@
 ---
 layout: default
 title: The PHP Foundation
-description: We support, advance,and develop the PHP Language
+description: We support, advance, and develop the PHP Language
+generator: pagination
+pagination:
+    max_per_page: 3
+use:
+    - posts
 ---
 
-<main class="flex flex-col bg-[#f4f4f4] min-w-[320px] w-full">
-<section class="max-w-full bg-white">
-    <div class="max-w-[1480px] mx-auto md:my-8 px-4 xl:px-8 flex flex-row content-start items-stretch">
-        <div class="flex-auto w-48 justify-center">
-            <h1 class="text-[#27282c] font-normal tracking-[-1px] leading-[3rem] mt-16
-                xl:tracking-[-3px] xl:text-[4rem] xl:leading-[5.5rem] mr-24 ">
-                We&nbsp;support, advance,
-				and&nbsp;develop
-				the&nbsp;PHP&nbsp;Language
-            </h1>
+<section class="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20">
+    <div class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:-mr-80 lg:-mr-96"></div>
+    <div class="mx-auto max-w-7xl px-6 py-8 lg:py-24 lg:px-4">
+        <div class="flex flex-col md:flex-row justify-between">
+            <div class="mt-0 max-w-xl md:mt-10 md:ml-4 lg:mt-10  mr-4">
+                <h1 class="mt-0 mb-0 max-w-2xl text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-7xl">
+                    We support, advance, and&nbsp;develop the&nbsp;PHP&nbsp;Language
+                </h1>
+                <div class="mt-6 flex flex-row gap-4">
+                    <a href="/donate" class="inline-block lg:hidden text-xl py-2 no-underline px-6 !text-white bg-[#6858f6] rounded-3xl hover:bg-[rgba(104,88,246,.8)]">
+                        Donate
+                    </a>
+                </div>
+            </div>
+            <div class="mt-6 max-w-xl lg:mt-0">
+                <img src="{{ site.url }}/assets/icons/php_foundation.svg"
+                     alt="PHP Foundation"
+                     class="object-cover">
+            </div>
         </div>
-
-		<div class="flex-auto w-8" >
-			<a href="https://opencollective.com/phpfoundation">
-				<picture class="mt-24">
-					<img class="w-full" src="/assets/icons/php_foundation.svg" alt="The PHP Foundation"/>
-				</picture>
-			</a>
-		</div>
     </div>
+    <div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32"></div>
 </section>
 
-<section class="max-w-full my-auto sm:mt-24 md:my-8 ">
-    <div class="xl:max-w-[1480px] mx-auto px-4 xl:px-8 flex flex-col sm:flex-row content-start items-stretch">
-        <h2 class="min-w-max sm:w-64 sm:min-w-[16rem] sm:max-w-[16rem] sm:mr-4 p-4 bg-slate-700 text-white break-words">What is the foundation</h2>
+<section class="border-t">
+    <div class="mx-auto max-w-4xl px-6 lg:px-0 py-12">
+        <div class="text-2xl leading-8 text-white">
+            <h2>Our Mission</h2>
+            <p class="text-lg" ><strong>The PHP Foundation</strong> is a collective of people and organizations relying on the PHP language. Its mission is to ensure the long-term prosperity of the PHP language.
 
-        <div class="mt-4 sm:pl-12 sm:pr-12">
-            <p>
-                The <strong>PHP Foundation</strong> is a collective established with the
-                non-profit mission to support, advance, and develop the PHP
-                language. We are a community of PHP veterans, community
-                leaders, and technology companies that rely on PHP as a
-                critical digital infrastructure. We collaborate to ensure
-                PHP language long-term success and maintenance.
-            </p>
+            <p class="text-lg">The PHP Foundation focuses on providing financial support and guidance to PHP language developers to support its goals of improving the language for its users, providing high-quality maintenance, and improving the PHP language project to retain current contributors and to integrate new contributors.</p>
 
-            <p>
-                People and businesses may come and go, so it is vital to
-                ensure that the PHP source code will survive beyond the
-                current contributor base. We wish to contribute to the
-                creation and maintenance of a stable language for
-                generations to come.
-            </p>
-
-            <p>
-                The formation of the PHP Foundation was announced in
-                November 2021 and the PHP Foundation initiative runs with
-                the administration whose goal is to find such an
-                organization structure that will ensure a long-term
-                sustainability of the PHP language development.
-            </p>
+            <p class="text-lg">The PHP Foundation aims to promote the public image of the PHP language in the interest of retaining existing and gaining new users and contributors.</p>
+            
+            <p class="text-lg">Read our <a href="https://blog.jetbrains.com/phpstorm/2021/11/the-php-foundation/">announcement</a> for more details.</p>
         </div>
     </div>
 </section>
 
-<section class="max-w-full my-0 py-8 bg-white">
-    <div class="xl:max-w-[1480px] mx-auto px-4 xl:px-8  flex flex-col sm:flex-row content-start items-stretch">
-        <h2 class="min-w-max sm:w-64 sm:min-w-[16rem] sm:mr-4 p-4 bg-slate-700 text-white">Governance</h2>
+<section class="mx-auto max-w-4xl px-6 lg:px-0 border-t border-gray-200 py-12">
+    <h2 class="mt-0">Latest news</h2>
+    <div class="mx-auto grid max-w-4xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3 py-0">
+        {% for post in page.pagination.items %}
+        <article class="flex max-w-xl flex-col items-start">
+            <div class="group relative">
+                <div class="flex items-center gap-x-4 text-xs">
+                    <div class="text-gray-500">{{ post.published_at|date("M d, Y") }}</div>
+                </div>
+                <h3 class="mt-3 mb-2 text-lg font-semibold leading-6">
+                    <a href="{{ site.url }}{{ post.url }}" class="no-underline border-b">
+                        {{ post.title|raw }}
+                    </a>
+                </h3>
+                <div class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
+                    {{ post.content|striptags|length > 100 ? (post.content|striptags|slice(0, 100) ~ '...')|raw :
+                    post.content|striptags|raw }}
+                </div>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</section>
 
-        <div class="mt-4 sm:pl-12 sm:pr-12">
-            <p>
-                The current group collective administration focuses on maintaining the
-                continuity of the PHP project, in particular on hiring, supporting, and
-                guiding PHP project developers. The Administration also encourages
-                other Financial Contributors and explores strategic partnerships and
-                needs for the PHP project.
-            </p>
-
-            <p>
-                The Administration consists of veteran PHP core developers, PHP
-                community leaders, representatives of the founding companies, and other
-                key stakeholders. In 2022, this is an invitation-only group, while
-                we’re working to get our processes solidified.
-            </p>
-
-            <p>
-                To promote transparency, we operate as <a href="https://opencollective.com/phpfoundation">a collective on the Open
-                Collective platform</a>,
-                through which we ensure certain activities, such as selection and
-                financing of PHP core developers contributing to the development of the
-                PHP language. The decisions about these activities are taken by
-                consensus by the administration members, which meet regularly, and are
-                executed by the collective administrators.
-            </p>
-
-            <p>
-                All administration members of the PHP Foundation as well as
-                contributors and PHP developers are expected to abide by the <a href="code_of_conduct">Code of
-                Conduct</a>
-                and follow our collective expectations guidelines and <a href="https://opencollective.com/tos">Terms of
-                Service</a> of the platform operated by
-                Open Collective Inc.
-            </p>
+<section class="border-t">
+    <div class="mx-auto max-w-4xl px-6 lg:px-0 py-12">
+        <div class="text-lg leading-8 text-white">
+            <h2>Our Work</h2>
+            <p class="text-lg">The foundation contracts <a href="/structure#core_developers">10 part-time developers</a> who work on maintenance and new features for PHP. </p>
+            <p class="text-lg">The foundation team contributes in many forms: filing issues, reviewing pull requests, participating in discussions on mailing lists, triaging issues, submitting RFC proposals, writing documentation, maintaining project infrastructure, fixing bugs, and implementing features.</p>
         </div>
     </div>
 </section>
 
-<section class="max-w-full my-0 py-8 bg-sky-200">
-    <div class="xl:max-w-[1480px] mx-auto px-4 xl:px-8 flex flex-col sm:flex-row content-start items-stretch">
-        <h2 class="min-w-max sm:w-64 sm:min-w-[16rem] sm:max-w-[16rem] sm:mr-4 p-4 bg-sky-700 text-white">Foundation Activities</h2>
+<section class="bg-gray-900 py-24">
+    <div class="mx-auto max-w-7xl px-6 lg:px-0">
+        <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3 items-center">
+            <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                <dt class="text-base leading-7 text-gray-400">Total by The PHP Foundation in 2023</dt>
+                <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">784 commits</dd>
+            </div>
 
-        <div class="mt-4 sm:pl-12 sm:pr-12">
-            <p>
-                The primary task of the PHP Foundation is to fund developers to work on
-                PHP. Funds collected through the Open Collective platform may be used
-                in the first place to engage the services of PHP developers in order to
-                further advance the development and maintenance of the language.
-            </p>
+            <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                <dt class="text-base leading-7 text-gray-400">Total by The PHP Foundation in 2023</dt>
+                <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">702 reviews</dd>
+            </div>
 
-            <p>
-                The current Request for Comments (RFC) is not affiliated to the PHP
-                Foundation, and the language decisions are the matter of the PHP
-                Internals community.
-            </p>
+            <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                <dt class="text-base leading-7 text-gray-400">
+                    Proposals authored or co-authored by The PHP Foundation developers in 2023
+                </dt>
+                <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">17 RFCs</dd>
+            </div>
+        </dl>
+
+        <div class="text-center mt-12">
+            <a href="/blog/2024/02/26/transparency-and-impact-report-2023/"
+               class="inline-block py-2 no-underline px-6 !text-white border-white border rounded-3xl hover:bg-white hover:!text-gray-900 transition-all">
+                2023 Impact Report</a>
         </div>
     </div>
 </section>
 
-<section class="bg-white text-center py-4">
-    <h2 class="text-5xl" id="sponsors">Sponsors</h2>
+<section class="border-t">
+    <div class="mx-auto max-w-4xl px-6 lg:px-0 pt-8">
+        <div class="text-lg leading-8 text-white">
+            <h2 id="sponsors">Our Members</h2>
+            <p class="text-lg">In alphabetical order, the ten founding members of the foundation are: <a href="https://www.acquia.com/">Acquia</a>, <a href="https://automattic.com/">Automattic</a>, <a href="https://craftcms.com/">Craft CMS</a>, <a href="https://www.jetbrains.com/">JetBrains</a>, <a href="https://laravel.com/">Laravel</a>, <a href="https://prestashop.com/">PrestaShop</a>, <a href="https://packagist.com/">Private Packagist</a>, <a href="https://symfony.com/">Symfony</a>, <a href="https://tideways.com/">Tideways</a>, <a href="https://www.zend.com/">Zend by Perforce</a>.</p>
 
-	<a href="https://opencollective.com/phpfoundation/contribute/backers-34283/checkout" target="_blank" class="">
-		<img src="https://opencollective.com/phpfoundation/donate/button@2x.png?color=blue" width=300 class="inline mb-4"/>
-	</a>
+            <p class="text-lg">The next tier of membership is Major Sponsor, and the following companies have all joined in support of our mission: Livesport s.r.o., Cybozu Inc., Ardennes-étape, Aternos GmbH, shopware AG, Mercari Inc., Moodle, OP.GG, EC-CUBE, Spryker, Aligent Consulting, Oro, Polcode, pixiv Inc., Paycom, Cambium Learning, Inc., ラクス 中村崇則, RAKUS, Digital Scholar, BASE Inc., Les-Tilleuls.coop, SPY.</p>
+
+            <p class="text-lg">The foundation is always open to new sponsors. If your company has been benefiting from PHP over the years, but not sure how it might give back to the ecosystem, now there's a clear and obvious choice.</p>
+        </div>
+    </div>
+</section>
+
+<section class="text-center">
+<!--    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4" id="sponsors">Sponsors</h2>-->
+    <div class="mb-14">
+        <a href="https://opencollective.com/phpfoundation/contribute/backers-34283/checkout" target="_blank"
+           class="inline-block text-xl py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">
+            Become a member of The PHP Foundation
+        </a>
+    </div>
+    
 
     <div class="mx-auto max-w-full px-4">
         <div x-data="{
@@ -146,33 +151,40 @@ description: We support, advance,and develop the PHP Language
                     });
             }
         }" x-init="fetchSponsoringOrganizations()">
-            <div x-show="isLoaded" style="display: none;">
-                <div class="font-semibold text-xl my-4">We are supported by <span x-text="sponsorsCount"></span> organizations</div>
+            <div x-show="isLoaded" x-cloak>
+                <div class="font-medium text-xl my-4"><span x-text="sponsorsCount"></span> organizations support the PHP Foundation
+                </div>
                 <div class="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-8 gap-4">
                     <template x-for="sponsor in sponsors">
-                        <a :href="sponsor.website ?? sponsor.profile" class="block bg-gray-100 p-2 rounded-lg no-underline" target="_blank" rel="noopener noreferrer">
+                        <a :href="sponsor.website ?? sponsor.profile"
+                           class="block shadow p-2 rounded-lg no-underline" target="_blank"
+                           rel="noopener noreferrer">
                             <div class="mb-6 p-2">
                                 <img x-show="sponsor.image"
                                      class="h-24 rounded w-full object-contain object-center"
                                      :src="sponsor.image" :alt="sponsor.name"/>
-                                <span x-show="!sponsor.image" class="inline-block h-24 w-24 rounded-full bg-[rgba(127,82,255,.8)] flex justify-center items-center text-white text-2xl mx-auto" x-text="sponsor.name.split(/\s+/).map(word => word[0].toUpperCase()).join('')"></span>
+                                <span x-show="!sponsor.image"
+                                      class="h-24 w-24 rounded-full bg-[rgba(127,82,255,.8)] flex justify-center items-center text-white text-2xl mx-auto"
+                                      x-text="sponsor.name.split(/\s+/).map(word => word[0].toUpperCase()).join('')"></span>
                             </div>
-                            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4" x-text="sponsor.name"></div>
+                            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4"
+                                 x-text="sponsor.name"></div>
                         </a>
                     </template>
                 </div>
-    
+
                 <div class="my-6">
-                    <a href="https://opencollective.com/phpfoundation" target="_blank" rel="noopener noreferrer" class="inline-block py-4 no-underline px-6 text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">See all organizations</a>
+                    <a href="https://opencollective.com/phpfoundation" target="_blank" rel="noopener noreferrer"
+                       class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">See
+                        all organizations</a>
                 </div>
             </div>
-            <div x-show="!isLoaded">
-                <div class="bg-gray-100 p-2 rounded-lg animate-pulse w-1/4">
-                    <div class="mb-6 p-2">
-                        <span class="inline-block h-24 w-24 rounded-full bg-slate-200 flex justify-center items-center text-white text-2xl"></span>
+            <div x-show="!isLoaded" x-cloak>
+                <div class="shadow p-2 rounded-lg animate-pulse w-1/4">
+                    <div class="mb-4 p-2">
+                        <span class="flex h-24 w-24 rounded-full bg-slate-200 justify-center items-center text-white text-2xl"></span>
                     </div>
-                    <div class="h-4 bg-slate-200 rounded mb-4"></div>
-                    <div class="h-2 bg-slate-200 rounded"></div>
+                    <div class="h-4 bg-slate-200 rounded"></div>
                 </div>
             </div>
         </div>
@@ -193,37 +205,76 @@ description: We support, advance,and develop the PHP Language
                     });
             }
         }" x-init="fetchSponsoringUsers()" class="mt-8">
-            <div x-show="isLoaded" style="display: none;">
-                <div class="font-semibold text-xl my-4">...and <span x-text="sponsorsCount"></span> individuals</div>
+            <div x-show="isLoaded" x-cloak>
+                <div class="font-medium text-xl mb-4 mt-14">...and <span x-text="sponsorsCount"></span> individuals</div>
                 <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 xl:grid-cols-10 gap-4">
                     <template x-for="sponsor in sponsors">
-                        <a :href="sponsor.website ?? sponsor.profile" class="block bg-gray-100 p-2 rounded-lg no-underline" target="_blank" rel="noopener noreferrer">
-                            <div class="mb-6 p-2">
-                                <img x-show="sponsor.image"
-                                    class="h-24 rounded w-full object-contain object-center"
-                                    :src="sponsor.image" :alt="sponsor.name"/>
-                                <span x-show="!sponsor.image" class="inline-block h-24 w-24 rounded-full bg-[rgba(127,82,255,.8)] flex justify-center items-center text-white text-2xl mx-auto" x-text="sponsor.name.split(/\s+/).map(word => word[0].toUpperCase()).join('')"></span>
-                            </div>
-                            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4" x-text="sponsor.name"></div>
+                        <a :href="sponsor.website ?? sponsor.profile"
+                           class="block no-underline hover:underline" target="_blank"
+                           rel="noopener noreferrer">
+                            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4"
+                                 x-text="sponsor.name"></div>
                         </a>
                     </template>
                 </div>
-    
+
                 <div class="my-6">
-                    <a href="https://opencollective.com/phpfoundation" target="_blank" rel="noopener noreferrer" class="inline-block py-4 no-underline px-6 text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">See all individuals</a>
+                    <a href="https://opencollective.com/phpfoundation" target="_blank" rel="noopener noreferrer"
+                       class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">See
+                        all individuals</a>
                 </div>
             </div>
-            <div x-show="!isLoaded">
+            <div x-show="!isLoaded" x-cloak>
                 <div x-show="!isLoaded">
-                    <div class="bg-gray-100 p-2 rounded-lg animate-pulse w-1/4">
-                        <div class="mb-6 p-2">
-                            <span class="inline-block h-24 w-24 rounded-full bg-slate-200 flex justify-center items-center text-white text-2xl"></span>
+                    <div class="shadow p-2 rounded-lg animate-pulse w-1/4">
+                        <div class="mb-4 p-2">
+                            <span class="flex h-24 w-24 rounded-full bg-slate-200 justify-center items-center text-white text-2xl"></span>
                         </div>
-                        <div class="h-4 bg-slate-200 rounded mb-4"></div>
-                        <div class="h-2 bg-slate-200 rounded"></div>
+                        <div class="h-4 bg-slate-200 rounded"></div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<section class="max-w-full my-auto sm:mt-24 md:my-8 text-center py-4">
+    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" id="supporters">Supporters</h2>
+    <div class="font-medium text-xl my-4">We receive non-financial help from other organisations too</div>
+    <div class="mx-auto max-w-full px-4">
+        <div class="grid grid-cols-3 xl:grid-cols-9 gap-4">
+            <a class="block shadow p-2 rounded-lg no-underline col-start-1 xl:col-start-4" target="_blank" rel="noopener noreferrer"
+               href="https://mule.to/p399">
+                <div class="mb-6 p-2">
+                    <img class="h-24 rounded w-full object-contain object-center"
+                         src="/assets/icons/stickermule.png"
+                         alt="Sticker Mule">
+                </div>
+                <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4">Sticker
+                    Mule
+                </div>
+            </a>
+
+            <a class="block shadow p-2 rounded-lg no-underline" target="_blank" rel="noopener noreferrer"
+               href="https://slack.com/">
+                <div class="mb-6 p-2">
+                    <img class="h-24 rounded w-full object-contain object-center"
+                         src="{{ site.url }}/assets/icons/logo_slack.svg"
+                         alt="Slack">
+                </div>
+                <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4">Slack</div>
+            </a>
+
+            <a class="block shadow p-2 rounded-lg no-underline" target="_blank" rel="noopener noreferrer"
+               href="https://mailcoach.app/">
+                <div class="mb-6 p-2">
+                    <img class="h-24 rounded w-full object-contain object-center"
+                         style="-webkit-filter: invert(100%); /* safari 6.0 - 9.0 */ filter: invert(100%);"
+                         src="/assets/icons/mailcoach.svg"
+                         alt="Mailcoach">
+                </div>
+                <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4">Mailcoach</div>
+            </a>
         </div>
     </div>
 </section>

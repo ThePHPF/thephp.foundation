@@ -1,0 +1,86 @@
+---
+layout: default
+title: Presentations
+---
+
+<section class="mx-auto mt-16 max-w-7xl w-full bg-white px-4 md:px-0">
+    <header class="mb-8">
+        <h1 class="text-4xl font-bold">{{ page.title }}</h1>
+    </header>
+
+    <div class="my-16 gap-8 flex flex-col">
+        {{ include('presentations-item.html', {
+            iframe: 'https://www.youtube.com/embed/XE4g1Tl6RQw',
+            date: 'Feb 05-06, 2024',
+            place: 'Amsterdam, Netherlands',
+            conference: 'Laracon EU 2024',
+            title: 'The PHP Foundation',
+            description: 'The PHP Foundation is a non-profit organization formed in 2021 by well-known PHP folks as well as major companies from the PHP ecosystem. What we have achieved since then and what we are planning next.',
+            team: [
+                {
+                    image: 'https://avatars.githubusercontent.com/u/1196825?s=200&v=4',
+                    url: 'https://twitter.com/pronskiy',
+                    name: 'Roman Pronskiy',
+                    job: 'Board member, Operations manager',
+                }
+            ]
+        }) }}
+
+        {{ include('presentations-item.html', {
+            iframe: 'https://speakerdeck.com/player/a151df6d6f35473589cebb7b17caa92d',
+            date: 'Dec 07-08, 2023',
+            place: 'Brussels, Belgium',
+            conference: 'SymfonyCon 2023',
+            title: 'Symfony, PHP and its Foundation',
+            description: 'The PHP Foundation supports PHP\'s growth and core developers, emphasizing its vital link with Symfony to ensure the language\'s evolution and relevance.',
+            team: [
+                {
+                    image: 'https://avatars.githubusercontent.com/u/243674?v=4',
+                    url: 'https://twitter.com/nicolasgrekas',
+                    name: 'Nicolas Grekas',
+                    job: 'Board member, Symfony Core Team',
+                }
+            ]
+        }) }}
+
+        {{ include('presentations-item.html', {
+            iframe: 'https://media.ccc.de/v/froscon2023-2859-the_php_foundation/oembed',
+            date: 'Aug 05-06, 2023',
+            place: 'Sankt Augustin, Germany',
+            conference: 'FrOSCon 2023',
+            title: 'The PHP Foundation',
+            description: 'The PHP Foundation is a non-profit organization formed in 2021 by well-known PHP folks as well as major companies from the PHP ecosystem. What we have achieved since then and what we are planning next.',
+            team: [
+                {
+                    image: 'https://avatars.githubusercontent.com/u/25218?s=200&v=4',
+                    url: 'https://phpc.social/@sebastian',
+                    name: 'Sebastian Bergmann',
+                    job: 'Board member',
+                }
+            ]
+        }) }}
+
+        {{ include('presentations-item.html', {
+            iframe: 'https://www.youtube.com/embed/JBPtPy9iSP0',
+            date: 'Oct 13-14, 2022',
+            place: 'Paris, France',
+            conference: 'Forum PHP 2022',
+            title: 'The PHP Foundation: The Past, the Present, and the Future',
+            description: 'A complex saga of developers scattered around the world, all living under the rule of the elePHPant technology.',
+            team: [
+                {
+                    image: 'https://avatars.githubusercontent.com/u/25218?s=200&v=4',
+                    url: 'https://phpc.social/@sebastian',
+                    name: 'Sebastian Bergmann',
+                    job: 'Board member',
+                },
+                {
+                    image: 'https://avatars.githubusercontent.com/u/1196825?s=200&v=4',
+                    url: 'https://twitter.com/pronskiy',
+                    name: 'Roman Pronskiy',
+                    job: 'Board member, Operations manager',
+                }
+            ]
+        }) }}
+    </div>
+</section>

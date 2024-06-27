@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+[x-cloak] {
+    display: none !important;
+}
+
 @layer base {
     body {
         @apply font-sans text-zinc-600 box-border;
@@ -32,7 +36,7 @@
     }
 
     p, ol, ul {
-        @apply pb-8;
+        @apply mb-8;
     }
 
     p, li {
@@ -56,7 +60,7 @@
     }
 
     a {
-        @apply text-blue-500 underline
+        @apply text-blue-600 underline
     }
 
     a:hover, a:visited:hover {
@@ -139,19 +143,47 @@
     background-image: linear-gradient(180deg, #fff 100%, transparent 0);
     background-size: auto 0;
     background-repeat: repeat-x;
-    transition: background-size .3s,color .3s;
+    transition: background-size .3s, color .3s;
 }
 
 .footer-link:hover {
     background-size: auto calc(100% + 4px);
 }
 
+footer > ul, footer > p {
+    padding: 0;
+}
+
 code {
     font-family: Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
     line-height: normal;
-    background: rgba(135,131,120,0.15);
+    background: rgba(135, 131, 120, 0.15);
     color: #EB5757;
     border-radius: 3px;
     font-size: 85%;
     padding: 0.2em 0.4em;
+}
+
+.alert {
+    @apply bg-red-100 border border-red-400  px-4 py-3 pt-4 pb-4 mb-8 text-xl;
+}
+
+.button-link {
+    @apply inline-block py-2 no-underline px-6 !text-white bg-[#6858f6] rounded-3xl hover:bg-[rgba(104,88,246,.8)];
+}
+
+.button-link-border {
+    @apply inline-block py-2 no-underline px-6 hover:text-white text-[#6858f6] bg-white border-2 border-[#6858f6] rounded-3xl hover:bg-[#6858f6];
+}
+
+table tr th {
+    @apply text-center font-bold;
+}
+
+table tr td, table tr th {
+    @apply border-solid border border-gray-300 p-1.5;
+}
+
+table tr, td {
+    @apply text-base;
 }

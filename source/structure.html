@@ -1,0 +1,259 @@
+---
+title: Structure
+layout: default
+permalink: structure
+---
+
+<section class="mx-auto mt-16 max-w-7xl w-full bg-white px-4 md:px-0">
+    <header class="mb-8">
+        <h1 class="text-4xl font-bold">{{ page.title }}</h1>
+    </header>
+
+    <div class="my-16  mb-24">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
+            <div class="space-y-5 sm:space-y-4">
+                <h2 class="text-3xl text-gray-800 font-bold tracking-tight mt-0" id="admins">Board</h2>
+                <div class="text-xl text-gray-500">
+                    The Board consists of veteran PHP core developers, PHP community leaders,
+                    representatives of the founding companies, and other key stakeholders.
+                </div>
+            </div>
+            <div class="lg:col-span-2">
+                <div class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-12 sm:space-y-0 lg:gap-x-8">
+                    {{ include('structure-item.html', {
+                        name: 'Sebastian Bergmann',
+                        image: 'https://avatars.githubusercontent.com/u/25218?s=200&v=4',
+                        job: 'Board member',
+                        mastodon: 'https://phpc.social/@sebastian',
+                        github: 'https://github.com/sebastianbergmann',
+                    }) }}
+
+                    {{ include('structure-item.html', {
+                        name: 'Joe Watkins',
+                        image: 'https://avatars.githubusercontent.com/u/2236138?s=200&v=4',
+                        job: 'Board member',
+                        twitter: 'https://twitter.com/krakjoe',
+                        github: 'https://github.com/krakjoe',
+                    }) }}
+
+                    {{ include('structure-item.html', {
+                        name: 'Nils Adermann',
+                        company: 'Private Packagist',
+                        image: 'https://avatars.githubusercontent.com/u/154844?s=200&v=4',
+                        job: 'Board member',
+                        twitter: 'https://twitter.com/naderman',
+                        github: 'https://github.com/naderman',
+                    }) }}
+
+                    {{ include('structure-item.html', {
+                        name: 'Benjamin Eberlei',
+                        company: 'Tideways',
+                        image: 'https://avatars.githubusercontent.com/u/26936?s=200&v=4',
+                        job: 'Board member',
+                        twitter: 'https://twitter.com/beberlei',
+                        github: 'https://github.com/beberlei',
+                    }) }}
+
+                    {{ include('structure-item.html', {
+                        name: 'Josepha Haden',
+                        company: 'Automattic',
+                        image: 'https://2.gravatar.com/avatar/b1384df9e94641211dd00e4e8203d80c?s=200',
+                        job: 'Board member',
+                        twitter: 'https://twitter.com/JosephaHaden',
+                    }) }}
+
+                    {{ include('structure-item.html', {
+                        name: 'Roman Pronskiy',
+                        company: 'JetBrains',
+                        image: 'https://avatars.githubusercontent.com/u/1196825?s=200&v=4',
+                        job: 'Board member, Operations manager',
+                        twitter: 'https://twitter.com/pronskiy',
+                        github: 'https://github.com/pronskiy',
+                    }) }}
+
+                    {{ include('structure-item.html', {
+                        name: 'Nicolas Grekas',
+                        company: 'Symfony',
+                        image: 'https://avatars.githubusercontent.com/u/243674?s=200&v=4',
+                        job: 'Board member',
+                        twitter: 'https://twitter.com/nicolasgrekas',
+                        github: 'https://github.com/nicolas-grekas/',
+                    }) }}
+
+                    {{ include('structure-item.html', {
+                        name: 'Sara Golemon',
+                        image: 'https://avatars.githubusercontent.com/u/812538?s=200&v=4',
+                        job: 'Board member',
+                        mastodon: 'https://phpc.social/@pollita',
+                        github: 'https://github.com/sgolemon',
+                    }) }}
+
+                    {{ include('structure-item.html', {
+                        name: 'Nikita Popov',
+                        image: 'https://avatars.githubusercontent.com/u/216080?s=200&v=4',
+                        job: 'Board member',
+                        twitter: 'https://twitter.com/nikita_ppv',
+                        github: 'https://github.com/nikic',
+                    }) }}
+
+                    {{ include('structure-item.html', {
+                        name: 'Matthew Weier O\'Phinney',
+                        company: 'Perforce',
+                        image: 'https://avatars.githubusercontent.com/u/25943?s=200&v=4',
+                        job: 'Board member',
+                        mastodon: 'https://phpc.social/@mwop',
+                        github: 'https://github.com/weierophinney',
+                    }) }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-16 mb-24">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
+            <div class="space-y-5 sm:space-y-4">
+                <h2 class="text-3xl text-gray-800 font-bold tracking-tight mt-0" id="core_developers">Core Developers</h2>
+                <div class="text-xl text-gray-500">
+                    Core Developers are sponsored by the PHP Foundation and develop the Core of PHP on a part-time
+                    or full-time basis.
+                </div>
+            </div>
+            <div class="lg:col-span-2">
+                <div class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-12 sm:space-y-0 lg:gap-x-8">
+                    {{ include('structure-item.html', {
+                        name: 'Derick Rethans',
+                        image: 'https://avatars.githubusercontent.com/u/208074?s=200&v=4',
+                        job: 'Core Developer',
+                        mastodon: 'https://phpc.social/@derickr',
+                        github: 'https://github.com/derickr',
+                    }) }}
+
+                    {{ include('structure-item.html', {
+                        name: 'Gina Peter Banyard',
+                        image: 'https://avatars.githubusercontent.com/u/7906688?s=200&v=4',
+                        job: 'Core Developer',
+                        twitter: 'https://twitter.com/Girgias',
+                        github: 'https://github.com/girgias',
+                    }) }}
+
+                    {{ include('structure-item.html', {
+                        name: 'Ilija Tovilo',
+                        image: 'https://avatars.githubusercontent.com/u/1752683?s=200&v=4',
+                        job: 'Core Developer',
+                        twitter: 'https://twitter.com/IlijaTovilo',
+                        github: 'https://github.com/iluuu1994',
+                    }) }}
+
+                    {{ include('structure-item.html', {
+                        name: 'Jakub Zelenka',
+                        image: 'https://avatars.githubusercontent.com/u/137594?s=200&v=4',
+                        job: 'Core Developer',
+                        github: 'https://github.com/bukka',
+                    }) }}
+
+                    {{ include('structure-item.html', {
+                        name: 'Máté Kocsis',
+                        image: 'https://avatars.githubusercontent.com/u/6057627?s=200&v=4',
+                        job: 'Core Developer',
+                        twitter: 'https://twitter.com/kocsismate90',
+                        github: 'https://github.com/kocsismate',
+                    }) }}
+
+                    {{ include('structure-item.html', {
+                        name: 'Arnaud Le Blanc',
+                        image: 'https://avatars.githubusercontent.com/u/365207?s=200&v=4',
+                        job: 'Core Developer',
+                        twitter: 'https://twitter.com/arnaud_lb',
+                        github: 'https://github.com/arnaud-lb',
+                    }) }}
+
+                    {{ include('structure-item.html', {
+                        name: 'David Carlier',
+                        image: 'https://avatars.githubusercontent.com/u/4922778?s=200&v=4',
+                        job: 'Core Developer',
+                        twitter: 'https://twitter.com/devnexen',
+                        github: 'https://github.com/devnexen',
+                    }) }}
+
+                    {{ include('structure-item.html', {
+                        name: 'James Titcumb',
+                        image: 'https://avatars.githubusercontent.com/u/496145?s=200&v=4',
+                        job: 'Core Developer',
+                        twitter: 'https://twitter.com/asgrim',
+                        github: 'https://github.com/asgrim',
+                    }) }}
+
+                    {{ include('structure-item.html', {
+                        name: 'Saki Takamachi',
+                        image: 'https://avatars.githubusercontent.com/u/34942839?s=200&v=4',
+                        job: 'Core Developer',
+                        twitter: 'https://twitter.com/takamachi1saki',
+                        github: 'https://github.com/SakiTakamachi',
+                    }) }}
+
+                    {{ include('structure-item.html', {
+                        name: 'Shivam Mathur',
+                        image: 'https://avatars.githubusercontent.com/u/1571086?s=200&v=4',
+                        job: 'Core Developer',
+                        twitter: 'https://twitter.com/meshivammathur',
+                        github: 'https://github.com/shivammathur',
+                    }) }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-16">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
+            <div class="space-y-5 sm:space-y-4">
+                <h2 class="text-3xl text-gray-800 font-bold tracking-tight mt-0" id="community">Community</h2>
+                <div class="text-xl text-gray-500">
+                    Active community members who help the PHP Foundation.
+                </div>
+            </div>
+            <div class="lg:col-span-2">
+                <div class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-12 sm:space-y-0 lg:gap-x-8">
+                    {{ include('structure-item.html', {
+                        name: 'Rasmus Lerdorf',
+                        image: 'https://avatars.githubusercontent.com/u/54641?s=200&v=4',
+                        job: 'PHP Fellow',
+                        twitter: 'https://twitter.com/rasmus',
+                        github: 'https://github.com/rlerdorf',
+                    }) }}
+
+                    {{ include('structure-item.html', {
+                        name: 'Dmitry Stogov',
+                        image: 'https://avatars.githubusercontent.com/u/2510034?s=200&v=4',
+                        job: 'PHP Fellow',
+                        twitter: 'https://twitter.com/dstogov',
+                        github: 'https://github.com/dstogov',
+                    }) }}
+
+                    {{ include('structure-item.html', {
+                        name: 'Ayesh Karunaratne',
+                        image: 'https://avatars.githubusercontent.com/u/811553?s=200&v=4',
+                        job: 'PHP Core Roundup',
+                        twitter: 'https://twitter.com/Ayeshlive',
+                        github: 'https://github.com/Ayesh',
+                    }) }}
+
+                    {{ include('structure-item.html', {
+                        name: 'Tobias Nyholm',
+                        image: 'https://avatars.githubusercontent.com/u/1275206?s=200&v=4',
+                        job: 'Code of Conduct Team',
+                        twitter: 'https://twitter.com/TobiasNyholm',
+                        github: 'https://github.com/Nyholm',
+                    }) }}
+
+                    {{ include('structure-item.html', {
+                        name: 'Sergey Panteleev',
+                        image: 'https://avatars.githubusercontent.com/u/4685504?s=200&v=4',
+                        job: 'Website',
+                        twitter: 'https://twitter.com/s_panteleev',
+                        github: 'https://github.com/saundefined',
+                    }) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -29,9 +29,9 @@ The site
 
 To develop the website, you will need:
 
-- PHP 7.3 or later
+- PHP 8.3 or later
 - Composer
-- Node 14 or 16 with NPM
+- Node 20 with NPM
 
 ### Installing dependencies
 

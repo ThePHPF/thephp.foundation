@@ -1,11 +1,28 @@
-<div class="px-4 pt-3 pb-10 mb-6 border-b border-t -mx-4 border-gray-200">
-    <div class="max-w-xl mx-auto">
-        <h2 class="text-xl text-left inline-block font-semibold text-gray-800 mb-1">Subscribe to PHP Foundation Updates</h2>
-        <form method="POST" action="https://php-foundation-mailcoach.com/subscribe/9be4e2bd-f9d8-475c-b00e-2dcc4cf90056" class="mt-2">
-            <div class="flex items-center">
-                <input placeholder="Your email address" type="email" class="w-full px-2 py-4 mr-2  bg-gray-100 shadow-inner rounded-md border border-gray-400 focus:outline-none" name="email" required>
-                <button class="bg-[#7f52ff] text-gray-200 px-5 py-2 rounded shadow " style="margin-left: -7.8rem;">Sign Up</button>
+<div class="px-4 pt-3 border-b border-t -mx-4 border-gray-200">
+    <div class="bg-white py-8">
+        <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
+            <div class="max-w-xl text-4xl font-medium tracking-tight text-gray-900 lg:col-span-6">
+                Subscribe to PHP Core Roundup newsletter
             </div>
-        </form>
+            <form method="POST"
+                  action="https://php-foundation.mailcoach.app/subscribe/9be4e2bd-f9d8-475c-b00e-2dcc4cf90056"
+                  class="w-full max-w-md lg:col-span-6">
+                <div class="flex gap-x-4">
+                    <label for="email-address" class="sr-only">Email address</label>
+                    <input id="email-address" name="email" type="email" autocomplete="email" required
+                           class="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                           placeholder="Enter your email">
+                    <button type="submit"
+                            class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">
+                        Subscribe
+                    </button>
+                </div>
+                <div class="mt-4 text-sm leading-6 text-gray-900">
+                    We care about your data.
+                    Read our <a href="{{ site.url }}/privacy-policy"
+                                class="font-semibold text-indigo-600 hover:text-indigo-500 no-underline">privacy policy</a>.
+                </div>
+            </form>
+        </div>
     </div>
 </div>

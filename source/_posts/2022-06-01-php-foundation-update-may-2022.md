@@ -15,7 +15,7 @@ This time our regular update is short. Check the [PHP Core Roundup](https://thep
 
 ## Interview with core developers
 
-After the [April update](https://opencollective.com/phpfoundation/updates/php-foundation-update-april-2022), Sebastian Bergmann published an [interview with our sponsored core developers](https://thephp.foundation/blog/2022/05/06/interview-with-core-developers/): Derick Rethans, George Peter Banyard, Jakub Zelenka, Máté Kocsis, and Ilija Tovilo. The other day we updated it and added answers from Arnaud Le Blanc. Check [the interview](https://thephp.foundation/blog/2022/05/06/interview-with-core-developers/) to get a high-level picture of what guys are working on.
+After the [April update](https://opencollective.com/phpfoundation/updates/php-foundation-update-april-2022), Sebastian Bergmann published an [interview with our sponsored core developers](https://thephp.foundation/blog/2022/05/06/interview-with-core-developers/): Derick Rethans, Gina Peter Banyard, Jakub Zelenka, Máté Kocsis, and Ilija Tovilo. The other day we updated it and added answers from Arnaud Le Blanc. Check [the interview](https://thephp.foundation/blog/2022/05/06/interview-with-core-developers/) to get a high-level picture of what guys are working on.
 
 
 ## PHP Core Roundup

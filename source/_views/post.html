@@ -1,49 +1,57 @@
 {% extends "default" %}
 
-{% block head_meta %}
-    <meta name="robots" content="index, follow">
-{% endblock %}
-
 {% block content_wrapper %}
-<main class="flex flex-row justify-center min-w-[320px] min-h-[100vh] w-full pt-4">
-    <article class="max-w-2xl w-full bg-white px-4 md:px-0">
-        <header class="mb-8">
-            <h1 class="">{{ page.title }}</h1>
+<div class="bg-white px-6 lg:px-8 my-16" itemscope itemtype="https://schema.org/Article">
+    <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
+        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" itemprop="name">{{ page.title }}</h1>
 
-            {% if page.author is defined%}
-            <div class="text-xs">
-				Published on <span>{{ page.published_at|date("M d, Y") }}</span>
-				by <a href="{{ page.author.url }}">{{ page.author.name }}</a>
-            </div>
-            {% endif %}
+        <div class="flex items-center gap-x-4 text-xs mt-2">
+        {% if page.author.name is defined%}
+        <div>
+            Published on <span itemprop="datePublished">{{ page.published_at|date("M d, Y") }}</span>
+            by <span itemprop="publisher" itemscope itemtype="https://schema.org/Person"><a href="{{ page.author.url }}" target="_blank" rel="noopener noreferrer" itemprop="url"><span itemprop="name">{{ page.author.name }}</span></a></span>
+        </div>
+        {% elseif page.author is iterable%}
+        <div>
+            Published on <span itemprop="datePublished">{{ page.published_at|date("M d, Y") }}</span>
+            by
+            {% for author in page.author %}
+            <span itemprop="publisher" itemscope itemtype="https://schema.org/Person"><a href="{{ author.url }}" target="_blank" rel="noopener noreferrer" itemprop="url"><span itemprop="name">{{ author.name }}</span></a></span>{% if loop.last == false  %}, {% endif %}
+            {% endfor %}
+        </div>
+        {% endif %}
+            
+        
+        {% if page.tags is defined%}
+        <div class="space-x-1">
+            {% for tag in page.tags %}
+            <a href="{{ site.url }}/blog/tag/{{ tag|url_encode(true) }}"
+               class="rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
+                {{ constant('App\\Blog\\Tag::ALLOWED_TAGS')[tag] ?? tag }}
+            </a>
+            {% endfor %}
+        </div>
+        {% endif %}
+        </div>
 
-            {% if page.tags is defined%}
-            <div class="mt-3 space-x-1">
-                {% for tag in page.tags %}
-                <a href="{{ site.url }}/blog/tag/{{ tag|url_encode(true) }}" class="bg-[#7f52ff] hover:bg-[rgba(127,82,255,.8)] text-white px-2 py-1 rounded no-underline text-sm">
-                    {{ constant('App\\Blog\\Tag::ALLOWED_TAGS')[tag] ?? tag }}
-                </a>
-                {% endfor %}
-            </div>
-            {% endif %}
-        </header>
-
-        <section class="main_body">
+        <div class="mt-6 text-xl leading-8" itemprop="text">
             {{ page.blocks.content|raw }}
-        </section>
+        </div>
 
         <div class="border-t pt-5 my-5">
             {% if page.previous_post or page.next_post %}
             <nav class="flex flex-row justify-between article -mx-2 mb-5">
                 {% if page.previous_post %}
-                <a href="{{ site.url }}{{ page.previous_post.url }}" class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[#7f52ff] transition-all no-underline">
+                <a href="{{ site.url }}{{ page.previous_post.url }}"
+                   class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[#7f52ff] transition-all no-underline">
                     <div class="mb-1 text-sm text-gray-600 font-medium">Previous</div>
                     <div class="font-bold text-blue-500">{{ page.previous_post.title }}</div>
                 </a>
                 {% endif %}
 
                 {% if page.next_post %}
-                <a href="{{ site.url }}{{ page.next_post.url }}" class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[rgba(127,82,255,.8)] transition-all no-underline">
+                <a href="{{ site.url }}{{ page.next_post.url }}"
+                   class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[rgba(127,82,255,.8)] transition-all no-underline">
                     <div class="mb-1 text-sm text-gray-600 font-medium">Next</div>
                     <div class="font-bold text-blue-500">{{ page.next_post.title }}</div>
                 </a>
@@ -52,28 +60,10 @@
             {% endif %}
 
             <div>
-                <a href="https://github.com/ThePHPF/thephp.foundation/edit/main/source/_posts/{{ page.filename }}" class="nav-org" rel="noopener noreferrer" target="_blank">Edit this page on GitHub</a>
+                <a href="https://github.com/ThePHPF/thephp.foundation/edit/main/source/_posts/{{ page.filename }}"
+                   class="nav-org" rel="noopener noreferrer" target="_blank">Edit this page on GitHub</a>
             </div>
         </div>
-    </article>
-</main>
-{% endblock %}
-
-{% block head_scripts %}
-<script src="//cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-{% endblock %}
-
-{% block scripts %}
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const anchors = new AnchorJS()
-    anchors.add()
-
-    for (const element of document.getElementsByClassName('anchorjs-link')) {
-      element.addEventListener('click', function () {
-        navigator.clipboard.writeText(window.location.origin + window.location.pathname + element.getAttribute('href'))
-      })
-    }
-  })
-</script>
+    </div>
+</div>
 {% endblock %}

@@ -4,9 +4,12 @@ namespace App\Blog;
 
 class Tag
 {
-    public const ALLOWED_TAGS = [
+    public const array ALLOWED_TAGS = [
         'interview' => 'Interview',
         'roundup' => 'PHP Roundup',
-        'update' => 'The PHP Foundation Update',
+        'update' => 'Update',
+        'team' => 'Team',
+        'report' => 'Report',
+        'news' => 'News',
     ];
 }
