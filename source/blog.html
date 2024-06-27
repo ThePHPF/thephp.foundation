@@ -49,7 +49,7 @@ use:
                 </div>
                 {% endif %}
                 <div class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600" itemprop="text">
-                    {{ post.content|striptags|length > 100 ? (post.content|striptags|slice(0, 150) ~ '...')|raw :
+                    {{ post.description ?: post.content|striptags|length > 100 ? (post.content|striptags|slice(0, 150) ~ '...')|raw :
                     post.content|striptags|raw }}
                 </div>
             </div>

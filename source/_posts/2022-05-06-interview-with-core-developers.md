@@ -1,5 +1,6 @@
 ---
 title: Interview with Core Developers
+description: The initial group of sponsored developers has now been "at it" for a month, and we thought that you might be interested in who they are and what they work on. I got the opportunity to (virtually) sit down with Derick Rethans, George Peter Banyard, Ilija Tovilo, Jakub Zelenka, and Máté Kocsis for an interview.
 layout: post
 tags:
     - interview
