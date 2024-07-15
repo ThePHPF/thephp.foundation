@@ -76,7 +76,7 @@ use:
     <div class="mx-auto max-w-4xl px-6 lg:px-0 py-12">
         <div class="text-lg leading-8 text-white">
             <h2>Our Work</h2>
-            <p class="text-lg">The foundation contracts <a href="/structure#core_developers">10 part-time developers</a> who work on maintenance and new features for PHP. </p>
+            <p class="text-lg">The foundation contracts <a href="/structure#core_developers">10 part-time and full-time developers</a> who work on maintenance and new features for PHP. </p>
             <p class="text-lg">The foundation team contributes in many forms: filing issues, reviewing pull requests, participating in discussions on mailing lists, triaging issues, submitting RFC proposals, writing documentation, maintaining project infrastructure, fixing bugs, and implementing features.</p>
         </div>
     </div>
@@ -112,7 +112,7 @@ use:
 </section>
 
 <section class="border-t">
-    <div class="mx-auto max-w-4xl px-6 lg:px-0 pt-8">
+    <div class="mx-auto max-w-4xl px-6 lg:px-0">
         <div class="text-lg leading-8 text-white">
             <h2 id="sponsors">Our Members</h2>
             <p class="text-lg">In alphabetical order, the ten founding members of the foundation are: <a href="https://www.acquia.com/">Acquia</a>, <a href="https://automattic.com/">Automattic</a>, <a href="https://craftcms.com/">Craft CMS</a>, <a href="https://www.jetbrains.com/">JetBrains</a>, <a href="https://laravel.com/">Laravel</a>, <a href="https://prestashop.com/">PrestaShop</a>, <a href="https://packagist.com/">Private Packagist</a>, <a href="https://symfony.com/">Symfony</a>, <a href="https://tideways.com/">Tideways</a>, <a href="https://www.zend.com/">Zend by Perforce</a>.</p>
@@ -124,16 +124,27 @@ use:
     </div>
 </section>
 
-<section class="text-center">
-<!--    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4" id="sponsors">Sponsors</h2>-->
-    <div class="mb-14">
-        <a href="https://opencollective.com/phpfoundation/contribute/backers-34283/checkout" target="_blank"
-           class="inline-block text-xl py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">
-            Become a member of The PHP Foundation
-        </a>
+<section class="">
+    <div class="mx-auto max-w-4xl px-6 lg:px-0 pt-8">
+        <div class="text-lg leading-8">
+            {% include('sponsors.html') %}
+        </div>
+    </div>
+
+    <div x-show="isLoaded" x-cloak>
+        <div class="font-medium text-xl my-4"><span x-text="sponsorsCount"></span> organizations support the PHP Foundation
+        </div>
     </div>
     
+    <div class="mb-14 text-center">
+        <a href="https://opencollective.com/phpfoundation/contribute/backers-34283/checkout" target="_blank"
+           class="inline-block text-xl py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">
+            Become a sponsor of The PHP Foundation
+        </a>
+    </div>
+</section>
 
+<section class="text-center">
     <div class="mx-auto max-w-full px-4">
         <div x-data="{
             sponsors: [],
@@ -151,42 +162,6 @@ use:
                     });
             }
         }" x-init="fetchSponsoringOrganizations()">
-            <div x-show="isLoaded" x-cloak>
-                <div class="font-medium text-xl my-4"><span x-text="sponsorsCount"></span> organizations support the PHP Foundation
-                </div>
-                <div class="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-8 gap-4">
-                    <template x-for="sponsor in sponsors">
-                        <a :href="sponsor.website ?? sponsor.profile"
-                           class="block shadow p-2 rounded-lg no-underline" target="_blank"
-                           rel="noopener noreferrer">
-                            <div class="mb-6 p-2">
-                                <img x-show="sponsor.image"
-                                     class="h-24 rounded w-full object-contain object-center"
-                                     :src="sponsor.image" :alt="sponsor.name"/>
-                                <span x-show="!sponsor.image"
-                                      class="h-24 w-24 rounded-full bg-[rgba(127,82,255,.8)] flex justify-center items-center text-white text-2xl mx-auto"
-                                      x-text="sponsor.name.split(/\s+/).map(word => word[0].toUpperCase()).join('')"></span>
-                            </div>
-                            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4"
-                                 x-text="sponsor.name"></div>
-                        </a>
-                    </template>
-                </div>
-
-                <div class="my-6">
-                    <a href="https://opencollective.com/phpfoundation" target="_blank" rel="noopener noreferrer"
-                       class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">See
-                        all organizations</a>
-                </div>
-            </div>
-            <div x-show="!isLoaded" x-cloak>
-                <div class="shadow p-2 rounded-lg animate-pulse w-1/4">
-                    <div class="mb-4 p-2">
-                        <span class="flex h-24 w-24 rounded-full bg-slate-200 justify-center items-center text-white text-2xl"></span>
-                    </div>
-                    <div class="h-4 bg-slate-200 rounded"></div>
-                </div>
-            </div>
         </div>
 
         <div x-data="{
@@ -241,7 +216,7 @@ use:
 <section class="max-w-full my-auto sm:mt-24 md:my-8 text-center py-4">
     <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" id="supporters">Supporters</h2>
     <div class="font-medium text-xl my-4">We receive non-financial help from other organisations too</div>
-    <div class="mx-auto max-w-full px-4">
+    <div class="mx-auto max-w-full px-4 text-sm">
         <div class="grid grid-cols-3 xl:grid-cols-9 gap-4">
             <a class="block shadow p-2 rounded-lg no-underline col-start-1 xl:col-start-4" target="_blank" rel="noopener noreferrer"
                href="https://mule.to/p399">
@@ -268,7 +243,7 @@ use:
             <a class="block shadow p-2 rounded-lg no-underline" target="_blank" rel="noopener noreferrer"
                href="https://mailcoach.app/">
                 <div class="mb-6 p-2">
-                    <img class="h-24 rounded w-full object-contain object-center"
+                    <img class="h-18 rounded w-full object-contain object-center"
                          style="-webkit-filter: invert(100%); /* safari 6.0 - 9.0 */ filter: invert(100%);"
                          src="/assets/icons/mailcoach.svg"
                          alt="Mailcoach">
