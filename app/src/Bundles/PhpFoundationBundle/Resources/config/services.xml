@@ -5,7 +5,7 @@
 
   <services>
     <service id="sculpin_php_foundation.extensions.include_php"
-             class="App\Bundles\PhpFoundationBundle\Extensions\IncludePhp">
+             class="App\Bundles\PhpFoundationBundle\Extensions\PhpFoundation">
       <argument type="service" id="kernel"/>
       <tag name="twig.extension"/>
     </service>

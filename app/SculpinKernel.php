@@ -15,6 +15,7 @@ class SculpinKernel extends AbstractKernel
             SculpinSharingImageGeneratorBundle::class,
             SculpinMermaidBundle::class,
             PhpFoundationBundle::class,
+            App\Bundles\RedirectBundle\SculpinRedirectBundle::class,
         ];
     }
 }
