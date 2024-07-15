@@ -4,7 +4,6 @@ permalink: sponsor
 layout: page-wide
 redirect:
   - join
-  - donate
 ---
 
 _Shape the future of the language ecosystem and help make PHP sustainable._

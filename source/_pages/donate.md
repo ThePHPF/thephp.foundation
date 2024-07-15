@@ -1,10 +1,9 @@
 ---
 title: Donate to The PHP Foundation
-permalink: sponsor
+permalink: donate
 layout: page-wide
 redirect:
   - sponsor
-  - donate
 ---
 
 The PHP Foundation operates under the umbrella of [OpenSourceCollective](https://www.oscollective.org/), and we rely on [OpenCollective](https://opencollective.com/phpfoundation) to receive and distribute funds. Our donations and expenses are [public and fully transparent](https://opencollective.com/phpfoundation#category-BUDGET).
