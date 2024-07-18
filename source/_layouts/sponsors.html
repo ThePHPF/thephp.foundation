@@ -1,7 +1,7 @@
 {% set sponsors = fetch_sponsors() %}
 {% if sponsors['Platinum']|length > 0 %}
 <h2 id="sponsors_platinum">Platinum Sponsors</h2>
-<div class="grid grid-cols-4 gap-4 mb-8">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
     {% for sponsor in sponsors['Platinum'] %}
     <div>
         <a href="{{ sponsor.website }}"
