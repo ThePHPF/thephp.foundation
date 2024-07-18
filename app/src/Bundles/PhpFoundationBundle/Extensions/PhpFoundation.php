@@ -110,19 +110,6 @@ class PhpFoundation extends AbstractExtension
             $value = $sponsors[$value] ?? null;
         });
 
-        $sponsors_map['Supporters'] = [
-            'slack' => (object)[
-                'name' => 'Slack',
-                'website' => 'https://slack.com/',
-                'image' => '/assets/icons/logo_slack.svg'
-            ],
-            'digital-ocean' => (object)[
-                'name' => 'Digital Ocean',
-                'website' => 'https://www.digitalocean.com/',
-                'image' => '/assets/icons/digital_ocean.svg'
-            ],
-        ];
-
         return $sponsors_map;
     }
 }

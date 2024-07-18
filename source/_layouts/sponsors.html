@@ -59,26 +59,6 @@
 </div>
 {% endif %}
 
-{% if sponsors['Supporters']|length > 0 %}
-<h3 id="supporters">Supporters</h3>
-<div class="grid grid-cols-8 gap-4 text-base mb-8">
-    {% for sponsor in sponsors['Supporters']%}
-    <div>
-        <a href="{{ sponsor.website }}"
-           class="block no-underline" target="_blank" rel="noopener noreferrer">
-            <div class="mb-2 p-2">
-                <img class="h-16 rounded w-full object-contain object-center"
-                     src="{{ sponsor.image }}" alt="sponsor.name"/>
-            </div>
-            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 mb-4 text-center">
-                <a class="no-underline text-inherit" href="{{ sponsor.website }}">{{ sponsor.name }}</a>
-            </div>
-        </a>
-    </div>
-    {% endfor %}
-</div>
-{% endif %}
-
 <h3 id="past_sponsors">Past Sponsors</h3>
 <div class="text-base mb-8">
     {{ sponsors['Past'] | map((sponsor) => 
