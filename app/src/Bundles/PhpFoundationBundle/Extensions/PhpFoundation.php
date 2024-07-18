@@ -48,29 +48,29 @@ class PhpFoundation extends AbstractExtension
         $sponsors_map = array (
             'Silver' =>
                 array (
-                    'zend' => 'Zend by Perforce',
-                    'cooptilleuls' => 'Les-Tilleuls.coop',
-                    'mercari' => 'Mercari Inc.',
-                    'user-ecfec7e5' => 'pixiv Inc.',
-                    'cybozu' => 'Cybozu',
                     'packagist' => 'Private Packagist',
+                    'zend' => 'Zend by Perforce',
                     'tideways' => 'Tideways',
                     'symfony-sas' => 'Symfony Corp',
+                    'cooptilleuls' => 'Les-Tilleuls.coop',
                     'ardennes-etape' => 'Ardennes-étape',
-//                    'sentry-team' => 'Sentry Team', // FIXME Empty data in OpenCollective
+                    'sentry-team' => 'Sentry Team',
                     'aternos' => 'Aternos GmbH',
+                    'cybozu' => 'Cybozu',
+                    'mercari' => 'Mercari Inc.',
+                    'user-ecfec7e5' => 'pixiv Inc.',
                     'oro' => 'Oro',
                     'aligent-consulting' => 'Aligent Consulting',
                 ),
             'Gold' =>
                 array (
-//                    '11004-sovereign-tech-fund-2532c0cc' => 'Sovereign Tech Fund',  // FIXME Empty data in OpenCollective
+                    '11004-sovereign-tech-fund-2532c0cc' => 'Sovereign Tech Fund',
                     'craftcms' => 'Craft CMS',
                 ),
             'Platinum' =>
                 array (
-                    'automattic' => 'Automattic',
                     'jetbrains' => 'JetBrains',
+                    'automattic' => 'Automattic',
                 ),
             'Past' =>
                 array (
@@ -85,13 +85,18 @@ class PhpFoundation extends AbstractExtension
                     'binc' => 'BASE, Inc.',
                     'digital-scholar' => 'Digital Scholar',
                     'rakus' => 'RAKUS',
-//                    'rakusu' => 'ラクス 中村崇則', // FIXME Empty data in OpenCollective
+                    'rakusu' => 'ラクス 中村崇則',
                     'cambium-learning-inc' => 'Cambium Learning, Inc.',
                     'paycom' => 'Paycom',
                     'prestashop' => 'PrestaShop',
                     'spy' => 'SPY',
                 ),
         );
+
+        // FIXME Empty data in OpenCollective
+        unset($sponsors_map['Silver']['sentry-team']);
+        unset($sponsors_map['Gold']['11004-sovereign-tech-fund-2532c0cc']);
+        unset($sponsors_map['Past']['rakusu']);
 
         $sponsors_map['Advisory Board'] = [
             'zend' => 'Zend by Perforce',
