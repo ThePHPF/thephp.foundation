@@ -117,9 +117,10 @@ use:
             <h2 id="sponsors">Our Members</h2>
             <p class="text-lg">In alphabetical order, the ten founding members of the foundation are: <a href="https://www.acquia.com/">Acquia</a>, <a href="https://automattic.com/">Automattic</a>, <a href="https://craftcms.com/">Craft CMS</a>, <a href="https://www.jetbrains.com/">JetBrains</a>, <a href="https://laravel.com/">Laravel</a>, <a href="https://prestashop.com/">PrestaShop</a>, <a href="https://packagist.com/">Private Packagist</a>, <a href="https://symfony.com/">Symfony</a>, <a href="https://tideways.com/">Tideways</a>, <a href="https://www.zend.com/">Zend by Perforce</a>.</p>
 
-            <p class="text-lg">The next tier of membership is Major Sponsor, and the following companies have all joined in support of our mission: Livesport s.r.o., Cybozu Inc., Ardennes-étape, Aternos GmbH, shopware AG, Mercari Inc., Moodle, OP.GG, EC-CUBE, Spryker, Aligent Consulting, Oro, Polcode, pixiv Inc., Paycom, Cambium Learning, Inc., ラクス 中村崇則, RAKUS, Digital Scholar, BASE Inc., Les-Tilleuls.coop, SPY.</p>
+            <p class="text-lg">In addition to the <a href="https://thephp.foundation/structure/">Governing Board</a>, The PHP Foundation has an <a href="https://thephp.foundation/blog/2023/03/31/php-foundation-update-march-2023/#a-new-benefit-for-major-sponsors-%E2%80%93-advisory-board-membership">Advisory Board</a> with representatives from Automattic, JetBrains, Private Packagist, Symfony, Tideways, Zend by Perforce, Moodle, Shopware, Laravel, Ardennes-étape, Les-Tilleuls.coop / API Platform, Aternos GmbH, PrestaShop, and CraftCMS.</p>
 
             <p class="text-lg">The foundation is always open to new sponsors. If your company has been benefiting from PHP over the years, but not sure how it might give back to the ecosystem, now there's a clear and obvious choice.</p>
+            
         </div>
     </div>
 </section>
@@ -137,7 +138,7 @@ use:
     </div>
     
     <div class="mb-14 text-center">
-        <a href="https://opencollective.com/phpfoundation/contribute/backers-34283/checkout" target="_blank"
+        <a href="https://opencollective.com/phpfoundation/contribute/major-sponsors-34207/checkout?interval=year&amount=12000&contributeAs=me" target="_blank"
            class="inline-block text-xl py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">
             Become a sponsor of The PHP Foundation
         </a>
@@ -145,25 +146,9 @@ use:
 </section>
 
 <section class="text-center">
+<!--    <div class="mx-auto max-w-4xl px-6 lg:px-0 pt-8">-->
     <div class="mx-auto max-w-full px-4">
-        <div x-data="{
-            sponsors: [],
-            sponsorsCount: 0,
-            isLoaded: false,
         
-            fetchSponsoringOrganizations() {
-                fetch('https://opencollective.com/phpfoundation/members/organizations.json')
-                    .then((response) => response.json())
-                    .then((json) => {
-                        const unique = [...new Map(json.map(item => [item.name, item])).values()]
-                        this.sponsors = unique.sort((a, b) => b.totalAmountDonated - a.totalAmountDonated).slice(0, 24)
-                        this.sponsorsCount = json.length
-                        this.isLoaded = true
-                    });
-            }
-        }" x-init="fetchSponsoringOrganizations()">
-        </div>
-
         <div x-data="{
             sponsors: [],
             sponsorsCount: 0,
@@ -181,22 +166,21 @@ use:
             }
         }" x-init="fetchSponsoringUsers()" class="mt-8">
             <div x-show="isLoaded" x-cloak>
-                <div class="font-medium text-xl mb-4 mt-14">...and <span x-text="sponsorsCount"></span> individuals</div>
+                <div class="font-medium text-xl mb-8 mt-14">More than <span x-text="sponsorsCount"></span> of individuals support The PHP Foundation</div>
                 <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 xl:grid-cols-10 gap-4">
                     <template x-for="sponsor in sponsors">
                         <a :href="sponsor.website ?? sponsor.profile"
                            class="block no-underline hover:underline" target="_blank"
                            rel="noopener noreferrer">
-                            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4"
+                            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 mb-4"
                                  x-text="sponsor.name"></div>
                         </a>
                     </template>
                 </div>
 
                 <div class="my-6">
-                    <a href="https://opencollective.com/phpfoundation" target="_blank" rel="noopener noreferrer"
-                       class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">See
-                        all individuals</a>
+                    <a href="https://opencollective.com/phpfoundation/contribute/backers-34283/checkout?interval=month&amount=10&contributeAs=me" target="_blank" rel="noopener noreferrer"
+                       class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">Join the movement</a>
                 </div>
             </div>
             <div x-show="!isLoaded" x-cloak>
@@ -212,45 +196,3 @@ use:
         </div>
     </div>
 </section>
-
-<section class="max-w-full my-auto sm:mt-24 md:my-8 text-center py-4">
-    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" id="supporters">Supporters</h2>
-    <div class="font-medium text-xl my-4">We receive non-financial help from other organisations too</div>
-    <div class="mx-auto max-w-full px-4 text-sm">
-        <div class="grid grid-cols-3 xl:grid-cols-9 gap-4">
-            <a class="block shadow p-2 rounded-lg no-underline col-start-1 xl:col-start-4" target="_blank" rel="noopener noreferrer"
-               href="https://mule.to/p399">
-                <div class="mb-6 p-2">
-                    <img class="h-24 rounded w-full object-contain object-center"
-                         src="/assets/icons/stickermule.png"
-                         alt="Sticker Mule">
-                </div>
-                <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4">Sticker
-                    Mule
-                </div>
-            </a>
-
-            <a class="block shadow p-2 rounded-lg no-underline" target="_blank" rel="noopener noreferrer"
-               href="https://slack.com/">
-                <div class="mb-6 p-2">
-                    <img class="h-24 rounded w-full object-contain object-center"
-                         src="{{ site.url }}/assets/icons/logo_slack.svg"
-                         alt="Slack">
-                </div>
-                <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4">Slack</div>
-            </a>
-
-            <a class="block shadow p-2 rounded-lg no-underline" target="_blank" rel="noopener noreferrer"
-               href="https://mailcoach.app/">
-                <div class="mb-6 p-2">
-                    <img class="h-18 rounded w-full object-contain object-center"
-                         style="-webkit-filter: invert(100%); /* safari 6.0 - 9.0 */ filter: invert(100%);"
-                         src="/assets/icons/mailcoach.svg"
-                         alt="Mailcoach">
-                </div>
-                <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4">Mailcoach</div>
-            </a>
-        </div>
-    </div>
-</section>
-</main>

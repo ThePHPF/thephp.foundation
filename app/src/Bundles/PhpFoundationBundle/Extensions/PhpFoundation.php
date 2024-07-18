@@ -45,19 +45,83 @@ class PhpFoundation extends AbstractExtension
         //$sponsors = array_slice($unique, 0, 24);
         $sponsors = $unique;
         
-        $sponsors_map = [
-            'Platinum' => ['JetBrains', 'Automattic'],
-            'Gold' => [
-                'Private Packagist', 'Craft CMS', 'Tideways', 'Cybozu', 'Zend by Perforce',
-                'Aternos GmbH', 'Mercari Inc.', 'Livesport s.r.o.', 'Acquia', 'Symfony Corp',
-                'pixiv Inc.', 'Les-Tilleuls.coop', 'shopware AG', 'Ardennes-étape'
-            ],
-            'Silver' => []
+        $sponsors_map = array (
+            'Silver' =>
+                array (
+                    'zend' => 'Zend by Perforce',
+                    'cooptilleuls' => 'Les-Tilleuls.coop',
+                    'mercari' => 'Mercari Inc.',
+                    'user-ecfec7e5' => 'pixiv Inc.',
+                    'cybozu' => 'Cybozu',
+                    'packagist' => 'Private Packagist',
+                    'tideways' => 'Tideways',
+                    'symfony-sas' => 'Symfony Corp',
+                    'ardennes-etape' => 'Ardennes-étape',
+//                    'sentry-team' => 'Sentry Team', // FIXME Empty data in OpenCollective
+                    'aternos' => 'Aternos GmbH',
+                    'oro' => 'Oro',
+                    'aligent-consulting' => 'Aligent Consulting',
+                ),
+            'Gold' =>
+                array (
+//                    '11004-sovereign-tech-fund-2532c0cc' => 'Sovereign Tech Fund',  // FIXME Empty data in OpenCollective
+                    'craftcms' => 'Craft CMS',
+                ),
+            'Platinum' =>
+                array (
+                    'automattic' => 'Automattic',
+                    'jetbrains' => 'JetBrains',
+                ),
+            'Past' =>
+                array (
+                    'livesport-s-r-o' => 'Livesport s.r.o.',
+                    'acquia' => 'Acquia',
+                    'stefan-hamann' => 'shopware AG',
+                    'opgg' => 'OP.GG',
+                    'ec-cube' => 'EC-CUBE',
+                    'spryker' => 'Spryker',
+                    'polcode' => 'Polcode',
+                    'laravel' => 'Laravel',
+                    'binc' => 'BASE, Inc.',
+                    'digital-scholar' => 'Digital Scholar',
+                    'rakus' => 'RAKUS',
+//                    'rakusu' => 'ラクス 中村崇則', // FIXME Empty data in OpenCollective
+                    'cambium-learning-inc' => 'Cambium Learning, Inc.',
+                    'paycom' => 'Paycom',
+                    'prestashop' => 'PrestaShop',
+                    'spy' => 'SPY',
+                ),
+        );
+
+        $sponsors_map['Advisory Board'] = [
+            'zend' => 'Zend by Perforce',
+            'packagist' => 'Private Packagist',
+            'tideways' => 'Tideways',
+            'symfony-sas' => 'Symfony',
+            'prestashop' => 'PrestaShop',
+            'laravel' => 'Laravel',
+            'stefan-hamann' => 'shopware AG',
+            'craftcms' => 'Craft CMS',
+            'automattic' => 'Automattic',
+            'jetbrains' => 'JetBrains',
         ];
 
         array_walk_recursive($sponsors_map, function(&$value) use ($sponsors) {
             $value = $sponsors[$value] ?? null;
         });
+
+        $sponsors_map['Supporters'] = [
+            'slack' => (object)[
+                'name' => 'Slack',
+                'website' => 'https://slack.com/',
+                'image' => '/assets/icons/logo_slack.svg'
+            ],
+            'digital-ocean' => (object)[
+                'name' => 'Digital Ocean',
+                'website' => 'https://www.digitalocean.com/',
+                'image' => '/assets/icons/digital_ocean.svg'
+            ],
+        ];
 
         return $sponsors_map;
     }
