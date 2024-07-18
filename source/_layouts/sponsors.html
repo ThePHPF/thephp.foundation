@@ -18,6 +18,7 @@
     {% endfor %}
 </div>
 {% endif %}
+{% if sponsors['Gold']|length > 0 %}
 <h2 id="sponsors_gold">Gold Sponsors</h2>
 <div class="grid grid-cols-6 gap-4 text-base mb-8">
     {% for sponsor in sponsors['Gold'] %}
@@ -35,6 +36,7 @@
     </div>
     {% endfor %}
 </div>
+{% endif %}
 
 <h2 id="sponsors_silver">Silver Sponsors</h2>
 <div class="grid grid-cols-6 gap-4 text-sm  mb-8">
