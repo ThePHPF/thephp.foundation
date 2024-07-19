@@ -29,13 +29,15 @@ Or [sponsor directly](https://opencollective.com/phpfoundation) to become a memb
 
 {% include "sponsorship-tiers.html" %}
 
-## Monthly Sponsorships for The PHP Foundation
+## Yearly and Monthly Sponsorships for The PHP Foundation
 
-You can achieve Silver, Gold, or Platinum status by making monthly financial contributions as a company or individual.
+You can achieve Silver, Gold, or Platinum status by making financial contributions throughout the year. Contributions can be made annually, quarterly, or monthly.
 
-Your status for the next calendar year will be determined by the total amount you contribute in the current year, based on specific sponsorship levels.
+- Once your contributions exceed a certain sponsorship level threshold, either through a one-time donation or cumulative monthly contributions, you immediately become a sponsor at that level.
 
-For example, if you contribute $1,500 monthly in 2024, your total contribution by the end of the year will be $18,000, qualifying you as a Silver member for 2025.
+- Sponsors are removed from the list at the end of each calendar year if their total contributions for that year do not meet the threshold for their level.
+
+For example, if you contribute $1,500 monthly in 2024, your total contribution by September will be $12,000, qualifying you as a Silver member for the rest of 2024 and all of 2025.
 
 <div class="flex mt-12 mb-12 border-b border-t pt-4">
   <div class="flex-initial w-1/2 pr-2">
