@@ -3,7 +3,7 @@
 <h2 id="sponsors_platinum">Platinum Sponsors</h2>
 <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
     {% for sponsor in sponsors['Platinum'] %}
-    <div>
+    <div title="{{ sponsor.name }}">
         <a href="{{ sponsor.website }}"
            class="block no-underline" target="_blank" rel="noopener noreferrer">
             <div class="mb-2 p-2">
@@ -23,7 +23,7 @@
 <h2 id="sponsors_gold">Gold Sponsors</h2>
 <div class="grid grid-cols-2 lg:grid-cols-5 gap-4 text-base mb-8">
     {% for sponsor in sponsors['Gold'] %}
-    <div>
+    <div title="{{ sponsor.name }}">
         <a href="{{ sponsor.website }}"
            class="block no-underline" target="_blank" rel="noopener noreferrer">
             <div class="mb-2 p-2">
@@ -43,7 +43,7 @@
 <h2 id="sponsors_silver">Silver Sponsors</h2>
 <div class="grid grid-cols-2 lg:grid-cols-6 gap-4 text-base mb-8">
     {% for sponsor in sponsors['Silver'] | filter(sponsor => sponsor.name) %}
-    <div>
+    <div title="{{ sponsor.name }}">
         <a href="{{ sponsor.website }}"
            class="block no-underline" target="_blank" rel="noopener noreferrer">
             <div class="mb-2 p-2">
