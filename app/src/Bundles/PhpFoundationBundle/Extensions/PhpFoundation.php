@@ -94,10 +94,15 @@ class PhpFoundation extends AbstractExtension
         );
 
         // FIXME Empty data in OpenCollective
-        unset($sponsors_map['Silver']['sentry-team']);
         unset($sponsors_map['Past']['rakusu']);
 
         // STF is currently a Vendor and does not appear in the orgs list of sponsors
+        $sponsors['Sentry Team'] = (object)[
+            'name' => 'Sentry',
+            'website' => 'https://sentry.io/',
+            'image' => 'https://images.opencollective.com/sentry/9620d33/logo/256.png'
+        ];
+
         $sponsors['Sovereign Tech Fund'] = (object)[
             'name' => 'Sovereign Tech Fund',
             'website' => 'https://www.sovereigntechfund.de/',
