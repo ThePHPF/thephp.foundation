@@ -42,29 +42,26 @@ class PhpFoundation extends AbstractExtension
             return $b->totalAmountDonated - $a->totalAmountDonated;
         });
 
-        //$sponsors = array_slice($unique, 0, 24);
         $sponsors = $unique;
         
         $sponsors_map = array (
             'Silver' =>
                 array (
                     'packagist' => 'Private Packagist',
+                    'craftcms' => 'Craft CMS',
                     'zend' => 'Zend by Perforce',
                     'tideways' => 'Tideways',
                     'symfony-sas' => 'Symfony Corp',
-                    'cooptilleuls' => 'Les-Tilleuls.coop',
-                    'ardennes-etape' => 'Ardennes-étape',
-                    'sentry-team' => 'Sentry Team',
-                    'aternos' => 'Aternos GmbH',
-                    'cybozu' => 'Cybozu',
                     'mercari' => 'Mercari Inc.',
+                    'cooptilleuls' => 'Les-Tilleuls.coop',
                     'user-ecfec7e5' => 'pixiv Inc.',
-                    'oro' => 'Oro',
-                    'aligent-consulting' => 'Aligent Consulting',
+                    'aternos' => 'Aternos GmbH',
+                    'sentry-team' => 'Sentry Team',
+                    'ardennes-etape' => 'Ardennes-étape',
+                    'cybozu' => 'Cybozu',
                 ),
             'Gold' =>
                 array (
-                    'craftcms' => 'Craft CMS',
                 ),
             'Platinum' =>
                 array (
