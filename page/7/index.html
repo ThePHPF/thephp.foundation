@@ -96,7 +96,7 @@
                class="text-sm font-semibold leading-6 text-gray-700 nav-org hover:border-none hover:underline">
                 php.net</a>
 
-            <a href="/donate" class="button-link">Donate</a>
+            <a href="/sponsor" class="button-link">Sponsor</a>
         </div>
     </nav>
     <div x-show="isOpen" x-cloak>
@@ -247,7 +247,7 @@ At the end of 2022, The PHP Foundation is a collective of 10 volunteer administr
     <div class="mx-auto max-w-4xl px-6 lg:px-0 py-12">
         <div class="text-lg leading-8 text-white">
             <h2>Our Work</h2>
-            <p class="text-lg">The foundation contracts <a href="/structure#core_developers">10 part-time developers</a> who work on maintenance and new features for PHP. </p>
+            <p class="text-lg">The foundation contracts <a href="/structure#core_developers">10 part-time and full-time developers</a> who work on maintenance and new features for PHP. </p>
             <p class="text-lg">The foundation team contributes in many forms: filing issues, reviewing pull requests, participating in discussions on mailing lists, triaging issues, submitting RFC proposals, writing documentation, maintaining project infrastructure, fixing bugs, and implementing features.</p>
         </div>
     </div>
@@ -283,83 +283,235 @@ At the end of 2022, The PHP Foundation is a collective of 10 volunteer administr
 </section>
 
 <section class="border-t">
-    <div class="mx-auto max-w-4xl px-6 lg:px-0 pt-8">
+    <div class="mx-auto max-w-4xl px-6 lg:px-0">
         <div class="text-lg leading-8 text-white">
             <h2 id="sponsors">Our Members</h2>
             <p class="text-lg">In alphabetical order, the ten founding members of the foundation are: <a href="https://www.acquia.com/">Acquia</a>, <a href="https://automattic.com/">Automattic</a>, <a href="https://craftcms.com/">Craft CMS</a>, <a href="https://www.jetbrains.com/">JetBrains</a>, <a href="https://laravel.com/">Laravel</a>, <a href="https://prestashop.com/">PrestaShop</a>, <a href="https://packagist.com/">Private Packagist</a>, <a href="https://symfony.com/">Symfony</a>, <a href="https://tideways.com/">Tideways</a>, <a href="https://www.zend.com/">Zend by Perforce</a>.</p>
 
-            <p class="text-lg">The next tier of membership is Major Sponsor, and the following companies have all joined in support of our mission: Livesport s.r.o., Cybozu Inc., Ardennes-étape, Aternos GmbH, shopware AG, Mercari Inc., Moodle, OP.GG, EC-CUBE, Spryker, Aligent Consulting, Oro, Polcode, pixiv Inc., Paycom, Cambium Learning, Inc., ラクス 中村崇則, RAKUS, Digital Scholar, BASE Inc., Les-Tilleuls.coop, SPY.</p>
+            <p class="text-lg">In addition to the <a href="https://thephp.foundation/structure/">Governing Board</a>, The PHP Foundation has an <a href="https://thephp.foundation/blog/2023/03/31/php-foundation-update-march-2023/#a-new-benefit-for-major-sponsors-%E2%80%93-advisory-board-membership">Advisory Board</a> with representatives from Automattic, JetBrains, Private Packagist, Symfony, Tideways, Zend by Perforce, Moodle, Shopware, Laravel, Ardennes-étape, Les-Tilleuls.coop / API Platform, Aternos GmbH, PrestaShop, and CraftCMS.</p>
 
             <p class="text-lg">The foundation is always open to new sponsors. If your company has been benefiting from PHP over the years, but not sure how it might give back to the ecosystem, now there's a clear and obvious choice.</p>
+            
         </div>
     </div>
 </section>
 
-<section class="text-center">
-<!--    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4" id="sponsors">Sponsors</h2>-->
-    <div class="mb-14">
-        <a href="https://opencollective.com/phpfoundation/contribute/backers-34283/checkout" target="_blank"
-           class="inline-block text-xl py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">
-            Become a member of The PHP Foundation
+<section class="">
+    <div class="mx-auto max-w-4xl px-6 lg:px-0 pt-8">
+        <div class="text-lg leading-8">
+            <h2 id="sponsors_platinum">Platinum Sponsors</h2>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <div title="JetBrains">
+        <a href="https://www.jetbrains.com/"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-32 rounded w-full object-contain object-center"
+                     src="https://opencollective-production.s3.us-west-1.amazonaws.com/account-avatar/368ee13d-7f68-4422-95ff-168173710b0b/JetBrains%20icon.png" alt="JetBrains"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://www.jetbrains.com/">JetBrains</a>
+            </div>
         </a>
     </div>
-    
-
-    <div class="mx-auto max-w-full px-4">
-        <div x-data="{
-            sponsors: [],
-            sponsorsCount: 0,
-            isLoaded: false,
-        
-            fetchSponsoringOrganizations() {
-                fetch('https://opencollective.com/phpfoundation/members/organizations.json')
-                    .then((response) => response.json())
-                    .then((json) => {
-                        const unique = [...new Map(json.map(item => [item.name, item])).values()]
-                        this.sponsors = unique.sort((a, b) => b.totalAmountDonated - a.totalAmountDonated).slice(0, 24)
-                        this.sponsorsCount = json.length
-                        this.isLoaded = true
-                    });
-            }
-        }" x-init="fetchSponsoringOrganizations()">
-            <div x-show="isLoaded" x-cloak>
-                <div class="font-medium text-xl my-4"><span x-text="sponsorsCount"></span> organizations support the PHP Foundation
-                </div>
-                <div class="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-8 gap-4">
-                    <template x-for="sponsor in sponsors">
-                        <a :href="sponsor.website ?? sponsor.profile"
-                           class="block shadow p-2 rounded-lg no-underline" target="_blank"
-                           rel="noopener noreferrer">
-                            <div class="mb-6 p-2">
-                                <img x-show="sponsor.image"
-                                     class="h-24 rounded w-full object-contain object-center"
-                                     :src="sponsor.image" :alt="sponsor.name"/>
-                                <span x-show="!sponsor.image"
-                                      class="h-24 w-24 rounded-full bg-[rgba(127,82,255,.8)] flex justify-center items-center text-white text-2xl mx-auto"
-                                      x-text="sponsor.name.split(/\s+/).map(word => word[0].toUpperCase()).join('')"></span>
-                            </div>
-                            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4"
-                                 x-text="sponsor.name"></div>
-                        </a>
-                    </template>
-                </div>
-
-                <div class="my-6">
-                    <a href="https://opencollective.com/phpfoundation" target="_blank" rel="noopener noreferrer"
-                       class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">See
-                        all organizations</a>
-                </div>
+        <div title="Automattic">
+        <a href="https://automattic.com"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-32 rounded w-full object-contain object-center"
+                     src="https://automattic.files.wordpress.com/2019/06/automattic-logo-color-cmyk.png" alt="Automattic"/>
             </div>
-            <div x-show="!isLoaded" x-cloak>
-                <div class="shadow p-2 rounded-lg animate-pulse w-1/4">
-                    <div class="mb-4 p-2">
-                        <span class="flex h-24 w-24 rounded-full bg-slate-200 justify-center items-center text-white text-2xl"></span>
-                    </div>
-                    <div class="h-4 bg-slate-200 rounded"></div>
-                </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://automattic.com">Automattic</a>
             </div>
+        </a>
+    </div>
+        <div title="Sovereign Tech Fund">
+        <a href="https://www.sovereigntechfund.de/"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-32 rounded w-full object-contain object-center"
+                     src="/assets/icons/STF-Logo-Std-Black-RGB.svg" alt="Sovereign Tech Fund"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://www.sovereigntechfund.de/">Sovereign Tech Fund</a>
+            </div>
+        </a>
+    </div>
+    </div>
+
+
+<h2 id="sponsors_silver">Silver Sponsors</h2>
+<div class="grid grid-cols-3 lg:grid-cols-6 gap-4 text-base mb-8">
+        <div title="Private Packagist">
+        <a href="https://packagist.com"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-20 rounded w-full object-contain object-center"
+                     src="https://opencollective-production.s3.us-west-1.amazonaws.com/3a24b0c0-2229-11ed-b2b0-83767ea0d654.png" alt="Private Packagist"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://packagist.com">Private Packagist</a>
+            </div>
+        </a>
+    </div>
+        <div title="Craft CMS">
+        <a href="https://craftcms.com"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-20 rounded w-full object-contain object-center"
+                     src="https://opencollective-production.s3.us-west-1.amazonaws.com/85a934b0-1441-11ea-8983-df41bd0c9f8d.png" alt="Craft CMS"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://craftcms.com">Craft CMS</a>
+            </div>
+        </a>
+    </div>
+        <div title="Zend by Perforce">
+        <a href="https://www.zend.com"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-20 rounded w-full object-contain object-center"
+                     src="https://logo.clearbit.com/zend.com" alt="Zend by Perforce"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://www.zend.com">Zend by Perforce</a>
+            </div>
+        </a>
+    </div>
+        <div title="Tideways">
+        <a href="https://tideways.com"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-20 rounded w-full object-contain object-center"
+                     src="https://opencollective-production.s3.us-west-1.amazonaws.com/628150c0-5851-11ec-a322-ebb5a0aff318.jpg" alt="Tideways"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://tideways.com">Tideways</a>
+            </div>
+        </a>
+    </div>
+        <div title="Symfony Corp">
+        <a href="https://symfony.com"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-20 rounded w-full object-contain object-center"
+                     src="https://logo.clearbit.com/symfony.com" alt="Symfony Corp"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://symfony.com">Symfony Corp</a>
+            </div>
+        </a>
+    </div>
+        <div title="Mercari Inc.">
+        <a href="https://about.mercari.com"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-20 rounded w-full object-contain object-center"
+                     src="https://opencollective-production.s3.us-west-1.amazonaws.com/7c971af0-6394-11ec-9c66-4970865c926b.png" alt="Mercari Inc."/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://about.mercari.com">Mercari Inc.</a>
+            </div>
+        </a>
+    </div>
+        <div title="Les-Tilleuls.coop">
+        <a href="https://les-tilleuls.coop/"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-20 rounded w-full object-contain object-center"
+                     src="https://opencollective-production.s3.us-west-1.amazonaws.com/account-avatar/63bd5093-297b-4cca-9dbd-50e3534b7b17/logo%20coop.png" alt="Les-Tilleuls.coop"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://les-tilleuls.coop/">Les-Tilleuls.coop</a>
+            </div>
+        </a>
+    </div>
+        <div title="pixiv Inc.">
+        <a href=""
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-20 rounded w-full object-contain object-center"
+                     src="https://opencollective-production.s3.us-west-1.amazonaws.com/29144d50-5667-11ed-b02a-abae46cd6808.jpg" alt="pixiv Inc."/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="">pixiv Inc.</a>
+            </div>
+        </a>
+    </div>
+        <div title="Aternos GmbH">
+        <a href="https://aternos.gmbh"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-20 rounded w-full object-contain object-center"
+                     src="https://opencollective-production.s3.us-west-1.amazonaws.com/571d9fa0-5e95-11ec-bc39-f313e7dbf1e7.png" alt="Aternos GmbH"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://aternos.gmbh">Aternos GmbH</a>
+            </div>
+        </a>
+    </div>
+        <div title="Sentry">
+        <a href="https://sentry.io/"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-20 rounded w-full object-contain object-center"
+                     src="https://images.opencollective.com/sentry/9620d33/logo/256.png" alt="Sentry"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://sentry.io/">Sentry</a>
+            </div>
+        </a>
+    </div>
+        <div title="Ardennes-étape">
+        <a href="https://en.ardennes-etape.be"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-20 rounded w-full object-contain object-center"
+                     src="https://logo.clearbit.com/en.ardennes-etape.be" alt="Ardennes-étape"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://en.ardennes-etape.be">Ardennes-étape</a>
+            </div>
+        </a>
+    </div>
+        <div title="Cybozu">
+        <a href="https://cybozu.co.jp/"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-20 rounded w-full object-contain object-center"
+                     src="https://opencollective-production.s3.us-west-1.amazonaws.com/27fcb9a0-09eb-11ea-a83e-ff0138d85df4.jpg" alt="Cybozu"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://cybozu.co.jp/">Cybozu</a>
+            </div>
+        </a>
+    </div>
+    </div>
+
+<h3 id="past_sponsors">Past Sponsors</h3>
+<div class="text-base mb-8">
+    <a class="no-underline text-inherit" href="https://www.livesport.eu/">Livesport s.r.o.</a>, <a class="no-underline text-inherit" href="https://www.acquia.com/">Acquia</a>, <a class="no-underline text-inherit" href="https://www.shopware.com/en/">shopware AG</a>, <a class="no-underline text-inherit" href="https://op.gg">OP.GG</a>, <a class="no-underline text-inherit" href="https://www.ec-cube.net/">EC-CUBE</a>, <a class="no-underline text-inherit" href="https://spryker.com/">Spryker</a>, <a class="no-underline text-inherit" href="https://polcode.com/">Polcode</a>, <a class="no-underline text-inherit" href="">Laravel</a>, <a class="no-underline text-inherit" href="https://binc.jp/">BASE, Inc.</a>, <a class="no-underline text-inherit" href="http://digitalscholar.org/">Digital Scholar</a>, <a class="no-underline text-inherit" href="https://www.rakus.co.jp/">RAKUS</a>, <a class="no-underline text-inherit" href="https://www.cambiumlearning.com/">Cambium Learning, Inc.</a>, <a class="no-underline text-inherit" href="https://www.paycom.com/">Paycom</a>, <a class="no-underline text-inherit" href="https://www.prestashop.com">PrestaShop</a>, <a class="no-underline text-inherit" href="https://spysystem.dk/">SPY</a>.
+</div>
         </div>
+    </div>
 
+    <div x-show="isLoaded" x-cloak>
+        <div class="font-medium text-xl my-4"><span x-text="sponsorsCount"></span> organizations support the PHP Foundation
+        </div>
+    </div>
+    
+    <div class="mb-14 text-center">
+        <a href="https://opencollective.com/phpfoundation/contribute/major-sponsors-34207/checkout?interval=year&amount=12000&contributeAs=me" target="_blank"
+           class="inline-block text-xl py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">
+            Become a sponsor of The PHP Foundation
+        </a>
+    </div>
+</section>
+
+<section class="text-center">
+<!--    <div class="mx-auto max-w-4xl px-6 lg:px-0 pt-8">-->
+    <div class="mx-auto max-w-full px-4">
+        
         <div x-data="{
             sponsors: [],
             sponsorsCount: 0,
@@ -377,22 +529,21 @@ At the end of 2022, The PHP Foundation is a collective of 10 volunteer administr
             }
         }" x-init="fetchSponsoringUsers()" class="mt-8">
             <div x-show="isLoaded" x-cloak>
-                <div class="font-medium text-xl mb-4 mt-14">...and <span x-text="sponsorsCount"></span> individuals</div>
+                <div class="font-medium text-xl mb-8 mt-14">More than <span x-text="sponsorsCount"></span> of individuals support The PHP Foundation</div>
                 <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 xl:grid-cols-10 gap-4">
                     <template x-for="sponsor in sponsors">
                         <a :href="sponsor.website ?? sponsor.profile"
                            class="block no-underline hover:underline" target="_blank"
                            rel="noopener noreferrer">
-                            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4"
+                            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 mb-4"
                                  x-text="sponsor.name"></div>
                         </a>
                     </template>
                 </div>
 
                 <div class="my-6">
-                    <a href="https://opencollective.com/phpfoundation" target="_blank" rel="noopener noreferrer"
-                       class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">See
-                        all individuals</a>
+                    <a href="https://opencollective.com/phpfoundation/contribute/backers-34283/checkout?interval=month&amount=10&contributeAs=me" target="_blank" rel="noopener noreferrer"
+                       class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">Join the movement</a>
                 </div>
             </div>
             <div x-show="!isLoaded" x-cloak>
@@ -408,48 +559,6 @@ At the end of 2022, The PHP Foundation is a collective of 10 volunteer administr
         </div>
     </div>
 </section>
-
-<section class="max-w-full my-auto sm:mt-24 md:my-8 text-center py-4">
-    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" id="supporters">Supporters</h2>
-    <div class="font-medium text-xl my-4">We receive non-financial help from other organisations too</div>
-    <div class="mx-auto max-w-full px-4">
-        <div class="grid grid-cols-3 xl:grid-cols-9 gap-4">
-            <a class="block shadow p-2 rounded-lg no-underline col-start-1 xl:col-start-4" target="_blank" rel="noopener noreferrer"
-               href="https://mule.to/p399">
-                <div class="mb-6 p-2">
-                    <img class="h-24 rounded w-full object-contain object-center"
-                         src="/assets/icons/stickermule.png"
-                         alt="Sticker Mule">
-                </div>
-                <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4">Sticker
-                    Mule
-                </div>
-            </a>
-
-            <a class="block shadow p-2 rounded-lg no-underline" target="_blank" rel="noopener noreferrer"
-               href="https://slack.com/">
-                <div class="mb-6 p-2">
-                    <img class="h-24 rounded w-full object-contain object-center"
-                         src="https://thephp.foundation/assets/icons/logo_slack.svg"
-                         alt="Slack">
-                </div>
-                <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4">Slack</div>
-            </a>
-
-            <a class="block shadow p-2 rounded-lg no-underline" target="_blank" rel="noopener noreferrer"
-               href="https://mailcoach.app/">
-                <div class="mb-6 p-2">
-                    <img class="h-24 rounded w-full object-contain object-center"
-                         style="-webkit-filter: invert(100%); /* safari 6.0 - 9.0 */ filter: invert(100%);"
-                         src="/assets/icons/mailcoach.svg"
-                         alt="Mailcoach">
-                </div>
-                <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4">Mailcoach</div>
-            </a>
-        </div>
-    </div>
-</section>
-</main>
 <footer class="bg-gray-900" itemtype="https://schema.org/WPFooter">
     <div class="mx-auto max-w-7xl overflow-hidden px-6 py-12 lg:px-8">
         <nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" itemscope
