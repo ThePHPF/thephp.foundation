@@ -31,6 +31,11 @@ class MermaidConverter implements EventSubscriberInterface
         $env = $this->configuration->get('env') ?? 'dev';
         
         $source = $event->source();
+
+        if (!$source->hasChanged()) {
+            return;
+        }
+        
         $original_file = file_get_contents($source->file()->getRealPath());
         $original_content = $source->content();
         if (is_null($original_content) || !str_contains($original_content, '```mermaid')) {
