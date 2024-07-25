@@ -9,14 +9,14 @@ use:
     - posts
 ---
 
-<section class="mx-auto max-w-3xl my-16 w-full bg-white px-4 md:px-0">
+<section class="mx-auto max-w-3–xl my-16 w-full bg-white px-4 md:px-0">
     <header class="mb-8">
         <h1 class="text-4xl font-bold">{{ page.title }}</h1>
     </header>
 
     <div class="space-y-16">
         {% for post in page.pagination.items %}
-        <article class="flex max-w-xl flex-col items-start" itemscope itemtype="https://schema.org/Article">
+        <article class="flex flex-col items-start" itemscope itemtype="https://schema.org/Article">
             <div class="flex items-center gap-x-4 text-xs">
                 <div class="text-gray-500" itemprop="datePublished">{{ post.published_at|date("M d, Y") }}</div>
                 {% if post.tags is defined%}
@@ -29,6 +29,20 @@ use:
                     {% endfor %}
                 </div>
                 {% endif %}
+                <div>
+                {% if post.author.name is defined%}
+<!--                <div class="text-xs mb-2">-->
+                    By <span itemprop="publisher" itemscope itemtype="https://schema.org/Person"><a href="{{ post.author.url }}" itemprop="url" class="no-underline" target="_blank" rel="noopener noreferrer"><span itemprop="name">{{ post.author.name }}</span></a></span>
+<!--                </div>-->
+                {% elseif post.author is iterable%}
+<!--                <div class="text-xs mb-2">-->
+                    By
+                    {% for author in post.author %}
+                    <span itemprop="publisher" itemscope itemtype="https://schema.org/Person"><a href="{{ author.url }}" itemprop="url" class="no-underline" target="_blank" rel="noopener noreferrer"><span itemprop="name">{{ author.name }}</span></a></span>{% if loop.last == false  %}, {% endif %}
+                    {% endfor %}
+<!--                </div>-->
+                {% endif %}
+                </div>
             </div>
             <div class="group relative">
                 <h3 class="mt-3 mb-2 text-lg font-semibold leading-6">
@@ -36,20 +50,9 @@ use:
                         <span itemprop="name">{{ post.title|raw }}</span>
                     </a>
                 </h3>
-                {% if post.author.name is defined%}
-                <div class="text-xs mb-2">
-                    Published by <span itemprop="publisher" itemscope itemtype="https://schema.org/Person"><a href="{{ post.author.url }}" itemprop="url" class="no-underline" target="_blank" rel="noopener noreferrer"><span itemprop="name">{{ post.author.name }}</span></a></span>
-                </div>
-                {% elseif post.author is iterable%}
-                <div class="text-xs mb-2">
-                    Published by
-                    {% for author in post.author %}
-                    <span itemprop="publisher" itemscope itemtype="https://schema.org/Person"><a href="{{ author.url }}" itemprop="url" class="no-underline" target="_blank" rel="noopener noreferrer"><span itemprop="name">{{ author.name }}</span></a></span>{% if loop.last == false  %}, {% endif %}
-                    {% endfor %}
-                </div>
-                {% endif %}
+                
                 <div class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600" itemprop="text">
-                    {{ post.description ?: post.content|striptags|length > 100 ? (post.content|striptags|slice(0, 150) ~ '...')|raw :
+                    {{ post.description ?: post.content|striptags|length > 80 ? (post.content|striptags|slice(0, 120) ~ '...')|raw :
                     post.content|striptags|raw }}
                 </div>
             </div>
