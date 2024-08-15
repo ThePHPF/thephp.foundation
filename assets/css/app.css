@@ -35,7 +35,7 @@
         @apply font-bold text-xl;
     }
 
-    p, ol, ul {
+    p, ol, ul, code {
         @apply mb-8;
     }
 
@@ -45,6 +45,10 @@
 
     ul {
         @apply list-disc list-outside mb-4 ml-5;
+    }
+
+    li > ul {
+        @apply mb-0;
     }
 
     ol {
