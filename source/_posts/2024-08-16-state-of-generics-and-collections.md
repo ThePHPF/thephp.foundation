@@ -15,7 +15,7 @@ published_at: 16 August 2024
 
 # State of Generics and Collections
 
-Generics have been on the list of wanted features for a long time by numerous PHP developers. The topic is often brought up in "What's New in PHP?" talks as well during Q\&A.
+Generics have been on the list of wanted features for a long time by numerous PHP developers. The topic is often brought up in "What's New in PHP?" talks as well during Q&A.
 
 In this article we will be exploring the different approaches, and what their current state is.
 
@@ -90,7 +90,7 @@ A key challenge is type inference. The use of generics tends to increase code ve
 		return map<int, BlogPostId, BlogPost>($ids, $repository->find(...));
 	}
 
-Type inference can reduce this verbosity by letting the compiler deduce the appropriate types automatically for us. For instance, in the examples above, the compiler might automatically determine the correct types for new `Map()` and `map()`. However, this is hard in PHP. Quoting Nikita, "primarily due to the very limited view of the codebase the PHP compiler has (it only sees one file at a time)".
+Type inference can reduce this verbosity by letting the compiler deduce the appropriate types automatically for us. For instance, in the examples above, the compiler might automatically determine the correct types for `new Map()` and `map()`. However, this is hard in PHP. Quoting Nikita, "primarily due to the very limited view of the codebase the PHP compiler has (it only sees one file at a time)".
 
 Consider the following example:
 
