@@ -13,8 +13,6 @@ author:
 published_at: 16 August 2024
 ---
 
-# State of Generics and Collections
-
 Generics have been on the list of wanted features for a long time by numerous PHP developers. The topic is often brought up in "What's New in PHP?" talks as well during Q&A.
 
 In this article we will be exploring the different approaches, and what their current state is.
