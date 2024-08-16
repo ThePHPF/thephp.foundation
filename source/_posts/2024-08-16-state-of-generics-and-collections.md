@@ -136,13 +136,13 @@ The `changeValue()` function accepts a `Box<ValueInterface>`, thus should be abl
 
 The common solution in other generic languages is to allow a type parameter to be marked variant in only one direction (typically "in" or "out"), provided it is used only in a parameter or return position, respectively.  That allows that type parameter to be contravariant or covariant, as appropriate.
 
-**Hybrid Approach to Type Inference**
+### Hybrid Approach to Type Inference
 
 To address these challenges, we explored a hybrid approach, that lets us implement static type inference of generic parameters without having the full information available at compile time. This approach represents unknown types as symbols at compile time (e.g. the type of the expression `getValue()` is represented as `fcall<getValue>`). Symbolic types can be resolved at runtime when needed after functions and classes have been loaded, at a fraction of the cost of running the entire analysis at runtime. This operation can be cached (in inline caches) for the duration of the request, and maybe in caches similar to the inheritance cache.
 
 A proof of concept was implemented, and used to implement data-flow based, local, unidirectional type inference of generic type parameters, with the same behaviour as PHPStan/Psalm. The approach works, and could be used to experiment with other flavours of type inference.
 
-**Performance Considerations**
+### Performance Considerations
 
 Another concern with generics is their impact on performance. Preliminary benchmarks indicated:
 
@@ -153,7 +153,7 @@ However, later exploration has shown that compound types (such as unions) can le
 
 Super-linear complexity is also reached when merging compound types during the resolution of symbolic types.
 
-**Future Directions**
+### Future Directions
 
 Ongoing challenges for reified generics include:
 
@@ -329,7 +329,7 @@ Consider the following example:
 	$list = new List<string>();
 	$list->add(123); // NOT coerced to string
 
-In this scenario, the first call to add() will coerce the argument to string, but not the second one.
+In this scenario, the first call to `add()` will coerce the argument to string, but not the second one.
 
 In languages like Java, which has erased generics on top of a traditional type system, the compiler does type checking, so inconsistencies like the above do not exist. However, in PHP these are unavoidable.
 
@@ -341,7 +341,7 @@ One way to address the inconsistency issue of Erased Generics is to change all t
 
 	declare(types=erased);
 
-In this alternative, the engine would stop checking types at runtime. In the previous example, both calls to add() would have the same behaviour: the value is not coerced. It is then up to the user to check types with an analyser.
+In this alternative, the engine would stop checking types at runtime. In the previous example, both calls to `add()` would have the same behaviour: the value is not coerced. It is then up to the user to check types with an analyser.
 
 This is not uncommon in mainstream interpreted languages, as all of Javascript (via TypeScript), Python, and Ruby have fully erased type declarations.
 
