@@ -350,6 +350,13 @@ Letting users opt-in for fully erased typing and generics on a per-file basis wo
 - Short-term performance improvements due to the lack of type checking at runtime in opted-in code.
 - The potential for extending the type system with advanced types like non-empty-string, list, int<range>, class-string, conditional types, and more.
 
+However, there would also be significant downsides:
+
+- It's unclear what impact erased types would have on reflection, or libraries that depend on reflection.
+- It would make type enforcement dependent on a developer actively choosing to run a static analysis tool, and the majority of the ecosystem right now doesn't use one to begin with.
+- It effectively creates a third "type mode" that developers would have to account for, in addition to strict and weak typing today.  (Since code with user-defined pseudo types wouldn't be compatible with the type-enforced modes.)
+- It would not actually resolve the "some types are enforced but not others" question, as anyone who wanted to use generics but not fully-erased types would still be left with partial-enforcement.
+- PHP is currently unique among major scripting languages for having enforced types. That's a benefit and market advantage we would lose.
 # Generic Arrays
 
 This blog post discusses generic objects, but what about arrays?
