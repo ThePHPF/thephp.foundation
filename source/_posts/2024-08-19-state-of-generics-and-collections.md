@@ -413,7 +413,7 @@ To understand why `g($a)` is an error, remember the explanation about invariance
 
 Invariance would make arrays very difficult to adopt, as a library can not start type hinting generic arrays without breaking user code, and users can not pass generic arrays to libraries until they start using generic arrays type declarations.
 
-These pitfalls are why it may also be preferable to focus on object-based collections Either with the custom syntax above described as Collections, or with the more complete full generics, as are present in most modern languages.  However, the two approaches are mutually-compatible.
+These pitfalls are why it may also be preferable to focus on object-based collections. Either with the custom syntax above described as Collections, or with the more complete full generics, as are present in most modern languages.  However, the two approaches are mutually-compatible.
 
 # Conclusion
 
