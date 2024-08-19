@@ -345,6 +345,11 @@ In this alternative, the engine would stop checking types at runtime. In the pre
 
 This is not uncommon in mainstream interpreted languages, as all of Javascript (via TypeScript), Python, and Ruby have fully erased type declarations.
 
+Letting users opt-in for fully erased typing and generics on a per-file basis would be another option to look at, and would make working with PHPStan/Psalm generics less verbose. Some additional benefits of this solution include:
+
+- Short-term performance improvements due to the lack of type checking at runtime in opted-in code.
+- The potential for extending the type system with advanced types like non-empty-string, list, int<range>, class-string, conditional types, and more.
+
 # Generic Arrays
 
 This blog post discusses generic objects, but what about arrays?
