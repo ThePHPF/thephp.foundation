@@ -435,5 +435,3 @@ At this time, we are looking for specific feedback on *these questions only*, wh
 * If erased generics are included, would that necessitate an official linter to validate them, or continue to leave that to user-space tooling?
 * If reified generics turn out to be infeasible, would the dedicated collections syntax shown here be acceptable?
 * Would "erased generics now, and we can *probably* convert them to reified in the future" be an acceptable strategy, if it is determined to be feasible?
-
-For typed arrays, our initial thoughts are that it is probably not worth doing, due to the complexities of how arrays work, and the minimal functionality that it brings.
