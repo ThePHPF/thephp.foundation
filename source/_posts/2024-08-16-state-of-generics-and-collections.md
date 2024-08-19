@@ -417,8 +417,23 @@ These pitfalls are why it may also be preferable to focus on object-based collec
 
 # Conclusion
 
-We hope to have explained in this article what different options are available for the implementation of generic objects, collections, or related features into PHP. For both "full generics" and collections, more work needs to be undertaken—potentially to even understand whether the feature is feasible.
+We hope to have explained in this article what different options are available for the implementation of generic objects, collections, or related features into PHP. More work is required, and ongoing, to determine which options are most desireable, or even feasible.
 
-For generics, that would mean solving the type-inference questions, and for collections (whether via common generics or a custom syntax), which standard methods to add.
+The next steps for investigation are:
+
+* Further investigate type inference for reified generics.  If that turns out to be feasible with acceptable trade-offs, that is most likely the best option, and would imply building collections on top of them.
+* Determine if erased generics would have any additional drawbacks not noted here that would make them infeasible.
+* Determine if fully-erased types would have additional drawbacks not noted here that would make them infeasible.
+* Further develop an optimal feature set for collections, which would be applicable either in the dedicated syntax or as an application of generics (reified or erased).
+* Investigate the feasibility of using internal data structures in collections other than a hashmap (array) for better performance and simplicity.  (This would be a reason collections could not be done fully in user-space.)
+* Halt efforts on typed arrays, as our current thoughts are that it is probably not worth doing, due to the complexities of how arrays work, and the minimal functionality that it would bring.
+
+At this time, we are looking for specific feedback on *these questions only*, which will help guide our work going forward.  (Please, no feature requests not noted here.)
+
+* If reified generics turn out to be infeasible, would erased generics be acceptable, or should that continue to be left to user-space tooling?
+* What generic features are acceptable to leave out to make the implementation more feasible?  (Eg, don't allow generics over union types; unioned generics are slow and we don't care; don't support in/out variance markers; etc.)
+* If erased generics are included, would that necessitate an official linter to validate them, or continue to leave that to user-space tooling?
+* If reified generics turn out to be infeasible, would the dedicated collections syntax shown here be acceptable?
+* Would "erased generics now, and we can *probably* convert them to reified in the future" be an acceptable strategy, if it is determined to be feasible?
 
 For typed arrays, our initial thoughts are that it is probably not worth doing, due to the complexities of how arrays work, and the minimal functionality that it brings.
