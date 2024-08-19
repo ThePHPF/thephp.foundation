@@ -10,7 +10,7 @@ author:
     url: https://derickrethans.nl
   - name: Larry Garfield
     url: https://www.garfieldtech.com/
-published_at: 16 August 2024
+published_at: 19 August 2024
 ---
 
 Generics have been on the list of wanted features for a long time by numerous PHP developers. The topic is often brought up in "What's New in PHP?" talks as well during Q&A.
