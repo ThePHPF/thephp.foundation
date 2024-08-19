@@ -428,7 +428,7 @@ The next steps for investigation are:
 * Investigate the feasibility of using internal data structures in collections other than a hashmap (array) for better performance and simplicity.  (This would be a reason collections could not be done fully in user-space.)
 * Halt efforts on typed arrays, as our current thoughts are that it is probably not worth doing, due to the complexities of how arrays work, and the minimal functionality that it would bring.
 
-At this time, we are looking for specific feedback on *these questions only*, which will help guide our work going forward.  (Please, no feature requests not noted here.)
+Right now, we’re focused on gathering feedback specifically related to the questions below, to help guide our next steps:
 
 * If reified generics turn out to be infeasible, would erased generics be acceptable, or should that continue to be left to user-space tooling?
 * What generic features are acceptable to leave out to make the implementation more feasible?  (Eg, don't allow generics over union types; unioned generics are slow and we don't care; don't support in/out variance markers; etc.)
