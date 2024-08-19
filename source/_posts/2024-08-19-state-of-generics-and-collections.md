@@ -447,3 +447,7 @@ Right now, we’re focused on gathering feedback specifically related to the que
 * If erased generics are included, would that necessitate an official linter to validate them, or continue to leave that to user-space tooling?
 * If reified generics turn out to be infeasible, would the dedicated collections syntax shown here be acceptable?
 * Would "erased generics now, and we can *probably* convert them to reified in the future" be an acceptable strategy, if it is determined to be feasible?
+
+# Discussions
+- [PHP Internals mailing list](https://externals.io/message/125049)
+- [Reddit](https://www.reddit.com/r/PHP/comments/1ew7hik/state_of_generics_and_collections/)
