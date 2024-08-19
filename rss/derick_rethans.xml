@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2024-08-19T16:54:34+00:00</updated><entry><author><name>Arnaud Le Blanc</name><uri>https://github.com/arnaud-lb</uri></author><author><name>Derick Rethans</name><uri>https://derickrethans.nl</uri></author><author><name>Larry Garfield</name><uri>https://www.garfieldtech.com/</uri></author><title type="html"><![CDATA[State of Generics and Collections]]></title><content type="html"><![CDATA[<p>Generics have been on the list of wanted features for a long time by numerous PHP developers. The topic is often brought up in "What's New in PHP?" talks as well during Q&amp;A.</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2024-08-19T17:55:53+00:00</updated><entry><author><name>Arnaud Le Blanc</name><uri>https://github.com/arnaud-lb</uri></author><author><name>Derick Rethans</name><uri>https://derickrethans.nl</uri></author><author><name>Larry Garfield</name><uri>https://www.garfieldtech.com/</uri></author><title type="html"><![CDATA[State of Generics and Collections]]></title><content type="html"><![CDATA[<p>Generics have been on the list of wanted features for a long time by numerous PHP developers. The topic is often brought up in "What's New in PHP?" talks as well during Q&amp;A.</p>
 
 <p>In this article we will be exploring the different approaches, and what their current state is.</p>
 
@@ -476,5 +476,12 @@ g($a); // error
 <li>If erased generics are included, would that necessitate an official linter to validate them, or continue to leave that to user-space tooling?</li>
 <li>If reified generics turn out to be infeasible, would the dedicated collections syntax shown here be acceptable?</li>
 <li>Would "erased generics now, and we can <em>probably</em> convert them to reified in the future" be an acceptable strategy, if it is determined to be feasible?</li>
+</ul>
+
+<h1 id="discussions">Discussions</h1>
+
+<ul>
+<li><a href="https://externals.io/message/125049">PHP Internals mailing list</a></li>
+<li><a href="https://www.reddit.com/r/PHP/comments/1ew7hik/state_of_generics_and_collections/">Reddit</a></li>
 </ul>
 ]]></content><link href="https://thephp.foundation/blog/2024/08/19/state-of-generics-and-collections/"/><id>https://thephp.foundation/blog/2024/08/19/state-of-generics-and-collections/</id><updated>Mon, 19 Aug 2024 00:00:00 +0000</updated></entry></feed>
