@@ -481,7 +481,7 @@ f($dict);                 // Static analyser error
     }
 }
 
-function f(Dict&lt;Key,Value&gt; $dict) {}
+function f(Dict&lt;string,string&gt; $dict) {}
 
 $dict = new Dict([1 =&gt; 'foo']);
 $dict-&gt;set("foo", "bar"); // Static analyser error
