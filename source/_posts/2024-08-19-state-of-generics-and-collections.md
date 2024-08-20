@@ -51,7 +51,7 @@ As PHP syntax, this could look like:
 		}
 	}
 
-	new Entry<int, BlogPost>("123", new BlogPost());
+	new Entry<int, BlogPost>(123, new BlogPost());
 
 In the instantiated class, the generic type `KeyType` will be replaced with `int`, and each instance of `ValueType` with `BlogPost`, resulting in an object behaving like the following class definition:
 
