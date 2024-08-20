@@ -296,7 +296,7 @@ Here is what the same Dict class as above would look like:
 		}
 	}
 
-	function f(Dict<Key,Value> $dict) {}
+	function f(Dict<string,string> $dict) {}
 
 	$dict = new Dict([1 => 'foo']);
 	$dict->set("foo", "bar"); // Static analyser error
