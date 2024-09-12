@@ -16,7 +16,7 @@
     }
 
     h1, h2, h3, h4 {
-        @apply mb-6 mt-6 text-zinc-800;
+        @apply mb-6 mt-12 text-zinc-800;
     }
 
     h1 {
@@ -36,7 +36,7 @@
     }
 
     p, ol, ul, code {
-        @apply mb-8;
+        @apply mb-5;
     }
 
     p, li {
@@ -44,7 +44,7 @@
     }
 
     ul {
-        @apply list-disc list-outside mb-4 ml-5;
+        @apply list-disc list-outside mb-5 ml-5;
     }
 
     li > ul {
