@@ -86,7 +86,7 @@ class AtomFeedGenerator implements EventSubscriberInterface
             $data->get('title'),
             $baseUrl . $data->get('url'),
             $authors,
-            $data->get('blocks.content'),
+            $data->get('blocks.content') ?? '',
             new \DateTimeImmutable($data->get('published_at')),
         );
     }
