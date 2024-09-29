@@ -48,7 +48,7 @@ use:
     </div>
 </section>
 
-<section class="mx-auto max-w-4xl px-6 lg:px-0 border-t border-gray-200 py-12">
+<section class="mx-auto max-w-4xl px-6 lg:px-0 border-t border-gray-200 pt-12">
     <h2 class="mt-0">Latest news</h2>
     <div class="mx-auto grid max-w-4xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3 py-0">
         {% for post in page.pagination.items %}
@@ -72,8 +72,12 @@ use:
     </div>
 </section>
 
-<section class="border-t">
-    <div class="mx-auto max-w-4xl px-6 lg:px-0 py-12">
+<section class="mt-12 mx-auto max-w-4xl">
+    {% include "newsletter.html" %}
+</section>
+
+<section class="">
+    <div class="mx-auto max-w-4xl px-6 lg:px-0 pb-12">
         <div class="text-lg leading-8 text-white">
             <h2>Our Work</h2>
             <p class="text-lg">The foundation contracts <a href="/structure#core_developers">10 part-time and full-time developers</a> who work on maintenance and new features for PHP. </p>

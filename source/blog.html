@@ -57,6 +57,11 @@ use:
                 </div>
             </div>
         </article>
+
+        {% if loop.index == 2 %}
+            {% include "newsletter.html" %}
+        {% endif %}
+        
         {% endfor %}
     </div>
 
