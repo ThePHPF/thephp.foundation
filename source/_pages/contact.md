@@ -13,3 +13,5 @@ Follow us on social media:
 - [Twitter](https://twitter.com/thephpf)
 - [LinkedIn](https://www.linkedin.com/company/phpfoundation/)
 - [Mastodon](https://phpc.social/@thephpf)
+
+{% include "newsletter.html" %}
