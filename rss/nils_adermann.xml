@@ -1,97 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2024-09-17T11:27:30+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><author><name>Nils Adermann</name><uri>https://twitter.com/naderman</uri></author><title type="html"><![CDATA[The PHP Foundation application form for 2025 is now open]]></title><content type="html"><![CDATA[<p>The PHP Foundation is a non-profit organization, started in 2021 by Acquia, Automattic, Craft CMS, JetBrains, Laravel, PrestaShop, Private Packagist, Symfony, Tideways, and Zend by Perforce with a mission to support, advance, and develop the PHP language.</p>
-
-<p>The foundation pays <a href="https://thephp.foundation/structure/#core_developers">10 developers</a> to work on the language. See what the foundation achieved in 2023 in the <a href="https://thephp.foundation/blog/2024/02/26/transparency-and-impact-report-2023/">Impact and transparency report</a>.</p>
-
-<p>We’re opening a new round of applications for developer positions. We intend to decide on who we will hire by the end of October. If selected, you would start your work January 1st, 2025&#46;</p>
-
-<p>The application form will be <strong>open until October 10, 2024</strong>.</p>
-
-<p style="text-align: center;">
-<a href="https://forms.gle/Ji7Vvj1y2bMf9pUz7" class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">Apply</a>
-</p>
-
-<div class="alert">
-    <span class="inline-block font-bold">Note: This is not a job for PHP developers or aspiring PHP developers.</span><br> 
-The development of PHP is done in the С programming language, and requires proficiency in system programming.
-</div>
-
-<h2 id="note%3A-team-size-is-unlikely-to-grow">Note: Team size is unlikely to grow</h2>
-
-<p>While we won’t rule out the possibility of expanding our team, it’s likely we won’t pay more than the current number of 10 developers. Mindful of our budget limitations, we may rather consider restructuring or adjusting our team to make space for any outstanding applications that better help us meet our goals.</p>
-
-<h2 id="what-are-the-requirements%3F">What are the requirements?</h2>
-
-<p>As before, we require previous experience in PHP core development. Ideally you should have all, but at least some of the following:</p>
-
-<ul>
-<li>Pull-requests / commits to <a href="https://github.com/php/php-src/">php/php-src</a></li>
-<li>Experience in writing PHP extensions</li>
-<li>Participation in PHP mailing lists</li>
-<li>Contributions to other open-source projects</li>
-</ul>
-
-<p>This time, however, we have a clearer idea of the tasks that can be engaged in and so the pool of considered candidates will be wider.</p>
-
-<h2 id="what-are-you-going-to-work-on%3F">What are you going to work on?</h2>
-
-<p>Strategic areas we’d like you to work on:</p>
-
-<ul>
-<li>Security</li>
-<li>Performance</li>
-<li>Infrastructure</li>
-<li>Web APIs (json, PDO, streams, etc.)</li>
-</ul>
-
-<p>This is not an exhaustive list. We encourage you to <strong>provide as detailed a description of what you want to work on as possible</strong>.</p>
-
-<p>Our primary selection criterion is <strong>pragmatism</strong>. We place greater emphasis on solutions that improve the developer experience and benefit businesses that rely on PHP, rather than new syntax features.</p>
-
-<p>Out of scope:</p>
-
-<ul>
-<li>Pure documentation work</li>
-<li>PHP packages</li>
-<li>Websites</li>
-<li>Translations</li>
-</ul>
-
-<h2 id="what-does-working-for-the-php-foundation-look-like%3F">What does working for the PHP Foundation look like?</h2>
-
-<p>Working for the PHP Foundation offers a lot of freedom, but it also requires discipline. Your work will roughly consist of the following:</p>
-
-<ul>
-<li>40% Triaging issues and fixing bugs</li>
-<li>30% Working on strategic areas</li>
-<li>20% Code reviews</li>
-<li>&#62;10% Preparing RFCs and developing new language features</li>
-</ul>
-
-<p>As you can see, developing new RFCs is a fairly small part of the job. Most of the work is typical maintenance of an open source project.</p>
-
-<p>We are a fully distributed team. You can work from any place<strong>&#42;</strong> and at any time. All communication is asynchronous via Slack, GitHub, and Email. We meet for synchronous calls 1-2 times a month.</p>
-
-<p>Your work should be in line with the foundation’s mission statement, and we expect you to follow <a href="https://thephp.foundation/code-of-conduct/">the code of conduct</a>.</p>
-
-<blockquote>
-  <p><strong>PHP Foundation Mission Statement</strong></p>
-  
-  <p>The PHP Foundation is a collective of people and organizations relying on the PHP language. Its mission is to ensure the long-term prosperity of the PHP language. The PHP Foundation focuses on providing financial support and guidance to PHP language developers to support its goals of improving the language for its users, providing high-quality maintenance, and improving the PHP language project to retain current contributors and to integrate new contributors. The PHP Foundation aims to promote the public image of the PHP language in the interest of retaining existing and gaining new users and contributors.</p>
-</blockquote>
-
-<p><em><strong>&#42;</strong> We do not consider applications from persons residing in sanctioned territories.</em></p>
-
-<h2 id="how-to-apply%3F">How to apply?</h2>
-
-<p>Submit your application now and we will get back to you shortly. If you have any questions or suggestions, reach out to contact@thephp.foundation.</p>
-
-<p style="text-align: center;">
-<a href="https://forms.gle/Ji7Vvj1y2bMf9pUz7" target="_blank" class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">Open submission form</a>
-</p>
-
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeYNVQoK2r9c6EtoMnDaIpLzDc95egt1a1mcfiHTovqMDhFuw/viewform?embedded=true" width="100%" height="1693" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-]]></content><link href="https://thephp.foundation/blog/2024/09/17/application-form-2025/"/><id>https://thephp.foundation/blog/2024/09/17/application-form-2025/</id><updated>Tue, 17 Sep 2024 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><author><name>Nils Adermann</name><uri>https://twitter.com/naderman</uri></author><title type="html"><![CDATA[We Are Looking for Developers to Join the PHP Foundation]]></title><content type="html"><![CDATA[<p>Working on an open-source project which is used by millions of developers and which is trusted by hundreds of thousands of businesses around the world. Getting paid for this work and not having a burnout. Sounds like a dream, doesn't it? But this is exactly the opportunity that the PHP Foundation provides to those who would like to develop and maintain the PHP language.</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2024-09-30T08:22:35+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><author><name>Nils Adermann</name><uri>https://twitter.com/naderman</uri></author><title type="html"><![CDATA[We Are Looking for Developers to Join the PHP Foundation]]></title><content type="html"><![CDATA[<p>Working on an open-source project which is used by millions of developers and which is trusted by hundreds of thousands of businesses around the world. Getting paid for this work and not having a burnout. Sounds like a dream, doesn't it? But this is exactly the opportunity that the PHP Foundation provides to those who would like to develop and maintain the PHP language.</p>
 
 <p>The PHP Foundation is a non-profit organization, started in 2021 by Acquia, Automattic, Craft CMS, JetBrains, Laravel, PrestaShop, Private Packagist, Symfony, Tideways, and Zend by Perforce with a mission to support, advance, and develop the PHP language.</p>
 
@@ -188,4 +96,96 @@ are nicer.
 </p>
 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeYNVQoK2r9c6EtoMnDaIpLzDc95egt1a1mcfiHTovqMDhFuw/viewform?embedded=true" width="100%" height="1693" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-]]></content><link href="https://thephp.foundation/blog/2023/09/06/application-form-2023/"/><id>https://thephp.foundation/blog/2023/09/06/application-form-2023/</id><updated>Wed, 06 Sep 2023 00:00:00 +0000</updated></entry></feed>
+]]></content><link href="https://thephp.foundation/blog/2023/09/06/application-form-2023/"/><id>https://thephp.foundation/blog/2023/09/06/application-form-2023/</id><updated>Wed, 06 Sep 2023 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><author><name>Nils Adermann</name><uri>https://twitter.com/naderman</uri></author><title type="html"><![CDATA[The PHP Foundation application form for 2025 is now open]]></title><content type="html"><![CDATA[<p>The PHP Foundation is a non-profit organization, started in 2021 by Acquia, Automattic, Craft CMS, JetBrains, Laravel, PrestaShop, Private Packagist, Symfony, Tideways, and Zend by Perforce with a mission to support, advance, and develop the PHP language.</p>
+
+<p>The foundation pays <a href="https://thephp.foundation/structure/#core_developers">10 developers</a> to work on the language. See what the foundation achieved in 2023 in the <a href="https://thephp.foundation/blog/2024/02/26/transparency-and-impact-report-2023/">Impact and transparency report</a>.</p>
+
+<p>We’re opening a new round of applications for developer positions. We intend to decide on who we will hire by the end of October. If selected, you would start your work January 1st, 2025&#46;</p>
+
+<p>The application form will be <strong>open until October 10, 2024</strong>.</p>
+
+<p style="text-align: center;">
+<a href="https://forms.gle/Ji7Vvj1y2bMf9pUz7" class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">Apply</a>
+</p>
+
+<div class="alert">
+    <span class="inline-block font-bold">Note: This is not a job for PHP developers or aspiring PHP developers.</span><br> 
+The development of PHP is done in the С programming language, and requires proficiency in system programming.
+</div>
+
+<h2 id="note%3A-team-size-is-unlikely-to-grow">Note: Team size is unlikely to grow</h2>
+
+<p>While we won’t rule out the possibility of expanding our team, it’s likely we won’t pay more than the current number of 10 developers. Mindful of our budget limitations, we may rather consider restructuring or adjusting our team to make space for any outstanding applications that better help us meet our goals.</p>
+
+<h2 id="what-are-the-requirements%3F">What are the requirements?</h2>
+
+<p>As before, we require previous experience in PHP core development. Ideally you should have all, but at least some of the following:</p>
+
+<ul>
+<li>Pull-requests / commits to <a href="https://github.com/php/php-src/">php/php-src</a></li>
+<li>Experience in writing PHP extensions</li>
+<li>Participation in PHP mailing lists</li>
+<li>Contributions to other open-source projects</li>
+</ul>
+
+<p>This time, however, we have a clearer idea of the tasks that can be engaged in and so the pool of considered candidates will be wider.</p>
+
+<h2 id="what-are-you-going-to-work-on%3F">What are you going to work on?</h2>
+
+<p>Strategic areas we’d like you to work on:</p>
+
+<ul>
+<li>Security</li>
+<li>Performance</li>
+<li>Infrastructure</li>
+<li>Web APIs (json, PDO, streams, etc.)</li>
+</ul>
+
+<p>This is not an exhaustive list. We encourage you to <strong>provide as detailed a description of what you want to work on as possible</strong>.</p>
+
+<p>Our primary selection criterion is <strong>pragmatism</strong>. We place greater emphasis on solutions that improve the developer experience and benefit businesses that rely on PHP, rather than new syntax features.</p>
+
+<p>Out of scope:</p>
+
+<ul>
+<li>Pure documentation work</li>
+<li>PHP packages</li>
+<li>Websites</li>
+<li>Translations</li>
+</ul>
+
+<h2 id="what-does-working-for-the-php-foundation-look-like%3F">What does working for the PHP Foundation look like?</h2>
+
+<p>Working for the PHP Foundation offers a lot of freedom, but it also requires discipline. Your work will roughly consist of the following:</p>
+
+<ul>
+<li>40% Triaging issues and fixing bugs</li>
+<li>30% Working on strategic areas</li>
+<li>20% Code reviews</li>
+<li>&#62;10% Preparing RFCs and developing new language features</li>
+</ul>
+
+<p>As you can see, developing new RFCs is a fairly small part of the job. Most of the work is typical maintenance of an open source project.</p>
+
+<p>We are a fully distributed team. You can work from any place<strong>&#42;</strong> and at any time. All communication is asynchronous via Slack, GitHub, and Email. We meet for synchronous calls 1-2 times a month.</p>
+
+<p>Your work should be in line with the foundation’s mission statement, and we expect you to follow <a href="https://thephp.foundation/code-of-conduct/">the code of conduct</a>.</p>
+
+<blockquote>
+  <p><strong>PHP Foundation Mission Statement</strong></p>
+  
+  <p>The PHP Foundation is a collective of people and organizations relying on the PHP language. Its mission is to ensure the long-term prosperity of the PHP language. The PHP Foundation focuses on providing financial support and guidance to PHP language developers to support its goals of improving the language for its users, providing high-quality maintenance, and improving the PHP language project to retain current contributors and to integrate new contributors. The PHP Foundation aims to promote the public image of the PHP language in the interest of retaining existing and gaining new users and contributors.</p>
+</blockquote>
+
+<p><em><strong>&#42;</strong> We do not consider applications from persons residing in sanctioned territories.</em></p>
+
+<h2 id="how-to-apply%3F">How to apply?</h2>
+
+<p>Submit your application now and we will get back to you shortly. If you have any questions or suggestions, reach out to contact@thephp.foundation.</p>
+
+<p style="text-align: center;">
+<a href="https://forms.gle/Ji7Vvj1y2bMf9pUz7" target="_blank" class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">Open submission form</a>
+</p>
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeYNVQoK2r9c6EtoMnDaIpLzDc95egt1a1mcfiHTovqMDhFuw/viewform?embedded=true" width="100%" height="1693" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+]]></content><link href="https://thephp.foundation/blog/2024/09/17/application-form-2025/"/><id>https://thephp.foundation/blog/2024/09/17/application-form-2025/</id><updated>Tue, 17 Sep 2024 00:00:00 +0000</updated></entry></feed>
