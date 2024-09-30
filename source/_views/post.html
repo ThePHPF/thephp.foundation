@@ -3,7 +3,7 @@
 {% block content_wrapper %}
 <div class="bg-white px-6 lg:px-8 my-16" itemscope itemtype="https://schema.org/Article">
     <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
-        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" itemprop="name">{{ page.title }}</h1>
+        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" itemprop="name">{{ page.title | raw}}</h1>
 
         <div class="flex items-center gap-x-4 text-xs mt-2">
         {% if page.author.name is defined%}
