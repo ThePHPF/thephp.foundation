@@ -1,6 +1,6 @@
 
 ---
-title: 'The PHP Foundation Calls for Sponsors: Help&nbsp;Shape the Future of PHP 🙏'
+title: 'The PHP Foundation Calls for Sponsors: Help&nbsp;Shape the Future of PHP'
 layout: post
 tags:
   - update
