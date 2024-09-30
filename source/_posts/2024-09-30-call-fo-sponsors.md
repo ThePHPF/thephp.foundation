@@ -76,7 +76,7 @@ Don't miss out on any PHP Foundation news. Follow us on:
 * Mastodon: [@thephpf@phpc.social](https://phpc.social/@thephpf)
 
 
-And for those who prefer their news in their inbox, subscribe to our email newsletter. We send \~1-2 emails a month – just the good stuff about PHP and the Foundation.
+And for those who prefer their news in their inbox, subscribe to our email newsletter. We send ~1–2 emails a month – just the good stuff about PHP and the Foundation.
 
 {% include "newsletter.html" %}
 
