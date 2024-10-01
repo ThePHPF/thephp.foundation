@@ -13,6 +13,8 @@ published_at: 30 September 2024
 
 Hey there, PHP enthusiasts and tech leaders\! It's that time of the year again when everyone's crunching numbers and deciding on budgets. We've got an opportunity for you to make a real impact on the PHP ecosystem. Let's dive in.
 
+**Don't need convincing? [Sponsor us now](https://thephp.foundation/sponsor/)!**
+
 ## Join us\! Fund the Future of Web Development
 
 We just opened applications for PHP core language contributors: [The PHP Foundation application form for 2025 is now open](https://thephp.foundation/blog/2024/09/17/application-form-2025/).
