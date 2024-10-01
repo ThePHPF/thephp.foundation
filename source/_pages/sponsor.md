@@ -9,8 +9,6 @@ redirect:
 
 _Shape the future of the language ecosystem and help make PHP sustainable._
 
-## Sponsor PHP Development via The PHP Foundation
-
 There are many ways you can support the development of the PHP language through&nbsp;The&nbsp;PHP&nbsp;Foundation:
 
 * [Credit Card](https://opencollective.com/phpfoundation/contribute)
