@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2024-10-01T10:45:06+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, July 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2024-10-01T12:41:10+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, July 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
 
 <p>Last month, the PHP foundation members continued the work on PHP 8.2 release and more. We are prepared to give a few talks this autumn. Also, besides core developers, we have a growing community of volunteers who help the PHP foundation. Read on to learn more.</p>
 
@@ -98,6 +98,8 @@
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 ]]></content><link href="https://thephp.foundation/blog/2022/08/04/php-foundation-update-july-2022/"/><id>https://thephp.foundation/blog/2022/08/04/php-foundation-update-july-2022/</id><updated>Thu, 04 Aug 2022 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[The PHP Foundation Calls for Sponsors: Help&nbsp;Shape the Future of PHP]]></title><content type="html"><![CDATA[<p>Hey there, PHP enthusiasts and tech leaders&#33; It's that time of the year again when everyone's crunching numbers and deciding on budgets. We've got an opportunity for you to make a real impact on the PHP ecosystem. Let's dive in.</p>
+
+<p><strong>Don't need convincing? <a href="https://thephp.foundation/sponsor/">Sponsor us now</a>!</strong></p>
 
 <h2 id="join-us%5C%21-fund-the-future-of-web-development">Join us&#33; Fund the Future of Web Development</h2>
 
