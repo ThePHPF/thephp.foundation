@@ -61,8 +61,7 @@ Further, PHP 8.4 unbundles IMAP, Pspell, OCI, and pdo_oci extensions. It means i
 
 ### Property Hooks and Asymmetric Visibility
 
-One of the most important features in PHP 8.4 is that you can now use [property hooks](https://wiki.php.net/rfc/property-hooks) and declare property [visibility separately](https://wiki.php.net/rfc/asymmetric-visibility) for get and set operations.
-
+One of the most important features in PHP 8.4 is that you can now use [property hooks](https://wiki.php.net/rfc/property-hooks) and declare property [visibility separately](https://wiki.php.net/rfc/asymmetric-visibility) for get and set operations. Both of these features are thanks to the collaborative efforts of Ilija Tovilo and Larry Garfield. Ilija, funded by the foundation 💜, focused on the implementation. Meanwhile, Larry, a frequent contributor, worked on the specification and authored the RFC text.
 Property hooks allow declaring virtual properties with "hooks" that get executed when the properties are accessed or set, and the hooks get called with the object in context, to run their own logic.
 
 ```php
