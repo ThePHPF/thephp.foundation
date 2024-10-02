@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Tag Archive &mdash; The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language</title>
+    <title>PHP Core Roundup #19 &mdash; The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language</title>
     <meta name="description" content="The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language">
     <meta charset="utf-8">
     <meta name="theme-color" content="#ffffff">
@@ -19,18 +19,18 @@
     <meta name="yandex-verification" content="6990192232fdf071" />
     <meta name="msvalidate.01" content="5D1EB82347E6BF271A01DCDBF7E59BED" />
 
-    <meta property="og:url" content="https://thephp.foundation/blog/tag/roundup/page/2">
+    <meta property="og:url" content="https://thephp.foundation/blog/2024/10/02/php-core-roundup-19/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Tag Archive">
+    <meta property="og:title" content="PHP Core Roundup #19">
     <meta property="og:description" content="The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language">
-    <meta property="og:image" content="https://thephp.foundation/assets/icons/share.png">
+    <meta property="og:image" content="https://thephp.foundation/assets/share/2024-10-02-php-core-roundup-19.png">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="https://thephp.foundation">
-    <meta property="twitter:url" content="https://thephp.foundation/blog/tag/roundup/page/2">
-    <meta name="twitter:title" content="Tag Archive">
+    <meta property="twitter:url" content="https://thephp.foundation/blog/2024/10/02/php-core-roundup-19/">
+    <meta name="twitter:title" content="PHP Core Roundup #19">
     <meta name="twitter:description" content="The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language">
-    <meta name="twitter:image" content="https://thephp.foundation/assets/icons/share.png">
+    <meta name="twitter:image" content="https://thephp.foundation/assets/share/2024-10-02-php-core-roundup-19.png">
 
     <link rel="apple-touch-startup-image" href="https://thephp.foundation/assets/icons/php_foundation.svg">
     <meta name="mobile-web-app-capable" content="yes">
@@ -151,277 +151,237 @@
     </div>
 </header>
 
-<section class="mx-auto max-w-3xl my-16 w-full bg-white px-4 md:px-0">
-    <header class="mb-8">
-        <h1 class="text-4xl font-bold">Tag: PHP Roundup</h1>
-    </header>
+<div class="bg-white px-6 lg:px-8 my-16" itemscope itemtype="https://schema.org/Article">
+    <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
+        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" itemprop="name">PHP Core Roundup #19</h1>
 
-        <div class="my-16">
-        <div class="px-4 pt-3 border-b border-t -mx-4 border-gray-200">
-    <div class="bg-white py-8">
-        <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
-            <div class="max-w-xl text-4xl font-medium tracking-tight text-gray-900 lg:col-span-6">
-                Subscribe to The PHP Foundation newsletter
+        <div class="flex items-center gap-x-4 text-xs mt-2">
+                <div>
+            Published on <span itemprop="datePublished">Oct 02, 2024</span>
+            by
+                        <span itemprop="publisher" itemscope itemtype="https://schema.org/Person"><a href="https://aye.sh" target="_blank" rel="noopener noreferrer" itemprop="url"><span itemprop="name">Ayesh Karunaratne</span></a></span>,                         <span itemprop="publisher" itemscope itemtype="https://schema.org/Person"><a href="https://sergeypanteleev.com" target="_blank" rel="noopener noreferrer" itemprop="url"><span itemprop="name">Sergey Panteleev</span></a></span>                    </div>
+                    
+        
+                <div class="space-x-1">
+                        <a href="https://thephp.foundation/blog/tag/roundup"
+               class="rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
+                PHP Roundup
+            </a>
+                    </div>
+                </div>
+
+        <div class="mt-6 text-xl leading-8" itemprop="text">
+            <p>Welcome back to the PHP Core Roundup series, we cover what's new and changing in PHP and provide an update on the recent proposals to change and discussions around them.</p>
+
+<p>Our last update was almost a year ago, and that was because we felt the PHP Core Roundup posts were getting stale and our previous format was repetitive and had a lot of changes that made the posts excessively long.</p>
+
+<h2 id="the-new-php-core-roundup-series">The New PHP Core Roundup Series</h2>
+
+<p>Today, we are trying a new format that we got rid of text that looked like a mere changelog, to a post highlighting the general momentum of PHP development. This also means we might not get to celebrate and mention all the contributions from the PHP Foundation members and the other contributors as we did in previous posts.</p>
+
+<p>Maintaining a mature, reliable, and widely used programming language that continues to get new features and improvements for almost 30 years involves a lot of work! Maintaining PHP documentation, php.net infrastructure, translations, triaging issues and security reports, bug fixes, mailing lists, reviewing RFCs, and packaging PHP only to name a few, we have PHP contributors and PHP Foundation members putting a commendable amount of effort into improving PHP!</p>
+
+<p>While these PHP Core Roundup series may not write about these contributions often because we want to keep these posts exciting and resourceful, we want to spread love to all the contributors to the PHP ecosystem 💜.</p>
+
+<h2 id="php-release-cycle-updates">PHP Release Cycle Updates</h2>
+
+<p>In April, we voted and accepted an <a href="https://wiki.php.net/rfc/release_cycle_update">RFC</a> to update our Release Cycle policy.</p>
+
+<p>The PHP Core team provided two years of active support, followed by only one year of security fixes. We now have a new release cycle that, from PHP 8.1 (released in 2021 November), all PHP versions now get <strong>two years of security fixes instead of one year</strong>. The two-year active support period remains the same.</p>
+
+<p>Further, we have changed the active-support and End-Of-Life dates to align to December 31st of the calendar year. This makes the support and EOL dates more predictable.</p>
+
+<p>Here are the updated active-support and EOL dates for the current line-up of PHP versions. Dates changed from the previously set dates are in bold.</p>
+
+<table>
+<thead>
+<tr>
+  <th align="center">PHP version</th>
+  <th align="center">Release date</th>
+  <th align="center">Active maintenance until</th>
+  <th align="center">EOL date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="center">PHP 8.1</td>
+  <td align="center">2021-11-25</td>
+  <td align="center">2023-11-25</td>
+  <td align="center"><strong>2025-12-31</strong></td>
+</tr>
+<tr>
+  <td align="center">PHP 8.2</td>
+  <td align="center">2022-12-08</td>
+  <td align="center"><strong>2024-12-31</strong></td>
+  <td align="center"><strong>2026-12-31</strong></td>
+</tr>
+<tr>
+  <td align="center">PHP 8.3</td>
+  <td align="center">2023-11-23</td>
+  <td align="center"><strong>2025-12-31</strong></td>
+  <td align="center"><strong>2027-12-31</strong></td>
+</tr>
+<tr>
+  <td align="center">PHP 8.4</td>
+  <td align="center">2024-11-21</td>
+  <td align="center">2026-12-31</td>
+  <td align="center">2028-12-31</td>
+</tr>
+<tr>
+  <td align="center">PHP 8.5</td>
+  <td align="center">2025-11</td>
+  <td align="center">2027-12-31</td>
+  <td align="center">2029-12-31</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="php-core-developments">PHP Core Developments</h2>
+
+<p>A few days ago, PHP 8.4 reached its feature-freeze. PHP 8.4 is slated to be released on November 21st of this year.</p>
+
+<p>The first release candidate for PHP 8.4 is already out — they are not production-ready, but they are available to try out and test PHP application on, either by compiling from <a href="https://github.com/php/php-src/tags">source</a>, using <a href="https://windows.php.net/qa/">Windows binaries</a>, or in <a href="https://hub.docker.com/_/php/tags?name=8.4-">Docker containers</a>.</p>
+
+<h3 id="highlights-for-php-8.4">Highlights for PHP 8.4</h3>
+
+<p>PHP 8.4 is an important release that brings major new features, several updates to the build dependencies and underlying libraries, and a fair bit of deprecations to iron out some of the legacy and undesirable behaviors and features in legacy PHP versions.</p>
+
+<p>Using various approaches, each PHP version brings a lot of performance improvements and security tightening too. In PHP 8.4, we continue this in this direction with several minor internal improvements as well as noticeable improvements in JIT, and PHP extensions such as mbstring, BCMath, XML extensions, PCRE, and more.</p>
+
+<p>Further, PHP 8.4 unbundles IMAP, Pspell, OCI, and pdo_oci extensions. It means if you wanted to continue using them, you'll have to install via PECL.</p>
+
+<h3 id="property-hooks-and-asymmetric-visibility">Property Hooks and Asymmetric Visibility</h3>
+
+<p>One of the most important features in PHP 8.4 is that you can now use <a href="https://wiki.php.net/rfc/property-hooks">property hooks</a> and declare property <a href="https://wiki.php.net/rfc/asymmetric-visibility">visibility separately</a> for get and set operations. Both of these features are thanks to the collaborative efforts of Ilija Tovilo and Larry Garfield. Ilija, funded by the foundation 💜, focused on the implementation. Meanwhile, Larry, a frequent contributor, worked on the specification and authored the RFC text.
+Property hooks allow declaring virtual properties with "hooks" that get executed when the properties are accessed or set, and the hooks get called with the object in context, to run their own logic.</p>
+
+<pre><code class="php">class User {
+    public string $emailAddress {
+        set {
+            if (!filter_var($value, FILTER_VALIDATE_EMAIL)) {
+                throw new ValueError('emailAddress property must be a valid email address');
+            }
+            $this-&gt;emailAddress = $value;
+        }
+    }
+}
+
+$user = new User();
+$user-&gt;emailAddress = 'test@example.com'; // Allowed
+$user-&gt;emailAddress = 'not an email address'; // Throws ValueError
+</code></pre>
+
+<p>Property hooks open up a vast possibilities to leading to less boilerplate code, improve readability, and make PHP classes and their APIs more intuitive.</p>
+
+<p>The <a href="https://wiki.php.net/rfc/property-hooks">Property Hooks RFC</a> is perhaps our longest RFC ever, detailing use cases and syntax such as short functions, using them in constructor-promoted class properties, how a subclass can override or call parent property hooks, how they work with other mechanics such as readonly, magic methods, references, arrays, etc.</p>
+
+<p>We will be covering more about details and mechaniscs of Property Hooks soon in future posts.</p>
+
+<h3 id="asymmetric-visibility">Asymmetric Visibility</h3>
+
+<p>Another useful feature added in PHP 8.4 is the ability to set different visibility scopes for get and set operations. This comes in situations where exposing a class property to be <em>read</em> is desired, but not to <em>write</em>.</p>
+
+<pre><code class="php">class User {
+    public private(set) int $userId;
+
+    public function __construct() {
+        $this-&gt;userId = 42; // e.g. set from a database value
+    }
+}
+
+$user = new User();
+echo $user-&gt;userId; // 42
+
+$user-&gt;userId = 16; // Not allowed
+// Error: Cannot modify private(set) property User::$userId from global scope
+</code></pre>
+
+<h3 id="improved-html5-parser">Improved HTML5 Parser</h3>
+
+<p>The DOM Extension in PHP 8.4 received a massive feature-update as well. Previously, the DOM extension only offered libxml2 to parse HTML, which has not kept up with HTML5. The DOM extension now offers new <code>Dom\HTMLDocument</code> and <code>Dom\XMLDocument</code> classes with the former supporting HTML5-compliant parsing support.</p>
+
+<p>There are lots of new improvements in this space, including not only the <a href="https://wiki.php.net/rfc/domdocument_html5_parser">HTML5 parsing support</a>, but also <a href="https://wiki.php.net/rfc/opt_in_dom_spec_compliance">DOM spec compliance</a> and several small <a href="https://wiki.php.net/rfc/dom_additions_84">additions</a> including adding support for CSS selectors.</p>
+
+<h3 id="bcmath-extension-getting-%60number%60-class-and-new-functions">BCMath extension getting <code>Number</code> class and new functions</h3>
+
+<p>The BCMath extension in PHP 8.4 now has classes with support for operator overloading support!</p>
+
+<pre><code class="php">use BCMath\Number;  
+
+$num1 = new Number('22');  
+$num2 = new Number('7'); 
+$num3 = new Number('100');
+
+$result = ($num1 / $num2) + $num1 - $num2;
+echo $result; // 18.1428571428
+</code></pre>
+
+<p>Now, instead of using BCMath functions such as <code>bcadd</code>, <code>bcsub</code>, <code>bcdiv</code>, etc, you can now simply use standard operators (<code>+</code>, <code>-</code>, <code>/</code>, etc.).</p>
+
+<p>The new <code>BCMath\Number</code> class supports operator overloading, which cannot be done by userland PHP classes yet, but the BCMath extension implements it, so you can use them as if they were regular numbers.</p>
+
+<p>The <code>BCMath\Number</code> class implements <code>Stringable</code> interface, so the objects can be used where a string is expected (like how the example above uses it with an <code>echo</code> call). Further, the class implements all <code>bc*</code> functions. For example, it's also possible to call <code>$num-&gt;add($num2)</code> or <code>$num-&gt;add('5')</code> and it returns a new <code>BCMath\Number</code> object without modifying the original object, which makes them immutable.</p>
+
+<p>This comes from Saki Takamachi 💜, one of our new PHP Foundation members. She also made several new improvements including adding new <code>bcfloor</code>, <code>bcceil</code>, <code>bcround</code>, and <code>bcdivmod</code> functions.</p>
+
+<h3 id="...-and-more%21">... and more!</h3>
+
+<p>PHP 8.4 is shaping up to be an impactful version, with features such as property hooks and asymmetric visibility we mentioned above, and a healthy amount of deprecations including deprecating <a href="https://php.watch/versions/8.4/implicitly-marking-parameter-type-nullable-deprecated">implicitly nullable parameter declarations</a>.</p>
+
+<p>Further, PHP 8.4 will be released after some popular Linux distro versions in server space reach their EOL date (such as Ubuntu 18.04 and RHEL/CentOS 7), so we took this opportunity to bump the minimum required dependency versions for Curl (>= 7.61.0), OpenSSL (>= 1.1.1). The PHP 8.4 mbstring extension is also updated to with the latest Unicode Character Database version 16 data.</p>
+
+<p>See the lengthy <a href="https://github.com/php/php-src/blob/PHP-8.4/UPGRADING"><code>UPGRADING</code></a> file for a complete list of changes, but we will also be covering the important ones in the upcoming PHP Core Roundup posts.</p>
+
+<h2 id="what%27s-in-the-making">What's in the making</h2>
+
+<p>On September 30th, PHP 8.4 reached its feature-freeze, which means PHP 8.4 syntax and features are now fixed; PHP 8.4 will get ironed out and the first GA release is scheduled for November 21st.</p>
+
+<h3 id="pie-%3A-php-installer-for-extensions">PIE : PHP Installer for Extensions</h3>
+
+<p>PIE is a new initiative to be an eventual replacement for PECL. It's still under development, but it will be able to download, build, and install PIE-compatible extensions.</p>
+
+<h3 id="real-time-benchmarking">Real-time benchmarking</h3>
+
+<p>Máté Kocsis 💜 <a href="https://externals.io/message/116323">was</a> working on a real-time fully-automated and reproducible <a href="https://github.com/kocsismate/php-version-benchmarks?tab=readme-ov-file#introduction">benchmark</a> for PHP. It is now active (with daily results available <a href="https://github.com/php/real-time-benchmark-data">here</a>).</p>
+
+<p>Using these test suits, we now have reliable data on the performance improvements or degradation in each PHP version.</p>
+
+<hr />
+
+<h2 id="support-php-foundation">Support PHP Foundation</h2>
+
+<p>At The PHP Foundation, we support, promote, and advance the PHP language. We financially support ten PHP core developers to contribute to the PHP project. You can help support PHP Foundation on <a href="https://opencollective.com/phpfoundation">OpenCollective</a> or via <a href="https://github.com/sponsors/ThePHPF">GitHub Sponsors</a>.</p>
+
+<p>A big thanks to all our sponsors — PHP Foundation is all of us!</p>
+
+<p>Follow us on Twitter/X <a href="https://twitter.com/thephpf">@ThePHPF</a> or  <a href="https://phpc.social/@thephpf">Mastodon</a> to get the latest updates from the Foundation.</p>
+
+<p>💜️ 🐘</p>
+
+<blockquote>
+  <p>PHP Roundup is prepared by Ayesh Karunaratne from <strong><a href="https://php.watch">PHP.Watch</a></strong>, a source for PHP News, Articles, Upcoming Changes, and more.</p>
+</blockquote>
+
+        </div>
+
+        <div class="border-t pt-5 my-5">
+                        <nav class="flex flex-row justify-between article -mx-2 mb-5">
+                                <a href="https://thephp.foundation/blog/2024/09/30/call-fo-sponsors/"
+                   class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[#7f52ff] transition-all no-underline">
+                    <div class="mb-1 text-sm text-gray-600 font-medium">Previous</div>
+                    <div class="font-bold text-blue-500">The PHP Foundation Calls for Sponsors: Help&amp;nbsp;Shape the Future of PHP</div>
+                </a>
+                
+                            </nav>
+            
+            <div>
+                <a href="https://github.com/ThePHPF/thephp.foundation/edit/main/source/_posts/2024-10-02-php-core-roundup-19.md"
+                   class="nav-org" rel="noopener noreferrer" target="_blank">Edit this page on GitHub</a>
             </div>
-            <form method="POST"
-                  action="https://php-foundation.mailcoach.app/subscribe/9be4e2bd-f9d8-475c-b00e-2dcc4cf90056"
-                  class="w-full max-w-md lg:col-span-6">
-                <div class="flex gap-x-4">
-                    <label for="email-address" class="sr-only">Email address</label>
-                    <input id="email-address" name="email" type="email" autocomplete="email" required
-                           class="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                           placeholder="Enter your email">
-                    <button type="submit"
-                            class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">
-                        Subscribe
-                    </button>
-                </div>
-                <div class="mt-4 text-sm leading-6 text-gray-900">
-                    No spam. We only send 1–2 emails per month.
-                </div>
-            </form>
         </div>
     </div>
 </div>
-    </div>
-    
-    <div class="space-y-16">
-                <article class="flex max-w-xl flex-col items-start">
-            <div class="flex items-center gap-x-4 text-xs">
-                <div class="text-gray-500">Jan 30, 2023</div>
-                                <div>
-                                        <a href="https://thephp.foundation/blog/tag/roundup"
-                       class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
-                        PHP Roundup
-                    </a>
-                                    </div>
-                            </div>
-            <div class="group relative">
-                <h3 class="mt-3 mb-2 text-lg font-semibold leading-6">
-                    <a href="https://thephp.foundation/blog/2023/01/30/php-core-roundup-9/" class="no-underline border-b">
-                        PHP Core Roundup #9
-                    </a>
-                </h3>
-                                <div class="mt-2 text-xs">
-                    Published on <span>Jan 30, 2023</span>
-                    by by <a href="https://aye.sh" target="_blank" rel="noopener noreferrer">Ayesh Karunaratne</a>
-                </div>
-                                <div class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
-                    The first for the year 2023, and the ninth in the series, this episode of PHP Core Roundup is full of exciting new developments in PHP and about PHP 8...
-                </div>
-            </div>
-        </article>
-                <article class="flex max-w-xl flex-col items-start">
-            <div class="flex items-center gap-x-4 text-xs">
-                <div class="text-gray-500">Dec 02, 2022</div>
-                                <div>
-                                        <a href="https://thephp.foundation/blog/tag/roundup"
-                       class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
-                        PHP Roundup
-                    </a>
-                                    </div>
-                            </div>
-            <div class="group relative">
-                <h3 class="mt-3 mb-2 text-lg font-semibold leading-6">
-                    <a href="https://thephp.foundation/blog/2022/11/30/php-core-roundup-8/" class="no-underline border-b">
-                        PHP Core Roundup #8
-                    </a>
-                </h3>
-                                <div class="mt-2 text-xs">
-                    Published on <span>Dec 02, 2022</span>
-                    by by <a href="https://aye.sh" target="_blank" rel="noopener noreferrer">Ayesh Karunaratne</a>
-                </div>
-                                <div class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
-                    Welcome to the eighth issue of PHP Core Roundup series! This issue was supposed to bring the great news of PHP 8.2 release, but the PHP 8.2 release da...
-                </div>
-            </div>
-        </article>
-                <article class="flex max-w-xl flex-col items-start">
-            <div class="flex items-center gap-x-4 text-xs">
-                <div class="text-gray-500">Nov 05, 2022</div>
-                                <div>
-                                        <a href="https://thephp.foundation/blog/tag/roundup"
-                       class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
-                        PHP Roundup
-                    </a>
-                                    </div>
-                            </div>
-            <div class="group relative">
-                <h3 class="mt-3 mb-2 text-lg font-semibold leading-6">
-                    <a href="https://thephp.foundation/blog/2022/11/05/php-core-roundup-7/" class="no-underline border-b">
-                        PHP Core Roundup #7
-                    </a>
-                </h3>
-                                <div class="mt-2 text-xs">
-                    Published on <span>Nov 05, 2022</span>
-                    by by <a href="https://aye.sh" target="_blank" rel="noopener noreferrer">Ayesh Karunaratne</a>
-                </div>
-                                <div class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
-                    Welcome to the seventh in the PHP Core Roundup series, where we summarize the latest improvements, bug fixes, proposals, and other developments in PHP...
-                </div>
-            </div>
-        </article>
-                <article class="flex max-w-xl flex-col items-start">
-            <div class="flex items-center gap-x-4 text-xs">
-                <div class="text-gray-500">Sep 30, 2022</div>
-                                <div>
-                                        <a href="https://thephp.foundation/blog/tag/roundup"
-                       class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
-                        PHP Roundup
-                    </a>
-                                    </div>
-                            </div>
-            <div class="group relative">
-                <h3 class="mt-3 mb-2 text-lg font-semibold leading-6">
-                    <a href="https://thephp.foundation/blog/2022/09/30/php-core-roundup-6/" class="no-underline border-b">
-                        PHP Core Roundup #6
-                    </a>
-                </h3>
-                                <div class="mt-2 text-xs">
-                    Published on <span>Sep 30, 2022</span>
-                    by by <a href="https://aye.sh" target="_blank" rel="noopener noreferrer">Ayesh Karunaratne</a>
-                </div>
-                                <div class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
-                    Welcome back to PHP Core Roundup, the sixth in the series. PHP Core Roundup summarizes the latest improvements, bug fixes, discussions, and proposals ...
-                </div>
-            </div>
-        </article>
-                <article class="flex max-w-xl flex-col items-start">
-            <div class="flex items-center gap-x-4 text-xs">
-                <div class="text-gray-500">Aug 31, 2022</div>
-                                <div>
-                                        <a href="https://thephp.foundation/blog/tag/roundup"
-                       class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
-                        PHP Roundup
-                    </a>
-                                    </div>
-                            </div>
-            <div class="group relative">
-                <h3 class="mt-3 mb-2 text-lg font-semibold leading-6">
-                    <a href="https://thephp.foundation/blog/2022/08/30/php-core-roundup-5/" class="no-underline border-b">
-                        PHP Core Roundup #5
-                    </a>
-                </h3>
-                                <div class="mt-2 text-xs">
-                    Published on <span>Aug 31, 2022</span>
-                    by by <a href="https://aye.sh" target="_blank" rel="noopener noreferrer">Ayesh Karunaratne</a>
-                </div>
-                                <div class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
-                    Welcome to the fifth edition of PHP Core Roundup, a series of posts that round up updates and news on the latest improvements, discussions, bug fixes,...
-                </div>
-            </div>
-        </article>
-                <article class="flex max-w-xl flex-col items-start">
-            <div class="flex items-center gap-x-4 text-xs">
-                <div class="text-gray-500">Jul 28, 2022</div>
-                                <div>
-                                        <a href="https://thephp.foundation/blog/tag/roundup"
-                       class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
-                        PHP Roundup
-                    </a>
-                                    </div>
-                            </div>
-            <div class="group relative">
-                <h3 class="mt-3 mb-2 text-lg font-semibold leading-6">
-                    <a href="https://thephp.foundation/blog/2022/07/28/php-core-roundup-4/" class="no-underline border-b">
-                        PHP Core Roundup #4
-                    </a>
-                </h3>
-                                <div class="mt-2 text-xs">
-                    Published on <span>Jul 28, 2022</span>
-                    by by <a href="https://aye.sh" target="_blank" rel="noopener noreferrer">Ayesh Karunaratne</a>
-                </div>
-                                <div class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
-                    PHP Core Roundup is a series of posts where we make regular updates on improvements, fixes, and new features made to PHP by the PHP Foundation and oth...
-                </div>
-            </div>
-        </article>
-                <article class="flex max-w-xl flex-col items-start">
-            <div class="flex items-center gap-x-4 text-xs">
-                <div class="text-gray-500">Jun 30, 2022</div>
-                                <div>
-                                        <a href="https://thephp.foundation/blog/tag/roundup"
-                       class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
-                        PHP Roundup
-                    </a>
-                                    </div>
-                            </div>
-            <div class="group relative">
-                <h3 class="mt-3 mb-2 text-lg font-semibold leading-6">
-                    <a href="https://thephp.foundation/blog/2022/06/30/php-core-roundup-3/" class="no-underline border-b">
-                        PHP Core Roundup #3
-                    </a>
-                </h3>
-                                <div class="mt-2 text-xs">
-                    Published on <span>Jun 30, 2022</span>
-                    by by <a href="https://aye.sh" target="_blank" rel="noopener noreferrer">Ayesh Karunaratne</a>
-                </div>
-                                <div class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
-                    Welcome back to the PHP Core Roundup series, where we make regular updates on the improvements made to PHP by the PHP Foundation and other contributor...
-                </div>
-            </div>
-        </article>
-                <article class="flex max-w-xl flex-col items-start">
-            <div class="flex items-center gap-x-4 text-xs">
-                <div class="text-gray-500">May 30, 2022</div>
-                                <div>
-                                        <a href="https://thephp.foundation/blog/tag/roundup"
-                       class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
-                        PHP Roundup
-                    </a>
-                                    </div>
-                            </div>
-            <div class="group relative">
-                <h3 class="mt-3 mb-2 text-lg font-semibold leading-6">
-                    <a href="https://thephp.foundation/blog/2022/05/30/php-core-roundup-2/" class="no-underline border-b">
-                        PHP Core Roundup #2
-                    </a>
-                </h3>
-                                <div class="mt-2 text-xs">
-                    Published on <span>May 30, 2022</span>
-                    by by <a href="https://aye.sh" target="_blank" rel="noopener noreferrer">Ayesh Karunaratne</a>
-                </div>
-                                <div class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
-                    Welcome back to round #2 of PHP Core Roundup, where we’ll make regular updates on the improvements made to PHP by the PHP Foundation and other contrib...
-                </div>
-            </div>
-        </article>
-                <article class="flex max-w-xl flex-col items-start">
-            <div class="flex items-center gap-x-4 text-xs">
-                <div class="text-gray-500">Apr 28, 2022</div>
-                                <div>
-                                        <a href="https://thephp.foundation/blog/tag/roundup"
-                       class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
-                        PHP Roundup
-                    </a>
-                                    </div>
-                            </div>
-            <div class="group relative">
-                <h3 class="mt-3 mb-2 text-lg font-semibold leading-6">
-                    <a href="https://thephp.foundation/blog/2022/04/28/php-roundup-1/" class="no-underline border-b">
-                        PHP Roundup #1
-                    </a>
-                </h3>
-                                <div class="mt-2 text-xs">
-                    Published on <span>Apr 28, 2022</span>
-                    by by <a href="https://twitter.com/Ayeshlive" target="_blank" rel="noopener noreferrer">Ayesh Karunaratne</a>
-                </div>
-                                <div class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
-                    Welcome to the first PHP Roundup, where we’ll make regular updates on the improvements made to PHP by the PHP Foundation and other contributors. PHP R...
-                </div>
-            </div>
-        </article>
-            </div>
 
-        <nav class="flex flex-row justify-between article -mx-2 mt-8">
-        
-                <a href="https://thephp.foundation/blog/tag/roundup/"
-           class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[#7f52ff] transition-all no-underline">
-            <div class="mb-1 text-sm text-gray-600 font-medium">Next</div>
-            <div class="font-bold text-blue-500">Newer Posts</div>
-        </a>
-            </nav>
-    </section>
 <footer class="bg-gray-900" itemtype="https://schema.org/WPFooter">
     <div class="mx-auto max-w-7xl overflow-hidden px-6 py-12 lg:px-8">
         <nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" itemscope
