@@ -130,9 +130,9 @@ echo $result; // 18.1428571428
 
 Now, instead of using BCMath functions such as `bcadd`, `bcsub`, `bcdiv`, etc, you can now simply use standard operators (`+`, `-`, `/`, etc.).
 
-The new `BCMath\Number` class supports operator overloading, which cannot be done by userland PHP classes yet, but the BCMath extension implements it, so you can use them as if they were regular numbers.
+The new `BcMath\Number` class supports operator overloading, which cannot be done by userland PHP classes yet, but the BCMath extension implements it, so you can use them as if they were regular numbers.
 
-The `BCMath\Number` class implements `Stringable` interface, so the objects can be used where a string is expected (like how the example above uses it with an `echo` call). Further, the class implements all `bc*` functions. For example, it's also possible to call `$num->add($num2)` or `$num->add('5')` and it returns a new `BCMath\Number` object without modifying the original object, which makes them immutable.
+The `BcMath\Number` class implements `Stringable` interface, so the objects can be used where a string is expected (like how the example above uses it with an `echo` call). Further, the class implements all `bc*` functions. For example, it's also possible to call `$num->add($num2)` or `$num->add('5')` and it returns a new `BcMath\Number` object without modifying the original object, which makes them immutable.
 
 This comes from Saki Takamachi 💜, one of our new PHP Foundation members. She also made several new improvements including adding new `bcfloor`, `bcceil`, `bcround`, and `bcdivmod` functions.
 
