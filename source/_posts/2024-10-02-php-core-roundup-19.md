@@ -118,7 +118,7 @@ There are lots of new improvements in this space, including not only the [HTML5 
 The BCMath extension in PHP 8.4 now has classes with support for operator overloading support!
 
 ```php
-use BCMath\Number;  
+use BcMath\Number;
   
 $num1 = new Number('22');  
 $num2 = new Number('7'); 
