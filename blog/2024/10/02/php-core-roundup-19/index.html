@@ -252,7 +252,7 @@
 
 <h3 id="property-hooks-and-asymmetric-visibility">Property Hooks and Asymmetric Visibility</h3>
 
-<p>One of the most important features in PHP 8.4 is that you can now use <a href="https://wiki.php.net/rfc/property-hooks">property hooks</a> and declare property <a href="https://wiki.php.net/rfc/asymmetric-visibility">visibility separately</a> for get and set operations. Both of these features are thanks to the collaborative efforts of Ilija Tovilo and Larry Garfield. Ilija, funded by the foundation 💜, focused on the implementation. Meanwhile, Larry, a frequent contributor, worked on the specification and authored the RFC text.
+<p>One of the most important features in PHP 8.4 is that you can now use <a href="https://wiki.php.net/rfc/property-hooks">property hooks</a> and declare property <a href="https://wiki.php.net/rfc/asymmetric-visibility-v2">visibility separately</a> for get and set operations. Both of these features are thanks to the collaborative efforts of Ilija Tovilo and Larry Garfield. Ilija, funded by the foundation 💜, focused on the implementation. Meanwhile, Larry, a frequent contributor, worked on the specification and authored the RFC text.
 Property hooks allow declaring virtual properties with "hooks" that get executed when the properties are accessed or set, and the hooks get called with the object in context, to run their own logic.</p>
 
 <pre><code class="php">class User {
