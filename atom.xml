@@ -3,7 +3,7 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2024-10-03T12:03:18+00:00</updated>
+    <updated>2024-10-03T12:42:41+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
@@ -146,7 +146,7 @@ $user-&gt;userId = 16; // Not allowed
 
 <p>The BCMath extension in PHP 8.4 now has classes with support for operator overloading support!</p>
 
-<pre><code class="php">use BCMath\Number;  
+<pre><code class="php">use BcMath\Number;
 
 $num1 = new Number('22');  
 $num2 = new Number('7'); 
