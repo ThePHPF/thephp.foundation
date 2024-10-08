@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2024-10-04T08:17:14+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, July 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2024-10-08T12:59:26+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, July 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
 
 <p>Last month, the PHP foundation members continued the work on PHP 8.2 release and more. We are prepared to give a few talks this autumn. Also, besides core developers, we have a growing community of volunteers who help the PHP foundation. Read on to learn more.</p>
 
@@ -2178,7 +2178,53 @@ The development of PHP is done in the С programming language, and requires prof
 </p>
 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeYNVQoK2r9c6EtoMnDaIpLzDc95egt1a1mcfiHTovqMDhFuw/viewform?embedded=true" width="100%" height="1693" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-]]></content><link href="https://thephp.foundation/blog/2024/09/17/application-form-2025/"/><id>https://thephp.foundation/blog/2024/09/17/application-form-2025/</id><updated>Tue, 17 Sep 2024 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[The PHP Foundation
+]]></content><link href="https://thephp.foundation/blog/2024/09/17/application-form-2025/"/><id>https://thephp.foundation/blog/2024/09/17/application-form-2025/</id><updated>Tue, 17 Sep 2024 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[The PHP Foundation Supports The Open Source Pledge]]></title><content type="html"><![CDATA[<p>The PHP Foundation is proud to announce our support for the Open Source Pledge initiative, launched by Sentry and its partners. This step addresses the sustainability challenges within the Open Source Software (OSS) community, particularly affecting PHP and its ecosystem.</p>
+
+<h2 id="the-open-source-pledge%3A-a-commitment-to-sustainability">The Open Source Pledge: A Commitment to Sustainability</h2>
+
+<p>The Open Source Pledge represents a commitment from member companies to provide meaningful financial support to Open Source maintainers. This initiative aims to prevent maintainer burnout and reduce the risk of high-profile security incidents that can impact the broader tech ecosystem.</p>
+
+<p>The OSS community, including PHP, faces significant challenges:</p>
+
+<ul>
+<li><strong>Security risks:</strong> High-profile incidents like Log4shell, XZ, and Heartbleed have highlighted the potential consequences of under-resourced projects.</li>
+<li><strong>Developer burnout:</strong> Many maintainers, often volunteers, are feeling exhausted and leaving the very projects you might be using.</li>
+<li><strong>Losing maintainers:</strong> The demanding nature of maintaining open-source software means we’re seeing fewer contributors over time.</li>
+</ul>
+
+<h2 id="the-php-foundation%27s-role">The PHP Foundation's Role</h2>
+
+<p>As the main funder and steward of the PHP language, we’ve seen firsthand how a lack of funding impacts crucial projects. For example:</p>
+
+<ul>
+<li><strong>Core language development:</strong> Keeping PHP up to date and improving it takes a lot of time and expertise.</li>
+<li><strong>Security support:</strong> Without enough funding, PHP can’t address vulnerabilities quickly.</li>
+<li><strong>Extension maintenance:</strong> Many essential PHP extensions are struggling to find people to maintain them.</li>
+<li><strong>Documentation efforts:</strong> Keeping PHP’s extensive documentation current is always a big challenge.</li>
+</ul>
+
+<h1 id="how-to-join-the-pledge">How to Join the Pledge</h1>
+
+<p>The Open Source Pledge offers a structured approach to supporting OSS with the following requirements:</p>
+
+<ul>
+<li>Minimum contribution: $2,000 per year, per developer on staff.</li>
+<li>Transparency: Companies should publish annual reports detailing their payments.</li>
+<li>Direct impact: Funds go directly to maintainers, supporting their crucial work.</li>
+</ul>
+
+<p>Thanks to supporting the PHP Foundation, our major sponsors <a href="https://packagist.com/">Private Packagist</a> and <a href="https://tideways.com/">Tideways</a> are already part of the <a href="https://opensourcepledge.com/">Open Source Pledge</a>.</p>
+
+<h1 id="%5Caction-required%5C-join-the-pledge%5C%21">&#91;Action Required&#93; Join the Pledge&#33;</h1>
+
+<p>We urge PHP-based companies, developers, and organizations to join the Open Source Pledge and <strong><a href="https://thephp.foundation/sponsor/">sponsor The PHP Foundation</a></strong>.</p>
+
+<p>To learn more about the Open Source Pledge and how you can participate, visit&nbsp;<a href="https://opensourcepledge.com/">https://opensourcepledge.com/</a>.</p>
+
+<p>Help us spread the word by sharing this post.</p>
+
+<p>💜️ 🐘</p>
+]]></content><link href="https://thephp.foundation/blog/2024/10/08/open-source-pledge/"/><id>https://thephp.foundation/blog/2024/10/08/open-source-pledge/</id><updated>Tue, 08 Oct 2024 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[The PHP Foundation
 Team Update 2024]]></title><content type="html"><![CDATA[<p>Now in our third year, we're gearing up to grow our impact. This year, four more developers are joining the PHP Foundation to further advance PHP.</p>
 
 <p>Since April 2022, the PHP Foundation has contracted six outstanding developers:</p>
