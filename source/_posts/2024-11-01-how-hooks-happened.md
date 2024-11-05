@@ -40,7 +40,7 @@ Illija is also fully funded by the PHP Foundation to work on the engine, without
 
 With the initial goal of "making Nikita's proposal work-ish," I started digging into the research and design side.  My [initial brainstorming](https://github.com/Crell/php-rfcs/blob/master/property-hooks/research.md) shows where our thoughts were at the time.  In short:
 
-* There are two models of accessors: In untyped languages without visibility controls – like JavaScript and Python – accessors are methods with funny syntax.  In typed languages with visibility controls – like C#, Swift, and Kotlin – accessors are enhancements to a defined property.  As PHP is, let's face it, a typed language with visibility controls, that was clearly the model to follow (as had all previous RFCs).
+* There are two models of accessors: In untyped languages without visibility controls&mdash;like JavaScript and Python&mdash;accessors are methods with funny syntax.  In typed languages with visibility controls&mdash;like C#, Swift, and Kotlin&mdash;accessors are enhancements to a defined property.  As PHP is, let's face it, a typed language with visibility controls, that was clearly the model to follow (as had all previous RFCs).
 * Yes, we really would need asymmetric visibility, accessors, and interface properties.  While technically separate features, they make the most sense in combination.
 * The whole scope would be huge, so we needed to break it up where we could.  Splitting Asymmetric visibility off to its own RFC was the most natural place, which would be made easier by using Swift's `private(set)` style syntax.
 
