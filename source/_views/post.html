@@ -45,7 +45,7 @@
                 <a href="{{ site.url }}{{ page.previous_post.url }}"
                    class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[#7f52ff] transition-all no-underline">
                     <div class="mb-1 text-sm text-gray-600 font-medium">Previous</div>
-                    <div class="font-bold text-blue-500">{{ page.previous_post.title }}</div>
+                    <div class="font-bold text-blue-500">{{ page.previous_post.title | raw }}</div>
                 </a>
                 {% endif %}
 
@@ -53,7 +53,7 @@
                 <a href="{{ site.url }}{{ page.next_post.url }}"
                    class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[rgba(127,82,255,.8)] transition-all no-underline">
                     <div class="mb-1 text-sm text-gray-600 font-medium">Next</div>
-                    <div class="font-bold text-blue-500">{{ page.next_post.title }}</div>
+                    <div class="font-bold text-blue-500">{{ page.next_post.title | raw }}</div>
                 </a>
                 {% endif %}
             </nav>
