@@ -2,11 +2,11 @@
 title: 'PHP 8.4: How Hooks Happened'
 layout: post
 tags:
-  - news
+  - stories
 author:
   - name: Larry Garfield
     url: https://github.com/Crell
-published_at: 1 November 2024
+published_at: 5 November 2024
 ---
 
 PHP 8.4 is coming on 21 November this year.  It includes a host of new functionality, but the biggest, in more ways than one, is Property hooks.  Given the excitement around it, as well as its size, the PHP Foundation's Roman Pronsky asked me to write up a bit about the process we went through to produce this beast.
@@ -40,7 +40,7 @@ Illija is also fully funded by the PHP Foundation to work on the engine, without
 
 With the initial goal of "making Nikita's proposal work-ish," I started digging into the research and design side.  My [initial brainstorming](https://github.com/Crell/php-rfcs/blob/master/property-hooks/research.md) shows where our thoughts were at the time.  In short:
 
-* There are two models of accessors: In untyped languages without visibility controls -- like Javascript and Python -- accessors are methods with funny syntax.  In typed languages with visibility controls -- like C#, Swift, and Kotlin -- accessors are enhancements to a defined property.  As PHP is, let's face it, a typed language with visibility controls, that was clearly the model to follow (as had all previous RFCs).
+* There are two models of accessors: In untyped languages without visibility controls – like JavaScript and Python – accessors are methods with funny syntax.  In typed languages with visibility controls – like C#, Swift, and Kotlin – accessors are enhancements to a defined property.  As PHP is, let's face it, a typed language with visibility controls, that was clearly the model to follow (as had all previous RFCs).
 * Yes, we really would need asymmetric visibility, accessors, and interface properties.  While technically separate features, they make the most sense in combination.
 * The whole scope would be huge, so we needed to break it up where we could.  Splitting Asymmetric visibility off to its own RFC was the most natural place, which would be made easier by using Swift's `private(set)` style syntax.
 
@@ -87,16 +87,18 @@ The Board came back with mostly positive feedback; they liked the concept, the d
 
 I don't have the original chat log, but that resulted in a brief exchange that went approximately like this:
 
-<blockquote>
-Roman: The Advisory Board says three different set-ish hooks are a problem
-Larry: Well, we kinda have to, because you can't access a property from within its own hook, that doesn't make sense.
-Ilija: Er, actually we could do that easily.
-Larry: Wait, what?  That... how... why...
-Larry: *does some research*
-Larry: Well crap, that's exactly what Kotlin does.  Why didn't we research Kotlin in the first place?
-Ilija: ¯\_(ツ)_/¯
-Ilija: Well, I just switched it over to that.  Looks nicer.
-</blockquote>
+```text
+Roman: The Advisory Board says three different set-ish hooks are a problem  
+Larry: Well, we kinda have to, because you can't access a property 
+       from within its own hook, that doesn't make sense.  
+Ilija: Er, actually we could do that easily.  
+Larry: Wait, what?  That... how... why...  
+Larry: *does some research*  
+Larry: Well crap, that's exactly what Kotlin does.  
+       Why didn't we research Kotlin in the first place?  
+Ilija: ¯\_(ツ)_/¯  
+Ilija: Well, I just switched it over to that. Looks nicer.
+```
 
 And so there we were, with half as many syntaxes for the same functionality, and a feature name (hooks) that no longer made sense.  Oh well.
 
@@ -116,7 +118,7 @@ There were a few significant changes we did end up making in response to feedbac
 
 Even then, with all the positive feedback, it wasn't clear to us if it would pass.  Many people on the list had expressed support, but a lot of them were non-voters.
 
-Others had expressed essentially "fearful support;"  They liked the idea, couldn't find fault with the implementation, but were concerned about just how big and complex the feature was.
+Others had expressed essentially "fearful support"; They liked the idea, couldn't find fault with the implementation, but were concerned about just how big and complex the feature was.
 
 Still others, for various reasons, suggested moving certain sub-features to a separate, future RFC. Which is often code for "I don't like this part, but I don't want to vote against the RFC because of it, so please let me vote against it separately."  We explained, repeatedly, that this was already the slimmed down, partial version.  The other part was asymmetric visibility.
 
