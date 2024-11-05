@@ -83,7 +83,14 @@ We finally had a working design and implementation by April 2023 or so, but were
 
 The Board came back with mostly positive feedback; they liked the concept, the design, the detail... but having 4 separate hooks felt very clumsy to them.  Especially with get/set wiping the backing property entirely and leaving the developer on their own.
 
-[Insert Foundation ad here]
+<blockquote>
+<p><strong>The PHP Foundation's Advisory Board</strong> serves as a vital bridge between our major sponsors and the PHP development community. It's a Slack channel where we share early updates, insights, and ask for feedback. As well as receive insights and queries from sponsors' representatives. <br><br>
+
+Companies interested in joining this influential group and directly contributing to the future of PHP can become members of the Advisory Board by contributing a minimum of $12,000 to The&nbsp;PHP&nbsp;Foundation as at least a Silver Sponsor. <br/><br/>
+
+<strong><a href="https://thephp.foundation/sponsor/">Learn more about sponsorship opportunities.</a></strong><br/>
+</p>
+</blockquote>
 
 I don't have the original chat log, but that resulted in a brief exchange that went approximately like this:
 
