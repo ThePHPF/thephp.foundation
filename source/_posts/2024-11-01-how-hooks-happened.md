@@ -1,5 +1,5 @@
 ---
-title: 'PHP 8.4: How Hooks Happened'
+title: 'PHP 8.4: How Property Hooks Happened'
 layout: post
 tags:
   - stories
