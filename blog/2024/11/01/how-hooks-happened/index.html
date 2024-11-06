@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Introducing Web&nbsp;Services&nbsp;Tool for&nbsp;PHP-FPM &mdash; The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language</title>
+    <title>PHP 8.4: How Hooks Happened &mdash; The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language</title>
     <meta name="description" content="The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language">
     <meta charset="utf-8">
     <meta name="theme-color" content="#ffffff">
@@ -19,18 +19,18 @@
     <meta name="yandex-verification" content="6990192232fdf071" />
     <meta name="msvalidate.01" content="5D1EB82347E6BF271A01DCDBF7E59BED" />
 
-    <meta property="og:url" content="https://thephp.foundation/blog/2024/10/21/web-services-tool-for-php-fpm/">
+    <meta property="og:url" content="https://thephp.foundation/blog/2024/11/01/how-hooks-happened/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Introducing Web&nbsp;Services&nbsp;Tool for&nbsp;PHP-FPM">
+    <meta property="og:title" content="PHP 8.4: How Hooks Happened">
     <meta property="og:description" content="The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language">
-    <meta property="og:image" content="https://thephp.foundation/assets/share/2024-10-21-web-services-tool-for-php-fpm.png">
+    <meta property="og:image" content="https://thephp.foundation/assets/share/2024-11-01-how-hooks-happened.png">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="https://thephp.foundation">
-    <meta property="twitter:url" content="https://thephp.foundation/blog/2024/10/21/web-services-tool-for-php-fpm/">
-    <meta name="twitter:title" content="Introducing Web&nbsp;Services&nbsp;Tool for&nbsp;PHP-FPM">
+    <meta property="twitter:url" content="https://thephp.foundation/blog/2024/11/01/how-hooks-happened/">
+    <meta name="twitter:title" content="PHP 8.4: How Hooks Happened">
     <meta name="twitter:description" content="The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language">
-    <meta name="twitter:image" content="https://thephp.foundation/assets/share/2024-10-21-web-services-tool-for-php-fpm.png">
+    <meta name="twitter:image" content="https://thephp.foundation/assets/share/2024-11-01-how-hooks-happened.png">
 
     <link rel="apple-touch-startup-image" href="https://thephp.foundation/assets/icons/php_foundation.svg">
     <meta name="mobile-web-app-capable" content="yes">
@@ -153,164 +153,183 @@
 
 <div class="bg-white px-6 lg:px-8 my-16" itemscope itemtype="https://schema.org/Article">
     <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
-        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" itemprop="name">Introducing Web&nbsp;Services&nbsp;Tool for&nbsp;PHP-FPM</h1>
+        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" itemprop="name">PHP 8.4: How Hooks Happened</h1>
 
         <div class="flex items-center gap-x-4 text-xs mt-2">
                 <div>
-            Published on <span itemprop="datePublished">Oct 21, 2024</span>
+            Published on <span itemprop="datePublished">Nov 06, 2024</span>
             by
-                        <span itemprop="publisher" itemscope itemtype="https://schema.org/Person"><a href="https://github.com/bukka" target="_blank" rel="noopener noreferrer" itemprop="url"><span itemprop="name">Jakub Zelenka</span></a></span>                    </div>
+                        <span itemprop="publisher" itemscope itemtype="https://schema.org/Person"><a href="https://github.com/Crell" target="_blank" rel="noopener noreferrer" itemprop="url"><span itemprop="name">Larry Garfield</span></a></span>                    </div>
                     
         
                 <div class="space-x-1">
-                        <a href="https://thephp.foundation/blog/tag/news"
+                        <a href="https://thephp.foundation/blog/tag/stories"
                class="rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
-                News
+                Stories
             </a>
                     </div>
                 </div>
 
         <div class="mt-6 text-xl leading-8" itemprop="text">
-            <p>The Web Services Tool (WST) is a command-line application developed to test PHP-FPM, <a href="https://www.sovereigntechfund.de/tech/php"><strong>commissioned by the Sovereign Tech Fund</strong></a> (STF). Its primary goal is to facilitate testing of the integration between different web servers and PHP-FPM across various environments and configurations.</p>
+            <p>PHP 8.4 is coming on 21 November this year.  It includes a host of new functionality, but the biggest, in more ways than one, is Property hooks.  Given the excitement around it, as well as its size, the PHP Foundation's Roman Pronsky asked me to write up a bit about the process we went through to produce this beast.</p>
 
-<p>This blog post provides an introduction to the tool. We'll go through the history of PHP-FPM testing and the reasons that led to WST's development. The post also outlines the project structure, insights into the tool’s architecture, its current state, and the roadmap for future development.</p>
+<p>What eventually became the twin RFCs of Property Hooks and Asymmetric Visibility is actually a very old discussion.  We'll look back at the decade-plus saga that got us here, how Ilija Tovilo and I got sucked in, how the design came to be, and how we managed to get it across the finish line.  Here's a teaser: It would not have happened without the PHP Foundation.</p>
 
-<h2 id="php-fpm-testing-and-wst-history">PHP-FPM testing and WST history</h2>
+<h2 id="ancient-history">Ancient history</h2>
 
-<h3 id="first-steps">First steps</h3>
+<p>Ilija and I were not the first RFC to propose "property accessors," as they're called in most languages.  In fact, our RFC was the fifth:</p>
 
-<p>PHP-FPM was initially developed as a patch series starting around 2004. It evolved into a more modular architecture with a separate SAPI by 2009, and it was <a href="https://github.com/php/php-src/commit/06b9943842eb954025ac83b542e97d6310aa524a">merged into the PHP core</a> in 2010. It was declared stable with the release of PHP 5.4 in 2011. While this version introduced many features that are still used today, it did not include any automated tests; all testing was done manually.</p>
+<ol>
+<li>2009: <a href="https://wiki.php.net/rfc/propertygetsetsyntax">Property get/set syntax</a> by Dennis Robinson.  The core concepts and arguments behind it are all there, and haven't really changed in 15 years.  It never went to a vote.</li>
+<li>2012: <a href="https://wiki.php.net/rfc/propertygetsetsyntax-v1.2">Property get/set syntax v1.2</a> by Clint Priest and Nikita Popov.  It didn't pass the 2/3 threshold for a vote, but did pass 50%.</li>
+<li>2013: <a href="https://wiki.php.net/rfc/propertygetsetsyntax-alternative-typehinting-syntax">Property get/set syntax alternate typehinting syntax</a>, by Nikita Popov.  An alternate approach that proved very unpopular, failing 3 to 12.  However, it included a shorthand syntax that looks suspiciously like what eventually became property types.</li>
+<li>2021: <a href="https://wiki.php.net/rfc/property_accessors">Property Accessors</a> by Nikita Popov. More of a brainstorm of what property accessors could be, including specific use-case options like <code>lazy</code> or <code>guard</code>.  It never went to a vote, but Nikita did note that "We could likely get 80% of the value of accessors by supporting read-only properties and 90% by also supporting private-write properties."  (I don't fully agree, but much of the value is in private-write.)</li>
+</ol>
 
-<p>The first automated test was introduced in early 2014, and it provided a basic check to verify that PHP-FPM can start with a certain configuration. Later that year, more advanced tests were added, including a FastCGI client, which allowed PHP-FPM to run in a separate process, accept FastCGI requests, and return responses. This was a major step forward, as it enabled testing scenarios that weren't previously possible. However, the implementation was more of a workaround, piecing together different components. The tests were repetitive and limited in their ability to define complex expectations.</p>
-
-<h3 id="a-bit-more%2C-but-still-not-enough">A bit more, but still not enough</h3>
-
-<p>In 2018, I <a href="https://github.com/php/php-src/commit/ea592e6b6c43b7c5ebedf63254b8088f741e276c">carried out</a> a complete rewrite of the FPM tests, introducing a primary <code>Tester</code> class. This class integrated more robust expectations and added abstractions for handling requests and responses. Over the years, this framework has been improved and now includes many features that support testing more complex scenarios. It significantly improves test code re-usability and offers various new options for easier testing. However, it <strong>doesn’t cover integration tests with web servers</strong>, which often have quirks not easily caught by these tests. Additionally, this framework <strong>doesn't handle high-load scenarios</strong>, which are necessary for testing process management in PHP-FPM. <strong>This showed the need for a new tool to keep PHP-FPM development safe.</strong></p>
-
-<h3 id="here-comes-the-php-foundation-and-the-stf-service-agreement">Here comes The PHP Foundation and the STF service agreement</h3>
-
-<p>Initially, I had an idea to extend <a href="https://github.com/bukka/fpmt">fpmt</a>, my tool for testing PHP-FPM (specifically for sending custom FastCGI requests), and integrate most of the testing logic directly into it. However, it soon became clear that maintaining such a tool would require constant code changes, and the effort needed to build and sustain it was too large. As a result, I put the project on hold.</p>
-
-<p>It wasn’t until 2023 that the idea resurfaced, thanks to an opportunity provided by the Sovereign Tech Fund. The STF gave PHP projects a chance to propose initiatives aimed at improving their overall health. Testing, being a critical component of project health, made this tool a perfect candidate, and it, along with <a href="https://www.sovereigntechfund.de/tech/php#what-are-we-funding">three other projects</a>, comprised the scope of work commissioned by the STF.</p>
-
-<h3 id="how-wst-started">How WST started</h3>
-
-<p>I began the work on the tool in January 2024 with the planning phase. It quickly became evident that a more generic approach would offer greater flexibility and cover more use cases. I decided to design the tool around a clear configuration structure, which would be parsed and executed. A key part of the planning was ensuring that the <strong>same tests could run both locally and in containers</strong>, with an option to simulate high loads by integrating with a load testing tool. Given these requirements, I chose Go as the implementation language, as it provides well-supported clients and packages for all the project’s needs. Go's advanced templating capabilities, which are popular in tools like Helm, were also a deciding factor.</p>
-
-<p>For easier setup, the project was organized under a new <a href="https://github.com/wstool/"><strong>wstool</strong></a> organization, containing two repositories: one for the actual tool implementation (<a href="https://github.com/wstool/wst">wst</a>) and another for the PHP-FPM testing configurations (<a href="https://github.com/wstool/wst-php-fpm">wst-php-fpm</a>). The structure of the application differs slightly from typical Go applications, as it focuses on achieving full test coverage for most components. As a result, it features multiple sub-packages to allow for the creation of mocks using <a href="https://github.com/vektra/mockery">Go Mockery</a>, which generates <a href="https://github.com/stretchr/testify">Testify</a> mocks.</p>
-
-<h2 id="the-current-state-and-its-structure">The current state and its structure</h2>
-
-<p>The tool has been developed into a functional state that allows it to run various tests. Its architecture is defined by its configuration, with a strong emphasis on flexibility.</p>
-
-<p>At the core of the configuration is a file that contains a specification composed of settings for various components. Multiple configuration files can be specified, along with specific overrides for selected values. These configurations and overrides are then merged into a single, unified configuration. Example of execution could look like:</p>
-
-<pre><code class="shell">wst -f /path/to/cfg1 -f /path/to/cfg2 -o spec.defaults.service.sandbox=docker
-</code></pre>
-
-<p>This will merge cfg1 and cfg2 and apply overwrite for the default server.<br />
-The final configuration defines environments, sandboxes, servers, and instances – these are the core elements of the application’s execution. Additionally, it defines some default settings, including base parameters. These parameters allow for further customization and can be accessed within template files and strings. The example of primary configuration looks like</p>
-
-<pre><code class="yaml">version: "0.1"
-name: FPM
-description: FPM server specifications for testing PHP-FPM
-spec:
-  environments: environments.yaml
-  instances: spec/instances/*.yaml
-  sandboxes: sandboxes.yaml
-  servers: servers/*/*/server.yaml
-  workspace: workspace/
-  defaults:
-    service:
-      sandbox: local
-    parameters:
-      fpm_binary: php-fpm
-</code></pre>
-
-<p>As you can see, it is possible to separate config to multiple files that can be specified in the wildcard format. The meaning of primary spec parts is following:</p>
+<p>All of these attempts had a few things in common:</p>
 
 <ul>
-<li><p><strong>Environments</strong> specify where the tests are executed, allowing for tests to run locally, in Docker, or Kubernetes environments. This enables testing across different distributions using Docker and under production-like loads with Kubernetes. Such flexibility helps recreate reported issues more effectively, as some problems only appear under heavy load. It also provides greater confidence when implementing new features or fixing complex bugs.</p></li>
-<li><p><strong>Sandboxes</strong> are closely related to environments, defining how services behave in each environment. Specifically, they define hooks containing commands or signals for starting, stopping, reloading, and restarting services.</p></li>
-<li><p><strong>Servers</strong> contain the specifications of the web servers or other web services being tested. They define server configuration templates, expectations, parameters, and specific hooks linked to sandboxes. For instance, a server might specify PHP-FPM configuration files (fpm.conf, php.ini), set up start hooks for the PHP-FPM binary with selected parameters, and outline specific log message expectations following PHP-FPM startup. These predefined settings help reduce code duplication.</p></li>
-<li><p><strong>Instances</strong> are the core of WST’s testing functionality. They define everything specific to a single test case, primarily specifying the service. This means choosing the server by name, providing parameters, and specifying configuration files to be included with the selected parameters. They also define scripts included in the services and their content, which are then utilized during actions.</p></li>
+<li>Pseudo-functions that live on properties and intercept get/set operations.</li>
+<li>Asymmetric visibility</li>
+<li>Interface properties</li>
 </ul>
 
-<p>The mentioned actions offer additional flexibility by providing a custom mini pipeline which offers a high degree of flexibility. Actions are responsible for controlling services (start, stop, restart, reload), triggering requests (request, bench), and setting expectations on output (logs), responses (for requests), and metrics (for benchmarks). There is also a parallel action, allowing multiple actions to run simultaneously</p>
+<h2 id="a-new-team-enters-the-arena">A new team enters the arena</h2>
 
-<p>This is an example of a simple instance with actions:</p>
+<p>Fast forward to the summer of 2022.  Ilija Tovilo decided he wanted to take a swing at accessors next, and approached me for help.  Ilija and I had already worked together on the <a href="https://wiki.php.net/rfc/enumerations">Enums RFC</a>, so we knew we worked well together.  In part, that's because we have very different skill sets.  Ilija is rapidly becoming one of the most PHP engine-knowledgeable people around and quite proficient at writing C code, but is, by his own admission, not the most proficient writer of English.  I am a weirdo who enjoys language research, designing away edge cases, and can type fast enough to keep up with the Internals mailing list.  We complement each other well.</p>
 
-<pre><code class="yaml">version: "0.1"
-name: FPM
-description: FPM server specifications for testing PHP-FPM
-spec:
-  environments: environments.yaml
-  instances: spec/instances/*.yaml
-  sandboxes: sandboxes.yaml
-  servers: servers/*/*/server.yaml
-  workspace: workspace/
-  defaults:
-    service:
-      sandbox: local
-    parameters:
-      fpm_binary: php-fpm
-</code></pre>
+<p>Illija is also fully funded by the PHP Foundation to work on the engine, without which this amount of work would have been impossible.  I work on a volunteer basis, and as my employers allow.</p>
 
-<p>This test starts FPM and <code>httpd</code> with selected configs, sends a request for <code>index.php</code> path, verifies that response body and stops the servers.</p>
+<p>(Side note: As of this writing, I am between jobs.  If you're looking for a highly-experienced PHP Staff/Principal Engineer with experience in design, architecture, and leading teams, please <a href="https://github.com/Crell/">reach out</a> and let's talk!)</p>
 
-<p>Currently, the tool works in a local environment and has already helped recreate complex scoreboard locking issues through its automated load testing (bench action). The Docker and Kubernetes environments have largely been finalized in terms of structure, with most of the implementation in place. However, some additional changes and fixes are needed for full functionality.</p>
+<h2 id="research%2C-then-development">Research, then development</h2>
 
-<h2 id="the-first-results">The first results</h2>
-
-<p>The initial PHP-FPM configuration includes only a few instances and server configurations. It defines three servers—fpm, nginx, and httpd (Apache). These servers contain default configurations with all necessary settings, as well as variants for Debian and RedHat that could be used as needed. The servers also define reusable expectations across instances. For PHP-FPM, these expectations are used to verify that the server has started successfully, based on log messages, and include templates for asserting FPM status responses.</p>
-
-<p>As for instances, there are currently the following tests defined:</p>
+<p>With the initial goal of "making Nikita's proposal work-ish," I started digging into the research and design side.  My <a href="https://github.com/Crell/php-rfcs/blob/master/property-hooks/research.md">initial brainstorming</a> shows where our thoughts were at the time.  In short:</p>
 
 <ul>
-<li><a href="https://github.com/wstool/wst-php-fpm/blob/bccec57f02e7918aedf5bce43387a3c1ce733f37/spec/instances/access-suppress-path-status.yaml">Access log path suppression test</a> &#45; It verifies access logs, which uses status checking and output verification to ensure that access logs are properly generated in both PHP-FPM and Nginx.</li>
-<li><a href="https://github.com/wstool/wst-php-fpm/blob/bccec57f02e7918aedf5bce43387a3c1ce733f37/spec/instances/httpd-proxy-fcgi-handler-basic.yaml">Apache httpd mod&#95;proxy&#95;fcgi SetHandler basic tests</a> &#45; It tests FastCGI integration between Apache httpd and PHP-FPM and makes sure that different combinations of test works. It also recreates a recent issue with Apache httpd integration.</li>
-<li><a href="https://github.com/wstool/wst-php-fpm/blob/bccec57f02e7918aedf5bce43387a3c1ce733f37/spec/instances/scoreboard-atomic-copy.yaml">Scoreboard atomic copying test</a> &#45; It focuses on testing the scoreboard under higher loads. This test has been particularly useful in reliably reproducing a scoreboard locking issue, which has been causing errors for users. Once the issue is resolved, the test will serve as a regression check to ensure the problem doesn’t reoccur.</li>
+<li>There are two models of accessors: In untyped languages without visibility controls&mdash;like JavaScript and Python&mdash;accessors are methods with funny syntax.  In typed languages with visibility controls&mdash;like C#, Swift, and Kotlin&mdash;accessors are enhancements to a defined property.  As PHP is, let's face it, a typed language with visibility controls, that was clearly the model to follow (as had all previous RFCs).</li>
+<li>Yes, we really would need asymmetric visibility, accessors, and interface properties.  While technically separate features, they make the most sense in combination.</li>
+<li>The whole scope would be huge, so we needed to break it up where we could.  Splitting Asymmetric visibility off to its own RFC was the most natural place, which would be made easier by using Swift's <code>private(set)</code> style syntax.</li>
 </ul>
 
-<h2 id="the-future-development">The future development</h2>
+<p>So in August of 2022 we put forward the first <a href="https://wiki.php.net/rfc/asymmetric-visibility">asymmetric visibility</a> RFC.  Given there was already a clear appetite for such functionality based on list discussions and on the recent <code>readonly</code> addition, which Nikita explicitly intended as a "junior asymmetric visibility," we expected some bikeshedding but overall a straightforward process.</p>
 
-<p>The primary goal moving forward is to add more tests and begin using the tool to address existing complex issues and features in PHP-FPM. This will require further updates to the application to improve its capabilities. The tool also needs to be stabilized and made more user-friendly, specifically, enhancing logging and documentation.</p>
+<p>Boy were we wrong.</p>
 
-<p>Once the tool and PHP-FPM tests reach a stable state, the next step would be to set up a continuous integration (CI) system to run all stable tests regularly against the latest repository. Ideally, this could be integrated into PHP’s nightly workflow. There is a possibility to use higher spec resources from TeamCity or infrastructure provided by AWS to PHP Foundation which is currently used for benchmarking project testing performance of PHP.</p>
+<h2 id="asymmetric-support">Asymmetric support</h2>
 
-<p>Since the tool is not specific to PHP-FPM, it could also be applied to other parts of PHP. For example, it could finally enable tests for the Apache handler (<code>mod_php</code>) SAPI, which is still widely used but currently lacks testing, making changes risky. Additionally, the tool could be useful for testing specific scenarios involving PHP extensions that rely on external services, such as databases or LDAP.</p>
+<p>The Asymmetric Visibility RFC was far more contentious than we expected. Some people hated the idea.  Some wouldn't accept anything but the C#-style syntax.  We ran a poll of various different approaches, and our initial proposal (Swift-style placement and syntax) ended up winning by a slim margin, but disappointingly "the consensus position isn't your position, sorry" didn't really persuade anyone.</p>
 
-<p>Another area where the tool could be valuable is in performing various security-related tests. Adding fuzzing capabilities could help uncover a range of issues, including potential security vulnerabilities, not only in PHP-FPM but also in the web servers themselves.</p>
+<p>Eventually, Asymmetric visibility finally went down in a 14:12 vote in January of 2023.  RFCs need 2/3 majorities to pass, so 14:12, while a simple majority, isn't enough.</p>
 
-<p>Testing full framework applications and automating setup steps like <code>composer install</code> could improve the tool as well. This will require more time and help from the community to make sure the setups are reliable in all environments.</p>
+<h2 id="hooking-it-up">Hooking it up</h2>
 
-<h2 id="summary">Summary</h2>
+<p>The failure of asymmetric visibility was a blow to both of us.  In most cases we didn't even know why the people who voted "no" did so, which made addressing their concerns guesswork.  Had we just wasted our time?  Would accessors even be acceptable?  The current RFC process is very bad at providing that kind of actionable feedback.</p>
 
-<p>The WST has already proven to be valuable for PHP-FPM development and testing, because it helps address  complex issues which were never tested in automated way before.</p>
+<p>While no one from the Foundation mentioned it, we were also both acutely aware that Ilija had been working on paid time for a proposal that ended up failing.</p>
 
-<p>As more features and tests are added, its importance will only grow. We hope it will become an essential part of ensuring PHP-FPM's stability, performance, and evolution.</p>
+<p>Nonetheless, we had split the RFC in two deliberately so that even if only one was successful there was still a benefit.  We therefore turned our attention to the accessor part of the proposal (which included interface properties) and continued working.</p>
 
-<p>💜️ 🐘</p>
+<p>The model we developed was essentially a "direct port from Swift, with a few slight renames."</p>
+
+<p>The initial design included:</p>
+
+<ul>
+<li><code>get</code> - Totally takes over reading, and there's no physical property created.</li>
+<li><code>set</code> - Totally takes over writing, and there's no physical property created.</li>
+<li><code>beforeSet</code> - Intercepts the writing of a property but doesn't change the actual write itself.</li>
+<li><code>afterSet</code> - Called after the property is written, doesn't change the actual write itself.</li>
+</ul>
+
+<p>This is also when we changed the name from "accessors" to "hooks," which seemed a more accurate description given that model.  This later ended up not making sense, but Ilija had already taken the time to rename everything in the patch, so it was too much work to change back.  Sorry.</p>
+
+<p>The RFC text itself grew and grew.  PHP is a very mature (read: complex) language, and so there were lots of nooks and crannies that we had to account for.  Properties touch on almost everything: References, arrays, inheritance, final properties, interfaces, interaction with <code>readonly</code>, interaction with <code>__get</code>/<code>__set</code>, serialization, constructor property promotion, reflection...</p>
+
+<p>PHP is a big language, and we needed to think through and implement every possible edge case to avoid booby traps.</p>
+
+<h2 id="some-very-good-advice">Some very good Advice</h2>
+
+<p>We finally had a working design and implementation by April 2023 or so, but were quite nervous about it.  It was big, and we were both still smarting from the loss of asymmetric visibility.  Roman suggested that he run it past the PHP Foundation's Advisory Board for feedback first before going to the list, which turned out to be the best thing we could do.</p>
+
+<p>The Board came back with mostly positive feedback; they liked the concept, the design, the detail... but having 4 separate hooks felt very clumsy to them.  Especially with get/set wiping the backing property entirely and leaving the developer on their own.</p>
+
+<blockquote>
+<p><strong>The PHP Foundation's Advisory Board</strong> serves as a vital bridge between our major sponsors and the PHP development community. It's a Slack channel where we share early updates, insights, and ask for feedback. As well as receive insights and queries from sponsors' representatives. <br><br>
+
+Companies interested in joining this influential group and directly contributing to the future of PHP can become members of the Advisory Board by contributing a minimum of $12,000 to The&nbsp;PHP&nbsp;Foundation as at least a Silver Sponsor. <br/><br/>
+
+<strong><a href="https://thephp.foundation/sponsor/">Learn more about sponsorship opportunities.</a></strong><br/>
+</p>
+</blockquote>
+
+<p>I don't have the original chat log, but that resulted in a brief exchange that went approximately like this:</p>
+
+<pre><code class="text">Roman: The Advisory Board says three different set-ish hooks are a problem  
+Larry: Well, we kinda have to, because you can't access a property 
+       from within its own hook, that doesn't make sense.  
+Ilija: Er, actually we could do that easily.  
+Larry: Wait, what?  That... how... why...  
+Larry: *does some research*  
+Larry: Well crap, that's exactly what Kotlin does.  
+       Why didn't we research Kotlin in the first place?  
+Ilija: ¯\_(ツ)_/¯  
+Ilija: Well, I just switched it over to that. Looks nicer.
+</code></pre>
+
+<p>And so there we were, with half as many syntaxes for the same functionality, and a feature name (hooks) that no longer made sense.  Oh well.</p>
+
+<p>We finally made a public proposal at the start of May 2023.  Initial feedback was quite positive, though there was some pushback, including around the syntax from people who wanted the Javascript/Python style (naturally).  And the length.  Oh, the length.  If hooks isn't the longest RFC ever proposed, it's close.  But as we reiterated many times, that's because the problem space itself is highly complex.</p>
+
+<p>Sadly, time was not on our side.  Ilija was still working out some implementation edge cases and PHP 8.3’s feature-freeze was rapidly approaching.  So in early July, almost exactly a year after we started working on it, we decided to postpone hooks until 8.4 to give such a large change enough time to settle in and get adjusted if needed.</p>
+
+<h2 id="take-2">Take 2</h2>
+
+<p>After many distractions, we were able to bring the topic back up in <a href="https://externals.io/message/122445">February of 2024</a>, with the intent to bring it to a vote quickly, in March.  (We were so naive.)</p>
+
+<p>There was a lot more discussion this time around, though a lot of it was re-hashing edge cases we'd already addressed.  We also spent a considerable amount of time talking with the Foundation's developer team.  They, by and large, represent the most experienced developers of PHP Internals today, and were an invaluable resource.  That we could talk to them in real time via the Foundation's private chat also helped, as that's a far easier way to handle back-and-forth than a mailing list.</p>
+
+<p>There were a few significant changes we did end up making in response to feedback, from both the list and the Foundation team.  Most importantly, Ilija managed to make array properties work, which had been a challenge due to references.  Once again, being able to attack the problem from two directions (design and ergonomics from me, implementation from Ilija) let us improve the overall experience dramatically.</p>
+
+<h2 id="down-to-the-wire">Down to the wire</h2>
+
+<p>Even then, with all the positive feedback, it wasn't clear to us if it would pass.  Many people on the list had expressed support, but a lot of them were non-voters.</p>
+
+<p>Others had expressed essentially "fearful support"; They liked the idea, couldn't find fault with the implementation, but were concerned about just how big and complex the feature was.</p>
+
+<p>Still others, for various reasons, suggested moving certain sub-features to a separate, future RFC. Which is often code for "I don't like this part, but I don't want to vote against the RFC because of it, so please let me vote against it separately."  We explained, repeatedly, that this was already the slimmed down, partial version.  The other part was asymmetric visibility.</p>
+
+<p>After a lot of discussion and with a lot of trepidation, we called the vote in mid-April of 2024.  It passed 42:2.  I don't understand PHP Internals at times.</p>
+
+<h2 id="asymmetric-visibility-2%3A-the-wrath-of-ilija">Asymmetric Visibility 2: The Wrath of Ilija</h2>
+
+<p>Several people pointed out that hooks without asymmetric visibility had significant holes in it.  They were right, which is why we'd originally proposed that first.  We had decided that if hooks pass, we would take a second swing at asymmetric visibility.  So we did.</p>
+
+<p>The only actionable feedback we'd gotten the first time around was that without support for combining <code>readonly</code> and asymmetric visibility, the RFC felt "incomplete."  We went through a few variations on how to address that before landing on the final solution: Change <code>readonly</code> from being implicitly <code>private(set)</code> to implicitly <code>protected(set)</code>.  Otherwise, the discussion was mostly a retread of the year before.</p>
+
+<p>We were still stressing out about this one, too.  It hadn't passed before, why would it now?  However, this time it passed 24:7 at the start of August 2024.</p>
+
+<p>Looking at the results, while there were two people who changed from a No to a Yes, the biggest change from the first vote was simply who voted.  Most of the previous No votes... didn't vote this time.  But entirely new people showed up to vote yes.  Showing up to vote matters, folks.</p>
+
+<h2 id="on-to-the-next-adventure">On to the next adventure</h2>
+
+<p>25 months after the process started, PHP now joins the cadre of languages with robust, flexible properties that can do more than just hold dumb values.  It's been a wild ride, and at many points a needlessly stressful one.  The end result, though, is a host of powerful new features that make PHP 8.4 the most exciting PHP release in several years.  Really, they're the best thing since enums...</p>
+
+<p>I hope this tale is a useful insight for folks into how the sausage is made.  Now go enjoy interface properties, hooks, and asymmetric visibility.  Or enjoy not using hooks, but having the option to, which eliminates a lot of code.  Both work.</p>
 
         </div>
 
         <div class="border-t pt-5 my-5">
                         <nav class="flex flex-row justify-between article -mx-2 mb-5">
-                                <a href="https://thephp.foundation/blog/2024/10/08/open-source-pledge/"
+                                <a href="https://thephp.foundation/blog/2024/10/21/web-services-tool-for-php-fpm/"
                    class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[#7f52ff] transition-all no-underline">
                     <div class="mb-1 text-sm text-gray-600 font-medium">Previous</div>
-                    <div class="font-bold text-blue-500">The PHP Foundation Supports The Open Source Pledge</div>
+                    <div class="font-bold text-blue-500">Introducing Web&nbsp;Services&nbsp;Tool for&nbsp;PHP-FPM</div>
                 </a>
                 
-                                <a href="https://thephp.foundation/blog/2024/11/01/how-hooks-happened/"
-                   class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[rgba(127,82,255,.8)] transition-all no-underline">
-                    <div class="mb-1 text-sm text-gray-600 font-medium">Next</div>
-                    <div class="font-bold text-blue-500">PHP 8.4: How Hooks Happened</div>
-                </a>
                             </nav>
             
             <div>
-                <a href="https://github.com/ThePHPF/thephp.foundation/edit/main/source/_posts/2024-10-21-web-services-tool-for-php-fpm.md"
+                <a href="https://github.com/ThePHPF/thephp.foundation/edit/main/source/_posts/2024-11-01-how-hooks-happened.md"
                    class="nav-org" rel="noopener noreferrer" target="_blank">Edit this page on GitHub</a>
             </div>
         </div>
