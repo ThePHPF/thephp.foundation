@@ -6,7 +6,7 @@ tags:
 author:
   - name: Larry Garfield
     url: https://github.com/Crell
-published_at: 5 November 2024
+published_at: 6 November 2024
 ---
 
 PHP 8.4 is coming on 21 November this year.  It includes a host of new functionality, but the biggest, in more ways than one, is Property hooks.  Given the excitement around it, as well as its size, the PHP Foundation's Roman Pronsky asked me to write up a bit about the process we went through to produce this beast.
