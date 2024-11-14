@@ -62,6 +62,7 @@ class PhpFoundation extends AbstractExtension
                 ),
             'Gold' =>
                 array (
+                    'laravel' => 'Laravel',
                 ),
             'Platinum' =>
                 array (
@@ -78,7 +79,6 @@ class PhpFoundation extends AbstractExtension
                     'ec-cube' => 'EC-CUBE',
                     'spryker' => 'Spryker',
                     'polcode' => 'Polcode',
-                    'laravel' => 'Laravel',
                     'binc' => 'BASE, Inc.',
                     'digital-scholar' => 'Digital Scholar',
                     'rakus' => 'RAKUS',
@@ -86,7 +86,6 @@ class PhpFoundation extends AbstractExtension
                     'cambium-learning-inc' => 'Cambium Learning, Inc.',
                     'paycom' => 'Paycom',
                     'prestashop' => 'PrestaShop',
-                    'spy' => 'SPY',
                 ),
         );
 
@@ -100,10 +99,12 @@ class PhpFoundation extends AbstractExtension
             'image' => 'https://images.opencollective.com/sentry/9620d33/logo/256.png'
         ];
 
+        $sponsors['Laravel']->image = '/assets/sponsors/laravel-logo.svg';
+
         $sponsors['Sovereign Tech Fund'] = (object)[
             'name' => 'Sovereign Tech Fund',
             'website' => 'https://www.sovereigntechfund.de/',
-            'image' => '/assets/icons/STF-Logo-Std-Black-RGB.svg'
+            'image' => '/assets/sponsors/STF-Logo-Std-Black-RGB.svg'
         ];
 
         $sponsors_map['Advisory Board'] = [
