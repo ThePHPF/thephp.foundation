@@ -35,7 +35,7 @@
         @apply font-bold text-xl;
     }
 
-    p, ol, ul, code {
+    p, ol, ul, code, blockquote {
         @apply mb-5;
     }
 
