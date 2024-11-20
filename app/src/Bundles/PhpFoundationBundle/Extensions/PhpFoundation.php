@@ -100,6 +100,7 @@ class PhpFoundation extends AbstractExtension
         ];
 
         $sponsors['Laravel']->image = '/assets/sponsors/laravel-logo.svg';
+        $sponsors['Laravel']->website = 'https://laravel.com/';
 
         $sponsors['Sovereign Tech Fund'] = (object)[
             'name' => 'Sovereign Tech Fund',
