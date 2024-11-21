@@ -1,5 +1,5 @@
 ---
-title: 'PHP Core Roundup #20: PHP 8.4 is Released!'
+title: 'PHP Core Roundup #20: PHP&nbsp;8.4&nbsp;is&nbsp;Released!'
 published_at: 21 November 2024
 layout: post
 tags:
