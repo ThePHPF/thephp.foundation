@@ -7,6 +7,12 @@
     <priority>0.8</priority>
   </url>
     <url>
+    <loc>https://thephp.foundation/blog/2024/11/21/php-core-roundup-20-php84/</loc>
+    <lastmod>2024-11-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+    <url>
     <loc>https://thephp.foundation/blog/2024/11/19/pie-pre-release/</loc>
     <lastmod>2024-11-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -260,49 +266,49 @@
   </url>
       <url>
     <loc>https://thephp.foundation/branding</loc>
-    <lastmod>2024-11-21T10:45:41+00:00</lastmod>
+    <lastmod>2024-11-21T13:30:20+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/code-of-conduct</loc>
-    <lastmod>2024-11-21T10:45:41+00:00</lastmod>
+    <lastmod>2024-11-21T13:30:20+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/contact</loc>
-    <lastmod>2024-11-21T10:45:41+00:00</lastmod>
+    <lastmod>2024-11-21T13:30:20+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/foundation</loc>
-    <lastmod>2024-11-21T10:45:41+00:00</lastmod>
+    <lastmod>2024-11-21T13:30:20+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/get-involved</loc>
-    <lastmod>2024-11-21T10:45:41+00:00</lastmod>
+    <lastmod>2024-11-21T13:30:20+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/privacy-policy</loc>
-    <lastmod>2024-11-21T10:45:41+00:00</lastmod>
+    <lastmod>2024-11-21T13:30:20+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/sponsor</loc>
-    <lastmod>2024-11-21T10:45:41+00:00</lastmod>
+    <lastmod>2024-11-21T13:30:20+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/structure</loc>
-    <lastmod>2024-11-21T10:45:41+00:00</lastmod>
+    <lastmod>2024-11-21T13:30:20+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>

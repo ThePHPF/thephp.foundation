@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2024-11-21T10:45:41+00:00</updated><entry><author><name>Ayesh Karunaratne</name><uri>https://aye.sh</uri></author><author><name>Sergey Panteleev</name><uri>https://sergeypanteleev.com</uri></author><title type="html"><![CDATA[PHP Core Roundup #14]]></title><content type="html"><![CDATA[<p>There have been numerous updates and enhancements to the PHP core over the past month, from thought-provoking RFCs to minor yet profound adjustments. Let's dive in and keep up with the most recent PHP developments.</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2024-11-21T13:30:20+00:00</updated><entry><author><name>Ayesh Karunaratne</name><uri>https://aye.sh</uri></author><author><name>Sergey Panteleev</name><uri>https://sergeypanteleev.com</uri></author><title type="html"><![CDATA[PHP Core Roundup #14]]></title><content type="html"><![CDATA[<p>There have been numerous updates and enhancements to the PHP core over the past month, from thought-provoking RFCs to minor yet profound adjustments. Let's dive in and keep up with the most recent PHP developments.</p>
 
 <blockquote>
   <p>The PHP Foundation is a collective of PHP contributors, veterans, and companies that collaborate to ensure the long-term sustainability of the PHP programming language. The foundation currently supports six contributors focused on PHP's maintenance, debt reduction, and feature development. These contributors work closely with others on coding, documentation, and discussions.</p>
@@ -855,7 +855,198 @@ We are incredibly grateful for the commitment and dedication of all contributors
 <blockquote>
   <p>PHP Roundup is prepared by Ayesh Karunaratne from <strong><a href="https://php.watch">PHP.Watch</a></strong>, a source for PHP News, Articles, Upcoming Changes, and more.</p>
 </blockquote>
-]]></content><link href="https://thephp.foundation/blog/2023/09/01/php-core-roundup-16/"/><id>https://thephp.foundation/blog/2023/09/01/php-core-roundup-16/</id><updated>Fri, 01 Sep 2023 00:00:00 +0000</updated></entry><entry><author><name>Ayesh Karunaratne</name><uri>https://aye.sh</uri></author><author><name>Sergey Panteleev</name><uri>https://sergeypanteleev.com</uri></author><title type="html"><![CDATA[PHP 8.3 Released!]]></title><content type="html"><![CDATA[<p><br /></p>
+]]></content><link href="https://thephp.foundation/blog/2023/09/01/php-core-roundup-16/"/><id>https://thephp.foundation/blog/2023/09/01/php-core-roundup-16/</id><updated>Fri, 01 Sep 2023 00:00:00 +0000</updated></entry><entry><author><name>Ayesh Karunaratne</name><uri>https://aye.sh</uri></author><author><name>Sergey Panteleev</name><uri>https://sergeypanteleev.com</uri></author><title type="html"><![CDATA[PHP Core Roundup #20: 📢 PHP 8.4 is Released!]]></title><content type="html"><![CDATA[<p>We are thrilled to announce that after a year of hard work, dedication, and collaboration, <a href="https://www.php.net/releases/8.4/"><strong>PHP 8.4</strong></a> is officially here!</p>
+
+<p>Thanks to the tireless efforts of the PHP Foundation members, the core PHP development team, and an incredible community of contributors, this upcoming version brings major new features and syntax, performance and security enhancements, and a healthy amount of deprecations.</p>
+
+<h2 id="a-year-of-hard-work-and-collaboration">A Year of Hard Work and Collaboration</h2>
+
+<p>The PHP Foundation financially supports ten PHP core developers. The PHP Foundation members, along with a total of <strong>115 contributors</strong>, have made over <strong>2,600 commits</strong> since PHP 8.3 until PHP 8.4.0 release.</p>
+
+<p>PHP 8.4 includes changes from <strong>36 RFCs</strong>. There have also been numerous mailing list discussions and RFCs that were withdrawn, declined, or are still under discussion.</p>
+
+<p>Since PHP 8.0, PHP 8.4 received the highest number of RFCs, and PHP 8.4 brings the changes such as property hooks and asymmetric visibility that received significant community involvement and refinement.</p>
+
+<h2 id="what-php-8.4-brings">What PHP 8.4 Brings</h2>
+
+<p>PHP 8.4 brings numerous new features and improvements to PHP. We covered some of them in our <a href="https://thephp.foundation/blog/2024/10/02/php-core-roundup-19">previous post</a> as well, but they are mentioned here as well, for more complete picture.</p>
+
+<p>As we also covered in <a href="https://thephp.foundation/blog/2024/10/02/php-core-roundup-19">PHP Core Roundup #19</a>, Property Hooks and Asymmetric Visibility are two of the highlighted features in PHP 8.4</p>
+
+<hr />
+
+<h3 id="php-8.4-supports-property-hooks%21">PHP 8.4 supports Property Hooks!</h3>
+
+<p>In PHP 8.4, it is possible for a class to declare class properties with "hooks", that get executed when the property is accessed or set, and the hooks can access the object context.</p>
+
+<p><a href="https://www.php.net/manual/en/language.oop5.property-hooks.php">Property hooks</a> open up a wide range of use cases that allow classes to declare virtual properties that enable expressive and intuitive APIs, make code readable and simple and avoid boilerplate code.</p>
+
+<pre><code class="php">class User {
+
+    public string $emailAddress {
+        set {
+            if (!filter_var($value, FILTER_VALIDATE_EMAIL)) {
+                throw new ValueError('emailAddress property must be a valid email address');
+            }
+            $this-&gt;emailAddress = $value;
+        }
+    }
+
+}
+
+$user = new User();
+$user-&gt;emailAddress = 'test@example.com'; // Allowed  
+$user-&gt;emailAddress = 'not an email address'; // Throws ValueError  
+</code></pre>
+
+<p><a href="https://github.com/Crell">Larry Garfield</a> wrote in <a href="/blog/2024/11/01/how-hooks-happened/">PHP 8.4: How Property Hooks Happened</a> about how he and Ilija Tovilo 💜 brought Property Hooks to PHP.</p>
+
+<h3 id="asymmetric-visibility">Asymmetric Visibility</h3>
+
+<p>PHP 8.4 introduces <a href="https://www.php.net/manual/en/language.oop5.visibility.php#language.oop5.visibility-members-aviz">asymmetric visibility</a>, allowing different access levels for getting and setting class properties. This feature is useful when you want to expose a property for reading but not writing.</p>
+
+<pre><code class="php">class User {  
+ public private(set) int $userId;  
+ public function __construct() { $this-&gt;userId = 42; }  
+}  
+
+$user = new User();  
+echo $user-&gt;userId; // 42  
+
+$user-&gt;userId = 16; // Error: Cannot modify private(set) property  
+</code></pre>
+
+<h3 id="lazy-objects">Lazy Objects</h3>
+
+<p>PHP 8.4 brings support for Lazy Objects. Using the Reflection API, it is possible to create class instances in PHP 8.4 that they are initialized only if needed.</p>
+
+<p>The <a href="https://www.php.net/manual/en/language.oop5.lazy-objects.php">Lazy Objects documentation</a> provides detailed examples and use cases.</p>
+
+<h3 id="html5-compliant-parser-in-dom-extension">HTML5-compliant parser in DOM Extension</h3>
+
+<p>PHP 8.4 upgrades the DOM extension with HTML5-compliant parsing. The new <code>Dom\HTMLDocument</code> and <code>Dom\XMLDocument</code> classes replace libxml2, which previously lacked HTML5 support. These updates improve DOM spec compliance and add features like CSS selector support.</p>
+
+<h3 id="bcmath-adds-operator-overloaded-%60bcmath%5Cnumber%60-class">BCMath adds operator-overloaded <code>BcMath\Number</code> class</h3>
+
+<p>The BCMath extension now includes the <code>BcMath\Number</code> class, enabling operator overloading for arithmetic operations.</p>
+
+<pre><code class="php">use BcMath\Number;  
+
+$num1 = new Number('22');  
+$num2 = new Number('7');  
+$num3 = new Number('100');  
+
+$result = ($num1 / $num2) + $num1 - $num2;  
+echo $result; // 18.1428571428
+</code></pre>
+
+<p>You can now use standard operators (<code>+</code>, <code>-</code>, <code>/</code>) with <code>BcMath\Number</code> objects, which also support all <code>bc*</code> functions.</p>
+
+<p>These objects are immutable and implement the <code>Stringable</code> interface, so they can be used in string contexts like <code>echo $num</code>.</p>
+
+<h3 id="new-functions">New Functions</h3>
+
+<ul>
+<li><a href="https://www.php.net/array_find"><code>array_find</code></a>, <a href="https://www.php.net/array_find_key"><code>array_find_key</code></a>, <a href="https://www.php.net/array_any"><code>array_any</code></a>, and <a href="https://www.php.net/array_all"><code>array_all</code></a></li>
+<li><a href="https://www.php.net/bcdivmod"><code>bcdivmod</code></a>, <a href="https://www.php.net/array_find_key"><code>bcround</code></a>, <a href="https://www.php.net/array_find_key"><code>bcceil</code></a>, and <a href="https://www.php.net/array_find_key"><code>bcfloor</code></a></li>
+<li><a href="https://www.php.net/mb_trim"><code>mb_trim</code></a>, <a href="https://www.php.net/mb_ltrim"><code>mb_ltrim</code></a>, and <a href="https://www.php.net/mb_rtrim"><code>mb_rtrim</code></a></li>
+<li><a href="https://www.php.net/mb_ucfirst"><code>mb_ucfirst</code></a> and <a href="https://www.php.net/mb_lcfirst"><code>mb_lcfirst</code></a></li>
+<li><a href="https://www.php.net/grapheme_str_split"><code>grapheme_str_split</code></a></li>
+<li><a href="https://www.php.net/fpow"><code>fpow</code></a></li>
+<li><a href="https://www.php.net/http_get_last_response_headers"><code>http_get_last_response_headers</code></a> and <a href="https://www.php.net/http_clear_last_response_headers"><code>http_clear_last_response_headers</code></a></li>
+</ul>
+
+<h3 id="pdo-driver-specific-subclasses">PDO Driver-Specific Subclasses</h3>
+
+<p>The <a href="https://wiki.php.net/rfc/pdo_driver_specific_subclasses">PDO Driver-specific subclasses</a> RFC is implemented in PHP 8.4. Previously, it was voted for PHP 8.3 but was not implemented in PHP 8.3 before its feature-freeze.</p>
+
+<p>PHP 8.4 now adds <code>Pdo\Mysql</code>, <code>Pdo\Pgsql</code>, <code>Pdo\Sqlite</code>, <code>Pdo\DbLib</code>, and <code>Pdo\Firebird</code> classes that extend the <code>PDO</code> class. Driver-specific methods, properties, and constants are now available in the driver-specific subclass. Driver-specific sub classes also allow APIs to be more expressive and restrictive by allowing the functions and methods only to accept/return driver-specific sub-classes.</p>
+
+<h3 id="%60aegis-128l%60-and-%60aegis256%60-support-in-sodium-extension"><code>AEGIS-128L</code> and <code>AEGIS256</code> support in Sodium extension</h3>
+
+<p><strong>AEGIS</strong> is an AES-based family of authenticated encryption algorithms that is faster than AES-GCM. The Sodium extension in PHP 8.4 supports <a href="https://www.php.net/manual/en/function.sodium-crypto-aead-aegis128l-encrypt.php"><code>AEGIS-128L</code></a> and <a href="https://www.php.net/manual/en/function.sodium-crypto-aead-aegis256-encrypt.php"><code>AEGIS256</code></a> encryption algorithms if the Sodium extension is compiled with <a href="https://github.com/jedisct1/libsodium"><code>libsodium</code></a> 1.0.19 or later.</p>
+
+<p><br/></p>
+
+<p>Apart from the new features, PHP 8.4 also updates several underlying dependencies and datasets, as well as unbundling three extensions:</p>
+
+<h3 id="updated-dependencies">Updated dependencies</h3>
+
+<ul>
+<li>The Curl extension now requires libcurl 7.61.0 or later, and even capable of making HTTP/3 requests if it is compiled with a supporting TLS library.</li>
+<li>The PCRE extension ships with PCRE 10.44, which provides support for Unicode 15 characters and character blocks, improved Regular Expression syntax, and performance improvements on certain systems.</li>
+<li>OpenSSL extension now requires OpenSSL 1.1.1 or later, with improved support for OpenSSL 3.x series. It can now support Curve25519 and Curve448 based keys. Further, OpenSSL can be compiled to provide Argon2 password hashing on OpenSSL 3.2+ on PHP NTS builds.</li>
+<li>To compile PHP as an Apache module (<code>mod_php</code>), PHP 8.4 drops support for the EOL Apache 2.0 and 2.2 series. The minimum required Apache version is now 2.4.</li>
+<li>The zlib extension now requires zlib version 1.2.11 at minimum.</li>
+</ul>
+
+<h3 id="unbundled-extensions">Unbundled Extensions</h3>
+
+<p><a href="https://wiki.php.net/rfc/unbundle_imap_pspell_oci8">IMAP, Pspell, OCI8, and PDO_OCI8 extensions</a> are unbundled from the PHP core, and are now available as PECL extensions, for which <a href="/blog/2024/11/19/pie-pre-release/">PIE might help</a> to install easily.</p>
+
+<h3 id="updated-php-icon-on-windows">Updated PHP Icon on Windows</h3>
+
+<p>PHP 8.4 also brings a minor, yet <em>very</em> overdue change to the PHP icon on Windows executables:</p>
+
+<table>
+<thead>
+<tr>
+  <th align="center"></th>
+  <th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="center"><img src="/assets/post-images/2024/php84/php-icon-old.png" alt="old PHP logo in Windows php.exe" /></td>
+  <td align="center"><img src="/assets/post-images/2024/php84/php-icon-new.png" alt="new PHP logo in Windows php.exe" /></td>
+</tr>
+<tr>
+  <td align="center">Old Icon</td>
+  <td align="center">New Icon</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="looking-ahead%3A-php-8.4-and-beyond">Looking Ahead: PHP 8.4 and Beyond</h2>
+
+<p>PHP 8.4 is the first major new PHP releases since the adoption of the new <a href="/blog/2024/10/02/php-core-roundup-19/#php-release-cycle-updates">PHP maintenance policy</a>. PHP 8.4, along with all current active PHP versions, will receive two years of active support and two years of security fixes.</p>
+
+<p>What this means is that PHP 8.4 will receive bug fixes until the end of 2026 and security fixes until the end of 2028.</p>
+
+<p>We just announced the pre-release of <a href="/blog/2024/11/19/pie-pre-release/">PIE - PHP Installer for Extensions</a>. PIE will significantly improve the workflow of downloading and compiling PHP extensions.</p>
+
+<p>PHP 8.5 (in the <code>master</code> branch) is currently under active development, and we already have RFCs such as <a href="https://wiki.php.net/rfc/closures_in_const_expr">Support Closures in constant expressions</a> in voting phase, and <a href="https://wiki.php.net/rfc/url_parsing_api">Add RFC3986 and WHATWG compliant URI parsing support</a> under discussion.</p>
+
+<h2 id="get-ready-to-upgrade">Get Ready to Upgrade</h2>
+
+<p><a href="https://github.com/php/php-src/releases/tag/php-8.4.0">PHP 8.4.0 is now a tagged release</a> on PHP's GitHub repository.</p>
+
+<p>Compiled binaries and container images are available for:</p>
+
+<ul>
+<li>Debian and Ubuntu-based Linux distros from <a href="https://deb.sury.org/">Ondrej Sury's repositories</a>.</li>
+<li>Fedora/RHEL/Rocky/Alma Linux from <a href="https://blog.remirepo.net/post/2024/09/27/PHP-on-the-road-to-the-8.4.0-release">Remi's repositories</a>.</li>
+<li>MacOS on <a href="https://ports.macports.org/port/php84/">MacPorts</a> and Homebrew <a href="https://github.com/shivammathur/homebrew-php">shivammathur/homebrew-php</a> tap.</li>
+<li>Windows on <a href="https://windows.php.net/download/">windows.php.net</a>.</li>
+<li>Docker and Podman <a href="https://hub.docker.com/_/php">Docker Hub</a></li>
+</ul>
+
+<hr />
+
+<h2 id="support-php-foundation">Support PHP Foundation</h2>
+
+<p>At The PHP Foundation, we support, promote, and advance the PHP language. We financially support ten PHP core developers to contribute to the PHP project. You can help support PHP Foundation on <a href="https://opencollective.com/phpfoundation">OpenCollective</a> or via <a href="https://github.com/sponsors/ThePHPF">GitHub Sponsors</a>.</p>
+
+<p>A big thanks to all our sponsors — PHP Foundation is all of us!</p>
+
+<p>Follow us on Twitter/X <a href="https://twitter.com/thephpf">@ThePHPF</a>, <a href="https://phpc.social/@thephpf">Mastodon</a>, <a href="https://www.linkedin.com/company/phpfoundation/">LinkedIn</a>, and <a href="https://bsky.app/profile/thephpf.bsky.social">Bluesky</a> to get the latest updates from the Foundation.</p>
+
+<p>💜️ 🐘</p>
+
+<blockquote>
+  <p>PHP Roundup is prepared by Ayesh Karunaratne from <strong><a href="https://php.watch">PHP.Watch</a></strong>, a source for PHP News, Articles, Upcoming Changes, and more.</p>
+</blockquote>
+]]></content><link href="https://thephp.foundation/blog/2024/11/21/php-core-roundup-20-php84/"/><id>https://thephp.foundation/blog/2024/11/21/php-core-roundup-20-php84/</id><updated>Thu, 21 Nov 2024 00:00:00 +0000</updated></entry><entry><author><name>Ayesh Karunaratne</name><uri>https://aye.sh</uri></author><author><name>Sergey Panteleev</name><uri>https://sergeypanteleev.com</uri></author><title type="html"><![CDATA[PHP 8.3 Released!]]></title><content type="html"><![CDATA[<p><br /></p>
 
 <object data="/assets/post-images/2023/php83/php83-fireworks.svg" type="image/svg+xml">
   <img src="/assets/post-images/2023/php83/php83-fireworks.svg" />
