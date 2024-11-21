@@ -12,7 +12,7 @@ author:
     url: https://sergeypanteleev.com
 ---
 
-We are thrilled to announce that after a year of hard work, dedication, and collaboration, **PHP 8.4** is officially here!
+We are thrilled to announce that after a year of hard work, dedication, and collaboration, [**PHP 8.4**](https://www.php.net/releases/8.4/) is officially here!
 
 Thanks to the tireless efforts of the PHP Foundation members, the core PHP development team, and an incredible community of contributors, this upcoming version brings major new features and syntax, performance and security enhancements, and a healthy amount of deprecations.
 
