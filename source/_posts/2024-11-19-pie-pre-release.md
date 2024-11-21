@@ -27,6 +27,6 @@ We’re working to make PIE stronger and easier to use. We’re improving how PH
 
 ## Are you an extension author?
 
-Extensions do need to be made compatible with PIE by adding a \`composer.json\` (more instructions [here](https://github.com/php/pie/blob/main/docs/extension-maintainers.md)), and submitting it to [Packagist](https://packagist.org/packages/submit). Once a package has added support for PIE, it will appear on the Packagist [Extensions list](https://packagist.org/extensions) page.
+Extensions do need to be made compatible with PIE by adding a `composer.json` (more instructions [here](https://github.com/php/pie/blob/main/docs/extension-maintainers.md)), and submitting it to [Packagist](https://packagist.org/packages/submit). Once a package has added support for PIE, it will appear on the Packagist [Extensions list](https://packagist.org/extensions) page.
 
 💜️🐘
