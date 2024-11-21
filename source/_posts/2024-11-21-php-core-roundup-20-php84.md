@@ -164,7 +164,7 @@ PHP 8.5 (in the `master` branch) is currently under active development, and we a
 
 ## Get Ready to Upgrade
 
-[PHP 8.4.0 is now a tagged release](https://github.com/php/php-src/releases/tag/php-8.4.0) on PHP's GitHub repository.
+[PHP 8.4.1 is now a tagged release](https://github.com/php/php-src/releases/tag/php-8.4.1) on PHP's GitHub repository.
 
 Compiled binaries and container images are available for:
 
