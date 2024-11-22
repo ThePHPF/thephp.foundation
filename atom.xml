@@ -3,9 +3,66 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2024-11-21T14:34:02+00:00</updated>
+    <updated>2024-11-22T11:39:02+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[The PHP Foundation Turns Three!]]></title>
+            <link href="https://thephp.foundation/blog/2024/11/22/php-foundation-turns-three/"/>
+            <updated>2024-11-22T00:00:00+00:00</updated>
+            <id>https://thephp.foundation/blog/2024/11/22/php-foundation-turns-three/</id>
+            <content type="html"><![CDATA[<p>Wow. Can you believe it? Just three years (and one day) ago, PHP had no organization behind it. Only two people were being paid to work on the language that powers 70% of the web.</p>
+
+<p>Here’s the very first announcement about the creation of the PHP Foundation: <a href="https://blog.jetbrains.com/phpstorm/2021/11/the-php-foundation/">The New Life of PHP – The PHP Foundation</a>.</p>
+
+<h2 id="fast-forward-to-today">Fast forward to today</h2>
+
+<p>We now have a team of 10 talented engineers dedicated to PHP. We’re supported by major companies, governments, and an incredible community. That same community is creating amazing projects with PHP, while businesses continue to thrive thanks to a mature, secure, and performant language.</p>
+
+<p>Since 2021, we’ve seen three PHP releases—PHP 8.2, 8.3, and the freshly released <a href="https://www.php.net/releases/8.4/en.php">PHP 8.4</a>. Here are just a few highlights from these releases, developed by the PHP Foundation team:</p>
+
+<ul>
+<li><a href="https://wiki.php.net/rfc/property-hooks">Property hooks</a></li>
+<li><a href="https://wiki.php.net/rfc/asymmetric-visibility-v2">Asymmetric Visibility</a></li>
+<li><a href="https://wiki.php.net/rfc/lazy-objects">Lazy Objects</a></li>
+<li><a href="https://thephp.foundation/blog/2024/11/19/pie-pre-release/">New tool for installing extensions: pie</a></li>
+<li><a href="https://wiki.php.net/rfc/support_object_type_in_bcmath">Support object type in BCMath</a></li>
+<li><a href="https://wiki.php.net/rfc/saner-inc-dec-operators">Saner Increment/Decrement operators</a></li>
+<li>Multiple type system improvements: <a href="https://wiki.php.net/rfc/null-false-standalone-types">null and false as stand-alone types</a>, <a href="https://wiki.php.net/rfc/dnf_types">Disjunctive Normal Form Types</a></li>
+<li><a href="https://wiki.php.net/rfc/readonly_amendments">Readonly amendments</a></li>
+<li><a href="https://wiki.php.net/rfc/dynamic_class_constant_fetch">Dynamic class constant fetch</a></li>
+<li><a href="https://wiki.php.net/rfc/arbitrary_static_variable_initializers">Arbitrary static variable initializers</a></li>
+</ul>
+
+<h2 id="feature-development-is-only-about-20%25-of-what-the-foundation-team-does">Feature development is only about 20% of what the foundation team does</h2>
+
+<p>Behind the scenes, there’s a lot more: triaging and fixing issues, handling security reports, reviewing code, updating documentation, and maintaining infrastructure. All of this work empowers the community and ensures PHP is stable and reliable.</p>
+
+<p>Here are some highlights:</p>
+
+<ul>
+<li>The total contributions to the PHP repositories grew by 51+%</li>
+<li>We conducted the first external security audit for PHP in 10 years</li>
+<li>We extended security support for PHP versions by one year</li>
+<li>We improved CI and testing infrastructure</li>
+<li>We introduced automated benchmarks to track performance regressions</li>
+</ul>
+
+<p>None of this would be possible without our sponsors. Huge thanks to every company and individual who has supported us over the past three years!</p>
+
+<p>Special shout-outs to:<br />
+JetBrains, Automattic, Sovereign Tech Agency, Craft CMS, Private Packagist, Tideways, Zend by Perforce, Laravel, Symfony,</p>
+
+<p>Mercari Inc., Les-Tilleuls.coop, pixiv Inc., Aternos GmbH, Sentry, Ardennes-étape, Cybozu,</p>
+
+<p>and many others — PHP is all of us!</p>
+
+<p>If you haven’t already, please consider <a href="https://thephp.foundation/sponsor/">sponsoring the PHP Foundation</a> 🙏</p>
+
+<p>Here’s to PHP and many more years ahead!<br />
+🐘💜</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[PHP Core Roundup #20: PHP&nbsp;8.4&nbsp;is&nbsp;Released!]]></title>
             <link href="https://thephp.foundation/blog/2024/11/21/php-core-roundup-20-php84/"/>
@@ -1028,498 +1085,6 @@ The development of PHP is done in the С programming language, and requires prof
 
 <p>That’s all for today. Follow us on X/Twitter <a href="https://twitter.com/thephpf">@ThePHPF</a>, Mastodon <a href="https://phpc.social/@thephpf">phpc.social/@thephpf</a>, and <a href="https://www.linkedin.com/company/phpfoundation/">LinkedIn</a> to get the latest updates from the PHP Foundation. 
 💜🐘</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[State of Generics and Collections]]></title>
-            <link href="https://thephp.foundation/blog/2024/08/19/state-of-generics-and-collections/"/>
-            <updated>2024-08-19T00:00:00+00:00</updated>
-            <id>https://thephp.foundation/blog/2024/08/19/state-of-generics-and-collections/</id>
-            <content type="html"><![CDATA[<p>Generics have been on the list of wanted features for a long time by numerous PHP developers. The topic is often brought up in "What's New in PHP?" talks as well during Q&amp;A.</p>
-
-<p>In this article we will be exploring the different approaches, and what their current state is.</p>
-
-<ul>
-<li><a href="#full-reified-generics">Full Reified generics</a></li>
-<li><a href="#collections">Collections</a></li>
-<li><a href="#other-alternatives">Other alternatives</a>
-
-<ul>
-<li><a href="#static-analysis">Static Analysis</a></li>
-<li><a href="#erased-generic-type-declarations">Erased Generic Type Declarations</a></li>
-<li><a href="#fully-erased-type-declarations">Fully Erased Type Declarations</a></li>
-</ul></li>
-<li><a href="#generic-arrays">Generic Arrays</a>
-
-<ul>
-<li><a href="#fluid-arrays">Fluid Arrays</a></li>
-<li><a href="#static-arrays">Static Arrays</a></li>
-</ul></li>
-<li><a href="#conclusion">Conclusion</a></li>
-</ul>
-
-<h1 id="full-reified-generics">Full Reified generics</h1>
-
-<p>With generics you can define classes with placeholders for the types of their properties and methods. These can then be specified when instances of the class are created. This enables code reusability and type safety across different data types.  "Reified" generics are implementations where the generic type information is defined and carried through to runtime, allowing for runtime enforcement of generic requirements.</p>
-
-<p>As PHP syntax, this could look like:</p>
-
-<pre><code>class Entry&lt;KeyType, ValueType&gt;
-{
-    public function __construct(protected KeyType $key, protected ValueType $value)
-    {
-    }
-
-    public function getKey(): KeyType
-    {
-        return $this-&gt;key;
-    }
-
-    public function getValue(): ValueType
-    {
-        return $this-&gt;value;
-    }
-}
-
-new Entry&lt;int, BlogPost&gt;(123, new BlogPost());
-</code></pre>
-
-<p>In the instantiated class, the generic type <code>KeyType</code> will be replaced with <code>int</code>, and each instance of <code>ValueType</code> with <code>BlogPost</code>, resulting in an object behaving like the following class definition:</p>
-
-<pre><code>class IntBlogPostEntry
-{
-    public function __construct(protected int $key, protected BlogPost $value)
-    {
-    }
-
-    public function getKey(): int
-    {
-        return $this-&gt;key;
-    }
-
-    public function getValue(): BlogPost
-    {
-        return $this-&gt;value;
-    }
-}
-</code></pre>
-
-<p>There have been a few attempts in the past to add this functionality to PHP as well. Nikita Popov attempted the <a href="https://github.com/PHPGenerics/php-generics-rfc/issues/45">most comprehensive experimental implementation</a> in 2020/2021, following up on <a href="https://wiki.php.net/rfc/generics">a draft RFC</a> from 2016, and a <a href="https://www.reddit.com/r/PHP/comments/j65968/comment/g83skiz/">reddit post</a> summarizing the remaining challenges.</p>
-
-<p>At the start of this year, under the auspices of the PHP Foundation, Arnaud Le Blanc <a href="https://github.com/arnaud-lb/php-src/pull/4">restarted this effort</a>, using Nikita's work as a starting point. Although many technical issues have been addressed, plenty of them are still unresolved.</p>
-
-<p>A key challenge is type inference. The use of generics tends to increase code verbosity because it requires type arguments to be specified each time a generic type is referenced. This is demonstrated in the following PHP code snippet:</p>
-
-<pre><code>function f(List&lt;Entry&lt;int,BlogPost&gt;&gt; $entries): Map&lt;int, BlogPost&gt;
-{
-    return new Map&lt;int, BlogPost&gt;($entries);
-}
-
-function g(List&lt;BlogPostId&gt; $ids): List&lt;BlogPost&gt;
-{
-    return map&lt;int, BlogPostId, BlogPost&gt;($ids, $repository-&gt;find(...));
-}
-</code></pre>
-
-<p>Type inference can reduce this verbosity by letting the compiler deduce the appropriate types automatically for us. For instance, in the examples above, the compiler might automatically determine the correct types for <code>new Map()</code> and <code>map()</code>. However, this is hard in PHP. Quoting Nikita, "primarily due to the very limited view of the codebase the PHP compiler has (it only sees one file at a time)".</p>
-
-<p>Consider the following example:</p>
-
-<pre><code>class Box&lt;T&gt;
-{
-    public function __construct(public T $value) {}
-}
-
-new Box(getValue());
-</code></pre>
-
-<p>In this scenario, the type of the getValue() expression is unknown until the function is loaded at runtime, making it impossible to infer <code>T</code> in <code>new Box(...)</code> during compilation.</p>
-
-<p>We could assign <code>T</code> at runtime based on the return <em>value</em> of the function, but this would result in unstable typing. In the previous example the type of <code>new Box()</code> would depend on the <em>implementation</em> of the return value of <code>getValue()</code>, which may be too specific: combine that with the fact that Box is invariant, and this code would break very quickly when trying to do anything useful with the Box instance:</p>
-
-<pre><code>interface ValueInterface {}
-class A implements ValueInterface {}
-class B implements ValueInterface {}
-
-function getValue(): ValueInterface
-{
-    return new A();
-}
-
-function doSomething(Box&lt;ValueInterface&gt; $box)
-{
-}
-
-$box = new Box(getValue()) // runtime: Box&lt;A&gt;, statically: Box&lt;ValueInterface&gt;
-doSomething($box); // accepts Box&lt;ValueInterface&gt;, not Box&lt;A&gt;
-</code></pre>
-
-<p>Typing is most useful when it’s based on compile-time / static information that doesn’t depend on the implementation.</p>
-
-<p>Note: In this example, <code>Box</code> is invariant, as it is often the case of generic classes. This means that <code>Box&lt;X&gt;</code> is neither a sub-type or a super-type of <code>Box&lt;Y&gt;</code> regardless of the relationship between <code>X</code> and <code>Y</code>, so <code>Box&lt;A&gt;</code> is not a sub-type of <code>Box&lt;ValueInterface&gt;</code>, and <code>doSomething()</code> can not accept a <code>Box&lt;A&gt;</code>.</p>
-
-<p>A generic class is invariant when one of its type placeholders is used both in read (e.g. as a return type) and write (e.g. a parameter type) positions at the same time. A property type is both in read and write position.</p>
-
-<p>To understand why, consider the following example:</p>
-
-<pre><code>function changeValue(Box&lt;ValueInterface&gt; $box)
-{
-    $box-&gt;value = new B();
-}
-</code></pre>
-
-<p>The <code>changeValue()</code> function accepts a <code>Box&lt;ValueInterface&gt;</code>, thus should be able to assign any sub-type of <code>ValueInterface</code> to <code>$box-&gt;value</code>. However, if we pass a <code>Box&lt;A&gt;</code> (with <code>A</code> a sub-type of <code>ValueInterface</code>), this contract breaks when we assign a value that is a sub-type of <code>ValueInterface</code> but not of <code>A</code>.</p>
-
-<p>The common solution in other generic languages is to allow a type parameter to be marked variant in only one direction (typically "in" or "out"), provided it is used only in a parameter or return position, respectively.  That allows that type parameter to be contravariant or covariant, as appropriate.</p>
-
-<h3 id="hybrid-approach-to-type-inference">Hybrid Approach to Type Inference</h3>
-
-<p>To address these challenges, we explored a hybrid approach, that lets us implement static type inference of generic parameters without having the full information available at compile time. This approach represents unknown types as symbols at compile time (e.g. the type of the expression <code>getValue()</code> is represented as <code>fcall&lt;getValue&gt;</code>). Symbolic types can be resolved at runtime when needed after functions and classes have been loaded, at a fraction of the cost of running the entire analysis at runtime. This operation can be cached (in inline caches) for the duration of the request, and maybe in caches similar to the inheritance cache.</p>
-
-<p>A proof of concept was implemented, and used to implement data-flow based, local, unidirectional type inference of generic type parameters, with the same behaviour as PHPStan/Psalm. The approach works, and could be used to experiment with other flavours of type inference.</p>
-
-<h3 id="performance-considerations">Performance Considerations</h3>
-
-<p>Another concern with generics is their impact on performance. Preliminary benchmarks indicated:</p>
-
-<ul>
-<li>Generics do not affect the performance of non-generic code.</li>
-<li>Simple generic code shows a modest performance degradation of about 1-2% compared to specialized code.</li>
-</ul>
-
-<p>However, later exploration has shown that compound types (such as unions) can lead to super-linear time complexity in type checking, potentially resulting in more substantial performance drawbacks. For example, checking whether <code>A|B</code> accepts <code>B</code> is linear, but checking <code>Box&lt;A|B&gt;()</code> against <code>Box&lt;A|B&gt;()</code> is O(nm).</p>
-
-<p>Super-linear complexity is also reached when merging compound types during the resolution of symbolic types.</p>
-
-<h3 id="future-directions">Future Directions</h3>
-
-<p>Ongoing challenges for reified generics include:</p>
-
-<ul>
-<li>Evaluating the effects of compound types and extreme cases</li>
-<li>Implement type-checking inline caches, and research more sophisticated algorithms for checking compound types</li>
-<li>Exploring eager-autoloading (preloading, but automatic), or inheritance-cache alike, to reduce the amount of symbolic types</li>
-</ul>
-
-<h1 id="collections">Collections</h1>
-
-<p>One of the main use cases for generics that often gets brought up is the need for typed arrays. In PHP, the swiss-army knife array type can be used (and abused) for lots of reasons. But you can't currently enforce the types to be used as key or value.</p>
-
-<p>In a parallel project, we have been working on a dedicated Collections syntax as a less-challenging alternative to full generics.</p>
-
-<p>Collections would come in three flavours: sets, sequences, and dictionaries. Sets and Sequences only define a value type, whereas Dictionaries have key and value types. The syntax of these could be as follows:</p>
-
-<pre><code>class Article
-{
-    public function __construct(public string $subject) {}
-}
-
-collection(Seq) Articles&lt;Article&gt;
-{
-}
-
-collection(Dict) YearBooks&lt;int =&gt; Book&gt;
-{
-}
-</code></pre>
-
-<p>You can then instantiate sequences and collections like you would do with a normal class:</p>
-
-<pre><code>$a1 = new Articles();
-$b1 = new YearBooks();
-</code></pre>
-
-<p>Sequences and Dictionaries will automatically have <a href="https://github.com/php/php-src/compare/master...derickr:php-src:collections&#35;diff-eeb1e0848e9a25b7492398bf5ddf9be15995a67d44a23c336869bf9f36910d1b">many methods defined</a> on them, providing a base functionality like PHP already has with the myriad of <code>array_*</code> functions. If you use the defined methods to add or update elements in the collection, then the type for keys and values have to match the ones as defined on the collection.</p>
-
-<p>In the example above, the <code>add()</code> method for the YearBooks dictionary then requires int to be used as key, and Book as value. For the main manipulation methods (add, get, unset, and isset), ArrayAccess style overloaded operations will also work, as well as potentially operator overloads.</p>
-
-<p>One of the drawbacks of Collections is that you need to declare them. Following adopted practise, that would mean a single line declaration in a separate file for each collection.</p>
-
-<p>Another concern is potentially higher memory usage, as for each class PHP will have to keep a corresponding class entry, including a list of all the associated methods.</p>
-
-<p>And a third concern is that there is no instanceof/is-a relationship between collections of compatible types, for example:</p>
-
-<pre><code>class A {}
-class B extends A {}
-
-seq As&lt;A&gt; {}
-seq Bs&lt;B&gt; {}
-
-new B() instanceof A // true
-new Bs() instanceof As // false
-</code></pre>
-
-<p>Or:</p>
-
-<pre><code>namespace Foo;
-seq As&lt;A&gt; {}
-
-namespace Bar;
-seq As&lt;A&gt; {}
-
-namespace;
-new Foo\As instanceof Bar\As; // false
-</code></pre>
-
-<p>Collections, although less powerful, can be an alternative to generics in many use cases, but without much of the complexity. The implementation as outline above is also significantly easier. An <a href="https://github.com/derickr/php-src/tree/collections">experimental branch is also available</a>.  However, if full generics are found to be viable and supported, implementing Seq, Set, and Dict directly on standard generics would be significantly preferable.</p>
-
-<p>Larry Garfield has <a href="https://github.com/Crell/php-rfcs/blob/master/collections/research-notes.md">conducted research</a> into other languages and how expansive their collection APIs are.  It's still in rough form, but the consensus seems to be "include everything", possibly broken up into discrete interfaces.  The rough recommendations at the end of the document suggest a likely way forward.</p>
-
-<p>You can find a patch for collections at <a href="https://github.com/php/php-src/pull/15429">https://github.com/php/php-src/pull/15429</a></p>
-
-<h1 id="other-alternatives">Other alternatives</h1>
-
-<h2 id="static-analysis">Static Analysis</h2>
-
-<p>Recent years have seen the emergence of static analysers. Both <a href="https://phpstan.org/blog/generics-in-php-using-phpdocs">PHPStan</a> and <a href="https://psalm.dev/docs/annotating_code/templated_annotations/">Psalm</a> support generics via doc block annotations, and are frequently used in open source libraries and private projects.</p>
-
-<p>Here is an example of a generic Dict class when using PHPStan and Psalm:</p>
-
-<pre><code>/**
- * @template Key
- * @template Value
- */
-class Dict
-{
-    /**
-     * @param array&lt;Key,Value&gt; $entries
-     */
-    public function __construct(private array $entries) {}
-
-    /**
-     * @param Key $key
-     * @param Value $value
-     */
-    public function set($key, $value): self
-    {
-        $this-&gt;entries[$key] = $value;
-        return $this;
-    }
-}
-
-/** @param Dict&lt;string,string&gt; $dict */
-function f($dict) {}
-
-$dict = new Dict([1 =&gt; 'foo']);
-$dict-&gt;set("foo", "bar"); // Static analyser error
-$dict-&gt;set(1, "bar");     // Ok
-f($dict);                 // Static analyser error
-</code></pre>
-
-<p>The docblock annotations are named “template” for historical reasons, but they implement a generics flavour very close to Java’s: Generic types are checked at static analysis time, and are not visible at runtime.</p>
-
-<p>This offers some benefits of generics, such as type safety, with the following drawbacks:</p>
-
-<ul>
-<li>Docblocks can be verbose</li>
-<li>Type checking requires running a separate tool (like PHPStan or Psalm)</li>
-<li>Generic type information is entirely unavailable at runtime.</li>
-<li>Generic type information is not enforced at runtime (so if you don't run a static analysis tool in advance, they accomplish nothing).</li>
-</ul>
-
-<h2 id="erased-generic-type-declarations">Erased Generic Type Declarations</h2>
-
-<p>Seeing the difficulties with implementing reified generics in PHP core, it has been proposed to implement them only syntactically, leaving the task of type checking to static analysers.</p>
-
-<p>In this alternative, the PHP syntax would be changed so that type declarations, class declarations, and function declarations accept generic syntax, but the PHP engine would not check them.</p>
-
-<p>We can call these “Erased” type declarations because the engine will simply ignore them at runtime. This alternative could be implemented in various ways:</p>
-
-<ul>
-<li>As part of php-src</li>
-<li>In an extension</li>
-<li>In an autoloader</li>
-<li>etc</li>
-</ul>
-
-<p>Here is what the same Dict class as above would look like:</p>
-
-<pre><code>class Dict&lt;Key,Value&gt;
-{
-    public function __construct(private array&lt;Key,Value&gt; $entries) {}
-
-    public function set(Key $key, Value $value): self
-    {
-        $this-&gt;entries[$key] = $value;
-        return $this;
-    }
-}
-
-function f(Dict&lt;string,string&gt; $dict) {}
-
-$dict = new Dict([1 =&gt; 'foo']);
-$dict-&gt;set("foo", "bar"); // Static analyser error
-$dict-&gt;set(1, "bar");     // Ok
-f($dict);                 // Static analyser error
-</code></pre>
-
-<p>This addresses the docblock verbosity issue of the Static Analysis alternative, but this introduces an inconsistency: Type declarations cause coercion, but erased generic type declarations will not.</p>
-
-<p>Consider the following example:</p>
-
-<pre><code>class StringList
-{
-    public function add(string $value)
-    {
-        $this-&gt;values[] = $value;
-    }
-}
-
-class List&lt;T&gt;
-{
-    public function add(T $value)
-    {
-        $this-&gt;values[] = $value;
-    }
-}
-
-$list = new StringList();
-$list-&gt;add(123); // coerced to string
-
-$list = new List&lt;string&gt;();
-$list-&gt;add(123); // NOT coerced to string
-</code></pre>
-
-<p>In this scenario, the first call to <code>add()</code> will coerce the argument to string, but not the second one.</p>
-
-<p>In languages like Java, which has erased generics on top of a traditional type system, the compiler does type checking, so inconsistencies like the above do not exist. However, in PHP these are unavoidable.</p>
-
-<p>Another drawback of erased generics is they are not visible at runtime. This would prevent pattern matching from seeing generic type arguments, for example.</p>
-
-<h2 id="fully-erased-type-declarations">Fully Erased Type Declarations</h2>
-
-<p>One way to address the inconsistency issue of Erased Generics is to change all type declarations to be erased. This could be opt-in with a <code>declare()</code> statement:</p>
-
-<pre><code>declare(types=erased);
-</code></pre>
-
-<p>In this alternative, the engine would stop checking types at runtime. In the previous example, both calls to <code>add()</code> would have the same behaviour: the value is not coerced. It is then up to the user to check types with an analyser.</p>
-
-<p>This is not uncommon in mainstream interpreted languages, as all of Javascript (via TypeScript), Python, and Ruby have fully erased type declarations.</p>
-
-<p>Letting users opt-in for fully erased typing and generics on a per-file basis would be another option to look at, and would make working with PHPStan/Psalm generics less verbose. Some additional benefits of this solution include:</p>
-
-<ul>
-<li>Short-term performance improvements due to the lack of type checking at runtime in opted-in code.</li>
-<li>The potential for extending the type system with advanced types like non-empty-string, list, int<range>, class-string, conditional types, and more.</li>
-</ul>
-
-<p>However, there would also be significant downsides:</p>
-
-<ul>
-<li>It's unclear what impact erased types would have on reflection, or libraries that depend on reflection.</li>
-<li>It would make type enforcement dependent on a developer actively choosing to run a static analysis tool, and the majority of the ecosystem right now doesn't use one to begin with.</li>
-<li>It effectively creates a third "type mode" that developers would have to account for, in addition to strict and weak typing today.  (Since code with user-defined pseudo types wouldn't be compatible with the type-enforced modes.)</li>
-<li>It would not actually resolve the "some types are enforced but not others" question, as anyone who wanted to use generics but not fully-erased types would still be left with partial-enforcement.</li>
-<li>PHP is currently unique among major scripting languages for having enforced types. That's a benefit and market advantage we would lose.</li>
-</ul>
-
-<h1 id="generic-arrays">Generic Arrays</h1>
-
-<p>This blog post discusses generic objects, but what about arrays?</p>
-
-<h2 id="fluid-arrays">Fluid Arrays</h2>
-
-<p>Arrays are copy on write: Modifying them creates a new copy (if they are referenced elsewhere), and modifies the copy instead. This makes arrays safe to pass around as you don’t need to worry about other functions modifying them (unless passed by reference).</p>
-
-<p>From a typing perspective this means that the type of an array is always defined by its content, and this type can not change because modifying an array creates a new one.</p>
-
-<p>From a generics perspective this is a very convenient property, as this makes arrays variant: They can have supertypes and subtypes, just like any (non-generic) class. In other words, the following code is type safe:</p>
-
-<pre><code>class A {}
-class B extends A {}
-
-function f(array $a) {}
-function g(array&lt;A&gt; $a) {}
-function h(array&lt;B&gt; $a) {}
-
-$array = [new B()];
-
-f($array);
-g($array);
-h($array);
-</code></pre>
-
-<p>Usually, generic containers are invariant because their type placeholders are used in both read and write positions. This is not the case for arrays because they are semantically immutable / copy on write.</p>
-
-<p>So the natural way to implement generic arrays is just as explained above: Let their content define their type. This is illustrated in the example below:</p>
-
-<pre><code>$a = [1];       // array&lt;int&gt;
-$b = [new A()]; // array&lt;A&gt;
-$c = $b;        // array&lt;A&gt;
-$c[] = new B(); // array&lt;A|B&gt;
-$b;             // array&lt;A&gt;
-</code></pre>
-
-<p>This does provide type safety, because what matters is that types are checked at API boundaries—when passing arguments to functions, returning values, updating object properties:</p>
-
-<pre><code>function f(array&lt;int&gt; $a) {}
-
-$a = [1];
-f($a); // ok
-
-$b = [new A()];
-f($b); // error
-</code></pre>
-
-<p>A PoC has been implemented, but the performance impact is still uncertain. Another issue is that supporting references and/or typed properties may not be possible.</p>
-
-<h2 id="static-arrays">Static Arrays</h2>
-
-<p>An alternative to Fluid Arrays is to fix the type at instantiation time:</p>
-
-<pre><code>$a = array&lt;int&gt;(1); // array&lt;int&gt;
-$a[] = new A();     // error
-</code></pre>
-
-<p>However, this alternative is very orthogonal to how arrays are used in PHP code today. It also makes arrays invariant:</p>
-
-<pre><code>function f(array&lt;int&gt; $a) {}
-function g(array $a) {}
-
-$a = [1];
-
-f($a); // ok
-g($a); // error
-</code></pre>
-
-<p>To understand why <code>g($a)</code> is an error, remember the explanation about invariance in the Generics section. <code>g()</code> accepts an <code>array</code> (<code>array&lt;mixed&gt;</code>), which means it should be able to add an element of any type to it. However, if we pass an <code>array&lt;int&gt;</code> to it, this contract is broken. Therefore, <code>array</code> can not accept <code>array&lt;int&gt;</code>.</p>
-
-<p>Invariance would make arrays very difficult to adopt, as a library can not start type hinting generic arrays without breaking user code, and users can not pass generic arrays to libraries until they start using generic arrays type declarations.</p>
-
-<p>These pitfalls are why it may also be preferable to focus on object-based collections. Either with the custom syntax above described as Collections, or with the more complete full generics, as are present in most modern languages.  However, the two approaches are mutually-compatible.</p>
-
-<h1 id="conclusion">Conclusion</h1>
-
-<p>We hope to have explained in this article what different options are available for the implementation of generic objects, collections, or related features into PHP. More work is required, and ongoing, to determine which options are most desireable, or even feasible.</p>
-
-<p>The next steps for investigation are:</p>
-
-<ul>
-<li>Further investigate type inference for reified generics.  If that turns out to be feasible with acceptable trade-offs, that is most likely the best option, and would imply building collections on top of them.</li>
-<li>Determine if erased generics would have any additional drawbacks not noted here that would make them infeasible.</li>
-<li>Determine if fully-erased types would have additional drawbacks not noted here that would make them infeasible.</li>
-<li>Further develop an optimal feature set for collections, which would be applicable either in the dedicated syntax or as an application of generics (reified or erased).</li>
-<li>Investigate the feasibility of using internal data structures in collections other than a hashmap (array) for better performance and simplicity.  (This would be a reason collections could not be done fully in user-space.)</li>
-<li>Halt efforts on typed arrays, as our current thoughts are that it is probably not worth doing, due to the complexities of how arrays work, and the minimal functionality that it would bring.</li>
-</ul>
-
-<p>Right now, we’re focused on gathering feedback specifically related to the questions below, to help guide our next steps:</p>
-
-<ul>
-<li>If reified generics turn out to be infeasible, would erased generics be acceptable, or should that continue to be left to user-space tooling?</li>
-<li>What generic features are acceptable to leave out to make the implementation more feasible?  (Eg, don't allow generics over union types; unioned generics are slow and we don't care; don't support in/out variance markers; etc.)</li>
-<li>If erased generics are included, would that necessitate an official linter to validate them, or continue to leave that to user-space tooling?</li>
-<li>If reified generics turn out to be infeasible, would the dedicated collections syntax shown here be acceptable?</li>
-<li>Would "erased generics now, and we can <em>probably</em> convert them to reified in the future" be an acceptable strategy, if it is determined to be feasible?</li>
-</ul>
-
-<h1 id="discussions">Discussions</h1>
-
-<ul>
-<li><a href="https://externals.io/message/125049">PHP Internals mailing list</a></li>
-<li><a href="https://www.reddit.com/r/PHP/comments/1ew7hik/state_of_generics_and_collections/">Reddit</a></li>
-</ul>
 ]]></content>
         </entry>
     </feed>

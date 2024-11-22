@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2024-11-21T14:34:04+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, July 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2024-11-22T11:39:03+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, July 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
 
 <p>Last month, the PHP foundation members continued the work on PHP 8.2 release and more. We are prepared to give a few talks this autumn. Also, besides core developers, we have a growing community of volunteers who help the PHP foundation. Read on to learn more.</p>
 
@@ -97,7 +97,57 @@
 <p>💜🐘</p>
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-]]></content><link href="https://thephp.foundation/blog/2022/08/04/php-foundation-update-july-2022/"/><id>https://thephp.foundation/blog/2022/08/04/php-foundation-update-july-2022/</id><updated>Thu, 04 Aug 2022 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, April 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
+]]></content><link href="https://thephp.foundation/blog/2022/08/04/php-foundation-update-july-2022/"/><id>https://thephp.foundation/blog/2022/08/04/php-foundation-update-july-2022/</id><updated>Thu, 04 Aug 2022 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[The PHP Foundation Turns Three!]]></title><content type="html"><![CDATA[<p>Wow. Can you believe it? Just three years (and one day) ago, PHP had no organization behind it. Only two people were being paid to work on the language that powers 70% of the web.</p>
+
+<p>Here’s the very first announcement about the creation of the PHP Foundation: <a href="https://blog.jetbrains.com/phpstorm/2021/11/the-php-foundation/">The New Life of PHP – The PHP Foundation</a>.</p>
+
+<h2 id="fast-forward-to-today">Fast forward to today</h2>
+
+<p>We now have a team of 10 talented engineers dedicated to PHP. We’re supported by major companies, governments, and an incredible community. That same community is creating amazing projects with PHP, while businesses continue to thrive thanks to a mature, secure, and performant language.</p>
+
+<p>Since 2021, we’ve seen three PHP releases—PHP 8.2, 8.3, and the freshly released <a href="https://www.php.net/releases/8.4/en.php">PHP 8.4</a>. Here are just a few highlights from these releases, developed by the PHP Foundation team:</p>
+
+<ul>
+<li><a href="https://wiki.php.net/rfc/property-hooks">Property hooks</a></li>
+<li><a href="https://wiki.php.net/rfc/asymmetric-visibility-v2">Asymmetric Visibility</a></li>
+<li><a href="https://wiki.php.net/rfc/lazy-objects">Lazy Objects</a></li>
+<li><a href="https://thephp.foundation/blog/2024/11/19/pie-pre-release/">New tool for installing extensions: pie</a></li>
+<li><a href="https://wiki.php.net/rfc/support_object_type_in_bcmath">Support object type in BCMath</a></li>
+<li><a href="https://wiki.php.net/rfc/saner-inc-dec-operators">Saner Increment/Decrement operators</a></li>
+<li>Multiple type system improvements: <a href="https://wiki.php.net/rfc/null-false-standalone-types">null and false as stand-alone types</a>, <a href="https://wiki.php.net/rfc/dnf_types">Disjunctive Normal Form Types</a></li>
+<li><a href="https://wiki.php.net/rfc/readonly_amendments">Readonly amendments</a></li>
+<li><a href="https://wiki.php.net/rfc/dynamic_class_constant_fetch">Dynamic class constant fetch</a></li>
+<li><a href="https://wiki.php.net/rfc/arbitrary_static_variable_initializers">Arbitrary static variable initializers</a></li>
+</ul>
+
+<h2 id="feature-development-is-only-about-20%25-of-what-the-foundation-team-does">Feature development is only about 20% of what the foundation team does</h2>
+
+<p>Behind the scenes, there’s a lot more: triaging and fixing issues, handling security reports, reviewing code, updating documentation, and maintaining infrastructure. All of this work empowers the community and ensures PHP is stable and reliable.</p>
+
+<p>Here are some highlights:</p>
+
+<ul>
+<li>The total contributions to the PHP repositories grew by 51+%</li>
+<li>We conducted the first external security audit for PHP in 10 years</li>
+<li>We extended security support for PHP versions by one year</li>
+<li>We improved CI and testing infrastructure</li>
+<li>We introduced automated benchmarks to track performance regressions</li>
+</ul>
+
+<p>None of this would be possible without our sponsors. Huge thanks to every company and individual who has supported us over the past three years!</p>
+
+<p>Special shout-outs to:<br />
+JetBrains, Automattic, Sovereign Tech Agency, Craft CMS, Private Packagist, Tideways, Zend by Perforce, Laravel, Symfony,</p>
+
+<p>Mercari Inc., Les-Tilleuls.coop, pixiv Inc., Aternos GmbH, Sentry, Ardennes-étape, Cybozu,</p>
+
+<p>and many others — PHP is all of us!</p>
+
+<p>If you haven’t already, please consider <a href="https://thephp.foundation/sponsor/">sponsoring the PHP Foundation</a> 🙏</p>
+
+<p>Here’s to PHP and many more years ahead!<br />
+🐘💜</p>
+]]></content><link href="https://thephp.foundation/blog/2024/11/22/php-foundation-turns-three/"/><id>https://thephp.foundation/blog/2024/11/22/php-foundation-turns-three/</id><updated>Fri, 22 Nov 2024 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, April 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
 
 <p>We’re off by two but still happy to bring you an update from the foundation.</p>
 
