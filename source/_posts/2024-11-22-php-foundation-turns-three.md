@@ -11,7 +11,8 @@ published_at: 22 November 2024
 
 Wow. Can you believe it? Just three years (and one day) ago, PHP had no organization behind it. Only two people were being paid to work on the language that powers 70% of the web.
 
-Here’s the very first announcement about the creation of the PHP Foundation: [The New Life of PHP – The PHP Foundation](https://blog.jetbrains.com/phpstorm/2021/11/the-php-foundation/).
+Here’s the very first announcement about the creation of the PHP Foundation: 
+[The New Life of PHP – The PHP Foundation](https://blog.jetbrains.com/phpstorm/2021/11/the-php-foundation/).
 
 ## Fast forward to today
 
@@ -45,9 +46,7 @@ Here are some highlights:
 None of this would be possible without our sponsors. Huge thanks to every company and individual who has supported us over the past three years!
 
 Special shout-outs to:  
-JetBrains, Automattic, Sovereign Tech Agency, Craft CMS, Private Packagist, Tideways, Zend by Perforce, Laravel, Symfony,  
-
-Mercari Inc., Les-Tilleuls.coop, pixiv Inc., Aternos GmbH, Sentry, Ardennes-étape, Cybozu,  
+JetBrains, Automattic, Sovereign Tech Agency, Craft CMS, Private Packagist, Tideways, Zend by Perforce, Laravel, Symfony, Mercari Inc., Les-Tilleuls.coop, pixiv Inc., Aternos GmbH, Sentry, Ardennes-étape, Cybozu,  
 
 and many others — PHP is all of us!
 
