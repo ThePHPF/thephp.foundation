@@ -110,7 +110,7 @@ These objects are immutable and implement the `Stringable` interface, so they ca
 ### New Functions
 
  - [`array_find`](https://www.php.net/array_find), [`array_find_key`](https://www.php.net/array_find_key), [`array_any`](https://www.php.net/array_any), and [`array_all`](https://www.php.net/array_all)
- - [`bcdivmod`](https://www.php.net/bcdivmod), [`bcround`](https://www.php.net/array_find_key), [`bcceil`](https://www.php.net/array_find_key), and [`bcfloor`](https://www.php.net/array_find_key)
+ - [`bcdivmod`](https://www.php.net/bcdivmod), [`bcround`](https://www.php.net/bcround), [`bcceil`](https://www.php.net/bcceil), and [`bcfloor`](https://www.php.net/bcfloor)
  - [`mb_trim`](https://www.php.net/mb_trim), [`mb_ltrim`](https://www.php.net/mb_ltrim), and [`mb_rtrim`](https://www.php.net/mb_rtrim)
  - [`mb_ucfirst`](https://www.php.net/mb_ucfirst) and [`mb_lcfirst`](https://www.php.net/mb_lcfirst)
  - [`grapheme_str_split`](https://www.php.net/grapheme_str_split)
