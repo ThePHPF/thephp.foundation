@@ -44,9 +44,9 @@ class PhpFoundation extends AbstractExtension
 
         $sponsors = $unique;
         
-        $sponsors_map = array (
+        $sponsors_map = [
             'Silver' =>
-                array (
+                [
                     'packagist' => 'Private Packagist',
                     'craftcms' => 'Craft CMS',
                     'zend' => 'Zend by Perforce',
@@ -57,21 +57,22 @@ class PhpFoundation extends AbstractExtension
                     'user-ecfec7e5' => 'pixiv Inc.',
                     'aternos' => 'Aternos GmbH',
                     'sentry-team' => 'Sentry Team',
-                    'ardennes-etape' => 'Ardennes-étape',
                     'cybozu' => 'Cybozu',
-                ),
+                    'manychat' => 'Manychat',
+                ],
             'Gold' =>
-                array (
+                [
                     'laravel' => 'Laravel',
-                ),
+                    'GoDaddy.com' => 'GoDaddy.com',
+                ],
             'Platinum' =>
-                array (
+                [
                     'jetbrains' => 'JetBrains',
                     'automattic' => 'Automattic',
                     '11004-sovereign-tech-fund-2532c0cc' => 'Sovereign Tech Fund',
-                ),
+                ],
             'Past' =>
-                array (
+                [
                     'livesport-s-r-o' => 'Livesport s.r.o.',
                     'acquia' => 'Acquia',
                     'stefan-hamann' => 'shopware AG',
@@ -86,8 +87,9 @@ class PhpFoundation extends AbstractExtension
                     'cambium-learning-inc' => 'Cambium Learning, Inc.',
                     'paycom' => 'Paycom',
                     'prestashop' => 'PrestaShop',
-                ),
-        );
+                    'ardennes-etape' => 'Ardennes-étape',
+                ],
+        ];
 
         // FIXME Empty data in OpenCollective
         unset($sponsors_map['Past']['rakusu']);
@@ -97,6 +99,12 @@ class PhpFoundation extends AbstractExtension
             'name' => 'Sentry',
             'website' => 'https://sentry.io/',
             'image' => 'https://images.opencollective.com/sentry/9620d33/logo/256.png'
+        ];
+
+        $sponsors['Manychat'] = (object)[
+            'name' => 'Manychat',
+            'website' => 'https://manychat.com/',
+            'image' => '/assets/sponsors/manychat.svg'
         ];
 
         $sponsors['Laravel']->image = '/assets/sponsors/laravel-logo.svg';
