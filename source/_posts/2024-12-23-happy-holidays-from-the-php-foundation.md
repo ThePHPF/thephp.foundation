@@ -45,8 +45,6 @@ We owe a special thanks to our major sponsors who make our work possible:
 
 [**Zend by Perforce**](https://www.zend.com/)
 
-[**Tideways**](https://tideways.com/)
-
 [**Symfony Corp**](https://symfony.com/)
 
 [**Sentry**](https://sentry.io/welcome/)
