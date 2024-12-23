@@ -3,9 +3,85 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2024-12-06T00:41:15+00:00</updated>
+    <updated>2024-12-23T10:33:51+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Happy Holidays from&nbsp;The&nbsp;PHP&nbsp;Foundation!]]></title>
+            <link href="https://thephp.foundation/blog/2024/12/23/happy-holidays-from-the-php-foundation/"/>
+            <updated>2024-12-23T00:00:00+00:00</updated>
+            <id>https://thephp.foundation/blog/2024/12/23/happy-holidays-from-the-php-foundation/</id>
+            <content type="html"><![CDATA[<p>As 2024 comes to a close, we at the PHP Foundation want to take a moment to thank everyone who has supported us this year. It’s been an incredible journey, and we couldn’t have done it without the amazing PHP community and our generous sponsors.</p>
+
+<h2 id="a-year-of-milestones">A Year of Milestones</h2>
+
+<p>In <a href="https://thephp.foundation/blog/2024/11/22/php-foundation-turns-three">its third year</a>, the PHP Foundation has achieved several milestones that have further strengthened the PHP ecosystem: first in a decade <a href="https://thephp.foundation/blog/2024/11/22/php-foundation-turns-three/#feature-development-is-only-about-20%25-of-what-the-foundation-team-does">security audit</a>, <a href="https://thephp.foundation/blog/2024/11/19/pie-pre-release/">pie</a>, numerous features and improvements for <a href="https://www.php.net/releases/8.4/en.php">PHP 8.4</a>, and much more to come next year!</p>
+
+<h2 id="celebrating-our-sponsors">Celebrating Our Sponsors</h2>
+
+<p>We owe a special thanks to our major sponsors who make our work possible:</p>
+
+<h3 id="platinum">Platinum</h3>
+
+<p><a href="https://www.sovereign.tech/"><strong>Sovereign Tech Agency</strong></a></p>
+
+<p><a href="https://www.jetbrains.com/"><strong>JetBrains</strong></a></p>
+
+<p><a href="https://automattic.com/"><strong>Automattic</strong></a></p>
+
+<h3 id="gold">Gold</h3>
+
+<p><a href="https://laravel.com/"><strong>Laravel</strong></a></p>
+
+<p><a href="https://www.godaddy.com/"><strong>GoDaddy</strong></a> <strong>&#91;new! ✨&#93;</strong></p>
+
+<h3 id="silver">Silver</h3>
+
+<p><a href="https://packagist.com/"><strong>Private Packagist</strong></a></p>
+
+<p><a href="https://craftcms.com/"><strong>Craft CMS</strong></a></p>
+
+<p><a href="https://cybozu.co.jp/en/company/"><strong>Cybozu</strong></a></p>
+
+<p><a href="https://tideways.com/"><strong>Tideways</strong></a></p>
+
+<p><a href="https://www.zend.com/"><strong>Zend by Perforce</strong></a></p>
+
+<p><a href="https://tideways.com/"><strong>Tideways</strong></a></p>
+
+<p><a href="https://symfony.com/"><strong>Symfony Corp</strong></a></p>
+
+<p><a href="https://sentry.io/welcome/"><strong>Sentry</strong></a></p>
+
+<p><a href="https://manychat.com/"><strong>Manychat</strong></a> <strong>&#91;new! ✨&#93;</strong></p>
+
+<p><a href="https://www.mercari.com/"><strong>Mercari Inc.</strong></a></p>
+
+<p><a href="http://Les-Tilleuls.coop"><strong>Les-Tilleuls.coop</strong></a></p>
+
+<p><a href="https://www.pixiv.net/en/"><strong>pixiv Inc.</strong></a></p>
+
+<p><a href="https://aternos.gmbh/en/"><strong>Aternos GmbH</strong></a></p>
+
+<p><a href="https://chstudio.fr/en/homepage/"><strong>CH Studio</strong></a></p>
+
+<p>Big thanks to newly joined major sponsors: <a href="https://www.godaddy.com/"><strong>GoDaddy</strong></a> and <a href="https://manychat.com/"><strong>Manychat</strong></a>!</p>
+
+<p>Your contributions enable us to support developers, fund crucial projects, and ensure PHP is a modern and reliable choice for web development.</p>
+
+<p>If you are yet to decide on sponsoring the foundation, <a href="https://thephp.foundation/blog/2024/09/30/call-fo-sponsors/">here</a> you can find information on how to join us and why it matters.</p>
+
+<h2 id="wishing-you-joyful-holidays-%E2%9C%A8">Wishing You Joyful Holidays ✨</h2>
+
+<p>To everyone in the PHP community, we wish you a joyful holiday season filled with warmth, happiness, and a well-deserved break. Thank you for your support, passion, and commitment to PHP.</p>
+
+<p>Here’s to a wonderful 2025! 🥂</p>
+
+<p>Warm wishes,<br />
+The PHP Foundation<br />
+🐘💜</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[The PHP Foundation Turns Three!]]></title>
             <link href="https://thephp.foundation/blog/2024/11/22/php-foundation-turns-three/"/>
@@ -1037,53 +1113,6 @@ The development of PHP is done in the С programming language, and requires prof
 </p>
 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeYNVQoK2r9c6EtoMnDaIpLzDc95egt1a1mcfiHTovqMDhFuw/viewform?embedded=true" width="100%" height="1693" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[PHP Foundation Update, September 2024]]></title>
-            <link href="https://thephp.foundation/blog/2024/09/12/php-foundation-update-september-2024/"/>
-            <updated>2024-09-12T00:00:00+00:00</updated>
-            <id>https://thephp.foundation/blog/2024/09/12/php-foundation-update-september-2024/</id>
-            <content type="html"><![CDATA[<p><code>&lt;?= 'Hello world!';</code></p>
-
-<p>Here are some updates we’d like to share with you.</p>
-
-<h2 id="generics-research-progress">Generics Research Progress</h2>
-
-<p>One of our most anticipated projects is the research into generics for PHP. In August, we published a <a href="https://thephp.foundation/blog/2024/08/19/state-of-generics-and-collections/">comprehensive report on the state of generics and collections in PHP</a>. This research is a crucial step towards potentially implementing generics in future PHP.  The further direction has not been decided yet, so we encourage the PHP community to review the report and provide feedback.</p>
-
-<h2 id="welcoming-ben-marks-as-official-php-foundation-ambassador">Welcoming Ben Marks as Official PHP Foundation Ambassador</h2>
-
-<p>We are thrilled to announce that <a href="https://www.linkedin.com/in/bhmarks/">Ben Marks</a> has stepped up as the official PHP Foundation ambassador. Ben is Director Global Market Development at Shopware, and  was a co-Founder of the Magento Association.</p>
-
-<p>In this role, Ben will:</p>
-
-<ul>
-<li>Serve as a liaison between the Foundation and the broader PHP community.</li>
-<li>Represent the Foundation at conferences and events.</li>
-<li>Help communicate our initiatives and gather feedback from the community.</li>
-</ul>
-
-<p>We're confident that Ben's contributions will strengthen our connections within the PHP world and help us better serve the community's needs.</p>
-
-<p>Please give Ben a warm welcome&#33;</p>
-
-<h2 id="website-updates-in-progress">Website Updates in Progress</h2>
-
-<p>We’d like to make sure our <strong><em><a href="https://thephp.foundation">thephp.foundation</a></em></strong> website provides clear information about what we do, how sponsors can support the foundation, and what are the benefits on top of supporting the PHP language maintenance and development. Please share what you think is missing on the website or is not clearly described. Roast the website so we can improve&#33;</p>
-
-<h2 id="shout-out-to-our-sponsors">Shout-out to our Sponsors</h2>
-
-<p>We want to extend a big thank you to all the individuals and organizations supporting The PHP Foundation. This time, we’d like to give special recognition to <a href="https://www.sovereigntechfund.de/">Sovereign Tech Fund</a> for their incredible investment this year. And a big thank you to <a href="https://cybozu.co.jp/en/">Cybozu</a>, <a href="http://Les-Tilleuls.coop">Les-Tilleuls.coop</a>, <a href="https://www.pixiv.net/en/">pixiv Inc.</a>, <a href="https://www.mercari.com/">Mercari Inc.</a>, <a href="https://aternos.gmbh/en/">Aternos GmbH</a>, <a href="https://en.ardennes-etape.be/">Ardennes-étape</a>, <a href="https://chstudio.fr/">CH Studio</a>, and <a href="https://spysystem.dk/">SPY</a>.</p>
-
-<p>We’re also deeply grateful to our major sponsors for their continued commitment: <a href="https://automattic.com/">Automattic</a>, <a href="https://www.jetbrains.com/">JetBrains</a>, <a href="https://packagist.com/">Private Packagist</a>, <a href="https://craftcms.com/">Craft CMS</a>, <a href="https://www.zend.com/">Zend by Perforce</a>, <a href="https://tideways.com/">Tideways</a>, and <a href="https://symfony.com/">Symfony</a>.</p>
-
-<p>Thank you so much to <a href="https://thephp.foundation/#sponsors">everyone who sponsored</a> – the PHP Foundation is all of us&#33;</p>
-
-<p><br></p>
-
-<p>That’s all for today. Follow us on X/Twitter <a href="https://twitter.com/thephpf">@ThePHPF</a>, Mastodon <a href="https://phpc.social/@thephpf">phpc.social/@thephpf</a>, and <a href="https://www.linkedin.com/company/phpfoundation/">LinkedIn</a> to get the latest updates from the PHP Foundation. 
-💜🐘</p>
 ]]></content>
         </entry>
     </feed>

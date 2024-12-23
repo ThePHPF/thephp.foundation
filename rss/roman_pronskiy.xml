@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2024-12-06T00:41:17+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, July 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2024-12-23T10:33:53+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, July 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
 
 <p>Last month, the PHP foundation members continued the work on PHP 8.2 release and more. We are prepared to give a few talks this autumn. Also, besides core developers, we have a growing community of volunteers who help the PHP foundation. Read on to learn more.</p>
 
@@ -369,7 +369,76 @@ Besides Jakub, there will be talks from Niels Dossche and Sebastian Bergmann.</p
 <p>That’s all for today. Follow us on Twitter <a href="https://twitter.com/thephpf">@ThePHPF</a> to get the latest updates from the Foundation.</p>
 
 <p>💙💛 ☮️ 🐘</p>
-]]></content><link href="https://thephp.foundation/blog/2022/03/31/the-php-foundation-update-march-2022/"/><id>https://thephp.foundation/blog/2022/03/31/the-php-foundation-update-march-2022/</id><updated>Thu, 31 Mar 2022 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[The PHP Foundation Update, January 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
+]]></content><link href="https://thephp.foundation/blog/2022/03/31/the-php-foundation-update-march-2022/"/><id>https://thephp.foundation/blog/2022/03/31/the-php-foundation-update-march-2022/</id><updated>Thu, 31 Mar 2022 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[Happy Holidays from&nbsp;The&nbsp;PHP&nbsp;Foundation!]]></title><content type="html"><![CDATA[<p>As 2024 comes to a close, we at the PHP Foundation want to take a moment to thank everyone who has supported us this year. It’s been an incredible journey, and we couldn’t have done it without the amazing PHP community and our generous sponsors.</p>
+
+<h2 id="a-year-of-milestones">A Year of Milestones</h2>
+
+<p>In <a href="https://thephp.foundation/blog/2024/11/22/php-foundation-turns-three">its third year</a>, the PHP Foundation has achieved several milestones that have further strengthened the PHP ecosystem: first in a decade <a href="https://thephp.foundation/blog/2024/11/22/php-foundation-turns-three/#feature-development-is-only-about-20%25-of-what-the-foundation-team-does">security audit</a>, <a href="https://thephp.foundation/blog/2024/11/19/pie-pre-release/">pie</a>, numerous features and improvements for <a href="https://www.php.net/releases/8.4/en.php">PHP 8.4</a>, and much more to come next year!</p>
+
+<h2 id="celebrating-our-sponsors">Celebrating Our Sponsors</h2>
+
+<p>We owe a special thanks to our major sponsors who make our work possible:</p>
+
+<h3 id="platinum">Platinum</h3>
+
+<p><a href="https://www.sovereign.tech/"><strong>Sovereign Tech Agency</strong></a></p>
+
+<p><a href="https://www.jetbrains.com/"><strong>JetBrains</strong></a></p>
+
+<p><a href="https://automattic.com/"><strong>Automattic</strong></a></p>
+
+<h3 id="gold">Gold</h3>
+
+<p><a href="https://laravel.com/"><strong>Laravel</strong></a></p>
+
+<p><a href="https://www.godaddy.com/"><strong>GoDaddy</strong></a> <strong>&#91;new! ✨&#93;</strong></p>
+
+<h3 id="silver">Silver</h3>
+
+<p><a href="https://packagist.com/"><strong>Private Packagist</strong></a></p>
+
+<p><a href="https://craftcms.com/"><strong>Craft CMS</strong></a></p>
+
+<p><a href="https://cybozu.co.jp/en/company/"><strong>Cybozu</strong></a></p>
+
+<p><a href="https://tideways.com/"><strong>Tideways</strong></a></p>
+
+<p><a href="https://www.zend.com/"><strong>Zend by Perforce</strong></a></p>
+
+<p><a href="https://tideways.com/"><strong>Tideways</strong></a></p>
+
+<p><a href="https://symfony.com/"><strong>Symfony Corp</strong></a></p>
+
+<p><a href="https://sentry.io/welcome/"><strong>Sentry</strong></a></p>
+
+<p><a href="https://manychat.com/"><strong>Manychat</strong></a> <strong>&#91;new! ✨&#93;</strong></p>
+
+<p><a href="https://www.mercari.com/"><strong>Mercari Inc.</strong></a></p>
+
+<p><a href="http://Les-Tilleuls.coop"><strong>Les-Tilleuls.coop</strong></a></p>
+
+<p><a href="https://www.pixiv.net/en/"><strong>pixiv Inc.</strong></a></p>
+
+<p><a href="https://aternos.gmbh/en/"><strong>Aternos GmbH</strong></a></p>
+
+<p><a href="https://chstudio.fr/en/homepage/"><strong>CH Studio</strong></a></p>
+
+<p>Big thanks to newly joined major sponsors: <a href="https://www.godaddy.com/"><strong>GoDaddy</strong></a> and <a href="https://manychat.com/"><strong>Manychat</strong></a>!</p>
+
+<p>Your contributions enable us to support developers, fund crucial projects, and ensure PHP is a modern and reliable choice for web development.</p>
+
+<p>If you are yet to decide on sponsoring the foundation, <a href="https://thephp.foundation/blog/2024/09/30/call-fo-sponsors/">here</a> you can find information on how to join us and why it matters.</p>
+
+<h2 id="wishing-you-joyful-holidays-%E2%9C%A8">Wishing You Joyful Holidays ✨</h2>
+
+<p>To everyone in the PHP community, we wish you a joyful holiday season filled with warmth, happiness, and a well-deserved break. Thank you for your support, passion, and commitment to PHP.</p>
+
+<p>Here’s to a wonderful 2025! 🥂</p>
+
+<p>Warm wishes,<br />
+The PHP Foundation<br />
+🐘💜</p>
+]]></content><link href="https://thephp.foundation/blog/2024/12/23/happy-holidays-from-the-php-foundation/"/><id>https://thephp.foundation/blog/2024/12/23/happy-holidays-from-the-php-foundation/</id><updated>Mon, 23 Dec 2024 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[The PHP Foundation Update, January 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
 
 <p>In November, the PHP Foundation was launched publicly and we’ve seen enormous support from the community.
 Thanks to all of you who have already supported the initiative! We’re planning to update you about our workstream activities on a monthly basis, and this is our first update post.
