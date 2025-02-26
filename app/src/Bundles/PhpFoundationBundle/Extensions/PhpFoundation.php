@@ -69,7 +69,7 @@ class PhpFoundation extends AbstractExtension
                 [
                     'jetbrains' => 'JetBrains',
                     'automattic' => 'Automattic',
-                    '11004-sovereign-tech-fund-2532c0cc' => 'Sovereign Tech Fund',
+                    '11004-sovereign-tech-fund-2532c0cc' => 'Sovereign Tech Agency',
                 ],
             'Past' =>
                 [
@@ -83,7 +83,6 @@ class PhpFoundation extends AbstractExtension
                     'binc' => 'BASE, Inc.',
                     'digital-scholar' => 'Digital Scholar',
                     'rakus' => 'RAKUS',
-                    'rakusu' => 'ラクス 中村崇則',
                     'cambium-learning-inc' => 'Cambium Learning, Inc.',
                     'paycom' => 'Paycom',
                     'prestashop' => 'PrestaShop',
@@ -103,7 +102,7 @@ class PhpFoundation extends AbstractExtension
 
         $sponsors['Manychat'] = (object)[
             'name' => 'Manychat',
-            'website' => 'https://manychat.com/',
+            'website' => 'https://careers.manychat.com/?utm_source=phpfnd&utm_medium=phpfnd_site&utm_campaign=sponsorship',
             'image' => '/assets/sponsors/manychat.svg'
         ];
 
