@@ -109,10 +109,10 @@ class PhpFoundation extends AbstractExtension
         $sponsors['Laravel']->image = '/assets/sponsors/laravel-logo.svg';
         $sponsors['Laravel']->website = 'https://laravel.com/';
 
-        $sponsors['Sovereign Tech Fund'] = (object)[
-            'name' => 'Sovereign Tech Fund',
-            'website' => 'https://www.sovereigntechfund.de/',
-            'image' => '/assets/sponsors/STF-Logo-Std-Black-RGB.svg'
+        $sponsors['Sovereign Tech Agency'] = (object)[
+            'name' => 'Sovereign Tech Agency',
+            'website' => 'https://www.sovereign.tech/',
+            'image' => '/assets/sponsors/STA-Logo-Default-Black-RGB.svg'
         ];
 
         $sponsors_map['Advisory Board'] = [
