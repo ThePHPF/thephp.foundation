@@ -4,16 +4,16 @@
   "description": "Asset toolchain for thephp.foundation website",
   "main": "tailwind.config.js",
   "devDependencies": {
-    "@mermaid-js/mermaid-cli": "^11.2.1",
-    "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.31",
-    "postcss-import": "^15.1.0",
-    "tailwindcss": "^3.3.3"
+    "@mermaid-js/mermaid-cli": "^11.4.2",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "postcss-import": "^16.1.0",
+    "tailwindcss": "^3.4.17"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tailwindcss -i ./src/styles/app.css -o ./dist/output.css --watch",
-    "build": "tailwindcss -o ./dist/output.css --minify"
+    "start": "tailwindcss -i ./assets/css/app.css -o ./source/assets/css/app.css --watch",
+    "build": "tailwindcss -i ./assets/css/app.css -o ./source/assets/css/app.css --minify"
   },
   "repository": {
     "type": "git",
