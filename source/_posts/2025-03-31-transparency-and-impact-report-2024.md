@@ -20,6 +20,7 @@ The foundation’s primary focus in 2024 remained strengthening the maintenance 
 The 10 part-time and full-time developers contracted by The PHP Foundation were responsible for a substantial portion of the commits and reviews made to the PHP language.
 
 **Key achievements in 2024 included:**
+
 * Completion of projects funded by the Sovereign Tech Fund
 * Expansion of the development team
 * Increased contributions to PHP core
@@ -251,7 +252,7 @@ Below are the RFC proposals authored or co-authored by The PHP Foundation develo
 
 ### Generics
 
-Generics are one of the most requested PHP features, but also the hardest. In 2024, the Foundation funded exploratory research into how generics might be implemented.  The [result of that research](https://thephp.foundation/blog/2024/08/19/state-of-generics-and-collections/%20) is available in its own blog post. In short, there is potential to make it happen but still some significant performance-related issues to resolve.
+Generics are one of the most requested PHP features, but also the hardest. In 2024, the Foundation funded exploratory research into how generics might be implemented.  The [result of that research](https://thephp.foundation/blog/2024/08/19/state-of-generics-and-collections/) is available in its own blog post. In short, there is potential to make it happen but still some significant performance-related issues to resolve.
 
 ### Release Maintenance
 
@@ -380,7 +381,7 @@ With [**your help**](https://thephp.foundation/sponsor/), we continue the missio
 
 <section class="text-center mt-6">
     <div class="mb-14">
-        <a href="/join" target="_blank" class="inline-block text-xl py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">
+        <a href="/sponsor/" target="_blank" class="inline-block text-xl py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">
             Join The PHP Foundation
         </a>
     </div>
