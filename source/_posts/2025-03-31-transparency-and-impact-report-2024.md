@@ -86,7 +86,7 @@ quote: 'PHP is my favorite foundation. There I said it. Why? Their primary objec
 
 The [Sovereign Tech Agency](https://www.sovereign.tech/) (STA) supports the development, improvement, and maintenance of open digital infrastructure in the public interest. Its goal is to strengthen the open-source ecosystem sustainably, focusing on security, resilience, technological diversity, and the people behind the code. STF is funded by the German Federal Ministry for Economic Affairs and Climate Action (BMWK) and supported by the German Federal Agency for Disruptive Innovation GmbH (SPRIND).
 
-<img src="/assets/post-images/2025/report-2024/stA.png" width="597" alt="STA">
+<img src="/assets/post-images/2025/report-2024/sta.png" width="597" alt="STA">
 
 The Sovereign Tech Agency commissioned work on four major projects, all of which we successfully delivered. Here’s a brief overview of the results.
 
