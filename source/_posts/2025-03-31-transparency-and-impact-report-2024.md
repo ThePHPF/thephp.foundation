@@ -184,7 +184,7 @@ We did have a few new and returning major sponsors, including Laravel, GoDaddy, 
 We did collaborate with the Sentry team on Open Source Pledge initiative
 
 **Further develop the Advisory Board initiative ❌**  
-The Advisory Board played a big role in [shaping the Hooks RFC](https://thephp.foundation/blog/2024/11/01/how-hooks-happened/). However, we has much more potential. In 2025, we’d like to revamp the AB to make it more useful and collaborative.
+The Advisory Board played a big role in [shaping the Hooks RFC](https://thephp.foundation/blog/2024/11/01/how-hooks-happened/). However, we have much more potential. In 2025, we’d like to revamp the AB to make it more useful and collaborative.
 
 **Grow the foundation's community ✅**  
 The PHP Foundation Slack is an invite-only community, and its closed nature has helped keep it very productive. We gradually add more community leaders and developers, along with one-channel guests for specific tasks. We also maintain a public channel, **\#php-internals**, which is mirrored on the [PHP Community Discord server](https://phpc.chat/).
