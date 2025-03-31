@@ -11,7 +11,7 @@ published_at: 31 March 2025
 
 ## Executive Summary
 
-As of early 2025, The PHP Foundation comprises **8 volunteer board members**, **Executive Director** sponsored by JetBrains, and **10 developers** paid part-time/full-time who contribute significantly to the PHP language and its extensions.
+As of early 2025, The PHP Foundation comprises **8 volunteer board members**, **an Executive Director** sponsored by JetBrains, and **10 developers** paid part-time/full-time who contribute significantly to the PHP language and its extensions.
 
 In 2024, The PHP Foundation received **$683,550 in donations and investments** from organizations and individuals.
 
@@ -59,6 +59,13 @@ name: 'Artemy Pestretsov',
 title: 'Product Leader, PhpStorm at JetBrains',
 image: '/assets/post-images/2025/report-2024/artemy.png',
 quote: 'At JetBrains, we\’re proud to support the PHP Foundation and its commitment to strengthening PHP. It’s great to see how the Foundation’s achievements directly benefit the developer community we deeply care about, and we’re excited to be part of PHP’s ongoing success.'
+}) }}
+
+{{ include('quote.html', {
+name: 'Courtney Robertson',
+title: 'Open Source Developer Relations, GoDaddy',
+image: '/assets/post-images/2025/report-2024/courtney.png',
+quote: 'At GoDaddy, we recognize that PHP is the backbone of the open web and the engine powering many of the sites we host. Our contribution to The PHP Foundation is a strategic investment in maintaining the secure, reliable, and innovative technology that drives our digital ecosystem.'
 }) }}
 
 {{ include('quote.html', {
@@ -234,21 +241,21 @@ The diagram summarizes the number of pull request reviews made in the [php/php-s
 
 Below are the RFC proposals authored or co-authored by The PHP Foundation developers in 2024 (date order).
 
-| RFC                                                                                                                                   | Proposed   | Status         |
-|:--------------------------------------------------------------------------------------------------------------------------------------|:-----------|:---------------|
-| [Property hooks](https://wiki.php.net/rfc/property-hooks)                                                                             | 2023-01-03 | Implemented    |
-| [Release cycle update](https://wiki.php.net/rfc/release_cycle_update)                                                                 | 2023-11-05 | Implemented    |
-| [Dedicated StreamBucket class](https://github.com/php/php-src/pull/13111)                                                             | 2024-01-19 | Implemented    |
-| [Support object type in BCMath](https://wiki.php.net/rfc/support_object_type_in_bcmath)                                               | 2024-03-24 | Implemented    |
-| [Correctly name the rounding mode and make it an Enum](https://wiki.php.net/rfc/correctly_name_the_rounding_mode_and_make_it_an_Enum) | 2024-04-21 | Implemented    |
-| [Asymmetric Visibility v2](http://wiki.php.net/rfc/asymmetric-visibility-v2)                                                          | 2024-05-09 | Implemented    |
-| [Lazy Objects](https://wiki.php.net/rfc/lazy-objects)                                                                                 | 2024-06-03 | Implemented    |
-| [Property hook improvements](http://wiki.php.net/rfc/hook_improvements)                                                               | 2024-06-28 | Implemented    |
-| [Make the GMP class final](https://wiki.php.net/rfc/gmp-final)                                                                        | 2024-06-29 | Implementation |
-| [Add bcdivmod to BCMath](https://wiki.php.net/rfc/add_bcdivmod_to_bcmath)                                                             | 2024-06-30 | Implemented    |
-| [Fix up BCMath Number Class / Change GMP bool cast behavior](https://wiki.php.net/rfc/fix_up_bcmath_number_class)                     | 2024-06-30 | Implemented    |
-| [Change Directory class to behave like a resource object](https://wiki.php.net/rfc/directory-opaque-object)                           | 2024-09-14 | Implementation |
-| [PHP.net Analytics Collection](http://wiki.php.net/rfc/phpnet-analytics)                                                              | 2024-10-28 | Approved       |
+| RFC                                                                                                                                   | Proposed   | Status      |
+|:--------------------------------------------------------------------------------------------------------------------------------------|:-----------|:------------|
+| [Property hooks](https://wiki.php.net/rfc/property-hooks)                                                                             | 2023-01-03 | Implemented |
+| [Release cycle update](https://wiki.php.net/rfc/release_cycle_update)                                                                 | 2023-11-05 | Implemented |
+| [Dedicated StreamBucket class](https://github.com/php/php-src/pull/13111)                                                             | 2024-01-19 | Implemented |
+| [Support object type in BCMath](https://wiki.php.net/rfc/support_object_type_in_bcmath)                                               | 2024-03-24 | Implemented |
+| [Correctly name the rounding mode and make it an Enum](https://wiki.php.net/rfc/correctly_name_the_rounding_mode_and_make_it_an_Enum) | 2024-04-21 | Implemented |
+| [Asymmetric Visibility v2](http://wiki.php.net/rfc/asymmetric-visibility-v2)                                                          | 2024-05-09 | Implemented |
+| [Lazy Objects](https://wiki.php.net/rfc/lazy-objects)                                                                                 | 2024-06-03 | Implemented |
+| [Property hook improvements](http://wiki.php.net/rfc/hook_improvements)                                                               | 2024-06-28 | Implemented |
+| [Make the GMP class final](https://wiki.php.net/rfc/gmp-final)                                                                        | 2024-06-29 | Implemented |
+| [Add bcdivmod to BCMath](https://wiki.php.net/rfc/add_bcdivmod_to_bcmath)                                                             | 2024-06-30 | Implemented |
+| [Fix up BCMath Number Class / Change GMP bool cast behavior](https://wiki.php.net/rfc/fix_up_bcmath_number_class)                     | 2024-06-30 | Implemented |
+| [Change Directory class to behave like a resource object](https://wiki.php.net/rfc/directory-opaque-object)                           | 2024-09-14 | Implemented |
+| [PHP.net Analytics Collection](http://wiki.php.net/rfc/phpnet-analytics)                                                              | 2024-10-28 | Approved    |
 
 ### Generics
 
