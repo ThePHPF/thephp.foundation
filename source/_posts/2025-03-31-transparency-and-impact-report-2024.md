@@ -98,8 +98,7 @@ The tool has already gathered a group of [contributors](https://github.com/php/p
 * [Introducing PIE: The Modern PHP Extension Installer](https://sensiolabs.com/blog/2024/introducing-pie-php-extension-installer)
 * [PIE (PHP Installer for Extensions)](https://laravel-news.com/pie)
 
-We continue investing in PIE in 2024\.
-
+We continue investing in PIE in 2024.
 ### Web Services Tool for PHP-FPM  
 The Web Services Tool (WST) is a command-line application designed to test PHP-FPM integration across different web servers, environments, and configurations.
 
@@ -122,8 +121,7 @@ Additionally, a new Wasm-based PHP runner has been included allowing all code ex
 An auto-cleaner script has also been added that removes comments older than 1 year with a score of \-5 or lower.  This has removed around 2000 low-quality notes from the site.
 
 ### Infrastructure Update  
-As part of [The Sovereign Tech Bug Resilience Program](https://www.sovereign.tech/programs/bug-resilience)me, we partnered with [Neighbourhoodie Software](https://neighbourhood.ie/) to overhaul the scripts powering parts of PHP’s web infrastructure, and also set up more appropriate back-ups.
-
+As part of [The Sovereign Tech Bug Resilience Program](https://www.sovereign.tech/programs/bug-resilience), we partnered with [Neighbourhoodie Software](https://neighbourhood.ie/) to overhaul the scripts powering parts of PHP’s web infrastructure, and also set up more appropriate back-ups.
 Previously scattered scripts have been consolidated into robust Ansible playbooks. The rollout is currently being planned, and will result in a much easier to maintain and restore the PHP project's infrastructure. In the future, all infrastructure will likely be managed through this.
 
 ## The PHP Foundation Staff
