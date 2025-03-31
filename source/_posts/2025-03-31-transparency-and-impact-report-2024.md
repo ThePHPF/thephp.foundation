@@ -106,7 +106,7 @@ The tool has already gathered a group of [contributors](https://github.com/php/p
 * [Introducing PIE: The Modern PHP Extension Installer](https://sensiolabs.com/blog/2024/introducing-pie-php-extension-installer)
 * [PIE (PHP Installer for Extensions)](https://laravel-news.com/pie)
 
-We continue investing in PIE in 2024.
+We continue investing in PIE in 2025.
 ### Web Services Tool for PHP-FPM  
 The Web Services Tool (WST) is a command-line application designed to test PHP-FPM integration across different web servers, environments, and configurations.
 
