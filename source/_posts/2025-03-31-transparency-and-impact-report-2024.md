@@ -64,7 +64,7 @@ quote: 'At JetBrains, we\’re proud to support the PHP Foundation and its commi
 {{ include('quote.html', {
 name: 'Courtney Robertson',
 title: 'Open Source Developer Relations, GoDaddy',
-image: '/assets/post-images/2025/report-2024/courtney.png',
+image: '/assets/post-images/2025/report-2024/courtney.jpeg',
 quote: 'At GoDaddy, we recognize that PHP is the backbone of the open web and the engine powering many of the sites we host. Our contribution to The PHP Foundation is a strategic investment in maintaining the secure, reliable, and innovative technology that drives our digital ecosystem.'
 }) }}
 
