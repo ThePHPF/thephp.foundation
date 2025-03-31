@@ -356,7 +356,6 @@ From a technical standpoint, the goal is to ensure that foundation developers wo
 ### Organization Goals
 
 * Secure funding to support core development and marketing initiatives.
-* Finalize the LTS agreement with strategic partners.
 * Launch the "PHP 30" anniversary campaign in collaboration with JetBrains.
 * Consolidate and grow social media presence across multiple platforms.
 * Increase website traffic through improved documentation and resources.
