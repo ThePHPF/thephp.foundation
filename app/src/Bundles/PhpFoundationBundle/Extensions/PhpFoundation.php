@@ -59,6 +59,7 @@ class PhpFoundation extends AbstractExtension
                     'sentry-team' => 'Sentry Team',
                     'cybozu' => 'Cybozu',
                     'manychat' => 'Manychat',
+                    'passbolt' => 'Passbolt',
                 ],
             'Gold' =>
                 [
