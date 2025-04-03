@@ -2,7 +2,6 @@
 
 namespace App\Bundles\PhpFoundationBundle\Extensions;
 
-use Dflydev\DotAccessConfiguration\Configuration;
 use SculpinKernel;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
@@ -25,113 +24,164 @@ class PhpFoundation extends AbstractExtension
             new TwigFunction('fetch_sponsors', [$this, 'fetchSponsors']),
         ];
     }
-    
-    public function fetchSponsors()
+
+    public function fetchSponsors(): array
     {
-        $url = 'https://opencollective.com/phpfoundation/members/organizations.json';
-
-        $response = file_get_contents($url);
-        $json = json_decode($response, associative: false, flags: JSON_THROW_ON_ERROR);
-
-        $unique = array_reduce($json, function ($carry, $item) {
-            $carry[$item->name] = $item;
-            return $carry;
-        }, []);
-
-        uasort($unique, function ($a, $b) {
-            return $b->totalAmountDonated - $a->totalAmountDonated;
-        });
-
-        $sponsors = $unique;
-        
-        $sponsors_map = [
-            'Silver' =>
+        return [
+            'Silver' => [
                 [
-                    'packagist' => 'Private Packagist',
-                    'craftcms' => 'Craft CMS',
-                    'zend' => 'Zend by Perforce',
-                    'tideways' => 'Tideways',
-                    'symfony-sas' => 'Symfony Corp',
-                    'mercari' => 'Mercari Inc.',
-                    'cooptilleuls' => 'Les-Tilleuls.coop',
-                    'user-ecfec7e5' => 'pixiv Inc.',
-                    'aternos' => 'Aternos GmbH',
-                    'sentry-team' => 'Sentry Team',
-                    'cybozu' => 'Cybozu',
-                    'manychat' => 'Manychat',
+                    'name' => 'Private Packagist',
+                    'website' => 'https://packagist.com/',
+                    'image' => '/assets/sponsors/private-packagist.png',
                 ],
-            'Gold' =>
                 [
-                    'laravel' => 'Laravel',
-                    'GoDaddy.com' => 'GoDaddy.com',
+                    'name' => 'Craft CMS',
+                    'website' => 'https://craftcms.com/',
+                    'image' => '/assets/sponsors/craftcms.png',
                 ],
-            'Platinum' =>
                 [
-                    'jetbrains' => 'JetBrains',
-                    'automattic' => 'Automattic',
-                    '11004-sovereign-tech-fund-2532c0cc' => 'Sovereign Tech Agency',
+                    'name' => 'Zend by Perforce',
+                    'website' => 'https://www.zend.com/',
+                    'image' => '/assets/sponsors/zend-by-perforce.png',
                 ],
-            'Past' =>
                 [
-                    'livesport-s-r-o' => 'Livesport s.r.o.',
-                    'acquia' => 'Acquia',
-                    'stefan-hamann' => 'shopware AG',
-                    'opgg' => 'OP.GG',
-                    'ec-cube' => 'EC-CUBE',
-                    'spryker' => 'Spryker',
-                    'polcode' => 'Polcode',
-                    'binc' => 'BASE, Inc.',
-                    'digital-scholar' => 'Digital Scholar',
-                    'rakus' => 'RAKUS',
-                    'cambium-learning-inc' => 'Cambium Learning, Inc.',
-                    'paycom' => 'Paycom',
-                    'prestashop' => 'PrestaShop',
-                    'ardennes-etape' => 'Ardennes-étape',
+                    'name' => 'Tideways',
+                    'website' => 'https://tideways.com/',
+                    'image' => '/assets/sponsors/tideways.jpg',
                 ],
+                [
+                    'name' => 'Symfony Corp',
+                    'website' => 'https://symfony.com/',
+                    'image' => '/assets/sponsors/symfony-corp.png',
+                ],
+                [
+                    'name' => 'Mercari Inc.',
+                    'website' => 'https://about.mercari.com/',
+                    'image' => '/assets/sponsors/mercari.png',
+                ],
+                [
+                    'name' => 'Les-Tilleuls.coop',
+                    'website' => 'https://les-tilleuls.coop/',
+                    'image' => '/assets/sponsors/les-tilleuls.png',
+                ],
+                [
+                    'name' => 'pixiv Inc.',
+                    'website' => 'https://www.pixiv.co.jp/',
+                    'image' => '/assets/sponsors/pixiv-inc.jpg',
+                ],
+                [
+                    'name' => 'Aternos GmbH',
+                    'website' => 'https://aternos.gmbh/',
+                    'image' => '/assets/sponsors/aternos-gmbh.png',
+                ],
+                [
+                    'name' => 'Sentry Team',
+                    'website' => 'https://sentry.io/',
+                    'image' => '/assets/sponsors/sentry.png',
+                ],
+                [
+                    'name' => 'Cybozu',
+                    'website' => 'https://cybozu.co.jp/',
+                    'image' => '/assets/sponsors/cybozu.jpg',
+                ],
+                [
+                    'name' => 'Manychat',
+                    'website' => 'https://careers.manychat.com/?utm_source=phpfnd&utm_medium=phpfnd_site&utm_campaign=sponsorship',
+                    'image' => '/assets/sponsors/manychat.svg',
+                ],
+                [
+                    'name' => 'Passbolt',
+                    'website' => 'https://passbolt.com/',
+                    'image' => '/assets/sponsors/passbolt.png',
+                ],
+            ],
+            'Gold' => [
+                [
+                    'name' => 'Laravel',
+                    'website' => 'https://laravel.com/',
+                    'image' => '/assets/sponsors/laravel-logo.svg',
+                ],
+                [
+                    'name' => 'GoDaddy.com',
+                    'website' => 'https://www.godaddy.com/',
+                    'image' => '/assets/sponsors/godaddy.png',
+                ],
+            ],
+            'Platinum' => [
+                [
+                    'name' => 'JetBrains',
+                    'website' => 'https://www.jetbrains.com/',
+                    'image' => '/assets/sponsors/jetbrains.png',
+                ],
+                [
+                    'name' => 'Automattic',
+                    'website' => 'https://automattic.com/',
+                    'image' => '/assets/sponsors/automattic.png',
+                ],
+                [
+                    'name' => 'Sovereign Tech Agency',
+                    'website' => 'https://www.sovereign.tech/',
+                    'image' => '/assets/sponsors/STA-Logo-Default-Black-RGB.svg',
+                ],
+            ],
+            'Past' => [
+                [
+                    'name' => 'Livesport s.r.o.',
+                    'website' => 'https://www.livesport.eu/',
+                ],
+                [
+                    'name' => 'Acquia',
+                    'website' => 'https://www.acquia.com/',
+                ],
+                [
+                    'name' => 'shopware AG',
+                    'website' => 'https://www.shopware.com/en/',
+                ],
+                [
+                    'name' => 'OP.GG',
+                    'website' => 'https://op.gg/',
+                ],
+                [
+                    'name' => 'EC-CUBE',
+                    'website' => 'https://www.ec-cube.net/',
+                ],
+                [
+                    'name' => 'Spryker',
+                    'website' => 'https://spryker.com/',
+                ],
+                [
+                    'name' => 'Polcode',
+                    'website' => 'https://polcode.com/',
+                ],
+                [
+                    'name' => 'BASE, Inc.',
+                    'website' => 'https://binc.jp/',
+                ],
+                [
+                    'name' => 'Digital Scholar',
+                    'website' => 'http://digitalscholar.org/',
+                ],
+                [
+                    'name' => 'RAKUS',
+                    'website' => 'https://www.rakus.co.jp/',
+                ],
+                [
+                    'name' => 'Cambium Learning, Inc.',
+                    'website' => 'https://www.cambiumlearning.com/',
+                ],
+                [
+                    'name' => 'Paycom',
+                    'website' => 'https://www.paycom.com/',
+                ],
+                [
+                    'name' => 'PrestaShop',
+                    'website' => 'https://www.prestashop.com/',
+                ],
+                [
+                    'name' => 'Ardennes-étape',
+                    'website' => 'https://en.ardennes-etape.be/',
+                ],
+            ],
         ];
-
-        // FIXME Empty data in OpenCollective
-        unset($sponsors_map['Past']['rakusu']);
-
-        // STF is currently a Vendor and does not appear in the orgs list of sponsors
-        $sponsors['Sentry Team'] = (object)[
-            'name' => 'Sentry',
-            'website' => 'https://sentry.io/',
-            'image' => 'https://images.opencollective.com/sentry/9620d33/logo/256.png'
-        ];
-
-        $sponsors['Manychat'] = (object)[
-            'name' => 'Manychat',
-            'website' => 'https://careers.manychat.com/?utm_source=phpfnd&utm_medium=phpfnd_site&utm_campaign=sponsorship',
-            'image' => '/assets/sponsors/manychat.svg'
-        ];
-
-        $sponsors['Laravel']->image = '/assets/sponsors/laravel-logo.svg';
-        $sponsors['Laravel']->website = 'https://laravel.com/';
-
-        $sponsors['Sovereign Tech Agency'] = (object)[
-            'name' => 'Sovereign Tech Agency',
-            'website' => 'https://www.sovereign.tech/',
-            'image' => '/assets/sponsors/STA-Logo-Default-Black-RGB.svg'
-        ];
-
-        $sponsors_map['Advisory Board'] = [
-            'zend' => 'Zend by Perforce',
-            'packagist' => 'Private Packagist',
-            'tideways' => 'Tideways',
-            'symfony-sas' => 'Symfony',
-            'prestashop' => 'PrestaShop',
-            'laravel' => 'Laravel',
-            'stefan-hamann' => 'shopware AG',
-            'craftcms' => 'Craft CMS',
-            'automattic' => 'Automattic',
-            'jetbrains' => 'JetBrains',
-        ];
-
-        array_walk_recursive($sponsors_map, function(&$value) use ($sponsors) {
-            $value = $sponsors[$value] ?? null;
-        });
-
-        return $sponsors_map;
     }
 }
