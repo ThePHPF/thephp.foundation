@@ -1,0 +1,5 @@
+{
+  "name": "Node.js",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-18-bullseye",
+  "postCreateCommand": "npm i"
+}
