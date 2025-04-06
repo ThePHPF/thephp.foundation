@@ -1,5 +1,11 @@
 {
-  "name": "Node.js",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-18-bullseye",
-  "postCreateCommand": "npm i"
+  "name": "PHP",
+  "image": "mcr.microsoft.com/devcontainers/php:8.4",
+  "postCreateCommand": "",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {"version": "latest"},
+    "ghcr.io/opencodeco/devcontainers/install-php-extensions:latest": {
+      "extensions": "gd"
+    }
+  }
 }
