@@ -1,9 +1,10 @@
 ---
 title: Code of Conduct
-description: PHP Foundation Code of Conduct
+description: The PHP Foundation Code of Conduct
 permalink: code-of-conduct
 layout: page
 ---
+
 ### Our Pledge
 
 We as members, contributors, and leaders pledge to make participation in our
@@ -44,8 +45,8 @@ Examples of unacceptable behavior include:
 
 CoC Active Response Ensurers (CARE) team members
 are responsible for clarifying and enforcing our standards of acceptable
-behavior and will take appropriate and fair corrective action in response to any
-behavior that they deem inappropriate, threatening, offensive, or harmful.
+behavior **within the scope of PHP Foundation activities and spaces**. 
+They are not responsible for adjudicating disputes or behaviors occurring in external communities or organizations, unless those actions directly affect the Foundation’s activities or its community spaces.
 
 CARE team members have the right and responsibility to remove, edit, or reject
 comments, commits, code, wiki edits, issues, and other contributions that are
@@ -54,11 +55,19 @@ decisions when appropriate.
 
 ### Scope
 
-This Code of Conduct applies within all community spaces, and also applies when
-an individual is officially representing the community in public spaces.
-Examples of representing our community include using an official e-mail address,
-posting via an official social media account, or acting as an appointed
-representative at an online or offline event.
+This Code of Conduct applies within all PHP Foundation-managed spaces (e.g., events, repositories, communication channels) and to all individuals officially representing the Foundation in those contexts.
+
+It does not extend to actions or disputes occurring solely within third-party communities or companies unless those actions directly and substantially affect Foundation operations or participants in our spaces.
+
+### Sponsorship and Membership
+
+Sponsorship of the PHP Foundation is a financial contribution that supports our mission. Sponsorship does not imply governance rights, or endorsement of the sponsor’s actions, products, or policies.
+
+Members of the Foundation (e.g., Staff, Board and Advisory Board participants) are expected to uphold the Code of Conduct in all Foundation-related contexts. However, the Foundation does not assume responsibility for the actions of these individuals or their companies outside the scope of Foundation activities, unless those actions materially impact the Foundation’s work or violate this Code in our official spaces.
+
+### Neutrality
+
+The PHP Foundation maintains a position of neutrality in disputes between companies, communities, and individuals within the broader PHP ecosystem. We focus on supporting PHP’s development and growth. The Foundation will not intervene in external disputes unless directly required to protect its contributors, events, or resources.
 
 ### Enforcement
 
@@ -126,3 +135,4 @@ Community Impact Guidelines were inspired by Mozilla’s code of conduct enforce
 
 - [Contributor Covenant](https://www.contributor-covenant.org)
 - [Mozilla’s code of conduct enforcement ladder](https://github.com/mozilla/diversity)
+
