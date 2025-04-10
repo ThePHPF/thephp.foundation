@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Welcoming Passbolt to the PHP Foundation &mdash; The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language</title>
+    <title>PHP Core Security Audit Results &mdash; The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language</title>
     <meta name="description" content="The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language">
     <meta charset="utf-8">
     <meta name="theme-color" content="#ffffff">
@@ -19,18 +19,18 @@
     <meta name="yandex-verification" content="6990192232fdf071" />
     <meta name="msvalidate.01" content="5D1EB82347E6BF271A01DCDBF7E59BED" />
 
-    <meta property="og:url" content="https://thephp.foundation/blog/2025/04/03/welcoming-passbolt-to-the-php-foundation/">
+    <meta property="og:url" content="https://thephp.foundation/blog/2025/04/10/php-core-security-audit-results/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Welcoming Passbolt to the PHP Foundation">
+    <meta property="og:title" content="PHP Core Security Audit Results">
     <meta property="og:description" content="The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language">
-    <meta property="og:image" content="https://thephp.foundation/assets/share/2025-04-03-welcoming-passbolt-to-the-php-foundation.png">
+    <meta property="og:image" content="https://thephp.foundation/assets/share/2025-04-10-php-core-security-audit-results.png">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="https://thephp.foundation">
-    <meta property="twitter:url" content="https://thephp.foundation/blog/2025/04/03/welcoming-passbolt-to-the-php-foundation/">
-    <meta name="twitter:title" content="Welcoming Passbolt to the PHP Foundation">
+    <meta property="twitter:url" content="https://thephp.foundation/blog/2025/04/10/php-core-security-audit-results/">
+    <meta name="twitter:title" content="PHP Core Security Audit Results">
     <meta name="twitter:description" content="The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language">
-    <meta name="twitter:image" content="https://thephp.foundation/assets/share/2025-04-03-welcoming-passbolt-to-the-php-foundation.png">
+    <meta name="twitter:image" content="https://thephp.foundation/assets/share/2025-04-10-php-core-security-audit-results.png">
 
     <link rel="apple-touch-startup-image" href="https://thephp.foundation/assets/icons/php_foundation.svg">
     <meta name="mobile-web-app-capable" content="yes">
@@ -153,11 +153,11 @@
 
 <div class="bg-white px-6 lg:px-8 my-16" itemscope itemtype="https://schema.org/Article">
     <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
-        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" itemprop="name">Welcoming Passbolt to the PHP Foundation</h1>
+        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" itemprop="name">PHP Core Security Audit Results</h1>
 
         <div class="flex items-center gap-x-4 text-xs mt-2">
                 <div>
-            Published on <span itemprop="datePublished">Apr 03, 2025</span>
+            Published on <span itemprop="datePublished">Apr 10, 2025</span>
             by
                         <span itemprop="publisher" itemscope itemtype="https://schema.org/Person"><a href="https://twitter.com/pronskiy" target="_blank" rel="noopener noreferrer" itemprop="url"><span itemprop="name">Roman Pronskiy</span></a></span>                    </div>
                     
@@ -171,17 +171,82 @@
                 </div>
 
         <div class="mt-6 text-xl leading-8" itemprop="text">
-            <p>We’re thrilled to announce that <strong>Passbolt has joined the PHP Foundation</strong> as a Silver sponsor! PHP powers over 77% of the web – including Passbolt’s collaborative password and secrets manager. Their support strengthens our mission to keep it thriving.</p>
+            <p>The PHP Foundation is pleased to announce the completion of a comprehensive security audit of the PHP source code (<a href="https://github.com/php/php-src">php/php-src</a>), <strong>commissioned by the <a href="https://www.sovereign.tech/">Sovereign Tech Agency</a></strong>.</p>
 
-<p>Check out their heartfelt announcement here: <strong><a href="https://www.passbolt.com/blog/a-love-letter-passbolt-joins-the-php-foundation-as-a-company-member">Passbolt’s Blog</a></strong>.</p>
+<p>This initiative was organized in partnership with the <a href="https://ostif.org/">Open Source Technology Improvement Fund</a> (OSTIF) and executed by the esteemed security group <a href="https://www.quarkslab.com/">Quarkslab</a>.</p>
 
-<p>The Foundation funds developers to ensure PHP remains fast, secure, and innovative. With Passbolt and many other industry leaders by our side, we’re building a sustainable future for the language we all rely on.</p>
+<h2 id="audit-overview">Audit Overview</h2>
+
+<p>Conducted over a two-month period in 2024, the audit encompassed:</p>
+
+<ul>
+<li>Development of a threat model tailored to php-src</li>
+<li>Manual code reviews</li>
+<li>Dynamic testing procedures</li>
+<li>Cryptographic assessments</li>
+</ul>
+
+<p>The collaboration between Quarkslab’s auditors and PHP maintainers ensured a thorough examination of the codebase.</p>
 
 <blockquote>
-  <p>This post kicks off a new blog series highlighting our amazing sponsors. Stay tuned as we spotlight the companies and individuals driving PHP forward – each one a vital part of our community’s success.</p>
+  <p><em>⚠️</em><br />
+  Due to budget constraints, the recent security audit focused on the most critical components of the PHP source code rather than the entire codebase. Organizations interested in sponsoring a comprehensive audit or additional assessments are encouraged to <a href="&#109;&#x61;i&#108;&#x74;&#111;&#58;&#x63;&#111;&#x6e;&#x74;&#97;&#x63;t&#64;&#x74;&#104;&#101;&#x70;&#104;&#x70;&#x2e;&#102;&#x6f;&#x75;&#110;&#x64;a&#116;&#x69;&#111;&#110;">contact us</a>!<br />
+  <em>⚠️</em></p>
 </blockquote>
 
-<p>Want to join the effort? <a href="https://thephp.foundation/sponsor/">Sponsor The PHP Foundation</a> and help us power the web’s backbone!</p>
+<h2 id="key-findings">Key Findings</h2>
+
+<p>The audit identified 27 issues, with 17 having security implications:</p>
+
+<ul>
+<li>3 High-severity</li>
+<li>5 Medium-severity</li>
+<li>9 Low-severity</li>
+</ul>
+
+<p>Additionally, 10 informational findings were reported.</p>
+
+<p>Notably, four vulnerabilities received CVE identifiers:</p>
+
+<ul>
+<li>CVE-2024-9026: Log tampering vulnerability in PHP-FPM, allowing potential manipulation or removal of characters from log messages.</li>
+<li>CVE-2024-8925: Flaw in PHP’s multipart form data parsing, potentially leading to data misinterpretation.</li>
+<li>CVE-2024-8928: Memory-related vulnerability in PHP’s filter handling, leading to segmentation faults.</li>
+<li>CVE-2024-8929: Issue where a malicious MySQL server could cause the client to disclose heap content from other SQL requests.</li>
+</ul>
+
+<h2 id="recommendations-and-resolutions">Recommendations and Resolutions</h2>
+
+<p>Quarkslab’s report commended the overall high quality and specification adherence of the php/php-src project.</p>
+
+<p>The PHP development team has addressed all identified issues. Users are strongly encouraged to upgrade to the latest PHP versions to benefit from these security enhancements.</p>
+
+<h2 id="acknowledgments">Acknowledgments</h2>
+
+<p>We extend our gratitude to the individuals and organizations that made this audit possible:</p>
+
+<ul>
+<li><strong>The PHP Foundation Team and PHP maintainers:</strong><br />
+Jakub Zelenka, Arnaud Le Blanc, Niels Dossche, Ilija Tovilo, Stas Malyshev, Dmitry Stogov, Derick&nbsp;Rethans, and Roman Pronskiy.</li>
+<li><strong>Quarkslab Team:</strong><br />
+Angèle Bossuat, Julio Loayza Meneses, Mihail Kirov, Sebastien Rolland, Ramtine Tofighi Shirazi.</li>
+<li><strong>Sovereign Tech Agency:</strong><br />
+Abigail Garner and the team – for commissioning the audit and all the help.</li>
+<li><strong>OSTIF:</strong><br />
+Amir Montazery, Derek Zimmer, Helen Woeste – for organizing the collaboration.</li>
+</ul>
+
+<p>This audit underscores our commitment to enhancing PHP’s security and reliability. We remain dedicated to ongoing improvements and collaborations to ensure PHP’s robustness for the global development community.</p>
+
+<h2 id="further-reading">Further Reading</h2>
+
+<ul>
+<li><a href="/assets/files/24-07-1730-REP-V1.4_temp.pdf">Audit Report</a></li>
+<li><a href="https://ostif.org/php-audit-complete/">OSTIF Blog</a></li>
+<li><a href="https://blog.quarkslab.com/">Quarkslab Blog</a></li>
+</ul>
+
+<p>If your company is interested in commissioning another round of security audit, please contact The PHP Foundation team: <a href="&#109;&#x61;i&#108;&#x74;&#111;&#58;&#x63;&#111;&#x6e;&#x74;&#97;&#x63;t&#64;&#x74;&#104;&#101;&#x70;&#104;&#x70;&#x2e;&#102;&#x6f;&#x75;&#110;&#x64;a&#116;&#x69;&#111;&#110;">contact@thephp.foundation</a>.</p>
 
 <p>🐘💜</p>
 
@@ -189,21 +254,16 @@
 
         <div class="border-t pt-5 my-5">
                         <nav class="flex flex-row justify-between article -mx-2 mb-5">
-                                <a href="https://thephp.foundation/blog/2025/03/31/transparency-and-impact-report-2024/"
+                                <a href="https://thephp.foundation/blog/2025/04/03/welcoming-passbolt-to-the-php-foundation/"
                    class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[#7f52ff] transition-all no-underline">
                     <div class="mb-1 text-sm text-gray-600 font-medium">Previous</div>
-                    <div class="font-bold text-blue-500">The PHP Foundation: Impact and Transparency Report 2024</div>
+                    <div class="font-bold text-blue-500">Welcoming Passbolt to the PHP Foundation</div>
                 </a>
                 
-                                <a href="https://thephp.foundation/blog/2025/04/10/php-core-security-audit-results/"
-                   class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[rgba(127,82,255,.8)] transition-all no-underline">
-                    <div class="mb-1 text-sm text-gray-600 font-medium">Next</div>
-                    <div class="font-bold text-blue-500">PHP Core Security Audit Results</div>
-                </a>
                             </nav>
             
             <div>
-                <a href="https://github.com/ThePHPF/thephp.foundation/edit/main/source/_posts/2025-04-03-welcoming-passbolt-to-the-php-foundation.md"
+                <a href="https://github.com/ThePHPF/thephp.foundation/edit/main/source/_posts/2025-04-10-php-core-security-audit-results.md"
                    class="nav-org" rel="noopener noreferrer" target="_blank">Edit this page on GitHub</a>
             </div>
         </div>
