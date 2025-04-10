@@ -69,8 +69,8 @@ This audit underscores our commitment to enhancing PHP’s security and reliabil
 ## Further Reading
 
 * [Audit Report](/assets/files/24-07-1730-REP-V1.4_temp.pdf)
-* [OSTIF Blog](https://ostif.org/php-src-audit-complete/)
-* [Quarkslab Blog](https://blog.quarkslab.com/security-audit-of-php-src/)
+* [OSTIF Blog](https://ostif.org/php-audit-complete/)
+* [Quarkslab Blog](https://blog.quarkslab.com/)
 
 If your company is interested in commissioning another round of security audit, please contact The PHP Foundation team: [contact@thephp.foundation](mailto:contact@thephp.foundation).
 
