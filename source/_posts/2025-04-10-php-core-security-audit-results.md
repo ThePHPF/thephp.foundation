@@ -68,7 +68,7 @@ This audit underscores our commitment to enhancing PHP’s security and reliabil
 
 ## Further Reading
 
-* [Audit Report](https://ostif.org/wp-content/uploads/2025/04/24-07-1730-REP-V1.4_temp.pdf)
+* [Audit Report](/assets/files/24-07-1730-REP-V1.4_temp.pdf)
 * [OSTIF Blog](https://ostif.org/php-src-audit-complete/)
 * [Quarkslab Blog](https://blog.quarkslab.com/security-audit-of-php-src/)
 
