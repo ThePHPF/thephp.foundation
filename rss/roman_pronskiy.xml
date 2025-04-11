@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2025-04-10T14:20:35+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, March 2023]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2025-04-11T11:12:12+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[PHP Foundation Update, March 2023]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
 
 <p>It's been a while since our last update, so today we’d like to shed some light on what the PHP Foundation has been up to in recent months. Topics include changes to the reporting schedule, a new initiative within the Foundation called the Advisory Board, conferences with Foundation members, and other news.</p>
 
@@ -2050,7 +2050,7 @@ Amir Montazery, Derek Zimmer, Helen Woeste – for organizing the collaboration.
 <ul>
 <li><a href="/assets/files/24-07-1730-REP-V1.4_temp.pdf">Audit Report</a></li>
 <li><a href="https://ostif.org/php-audit-complete/">OSTIF Blog</a></li>
-<li><a href="https://blog.quarkslab.com/">Quarkslab Blog</a></li>
+<li><a href="https://blog.quarkslab.com/security-audit-of-php-src.html">Quarkslab Blog</a></li>
 </ul>
 
 <p>If your company is interested in commissioning another round of security audit, please contact The PHP Foundation team: <a href="&#109;&#x61;i&#108;&#x74;&#111;&#58;&#x63;&#111;&#x6e;&#x74;&#97;&#x63;t&#64;&#x74;&#104;&#101;&#x70;&#104;&#x70;&#x2e;&#102;&#x6f;&#x75;&#110;&#x64;a&#116;&#x69;&#111;&#110;">contact@thephp.foundation</a>.</p>
