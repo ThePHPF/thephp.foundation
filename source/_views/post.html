@@ -5,7 +5,7 @@
     <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
         <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" itemprop="name">{{ page.title | raw}}</h1>
 
-        <div class="flex items-center gap-x-4 text-xs mt-2">
+        <div class="flex flex-col md:flex-row md:items-center gap-x-4 text-xs mt-2">
         {% if page.author.name is defined%}
         <div>
             Published on <span itemprop="datePublished">{{ page.published_at|date("M d, Y") }}</span>
@@ -23,7 +23,7 @@
             
         
         {% if page.tags is defined%}
-        <div class="space-x-1">
+        <div class="flex gap-x-2 mt-2 md:mt-0">
             {% for tag in page.tags %}
             <a href="{{ site.url }}/blog/tag/{{ tag|url_encode(true) }}"
                class="rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
