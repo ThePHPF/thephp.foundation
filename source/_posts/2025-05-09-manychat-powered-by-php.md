@@ -2,7 +2,8 @@
 title: 'Meet Manychat: A PHP Foundation Sponsor Sharing Their PHP Scaling Journey'
 layout: post
 tags:
-  - news, sponsors
+  - news
+  - sponsors
 author:
   - name: Roman Pronskiy
     url: https://twitter.com/pronskiy

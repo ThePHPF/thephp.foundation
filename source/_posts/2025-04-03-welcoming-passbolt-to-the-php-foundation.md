@@ -2,7 +2,8 @@
 title: 'Welcoming Passbolt to the PHP Foundation'
 layout: post
 tags:
-  - news, sponsors
+  - news
+  - sponsors
 author:
   - name: Roman Pronskiy
     url: https://twitter.com/pronskiy
