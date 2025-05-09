@@ -19,7 +19,7 @@ In their recently published case study — _[How Manychat Scaled to 1 Billion Co
 
 > _“We could build right away — our only developer already knew PHP, so we skipped onboarding and got straight to work.”_
 
-By choosing PHP, Manychat was able to build their MVP in just a few days and start learning from real users immediately. As they grew, they faced the familiar scaling challenges of high traffic, heavy workloads, and resource management. Their case study provides mentions architectural decisions they made — from using **asynchronous request handling with NGINX + Lua**, to **optimizing background task processing with PHP-CLI workers**, and **managing database connections efficiently with PgBouncer**.
+By choosing PHP, Manychat was able to build their MVP in just a few days and start learning from real users immediately. As they grew, they faced the familiar scaling challenges of high traffic, heavy workloads, and resource management. Their case study provides mentions architectural decisions they made — from using asynchronous request handling with NGINX + Lua, to optimizing background task processing with PHP-CLI workers, and managing database connections efficiently with PgBouncer.
 
 ## PHP at the Heart of a Global Platform
 
@@ -41,6 +41,8 @@ We encourage you to check out their full case study on scaling with PHP:
 
 
 **Thank you, Manychat, for your support!**
+
+---
 
 > This post continues the [blog series](https://thephp.foundation/blog/tag/sponsors/) highlighting our amazing sponsors. Stay tuned as we spotlight the companies and individuals driving PHP forward – each one a vital part of our community’s success.
 
