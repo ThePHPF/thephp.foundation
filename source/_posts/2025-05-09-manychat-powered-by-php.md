@@ -43,7 +43,7 @@ We encourage you to check out their full case study on scaling with PHP:
 
 **Thank you, Manychat, for your support!**
 
----
+<hr/>
 
 > This post continues the [blog series](https://thephp.foundation/blog/tag/sponsors/) highlighting our amazing sponsors. Stay tuned as we spotlight the companies and individuals driving PHP forward – each one a vital part of our community’s success.
 
