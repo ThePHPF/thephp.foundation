@@ -7,7 +7,7 @@ author:
   - name: Roman Pronskiy
     url: https://twitter.com/pronskiy
 published_at: 9 May 2025
----z
+---
 
 At the PHP Foundation, we’re proud to be supported by companies that build amazing products and contribute back to the PHP ecosystem. Today, we’d like to highlight [Manychat](https://manychat.com/) — one of our Silver sponsors.
 
