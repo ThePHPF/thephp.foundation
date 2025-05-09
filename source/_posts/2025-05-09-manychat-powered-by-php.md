@@ -26,7 +26,7 @@ By choosing PHP, Manychat was able to build their MVP in just a few days and sta
 
 Today, Manychat’s platform continues to run on PHP, handling millions of API calls and conversations while keeping infrastructure costs under control.
 
-If you’re excited about building products that reach millions and love working with PHP at scale, check out the [open positions at Manychat](https://careers.manychat.com/positions). They’re hiring PHP engineers!
+If you’re excited about building products that reach millions and love working with PHP at scale, check out the [open positions at Manychat](https://careers.manychat.com/team/engineering). They’re hiring PHP engineers!
 
 ## Supporting the Community
 
