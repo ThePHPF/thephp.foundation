@@ -24,7 +24,7 @@ final class SharingImageGenerator
 
     public function setTitle(string $title): self
     {
-        $this->title = $title;
+        $this->title = html_entity_decode($title);
 
         return $this;
     }
