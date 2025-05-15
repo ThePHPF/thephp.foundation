@@ -1,5 +1,5 @@
 ---
-title: 'FrankenPHP Is Now Officially Supported by The PHP Foundation'
+title: 'FrankenPHP Is Now Officially Supported by&nbsp;The&nbsp;PHP&nbsp;Foundation'
 layout: post
 tags:
   - news
@@ -9,9 +9,9 @@ author:
 published_at: 15 May 2025
 ---
 
-# FrankenPHP is now officially supported by the PHP Foundation
-
 FrankenPHP, a modern high-performance PHP application server created by [Kévin Dunglas](https://dunglas.dev) and sponsored by [Les-Tilleuls.coop](http://Les-Tilleuls.coop), is now officially supported by the PHP Foundation. FrankenPHP integrates PHP directly into Go and Caddy, simplifying deployment, improving performance, and reducing costs. It powers real-time features, supports advanced hosting scenarios, and offers a performance-boosting “worker mode” already integrated by Laravel, Symfony, and Yii. The PHP Foundation will actively contribute to FrankenPHP’s development and host its code on the official PHP GitHub, marking a major step toward modernizing the PHP ecosystem while keeping governance with the original maintainers.
+
+![FrankenPHP-PHP-Foundation](/assets/post-images/2025/2025-05-15-frankenphp.png)
 
 PHP is a programming language used by around 70% of websites and applications, and by key software and frameworks such as [WordPress](https://wordpress.org), [Laravel](https://laravel.com), and [Symfony](https://symfony.com).
 
@@ -57,6 +57,6 @@ Also, join us online for [**PHPverse on June 17**](https://lp.jetbrains.com/phpv
 
 Finally, to help keep the PHP ecosystem innovating, [support the foundation](https://thephp.foundation/sponsor/)\!
 
-[The PHP Foundation](https://thephp.foundation/)
-[Les-Tilleuls.coop](http://Les-Tilleuls.coop)
-[The Caddy team](https://caddyserver.com)
+[The PHP Foundation](https://thephp.foundation/)  
+[Les-Tilleuls.coop](http://Les-Tilleuls.coop)  
+[The Caddy team](https://caddyserver.com)  
