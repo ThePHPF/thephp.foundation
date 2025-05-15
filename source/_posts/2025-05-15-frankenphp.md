@@ -9,7 +9,7 @@ author:
 published_at: 15 May 2025
 ---
 
-FrankenPHP, a modern high-performance PHP application server created by [Kévin Dunglas](https://dunglas.dev) and sponsored by [Les-Tilleuls.coop](http://Les-Tilleuls.coop), is now officially supported by the PHP Foundation. FrankenPHP integrates PHP directly into Go and Caddy, simplifying deployment, improving performance, and reducing costs. It powers real-time features, supports advanced hosting scenarios, and offers a performance-boosting “worker mode” already integrated by Laravel, Symfony, and Yii. The PHP Foundation will actively contribute to FrankenPHP’s development and host its code on the official PHP GitHub, marking a major step toward modernizing the PHP ecosystem while keeping governance with the original maintainers.
+[FrankenPHP](https://frankenphp.dev), a modern high-performance PHP application server created by [Kévin Dunglas](https://dunglas.dev) and sponsored by [Les-Tilleuls.coop](http://Les-Tilleuls.coop), is now officially supported by the PHP Foundation. FrankenPHP integrates PHP directly into Go and Caddy, simplifying deployment, improving performance, and reducing costs. It powers real-time features, supports advanced hosting scenarios, and offers a performance-boosting “worker mode” already integrated by Laravel, Symfony, and Yii. The PHP Foundation will actively contribute to FrankenPHP’s development and host its code on the official PHP GitHub, marking a major step toward modernizing the PHP ecosystem while keeping governance with the original maintainers.
 
 ![FrankenPHP-PHP-Foundation](/assets/post-images/2025/2025-05-15-frankenphp.png)
 
