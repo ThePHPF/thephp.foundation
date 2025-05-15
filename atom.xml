@@ -3,7 +3,7 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2025-05-15T09:42:59+00:00</updated>
+    <updated>2025-05-15T12:45:34+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
@@ -11,7 +11,7 @@
             <link href="https://thephp.foundation/blog/2025/05/15/frankenphp/"/>
             <updated>2025-05-15T00:00:00+00:00</updated>
             <id>https://thephp.foundation/blog/2025/05/15/frankenphp/</id>
-            <content type="html"><![CDATA[<p>FrankenPHP, a modern high-performance PHP application server created by <a href="https://dunglas.dev">Kévin Dunglas</a> and sponsored by <a href="http://Les-Tilleuls.coop">Les-Tilleuls.coop</a>, is now officially supported by the PHP Foundation. FrankenPHP integrates PHP directly into Go and Caddy, simplifying deployment, improving performance, and reducing costs. It powers real-time features, supports advanced hosting scenarios, and offers a performance-boosting “worker mode” already integrated by Laravel, Symfony, and Yii. The PHP Foundation will actively contribute to FrankenPHP’s development and host its code on the official PHP GitHub, marking a major step toward modernizing the PHP ecosystem while keeping governance with the original maintainers.</p>
+            <content type="html"><![CDATA[<p><a href="https://frankenphp.dev">FrankenPHP</a>, a modern high-performance PHP application server created by <a href="https://dunglas.dev">Kévin Dunglas</a> and sponsored by <a href="http://Les-Tilleuls.coop">Les-Tilleuls.coop</a>, is now officially supported by the PHP Foundation. FrankenPHP integrates PHP directly into Go and Caddy, simplifying deployment, improving performance, and reducing costs. It powers real-time features, supports advanced hosting scenarios, and offers a performance-boosting “worker mode” already integrated by Laravel, Symfony, and Yii. The PHP Foundation will actively contribute to FrankenPHP’s development and host its code on the official PHP GitHub, marking a major step toward modernizing the PHP ecosystem while keeping governance with the original maintainers.</p>
 
 <p><img src="/assets/post-images/2025/2025-05-15-frankenphp.png" alt="FrankenPHP-PHP-Foundation" /></p>
 
