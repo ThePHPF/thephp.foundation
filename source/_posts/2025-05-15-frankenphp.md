@@ -55,7 +55,7 @@ To find out more about FrankenPHP and the many new possibilities it offers, take
 
 Also, join us online for [**PHPverse on June 17**](https://lp.jetbrains.com/phpverse-2025/) — a special event celebrating PHP’s 30th anniversary.
 
-Finally, to help keep the PHP ecosystem innovating, [support the foundation](https://thephp.foundation/sponsor/)\!
+Finally, to help keep the PHP ecosystem innovating, [support the foundation](https://thephp.foundation/sponsor/)!
 
 [The PHP Foundation](https://thephp.foundation/)  
 [Les-Tilleuls.coop](http://Les-Tilleuls.coop)  
