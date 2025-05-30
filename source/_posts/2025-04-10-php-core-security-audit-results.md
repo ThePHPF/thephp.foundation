@@ -42,7 +42,6 @@ Notably, four vulnerabilities received CVE identifiers:
 
 * CVE-2024-9026: Log tampering vulnerability in PHP-FPM, allowing potential manipulation or removal of characters from log messages.
 * CVE-2024-8925: Flaw in PHP’s multipart form data parsing, potentially leading to data misinterpretation.
-* CVE-2024-8928: Memory-related vulnerability in PHP’s filter handling, leading to segmentation faults.
 * CVE-2024-8929: Issue where a malicious MySQL server could cause the client to disclose heap content from other SQL requests.
 
 ## Recommendations and Resolutions
