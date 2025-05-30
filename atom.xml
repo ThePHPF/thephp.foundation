@@ -3,7 +3,7 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2025-05-15T12:45:34+00:00</updated>
+    <updated>2025-05-30T09:37:59+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
@@ -163,7 +163,6 @@ In the future, to simplify the PHP development experience (one-line installation
 <ul>
 <li>CVE-2024-9026: Log tampering vulnerability in PHP-FPM, allowing potential manipulation or removal of characters from log messages.</li>
 <li>CVE-2024-8925: Flaw in PHP’s multipart form data parsing, potentially leading to data misinterpretation.</li>
-<li>CVE-2024-8928: Memory-related vulnerability in PHP’s filter handling, leading to segmentation faults.</li>
 <li>CVE-2024-8929: Issue where a malicious MySQL server could cause the client to disclose heap content from other SQL requests.</li>
 </ul>
 
