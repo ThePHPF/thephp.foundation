@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2025-05-30T09:38:00+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[The PHP Foundation Update, March 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2025-06-09T17:55:36+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[The PHP Foundation Update, March 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
 
 <p>We promised to publish monthly updates, but something everything went wrong in February.</p>
 
@@ -819,7 +819,33 @@ Office hours call: <a href="http://cal.com/pronskiy/php-foundation-office-hours"
 </p>
 
 <p>P.S. If you have any questions or wild ideas about how you'd like to support PHP, don't hesitate to reach out. We're all ears.</p>
-]]></content><link href="https://thephp.foundation/blog/2024/09/30/call-fo-sponsors/"/><id>https://thephp.foundation/blog/2024/09/30/call-fo-sponsors/</id><updated>Mon, 30 Sep 2024 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[Proud to Be Community Sponsors of Laracon EU and Laracon India]]></title><content type="html"><![CDATA[<p>The PHP Foundation is thrilled to announce our community sponsorship of both Laracon EU and Laracon India! We believe in the power of in-person connections and are excited to support these conferences as they bring together PHP enthusiasts from around the world.</p>
+]]></content><link href="https://thephp.foundation/blog/2024/09/30/call-fo-sponsors/"/><id>https://thephp.foundation/blog/2024/09/30/call-fo-sponsors/</id><updated>Mon, 30 Sep 2024 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[30 years of PHP: FrankenPHP is now part of the PHP organisation]]></title><content type="html"><![CDATA[<p>On June 8, 1995, Rasmus Lerdorf released the first version of the PHP language. Over time, PHP has become the most popular server-side programming language, now powering over 70% of websites!</p>
+
+<p>Exactly 30 years after the first release of PHP, we are proud to announce that <a href="https://frankenphp.dev">FrankenPHP</a>, a modern and high-performance application server based on Caddy, is now part of <a href="https://github.com/php/frankenphp">the PHP organisation on GitHub</a>.</p>
+
+<p>As a reminder, FrankenPHP offers features that are unique in the PHP ecosystem:</p>
+
+<ul>
+<li>simplify the development of applications written in PHP;</li>
+<li>drastically improve performance, while considerably reducing hosting costs (FinOps) and energy consumption (GreenOps);</li>
+<li>facilitate deployment in production, whether on bare-metal servers, or in cloud-native environments;</li>
+<li>easily develop real-time features thanks to native <a href="https://mercure.rocks">Mercure</a> protocol support;</li>
+<li>extend PHP apps with Go, C, and C++ programming languages;</li>
+<li>support the PHP programming language in any application written in Go (server, proxy, in-house development…).</li>
+</ul>
+
+<p>The move of FrankenPHP into the PHP organisation follows the announcement of FrankenPHP support by the PHP Foundation, in collaboration with <a href="https://les-tilleuls.coop">Les-Tilleuls.coop</a> (the creator of FrankenPHP) and the team maintaining <a href="https://caddyserver.com">the Caddy web server</a>.</p>
+
+<p>This is the first step towards greater integration of the tool into the language ecosystem.</p>
+
+<p>The roadmap and new features that are likely to change the way PHP applications are developed will be announced at the <strong><a href="https://jb.gg/phpverse-phpf">JetBrains PHPverse 2025</a></strong> online conference on <strong>June 17</strong>, to celebrate PHP's 30th birthday. There is still time to register, and it's free!</p>
+
+<p><a href="https://jb.gg/phpverse-phpf"><img src="/assets/post-images/2025/phpverse_2025.gif" alt="" /></a></p>
+
+<p>Happy 30th birthday, PHP! 🎉</p>
+
+<p>🐘💜</p>
+]]></content><link href="https://thephp.foundation/blog/2025/06/08/php-30/"/><id>https://thephp.foundation/blog/2025/06/08/php-30/</id><updated>Sun, 08 Jun 2025 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[Proud to Be Community Sponsors of Laracon EU and Laracon India]]></title><content type="html"><![CDATA[<p>The PHP Foundation is thrilled to announce our community sponsorship of both Laracon EU and Laracon India! We believe in the power of in-person connections and are excited to support these conferences as they bring together PHP enthusiasts from around the world.</p>
 
 <h2 id="laracon-eu"><a href="https://laracon.eu/">Laracon EU</a></h2>
 

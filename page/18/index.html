@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The PHP Foundation &mdash; The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language</title>
+    <meta name="description" content="We support, advance, and develop the PHP Language">
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="index, follow">
+        <link href="https://phpc.social/@thephpf" rel="me" />
+    <link rel="stylesheet" href="https://thephp.foundation/assets/css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/base16/darcula.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+
+    <meta name="yandex-verification" content="6990192232fdf071" />
+    <meta name="msvalidate.01" content="5D1EB82347E6BF271A01DCDBF7E59BED" />
+
+    <meta property="og:url" content="https://thephp.foundation/page/18">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The PHP Foundation">
+    <meta property="og:description" content="We support, advance, and develop the PHP Language">
+    <meta property="og:image" content="https://thephp.foundation/assets/icons/share.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="https://thephp.foundation">
+    <meta property="twitter:url" content="https://thephp.foundation/page/18">
+    <meta name="twitter:title" content="The PHP Foundation">
+    <meta name="twitter:description" content="We support, advance, and develop the PHP Language">
+    <meta name="twitter:image" content="https://thephp.foundation/assets/icons/share.png">
+
+    <link rel="apple-touch-startup-image" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" sizes="76x76" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="120x120" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="128x128" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="152x152" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="196x196" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="512x512" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="1024x1024" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="2048x2048" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="128x128" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="196x196" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="512x512" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="2048x2048" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+
+    <link rel="alternate" type="application/atom+xml" href="https://thephp.foundation/atom.xml"
+          title="The PHP Foundation activity feed"/>
+                <script src="//cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+    </head>
+<body class="bg-white">
+
+<header x-data="{ isOpen: false }" @keydown.escape="isOpen = false" @click.away="isOpen = false" itemscope
+        itemtype="https://schema.org/WPHeader">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between relative">
+        <div class="absolute inset-x-0 bottom-0 h-px bg-slate-900/5"></div>
+        <div class="flex lg:flex-1 items-center gap-4">
+            <a href="https://thephp.foundation/" class="-m-1.5 p-1.5">
+                <img class="h-16 w-auto" src="https://thephp.foundation/assets/icons/php_foundation.svg"
+                     alt="PHP Foundation">
+            </a>
+            <span class="text-[#27282c] font-semibold text-sm md:text-xl" itemprop="headline">The PHP Foundation</span>
+        </div>
+        <div class="flex lg:hidden">
+            <button type="button"
+                    @click="isOpen = true"
+                    class="m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                     aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                </svg>
+            </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12" itemscope itemtype="https://schema.org/SiteNavigationElement">
+            <a href="https://thephp.foundation/structure" class="text-gray-700 hover:underline" itemprop="url">Who we are</a>
+
+            <a href="https://thephp.foundation/foundation" class="text-gray-700 hover:underline" itemprop="url">What we do</a>
+
+            <a href="https://thephp.foundation/blog" class="text-gray-700 hover:underline" itemprop="url">News</a>
+
+            <a href="https://thephp.foundation/presentations" class="text-gray-700 hover:underline" itemprop="url">Talks</a>
+
+            <a href="https://thephp.foundation/contact" class="text-gray-700 hover:underline" itemprop="url">Contact</a>
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-8">
+            <a href="https://php.net" target="_blank" rel="noopener noreferrer"
+               class="text-sm font-semibold leading-6 text-gray-700 nav-org hover:border-none hover:underline">
+                php.net</a>
+
+            <a href="/sponsor" class="button-link">Sponsor</a>
+        </div>
+    </nav>
+    <div x-show="isOpen" x-cloak>
+        <div class="fixed inset-0 z-50"></div>
+        <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="mx-auto flex max-w-7xl items-center justify-between relative">
+                <div class="flex lg:flex-1 items-center gap-4">
+                    <a href="https://thephp.foundation/" class="-m-1.5 p-1.5">
+                        <img class="h-16 w-auto" src="https://thephp.foundation/assets/icons/php_foundation.svg"
+                             alt="PHP Foundation">
+                    </a>
+                    <span class="text-[#27282c] font-semibold text-sm md:text-xl">The PHP Foundation</span>
+                </div>
+                <div class="flex">
+                    <button type="button"
+                            @click="isOpen = false"
+                            class="m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                             aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <nav class="mt-6 flow-root px-6 py-6">
+                <div class="-my-6 divide-y divide-gray-500/10">
+                    <div class="space-y-2 py-6" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                        <a href="https://thephp.foundation/structure" itemprop="url"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Who
+                            we are</a>
+
+                        <a href="https://thephp.foundation/foundation" itemprop="url"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">What
+                            we do</a>
+
+                        <a href="https://thephp.foundation/blog" itemprop="url"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">News</a>
+
+                        <a href="https://thephp.foundation/presentations" itemprop="url"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Talks</a>
+
+                        <a href="https://thephp.foundation/contact" itemprop="url"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Contact</a>
+                    </div>
+                    <div class="py-6">
+                        <a href="/sponsor" rel="noopener noreferrer"
+                           class="block py-2 text-center no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">Sponsor</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<section class="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20">
+    <div class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:-mr-80 lg:-mr-96"></div>
+    <div class="mx-auto max-w-7xl px-6 py-8 lg:py-24 lg:px-4">
+        <div class="flex flex-col md:flex-row justify-between">
+            <div class="mt-0 max-w-xl md:mt-10 md:ml-4 lg:mt-10  mr-4">
+                <h1 class="mt-0 mb-0 max-w-2xl text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-7xl">
+                    We support, advance, and&nbsp;develop the&nbsp;PHP&nbsp;Language
+                </h1>
+                <div class="mt-6 flex flex-row gap-4">
+                    <a href="/sponsor" class="inline-block lg:hidden text-xl py-2 no-underline px-6 !text-white bg-[#6858f6] rounded-3xl hover:bg-[rgba(104,88,246,.8)]">
+                        Sponsor
+                    </a>
+                </div>
+            </div>
+            <div class="mt-6 max-w-xl lg:mt-0">
+                <img src="https://thephp.foundation/assets/icons/php_foundation.svg"
+                     alt="PHP Foundation"
+                     class="object-cover">
+            </div>
+        </div>
+    </div>
+    <div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32"></div>
+</section>
+
+<section class="border-t">
+    <div class="mx-auto max-w-4xl px-6 lg:px-0 py-12">
+        <div class="text-2xl leading-8 text-white">
+            <h2>Our Mission</h2>
+            <p class="text-lg" ><strong>The PHP Foundation</strong> is a collective of people and organizations relying on the PHP language. Its mission is to ensure the long-term prosperity of the PHP language.
+
+            <p class="text-lg">The PHP Foundation focuses on providing financial support and guidance to PHP language developers to support its goals of improving the language for its users, providing high-quality maintenance, and improving the PHP language project to retain current contributors and to integrate new contributors.</p>
+
+            <p class="text-lg">The PHP Foundation aims to promote the public image of the PHP language in the interest of retaining existing and gaining new users and contributors.</p>
+            
+            <p class="text-lg">Read our <a href="https://blog.jetbrains.com/phpstorm/2021/11/the-php-foundation/">announcement</a> for more details.</p>
+        </div>
+    </div>
+</section>
+
+<section class="mx-auto max-w-4xl px-6 lg:px-0 border-t border-gray-200 pt-12">
+    <h2 class="mt-0">Latest news</h2>
+    <div class="mx-auto grid max-w-4xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3 py-0">
+                <article class="flex max-w-xl flex-col items-start">
+            <div class="group relative">
+                <div class="flex items-center gap-x-4 text-xs">
+                    <div class="text-gray-500">Jan 21, 2022</div>
+                </div>
+                <h3 class="mt-3 mb-2 text-lg font-semibold leading-6">
+                    <a href="https://thephp.foundation/blog/2022/01/21/the-php-foundation-update-january-2022/" class="no-underline border-b">
+                        The PHP Foundation Update, January 2022
+                    </a>
+                </h3>
+                <div class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
+                    &lt;?php echo 'Hello world!';
+
+In November, the PHP Foundation was launched publicly and we’ve seen ...
+                </div>
+            </div>
+        </article>
+            </div>
+</section>
+
+<section class="mt-12 mx-auto max-w-4xl">
+    <div class="px-4 pt-3 border-b border-t -mx-4 border-gray-200">
+    <div class="bg-white py-8">
+        <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
+            <div class="max-w-xl text-4xl font-medium tracking-tight text-gray-900 lg:col-span-6">
+                Subscribe to The PHP Foundation newsletter
+            </div>
+            <form method="POST"
+                  action="https://php-foundation.mailcoach.app/subscribe/9be4e2bd-f9d8-475c-b00e-2dcc4cf90056"
+                  class="w-full max-w-md lg:col-span-6">
+                <div class="flex gap-x-4">
+                    <label for="email-address" class="sr-only">Email address</label>
+                    <input id="email-address" name="email" type="email" autocomplete="email" required
+                           class="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                           placeholder="Enter your email">
+                    <button type="submit"
+                            class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">
+                        Subscribe
+                    </button>
+                </div>
+                <div class="mt-4 text-sm leading-6 text-gray-900">
+                    No spam. We only send 1–2 emails per month.
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</section>
+
+<section class="">
+    <div class="mx-auto max-w-4xl px-6 lg:px-0 pb-12">
+        <div class="text-lg leading-8 text-white">
+            <h2>Our Work</h2>
+            <p class="text-lg">The foundation contracts <a href="/structure#core_developers">10 part-time and full-time developers</a> who work on maintenance and new features for PHP. </p>
+            <p class="text-lg">The foundation team contributes in many forms: filing issues, reviewing pull requests, participating in discussions on mailing lists, triaging issues, submitting RFC proposals, writing documentation, maintaining project infrastructure, fixing bugs, and implementing features.</p>
+        </div>
+    </div>
+</section>
+
+<section class="bg-gray-900 py-24">
+    <div class="mx-auto max-w-7xl px-6 lg:px-0">
+        <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3 items-center">
+            <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                <dt class="text-base leading-7 text-gray-400">Total by The PHP Foundation in 2024</dt>
+                <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">1976 commits</dd>
+            </div>
+
+            <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                <dt class="text-base leading-7 text-gray-400">Total by The PHP Foundation in 2024</dt>
+                <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">1278 reviews</dd>
+            </div>
+
+            <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                <dt class="text-base leading-7 text-gray-400">
+                    Proposals authored or co-authored by The PHP Foundation developers in 2024
+                </dt>
+                <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">13 RFCs</dd>
+            </div>
+        </dl>
+
+        <div class="text-center mt-12">
+            <a href="/blog/2025/03/31/transparency-and-impact-report-2024/"
+               class="inline-block py-2 no-underline px-6 !text-white border-white border rounded-3xl hover:bg-white hover:!text-gray-900 transition-all">
+                2024 Impact Report</a>
+        </div>
+    </div>
+</section>
+
+<section class="border-t">
+    <div class="mx-auto max-w-4xl px-6 lg:px-0">
+        <div class="text-lg leading-8 text-white">
+            <h2 id="sponsors">Our Members</h2>
+            <p class="text-lg">In alphabetical order, the ten founding members of the foundation are: <a href="https://www.acquia.com/">Acquia</a>, <a href="https://automattic.com/">Automattic</a>, <a href="https://craftcms.com/">Craft CMS</a>, <a href="https://www.jetbrains.com/">JetBrains</a>, <a href="https://laravel.com/">Laravel</a>, <a href="https://prestashop.com/">PrestaShop</a>, <a href="https://packagist.com/">Private Packagist</a>, <a href="https://symfony.com/">Symfony</a>, <a href="https://tideways.com/">Tideways</a>, <a href="https://www.zend.com/">Zend by Perforce</a>.</p>
+
+            <p class="text-lg">In addition to the <a href="https://thephp.foundation/structure/">Governing Board</a>, The PHP Foundation has an <a href="https://thephp.foundation/blog/2023/03/31/php-foundation-update-march-2023/#a-new-benefit-for-major-sponsors-%E2%80%93-advisory-board-membership">Advisory Board</a> with representatives from Automattic, JetBrains, Private Packagist, Symfony, Tideways, Zend by Perforce, Moodle, Shopware, Laravel, Ardennes-étape, Les-Tilleuls.coop / API Platform, Aternos GmbH, PrestaShop, and CraftCMS.</p>
+
+            <p class="text-lg">The foundation is always open to new sponsors. If your company has been benefiting from PHP over the years, but not sure how it might give back to the ecosystem, now there's a clear and obvious choice.</p>
+            
+        </div>
+    </div>
+</section>
+
+<section class="">
+    <div class="mx-auto max-w-4xl px-6 lg:px-0 pt-8">
+        <div class="text-lg leading-8">
+            <h2 id="sponsors_platinum">Platinum Sponsors</h2>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <div title="JetBrains">
+        <a href="https://www.jetbrains.com/"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-32 rounded w-full object-contain object-center"
+                     src="/assets/sponsors/jetbrains.png" alt="JetBrains"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://www.jetbrains.com/">JetBrains</a>
+            </div>
+        </a>
+    </div>
+        <div title="Automattic">
+        <a href="https://automattic.com/"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-32 rounded w-full object-contain object-center"
+                     src="/assets/sponsors/automattic.png" alt="Automattic"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://automattic.com/">Automattic</a>
+            </div>
+        </a>
+    </div>
+        <div title="Sovereign Tech Agency">
+        <a href="https://www.sovereign.tech/"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-32 rounded w-full object-contain object-center"
+                     src="/assets/sponsors/STA-Logo-Default-Black-RGB.svg" alt="Sovereign Tech Agency"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://www.sovereign.tech/">Sovereign Tech Agency</a>
+            </div>
+        </a>
+    </div>
+    </div>
+
+<h2 id="sponsors_gold">Gold Sponsors</h2>
+<div class="grid grid-cols-2 lg:grid-cols-5 gap-4 text-base mb-8">
+        <div title="Laravel">
+        <a href="https://laravel.com/"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-24 rounded w-full object-contain object-center"
+                     src="/assets/sponsors/laravel-logo.svg" alt="Laravel"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://laravel.com/">Laravel</a>
+            </div>
+        </a>
+    </div>
+        <div title="GoDaddy.com">
+        <a href="https://www.godaddy.com/"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-24 rounded w-full object-contain object-center"
+                     src="/assets/sponsors/godaddy.png" alt="GoDaddy.com"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://www.godaddy.com/">GoDaddy.com</a>
+            </div>
+        </a>
+    </div>
+    </div>
+
+<h2 id="sponsors_silver">Silver Sponsors</h2>
+<div class="grid grid-cols-3 lg:grid-cols-6 gap-4 text-base mb-8">
+        <div title="Private Packagist">
+        <a href="https://packagist.com/"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-20 rounded w-full object-contain object-center"
+                     src="/assets/sponsors/private-packagist.png" alt="Private Packagist"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://packagist.com/">Private Packagist</a>
+            </div>
+        </a>
+    </div>
+        <div title="Craft CMS">
+        <a href="https://craftcms.com/"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-20 rounded w-full object-contain object-center"
+                     src="/assets/sponsors/craftcms.png" alt="Craft CMS"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://craftcms.com/">Craft CMS</a>
+            </div>
+        </a>
+    </div>
+        <div title="Zend by Perforce">
+        <a href="https://www.zend.com/"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-20 rounded w-full object-contain object-center"
+                     src="/assets/sponsors/zend-by-perforce.png" alt="Zend by Perforce"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://www.zend.com/">Zend by Perforce</a>
+            </div>
+        </a>
+    </div>
+        <div title="Tideways">
+        <a href="https://tideways.com/"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-20 rounded w-full object-contain object-center"
+                     src="/assets/sponsors/tideways.jpg" alt="Tideways"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://tideways.com/">Tideways</a>
+            </div>
+        </a>
+    </div>
+        <div title="Symfony Corp">
+        <a href="https://symfony.com/"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-20 rounded w-full object-contain object-center"
+                     src="/assets/sponsors/symfony-corp.png" alt="Symfony Corp"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://symfony.com/">Symfony Corp</a>
+            </div>
+        </a>
+    </div>
+        <div title="Mercari Inc.">
+        <a href="https://about.mercari.com/"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-20 rounded w-full object-contain object-center"
+                     src="/assets/sponsors/mercari.png" alt="Mercari Inc."/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://about.mercari.com/">Mercari Inc.</a>
+            </div>
+        </a>
+    </div>
+        <div title="Les-Tilleuls.coop">
+        <a href="https://les-tilleuls.coop/"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-20 rounded w-full object-contain object-center"
+                     src="/assets/sponsors/les-tilleuls.png" alt="Les-Tilleuls.coop"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://les-tilleuls.coop/">Les-Tilleuls.coop</a>
+            </div>
+        </a>
+    </div>
+        <div title="pixiv Inc.">
+        <a href="https://www.pixiv.co.jp/"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-20 rounded w-full object-contain object-center"
+                     src="/assets/sponsors/pixiv-inc.jpg" alt="pixiv Inc."/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://www.pixiv.co.jp/">pixiv Inc.</a>
+            </div>
+        </a>
+    </div>
+        <div title="Aternos GmbH">
+        <a href="https://aternos.gmbh/"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-20 rounded w-full object-contain object-center"
+                     src="/assets/sponsors/aternos-gmbh.png" alt="Aternos GmbH"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://aternos.gmbh/">Aternos GmbH</a>
+            </div>
+        </a>
+    </div>
+        <div title="Sentry Team">
+        <a href="https://sentry.io/"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-20 rounded w-full object-contain object-center"
+                     src="/assets/sponsors/sentry.png" alt="Sentry Team"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://sentry.io/">Sentry Team</a>
+            </div>
+        </a>
+    </div>
+        <div title="Cybozu">
+        <a href="https://cybozu.co.jp/"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-20 rounded w-full object-contain object-center"
+                     src="/assets/sponsors/cybozu.jpg" alt="Cybozu"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://cybozu.co.jp/">Cybozu</a>
+            </div>
+        </a>
+    </div>
+        <div title="Manychat">
+        <a href="https://careers.manychat.com/?utm_source=phpfnd&amp;utm_medium=phpfnd_site&amp;utm_campaign=sponsorship"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-20 rounded w-full object-contain object-center"
+                     src="/assets/sponsors/manychat.svg" alt="Manychat"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://careers.manychat.com/?utm_source=phpfnd&amp;utm_medium=phpfnd_site&amp;utm_campaign=sponsorship">Manychat</a>
+            </div>
+        </a>
+    </div>
+        <div title="Passbolt">
+        <a href="https://passbolt.com/"
+           class="block no-underline" target="_blank" rel="noopener noreferrer">
+            <div class="mb-2 p-2">
+                <img class="h-20 rounded w-full object-contain object-center"
+                     src="/assets/sponsors/passbolt.png" alt="Passbolt"/>
+            </div>
+            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 font-medium mb-4 text-center">
+                <a class="no-underline text-inherit" href="https://passbolt.com/">Passbolt</a>
+            </div>
+        </a>
+    </div>
+    </div>
+
+<h3 id="past_sponsors">Past Sponsors</h3>
+<div class="text-base mb-8">
+    <a class="no-underline text-inherit" href="https://www.livesport.eu/">Livesport s.r.o.</a>, <a class="no-underline text-inherit" href="https://www.acquia.com/">Acquia</a>, <a class="no-underline text-inherit" href="https://www.shopware.com/en/">shopware AG</a>, <a class="no-underline text-inherit" href="https://op.gg/">OP.GG</a>, <a class="no-underline text-inherit" href="https://www.ec-cube.net/">EC-CUBE</a>, <a class="no-underline text-inherit" href="https://spryker.com/">Spryker</a>, <a class="no-underline text-inherit" href="https://polcode.com/">Polcode</a>, <a class="no-underline text-inherit" href="https://binc.jp/">BASE, Inc.</a>, <a class="no-underline text-inherit" href="http://digitalscholar.org/">Digital Scholar</a>, <a class="no-underline text-inherit" href="https://www.rakus.co.jp/">RAKUS</a>, <a class="no-underline text-inherit" href="https://www.cambiumlearning.com/">Cambium Learning, Inc.</a>, <a class="no-underline text-inherit" href="https://www.paycom.com/">Paycom</a>, <a class="no-underline text-inherit" href="https://www.prestashop.com/">PrestaShop</a>, <a class="no-underline text-inherit" href="https://en.ardennes-etape.be/">Ardennes-étape</a>.
+</div>
+        </div>
+    </div>
+
+    <div x-show="isLoaded" x-cloak>
+        <div class="font-medium text-xl my-4"><span x-text="sponsorsCount"></span> organizations support the PHP Foundation
+        </div>
+    </div>
+    
+    <div class="mb-14 text-center">
+        <a href="https://opencollective.com/phpfoundation/contribute/major-sponsors-34207/checkout?interval=year&amount=12000&contributeAs=me" target="_blank"
+           class="inline-block text-xl py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">
+            Become a sponsor of The PHP Foundation
+        </a>
+    </div>
+</section>
+
+<section class="text-center">
+<!--    <div class="mx-auto max-w-4xl px-6 lg:px-0 pt-8">-->
+    <div class="mx-auto max-w-full px-4">
+        
+        <div x-data="{
+            sponsors: [],
+            sponsorsCount: 0,
+            isLoaded: false,
+        
+            fetchSponsoringUsers() {
+                fetch('https://opencollective.com/phpfoundation/members/users.json')
+                    .then((response) => response.json())
+                    .then((json) => {
+                        const unique = [...new Map(json.map(item => [item.name, item])).values()]
+                        this.sponsors = unique.sort((a, b) => b.totalAmountDonated - a.totalAmountDonated).slice(0, 40)
+                        this.sponsorsCount = json.length
+                        this.isLoaded = true
+                    });
+            }
+        }" x-init="fetchSponsoringUsers()" class="mt-8">
+            <div x-show="isLoaded" x-cloak>
+                <div class="font-medium text-xl mb-8 mt-14">More than <span x-text="sponsorsCount"></span> of individuals support The PHP Foundation</div>
+                <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 xl:grid-cols-10 gap-4">
+                    <template x-for="sponsor in sponsors">
+                        <a :href="sponsor.website ?? sponsor.profile"
+                           class="block no-underline hover:underline" target="_blank"
+                           rel="noopener noreferrer">
+                            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 mb-4"
+                                 x-text="sponsor.name"></div>
+                        </a>
+                    </template>
+                </div>
+
+                <div class="my-6">
+                    <a href="https://opencollective.com/phpfoundation/contribute/backers-34283/checkout?interval=month&amount=10&contributeAs=me" target="_blank" rel="noopener noreferrer"
+                       class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">Join the movement</a>
+                </div>
+            </div>
+            <div x-show="!isLoaded" x-cloak>
+                <div x-show="!isLoaded">
+                    <div class="shadow p-2 rounded-lg animate-pulse w-1/4">
+                        <div class="mb-4 p-2">
+                            <span class="flex h-24 w-24 rounded-full bg-slate-200 justify-center items-center text-white text-2xl"></span>
+                        </div>
+                        <div class="h-4 bg-slate-200 rounded"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="bg-gray-900" itemtype="https://schema.org/WPFooter">
+    <div class="mx-auto max-w-7xl overflow-hidden px-6 py-12 lg:px-8">
+        <nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" itemscope
+             itemtype="https://schema.org/SiteNavigationElement">
+
+            <div class="pb-6">
+                <a href="https://thephp.foundation/contact" itemprop="url"
+                   class="text-sm leading-6 text-gray-600 hover:text-gray-900 no-underline">Contact</a>
+            </div>
+
+            <div class="pb-6">
+                <a href="https://thephp.foundation/structure" itemprop="url"
+                   class="text-sm leading-6 text-gray-600 hover:text-gray-900 no-underline">Structure</a>
+            </div>
+
+            <div class="pb-6">
+                <a href="https://thephp.foundation/branding" itemprop="url"
+                   class="text-sm leading-6 text-gray-600 hover:text-gray-900 no-underline">Branding</a>
+            </div>
+
+            <div class="pb-6">
+                <a href="https://thephp.foundation/code-of-conduct" itemprop="url"
+                   class="text-sm leading-6 text-gray-600 hover:text-gray-900 no-underline">Code of Conduct</a>
+            </div>
+        </nav>
+
+        <div class="mt-10 flex justify-center space-x-10 items-center">
+            <a href="https://twitter.com/thephpf" target="_blank" rel="noopener noreferrer"
+               class="text-gray-400 hover:text-gray-500">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                    <g>
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                    </g>
+                </svg>
+            </a>
+
+            <a href="https://github.com/ThePHPF/thephp.foundation" class="text-gray-400 hover:text-gray-500"
+               target="_blank" rel="noopener noreferrer">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                          clip-rule="evenodd"/>
+                </svg>
+            </a>
+
+            <a href="https://phpc.social/@thephpf" class="text-gray-400 hover:text-gray-500" target="_blank"
+               rel="noopener noreferrer">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"/>
+                </svg>
+            </a>
+
+            <a href="https://www.linkedin.com/company/phpfoundation/" class="text-gray-400 hover:text-gray-500"
+               target="_blank" rel="noopener noreferrer">
+                <svg class="h-6 w-6"
+                     viewBox="0 0 56.693 56.693" fill="currentColor"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <path d="M30.071,27.101v-0.077c-0.016,0.026-0.033,0.052-0.05,0.077H30.071z"/>
+                        <path
+                                d="M49.265,4.667H7.145c-2.016,0-3.651,1.596-3.651,3.563v42.613c0,1.966,1.635,3.562,3.651,3.562h42.12   c2.019,0,3.654-1.597,3.654-3.562V8.23C52.919,6.262,51.283,4.667,49.265,4.667z M18.475,46.304h-7.465V23.845h7.465V46.304z    M14.743,20.777h-0.05c-2.504,0-4.124-1.725-4.124-3.88c0-2.203,1.67-3.88,4.223-3.88c2.554,0,4.125,1.677,4.175,3.88   C18.967,19.052,17.345,20.777,14.743,20.777z M45.394,46.304h-7.465V34.286c0-3.018-1.08-5.078-3.781-5.078   c-2.062,0-3.29,1.389-3.831,2.731c-0.197,0.479-0.245,1.149-0.245,1.821v12.543h-7.465c0,0,0.098-20.354,0-22.459h7.465v3.179   c0.992-1.53,2.766-3.709,6.729-3.709c4.911,0,8.594,3.211,8.594,10.11V46.304z"/>
+                    </g>
+                </svg>
+            </a>
+        </div>
+        <div class="mt-10 text-center text-xs leading-5 text-gray-500" itemprop="copyrightHolder">&copy; The PHP Foundation</div>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const anchors = new AnchorJS()
+        anchors.add()
+
+        for (const element of document.getElementsByClassName('anchorjs-link')) {
+            element.addEventListener('click', function () {
+                navigator.clipboard.writeText(window.location.origin + window.location.pathname + element.getAttribute('href'))
+            })
+        }
+    })
+</script>
+
+
+<script>hljs.highlightAll();</script>
+
+<script src="https://cdn.usefathom.com/script.js" data-site="PJKRZUTE" defer></script>
+<!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="https://analytics.thephp.foundation/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '1']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+<noscript><p><img referrerpolicy="no-referrer-when-downgrade" src="https://analytics.thephp.foundation/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Matomo Code -->
+
+</body>
+</html>

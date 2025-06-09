@@ -3,9 +3,42 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2025-05-30T09:37:59+00:00</updated>
+    <updated>2025-06-09T17:55:36+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[30 years of PHP: FrankenPHP is now part of the PHP organisation]]></title>
+            <link href="https://thephp.foundation/blog/2025/06/08/php-30/"/>
+            <updated>2025-06-08T00:00:00+00:00</updated>
+            <id>https://thephp.foundation/blog/2025/06/08/php-30/</id>
+            <content type="html"><![CDATA[<p>On June 8, 1995, Rasmus Lerdorf released the first version of the PHP language. Over time, PHP has become the most popular server-side programming language, now powering over 70% of websites!</p>
+
+<p>Exactly 30 years after the first release of PHP, we are proud to announce that <a href="https://frankenphp.dev">FrankenPHP</a>, a modern and high-performance application server based on Caddy, is now part of <a href="https://github.com/php/frankenphp">the PHP organisation on GitHub</a>.</p>
+
+<p>As a reminder, FrankenPHP offers features that are unique in the PHP ecosystem:</p>
+
+<ul>
+<li>simplify the development of applications written in PHP;</li>
+<li>drastically improve performance, while considerably reducing hosting costs (FinOps) and energy consumption (GreenOps);</li>
+<li>facilitate deployment in production, whether on bare-metal servers, or in cloud-native environments;</li>
+<li>easily develop real-time features thanks to native <a href="https://mercure.rocks">Mercure</a> protocol support;</li>
+<li>extend PHP apps with Go, C, and C++ programming languages;</li>
+<li>support the PHP programming language in any application written in Go (server, proxy, in-house development…).</li>
+</ul>
+
+<p>The move of FrankenPHP into the PHP organisation follows the announcement of FrankenPHP support by the PHP Foundation, in collaboration with <a href="https://les-tilleuls.coop">Les-Tilleuls.coop</a> (the creator of FrankenPHP) and the team maintaining <a href="https://caddyserver.com">the Caddy web server</a>.</p>
+
+<p>This is the first step towards greater integration of the tool into the language ecosystem.</p>
+
+<p>The roadmap and new features that are likely to change the way PHP applications are developed will be announced at the <strong><a href="https://jb.gg/phpverse-phpf">JetBrains PHPverse 2025</a></strong> online conference on <strong>June 17</strong>, to celebrate PHP's 30th birthday. There is still time to register, and it's free!</p>
+
+<p><a href="https://jb.gg/phpverse-phpf"><img src="/assets/post-images/2025/phpverse_2025.gif" alt="" /></a></p>
+
+<p>Happy 30th birthday, PHP! 🎉</p>
+
+<p>🐘💜</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[FrankenPHP Is Now Officially Supported by&nbsp;The&nbsp;PHP&nbsp;Foundation]]></title>
             <link href="https://thephp.foundation/blog/2025/05/15/frankenphp/"/>
@@ -1188,34 +1221,6 @@ echo $result; // 18.1428571428
 <blockquote>
   <p>PHP Roundup is prepared by Ayesh Karunaratne from <strong><a href="https://php.watch">PHP.Watch</a></strong>, a source for PHP News, Articles, Upcoming Changes, and more.</p>
 </blockquote>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Announcing the Pre-Release of the PHP Installer for Extensions (PIE)]]></title>
-            <link href="https://thephp.foundation/blog/2024/11/19/pie-pre-release/"/>
-            <updated>2024-11-19T00:00:00+00:00</updated>
-            <id>https://thephp.foundation/blog/2024/11/19/pie-pre-release/</id>
-            <content type="html"><![CDATA[<p>We're thrilled to introduce the pre-release of the PHP Installer for Extensions (PIE) – <a href="https://github.com/php/pie"><strong>github.com/php/pie</strong></a>!</p>
-
-<p>PIE aims to simplify managing PHP extensions by providing a modern, flexible alternative to PECL and treating extensions as first-class citizens in the PHP ecosystem.</p>
-
-<blockquote>
-PIE development is commissioned by the <a href="https://www.sovereign.tech/tech/php"><strong>Sovereign Tech Agency</strong></a>.
-</blockquote>
-
-<p>This initial pre-release is available as a <a href="https://github.com/php/pie/releases/tag/0.2.0">PHAR download</a>, and we invite you to take it for a spin and share your feedback. While this release is an exciting milestone, we know there's a lot more work ahead to make PIE ready for widespread use, so your feedback is invaluable. If you encounter any issues, or have any questions, feel free to open an <a href="https://github.com/php/pie/issues">issue on GitHub</a>, and help us shape the future of PIE.</p>
-
-<h2 id="why-pie%3F">Why PIE?</h2>
-
-<p>With PIE, the process of managing PHP extensions becomes more streamlined. Extensions are distributed via <a href="https://packagist.org/extensions">Packagist</a> just like regular PHP packages! It makes the installation and update process quite familiar if you already use Composer.</p>
-
-<p>We’re working to make PIE stronger and easier to use. We’re improving how PHP extensions are managed and using ideas from Composer to make the process smoother.</p>
-
-<h2 id="are-you-an-extension-author%3F">Are you an extension author?</h2>
-
-<p>Extensions do need to be made compatible with PIE by adding a <code>composer.json</code> (more instructions <a href="https://github.com/php/pie/blob/main/docs/extension-maintainers.md">here</a>), and submitting it to <a href="https://packagist.org/packages/submit">Packagist</a>. Once a package has added support for PIE, it will appear on the Packagist <a href="https://packagist.org/extensions">Extensions list</a> page.</p>
-
-<p>💜️🐘</p>
 ]]></content>
         </entry>
     </feed>
