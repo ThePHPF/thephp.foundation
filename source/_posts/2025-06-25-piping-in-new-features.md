@@ -21,7 +21,7 @@ $result = "Hello World" |> strlen(...)
 $result = strlen("Hello World");
 ```
 
-On it's own, that is not all that interesting.  Where it becomes interesting is when it is repeated, or chained, to form a "pipeline."  For example, here's real code from a real project I've worked on, recast to use pipes:
+On its own, that is not all that interesting.  Where it becomes interesting is when it is repeated, or chained, to form a "pipeline."  For example, here's real code from a real project I've worked on, recast to use pipes:
 
 ```php
 $arr = [
