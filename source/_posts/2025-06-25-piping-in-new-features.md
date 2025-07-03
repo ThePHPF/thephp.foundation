@@ -1,5 +1,5 @@
 ---
-title: 'Piping in new features'
+title: 'PHP 8.5 Adds Pipe Operator: What it means'
 layout: post
 tags:
   - stories
@@ -9,15 +9,16 @@ author:
 published_at: 25 June 2025
 ---
 
-In May, another long-time-coming feature landed in PHP and will ship in PHP 8.5 this fall: The [pipe operator](https://wiki.php.net/rfc/pipe-operator-v3).  For such a simple feature it was a long and winding road to get here, with this being the third RFC to attempt it, but it is definitely a feature that punches above its weight.
+PHP 8.5, due out November of this year, will bring with it another long-sought-after feature: the [pipe operator](https://wiki.php.net/rfc/pipe-operator-v3) (|>).  It's a small feature with huge potential, yet it still took years to happen.
 
-## Flexible pipes
+## What is a pipe operator?
 
-The pipe operator, spelled `|>`, is deceptively simple.  A feature common to many functional languages, the pipe operator takes the value on its left side and passes it as the single argument to a function (or in PHP's case, `callable`) on its right side.  That is, the following two lines mean the same thing:
+The pipe operator, spelled `|>`, is deceptively simple.  It takes the value on its left side and passes it as the single argument to a function (or in PHP's case, `callable`) on its right side:
 
 ```php
 $result = "Hello World" |> strlen(...)
 
+// Is equivalent to
 $result = strlen("Hello World");
 ```
 
@@ -73,11 +74,11 @@ That RFC didn't go as far as a vote.  Nothing much happened for several years, u
 
 Sadly, PFA didn't pass due to some engine complexity issues, and that largely undermined the v2 Pipe RFC, too.  However, we did get a consolation prize out of it: [First Class Callables](https://wiki.php.net/rfc/first_class_callable_syntax) (the `array_values(...)` syntax), courtesy Nikita Popov, were by design a "junior", degenerate version of partial function application.
 
-Fast forward to 2025, and I was sufficiently bored to take another swing at pipes.  This time with a better implementation with lots of hand-holding from Ilija Tovilo and Arnaud Le Blanc, both part of the PHP Foundation dev team, I was able to get it through.
+Fast-forward to 2025, and I was sufficiently bored to take another swing at pipes.  This time with a better implementation with lots of hand-holding from Ilija Tovilo and Arnaud Le Blanc, both part of the PHP Foundation dev team, I was able to get it through.
 
 Third time's the charm.
 
-## The implications
+## More than the sum of its parts
 
 Above, we described pipes as "deceptively simple."  The implementation itself is almost trivial; it's just syntax sugar for the temp variable version, effectively.  However, the best features are the ones that can combine with others or be used in novel ways to punch above their weight.
 
@@ -145,11 +146,13 @@ fopen('pipes.md', 'rb') // No variable, so it will close automatically when GCed
 
 The potential is absolutely huge.  I don't think it's immodest to say that the pipe operator has one of the highest "bangs for the buck" of any feature in recent memory, alongside such niceties as constructor property promotion.  And all thanks to a little syntax sugar.
 
-## Where to from here?
+## What comes next?
 
-Although pipes are a major milestone, we're not done.  There is active work on not one but two follow up RFCs.  Neither one looks likely to make it into PHP 8.5, but are strong contenders for PHP 8.6 that will fully flesh out what pipes started.
+Although pipes are a major milestone, we're not done.  There is active work on not one but two follow-up RFCs.
 
-The first is a [function composition operator](https://wiki.php.net/rfc/function-composition).  Where pipe executes immediately, function composition creates a new function by sticking two functions end-to-end.  That would mean the streams example above could be further optimized by combining the `map()` calls:
+The first is a second attempt at [Partial Function Application](https://wiki.php.net/rfc/partial_function_application_v2).  This is a larger feature, but with first-class callables already bringing in much of the necessary plumbing, which simplifies the implementation.  With pipes now providing a natural use case, as well as easy optimization points, it's worth a second attempt.  Whether it makes it into PHP 8.5, is delayed to 8.6, or is again rejected is still an open question as of this writing, though I am hopeful.  Major thanks to Arnaud Le Blanc from the PHP Foundation team for picking it up to update the implementation.
+
+The second is a [function composition operator](https://wiki.php.net/rfc/function-composition).  Where pipe executes immediately, function composition creates a new function by sticking two functions end-to-end.  That would mean the streams example above could be further optimized by combining the `map()` calls:
 
 ```php
 fopen('pipes.md', 'rb')
@@ -159,6 +162,6 @@ fopen('pipes.md', 'rb')
 ;
 ```
 
-The other is a second attempt at Partial Function Application.  This is a larger lift, but with first-class callables already bringing in much of the necessary plumbing, which simplifies the implementation, and pipes now providing a natural use case, it's worth a second attempt.
+This one is definitely not going to make it into PHP 8.5, but I am hopeful that we'll be able to get it into 8.6.  Stay tuned.
 
-I won't promise either one is going to happen.  But they're the next logical step on this journey, so it's worth shooting for.  Stay tuned.
+> Special thanks to Ilija Tovilo and Arnaud Le Blanc from the PHP Foundation team for their assistance with the pipe implementation.  If you’d like to help push PHP forward, consider [becoming a sponsor](https://thephp.foundation/sponsor/).
