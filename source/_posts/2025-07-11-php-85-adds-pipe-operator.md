@@ -55,7 +55,7 @@ Anyone who has worked on the Unix/Linux command line will likely recognize the s
 
 The `|>` operator appears in many languages, mostly in the functional world.  F# has essentially the exact same operator, as does OCaml.  Elixir has a slightly fancier version (which we considered but ultimately decided against for now).  Numerous PHP libraries exist in the wild that offer similar capability with many extra expensive steps, including my own [Crell/fp](https://github.com/Crell/fp/).
 
-The story for PHP pipes, though, begins with Hack/HHVM, Facebook's PHP fork nee competitive implementation.  Hack included many features beyond what PHP 5 of the day offered; many of them eventually ended up in later PHP versions.  One of its features was a unique spin on a pipe operator.
+The story for PHP pipes, though, begins with Hack/HHVM, Facebook's PHP fork née competitive implementation.  Hack included many features beyond what PHP 5 of the day offered; many of them eventually ended up in later PHP versions.  One of its features was a unique spin on a pipe operator.
 
 In 2016, Sara Golemon, long-time PHP contributor and former Open Source lead on the HHVM project, proposed porting [Hack's pipes](https://wiki.php.net/rfc/pipe-operator) to PHP directly.  In that RFC, the right side of a pipe wasn't a `callable` but an expression, and used a magic `$$` token (lovingly called `T_BLING`, at least according to yours truly) to inject the left-side result into it.  In that case, the example above would look like this:
 
