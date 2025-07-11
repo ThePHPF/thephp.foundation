@@ -3,9 +3,165 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2025-07-02T20:55:07+00:00</updated>
+    <updated>2025-07-11T08:59:46+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[PHP 8.5 Adds Pipe Operator: What it means]]></title>
+            <link href="https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/"/>
+            <updated>2025-07-11T00:00:00+00:00</updated>
+            <id>https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/</id>
+            <content type="html"><![CDATA[<p>PHP 8.5, due out November of this year, will bring with it another long-sought-after feature: the <a href="https://wiki.php.net/rfc/pipe-operator-v3">pipe operator</a> (<code>|&gt;</code>).  It's a small feature with huge potential, yet it still took years to happen.</p>
+
+<h2 id="what-is-a-pipe-operator%3F">What is a pipe operator?</h2>
+
+<p>The pipe operator, spelled <code>|&gt;</code>, is deceptively simple.  It takes the value on its left side and passes it as the single argument to a function (or in PHP's case, <code>callable</code>) on its right side:</p>
+
+<pre><code class="php">$result = "Hello World" |&gt; strlen(...)
+
+// Is equivalent to
+$result = strlen("Hello World");
+</code></pre>
+
+<p>On its own, that is not all that interesting.  Where it becomes interesting is when it is repeated, or chained, to form a "pipeline."  For example, here's real code from a real project I've worked on, recast to use pipes:</p>
+
+<pre><code class="php">$arr = [
+  new Widget(tags: ['a', 'b', 'c']),
+  new Widget(tags: ['c', 'd', 'e']),
+  new Widget(tags: ['x', 'y', 'a']),
+];
+
+$result = $arr
+    |&gt; fn($x) =&gt; array_column($x, 'tags') // Gets an array of arrays
+    |&gt; fn($x) =&gt; array_merge(...$x)       // Flatten into one big array
+    |&gt; array_unique(...)                  // Remove duplicates
+    |&gt; array_values(...)                  // Reindex the array.
+;
+
+// $result is ['a', 'b', 'c', 'd', 'e', 'x', 'y']
+</code></pre>
+
+<p>The same code without pipes would require either this horribly ugly nest of evil:</p>
+
+<pre><code class="php">array_values(array_unique(array_merge(...array_column($arr, 'tags'))));
+</code></pre>
+
+<p>Or manually creating a temporary variable for each step.  While temp variables are not the worst thing in the world, they are extra mental overhead, and mean that a chain like that cannot be used in a single-expression context, like a <code>match()</code> block.  A pipe chain can.</p>
+
+<p>Anyone who has worked on the Unix/Linux command line will likely recognize the similarity to the shell pipe, <code>|</code>.  That's very deliberate, as it is effectively the same thing: Use the output from the left side as the input on the right side.</p>
+
+<h2 id="where-did-it-come-from%3F">Where did it come from?</h2>
+
+<p>The <code>|&gt;</code> operator appears in many languages, mostly in the functional world.  F# has essentially the exact same operator, as does OCaml.  Elixir has a slightly fancier version (which we considered but ultimately decided against for now).  Numerous PHP libraries exist in the wild that offer similar capability with many extra expensive steps, including my own <a href="https://github.com/Crell/fp/">Crell/fp</a>.</p>
+
+<p>The story for PHP pipes, though, begins with Hack/HHVM, Facebook's PHP fork nee competitive implementation.  Hack included many features beyond what PHP 5 of the day offered; many of them eventually ended up in later PHP versions.  One of its features was a unique spin on a pipe operator.</p>
+
+<p>In 2016, Sara Golemon, long-time PHP contributor and former Open Source lead on the HHVM project, proposed porting <a href="https://wiki.php.net/rfc/pipe-operator">Hack's pipes</a> to PHP directly.  In that RFC, the right side of a pipe wasn't a <code>callable</code> but an expression, and used a magic <code>$$</code> token (lovingly called <code>T_BLING</code>, at least according to yours truly) to inject the left-side result into it.  In that case, the example above would look like this:</p>
+
+<pre><code class="php">$result = $arr
+    |&gt; array_column($$, 'tags')
+    |&gt; array_merge(...$$)
+    |&gt; array_unique($$)
+    |&gt; array_values($$)
+;
+</code></pre>
+
+<p>While powerful, it was also somewhat limiting.  It was very non-standard, unlike any other language.  It also meant a weird, one-off syntax for partially-calling functions that worked only when paired with pipes.</p>
+
+<p>That RFC didn't go as far as a vote.  Nothing much happened for several years, until 2020/2021.  That's when I, fresh off of writing a book on functional programming in PHP that talked about function composition, decided to take a swing at it.  In particular, I partnered with a team to work on <a href="https://wiki.php.net/rfc/partial_function_application">Partial Function Application</a> (PFA) as a separate RFC from a more <a href="https://wiki.php.net/rfc/pipe-operator-v2">traditional pipe</a>.  The idea was that turning a multi-parameter function (like <code>array_column()</code> above) into the single-parameter function that <code>|&gt;</code> needed was a useful feature on its own, and should be usable elsewhere.  The syntax was a bit different than the Hack version, in order to make it more flexible: <code>some_function(?, 5, ?, 3, ...)</code>, which would take a 5-or-more parameter function and turn it into a 3 parameter function.</p>
+
+<p>Sadly, PFA didn't pass due to some engine complexity issues, and that largely undermined the v2 Pipe RFC, too.  However, we did get a consolation prize out of it: <a href="https://wiki.php.net/rfc/first_class_callable_syntax">First Class Callables</a> (the <code>array_values(...)</code> syntax), courtesy Nikita Popov, were by design a "junior", degenerate version of partial function application.</p>
+
+<p>Fast-forward to 2025, and I was sufficiently bored to take another swing at pipes.  This time with a better implementation with lots of hand-holding from Ilija Tovilo and Arnaud Le Blanc, both part of the PHP Foundation dev team, I was able to get it through.</p>
+
+<p>Third time's the charm.</p>
+
+<h2 id="more-than-the-sum-of-its-parts">More than the sum of its parts</h2>
+
+<p>Above, we described pipes as "deceptively simple."  The implementation itself is almost trivial; it's just syntax sugar for the temp variable version, effectively.  However, the best features are the ones that can combine with others or be used in novel ways to punch above their weight.</p>
+
+<p>We saw above how a long array manipulation process could now be condensed into a single chained expression.  Now imagine using that in places where only a single expression is allowed, such as a <code>match()</code>:</p>
+
+<pre><code class="php">$string = 'something GoesHERE';
+
+$newString = match ($format) {
+    'snake_case' =&gt; $string
+        |&gt; splitString(...)
+        |&gt; fn($x) =&gt; implode('_', $x)
+        |&gt; strtolower(...),
+    'lowerCamel' =&gt; $string
+        |&gt; splitString(...),
+        |&gt; fn($x) =&gt; array_map(ucfirst(...), $x)
+        |&gt; fn($x) =&gt; implode('', $x)
+        |&gt; lcfirst(...),
+    // Other case options here.
+};
+</code></pre>
+
+<p>Or, consider that the right-side can also be a function call that returns a <code>Closure</code>.  That means with a few functions that return functions:</p>
+
+<pre><code class="php">$profit = [1, 4, 5] 
+    |&gt; loadSeveral(...)
+    |&gt; filter(isOnSale(...))
+    |&gt; map(sellWidget(...))
+    |&gt; array_sum(...);
+</code></pre>
+
+<p>Which... gives us mostly the same thing as the long-discussed scalar methods!  Only pipes are more flexible as you can use any function on the right-side, not just those that have been blessed by the language designers as methods.</p>
+
+<p>At this point, pipe comes very close to being "extension functions", a feature of Kotlin and C# that allows writing functions that look like methods on an object, but are actually just stand-alone functions.  It's spelled a bit differently (<code>|</code> instead of <code>-</code>), but it's 75% of the way there, for free.</p>
+
+<p>Or take it a step further.  What if some steps in the pipe may return <code>null</code>?  We can, with a single function, "lift" the elements of our chain to handle <code>null</code> values in the same fashion as null-safe methods.</p>
+
+<pre><code class="php">function maybe(\Closure $c): \Closure
+{
+    return fn(mixed $arg) =&gt; $arg === null ? null : $c($arg);
+}
+
+$profit = [1, 4, 5] 
+    |&gt; maybe(loadSeveral(...))
+    |&gt; maybe(filter(isOnSale(...)))
+    |&gt; maybe(map(sellWidget(...)))
+    |&gt; maybe(array_sum(...));
+</code></pre>
+
+<p>That's right, we just implemented a Maybe Monad with a pipe and a single-line function.</p>
+
+<p>Now, think about that for streams...</p>
+
+<pre><code class="php">fopen('pipes.md', 'rb') // No variable, so it will close automatically when GCed.
+    |&gt; decode_rot13(...)
+    |&gt; lines_from_charstream(...)
+    |&gt; map(str_getcsv(...))
+    |&gt; map(Product::create(...))
+    |&gt; map($repo-&gt;save(...))
+;
+</code></pre>
+
+<p>The potential is absolutely huge.  I don't think it's immodest to say that the pipe operator has one of the highest "bangs for the buck" of any feature in recent memory, alongside such niceties as constructor property promotion.  And all thanks to a little syntax sugar.</p>
+
+<h2 id="what-comes-next%3F">What comes next?</h2>
+
+<p>Although pipes are a major milestone, we're not done.  There is active work on not one but two follow-up RFCs.</p>
+
+<p>The first is a second attempt at <a href="https://wiki.php.net/rfc/partial_function_application_v2">Partial Function Application</a>.  This is a larger feature, but with first-class callables already bringing in much of the necessary plumbing, which simplifies the implementation.  With pipes now providing a natural use case, as well as easy optimization points, it's worth a second attempt.  Whether it makes it into PHP 8.5, is delayed to 8.6, or is again rejected is still an open question as of this writing, though I am hopeful.  Major thanks to Arnaud Le Blanc from the PHP Foundation team for picking it up to update the implementation.</p>
+
+<p>The second is a <a href="https://wiki.php.net/rfc/function-composition">function composition operator</a>.  Where pipe executes immediately, function composition creates a new function by sticking two functions end-to-end.  That would mean the streams example above could be further optimized by combining the <code>map()</code> calls:</p>
+
+<pre><code class="php">fopen('pipes.md', 'rb')
+    |&gt; decode_rot13(...)
+    |&gt; lines_from_charstream(...)
+    |&gt; map(str_getcsv(...) + Product::create(...) + $repo-&gt;save(...))
+;
+</code></pre>
+
+<p>This one is definitely not going to make it into PHP 8.5, but I am hopeful that we'll be able to get it into 8.6.  Stay tuned.</p>
+
+<blockquote>
+  <p>Special thanks to Ilija Tovilo and Arnaud Le Blanc from the PHP Foundation team for their assistance with the pipe implementation.  If you’d like to help push PHP forward, consider <a href="https://thephp.foundation/sponsor/">becoming a sponsor</a>.</p>
+</blockquote>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[30 years of PHP: FrankenPHP is now part of the PHP organisation]]></title>
             <link href="https://thephp.foundation/blog/2025/06/08/php-30/"/>
@@ -1023,204 +1179,6 @@ JetBrains, Automattic, Sovereign Tech Agency, Craft CMS, Private Packagist, Tide
 
 <p>Here’s to PHP and many more years ahead!<br />
 🐘💜</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[PHP Core Roundup #20: PHP&nbsp;8.4&nbsp;is&nbsp;Released!]]></title>
-            <link href="https://thephp.foundation/blog/2024/11/21/php-core-roundup-20-php84/"/>
-            <updated>2024-11-21T00:00:00+00:00</updated>
-            <id>https://thephp.foundation/blog/2024/11/21/php-core-roundup-20-php84/</id>
-            <content type="html"><![CDATA[<p>We are thrilled to announce that after a year of hard work, dedication, and collaboration, <a href="https://www.php.net/releases/8.4/"><strong>PHP 8.4</strong></a> is officially here!</p>
-
-<p>Thanks to the tireless efforts of the PHP Foundation members, the core PHP development team, and an incredible community of contributors, this upcoming version brings major new features and syntax, performance and security enhancements, and a healthy amount of deprecations.</p>
-
-<h2 id="a-year-of-hard-work-and-collaboration">A Year of Hard Work and Collaboration</h2>
-
-<p>The PHP Foundation financially supports ten PHP core developers. The PHP Foundation members, along with a total of <strong>115 contributors</strong>, have made over <strong>2,600 commits</strong> since PHP 8.3 until PHP 8.4.0 release.</p>
-
-<p>PHP 8.4 includes changes from <strong>36 RFCs</strong>. There have also been numerous mailing list discussions and RFCs that were withdrawn, declined, or are still under discussion.</p>
-
-<p>Since PHP 8.0, PHP 8.4 received the highest number of RFCs, and PHP 8.4 brings the changes such as property hooks and asymmetric visibility that received significant community involvement and refinement.</p>
-
-<h2 id="what-php-8.4-brings">What PHP 8.4 Brings</h2>
-
-<p>PHP 8.4 brings numerous new features and improvements to PHP. We covered some of them in our <a href="https://thephp.foundation/blog/2024/10/02/php-core-roundup-19">previous post</a> as well, but they are mentioned here as well, for more complete picture.</p>
-
-<p>As we also covered in <a href="https://thephp.foundation/blog/2024/10/02/php-core-roundup-19">PHP Core Roundup #19</a>, Property Hooks and Asymmetric Visibility are two of the highlighted features in PHP 8.4</p>
-
-<hr />
-
-<h3 id="php-8.4-supports-property-hooks%21">PHP 8.4 supports Property Hooks!</h3>
-
-<p>In PHP 8.4, it is possible for a class to declare class properties with "hooks", that get executed when the property is accessed or set, and the hooks can access the object context.</p>
-
-<p><a href="https://www.php.net/manual/en/language.oop5.property-hooks.php">Property hooks</a> open up a wide range of use cases that allow classes to declare virtual properties that enable expressive and intuitive APIs, make code readable and simple and avoid boilerplate code.</p>
-
-<pre><code class="php">class User {
-
-    public string $emailAddress {
-        set {
-            if (!filter_var($value, FILTER_VALIDATE_EMAIL)) {
-                throw new ValueError('emailAddress property must be a valid email address');
-            }
-            $this-&gt;emailAddress = $value;
-        }
-    }
-
-}
-
-$user = new User();
-$user-&gt;emailAddress = 'test@example.com'; // Allowed  
-$user-&gt;emailAddress = 'not an email address'; // Throws ValueError  
-</code></pre>
-
-<p><a href="https://github.com/Crell">Larry Garfield</a> wrote in <a href="/blog/2024/11/01/how-hooks-happened/">PHP 8.4: How Property Hooks Happened</a> about how he and Ilija Tovilo 💜 brought Property Hooks to PHP.</p>
-
-<h3 id="asymmetric-visibility">Asymmetric Visibility</h3>
-
-<p>PHP 8.4 introduces <a href="https://www.php.net/manual/en/language.oop5.visibility.php#language.oop5.visibility-members-aviz">asymmetric visibility</a>, allowing different access levels for getting and setting class properties. This feature is useful when you want to expose a property for reading but not writing.</p>
-
-<pre><code class="php">class User {  
- public private(set) int $userId;  
- public function __construct() { $this-&gt;userId = 42; }  
-}  
-
-$user = new User();  
-echo $user-&gt;userId; // 42  
-
-$user-&gt;userId = 16; // Error: Cannot modify private(set) property  
-</code></pre>
-
-<h3 id="lazy-objects">Lazy Objects</h3>
-
-<p>PHP 8.4 brings support for Lazy Objects. Using the Reflection API, it is possible to create class instances in PHP 8.4 that they are initialized only if needed.</p>
-
-<p>The <a href="https://www.php.net/manual/en/language.oop5.lazy-objects.php">Lazy Objects documentation</a> provides detailed examples and use cases.</p>
-
-<h3 id="html5-compliant-parser-in-dom-extension">HTML5-compliant parser in DOM Extension</h3>
-
-<p>PHP 8.4 upgrades the DOM extension with HTML5-compliant parsing. The new <code>Dom\HTMLDocument</code> and <code>Dom\XMLDocument</code> classes replace libxml2, which previously lacked HTML5 support. These updates improve DOM spec compliance and add features like CSS selector support.</p>
-
-<h3 id="bcmath-adds-operator-overloaded-%60bcmath%5Cnumber%60-class">BCMath adds operator-overloaded <code>BcMath\Number</code> class</h3>
-
-<p>The BCMath extension now includes the <code>BcMath\Number</code> class, enabling operator overloading for arithmetic operations.</p>
-
-<pre><code class="php">use BcMath\Number;  
-
-$num1 = new Number('22');  
-$num2 = new Number('7');  
-$num3 = new Number('100');  
-
-$result = ($num1 / $num2) + $num1 - $num2;  
-echo $result; // 18.1428571428
-</code></pre>
-
-<p>You can now use standard operators (<code>+</code>, <code>-</code>, <code>/</code>) with <code>BcMath\Number</code> objects, which also support all <code>bc*</code> functions.</p>
-
-<p>These objects are immutable and implement the <code>Stringable</code> interface, so they can be used in string contexts like <code>echo $num</code>.</p>
-
-<h3 id="new-functions">New Functions</h3>
-
-<ul>
-<li><a href="https://www.php.net/array_find"><code>array_find</code></a>, <a href="https://www.php.net/array_find_key"><code>array_find_key</code></a>, <a href="https://www.php.net/array_any"><code>array_any</code></a>, and <a href="https://www.php.net/array_all"><code>array_all</code></a></li>
-<li><a href="https://www.php.net/bcdivmod"><code>bcdivmod</code></a>, <a href="https://www.php.net/bcround"><code>bcround</code></a>, <a href="https://www.php.net/bcceil"><code>bcceil</code></a>, and <a href="https://www.php.net/bcfloor"><code>bcfloor</code></a></li>
-<li><a href="https://www.php.net/mb_trim"><code>mb_trim</code></a>, <a href="https://www.php.net/mb_ltrim"><code>mb_ltrim</code></a>, and <a href="https://www.php.net/mb_rtrim"><code>mb_rtrim</code></a></li>
-<li><a href="https://www.php.net/mb_ucfirst"><code>mb_ucfirst</code></a> and <a href="https://www.php.net/mb_lcfirst"><code>mb_lcfirst</code></a></li>
-<li><a href="https://www.php.net/grapheme_str_split"><code>grapheme_str_split</code></a></li>
-<li><a href="https://www.php.net/fpow"><code>fpow</code></a></li>
-<li><a href="https://www.php.net/http_get_last_response_headers"><code>http_get_last_response_headers</code></a> and <a href="https://www.php.net/http_clear_last_response_headers"><code>http_clear_last_response_headers</code></a></li>
-</ul>
-
-<h3 id="pdo-driver-specific-subclasses">PDO Driver-Specific Subclasses</h3>
-
-<p>The <a href="https://wiki.php.net/rfc/pdo_driver_specific_subclasses">PDO Driver-specific subclasses</a> RFC is implemented in PHP 8.4. Previously, it was voted for PHP 8.3 but was not implemented in PHP 8.3 before its feature-freeze.</p>
-
-<p>PHP 8.4 now adds <code>Pdo\Mysql</code>, <code>Pdo\Pgsql</code>, <code>Pdo\Sqlite</code>, <code>Pdo\DbLib</code>, and <code>Pdo\Firebird</code> classes that extend the <code>PDO</code> class. Driver-specific methods, properties, and constants are now available in the driver-specific subclass. Driver-specific sub classes also allow APIs to be more expressive and restrictive by allowing the functions and methods only to accept/return driver-specific sub-classes.</p>
-
-<h3 id="%60aegis-128l%60-and-%60aegis256%60-support-in-sodium-extension"><code>AEGIS-128L</code> and <code>AEGIS256</code> support in Sodium extension</h3>
-
-<p><strong>AEGIS</strong> is an AES-based family of authenticated encryption algorithms that is faster than AES-GCM. The Sodium extension in PHP 8.4 supports <a href="https://www.php.net/manual/en/function.sodium-crypto-aead-aegis128l-encrypt.php"><code>AEGIS-128L</code></a> and <a href="https://www.php.net/manual/en/function.sodium-crypto-aead-aegis256-encrypt.php"><code>AEGIS256</code></a> encryption algorithms if the Sodium extension is compiled with <a href="https://github.com/jedisct1/libsodium"><code>libsodium</code></a> 1.0.19 or later.</p>
-
-<p><br/></p>
-
-<p>Apart from the new features, PHP 8.4 also updates several underlying dependencies and datasets, as well as unbundling three extensions:</p>
-
-<h3 id="updated-dependencies">Updated dependencies</h3>
-
-<ul>
-<li>The Curl extension now requires libcurl 7.61.0 or later, and even capable of making HTTP/3 requests if it is compiled with a supporting TLS library.</li>
-<li>The PCRE extension ships with PCRE 10.44, which provides support for Unicode 15 characters and character blocks, improved Regular Expression syntax, and performance improvements on certain systems.</li>
-<li>OpenSSL extension now requires OpenSSL 1.1.1 or later, with improved support for OpenSSL 3.x series. It can now support Curve25519 and Curve448 based keys. Further, OpenSSL can be compiled to provide Argon2 password hashing on OpenSSL 3.2+ on PHP NTS builds.</li>
-<li>To compile PHP as an Apache module (<code>mod_php</code>), PHP 8.4 drops support for the EOL Apache 2.0 and 2.2 series. The minimum required Apache version is now 2.4.</li>
-<li>The zlib extension now requires zlib version 1.2.11 at minimum.</li>
-</ul>
-
-<h3 id="unbundled-extensions">Unbundled Extensions</h3>
-
-<p><a href="https://wiki.php.net/rfc/unbundle_imap_pspell_oci8">IMAP, Pspell, OCI8, and PDO_OCI8 extensions</a> are unbundled from the PHP core, and are now available as PECL extensions, for which <a href="/blog/2024/11/19/pie-pre-release/">PIE might help</a> to install easily.</p>
-
-<h3 id="updated-php-icon-on-windows">Updated PHP Icon on Windows</h3>
-
-<p>PHP 8.4 also brings a minor, yet <em>very</em> overdue change to the PHP icon on Windows executables:</p>
-
-<table>
-<thead>
-<tr>
-  <th align="center"></th>
-  <th align="center"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td align="center"><img src="/assets/post-images/2024/php84/php-icon-old.png" alt="old PHP logo in Windows php.exe" /></td>
-  <td align="center"><img src="/assets/post-images/2024/php84/php-icon-new.png" alt="new PHP logo in Windows php.exe" /></td>
-</tr>
-<tr>
-  <td align="center">Old Icon</td>
-  <td align="center">New Icon</td>
-</tr>
-</tbody>
-</table>
-
-<h2 id="looking-ahead%3A-php-8.4-and-beyond">Looking Ahead: PHP 8.4 and Beyond</h2>
-
-<p>PHP 8.4 is the first major new PHP releases since the adoption of the new <a href="/blog/2024/10/02/php-core-roundup-19/#php-release-cycle-updates">PHP maintenance policy</a>. PHP 8.4, along with all current active PHP versions, will receive two years of active support and two years of security fixes.</p>
-
-<p>What this means is that PHP 8.4 will receive bug fixes until the end of 2026 and security fixes until the end of 2028.</p>
-
-<p>We just announced the pre-release of <a href="/blog/2024/11/19/pie-pre-release/">PIE - PHP Installer for Extensions</a>. PIE will significantly improve the workflow of downloading and compiling PHP extensions.</p>
-
-<p>PHP 8.5 (in the <code>master</code> branch) is currently under active development, and we already have RFCs such as <a href="https://wiki.php.net/rfc/closures_in_const_expr">Support Closures in constant expressions</a> in voting phase, and <a href="https://wiki.php.net/rfc/url_parsing_api">Add RFC3986 and WHATWG compliant URI parsing support</a> under discussion.</p>
-
-<h2 id="get-ready-to-upgrade">Get Ready to Upgrade</h2>
-
-<p><a href="https://github.com/php/php-src/releases/tag/php-8.4.1">PHP 8.4.1 is now a tagged release</a> on PHP's GitHub repository.</p>
-
-<p>Compiled binaries and container images are available for:</p>
-
-<ul>
-<li>Debian and Ubuntu-based Linux distros from <a href="https://deb.sury.org/">Ondrej Sury's repositories</a>.</li>
-<li>Fedora/RHEL/Rocky/Alma Linux from <a href="https://blog.remirepo.net/post/2024/09/27/PHP-on-the-road-to-the-8.4.0-release">Remi's repositories</a>.</li>
-<li>MacOS on <a href="https://ports.macports.org/port/php84/">MacPorts</a> and Homebrew <a href="https://github.com/shivammathur/homebrew-php">shivammathur/homebrew-php</a> tap.</li>
-<li>Windows on <a href="https://windows.php.net/download/">windows.php.net</a>.</li>
-<li>Docker and Podman <a href="https://hub.docker.com/_/php">Docker Hub</a></li>
-</ul>
-
-<hr />
-
-<h2 id="support-php-foundation">Support PHP Foundation</h2>
-
-<p>At The PHP Foundation, we support, promote, and advance the PHP language. We financially support ten PHP core developers to contribute to the PHP project. You can help support PHP Foundation on <a href="https://opencollective.com/phpfoundation">OpenCollective</a> or via <a href="https://github.com/sponsors/ThePHPF">GitHub Sponsors</a>.</p>
-
-<p>A big thanks to all our sponsors — PHP Foundation is all of us!</p>
-
-<p>Follow us on Twitter/X <a href="https://twitter.com/thephpf">@ThePHPF</a>, <a href="https://phpc.social/@thephpf">Mastodon</a>, <a href="https://www.linkedin.com/company/phpfoundation/">LinkedIn</a>, and <a href="https://bsky.app/profile/thephpf.bsky.social">Bluesky</a> to get the latest updates from the Foundation.</p>
-
-<p>💜️ 🐘</p>
-
-<blockquote>
-  <p>PHP Roundup is prepared by Ayesh Karunaratne from <strong><a href="https://php.watch">PHP.Watch</a></strong>, a source for PHP News, Articles, Upcoming Changes, and more.</p>
-</blockquote>
 ]]></content>
         </entry>
     </feed>
