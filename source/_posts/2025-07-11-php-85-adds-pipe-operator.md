@@ -6,10 +6,10 @@ tags:
 author:
   - name: Larry Garfield
     url: https://github.com/Crell
-published_at: 25 June 2025
+published_at: 11 July 2025
 ---
 
-PHP 8.5, due out November of this year, will bring with it another long-sought-after feature: the [pipe operator](https://wiki.php.net/rfc/pipe-operator-v3) (|>).  It's a small feature with huge potential, yet it still took years to happen.
+PHP 8.5, due out November of this year, will bring with it another long-sought-after feature: the [pipe operator](https://wiki.php.net/rfc/pipe-operator-v3) (`|>`).  It's a small feature with huge potential, yet it still took years to happen.
 
 ## What is a pipe operator?
 
