@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2025-07-11T08:59:46+00:00</updated><entry><author><name>Larry Garfield</name><uri>https://github.com/Crell</uri></author><title type="html"><![CDATA[PHP 8.5 Adds Pipe Operator: What it means]]></title><content type="html"><![CDATA[<p>PHP 8.5, due out November of this year, will bring with it another long-sought-after feature: the <a href="https://wiki.php.net/rfc/pipe-operator-v3">pipe operator</a> (<code>|&gt;</code>).  It's a small feature with huge potential, yet it still took years to happen.</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2025-07-13T17:49:22+00:00</updated><entry><author><name>Larry Garfield</name><uri>https://github.com/Crell</uri></author><title type="html"><![CDATA[PHP 8.5 Adds Pipe Operator: What it means]]></title><content type="html"><![CDATA[<p>PHP 8.5, due out November of this year, will bring with it another long-sought-after feature: the <a href="https://wiki.php.net/rfc/pipe-operator-v3">pipe operator</a> (<code>|&gt;</code>).  It's a small feature with huge potential, yet it still took years to happen.</p>
 
 <h2 id="what-is-a-pipe-operator%3F">What is a pipe operator?</h2>
 
@@ -42,7 +42,7 @@ $result = $arr
 
 <p>The <code>|&gt;</code> operator appears in many languages, mostly in the functional world.  F# has essentially the exact same operator, as does OCaml.  Elixir has a slightly fancier version (which we considered but ultimately decided against for now).  Numerous PHP libraries exist in the wild that offer similar capability with many extra expensive steps, including my own <a href="https://github.com/Crell/fp/">Crell/fp</a>.</p>
 
-<p>The story for PHP pipes, though, begins with Hack/HHVM, Facebook's PHP fork nee competitive implementation.  Hack included many features beyond what PHP 5 of the day offered; many of them eventually ended up in later PHP versions.  One of its features was a unique spin on a pipe operator.</p>
+<p>The story for PHP pipes, though, begins with Hack/HHVM, Facebook's PHP fork née competitive implementation.  Hack included many features beyond what PHP 5 of the day offered; many of them eventually ended up in later PHP versions.  One of its features was a unique spin on a pipe operator.</p>
 
 <p>In 2016, Sara Golemon, long-time PHP contributor and former Open Source lead on the HHVM project, proposed porting <a href="https://wiki.php.net/rfc/pipe-operator">Hack's pipes</a> to PHP directly.  In that RFC, the right side of a pipe wasn't a <code>callable</code> but an expression, and used a magic <code>$$</code> token (lovingly called <code>T_BLING</code>, at least according to yours truly) to inject the left-side result into it.  In that case, the example above would look like this:</p>
 
