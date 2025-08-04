@@ -3,7 +3,7 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2025-07-13T17:49:22+00:00</updated>
+    <updated>2025-08-04T10:39:52+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
@@ -193,6 +193,17 @@ $profit = [1, 4, 5]
 <p>Happy 30th birthday, PHP! 🎉</p>
 
 <p>🐘💜</p>
+
+<p><div
+    class="thread-container"
+    data-reddit-thread="https://www.reddit.com/r/PHP/comments/1l7v0df/30_years_of_php_frankenphp_is_now_part_of_the_php/"
+    data-reddit-max-depth="10"
+    data-reddit-show-content="false"
+    data-reddit-show-controls="true"
+></div>
+<script src="//unpkg.com/redditify/dist/redditify.min.js"></script>
+<link rel="stylesheet" href="//unpkg.com/redditify/dist/redditify.css">
+</p>
 ]]></content>
         </entry>
             <entry>
