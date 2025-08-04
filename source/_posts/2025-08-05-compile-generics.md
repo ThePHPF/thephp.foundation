@@ -368,3 +368,7 @@ The Foundation, of course, wants to be respectful of the time of our development
 Would a partial-generics approach like that described here be acceptable?  Even if it may not be possible to go all the way to full generics, would "compile time-only generics" be a big enough win to justify spending more time on it?  Our team thinks it is, but PHP is larger than our team, so we want to get feedback from the broader community.
 
 **Would you support (and vote in favor of) compile-time-only generics as described here?**
+
+{{ include('redditify.html', {
+url: 'https://www.reddit.com/r/PHP/comments/1mhe7qf/compile_time_generics_yay_or_nay/'
+}) }}
