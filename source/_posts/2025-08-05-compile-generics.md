@@ -8,7 +8,7 @@ author:
     url: https://github.com/Crell
   - name: Gina Banyard
     url: https://github.com/Girgias
-published_at: 05 August 2025
+published_at: 04 August 2025
 ---
 
 One of the most sought-after features for PHP is Generics: The ability to have a type that takes another type as a parameter.  It's a feature found in most compiled languages by now, but implementing generics in an interpreted language like PHP, where all the type checking would have to be done at runtime, has always proven Really Really Hard(tm), Really Really Slow(tm), or both.
@@ -367,4 +367,4 @@ The Foundation, of course, wants to be respectful of the time of our development
 
 Would a partial-generics approach like that described here be acceptable?  Even if it may not be possible to go all the way to full generics, would "compile time-only generics" be a big enough win to justify spending more time on it?  Our team thinks it is, but PHP is larger than our team, so we want to get feedback from the broader community.
 
-Would you support (and vote in favor of) compile-time-only generics as described here?
+**Would you support (and vote in favor of) compile-time-only generics as described here?**
