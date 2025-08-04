@@ -213,7 +213,7 @@ class Articles extends Sequence<Article> {}
 
 class Library extends Set<Book> {}
 
-class YearBooks extends Dict<int, Bool> {}
+class YearBooks extends Dict<int, Book> {}
 ```
 
 Those concrete classes could have additional methods in them if desired, but that's optional.  The above would be sufficient to have a collection that mapped integers to Book objects, and had syntax-level guarantees those types would hold.
