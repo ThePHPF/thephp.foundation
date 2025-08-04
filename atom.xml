@@ -3,9 +3,355 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2025-08-04T10:39:52+00:00</updated>
+    <updated>2025-08-04T13:44:48+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Compile time generics: yay or nay?]]></title>
+            <link href="https://thephp.foundation/blog/2025/08/05/compile-generics/"/>
+            <updated>2025-08-05T00:00:00+00:00</updated>
+            <id>https://thephp.foundation/blog/2025/08/05/compile-generics/</id>
+            <content type="html"><![CDATA[<p>One of the most sought-after features for PHP is Generics: The ability to have a type that takes another type as a parameter.  It's a feature found in most compiled languages by now, but implementing generics in an interpreted language like PHP, where all the type checking would have to be done at runtime, has always proven Really Really Hard(tm), Really Really Slow(tm), or both.</p>
+
+<p>But, experimentation by the PHP Foundation's dev team suggests we may be able to get 80% of the benefit for 20% of the work.  Is that enough?</p>
+
+<h2 id="the-short%2C-short-version">The short, short version</h2>
+
+<p>We believe it's possible to implement generics on only interfaces and abstract classes, which would offer a large chunk of the benefit of generics but avoid most of the pitfalls.</p>
+
+<p>In particular, interfaces and abstract classes could declare that they need one or more types specified:</p>
+
+<pre><code class="php">interface Exporter&lt;Thing&gt; { ... }
+</code></pre>
+
+<p>And then classes that implement/extend them would be required to fill in those types:</p>
+
+<pre><code class="php">class WidgetExporter implements Exporter&lt;Widget&gt; { ... }
+</code></pre>
+
+<p>And then anywhere the type <code>Thing</code> appeared in <code>Exporter</code>, it would turn into <code>Widget</code> in <code>WidgetExporter</code>.</p>
+
+<p>All of this is done at compile time, which makes it far easier and faster, and many/most errors would be caught at compile time.</p>
+
+<p>Runtime generics, where you could say <code>$fooExporter = new Exporter&lt;Foo&gt;()</code>, would still not be possible, but they do not get any harder as a result of going just part way.</p>
+
+<p><strong>Would you support (and vote in favor of) compile-time-only generics as described below?</strong></p>
+
+<h2 id="prior-research">Prior research</h2>
+
+<p>In 2023 and 2024, Arnaud Le Blanc from the Foundation team did <a href="https://thephp.foundation/blog/2024/08/19/state-of-generics-and-collections/">extensive experimentation</a> on generics, picking up on the previous work from Nikita Popov.  The full result of that experiment is available at that link, but in short, some parts of generics would be possible, even straightforward.  Where the edge cases run into problems, though, they are very big problems.</p>
+
+<p>In particular:</p>
+
+<ul>
+<li>Union types and generics combine to produce massive performance penalties.</li>
+<li>Many cases would result in a very cumbersome syntax unless we had really good type inference.</li>
+<li>Really good type inference is hard and slow, especially in PHP.</li>
+</ul>
+
+<p>Meanwhile, making arrays generic, and therefore typed, had its own challenges, especially given that PHP variables are not typed.</p>
+
+<p>Arnaud and Larry Garfield did further investigation afterward into introducing <a href="https://github.com/Crell/php-rfcs/blob/master/modules/spec-brainstorm.md">a "module" system</a> that would help PHP's compiler <a href="https://github.com/arnaud-lb/php-src/pull/10">see more code at once</a>, and thus be able to do type inference more readily, but sadly that also ran into many challenging edge cases.</p>
+
+<h2 id="associated-types">Associated Types</h2>
+
+<p>In mid-2025, the Foundation's Gina Banyard started working on "associated types," a generics-adjacent feature found in a few languages that happens entirely at compile time. It essentially allows a class or interface to specify that inheritors must specify a type to be used in certain situations.  Initially, it was intended as an alternative to the <a href="https://wiki.php.net/rfc/never-parameters-v2"><code>never</code> parameters</a> RFC, offering a better solution to the case of an interface that doesn't need to specify a particular type, but implementing classes do.</p>
+
+<p>The initial plan looked something like this:</p>
+
+<pre><code class="php">interface ImporterExporter
+{
+    type T;
+
+    public function import(string $input): T;
+
+    public function export(T $value): string;
+}
+
+class ThingImporter implements ImporterExporter
+{
+    public function import(string $input): Thing { ... }
+
+    public function export(Thing $value): string { ... }
+}
+</code></pre>
+
+<p>In which all references to <code>T</code> in the interface need to be replaced by the <em>same</em> type in the class; it can be any type, as long as it's the same in all cases.</p>
+
+<p>After some discussion with the rest of the team, however, it became apparent that if we just changed the spelling and squinted, associated types look an awful lot like generics.  Or rather, part of generics, as full generics is a very involved bit of functionality with lots of different complimentary parts.</p>
+
+<p>Which begged the question: Could we just do some of those parts, and get most of the benefit?  According to Gina's work, the answer is "Probably!"</p>
+
+<h2 id="abstract-generics">Abstract Generics</h2>
+
+<p>What Gina has implemented, though it still needs some polish and extension, is essentially "manually monomorphized generics," implemented at compile time.  "Monomorphization" is an approach to generics (there are others) where a type-specific version of a class is created "on the fly" by the compiler or engine when that type-specific version is used.  By "manual," we mean that it's up to the developer to do so in advance.</p>
+
+<p>Let's see what that looks like in practice.</p>
+
+<p>Consider our previous interface, but spelled this way instead:</p>
+
+<pre><code class="php">interface ImporterExporter&lt;T&gt;
+{
+    public function import(string $input): T;
+
+    public function export(T $value): string;
+}
+</code></pre>
+
+<p>That interface requires that any class implementing it specify what type <code>T</code> should be; it can be any type, as long as it's the same type in both places.</p>
+
+<pre><code class="php">class ThingExporter implements ImporterExporter&lt;Thing&gt;
+{
+    public function import(string $input): Thing { ... }
+
+    public function export(Thing $value): string { ... }
+}
+
+class WidgetExporter implements ImporterExporter&lt;Widget&gt;
+{
+    public function import(string $input): Widget { ... }
+
+    public function export(Widget $value): string { ... }
+}
+</code></pre>
+
+<p>This can all be enforced at compile time, where it's much cheaper, and cached by the opcache.</p>
+
+<p>This alone is not full generics capability, but it is in practice a good chunk of it.  It's also possible to specify that the generic type must conform to some other type, like another interface.  For instance:</p>
+
+<pre><code class="php">interface Repository&lt;T: Entity&gt;
+{
+    public function save(T $entity): bool;
+
+    public function load(int $id): T;
+}
+
+class BlogPostRepository implements Repository&lt;BlogPost&gt;
+{
+    // ...
+}
+</code></pre>
+
+<p>This would work, but only if <code>BlogPost</code> implements the <code>Entity</code> interface.</p>
+
+<h2 id="a-few-more-parts">A few more parts</h2>
+
+<p>Although not yet implemented, Gina is confident that a few natural extensions are also possible and straightforward, if enough time is put into them.  They could probably be included in the initial RFC.</p>
+
+<p>First, allowing abstract classes to be generic as well.  That would allow for:</p>
+
+<pre><code class="php">abstract class BaseRepository&lt;T: Entity&gt;
+{ 
+    // ...
+}
+
+class BlogPostRepository extends BaseRepository&lt;BlogPost&gt; { ... }
+</code></pre>
+
+<p>Of particular note, the inheriting class wouldn't need to actually <em>do</em> anything beyond specifying the type.  That would be enough.  The net result is that we may see a proliferation of "empty extending classes" that just specify a type and have no body of their own, as a surrogate for what in other languages would be <code>$repo = new Repository&lt;BlogPost&gt;()</code>.  In PHP, that would instead be spelled:</p>
+
+<pre><code class="php">class BlogPostRepository extends BaseRepository&lt;BlogPost&gt; { ... }
+$repo = new BlogPostRepository();
+</code></pre>
+
+<p>(That's the "manual monomorphization" we talked about.)  Not ideal, but still much more powerful than the status quo as of PHP 8.4.</p>
+
+<p>Second, type declarations.  It would already be possible to type against <code>BlogPostRepository</code>, as that's just a boring old class like we've always known.  What would be a straightforward extension is allowing this:</p>
+
+<pre><code class="php">class DataProcessor
+{
+    public function __construct(private Repository&lt;UserEntity&gt; $repo) {}
+}
+</code></pre>
+
+<p>That is, declare that <code>$repo</code> must implement <code>Repository</code> <em>and</em> specify a type that is itself a child of <code>UserEntity</code> (which could be a class or another interface).  In the initial version it may not support a generic as part of a compound type (such as <code>private Repository&lt;UserEntity&gt;|null $repo</code>), but that should be feasible to add later, probably.</p>
+
+<h2 id="collections">Collections</h2>
+
+<p>One of the most common uses of generics is for collections, be they typed arrays or objects.  The details vary by language, but a collection known to be of a certain type is very valuable.  The previous blog post (linked above) included a discussion of a collection design by Derick Rethans and Larry Garfield, which included a custom one-off syntax for... essentially the behavior described here.  Updating that design for this syntax would give us three interfaces, or probably base classes:</p>
+
+<pre><code class="php">abstract class Sequence&lt;T&gt;
+{
+    private array $values = [];
+
+    public function append(T $new): static
+    {
+        $this-&gt;values[] = $new;
+        return $this;
+    }
+
+    public filter(callable $filter): static
+    {
+        // ...
+    }
+}
+
+abstract class Set&lt;T&gt;
+{
+    // ...
+}
+
+abstract class Dict&lt;K, V&gt;
+{
+    // ...
+}
+</code></pre>
+
+<p>And then they could be used like so:</p>
+
+<pre><code class="php">class Articles extends Sequence&lt;Article&gt; {}
+
+class Library extends Set&lt;Book&gt; {}
+
+class YearBooks&lt;int, Book&gt; {}
+</code></pre>
+
+<p>Those concrete classes could have additional methods in them if desired, but that's optional.  The above would be sufficient to have a collection that mapped integers to Book objects, and had syntax-level guarantees those types would hold.</p>
+
+<p>The above design could be implemented either in core or user-space.  There's definite benefit to them being built-in, but the type-control portion at least would be available to user-space code, too.</p>
+
+<h2 id="longer-term">Longer term</h2>
+
+<p>There's a few more complex features that seem like they are doable, but require enough extra effort that they almost certainly wouldn't make sense in the initial RFC.  They could probably be in their own future RFCs, however, barring any surprises.</p>
+
+<h3 id="variance">Variance</h3>
+
+<p>In the initial version, generic types would be invariant.  <code>BlogPostRepository</code> is a child of <code>BaseRepository</code>, but just because <code>FeaturedBlogPost</code> is a child of <code>BlogPost</code> doesn't mean <code>BlogPostRepository</code> can accept <code>FeaturedBlogPost</code>.  The challenge is that the variance of parameter and return types are in opposite directions, and because a generic type may appear both as a parameter type (which can be seen as a write context) and a return type (which can be seen as a read context) it needs to be invariant, similar to how property types are invariant.  (This is a common challenge in languages with generics.)</p>
+
+<p>However, Kotlin and C# have a feature that we should be able to borrow for PHP.  If a generic type is used exclusively in parameters it can be marked as an <code>in</code> type to indicate it is contravariant.  For example:</p>
+
+<pre><code class="php">interface Saver&lt;in Type&gt;
+{
+    public function save(Type $object): bool;
+}
+
+class BlogPostSaver&lt;BlogPost&gt;
+{
+    public function save(BlogPost $object): bool { ... }
+}
+
+$bsaver = new BlogPostSaver();
+$bsaver-&gt;save(new FeaturedBlogPost());
+</code></pre>
+
+<p>Similarly, if a generic type is used exclusively as a return type, it can be marked <code>out</code>:</p>
+
+<pre><code class="php">interface Loader&lt;out Type&gt;
+{
+    public function load(int $id): Type;
+}
+
+class BlogPostLoader&lt;BlogPost&gt;
+{
+    public function load(int $id): BlogPost { ... }
+}
+
+$bloader = new BlogPostLoader();
+$post = $bloader-&gt;load(5);
+// $post could be a FeaturedBlogPost, potentially.
+</code></pre>
+
+<p>There are still a lot of bits to figure out here that may make it even more complex than anticipated.  That's why we're not looking into it in detail yet, and leaving it for future scope.</p>
+
+<h3 id="traits">Traits</h3>
+
+<p>PHP, of course, has another class-esque construct, Traits.  How generics would interact with Traits is still unclear.  It seems likely that something along the lines of the following could be made to work eventually:</p>
+
+<pre><code class="php">trait Tools&lt;T&gt; 
+{
+    public function useful(T $param): int { ... }
+}
+
+class C
+{
+    use Tools&lt;Book&gt;;
+}
+</code></pre>
+
+<p>However, there are some notable challenges here, largely around performance and avoiding code duplication.  They are likely solvable, but sufficiently complex that they won't be in an initial version.</p>
+
+<h3 id="generic-functions">Generic functions</h3>
+
+<p>So far we've only been talking about classes and class-likes.  What about functions?</p>
+
+<p>At least in theory, something like the following should be viable:</p>
+
+<pre><code class="php">function compareThings&lt;Thing&gt;(Thing $thingOne, Thing $thingTwo) { ... };
+
+compareThing&lt;Widget&gt;(new Widget(1), new Widget(2));
+</code></pre>
+
+<p>It's a bit clunky to have to specify the type manually on each call, but making that auto-detectable falls under the category of "type inference," as described below.</p>
+
+<p>There probably aren't a huge number of use cases for this pattern in practice; mainly ensuring that two parameters or a parameter and return have the same unspecified type, which is fairly niche.  It's also unclear what implications it would have for methods.  It seems possible, but maybe not practical.</p>
+
+<h2 id="what-is-still-hard">What is still hard</h2>
+
+<p>Notably absent from the above plan are, well, the Really Really Hard(tm) bits.  At this time, it's still not clear that they would be possible.</p>
+
+<h3 id="%60new%60-generics"><code>new</code> generics</h3>
+
+<p>In particular, a syntax like <code>$blogRepo = new Repository&lt;BlogPost&gt;()</code> is still not on the table.  The challenge is that the partial approach described here can put all the extra tracking data it needs on the <em>class</em>, and do the work at compile time.  Supporting on-the-fly declarations with <code>new</code> would require putting the extra tracking data on the <em>object</em>, and doing all the work at runtime.  That's an order of magnitude harder.</p>
+
+<h3 id="generic-compound-types">Generic compound types</h3>
+
+<p>Few if any languages support both generic types and union types.  PHP has had union and intersection types for some time, and made largely judicious use of them.  However, trying to make a class generic over a compound type makes the whole thing exponentially more complex.  This is one of the areas that Arnaud ran into in his earlier research.  Code like the following will likely never be possible, at least not if we care about performance at all:</p>
+
+<pre><code class="php">class SimpleRepository implements Repository&lt;BlogPost|User|Event&gt;
+{
+    // ...
+}
+
+class DataProcessor
+{
+    public function __construct(private Repository&lt;UserEntity|BlogPost&gt; $repo) {}
+}
+</code></pre>
+
+<p>In practice, that's probably fine.  The situations where that would even be useful are few and far between.</p>
+
+<p>As noted above, though, typing against a generic that is part of a union, like <code>public function setRepository(Repository&lt;UserEntity&gt;|null $repo) {}</code>, is probably possible in a follow-up RFC.</p>
+
+<h3 id="type-inference">Type inference</h3>
+
+<p>Type inference is a feature of many heavily typed languages where the compiler or engine can "figure out" what the type of something is supposed to be based on context.  As a trivial example:</p>
+
+<pre><code class="php">function add(int $x, int $y)
+{
+    return $x + $y;
+}
+</code></pre>
+
+<p>It's readily obvious that the return type of that function is <code>int</code>, so a type inference engine will fill that in for you automatically.</p>
+
+<p>That would be very helpful for Generics, especially if runtime Generics ever became possible.</p>
+
+<pre><code class="php">class Car&lt;Driver&gt; {
+    public function __construct(private Driver $driver) {}
+}
+
+// This full version
+new Car&lt;StudentDriver&gt;(new StudentDriver());
+
+// Could be abbreviated to this, and the engine would figure out the rest.
+new Car(new StudentDriver());
+</code></pre>
+
+<p>A lot of Arnaud's research last year was into the feasibility of type inference to make generic code easier to work with.  This unfortunately remains in the Really Really Hard(tm) realm.  On the flipside, it's also largely irrelevant until and unless runtime generics (like in <code>new</code>) become feasible, which are already Really Really Hard(tm).</p>
+
+<p>All of the above remain challenges to a full PHP generics implementation.  Importantly, however, they are not made any harder by Gina's work into just the compile-time parts.  There's no guarantee that they will ever be possible, but they are not made any less possible by adopting the parts of generics we can do.</p>
+
+<h2 id="so%2C-should-we%3F">So, should we?</h2>
+
+<p>This work is still experimental.  As noted above, there's a few additional features still to add, and dozens of edge cases and crufty corners to sort out.  (What happens if you implement two generic interfaces?  Do anonymous classes make anything weirder?  Etc.)  There's much work ahead to bring compile-time generics to a votable state.</p>
+
+<p>The Foundation, of course, wants to be respectful of the time of our development team, the time of the many RFC reviewers, and the pocketbooks of our generous sponsors.  Foundation staff have already sunk quite a bit of time into the question of generics.  Before we sink more time into it, we want to ask the community (and PHP Internals especially)... Is it worth it?</p>
+
+<p>Would a partial-generics approach like that described here be acceptable?  Even if it may not be possible to go all the way to full generics, would "compile time-only generics" be a big enough win to justify spending more time on it?  Our team thinks it is, but PHP is larger than our team, so we want to get feedback from the broader community.</p>
+
+<p><strong>Would you support (and vote in favor of) compile-time-only generics as described here?</strong></p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[PHP 8.5 Adds Pipe Operator: What it means]]></title>
             <link href="https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/"/>
@@ -1133,62 +1479,6 @@ The roadmap and vision need further development and discussion. We plan to annou
 
 <p>Warm wishes,<br />
 The PHP Foundation<br />
-🐘💜</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[The PHP Foundation Turns Three!]]></title>
-            <link href="https://thephp.foundation/blog/2024/11/22/php-foundation-turns-three/"/>
-            <updated>2024-11-22T00:00:00+00:00</updated>
-            <id>https://thephp.foundation/blog/2024/11/22/php-foundation-turns-three/</id>
-            <content type="html"><![CDATA[<p>Wow. Can you believe it? Just three years (and one day) ago, PHP had no organization behind it. Only two people were being paid to work on the language that powers 70% of the web.</p>
-
-<p>Here’s the very first announcement about the creation of the PHP Foundation: 
-<a href="https://blog.jetbrains.com/phpstorm/2021/11/the-php-foundation/">The New Life of PHP – The PHP Foundation</a>.</p>
-
-<h2 id="fast-forward-to-today">Fast forward to today</h2>
-
-<p>We now have a team of 10 talented engineers dedicated to PHP. We’re supported by major companies, governments, and an incredible community. That same community is creating amazing projects with PHP, while businesses continue to thrive thanks to a mature, secure, and performant language.</p>
-
-<p>Since 2021, we’ve seen three PHP releases—PHP 8.2, 8.3, and the freshly released <a href="https://www.php.net/releases/8.4/en.php">PHP 8.4</a>. Here are just a few highlights from these releases, developed by the PHP Foundation team:</p>
-
-<ul>
-<li><a href="https://wiki.php.net/rfc/property-hooks">Property hooks</a></li>
-<li><a href="https://wiki.php.net/rfc/asymmetric-visibility-v2">Asymmetric Visibility</a></li>
-<li><a href="https://wiki.php.net/rfc/lazy-objects">Lazy Objects</a></li>
-<li><a href="https://thephp.foundation/blog/2024/11/19/pie-pre-release/">New tool for installing extensions: pie</a></li>
-<li><a href="https://wiki.php.net/rfc/support_object_type_in_bcmath">Support object type in BCMath</a></li>
-<li><a href="https://wiki.php.net/rfc/saner-inc-dec-operators">Saner Increment/Decrement operators</a></li>
-<li>Multiple type system improvements: <a href="https://wiki.php.net/rfc/null-false-standalone-types">null and false as stand-alone types</a>, <a href="https://wiki.php.net/rfc/dnf_types">Disjunctive Normal Form Types</a></li>
-<li><a href="https://wiki.php.net/rfc/readonly_amendments">Readonly amendments</a></li>
-<li><a href="https://wiki.php.net/rfc/dynamic_class_constant_fetch">Dynamic class constant fetch</a></li>
-<li><a href="https://wiki.php.net/rfc/arbitrary_static_variable_initializers">Arbitrary static variable initializers</a></li>
-</ul>
-
-<h2 id="feature-development-is-only-about-20%25-of-what-the-foundation-team-does">Feature development is only about 20% of what the foundation team does</h2>
-
-<p>Behind the scenes, there’s a lot more: triaging and fixing issues, handling security reports, reviewing code, updating documentation, and maintaining infrastructure. All of this work empowers the community and ensures PHP is stable and reliable.</p>
-
-<p>Here are some highlights:</p>
-
-<ul>
-<li>The total contributions to the PHP repositories grew by 51+%</li>
-<li>We conducted the first external security audit for PHP in 10 years</li>
-<li>We extended security support for PHP versions by one year</li>
-<li>We improved CI and testing infrastructure</li>
-<li>We introduced automated benchmarks to track performance regressions</li>
-</ul>
-
-<p>None of this would be possible without our sponsors. Huge thanks to every company and individual who has supported us over the past three years!</p>
-
-<p>Special shout-outs to:<br />
-JetBrains, Automattic, Sovereign Tech Agency, Craft CMS, Private Packagist, Tideways, Zend by Perforce, Laravel, Symfony, Mercari Inc., Les-Tilleuls.coop, pixiv Inc., Aternos GmbH, Sentry, Ardennes-étape, Cybozu,</p>
-
-<p>and many others — PHP is all of us!</p>
-
-<p>If you haven’t already, please consider <a href="https://thephp.foundation/sponsor/">sponsoring the PHP Foundation</a> 🙏</p>
-
-<p>Here’s to PHP and many more years ahead!<br />
 🐘💜</p>
 ]]></content>
         </entry>
