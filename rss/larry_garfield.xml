@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2025-08-04T13:44:48+00:00</updated><entry><author><name>Larry Garfield</name><uri>https://github.com/Crell</uri></author><title type="html"><![CDATA[PHP 8.4: How Property Hooks Happened]]></title><content type="html"><![CDATA[<p>PHP 8.4 is coming on 21 November this year.  It includes a host of new functionality, but the biggest, in more ways than one, is Property hooks.  Given the excitement around it, as well as its size, the PHP Foundation's Roman Pronsky asked me to write up a bit about the process we went through to produce this beast.</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2025-08-04T14:01:39+00:00</updated><entry><author><name>Larry Garfield</name><uri>https://github.com/Crell</uri></author><title type="html"><![CDATA[PHP 8.4: How Property Hooks Happened]]></title><content type="html"><![CDATA[<p>PHP 8.4 is coming on 21 November this year.  It includes a host of new functionality, but the biggest, in more ways than one, is Property hooks.  Given the excitement around it, as well as its size, the PHP Foundation's Roman Pronsky asked me to write up a bit about the process we went through to produce this beast.</p>
 
 <p>What eventually became the twin RFCs of Property Hooks and Asymmetric Visibility is actually a very old discussion.  We'll look back at the decade-plus saga that got us here, how Ilija Tovilo and I got sucked in, how the design came to be, and how we managed to get it across the finish line.  Here's a teaser: It would not have happened without the PHP Foundation.</p>
 
@@ -482,6 +482,17 @@ new Car(new StudentDriver());
 <p>Would a partial-generics approach like that described here be acceptable?  Even if it may not be possible to go all the way to full generics, would "compile time-only generics" be a big enough win to justify spending more time on it?  Our team thinks it is, but PHP is larger than our team, so we want to get feedback from the broader community.</p>
 
 <p><strong>Would you support (and vote in favor of) compile-time-only generics as described here?</strong></p>
+
+<p><div
+    class="thread-container"
+    data-reddit-thread="https://www.reddit.com/r/PHP/comments/1mhe7qf/compile_time_generics_yay_or_nay/"
+    data-reddit-max-depth="10"
+    data-reddit-show-content="false"
+    data-reddit-show-controls="true"
+></div>
+<script src="//unpkg.com/redditify/dist/redditify.min.js"></script>
+<link rel="stylesheet" href="//unpkg.com/redditify/dist/redditify.css">
+</p>
 ]]></content><link href="https://thephp.foundation/blog/2025/08/05/compile-generics/"/><id>https://thephp.foundation/blog/2025/08/05/compile-generics/</id><updated>Mon, 04 Aug 2025 00:00:00 +0000</updated></entry><entry><author><name>Arnaud Le Blanc</name><uri>https://github.com/arnaud-lb</uri></author><author><name>Derick Rethans</name><uri>https://derickrethans.nl</uri></author><author><name>Larry Garfield</name><uri>https://www.garfieldtech.com/</uri></author><title type="html"><![CDATA[State of Generics and Collections]]></title><content type="html"><![CDATA[<p>Generics have been on the list of wanted features for a long time by numerous PHP developers. The topic is often brought up in "What's New in PHP?" talks as well during Q&amp;A.</p>
 
 <p>In this article we will be exploring the different approaches, and what their current state is.</p>
