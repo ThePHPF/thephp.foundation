@@ -332,13 +332,13 @@ As noted above, though, typing against a generic that is part of a union, like `
 Type inference is a feature of many heavily typed languages where the compiler or engine can "figure out" what the type of something is supposed to be based on context.  As a trivial example:
 
 ```php
-function add(int $x, int $y)
+function concat(string $x, string $y)
 {
-    return $x + $y;
+    return $x . $y;
 }
 ```
 
-It's readily obvious that the return type of that function is `int`, so a type inference engine will fill that in for you automatically.
+It's readily obvious that the return type of that function is `string`, so a type inference engine will fill that in for you automatically.
 
 That would be very helpful for Generics, especially if runtime Generics ever became possible.
 
