@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2025-08-04T15:38:10+00:00</updated><entry><author><name>Larry Garfield</name><uri>https://github.com/Crell</uri></author><title type="html"><![CDATA[PHP 8.4: How Property Hooks Happened]]></title><content type="html"><![CDATA[<p>PHP 8.4 is coming on 21 November this year.  It includes a host of new functionality, but the biggest, in more ways than one, is Property hooks.  Given the excitement around it, as well as its size, the PHP Foundation's Roman Pronsky asked me to write up a bit about the process we went through to produce this beast.</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2025-08-07T18:23:57+00:00</updated><entry><author><name>Larry Garfield</name><uri>https://github.com/Crell</uri></author><title type="html"><![CDATA[PHP 8.4: How Property Hooks Happened]]></title><content type="html"><![CDATA[<p>PHP 8.4 is coming on 21 November this year.  It includes a host of new functionality, but the biggest, in more ways than one, is Property hooks.  Given the excitement around it, as well as its size, the PHP Foundation's Roman Pronsky asked me to write up a bit about the process we went through to produce this beast.</p>
 
 <p>What eventually became the twin RFCs of Property Hooks and Asymmetric Visibility is actually a very old discussion.  We'll look back at the decade-plus saga that got us here, how Ilija Tovilo and I got sucked in, how the design came to be, and how we managed to get it across the finish line.  Here's a teaser: It would not have happened without the PHP Foundation.</p>
 
@@ -448,13 +448,13 @@ class DataProcessor
 
 <p>Type inference is a feature of many heavily typed languages where the compiler or engine can "figure out" what the type of something is supposed to be based on context.  As a trivial example:</p>
 
-<pre><code class="php">function add(int $x, int $y)
+<pre><code class="php">function concat(string $x, string $y)
 {
-    return $x + $y;
+    return $x . $y;
 }
 </code></pre>
 
-<p>It's readily obvious that the return type of that function is <code>int</code>, so a type inference engine will fill that in for you automatically.</p>
+<p>It's readily obvious that the return type of that function is <code>string</code>, so a type inference engine will fill that in for you automatically.</p>
 
 <p>That would be very helpful for Generics, especially if runtime Generics ever became possible.</p>
 
