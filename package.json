@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/thephpf/thephp.foundation/issues"
   },
-  "homepage": "https://github.com/thephpf/thephp.foundation"
+  "homepage": "https://github.com/thephpf/thephp.foundation",
+  "dependencies": {
+    "redditify": "^0.2.2"
+  }
 }

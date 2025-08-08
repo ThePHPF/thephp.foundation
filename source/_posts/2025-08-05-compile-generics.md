@@ -369,6 +369,4 @@ Would a partial-generics approach like that described here be acceptable?  Even 
 
 **Would you support (and vote in favor of) compile-time-only generics as described here?**
 
-{{ include('redditify.html', {
-url: 'https://www.reddit.com/r/PHP/comments/1mhe7qf/compile_time_generics_yay_or_nay/'
-}) }}
+{{ redditify('https://www.reddit.com/r/PHP/comments/1mhe7qf/compile_time_generics_yay_or_nay/') }}
