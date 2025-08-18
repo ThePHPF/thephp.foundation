@@ -13,11 +13,11 @@ published_at: 04 August 2025
 
 One of the most sought-after features for PHP is Generics: The ability to have a type that takes another type as a parameter.  It's a feature found in most compiled languages by now, but implementing generics in an interpreted language like PHP, where all the type checking would have to be done at runtime, has always proven Really Really Hard(tm), Really Really Slow(tm), or both.
 
-But, experimentation by the PHP Foundation's dev team suggests we may be able to get 80% of the benefit for 20% of the work.  Is that enough?
+But, experimentation by Gina from the PHP Foundation's dev team suggests we may be able to get 80% of the benefit for 20% of the work.  Is that enough?
 
 ## The short, short version
 
-We believe it's possible to implement generics on only interfaces and abstract classes, which would offer a large chunk of the benefit of generics but avoid most of the pitfalls.
+Gina and Larry believe it's possible to implement generics on only interfaces and abstract classes, which would offer a large chunk of the benefit of generics but avoid most of the pitfalls.
 
 In particular, interfaces and abstract classes could declare that they need one or more types specified:
 
@@ -365,7 +365,7 @@ This work is still experimental.  As noted above, there's a few additional featu
 
 The Foundation, of course, wants to be respectful of the time of our development team, the time of the many RFC reviewers, and the pocketbooks of our generous sponsors.  Foundation staff have already sunk quite a bit of time into the question of generics.  Before we sink more time into it, we want to ask the community (and PHP Internals especially)... Is it worth it?
 
-Would a partial-generics approach like that described here be acceptable?  Even if it may not be possible to go all the way to full generics, would "compile time-only generics" be a big enough win to justify spending more time on it?  Our team thinks it is, but PHP is larger than our team, so we want to get feedback from the broader community.
+Would a partial-generics approach like that described here be acceptable?  Even if it may not be possible to go all the way to full generics, would "compile time-only generics" be a big enough win to justify spending more time on it?  Gina from The PHP Foundation team thinks it is, but PHP is larger than just our team, so we want to get feedback from the broader community.
 
 **Would you support (and vote in favor of) compile-time-only generics as described here?**
 
