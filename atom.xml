@@ -3,9 +3,92 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2025-08-18T07:57:30+00:00</updated>
+    <updated>2025-09-05T09:04:02+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Announcing the Official PHP SDK for MCP]]></title>
+            <link href="https://thephp.foundation/blog/2025/09/05/php-mcp-sdk/"/>
+            <updated>2025-09-05T00:00:00+00:00</updated>
+            <id>https://thephp.foundation/blog/2025/09/05/php-mcp-sdk/</id>
+            <content type="html"><![CDATA[<p><strong>The PHP Foundation</strong>, <strong>Anthropic’s MCP team, and Symfony</strong> are collaborating on the <strong>official PHP SDK for the Model Context Protocol (MCP)</strong>. Our goal is a <strong>framework-agnostic, production-ready</strong> reference implementation the PHP ecosystem can rely on.</p>
+
+<p>The Symfony team will lead maintenance, with contributions from the broader community, including <a href="https://github.com/CodeWithKyrian">Kyrian Obikwelu</a> (<a href="https://github.com/php-mcp">PHP-MCP</a>).</p>
+
+<p>This initiative consolidates earlier work into a single, trusted implementation – <a href="https://github.com/modelcontextprotocol/php-sdk"><strong>modelcontextprotocol/php-sdk</strong></a> – starting with the server and expanding to client capabilities.</p>
+
+<p>⭐ Star the repo, try it, open issues/PRs, and join discussions.</p>
+
+<!--
+- [Symfony announcement](https://symfony.com/blog/symfony-to-provide-the-official-mcp-sdk)  
+- [MCP blog announcement]()
+-->
+
+<h2 id="%2A%2Awhat-is-mcp-and-why-is-it-important%2A%2A"><strong>What is MCP and why is it important</strong></h2>
+
+<p>The <a href="https://modelcontextprotocol.io/">Model Context Protocol</a> (MCP) is an open protocol introduced by <a href="https://www.anthropic.com/">Anthropic</a> to enable AI applications to connect with and utilize external tools and data sources, akin to a standardized "USB-C port" for AI systems.</p>
+
+<blockquote>
+  <p>💡 Fun fact: MCP co-creator <a href="https://x.com/dsp_"><strong>David Soria Parra</strong></a> was release manager for <a href="https://wiki.php.net/todo/php54">PHP 5.4</a> and <a href="https://wiki.php.net/todo/php55">5.5</a>, and a long-time PHP core contributor. His PHP code still runs inside <a href="https://github.com/symfony/http-foundation/blob/6.1/IpUtils.php#L105">every Symfony and Laravel project</a> today. Cheers, David! 💜</p>
+</blockquote>
+
+<p>To make it easier to build MCP servers, the community provides SDKs – lightweight frameworks that handle the protocol details so developers can focus on their applications.</p>
+
+<p>There were several official SDKs for different programming languages. However, there was no official PHP SDK, even though a few community implementations existed.</p>
+
+<p>That’s why <strong>the PHP Foundation stepped up to coordinate</strong> the development and maintenance of the official PHP SDK for MCP.</p>
+
+<p>This brings two important benefits:</p>
+
+<ul>
+<li>A <strong>trusted reference implementation</strong> developers can rely on.</li>
+<li>Visibility of <strong>PHP’s readiness for AI development</strong> outside its own ecosystem.</li>
+</ul>
+
+<h2 id="%2A%2Awhat%E2%80%99s-happening%2A%2A"><strong>What’s happening</strong></h2>
+
+<p><strong>The PHP Foundation</strong> has partnered with the MCP team at <strong>Anthropic</strong> and the <strong>Symfony</strong> team to develop the <strong>official MCP SDK for PHP.</strong></p>
+
+<p>The Symfony team will be lead maintainers of the SDK as they have a proven track record of building high-quality framework-agnostic components that much of the PHP ecosystem relies on.</p>
+
+<p>Additionally, <a href="https://github.com/CodeWithKyrian">Kyrian Obikwelu</a> joined the maintainer team and brings his previous experience and work on MCP libraries. Other PHP MCP SDK authors are welcome to participate as well.</p>
+
+<p><strong>Roadmap (high level):</strong></p>
+
+<ol>
+<li>Server-side building blocks (initial release)</li>
+<li>Client capabilities and additional transports as the spec evolves</li>
+<li>Docs, examples, and stability hardening driven by real-world use</li>
+</ol>
+
+<p>We’ll keep this implementation framework-agnostic so it works well in any platform, legacy apps, and custom stacks. Community adapters and examples will live alongside the core packages.</p>
+
+<h2 id="%2A%2Aget-involved%2A%2A"><strong>Get involved</strong></h2>
+
+<p><strong>Try it:</strong> install the SDK, scaffold a small MCP server, and expose one or two safe tools.</p>
+
+<p><strong>Contribute:</strong> issues, docs, and PRs are very welcome – especially around testing, and real-world examples.</p>
+
+<p><strong>Bring your framework:</strong> we’re keen on first‑class integrations for Laravel, WordPress, Drupal, Laminas, and more. We keep a list of integrations in the repo as well.</p>
+
+<p><strong>Start here:</strong></p>
+
+<ul>
+<li>SDK repo: <a href="https://github.com/modelcontextprotocol/php-sdk"><strong>modelcontextprotocol/php-sdk</strong></a></li>
+<li>Composer package: <a href="https://packagist.org/packages/mcp/sdk"><strong>https://packagist.org/packages/mcp/sdk</strong></a></li>
+<li>MCP spec &amp; ecosystem: <a href="https://modelcontextprotocol.io/specification/2025-06-18"><strong>https://modelcontextprotocol.io/</strong></a></li>
+</ul>
+
+<blockquote>
+  <p><a href="https://symfony.com/blog/let-s-build-the-symfony-ai-ecosystem-together"><strong>Join the Symfony AI Hackathon</strong></a><br />
+  The in-person event will be <a href="https://maps.app.goo.gl/ML4e5SqtcwGRYJH8A">hosted at Quentic in Berlin</a>, and requires a <a href="https://www.eventbrite.com/e/symfony-ai-hackathon-tickets-1591414586869">free registration via Eventbrite</a> upfront. For online participation, please make sure to join our <a href="https://symfony.com/slack">Slack Workspace</a> and the &#35;ai channel to follow along and raise your topics or questions.</p>
+</blockquote>
+
+<p>This SDK helps ensure PHP is visible as a great language choice to a wider audience when working in the AI ecosystem.
+Let’s build it together!<br />
+💜🐘</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[Compile time generics: yay or nay?]]></title>
             <link href="https://thephp.foundation/blog/2025/08/05/compile-generics/"/>
@@ -1417,80 +1500,6 @@ The roadmap and vision need further development and discussion. We plan to annou
 </ul>
 
 <p>🐘💜</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Happy Holidays from&nbsp;The&nbsp;PHP&nbsp;Foundation!]]></title>
-            <link href="https://thephp.foundation/blog/2024/12/23/happy-holidays-from-the-php-foundation/"/>
-            <updated>2024-12-23T00:00:00+00:00</updated>
-            <id>https://thephp.foundation/blog/2024/12/23/happy-holidays-from-the-php-foundation/</id>
-            <content type="html"><![CDATA[<p>As 2024 comes to a close, we at the PHP Foundation want to take a moment to thank everyone who has supported us this year. It’s been an incredible journey, and we couldn’t have done it without the amazing PHP community and our generous sponsors.</p>
-
-<h2 id="a-year-of-milestones">A Year of Milestones</h2>
-
-<p>In <a href="https://thephp.foundation/blog/2024/11/22/php-foundation-turns-three">its third year</a>, the PHP Foundation has achieved several milestones that have further strengthened the PHP ecosystem: first in a decade <a href="https://thephp.foundation/blog/2024/11/22/php-foundation-turns-three/#feature-development-is-only-about-20%25-of-what-the-foundation-team-does">security audit</a>, <a href="https://thephp.foundation/blog/2024/11/19/pie-pre-release/">pie</a>, numerous features and improvements for <a href="https://www.php.net/releases/8.4/en.php">PHP 8.4</a>, and much more to come next year!</p>
-
-<h2 id="celebrating-our-sponsors">Celebrating Our Sponsors</h2>
-
-<p>We owe a special thanks to our major sponsors who make our work possible:</p>
-
-<h3 id="platinum">Platinum</h3>
-
-<p><a href="https://www.sovereign.tech/"><strong>Sovereign Tech Agency</strong></a></p>
-
-<p><a href="https://www.jetbrains.com/"><strong>JetBrains</strong></a></p>
-
-<p><a href="https://automattic.com/"><strong>Automattic</strong></a></p>
-
-<h3 id="gold">Gold</h3>
-
-<p><a href="https://laravel.com/"><strong>Laravel</strong></a></p>
-
-<p><a href="https://www.godaddy.com/"><strong>GoDaddy</strong></a> <strong>&#91;new! ✨&#93;</strong></p>
-
-<h3 id="silver">Silver</h3>
-
-<p><a href="https://packagist.com/"><strong>Private Packagist</strong></a></p>
-
-<p><a href="https://craftcms.com/"><strong>Craft CMS</strong></a></p>
-
-<p><a href="https://cybozu.co.jp/en/company/"><strong>Cybozu</strong></a></p>
-
-<p><a href="https://tideways.com/"><strong>Tideways</strong></a></p>
-
-<p><a href="https://www.zend.com/"><strong>Zend by Perforce</strong></a></p>
-
-<p><a href="https://symfony.com/"><strong>Symfony Corp</strong></a></p>
-
-<p><a href="https://sentry.io/welcome/"><strong>Sentry</strong></a></p>
-
-<p><a href="https://manychat.com/"><strong>Manychat</strong></a> <strong>&#91;new! ✨&#93;</strong></p>
-
-<p><a href="https://www.mercari.com/"><strong>Mercari Inc.</strong></a></p>
-
-<p><a href="http://Les-Tilleuls.coop"><strong>Les-Tilleuls.coop</strong></a></p>
-
-<p><a href="https://www.pixiv.net/en/"><strong>pixiv Inc.</strong></a></p>
-
-<p><a href="https://aternos.gmbh/en/"><strong>Aternos GmbH</strong></a></p>
-
-<p><a href="https://chstudio.fr/en/homepage/"><strong>CH Studio</strong></a></p>
-
-<p>Big thanks to newly joined major sponsors: <a href="https://www.godaddy.com/"><strong>GoDaddy</strong></a> and <a href="https://manychat.com/"><strong>Manychat</strong></a>!</p>
-
-<p>Your contributions enable us to support developers, fund crucial projects, and ensure PHP is a modern and reliable choice for web development.</p>
-
-<p>If you are yet to decide on sponsoring the foundation, <a href="https://thephp.foundation/blog/2024/09/30/call-fo-sponsors/">here</a> you can find information on how to join us and why it matters.</p>
-
-<h2 id="wishing-you-joyful-holidays-%E2%9C%A8">Wishing You Joyful Holidays ✨</h2>
-
-<p>To everyone in the PHP community, we wish you a joyful holiday season filled with warmth, happiness, and a well-deserved break. Thank you for your support, passion, and commitment to PHP.</p>
-
-<p>Here’s to a wonderful 2025! 🥂</p>
-
-<p>Warm wishes,<br />
-The PHP Foundation<br />
-🐘💜</p>
 ]]></content>
         </entry>
     </feed>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2025-08-18T07:57:31+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[FrankenPHP Is Now Officially Supported by&nbsp;The&nbsp;PHP&nbsp;Foundation]]></title><content type="html"><![CDATA[<p><a href="https://frankenphp.dev">FrankenPHP</a>, a modern high-performance PHP application server created by <a href="https://dunglas.dev">Kévin Dunglas</a> and sponsored by <a href="http://Les-Tilleuls.coop">Les-Tilleuls.coop</a>, is now officially supported by the PHP Foundation. FrankenPHP integrates PHP directly into Go and Caddy, simplifying deployment, improving performance, and reducing costs. It powers real-time features, supports advanced hosting scenarios, and offers a performance-boosting “worker mode” already integrated by Laravel, Symfony, and Yii. The PHP Foundation will actively contribute to FrankenPHP’s development and host its code on the official PHP GitHub, marking a major step toward modernizing the PHP ecosystem while keeping governance with the original maintainers.</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2025-09-05T09:04:02+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[FrankenPHP Is Now Officially Supported by&nbsp;The&nbsp;PHP&nbsp;Foundation]]></title><content type="html"><![CDATA[<p><a href="https://frankenphp.dev">FrankenPHP</a>, a modern high-performance PHP application server created by <a href="https://dunglas.dev">Kévin Dunglas</a> and sponsored by <a href="http://Les-Tilleuls.coop">Les-Tilleuls.coop</a>, is now officially supported by the PHP Foundation. FrankenPHP integrates PHP directly into Go and Caddy, simplifying deployment, improving performance, and reducing costs. It powers real-time features, supports advanced hosting scenarios, and offers a performance-boosting “worker mode” already integrated by Laravel, Symfony, and Yii. The PHP Foundation will actively contribute to FrankenPHP’s development and host its code on the official PHP GitHub, marking a major step toward modernizing the PHP ecosystem while keeping governance with the original maintainers.</p>
 
 <p><img src="/assets/post-images/2025/2025-05-15-frankenphp.png" alt="FrankenPHP-PHP-Foundation" /></p>
 
@@ -736,7 +736,83 @@ This concludes the list of commits made by the PHP core team in the past month. 
 <blockquote>
   <p>PHP Roundup is (except for this particular one) prepared by Ayesh Karunaratne from <strong><a href="https://php.watch">PHP.Watch</a></strong>, a source for PHP News, Articles, Upcoming Changes, and more.</p>
 </blockquote>
-]]></content><link href="https://thephp.foundation/blog/2023/06/06/php-core-roundup-13/"/><id>https://thephp.foundation/blog/2023/06/06/php-core-roundup-13/</id><updated>Tue, 06 Jun 2023 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[Welcoming Passbolt to the PHP Foundation]]></title><content type="html"><![CDATA[<p>We’re thrilled to announce that <strong>Passbolt has joined the PHP Foundation</strong> as a Silver sponsor! PHP powers over 77% of the web – including Passbolt’s collaborative password and secrets manager. Their support strengthens our mission to keep it thriving.</p>
+]]></content><link href="https://thephp.foundation/blog/2023/06/06/php-core-roundup-13/"/><id>https://thephp.foundation/blog/2023/06/06/php-core-roundup-13/</id><updated>Tue, 06 Jun 2023 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[Announcing the Official PHP SDK for MCP]]></title><content type="html"><![CDATA[<p><strong>The PHP Foundation</strong>, <strong>Anthropic’s MCP team, and Symfony</strong> are collaborating on the <strong>official PHP SDK for the Model Context Protocol (MCP)</strong>. Our goal is a <strong>framework-agnostic, production-ready</strong> reference implementation the PHP ecosystem can rely on.</p>
+
+<p>The Symfony team will lead maintenance, with contributions from the broader community, including <a href="https://github.com/CodeWithKyrian">Kyrian Obikwelu</a> (<a href="https://github.com/php-mcp">PHP-MCP</a>).</p>
+
+<p>This initiative consolidates earlier work into a single, trusted implementation – <a href="https://github.com/modelcontextprotocol/php-sdk"><strong>modelcontextprotocol/php-sdk</strong></a> – starting with the server and expanding to client capabilities.</p>
+
+<p>⭐ Star the repo, try it, open issues/PRs, and join discussions.</p>
+
+<!--
+- [Symfony announcement](https://symfony.com/blog/symfony-to-provide-the-official-mcp-sdk)  
+- [MCP blog announcement]()
+-->
+
+<h2 id="%2A%2Awhat-is-mcp-and-why-is-it-important%2A%2A"><strong>What is MCP and why is it important</strong></h2>
+
+<p>The <a href="https://modelcontextprotocol.io/">Model Context Protocol</a> (MCP) is an open protocol introduced by <a href="https://www.anthropic.com/">Anthropic</a> to enable AI applications to connect with and utilize external tools and data sources, akin to a standardized "USB-C port" for AI systems.</p>
+
+<blockquote>
+  <p>💡 Fun fact: MCP co-creator <a href="https://x.com/dsp_"><strong>David Soria Parra</strong></a> was release manager for <a href="https://wiki.php.net/todo/php54">PHP 5.4</a> and <a href="https://wiki.php.net/todo/php55">5.5</a>, and a long-time PHP core contributor. His PHP code still runs inside <a href="https://github.com/symfony/http-foundation/blob/6.1/IpUtils.php#L105">every Symfony and Laravel project</a> today. Cheers, David! 💜</p>
+</blockquote>
+
+<p>To make it easier to build MCP servers, the community provides SDKs – lightweight frameworks that handle the protocol details so developers can focus on their applications.</p>
+
+<p>There were several official SDKs for different programming languages. However, there was no official PHP SDK, even though a few community implementations existed.</p>
+
+<p>That’s why <strong>the PHP Foundation stepped up to coordinate</strong> the development and maintenance of the official PHP SDK for MCP.</p>
+
+<p>This brings two important benefits:</p>
+
+<ul>
+<li>A <strong>trusted reference implementation</strong> developers can rely on.</li>
+<li>Visibility of <strong>PHP’s readiness for AI development</strong> outside its own ecosystem.</li>
+</ul>
+
+<h2 id="%2A%2Awhat%E2%80%99s-happening%2A%2A"><strong>What’s happening</strong></h2>
+
+<p><strong>The PHP Foundation</strong> has partnered with the MCP team at <strong>Anthropic</strong> and the <strong>Symfony</strong> team to develop the <strong>official MCP SDK for PHP.</strong></p>
+
+<p>The Symfony team will be lead maintainers of the SDK as they have a proven track record of building high-quality framework-agnostic components that much of the PHP ecosystem relies on.</p>
+
+<p>Additionally, <a href="https://github.com/CodeWithKyrian">Kyrian Obikwelu</a> joined the maintainer team and brings his previous experience and work on MCP libraries. Other PHP MCP SDK authors are welcome to participate as well.</p>
+
+<p><strong>Roadmap (high level):</strong></p>
+
+<ol>
+<li>Server-side building blocks (initial release)</li>
+<li>Client capabilities and additional transports as the spec evolves</li>
+<li>Docs, examples, and stability hardening driven by real-world use</li>
+</ol>
+
+<p>We’ll keep this implementation framework-agnostic so it works well in any platform, legacy apps, and custom stacks. Community adapters and examples will live alongside the core packages.</p>
+
+<h2 id="%2A%2Aget-involved%2A%2A"><strong>Get involved</strong></h2>
+
+<p><strong>Try it:</strong> install the SDK, scaffold a small MCP server, and expose one or two safe tools.</p>
+
+<p><strong>Contribute:</strong> issues, docs, and PRs are very welcome – especially around testing, and real-world examples.</p>
+
+<p><strong>Bring your framework:</strong> we’re keen on first‑class integrations for Laravel, WordPress, Drupal, Laminas, and more. We keep a list of integrations in the repo as well.</p>
+
+<p><strong>Start here:</strong></p>
+
+<ul>
+<li>SDK repo: <a href="https://github.com/modelcontextprotocol/php-sdk"><strong>modelcontextprotocol/php-sdk</strong></a></li>
+<li>Composer package: <a href="https://packagist.org/packages/mcp/sdk"><strong>https://packagist.org/packages/mcp/sdk</strong></a></li>
+<li>MCP spec &amp; ecosystem: <a href="https://modelcontextprotocol.io/specification/2025-06-18"><strong>https://modelcontextprotocol.io/</strong></a></li>
+</ul>
+
+<blockquote>
+  <p><a href="https://symfony.com/blog/let-s-build-the-symfony-ai-ecosystem-together"><strong>Join the Symfony AI Hackathon</strong></a><br />
+  The in-person event will be <a href="https://maps.app.goo.gl/ML4e5SqtcwGRYJH8A">hosted at Quentic in Berlin</a>, and requires a <a href="https://www.eventbrite.com/e/symfony-ai-hackathon-tickets-1591414586869">free registration via Eventbrite</a> upfront. For online participation, please make sure to join our <a href="https://symfony.com/slack">Slack Workspace</a> and the &#35;ai channel to follow along and raise your topics or questions.</p>
+</blockquote>
+
+<p>This SDK helps ensure PHP is visible as a great language choice to a wider audience when working in the AI ecosystem.
+Let’s build it together!<br />
+💜🐘</p>
+]]></content><link href="https://thephp.foundation/blog/2025/09/05/php-mcp-sdk/"/><id>https://thephp.foundation/blog/2025/09/05/php-mcp-sdk/</id><updated>Fri, 05 Sep 2025 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[Welcoming Passbolt to the PHP Foundation]]></title><content type="html"><![CDATA[<p>We’re thrilled to announce that <strong>Passbolt has joined the PHP Foundation</strong> as a Silver sponsor! PHP powers over 77% of the web – including Passbolt’s collaborative password and secrets manager. Their support strengthens our mission to keep it thriving.</p>
 
 <p>Check out their heartfelt announcement here: <strong><a href="https://www.passbolt.com/blog/a-love-letter-passbolt-joins-the-php-foundation-as-a-company-member">Passbolt’s Blog</a></strong>.</p>
 
