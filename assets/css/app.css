@@ -60,7 +60,8 @@
     }
 
     blockquote p {
-        @apply p-4 pl-8;
+        @apply p-4 pl-8 pr-8;
+        @apply mb-0;
     }
 
     a {
