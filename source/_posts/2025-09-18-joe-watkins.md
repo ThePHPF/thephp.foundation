@@ -8,7 +8,7 @@ author:
     url: https://twitter.com/pronskiy
   - name: Joe Watkins
     url: https://github.com/krakjoe
-published_at: 18 September 2025
+published_at: 25 September 2025
 ---
 
 We’re excited to share that Joe Watkins is joining the PHP Foundation as a contractor for the rest of 2025\.
