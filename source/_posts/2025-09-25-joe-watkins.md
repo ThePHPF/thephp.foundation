@@ -13,7 +13,7 @@ published_at: 25 September 2025
 
 We’re excited to share that Joe Watkins is joining the PHP Foundation as a contractor for the rest of 2025\.
 
-Joe has helped [establish the PHP Fouondation](https://blog.jetbrains.com/phpstorm/2021/11/the-php-foundation/) in 2021, and is a long-time contributor to PHP core. He is known for his work on extensions like [parallel](https://github.com/krakjoe/parallel) and [PCOV](https://github.com/krakjoe/pcov) and most recently, he released [ORT](https://krakjoe.github.io/ort/), a blazing-fast ONNX runtime for PHP bringing native AI inference capabilities to PHP developers for the first time.
+Joe has helped [establish the PHP Foundation](https://blog.jetbrains.com/phpstorm/2021/11/the-php-foundation/) in 2021 and is a long-time contributor to PHP core. He is known for his work on extensions like [parallel](https://github.com/krakjoe/parallel) and [PCOV](https://github.com/krakjoe/pcov) and most recently, he released [ORT](https://krakjoe.github.io/ort/), a blazing-fast ONNX runtime for PHP bringing native AI inference capabilities to PHP developers for the first time.
 
 This decision comes outside our usual funding cycle, and it’s driven by two key factors:
 
