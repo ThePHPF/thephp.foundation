@@ -90,9 +90,31 @@ permalink: structure
     <div class="my-16 mb-24">
         <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
             <div class="space-y-5 sm:space-y-4">
+                <h2 class="text-3xl text-gray-800 font-bold tracking-tight mt-0" id="staff">Staff</h2>
+                <div class="text-xl text-gray-500">
+                    The PHP Foundation staff members who coordinate operations and fundraising.
+                </div>
+            </div>
+            <div class="lg:col-span-2">
+                <div class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-12 sm:space-y-0 lg:gap-x-8">
+                    {{ include('structure-item.html', {
+                        name: 'Ben Marks',
+                        image: '/assets/team/ben_marks.jpeg',
+                        job: 'Director (Fundraising)',
+                        twitter: 'https://twitter.com/benmarks',
+                        github: 'https://github.com/benmarks',
+                    }) }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-16 mb-24">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
+            <div class="space-y-5 sm:space-y-4">
                 <h2 class="text-3xl text-gray-800 font-bold tracking-tight mt-0" id="core_developers">Core Developers</h2>
                 <div class="text-xl text-gray-500">
-                    The PHP Foundation contracts 10 full-time and part-time engineers to maintain and develop the PHP language.
+                    The PHP Foundation contracts 11 full-time and part-time engineers to maintain and develop the PHP language.
                 </div>
             </div>
             <div class="lg:col-span-2">
