@@ -349,15 +349,15 @@ Technical Lead responsibilities:
 
 ## Appendix: Board Members
 
-| Name      | Role                             | Seat             | Status                       |
-|:----------|:---------------------------------|:-----------------|:-----------------------------|
-| Roman     | Board Member, Executive Director | Platinum Sponsor | Active                       |
-| Nils      | Board Member                     | Sponsor          | Active                       |
-| Matthew   | Board Member                     | Sponsor          | Active                       |
-| Nicolas   | Board Member                     | Sponsor          | Active                       |
-| Benjamin  | Board Member                     | Sponsor          | Active                       |
-| Sebastian | Board Member                     | Community        | Active                       |
-| Josepha   | Board Member                     | Community        | Active                       |
-| Sara      | Board Member                     | Community        | Active                       |
-| Nikita    | Board Member                     | Community        | Moved to fellows in Aug 2025 |
-| Joe       | Board Member                     | Community        | Moved to staff in Aug 2024   |
+| Name                    | Role                             | Seat             | Status                       |
+|:------------------------|:---------------------------------|:-----------------|:-----------------------------|
+| Roman Pronskiy          | Board Member, Executive Director | Platinum Sponsor | Active                       |
+| Nils Adermann           | Board Member                     | Sponsor          | Active                       |
+| Matthew Weier O'Phinney | Board Member                     | Sponsor          | Active                       |
+| Nicolas Grekas          | Board Member                     | Sponsor          | Active                       |
+| Benjamin Eberlei        | Board Member                     | Sponsor          | Active                       |
+| Sebastian Bergmann      | Board Member                     | Community        | Active                       |
+| Josepha Haden Chomphosy | Board Member                     | Community        | Active                       |
+| Sara Golemon            | Board Member                     | Community        | Active                       |
+| Nikita Popov            | Board Member                     | Community        | Moved to fellows in Aug 2025 |
+| Joe Watkins             | Board Member                     | Community        | Moved to staff in Aug 2024   |
