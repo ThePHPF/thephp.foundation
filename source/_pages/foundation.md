@@ -6,23 +6,22 @@ layout: page
 
 ## Governance
 
-The current group collective administration focuses on maintaining the continuity of the PHP project, 
-in particular on hiring, supporting, and guiding PHP project developers. 
-The Administration also encourages other Financial Contributors and explores strategic partnerships and needs for the PHP project.
+The PHP Foundation operates with a structured governance model designed to ensure transparency, accountability, and effective stewardship of resources dedicated to the PHP language.
 
-The Administration consists of veteran PHP core developers, PHP community leaders, 
-representatives of the founding companies, and other key stakeholders. 
-In 2022, this is an invitation-only group, while we’re working to get our processes solidified.
+Our governance structure consists of four key entities:
 
-To promote transparency, we operate as a [collective on the Open Collective platform](https://opencollective.com/phpfoundation), 
-through which we ensure certain activities, such as selection and financing of PHP core developers contributing
-to the development of the PHP language. The decisions about these activities are taken by
-consensus by the administration members, which meet regularly, and are executed by the
-collective administrators.
+* **Board of Directors** – Provides strategic oversight, sets the Foundation's goals, and makes final decisions on major matters. The Board consists of 5-10 members representing platinum sponsors, other sponsors, and community representatives.
+* **Executive Director** – Manages day-to-day operations, implements the approved strategy, and serves as the bridge between the Board and staff.
+* **Advisory Board** – Provides high-value input and strategic foresight from major sponsors (Silver tier and above), founding companies, and community leaders.
+* **Developers (Staff)** – Execute technical work, maintain the PHP codebase, and support community needs.
 
-All administration members of the PHP Foundation as well as contributors and PHP developers are
-    expected to abide by the [Code of Conduct](/code-of-conduct) and follow our collective expectations
-    guidelines and [Terms of Service](https://opencollective.com/tos) of the platform operated by Open Collective Inc.
+The Board of Directors meets monthly and makes decisions by consensus when possible, moving to formal votes when needed. All board members and staff are expected to abide by the [Code of Conduct](/code-of-conduct).
+
+To promote transparency, we operate as a [collective on the Open Collective platform](https://opencollective.com/phpfoundation), through which we manage activities such as selection and financing of PHP core developers. The Foundation operates through Open Source Collective as its fiscal host.
+
+**Important:** The Request for Comments (RFC) process is not affiliated with the PHP Foundation. Language decisions remain the matter of the PHP Internals community.
+
+Learn more about our [governance model](/governance).
 
 ## Foundation Activities
 
