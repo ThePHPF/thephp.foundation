@@ -34,7 +34,7 @@ The development of <a href="https://github.com/php/php-src">the PHP core</a> is 
 
 As before, we require experience in PHP core development. Ideally, you should have all, but at least some of the following:
 
-- Pull-requests / commits to [php/php-src](https://github.com/php/php-src/️)
+- Pull-requests / commits to [php/php-src](https://github.com/php/php-src)
 - Experience in writing PHP extensions
 - Participation in PHP mailing lists
 - Contributions to other open-source projects
