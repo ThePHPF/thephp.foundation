@@ -41,7 +41,7 @@ Nice-to-have: a visual approach that can evolve for future releases (e.g., PHP 9
 
 Please submit designs first (we’re not judging big code drops):
 
-* Mockups or prototype (Issue to [php/web-php]( https://github.com/php/web-php/issues/new?template=design-contest.yml)).
+* Mockups or prototype (Issue to [php/web-php](https://github.com/php/web-php/issues/new?template=design-contest.yml)).
 * A short rationale (why this layout, how it meets the criteria).
 * You can also link to PR with the implementation.   
   Keep the code small and clean. We won’t review large generated codebases.
