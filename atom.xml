@@ -3,9 +3,122 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2025-10-01T10:49:19+00:00</updated>
+    <updated>2025-10-01T15:05:28+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Call for Designs: Refresh the PHP 8.5 Release Page]]></title>
+            <link href="https://thephp.foundation/blog/2025/10/01/design-contest/"/>
+            <updated>2025-10-01T00:00:00+00:00</updated>
+            <id>https://thephp.foundation/blog/2025/10/01/design-contest/</id>
+            <content type="html"><![CDATA[<div class="flex justify-center mb-4">
+    <a href="https://x.com/pronskiy/status/1877672616355340392" target="_blank" rel="noopener noreferrer"><img src="/assets/post-images/2025/website_redesign.png" width="500" alt="Website Redesign Twitter" class="shadow-md rounded-lg"/></a>
+</div>
+
+<p>Redesign <a href="https://www.php.net/">php.net</a>? We hear you. Let’s start small and ship something great: a refreshed PHP 8.5 release page. The <a href="https://externals.io/message/112026#112026">8.0-era page</a> built with community contributors and <a href="https://www.jetbrains.com/?utm_source=thephp.foundation&amp;utm_medium=referral&amp;utm_campaign=phpstorm&amp;utm_content=refreshing-php-release-webpage">JetBrains</a> set the tone for 8.x. It’s held up, but 8.5 is a good moment to modernize: modern, clean, fast, inspiring.</p>
+
+<p>We’re opening a design contest and you, the community, will help choose the winner. Read on for how to enter.</p>
+
+<h2 id="prizes">Prizes</h2>
+
+<ul>
+<li><strong>🥇 Grand prize: USD $1,000 sponsored by JetBrains</strong></li>
+<li>Honorable mentions (credit in the footer of the page)</li>
+</ul>
+
+<h2 id="what-we%E2%80%99re-looking-for">What we’re looking for</h2>
+
+<p>A modern, lightweight design for the PHP 8.5 release page that:</p>
+
+<ul>
+<li>Keeps things simple: vanilla HTML/CSS, minimal/no JS, <strong>no new build tools or frameworks</strong>.</li>
+<li>Mobile-first &amp; fast: responsive layouts, small assets, system fonts.</li>
+<li>Localizable: works with multiple languages, avoids text baked into images.</li>
+<li>Content-first: use existing <a href="https://github.com/php/web-php/pull/1454">8.5 content</a> as data.</li>
+<li>On-brand: feels at home on php.net; tasteful, unobtrusive visuals.</li>
+<li>Maintainable: straightforward markup that future contributors can edit.</li>
+</ul>
+
+<p>Nice-to-have: a visual approach that can evolve for future releases (e.g., PHP 9.x).</p>
+
+<h2 id="what-to-submit">What to submit</h2>
+
+<p>Please submit designs first (we’re not judging big code drops):</p>
+
+<ul>
+<li>Mockups or prototype (Issue to <a href="https://github.com/php/web-php/issues/new?template=design-contest.yml">php/web-php</a>).</li>
+<li>A short rationale (why this layout, how it meets the criteria).</li>
+<li>You can also link to PR with the implementation.<br />
+Keep the code small and clean. We won’t review large generated codebases.</li>
+</ul>
+
+<h2 id="how-to-submit">How to submit</h2>
+
+<p>Create a GitHub Issue in the <a href="https://github.com/php/web-php">php/web-php</a> repository using <a href="https://github.com/php/web-php/issues/new?template=design-contest.yml">Design Contest template</a>:</p>
+
+<div class="flex justify-center mb-4">
+    <img width="600" src="/assets/post-images/2025/contest_issue.png" class="shadow-md rounded-lg"/>
+</div>
+
+<p>Include:</p>
+
+<ul>
+<li>Link(s) to mockups/prototype</li>
+<li>3–5 screenshots (desktop/mobile)</li>
+<li>Rationale (300–600 words)</li>
+<li>Your name (and teammates, if any)</li>
+</ul>
+
+<p>See a pinned <a href="https://github.com/php/web-php/issues/1472">contest tracking issue</a> with all entries for easy browsing.</p>
+
+<h2 id="timeline-utc">Timeline (UTC)</h2>
+
+<ul>
+<li>Submissions open: Oct 1, 2025</li>
+<li>Deadline: Oct 22, 2025, 23:59</li>
+<li>Shortlist announced: Oct 23, 2025</li>
+<li>Community vote: Oct 23–Oct 30, 2025</li>
+<li>Winner announced: Nov 1, 2025</li>
+</ul>
+
+<h2 id="how-we%E2%80%99ll-pick-the-winner">How we’ll pick the winner</h2>
+
+<ul>
+<li>Jury (40%): php.net maintainers Sergey, Luffy, Derick, Sara + design advisor <a href="https://www.linkedin.com/in/sergei-ellin/">Sergei Elin</a> (JetBrains) evaluate against the criteria below.</li>
+<li>Community vote (60%): single-vote mechanism.</li>
+<li>Tie-breaker: jury decision.</li>
+</ul>
+
+<p>Scoring criteria:</p>
+
+<ol>
+<li>Clarity of content hierarchy</li>
+<li>Responsiveness &amp; mobile UX</li>
+<li>Performance &amp; simplicity (no deps, readable markup)</li>
+<li>Fit with php.net look and tone</li>
+</ol>
+
+<h2 id="rules-%26-licensing">Rules &amp; licensing</h2>
+
+<ul>
+<li>Your submission must be your original work and free of restrictive third-party licenses.</li>
+<li>By entering, you agree your design (and any code you provide) will be licensed under the <a href="https://php.net/copyright.php">same terms as the php.net</a> website (web-php repository) and may be adapted as needed.</li>
+<li>Team entries are allowed (max 1 entry per person/team).</li>
+<li>Judges and organizers cannot participate.</li>
+<li>We may decline to award if no entry meets the bar.</li>
+<li>Participants must be 18 years or older.</li>
+<li>Submissions from participants in restricted or sanctioned territories will not be considered.</li>
+</ul>
+
+<h2 id="questions">Questions</h2>
+
+<p>Please ask in the pinned <a href="https://github.com/php/web-php/issues/1472">Contest issue</a> in <a href="https://github.com/php/web-php">php/web-php</a>. We’ll keep answers centralized and public.</p>
+
+<p>Let’s make the PHP 8.5 release page a joy to browse – clear, fast, and friendly for everyone!</p>
+
+<p>🐘💜</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[The PHP Foundation application form for 2026 is now open]]></title>
             <link href="https://thephp.foundation/blog/2025/09/30/application-form-2026/"/>
@@ -998,26 +1111,6 @@ Amir Montazery, Derek Zimmer, Helen Woeste – for organizing the collaboration.
 </ul>
 
 <p>If your company is interested in commissioning another round of security audit, please contact The PHP Foundation team: <a href="&#109;&#x61;i&#108;&#x74;&#111;&#58;&#x63;&#111;&#x6e;&#x74;&#97;&#x63;t&#64;&#x74;&#104;&#101;&#x70;&#104;&#x70;&#x2e;&#102;&#x6f;&#x75;&#110;&#x64;a&#116;&#x69;&#111;&#110;">contact@thephp.foundation</a>.</p>
-
-<p>🐘💜</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Welcoming Passbolt to the PHP Foundation]]></title>
-            <link href="https://thephp.foundation/blog/2025/04/03/welcoming-passbolt-to-the-php-foundation/"/>
-            <updated>2025-04-03T00:00:00+00:00</updated>
-            <id>https://thephp.foundation/blog/2025/04/03/welcoming-passbolt-to-the-php-foundation/</id>
-            <content type="html"><![CDATA[<p>We’re thrilled to announce that <strong>Passbolt has joined the PHP Foundation</strong> as a Silver sponsor! PHP powers over 77% of the web – including Passbolt’s collaborative password and secrets manager. Their support strengthens our mission to keep it thriving.</p>
-
-<p>Check out their heartfelt announcement here: <strong><a href="https://www.passbolt.com/blog/a-love-letter-passbolt-joins-the-php-foundation-as-a-company-member">Passbolt’s Blog</a></strong>.</p>
-
-<p>The Foundation funds developers to ensure PHP remains fast, secure, and innovative. With Passbolt and many other industry leaders by our side, we’re building a sustainable future for the language we all rely on.</p>
-
-<blockquote>
-  <p>This post kicks off a new blog series highlighting our amazing sponsors. Stay tuned as we spotlight the companies and individuals driving PHP forward – each one a vital part of our community’s success.</p>
-</blockquote>
-
-<p>Want to join the effort? <a href="https://thephp.foundation/sponsor/">Sponsor The PHP Foundation</a> and help us power the web’s backbone!</p>
 
 <p>🐘💜</p>
 ]]></content>
