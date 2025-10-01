@@ -41,14 +41,14 @@ Nice-to-have: a visual approach that can evolve for future releases (e.g., PHP 9
 
 Please submit designs first (we’re not judging big code drops):
 
-* Mockups or prototype (Issue to [php/web-php](https://github.com/php/web-php)).
+* Mockups or prototype (Issue to [php/web-php]( https://github.com/php/web-php/issues/new?template=design-contest.yml)).
 * A short rationale (why this layout, how it meets the criteria).
 * You can also link to PR with the implementation.   
   Keep the code small and clean. We won’t review large generated codebases.
 
 ## How to submit
 
-Create a GitHub Issue in the [php/web-php](https://github.com/php/web-php/issues/new?template=design-contest.yml) repository using [Design Contest template](https://github.com/php/web-php/issues/new?template=design-contest.yml):
+Create a GitHub Issue in the [php/web-php](https://github.com/php/web-php) repository using [Design Contest template](https://github.com/php/web-php/issues/new?template=design-contest.yml):
 
 <div class="flex justify-center mb-4">
     <img width="600" src="/assets/post-images/2025/contest_issue.png" class="shadow-md rounded-lg"/>
@@ -66,7 +66,7 @@ See a pinned [contest tracking issue](https://github.com/php/web-php/issues/1472
 ## Timeline (UTC)
 
 * Submissions open: Oct 1, 2025
-* Deadline: Oct 22, 2025, 23:59 UTC
+* Deadline: Oct 22, 2025, 23:59
 * Shortlist announced: Oct 23, 2025
 * Community vote: Oct 23–Oct 30, 2025
 * Winner announced: Nov 1, 2025
@@ -87,7 +87,7 @@ Scoring criteria:
 ## Rules & licensing
 
 * Your submission must be your original work and free of restrictive third-party licenses.
-* By entering, you agree your design (and any code you provide) will be licensed under the same terms as the php.net website (web-php repository) and may be adapted as needed.
+* By entering, you agree your design (and any code you provide) will be licensed under the [same terms as the php.net](https://php.net/copyright.php) website (web-php repository) and may be adapted as needed.
 * Team entries are allowed (max 1 entry per person/team).
 * Judges and organizers cannot participate.
 * We may decline to award if no entry meets the bar.
