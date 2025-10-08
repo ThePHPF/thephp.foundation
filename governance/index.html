@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Governance of the PHP Foundation &mdash; The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language</title>
+    <meta name="description" content="The PHP Foundation Governance Model">
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="index, follow">
+        <link href="https://phpc.social/@thephpf" rel="me" />
+    <link rel="stylesheet" href="https://thephp.foundation/assets/css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/base16/darcula.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+
+    <meta name="yandex-verification" content="6990192232fdf071" />
+    <meta name="msvalidate.01" content="5D1EB82347E6BF271A01DCDBF7E59BED" />
+
+    <meta property="og:url" content="https://thephp.foundation/governance">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Governance of the PHP Foundation">
+    <meta property="og:description" content="The PHP Foundation Governance Model">
+    <meta property="og:image" content="https://thephp.foundation/assets/share/governance.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="https://thephp.foundation">
+    <meta property="twitter:url" content="https://thephp.foundation/governance">
+    <meta name="twitter:title" content="Governance of the PHP Foundation">
+    <meta name="twitter:description" content="The PHP Foundation Governance Model">
+    <meta name="twitter:image" content="https://thephp.foundation/assets/share/governance.png">
+
+    <link rel="apple-touch-startup-image" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" sizes="76x76" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="120x120" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="128x128" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="152x152" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="196x196" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="512x512" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="1024x1024" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="2048x2048" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="128x128" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="196x196" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="512x512" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="2048x2048" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+
+    <link rel="alternate" type="application/atom+xml" href="https://thephp.foundation/atom.xml"
+          title="The PHP Foundation activity feed"/>
+                <script src="//cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+    </head>
+<body class="bg-white">
+
+<div role="region" aria-label="PHPverse 2025 announcement" class="w-full bg-green-500 text-white text-center py-1 text-sm font-medium z-50 hover:text-white hidden">
+    <a href="banner link stub" target="_blank" rel="noopener noreferrer" class="text-white no-underline hover:underline hover:text-white visited:hover:text-white">banner text stub</a>
+</div>
+
+<header x-data="{ isOpen: false }" @keydown.escape="isOpen = false" @click.away="isOpen = false" itemscope
+        itemtype="https://schema.org/WPHeader">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between relative">
+        <div class="absolute inset-x-0 bottom-0 h-px bg-slate-900/5"></div>
+        <div class="flex lg:flex-1 items-center gap-4">
+            <a href="https://thephp.foundation/" class="-m-1.5 p-1.5">
+                <img class="h-16 w-auto" src="https://thephp.foundation/assets/icons/php_foundation.svg"
+                     alt="PHP Foundation">
+            </a>
+            <span class="text-[#27282c] font-semibold text-sm md:text-xl" itemprop="headline">The PHP Foundation</span>
+        </div>
+        <div class="flex lg:hidden">
+            <button type="button"
+                    @click="isOpen = true"
+                    class="m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                     aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                </svg>
+            </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12" itemscope itemtype="https://schema.org/SiteNavigationElement">
+            <a href="https://thephp.foundation/structure" class="text-gray-700 hover:underline" itemprop="url">Who we are</a>
+
+            <a href="https://thephp.foundation/foundation" class="text-gray-700 hover:underline" itemprop="url">What we do</a>
+
+            <a href="https://thephp.foundation/blog" class="text-gray-700 hover:underline" itemprop="url">News</a>
+
+            <a href="https://thephp.foundation/presentations" class="text-gray-700 hover:underline" itemprop="url">Talks</a>
+
+            <a href="https://thephp.foundation/contact" class="text-gray-700 hover:underline" itemprop="url">Contact</a>
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-8">
+            <a href="https://php.net" target="_blank" rel="noopener noreferrer"
+               class="text-sm font-semibold leading-6 text-gray-700 nav-org hover:border-none hover:underline">
+                php.net</a>
+
+            <a href="/sponsor" class="button-link">Sponsor</a>
+        </div>
+    </nav>
+    <div x-show="isOpen" x-cloak>
+        <div class="fixed inset-0 z-50"></div>
+        <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="mx-auto flex max-w-7xl items-center justify-between relative">
+                <div class="flex lg:flex-1 items-center gap-4">
+                    <a href="https://thephp.foundation/" class="-m-1.5 p-1.5">
+                        <img class="h-16 w-auto" src="https://thephp.foundation/assets/icons/php_foundation.svg"
+                             alt="PHP Foundation">
+                    </a>
+                    <span class="text-[#27282c] font-semibold text-sm md:text-xl">The PHP Foundation</span>
+                </div>
+                <div class="flex">
+                    <button type="button"
+                            @click="isOpen = false"
+                            class="m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                             aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <nav class="mt-6 flow-root px-6 py-6">
+                <div class="-my-6 divide-y divide-gray-500/10">
+                    <div class="space-y-2 py-6" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                        <a href="https://thephp.foundation/structure" itemprop="url"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Who
+                            we are</a>
+
+                        <a href="https://thephp.foundation/foundation" itemprop="url"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">What
+                            we do</a>
+
+                        <a href="https://thephp.foundation/blog" itemprop="url"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">News</a>
+
+                        <a href="https://thephp.foundation/presentations" itemprop="url"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Talks</a>
+
+                        <a href="https://thephp.foundation/contact" itemprop="url"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Contact</a>
+                    </div>
+                    <div class="py-6">
+                        <a href="/sponsor" rel="noopener noreferrer"
+                           class="block py-2 text-center no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">Sponsor</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<section class="mx-auto my-16 max-w-4xl w-full bg-white px-4 md:px-0" itemscope itemtype="https://schema.org/Article">
+    <div class="max-w-4xl">
+        <header class="mb-8">
+            <h1 class="text-4xl font-bold" itemprop="title">Governance of the PHP Foundation</h1>
+                    </header>
+
+        <div class="mx-auto text-base leading-7 text-gray-700" itemprop="text">
+            <h2 id="1.-overview">1. Overview</h2>
+
+<p>The PHP Foundation exists to support and advance the PHP programming language and its ecosystem. This governance document outlines the roles, responsibilities, and operational procedures of the Foundation.</p>
+
+<hr />
+
+<h2 id="2.-the-foundation-structure">2. The Foundation Structure</h2>
+
+<p>The PHP Foundation’s work is carried out by four key entities, each with a distinct role:</p>
+
+<ul>
+<li><strong>Board of Directors (Governing Board, “the Board”)</strong> – Provides strategic direction and high-level oversight.</li>
+<li><strong>Executive Director (ED)</strong> – Manages day-to-day operations and ensures alignment with Board directives.</li>
+<li><strong>Advisory Board</strong> – Offers guidance and feedback, particularly from major sponsors and key stakeholders.</li>
+<li><strong>Developers (Staff)</strong> – Execute technical work, maintain the codebase, and support community needs.</li>
+</ul>
+
+<hr />
+
+<h2 id="3.-board-of-directors">3. Board of Directors</h2>
+
+<h3 id="3.1-purpose">3.1 Purpose</h3>
+
+<p>The Board of Directors provides strategic oversight, sets the Foundation’s goals, represents the Foundation externally, and makes final decisions on major matters.</p>
+
+<h3 id="3.2-responsibilities">3.2 Responsibilities</h3>
+
+<ul>
+<li>Establish and approve strategic priorities.</li>
+<li>Oversee financial and operational performance.</li>
+<li>Approve budgets and financial commitments exceeding defined thresholds.</li>
+<li>Make final decisions on policies, partnerships, and major initiatives.</li>
+<li>Conduct regular evaluations of the Executive Director.</li>
+<li>Serve as representatives of the Foundation in the broader community and with external stakeholders.</li>
+</ul>
+
+<h3 id="3.3-composition">3.3 Composition</h3>
+
+<h4 id="3.3.1-board-size-determination">3.3.1 Board Size Determination</h4>
+
+<ul>
+<li>The exact number of board seats shall be set annually at the Q4 board meeting.</li>
+<li>Changes to board size is a strategic decision falling under 3.6.3.2.
+
+<ul>
+<li>Contingency Option: If a proposal fails to reach 2/3 majority after at least 4 attempts to vote no less than 4 weeks apart, the Board may adopt or reject the measure by a simple majority in a special session without a quorum.</li>
+</ul></li>
+<li>Size changes take effect for the next year.</li>
+<li>Changes cannot reduce current directors' terms.</li>
+<li>When setting size, the board must consider:
+
+<ul>
+<li>Foundation's operational needs</li>
+<li>Available qualified candidates</li>
+<li>Representation balance</li>
+<li>Operational efficiency</li>
+</ul></li>
+</ul>
+
+<h4 id="3.3.2-baseline-board-size-2025">3.3.2 Baseline Board Size (2025)</h4>
+
+<p>The Board consists of 5 to 10 members, with the following allocation:</p>
+
+<ul>
+<li>Platinum Sponsors: Up to 3 seats (automatically granted to qualified Platinum sponsors)</li>
+<li>Community Representatives: Minimum 3 seats</li>
+<li>Other Sponsors: Remaining seats (not to exceed 4)</li>
+<li>The total board size shall not fall below 5 or exceed 10 members</li>
+</ul>
+
+<h4 id="3.3.3-size-change-implementation">3.3.3 Size Change Implementation</h4>
+
+<ul>
+<li>Increases: New seats filled adhoc after board voting.</li>
+<li>Decreases: Implemented through natural term expiration, resignation, or removal procedure.</li>
+<li>If the number of sponsors in a particular tier exceeds its allocated seats, those sponsors must collectively decide who will occupy the available seats.</li>
+</ul>
+
+<h3 id="3.4-term-and-limits">3.4 Term and Limits</h3>
+
+<ul>
+<li>Term Duration: 3 years.</li>
+<li>Selection:
+
+<ul>
+<li>Nominated by an existing Board member.</li>
+<li>Voted on annually by the Board of Directors and the Executive Director.</li>
+</ul></li>
+</ul>
+
+<h3 id="3.5-resignation-and-removal">3.5 Resignation and Removal</h3>
+
+<ul>
+<li>Members may resign at any time.</li>
+<li>A member can be removed for misconduct or non-performance (e.g., missing 6 consecutive board meetings).</li>
+</ul>
+
+<h3 id="3.6-decision-making-process">3.6 Decision-Making Process</h3>
+
+<h4 id="3.6.1-general-principles">3.6.1 General Principles</h4>
+
+<ul>
+<li>All board decisions shall first seek consensus through discussion.</li>
+<li>When consensus cannot be reached after reasonable discussion, the matter moves to a formal vote.</li>
+<li>Any board member can call for a formal vote.</li>
+</ul>
+
+<h4 id="3.6.2-voting-methods">3.6.2 Voting Methods</h4>
+
+<h5 id="1.-regular-meeting-votes">1. Regular Meeting Votes</h5>
+
+<ul>
+<li>Conducted during scheduled monthly board meetings.</li>
+<li>Votes recorded in meeting minutes.</li>
+<li>Results effective immediately unless otherwise specified.</li>
+</ul>
+
+<h5 id="2.-asynchronous-votes">2. Asynchronous Votes</h5>
+
+<ul>
+<li>Conducted via GitHub Discussions in a dedicated private board section.</li>
+<li>Must include clear proposal text and voting options.</li>
+<li>Board members are notified via email when a vote starts.</li>
+<li>Voting window: 3 calendar weeks from a proposal.</li>
+<li>Votes may be closed early if a clear majority is reached and all members have voted or abstained. Members may change their vote within the open window.</li>
+<li>Results are documented once the vote is finished.</li>
+</ul>
+
+<h3 id="3.6.3-voting-requirements">3.6.3 Voting Requirements</h3>
+
+<h4 id="1.-quorum">1. Quorum</h4>
+
+<ul>
+<li>Minimum 50% of current board members must participate.</li>
+</ul>
+
+<h4 id="2.-vote-passage">2. Vote Passage</h4>
+
+<ul>
+<li>Regular matters: Simple majority (>50%) of votes cast.</li>
+<li>Strategic matters (per section 4.3): 2/3 majority of total board.</li>
+</ul>
+
+<h3 id="3.7-board-compensation">3.7 Board Compensation</h3>
+
+<h4 id="3.7.1-general-policy">3.7.1 General Policy</h4>
+
+<ul>
+<li>Directors serve voluntarily without compensation.</li>
+</ul>
+
+<hr />
+
+<h2 id="4.-executive-director">4. Executive Director</h2>
+
+<h3 id="4.1-purpose">4.1 Purpose</h3>
+
+<p>The Executive Director ensures the operational execution of the Foundation's strategic goals and serves as the bridge between the Board and staff.</p>
+
+<h3 id="4.2-responsibilities">4.2 Responsibilities</h3>
+
+<ul>
+<li>Develop strategic initiatives in alignment with the Foundation’s mission and goals.</li>
+<li>Present strategy to the Board for approval. At least once a year in Q4 for the next year.</li>
+<li>Present evaluation of last year’s financial and strategic performance at least once a year in Q1.</li>
+<li>Implement and deliver the approved strategy effectively.</li>
+<li>Manage day-to-day operations, staff, and contributors.</li>
+<li>Serve as the primary liaison between the Board of Directors and Developers.</li>
+<li>Oversee financial management, budgets, and fundraising.</li>
+<li>Ensure legal and regulatory compliance.</li>
+<li>Represent the Foundation externally and maintain relationships with stakeholders.</li>
+<li>Provide update on board meetings.</li>
+<li>Facilitate surveys or open consultations with the Advisory Board to assess Foundation priorities, sponsorship structure, and ecosystem health.</li>
+</ul>
+
+<h4 id="4.2.1-required-reports">4.2.1 Required Reports</h4>
+
+<ul>
+<li>Board meeting notes: posted publicly on GitHub with an optional private “executive session” for matters.</li>
+<li>Quarterly: Operations summary ad financial statements.</li>
+<li>Annual: Strategic review and budget proposal.</li>
+</ul>
+
+<h3 id="4.3-decision-making-authority">4.3 Decision-Making Authority</h3>
+
+<p>The Executive Director requires Board approval for:</p>
+
+<ol>
+<li>Major strategic changes to the Foundation's direction (e.g., team changes, budget approval, Foundation strategy, etc.)</li>
+<li>Financial commitments, contracts, or agreements exceeding 1% of the annual budget.</li>
+<li>Amendments to the organization’s mission, policies, or bylaws.</li>
+<li>Entering partnerships or initiatives that create public associations with external entities.</li>
+</ol>
+
+<h3 id="4.4-appointment-and-term">4.4 Appointment and Term</h3>
+
+<h4 id="4.4.1.-selection-process">4.4.1. Selection Process</h4>
+
+<h5 id="1.-search-committee">1. Search Committee</h5>
+
+<ul>
+<li>Formed by a Board vote, consists of 2 Board members, 2 Community Rep.</li>
+<li>Committee manages entire selection process.</li>
+</ul>
+
+<h5 id="2.-public-recruitment-30-day-minimum">2. Public Recruitment (30-day minimum)</h5>
+
+<ul>
+<li>Foundation website/channels, job boards, and PHP community.</li>
+<li>Position details must include responsibilities, qualifications, terms, and application process.</li>
+</ul>
+
+<h5 id="3.-candidate-requirements-and-evaluation">3. Candidate Requirements and Evaluation</h5>
+
+<ul>
+<li>Required: Leadership experience, PHP ecosystem knowledge, project management, free and open source community experience.</li>
+<li>Evaluated on: Leadership ability, strategic thinking, communication, open source experience.</li>
+</ul>
+
+<h5 id="4.-final-selection">4. Final Selection</h5>
+
+<ul>
+<li>Committee presents 2-3 candidates to the Board.</li>
+<li>Candidates present vision and undergo interviews.</li>
+<li>Board selects by 2/3 majority vote.</li>
+<li>Process restarts if no candidate receives required votes.</li>
+</ul>
+
+<h4 id="4.4.2.-employment-terms">4.4.2. Employment Terms</h4>
+
+<ul>
+<li><p>The Executive Director's compensation arrangement must be:</p>
+
+<ul>
+<li>Approved by a majority vote of the Board.</li>
+<li>Documented in a written agreement.</li>
+<li>Reasonable and comparable to similar organizations.</li>
+<li>Reviewed annually by the Board.</li>
+</ul></li>
+<li><p>Compensation sources<br />
+May be funded directly by the Foundation and/or through external sponsorships.<br />
+All external funding sources must be:</p>
+
+<ul>
+<li>Disclosed to and approved by the Board.</li>
+<li>Free from conflicts that could compromise the Executive Director's independence.</li>
+<li>Documented in agreements that protect the Foundation's interests.</li>
+<li>Subject to annual review and renewal</li>
+</ul></li>
+<li><p>Employment structure<br />
+The role can be structured as full-time or part-time, based on:</p>
+
+<ul>
+<li>The Foundation's needs and resources</li>
+<li>The candidate's availability</li>
+<li>Board approval of the proposed arrangement</li>
+</ul></li>
+<li><p>Term and Review.<br />
+Appointment is for 1 year.<br />
+Continuation subject to:</p>
+
+<ul>
+<li>Annual performance evaluation by the Board</li>
+<li>Review of compensation arrangements</li>
+<li>Assessment of any external funding sources</li>
+<li>Confirmation of continued alignment with Foundation goals</li>
+</ul></li>
+</ul>
+
+<h3 id="4.5-resignation-and-removal">4.5 Resignation and Removal</h3>
+
+<ul>
+<li>The Executive Director can resign with a 3-month notice.</li>
+<li>Any board member can initiate the removal of the executive director for misconduct or non-performance.</li>
+</ul>
+
+<hr />
+
+<h2 id="5.-advisory-board-updated">5. Advisory Board (Updated)</h2>
+
+<h3 id="5.1-purpose">5.1 Purpose</h3>
+
+<p>The Advisory Board exists to provide high-value input, strategic foresight, and diverse stakeholder representation. It serves as:</p>
+
+<ul>
+<li>A feedback body for major initiatives and proposed governance changes.</li>
+<li>A space for current and former high-impact contributors, major sponsors, and ecosystem partners.</li>
+<li>A leadership pipeline and strategic sounding board for the Foundation.</li>
+</ul>
+
+<h3 id="5.2-responsibilities">5.2 Responsibilities</h3>
+
+<p>While Advisory Board members do not hold decision-making authority, they are expected to:</p>
+
+<ul>
+<li>Provide feedback on governance model changes, strategy drafts, and long-term plans.</li>
+<li>Serve as ambassadors and liaisons to the broader PHP ecosystem.</li>
+<li>Review and discuss any proposed changes to the Foundation’s governance or bylaws at least <strong>two weeks prior to any Board vote</strong>.</li>
+<li>Board response obligation: If the Advisory Board issues a formal recommendation (e.g., in meeting minutes or a GitHub issue), the Board must publish a concise written rationale within 30 days when it chooses <strong><em>not</em></strong> to adopt that recommendation.</li>
+</ul>
+
+<h3 id="5.3-composition">5.3 Composition</h3>
+
+<ul>
+<li>Representatives of major sponsors (Silver tier and above), founding companies, and invited community leaders.</li>
+<li>One representative per organization or entity.</li>
+</ul>
+
+<p><strong>Note:</strong> Membership on the Advisory Board is considered a pathway to future leadership roles, including Governing Board positions, where applicable.</p>
+
+<h3 id="5.4-term-and-membership">5.4 Term and Membership</h3>
+
+<ul>
+<li>Membership resets annually on January 1, based on prior-year sponsorship status.</li>
+<li>Silver+ sponsors and invited individuals may join mid-year.</li>
+<li>Members are expected to adhere to the Foundation’s Code of Conduct.</li>
+</ul>
+
+<hr />
+
+<h2 id="6.-staff">6. Staff</h2>
+
+<h3 id="6.1-structure">6.1 Structure</h3>
+
+<p>Staff consists of developers and reports to Executive Director or designated Technical Lead.</p>
+
+<p>Technical Lead may be:</p>
+
+<ul>
+<li>Current developer</li>
+<li>Board member</li>
+<li>External professional</li>
+<li>Role subject to Board approval</li>
+</ul>
+
+<h3 id="6.2-developer-roles">6.2 Developer Roles</h3>
+
+<p>Full-time and part-time developers.</p>
+
+<p>Primary responsibilities:</p>
+
+<ul>
+<li>Core PHP development</li>
+<li>Bug fixes and security patches</li>
+<li>Feature implementation</li>
+<li>Documentation</li>
+<li>Code review</li>
+<li>Community support</li>
+</ul>
+
+<h3 id="6.3-employment-terms">6.3 Employment Terms</h3>
+
+<p>Staff may be:</p>
+
+<ul>
+<li>Direct employees</li>
+<li>Contractors</li>
+<li>Compensation structure approved by the Board.</li>
+<li>Performance reviewed quarterly by ED.</li>
+<li>Renewal based on performance and funding yearly,</li>
+</ul>
+
+<h3 id="6.4-technical-leadership">6.4 Technical Leadership</h3>
+
+<p>Technical Lead responsibilities:</p>
+
+<ul>
+<li>Technical direction</li>
+<li>Developer coordination</li>
+<li>Quality standards</li>
+<li>Technical decisions</li>
+<li><p>Staff mentoring</p></li>
+<li><p>Reports to Executive Director</p></li>
+<li>Works with Board on technical strategy</li>
+</ul>
+
+<hr />
+
+<h2 id="7.-amendments-to-governance">7. Amendments to Governance</h2>
+
+<ul>
+<li>Any member of the Board of Directors or the Executive Director may propose changes to this document.</li>
+<li>Approval requires either:
+
+<ul>
+<li>Consensus, or</li>
+<li>2/3 majority vote of the Board.</li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h2 id="8.-financial-and-legal-framework">8. Financial and Legal Framework</h2>
+
+<ul>
+<li>The PHP Foundation operates through Open Source Collective as its fiscal host.</li>
+<li>Open Source Collective handles financial transactions, donations, and legal compliance.</li>
+</ul>
+
+<hr />
+
+<h2 id="9.-communications">9. Communications</h2>
+
+<h3 id="9.1.-official-channels">9.1. Official Channels</h3>
+
+<ul>
+<li>GitHub Discussions: Governance and technical decisions.</li>
+<li>Foundation Blog: Public announcements.</li>
+<li>Slack: Day-to-day operations.</li>
+</ul>
+
+<h3 id="9.2-board-meetings">9.2 Board Meetings</h3>
+
+<ul>
+<li>Frequency: Monthly.</li>
+<li>Format: Virtual or in-person.</li>
+<li>Attendance is mandatory for active participation eligibility.</li>
+</ul>
+
+<hr />
+
+<h2 id="10.-summary-of-approval-thresholds">10. Summary of Approval Thresholds</h2>
+
+<table>
+<thead>
+<tr>
+  <th align="left">Decision Type</th>
+  <th align="left">Authority Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Major strategic changes</td>
+  <td align="left">Board Approval</td>
+</tr>
+<tr>
+  <td align="left">Financial commitment &#62; 1% of budget</td>
+  <td align="left">Board Approval</td>
+</tr>
+<tr>
+  <td align="left">Amendments to mission or bylaws</td>
+  <td align="left">Board Approval</td>
+</tr>
+<tr>
+  <td align="left">Day-to-day operational decisions</td>
+  <td align="left">Executive Director</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="appendix%3A-board-members">Appendix: Board Members</h2>
+
+<table>
+<thead>
+<tr>
+  <th align="left">Name</th>
+  <th align="left">Role</th>
+  <th align="left">Seat</th>
+  <th align="left">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Roman Pronskiy</td>
+  <td align="left">Board Member, Executive Director</td>
+  <td align="left">Platinum Sponsor</td>
+  <td align="left">Active</td>
+</tr>
+<tr>
+  <td align="left">Nils Adermann</td>
+  <td align="left">Board Member</td>
+  <td align="left">Sponsor</td>
+  <td align="left">Active</td>
+</tr>
+<tr>
+  <td align="left">Matthew Weier O'Phinney</td>
+  <td align="left">Board Member</td>
+  <td align="left">Sponsor</td>
+  <td align="left">Active</td>
+</tr>
+<tr>
+  <td align="left">Nicolas Grekas</td>
+  <td align="left">Board Member</td>
+  <td align="left">Sponsor</td>
+  <td align="left">Active</td>
+</tr>
+<tr>
+  <td align="left">Benjamin Eberlei</td>
+  <td align="left">Board Member</td>
+  <td align="left">Sponsor</td>
+  <td align="left">Active</td>
+</tr>
+<tr>
+  <td align="left">Sebastian Bergmann</td>
+  <td align="left">Board Member</td>
+  <td align="left">Community</td>
+  <td align="left">Active</td>
+</tr>
+<tr>
+  <td align="left">Josepha Haden Chomphosy</td>
+  <td align="left">Board Member</td>
+  <td align="left">Community</td>
+  <td align="left">Active</td>
+</tr>
+<tr>
+  <td align="left">Sara Golemon</td>
+  <td align="left">Board Member</td>
+  <td align="left">Community</td>
+  <td align="left">Active</td>
+</tr>
+<tr>
+  <td align="left">Nikita Popov</td>
+  <td align="left">Board Member</td>
+  <td align="left">Community</td>
+  <td align="left">Moved to fellows in Aug 2025</td>
+</tr>
+<tr>
+  <td align="left">Joe Watkins</td>
+  <td align="left">Board Member</td>
+  <td align="left">Community</td>
+  <td align="left">Moved to staff in Aug 2024</td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+    </div>
+</section>
+
+<footer class="bg-gray-900">
+    <div class="mx-auto max-w-7xl overflow-hidden px-6 py-12 lg:px-8">
+        <ul class="list-none grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-1 max-w-xl mx-auto text-sm leading-6 text-gray-400" >
+            <li><a href="/sponsor"          class="text-gray-400 hover:text-gray-100 no-underline">Sponsor</a></li>
+            <li><a href="/structure"        class="text-gray-400 hover:text-gray-100 no-underline">Structure</a></li>
+            <li><a href="/structure#admins" class="text-gray-400 hover:text-gray-100 no-underline">Board</a></li>
+            <li><a href="/structure#core_developers"        class="text-gray-400 hover:text-gray-100 no-underline">Developers</a></li>
+            <li><a href="/news"             class="text-gray-400 hover:text-gray-100 no-underline">News</a></li>
+            <li><a href="/presentations"    class="text-gray-400 hover:text-gray-100 no-underline">Talks</a></li>
+            <li><a href="/branding"         class="text-gray-400 hover:text-gray-100 no-underline">Brand Guide</a></li>
+            <li><a href="/governance"       class="text-gray-400 hover:text-gray-100 no-underline">Governance</a></li>
+            <li><a href="/code-of-conduct"  class="text-gray-400 hover:text-gray-100 no-underline">Code of Conduct</a></li>
+            <li><a href="/contact"          class="text-gray-400 hover:text-gray-100 no-underline">Contact</a></li>
+        </ul>
+
+        <div class="mt-10 flex justify-center space-x-10 items-center">
+            <a href="https://twitter.com/thephpf" target="_blank" rel="noopener noreferrer"
+               class="text-gray-400 hover:text-gray-500">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                    <g>
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                    </g>
+                </svg>
+            </a>
+
+            <a href="https://github.com/ThePHPF/thephp.foundation" class="text-gray-400 hover:text-gray-500"
+               target="_blank" rel="noopener noreferrer">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                          clip-rule="evenodd"/>
+                </svg>
+            </a>
+
+            <a href="https://phpc.social/@thephpf" class="text-gray-400 hover:text-gray-500" target="_blank"
+               rel="noopener noreferrer">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"/>
+                </svg>
+            </a>
+
+            <a href="https://www.linkedin.com/company/phpfoundation/" class="text-gray-400 hover:text-gray-500"
+               target="_blank" rel="noopener noreferrer">
+                <svg class="h-6 w-6"
+                     viewBox="0 0 56.693 56.693" fill="currentColor"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <path d="M30.071,27.101v-0.077c-0.016,0.026-0.033,0.052-0.05,0.077H30.071z"/>
+                        <path
+                                d="M49.265,4.667H7.145c-2.016,0-3.651,1.596-3.651,3.563v42.613c0,1.966,1.635,3.562,3.651,3.562h42.12   c2.019,0,3.654-1.597,3.654-3.562V8.23C52.919,6.262,51.283,4.667,49.265,4.667z M18.475,46.304h-7.465V23.845h7.465V46.304z    M14.743,20.777h-0.05c-2.504,0-4.124-1.725-4.124-3.88c0-2.203,1.67-3.88,4.223-3.88c2.554,0,4.125,1.677,4.175,3.88   C18.967,19.052,17.345,20.777,14.743,20.777z M45.394,46.304h-7.465V34.286c0-3.018-1.08-5.078-3.781-5.078   c-2.062,0-3.29,1.389-3.831,2.731c-0.197,0.479-0.245,1.149-0.245,1.821v12.543h-7.465c0,0,0.098-20.354,0-22.459h7.465v3.179   c0.992-1.53,2.766-3.709,6.729-3.709c4.911,0,8.594,3.211,8.594,10.11V46.304z"/>
+                    </g>
+                </svg>
+            </a>
+        </div>
+        <div class="mt-10 text-center text-xs leading-5 text-gray-500" itemprop="copyrightHolder">&copy; The PHP Foundation</div>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const anchors = new AnchorJS()
+        anchors.add()
+
+        for (const element of document.getElementsByClassName('anchorjs-link')) {
+            element.addEventListener('click', function () {
+                navigator.clipboard.writeText(window.location.origin + window.location.pathname + element.getAttribute('href'))
+            })
+        }
+    })
+</script>
+
+
+<script>hljs.highlightAll();</script>
+
+<script src="https://cdn.usefathom.com/script.js" data-site="PJKRZUTE" defer></script>
+<!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="https://analytics.thephp.foundation/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '1']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+<noscript><p><img referrerpolicy="no-referrer-when-downgrade" src="https://analytics.thephp.foundation/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Matomo Code -->
+
+</body>
+</html>
