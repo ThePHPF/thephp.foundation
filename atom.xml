@@ -3,9 +3,171 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2025-10-10T11:32:34+00:00</updated>
+    <updated>2025-10-10T11:33:18+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[PHP’s New URI Extension: An Open Source Success Story]]></title>
+            <link href="https://thephp.foundation/blog/2025/10/10/php-85-uri-extension/"/>
+            <updated>2025-10-10T00:00:00+00:00</updated>
+            <id>https://thephp.foundation/blog/2025/10/10/php-85-uri-extension/</id>
+            <content type="html"><![CDATA[<p>URLs are a fundamental building block of the Web we rely on every day.</p>
+
+<p>Their familiarity makes them appear deceptively simple: Seemingly clearly
+delineated components like scheme, hostname, path, and some others suggest that
+it’s trivial to extract information from a URL. In reality, there are thousands
+of custom parsers built over the years, each with their own take on details.</p>
+
+<p>For us web developers, there are two main standards specifying how URLs are
+supposed to work. <a href="https://datatracker.ietf.org/doc/html/rfc3986">RFC 3986</a>,
+which is the original URI standard from 2005; and the <a href="https://url.spec.whatwg.org/">WHATWG URL Living
+Standard</a>, which is followed by web browsers.
+Because things are not as simple as they appear at first glance, these two
+commonly used standards are incompatible with each other&#33; Mixing and matching
+different standards and their parsers, especially when they do not <em>exactly</em>
+follow the standard, is something that <a href="https://daniel.haxx.se/blog/2022/01/10/dont-mix-url-parsers/">commonly leads to security
+issues</a>.</p>
+
+<h2 id="why-change-was-needed">Why Change Was Needed</h2>
+
+<p>Despite the importance of correctly parsing URLs, PHP did not include any
+standards-compliant parser within the standard library for the longest time.
+There is the
+<a href="https://www.php.net/manual/en/function.parse-url.php"><code>parse_url()</code></a> function,
+which has existed since PHP 4, but it does not follow any standard and is
+explicitly documented not to be used with untrusted or malformed URLs.
+Nevertheless, it is commonly used for lack of a better alternative that is
+readily available and also because it appears to work correctly for a majority
+of well-formed inputs that developers encounter in day-to-day work. This can
+mislead developers to believe that the security issues of <code>parse_url()</code> are a
+purely theoretical problem rather than something that <em>will</em> cause issues
+sooner or later.</p>
+
+<p>As an example, the input URL <code>example.com/example/:8080/foo</code> is a valid URL
+consisting of only a relative path according to RFC 3986&#46; It is invalid
+according to the WHATWG URL standard when not resolved against a base URL.
+However, according to <code>parse_url()</code> it is a URL for the host <code>example.com</code>,
+port 8080 and path <code>/example/:8080/foo</code>, thus including the 8080 in <em>two</em> of
+the resulting components:</p>
+
+<pre><code class="php">&lt;?php
+
+var_dump(parse_url('example.com/example/:8080/foo'));
+
+/*
+array(3) {
+  ["host"]=&gt; string(11) "example.com"
+  ["port"]=&gt; int(8080)
+  ["path"]=&gt; string(18) "/example/:8080/foo"
+}
+*/
+</code></pre>
+
+<h2 id="introducing-a-new-api">Introducing a New API</h2>
+
+<p>This changes with PHP 8.5. Going forward, PHP will include standards-compliant
+parsers for both RFC 3986 and the WHATWG URL standard as an <em>always-available</em>
+part of its standard library within a new “URI” extension. Not only will this
+enable easy, correct, and secure parsing of URLs according to the respective
+standard, but the URI extension also includes functionality to modify
+individual components of a URL.</p>
+
+<pre><code class="php">&lt;?php
+
+use Uri\Rfc3986\Uri;
+
+$url = new Uri('HTTPS://thephp.foundation:443/sp%6Fnsor/');
+
+$defaultPortForScheme = match ($url-&gt;getScheme()) {
+    'http' =&gt; 80,
+    'https' =&gt; 443,
+    'ssh' =&gt; 22,
+    default =&gt; null,
+};
+
+// Remove default ports from URLs.
+if ($url-&gt;getPort() === $defaultPortForScheme) {
+    $url = $url-&gt;withPort(null);
+}
+
+// Getters normalize the URL by default. The `Raw`
+// variants return the input unchanged.
+
+echo $url-&gt;toString(), PHP_EOL;
+// Prints: https://thephp.foundation/sponsor/
+echo $url-&gt;toRawString(), PHP_EOL;
+// Prints: HTTPS://thephp.foundation/sp%6Fnsor/
+</code></pre>
+
+<h2 id="thoughtfully-built-to-last">Thoughtfully Built to Last</h2>
+
+<p>In this post we not only want to showcase the functionality but also tell you
+the story of how this project developed and how work gets done in PHP to keep
+the language modern and a great choice for web development. There is often more
+work behind new PHP features than meets the eye. We hope to provide some
+insight into why we prefer doing things right rather than fast.</p>
+
+<p><a href="https://github.com/kocsismate">Máté Kocsis</a> from The PHP Foundation’s dev team
+initially started discussion for his <a href="https://wiki.php.net/rfc/url_parsing_api">RFC of a new URL parsing
+API</a> in June 2024&#46; Given PHP’s
+strong backwards compatibility promise, the new API needed to get things right
+on the first attempt in order to serve the PHP community well for the decade to
+come without introducing disruptive changes. Thus, over the course of <em>almost
+one year</em>, <a href="https://news-web.php.net/php.internals/123997">more than 150 emails on the PHP Internals
+list</a> were sent. Additionally,
+several off-list discussions in various chat rooms have been had. Throughout
+this process, various experts from the PHP community continuously refined the
+RFC. They discussed even seemingly insignificant details, to provide not just a
+standards-compliant implementation, but also a clean and robust API that will
+guide developers towards the right solution for their use case. We also planned
+ahead and made sure that the new URI extension with its dedicated <code>Uri</code>
+namespace provides a clear path forward to add additional URI/URL-related
+functionality in future versions of PHP.</p>
+
+<p>The RFC ultimately went to vote in May 2025 and was accepted with a 30:1 vote.
+But work didn’t stop there: The proposed API also had to be implemented and
+reviewed. Instead of building a PHP-specific solution, Máté opted to stand on
+the shoulders of giants and selected two libraries to perform the heavy
+lifting. The <a href="https://uriparser.github.io/">uriparser library</a> provides the RFC
+3986 parser, and the <a href="https://lexbor.com/">Lexbor library</a>, which is already
+used by PHP 8.4’s new DOM API, provides the WHATWG parser.</p>
+
+<h2 id="open-source-collaboration">Open Source Collaboration</h2>
+
+<p>As part of the integration, Máté and The PHP Foundation worked together with
+the upstream maintainers to include missing functionality in the respective
+libraries. As an example, neither library included functionality to cheaply
+duplicate the internal data structures, which was necessary to support cloning
+the readonly PHP objects representing the parsed URL when attempting to modify
+individual components with the so-called with-er methods (e.g.,
+<code>-&gt;withPort(8080)</code>). The uriparser library also did not include any functions
+for modifying components of a parsed URL. All this functionality is now
+available in the upstream libraries for everyone to use and benefit from.</p>
+
+<p>The review and testing of Máté’s PHP implementation was carried out by PHP
+community contributors <a href="https://github.com/nielsdos/">Niels Dossche</a> and
+<a href="https://github.com/nyamsprod/">Ignace Nyamagana Butera</a>. This included
+reviewing and testing the new functionality that had been added to the two
+upstream libraries. <a href="https://thephp.foundation/#sponsors_silver">Tideways, a founding member and Silver
+sponsor</a> of The PHP Foundation,
+also sponsored engineering time; their contribution came in the form of <a href="https://github.com/TimWolla/">Tim
+Düsterhus</a>. During the review and testing, these
+reviewers discovered several pre-existing bugs in the upstream libraries. They
+submitted fixes to the upstream maintainers, <a href="https://github.com/hartwork">Sebastian
+Pipping</a> (uriparser) and <a href="https://github.com/lexborisov">Alexander
+Borisov</a> (Lexbor), who quickly reviewed and
+applied them.</p>
+
+<h2 id="test-it-now">Test It Now</h2>
+
+<p>This work paid off, and PHP’s new URI extension with not just one but two
+feature-rich and standards-compliant URI implementations is fully available for
+testing with PHP 8.5 RC 1&#46;</p>
+
+<p>If you'd like to see further improvements to PHP’s standard library please
+consider <a href="https://thephp.foundation/sponsor/">sponsoring The PHP Foundation</a>.</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[Call for Designs: Refresh the PHP 8.5 Release Page]]></title>
             <link href="https://thephp.foundation/blog/2025/10/01/design-contest/"/>
@@ -1029,90 +1191,6 @@ In the future, to simplify the PHP development experience (one-line installation
 </blockquote>
 
 <p>Want to join the effort? <a href="https://thephp.foundation/sponsor/">Sponsor The PHP Foundation</a> and help us power the web’s backbone!</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[PHP Core Security Audit Results]]></title>
-            <link href="https://thephp.foundation/blog/2025/04/10/php-core-security-audit-results/"/>
-            <updated>2025-04-10T00:00:00+00:00</updated>
-            <id>https://thephp.foundation/blog/2025/04/10/php-core-security-audit-results/</id>
-            <content type="html"><![CDATA[<p>The PHP Foundation is pleased to announce the completion of a comprehensive security audit of the PHP source code (<a href="https://github.com/php/php-src">php/php-src</a>), <strong>commissioned by the <a href="https://www.sovereign.tech/">Sovereign Tech Agency</a></strong>.</p>
-
-<p>This initiative was organized in partnership with the <a href="https://ostif.org/">Open Source Technology Improvement Fund</a> (OSTIF) and executed by the esteemed security group <a href="https://www.quarkslab.com/">Quarkslab</a>.</p>
-
-<h2 id="audit-overview">Audit Overview</h2>
-
-<p>Conducted over a two-month period in 2024, the audit encompassed:</p>
-
-<ul>
-<li>Development of a threat model tailored to php-src</li>
-<li>Manual code reviews</li>
-<li>Dynamic testing procedures</li>
-<li>Cryptographic assessments</li>
-</ul>
-
-<p>The collaboration between Quarkslab’s auditors and PHP maintainers ensured a thorough examination of the codebase.</p>
-
-<blockquote>
-  <p><em>⚠️</em><br />
-  Due to budget constraints, the recent security audit focused on the most critical components of the PHP source code rather than the entire codebase. Organizations interested in sponsoring a comprehensive audit or additional assessments are encouraged to <a href="&#109;&#x61;i&#108;&#x74;&#111;&#58;&#x63;&#111;&#x6e;&#x74;&#97;&#x63;t&#64;&#x74;&#104;&#101;&#x70;&#104;&#x70;&#x2e;&#102;&#x6f;&#x75;&#110;&#x64;a&#116;&#x69;&#111;&#110;">contact us</a>!<br />
-  <em>⚠️</em></p>
-</blockquote>
-
-<h2 id="key-findings">Key Findings</h2>
-
-<p>The audit identified 27 issues, with 17 having security implications:</p>
-
-<ul>
-<li>3 High-severity</li>
-<li>5 Medium-severity</li>
-<li>9 Low-severity</li>
-</ul>
-
-<p>Additionally, 10 informational findings were reported.</p>
-
-<p>Notably, four vulnerabilities received CVE identifiers:</p>
-
-<ul>
-<li>CVE-2024-9026: Log tampering vulnerability in PHP-FPM, allowing potential manipulation or removal of characters from log messages.</li>
-<li>CVE-2024-8925: Flaw in PHP’s multipart form data parsing, potentially leading to data misinterpretation.</li>
-<li>CVE-2024-8929: Issue where a malicious MySQL server could cause the client to disclose heap content from other SQL requests.</li>
-</ul>
-
-<h2 id="recommendations-and-resolutions">Recommendations and Resolutions</h2>
-
-<p>Quarkslab’s report commended the overall high quality and specification adherence of the php/php-src project.</p>
-
-<p>The PHP development team has addressed all identified issues. Users are strongly encouraged to upgrade to the latest PHP versions to benefit from these security enhancements.</p>
-
-<h2 id="acknowledgments">Acknowledgments</h2>
-
-<p>We extend our gratitude to the individuals and organizations that made this audit possible:</p>
-
-<ul>
-<li><strong>The PHP Foundation Team and PHP maintainers:</strong><br />
-Jakub Zelenka, Arnaud Le Blanc, Niels Dossche, Ilija Tovilo, Stas Malyshev, Dmitry Stogov, Derick&nbsp;Rethans, and Roman Pronskiy.</li>
-<li><strong>Quarkslab Team:</strong><br />
-Angèle Bossuat, Julio Loayza Meneses, Mihail Kirov, Sebastien Rolland, Ramtine Tofighi Shirazi.</li>
-<li><strong>Sovereign Tech Agency:</strong><br />
-Abigail Garner and the team – for commissioning the audit and all the help.</li>
-<li><strong>OSTIF:</strong><br />
-Amir Montazery, Derek Zimmer, Helen Woeste – for organizing the collaboration.</li>
-</ul>
-
-<p>This audit underscores our commitment to enhancing PHP’s security and reliability. We remain dedicated to ongoing improvements and collaborations to ensure PHP’s robustness for the global development community.</p>
-
-<h2 id="further-reading">Further Reading</h2>
-
-<ul>
-<li><a href="/assets/files/24-07-1730-REP-V1.4_temp.pdf">Audit Report</a></li>
-<li><a href="https://ostif.org/php-audit-complete/">OSTIF Blog</a></li>
-<li><a href="https://blog.quarkslab.com/security-audit-of-php-src.html">Quarkslab Blog</a></li>
-</ul>
-
-<p>If your company is interested in commissioning another round of security audit, please contact The PHP Foundation team: <a href="&#109;&#x61;i&#108;&#x74;&#111;&#58;&#x63;&#111;&#x6e;&#x74;&#97;&#x63;t&#64;&#x74;&#104;&#101;&#x70;&#104;&#x70;&#x2e;&#102;&#x6f;&#x75;&#110;&#x64;a&#116;&#x69;&#111;&#110;">contact@thephp.foundation</a>.</p>
-
-<p>🐘💜</p>
 ]]></content>
         </entry>
     </feed>
