@@ -3,9 +3,81 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2025-10-10T11:33:52+00:00</updated>
+    <updated>2025-10-30T15:12:06+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Evolving PHP Streams for Async, Security, and Performance]]></title>
+            <link href="https://thephp.foundation/blog/2025/10/30/php-streams-evolution/"/>
+            <updated>2025-10-30T00:00:00+00:00</updated>
+            <id>https://thephp.foundation/blog/2025/10/30/php-streams-evolution/</id>
+            <content type="html"><![CDATA[<p>Thanks to investment from the <strong><a href="https://www.sovereign.tech/">Sovereign Tech Agency (STA)</a></strong>, a German government backed organization supporting open-source infrastructure, the PHP Foundation is modernizing one of PHP’s oldest and most critical subsystems: Streams.</p>
+
+<p>This post outlines the planned work and explains why these changes matter for the PHP ecosystem.</p>
+
+<h2 id="what-are-php-streams%3F">What Are PHP Streams?</h2>
+
+<p>Before diving into the improvements, let’s briefly revisit what Streams are and why they matter.</p>
+
+<p>Introduced around 2001, PHP streams provide a unified way to handle file and network I/O, allowing data from different sources such as files, sockets, or memory to be accessed through a consistent API using the same set of functions.</p>
+
+<p>Over time, PHP streams have proven to be a powerful and flexible subsystem, but some parts of the implementation have not evolved alongside modern use cases, performance expectations, and system capabilities. This project aims to make Streams faster, safer, and easier to extend for modern PHP applications.</p>
+
+<p>The actual scope is divided into four subsections.</p>
+
+<h2 id="performance-and-stability-improvements">Performance and Stability improvements</h2>
+
+<p>This part aims to improve performance and consistency in how PHP Streams copying and seeking.</p>
+
+<p>There is still room to improve performance in stream copying.</p>
+
+<p>For example, copying large files or handling network transfers can be made faster through asynchronous I/O mechanisms like io_uring on Linux. At the same time, we need to prevent potential crashes caused by memory-mapped files. The goal is to phase out mmap usage and introduce a new copying API as part of the upcoming I/O API, using io_uring or other system features where available.</p>
+
+<p>Seeking is currently problematic for filtered streams, which causes various inconsistencies. Developers working with filters often encounter limitations when rewinding or skipping data.</p>
+
+<p>The plan is to introduce a new seeking filter API that will allow seeking in streams where possible and disallow it where not. For example, seeking to the beginning should always be possible, but not all filters support seeking to arbitrary positions. Some may allow it, so a new internal API is needed.</p>
+
+<h2 id="error-handling-and-monitoring-enhancements">Error Handling and Monitoring Enhancements</h2>
+
+<p>This part is mainly about the introduction of new error reporting mechanisms for streams as well as the introduction of more hooks. Currently, many low-level I/O errors are surfaced inconsistently to user space. The goal is to standardize how Streams report errors and make them easier to debug.</p>
+
+<p>The primary idea for error reporting is to have a better way to handle errors so they can be collected and reported to user space. We’ll wrap existing errors and provide richer context options for developers.</p>
+
+<p>In terms of hooks, this would be useful for async code and could be done through a special polling wrapper. There should be some way to allow replacing some blocking operations (specifically for file IO). This is primarily meant as an internal change, but it will also be considered to possibly expose some hooks to user space if convenient and acceptable from a performance point of view.</p>
+
+<h2 id="networking-and-socket-improvements">Networking and Socket Improvements</h2>
+
+<p>This part is mainly about the introduction of a new polling API, improvements in the stream_select function, and resolving issues in socket handling.</p>
+
+<p>Modern network applications rely heavily on scalable event handling. The new polling API will introduce modern mechanisms such as epoll and kqueue, enabling PHP to handle multiple I/O streams more efficiently.</p>
+
+<p>Currently, only select is available for user space, which has known performance and scaling issues. This modernization will benefit frameworks and extensions that implement async networking or event-driven I/O.</p>
+
+<p>The purpose of the API is primarily to build an internal API that can be used internally for various tasks in the PHP core and as a base (fallback) for the future async IO API.</p>
+
+<p>The stream_select usage should be extended to better handle polling of filtered streams and provide an API for external objects that can provide extra data, as will be possible in the new polling API. This will require some refactoring and potentially sharing some of the logic with the new polling API.</p>
+
+<p>Additionally, several socket-specific improvements are planned. New socket context options will be added to provide better configuration capabilities. Various socket handling issues will be addressed, and utilities for working with file descriptors will be improved.</p>
+
+<h2 id="security-and-tls-enhancements">Security and TLS Enhancements</h2>
+
+<p>Another important part of this work targets the OpenSSL extension, which handles encrypted streams.</p>
+
+<p>Specifically, refactoring its async handling that is currently not well implemented and has various limitations. The refactoring will clarify what polling action is required for user space. For example, whether the stream needs to wait for reading or writing.</p>
+
+<p>In addition, we aim to improve TLS 1.3 support with options to select cipher suites and integrate TLS Sessions, PSK (Pre-Shared Key) and early data (0-RTT) support.</p>
+
+<p>To enable these changes, a new TLS 1.3 PHP testing library is being developed. It will allow customizing the protocol flow and testing TLS 1.3 features, including asynchronous behavior.</p>
+
+<h2 id="next-steps">Next Steps</h2>
+
+<p>Together, these efforts will modernize and strengthen PHP’s I/O layer for the next decade of web and CLI development.</p>
+
+<p>Work has started in 2025 and will go through 2026. Incremental progress will be shared publicly through PHP Foundation updates and PHP internals discussions, and RFCs.</p>
+
+<p>We’re grateful to the Sovereign Tech Agency for supporting this foundational investment in PHP’s core. Stay tuned for technical write-ups and benchmarks as the implementation progresses.</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[PHP’s New URI Extension: An Open Source Success Story]]></title>
             <link href="https://thephp.foundation/blog/2025/10/10/php-85-uri-extension/"/>
@@ -1139,58 +1211,6 @@ In the future, to simplify the PHP development experience (one-line installation
 <p><a href="https://thephp.foundation/">The PHP Foundation</a><br />
 <a href="http://Les-Tilleuls.coop">Les-Tilleuls.coop</a><br />
 <a href="https://caddyserver.com">The Caddy team</a></p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Meet Manychat: A PHP Foundation Sponsor Sharing Their PHP Scaling Journey]]></title>
-            <link href="https://thephp.foundation/blog/2025/05/09/manychat-powered-by-php/"/>
-            <updated>2025-05-09T00:00:00+00:00</updated>
-            <id>https://thephp.foundation/blog/2025/05/09/manychat-powered-by-php/</id>
-            <content type="html"><![CDATA[<p>At the PHP Foundation, we’re proud to be supported by companies that build amazing products and contribute back to the PHP ecosystem. Today we’d like to highlight <a href="https://manychat.com/?utm_source=phpfoundation&amp;utm_medium=site&amp;utm_campaign=casestudy">Manychat</a> — one of our Silver sponsors.</p>
-
-<p>Manychat is the world’s leading chat marketing platform, helping businesses connect with their customers on Instagram, WhatsApp, Facebook Messenger, and beyond. With over <strong>1 billion conversations powered every year</strong> across <strong>170+ countries</strong>, Manychat is a great example of how PHP scales and supports high-traffic applications around the world.</p>
-
-<h2 id="why-php%3F-because-speed-wins">Why PHP? Because Speed Wins</h2>
-
-<p>In their recently published case study — <em><a href="https://medium.com/manychat-engineering/how-manychat-scaled-to-1-billion-conversations-using-php-a-startups-guide-to-smart-tech-choices-781c74f16f23">How Manychat Scaled to 1 Billion Conversations Using PHP</a></em> — the Manychat team shares the story of how PHP helped them go from a tiny startup with just one developer to a platform supporting millions of users.</p>
-
-<blockquote>
-  <p><em>“We could build right away — our only developer already knew PHP, so we skipped onboarding and got straight to work.”</em></p>
-</blockquote>
-
-<p>By choosing PHP, Manychat was able to build their MVP in just a few days and start learning from real users immediately. As they grew, they faced the familiar scaling challenges of high traffic, heavy workloads, and resource management. Their case study provides mentions architectural decisions they made — from using asynchronous request handling with NGINX + Lua, to optimizing background task processing with PHP-CLI workers, and managing database connections efficiently with PgBouncer.</p>
-
-<h2 id="php-at-the-heart-of-a-global-platform">PHP at the Heart of a Global Platform</h2>
-
-<p>Today Manychat’s platform continues to run on PHP, handling millions of API calls and conversations while keeping infrastructure costs under control.</p>
-
-<p>If you’re excited about building products that reach millions and love working with PHP at scale, check out the <a href="https://careers.manychat.com/team/engineering?utm_source=phpfoundation&amp;utm_medium=site&amp;utm_campaign=casestudy">open positions at Manychat</a>. They’re hiring PHP engineers!</p>
-
-<h2 id="supporting-the-community">Supporting the Community</h2>
-
-<p>Manychat isn’t just building with PHP — they’re giving back to the community. As a <strong>Silver sponsor</strong> of the PHP Foundation, they help us fund initiatives that keep PHP stable, modern, and accessible to millions of developers worldwide.</p>
-
-<p>In addition, Manychat is active in the tech community, hosting <a href="https://www.eventbrite.com/o/manychat-46565622503">PHP meetups and events</a> in <strong>Barcelona</strong> and <strong>Amsterdam</strong>. We love seeing our sponsors not only build great products but also foster connections between developers around the world.</p>
-
-<h2 id="read-their-story">Read Their Story</h2>
-
-<p>We encourage you to check out their full case study on scaling with PHP:</p>
-
-<p>👉 <em><a href="https://medium.com/manychat-engineering/how-manychat-scaled-to-1-billion-conversations-using-php-a-startups-guide-to-smart-tech-choices-781c74f16f23">How Manychat Scaled to 1 Billion Conversations Using PHP</a></em></p>
-
-<p><strong>Thank you, Manychat, for your support!</strong></p>
-
-<p>🐘💜</p>
-
-<hr>
-
-<p><br></p>
-
-<blockquote>
-  <p>This post continues the <a href="https://thephp.foundation/blog/tag/sponsors/">blog series</a> highlighting our amazing sponsors. Stay tuned as we spotlight the companies and individuals driving PHP forward – each one a vital part of our community’s success.</p>
-</blockquote>
-
-<p>Want to join the effort? <a href="https://thephp.foundation/sponsor/">Sponsor The PHP Foundation</a> and help us power the web’s backbone!</p>
 ]]></content>
         </entry>
     </feed>

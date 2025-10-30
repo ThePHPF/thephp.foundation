@@ -1,648 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2025-10-10T11:33:52+00:00</updated><entry><author><name>Larry Garfield</name><uri>https://github.com/Crell</uri></author><title type="html"><![CDATA[PHP 8.5 Adds Pipe Operator: What it means]]></title><content type="html"><![CDATA[<p>PHP 8.5, due out November of this year, will bring with it another long-sought-after feature: the <a href="https://wiki.php.net/rfc/pipe-operator-v3">pipe operator</a> (<code>|&gt;</code>).  It's a small feature with huge potential, yet it still took years to happen.</p>
-
-<h2 id="what-is-a-pipe-operator%3F">What is a pipe operator?</h2>
-
-<p>The pipe operator, spelled <code>|&gt;</code>, is deceptively simple.  It takes the value on its left side and passes it as the single argument to a function (or in PHP's case, <code>callable</code>) on its right side:</p>
-
-<pre><code class="php">$result = "Hello World" |&gt; strlen(...)
-
-// Is equivalent to
-$result = strlen("Hello World");
-</code></pre>
-
-<p>On its own, that is not all that interesting.  Where it becomes interesting is when it is repeated, or chained, to form a "pipeline."  For example, here's real code from a real project I've worked on, recast to use pipes:</p>
-
-<pre><code class="php">$arr = [
-  new Widget(tags: ['a', 'b', 'c']),
-  new Widget(tags: ['c', 'd', 'e']),
-  new Widget(tags: ['x', 'y', 'a']),
-];
-
-$result = $arr
-    |&gt; fn($x) =&gt; array_column($x, 'tags') // Gets an array of arrays
-    |&gt; fn($x) =&gt; array_merge(...$x)       // Flatten into one big array
-    |&gt; array_unique(...)                  // Remove duplicates
-    |&gt; array_values(...)                  // Reindex the array.
-;
-
-// $result is ['a', 'b', 'c', 'd', 'e', 'x', 'y']
-</code></pre>
-
-<p>The same code without pipes would require either this horribly ugly nest of evil:</p>
-
-<pre><code class="php">array_values(array_unique(array_merge(...array_column($arr, 'tags'))));
-</code></pre>
-
-<p>Or manually creating a temporary variable for each step.  While temp variables are not the worst thing in the world, they are extra mental overhead, and mean that a chain like that cannot be used in a single-expression context, like a <code>match()</code> block.  A pipe chain can.</p>
-
-<p>Anyone who has worked on the Unix/Linux command line will likely recognize the similarity to the shell pipe, <code>|</code>.  That's very deliberate, as it is effectively the same thing: Use the output from the left side as the input on the right side.</p>
-
-<h2 id="where-did-it-come-from%3F">Where did it come from?</h2>
-
-<p>The <code>|&gt;</code> operator appears in many languages, mostly in the functional world.  F# has essentially the exact same operator, as does OCaml.  Elixir has a slightly fancier version (which we considered but ultimately decided against for now).  Numerous PHP libraries exist in the wild that offer similar capability with many extra expensive steps, including my own <a href="https://github.com/Crell/fp/">Crell/fp</a>.</p>
-
-<p>The story for PHP pipes, though, begins with Hack/HHVM, Facebook's PHP fork née competitive implementation.  Hack included many features beyond what PHP 5 of the day offered; many of them eventually ended up in later PHP versions.  One of its features was a unique spin on a pipe operator.</p>
-
-<p>In 2016, Sara Golemon, long-time PHP contributor and former Open Source lead on the HHVM project, proposed porting <a href="https://wiki.php.net/rfc/pipe-operator">Hack's pipes</a> to PHP directly.  In that RFC, the right side of a pipe wasn't a <code>callable</code> but an expression, and used a magic <code>$$</code> token (lovingly called <code>T_BLING</code>, at least according to yours truly) to inject the left-side result into it.  In that case, the example above would look like this:</p>
-
-<pre><code class="php">$result = $arr
-    |&gt; array_column($$, 'tags')
-    |&gt; array_merge(...$$)
-    |&gt; array_unique($$)
-    |&gt; array_values($$)
-;
-</code></pre>
-
-<p>While powerful, it was also somewhat limiting.  It was very non-standard, unlike any other language.  It also meant a weird, one-off syntax for partially-calling functions that worked only when paired with pipes.</p>
-
-<p>That RFC didn't go as far as a vote.  Nothing much happened for several years, until 2020/2021.  That's when I, fresh off of writing a book on functional programming in PHP that talked about function composition, decided to take a swing at it.  In particular, I partnered with a team to work on <a href="https://wiki.php.net/rfc/partial_function_application">Partial Function Application</a> (PFA) as a separate RFC from a more <a href="https://wiki.php.net/rfc/pipe-operator-v2">traditional pipe</a>.  The idea was that turning a multi-parameter function (like <code>array_column()</code> above) into the single-parameter function that <code>|&gt;</code> needed was a useful feature on its own, and should be usable elsewhere.  The syntax was a bit different than the Hack version, in order to make it more flexible: <code>some_function(?, 5, ?, 3, ...)</code>, which would take a 5-or-more parameter function and turn it into a 3 parameter function.</p>
-
-<p>Sadly, PFA didn't pass due to some engine complexity issues, and that largely undermined the v2 Pipe RFC, too.  However, we did get a consolation prize out of it: <a href="https://wiki.php.net/rfc/first_class_callable_syntax">First Class Callables</a> (the <code>array_values(...)</code> syntax), courtesy Nikita Popov, were by design a "junior", degenerate version of partial function application.</p>
-
-<p>Fast-forward to 2025, and I was sufficiently bored to take another swing at pipes.  This time with a better implementation with lots of hand-holding from Ilija Tovilo and Arnaud Le Blanc, both part of the PHP Foundation dev team, I was able to get it through.</p>
-
-<p>Third time's the charm.</p>
-
-<h2 id="more-than-the-sum-of-its-parts">More than the sum of its parts</h2>
-
-<p>Above, we described pipes as "deceptively simple."  The implementation itself is almost trivial; it's just syntax sugar for the temp variable version, effectively.  However, the best features are the ones that can combine with others or be used in novel ways to punch above their weight.</p>
-
-<p>We saw above how a long array manipulation process could now be condensed into a single chained expression.  Now imagine using that in places where only a single expression is allowed, such as a <code>match()</code>:</p>
-
-<pre><code class="php">$string = 'something GoesHERE';
-
-$newString = match ($format) {
-    'snake_case' =&gt; $string
-        |&gt; splitString(...)
-        |&gt; fn($x) =&gt; implode('_', $x)
-        |&gt; strtolower(...),
-    'lowerCamel' =&gt; $string
-        |&gt; splitString(...),
-        |&gt; fn($x) =&gt; array_map(ucfirst(...), $x)
-        |&gt; fn($x) =&gt; implode('', $x)
-        |&gt; lcfirst(...),
-    // Other case options here.
-};
-</code></pre>
-
-<p>Or, consider that the right-side can also be a function call that returns a <code>Closure</code>.  That means with a few functions that return functions:</p>
-
-<pre><code class="php">$profit = [1, 4, 5] 
-    |&gt; loadSeveral(...)
-    |&gt; filter(isOnSale(...))
-    |&gt; map(sellWidget(...))
-    |&gt; array_sum(...);
-</code></pre>
-
-<p>Which... gives us mostly the same thing as the long-discussed scalar methods!  Only pipes are more flexible as you can use any function on the right-side, not just those that have been blessed by the language designers as methods.</p>
-
-<p>At this point, pipe comes very close to being "extension functions", a feature of Kotlin and C# that allows writing functions that look like methods on an object, but are actually just stand-alone functions.  It's spelled a bit differently (<code>|</code> instead of <code>-</code>), but it's 75% of the way there, for free.</p>
-
-<p>Or take it a step further.  What if some steps in the pipe may return <code>null</code>?  We can, with a single function, "lift" the elements of our chain to handle <code>null</code> values in the same fashion as null-safe methods.</p>
-
-<pre><code class="php">function maybe(\Closure $c): \Closure
-{
-    return fn(mixed $arg) =&gt; $arg === null ? null : $c($arg);
-}
-
-$profit = [1, 4, 5] 
-    |&gt; maybe(loadSeveral(...))
-    |&gt; maybe(filter(isOnSale(...)))
-    |&gt; maybe(map(sellWidget(...)))
-    |&gt; maybe(array_sum(...));
-</code></pre>
-
-<p>That's right, we just implemented a Maybe Monad with a pipe and a single-line function.</p>
-
-<p>Now, think about that for streams...</p>
-
-<pre><code class="php">fopen('pipes.md', 'rb') // No variable, so it will close automatically when GCed.
-    |&gt; decode_rot13(...)
-    |&gt; lines_from_charstream(...)
-    |&gt; map(str_getcsv(...))
-    |&gt; map(Product::create(...))
-    |&gt; map($repo-&gt;save(...))
-;
-</code></pre>
-
-<p>The potential is absolutely huge.  I don't think it's immodest to say that the pipe operator has one of the highest "bangs for the buck" of any feature in recent memory, alongside such niceties as constructor property promotion.  And all thanks to a little syntax sugar.</p>
-
-<h2 id="what-comes-next%3F">What comes next?</h2>
-
-<p>Although pipes are a major milestone, we're not done.  There is active work on not one but two follow-up RFCs.</p>
-
-<p>The first is a second attempt at <a href="https://wiki.php.net/rfc/partial_function_application_v2">Partial Function Application</a>.  This is a larger feature, but with first-class callables already bringing in much of the necessary plumbing, which simplifies the implementation.  With pipes now providing a natural use case, as well as easy optimization points, it's worth a second attempt.  Whether it makes it into PHP 8.5, is delayed to 8.6, or is again rejected is still an open question as of this writing, though I am hopeful.  Major thanks to Arnaud Le Blanc from the PHP Foundation team for picking it up to update the implementation.</p>
-
-<p>The second is a <a href="https://wiki.php.net/rfc/function-composition">function composition operator</a>.  Where pipe executes immediately, function composition creates a new function by sticking two functions end-to-end.  That would mean the streams example above could be further optimized by combining the <code>map()</code> calls:</p>
-
-<pre><code class="php">fopen('pipes.md', 'rb')
-    |&gt; decode_rot13(...)
-    |&gt; lines_from_charstream(...)
-    |&gt; map(str_getcsv(...) + Product::create(...) + $repo-&gt;save(...))
-;
-</code></pre>
-
-<p>This one is definitely not going to make it into PHP 8.5, but I am hopeful that we'll be able to get it into 8.6.  Stay tuned.</p>
-
-<blockquote>
-  <p>Special thanks to Ilija Tovilo and Arnaud Le Blanc from the PHP Foundation team for their assistance with the pipe implementation.  If you’d like to help push PHP forward, consider <a href="https://thephp.foundation/sponsor/">becoming a sponsor</a>.</p>
-</blockquote>
-]]></content><link href="https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/"/><id>https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/</id><updated>Fri, 11 Jul 2025 00:00:00 +0000</updated></entry><entry><author><name>Larry Garfield</name><uri>https://github.com/Crell</uri></author><author><name>Gina Banyard</name><uri>https://github.com/Girgias</uri></author><title type="html"><![CDATA[Compile time generics: yay or nay?]]></title><content type="html"><![CDATA[<p>One of the most sought-after features for PHP is Generics: The ability to have a type that takes another type as a parameter.  It's a feature found in most compiled languages by now, but implementing generics in an interpreted language like PHP, where all the type checking would have to be done at runtime, has always proven Really Really Hard(tm), Really Really Slow(tm), or both.</p>
-
-<p>But, experimentation by Gina from the PHP Foundation's dev team suggests we may be able to get 80% of the benefit for 20% of the work.  Is that enough?</p>
-
-<h2 id="the-short%2C-short-version">The short, short version</h2>
-
-<p>Gina and Larry believe it's possible to implement generics on only interfaces and abstract classes, which would offer a large chunk of the benefit of generics but avoid most of the pitfalls.</p>
-
-<p>In particular, interfaces and abstract classes could declare that they need one or more types specified:</p>
-
-<pre><code class="php">interface Exporter&lt;Thing&gt; { ... }
-</code></pre>
-
-<p>And then classes that implement/extend them would be required to fill in those types:</p>
-
-<pre><code class="php">class WidgetExporter implements Exporter&lt;Widget&gt; { ... }
-</code></pre>
-
-<p>And then anywhere the type <code>Thing</code> appeared in <code>Exporter</code>, it would turn into <code>Widget</code> in <code>WidgetExporter</code>.</p>
-
-<p>All of this is done at compile time, which makes it far easier and faster, and many/most errors would be caught at compile time.</p>
-
-<p>Runtime generics, where you could say <code>$fooExporter = new Exporter&lt;Foo&gt;()</code>, would still not be possible, but they do not get any harder as a result of going just part way.</p>
-
-<p><strong>Would you support (and vote in favor of) compile-time-only generics as described below?</strong></p>
-
-<h2 id="prior-research">Prior research</h2>
-
-<p>In 2023 and 2024, Arnaud Le Blanc from the Foundation team did <a href="https://thephp.foundation/blog/2024/08/19/state-of-generics-and-collections/">extensive experimentation</a> on generics, picking up on the previous work from Nikita Popov.  The full result of that experiment is available at that link, but in short, some parts of generics would be possible, even straightforward.  Where the edge cases run into problems, though, they are very big problems.</p>
-
-<p>In particular:</p>
-
-<ul>
-<li>Union types and generics combine to produce massive performance penalties.</li>
-<li>Many cases would result in a very cumbersome syntax unless we had really good type inference.</li>
-<li>Really good type inference is hard and slow, especially in PHP.</li>
-</ul>
-
-<p>Meanwhile, making arrays generic, and therefore typed, had its own challenges, especially given that PHP variables are not typed.</p>
-
-<p>Arnaud and Larry Garfield did further investigation afterward into introducing <a href="https://github.com/Crell/php-rfcs/blob/master/modules/spec-brainstorm.md">a "module" system</a> that would help PHP's compiler <a href="https://github.com/arnaud-lb/php-src/pull/10">see more code at once</a>, and thus be able to do type inference more readily, but sadly that also ran into many challenging edge cases.</p>
-
-<h2 id="associated-types">Associated Types</h2>
-
-<p>In mid-2025, the Foundation's Gina Banyard started working on "associated types," a generics-adjacent feature found in a few languages that happens entirely at compile time. It essentially allows a class or interface to specify that inheritors must specify a type to be used in certain situations.  Initially, it was intended as an alternative to the <a href="https://wiki.php.net/rfc/never-parameters-v2"><code>never</code> parameters</a> RFC, offering a better solution to the case of an interface that doesn't need to specify a particular type, but implementing classes do.</p>
-
-<p>The initial plan looked something like this:</p>
-
-<pre><code class="php">interface ImporterExporter
-{
-    type T;
-
-    public function import(string $input): T;
-
-    public function export(T $value): string;
-}
-
-class ThingImporter implements ImporterExporter
-{
-    public function import(string $input): Thing { ... }
-
-    public function export(Thing $value): string { ... }
-}
-</code></pre>
-
-<p>In which all references to <code>T</code> in the interface need to be replaced by the <em>same</em> type in the class; it can be any type, as long as it's the same in all cases.</p>
-
-<p>After some discussion with the rest of the team, however, it became apparent that if we just changed the spelling and squinted, associated types look an awful lot like generics.  Or rather, part of generics, as full generics is a very involved bit of functionality with lots of different complimentary parts.</p>
-
-<p>Which begged the question: Could we just do some of those parts, and get most of the benefit?  According to Gina's work, the answer is "Probably!"</p>
-
-<h2 id="abstract-generics">Abstract Generics</h2>
-
-<p>What Gina has implemented, though it still needs some polish and extension, is essentially "manually monomorphized generics," implemented at compile time.  "Monomorphization" is an approach to generics (there are others) where a type-specific version of a class is created "on the fly" by the compiler or engine when that type-specific version is used.  By "manual," we mean that it's up to the developer to do so in advance.</p>
-
-<p>Let's see what that looks like in practice.</p>
-
-<p>Consider our previous interface, but spelled this way instead:</p>
-
-<pre><code class="php">interface ImporterExporter&lt;T&gt;
-{
-    public function import(string $input): T;
-
-    public function export(T $value): string;
-}
-</code></pre>
-
-<p>That interface requires that any class implementing it specify what type <code>T</code> should be; it can be any type, as long as it's the same type in both places.</p>
-
-<pre><code class="php">class ThingExporter implements ImporterExporter&lt;Thing&gt;
-{
-    public function import(string $input): Thing { ... }
-
-    public function export(Thing $value): string { ... }
-}
-
-class WidgetExporter implements ImporterExporter&lt;Widget&gt;
-{
-    public function import(string $input): Widget { ... }
-
-    public function export(Widget $value): string { ... }
-}
-</code></pre>
-
-<p>This can all be enforced at compile time, where it's much cheaper, and cached by the opcache.</p>
-
-<p>This alone is not full generics capability, but it is in practice a good chunk of it.  It's also possible to specify that the generic type must conform to some other type, like another interface.  For instance:</p>
-
-<pre><code class="php">interface Repository&lt;T: Entity&gt;
-{
-    public function save(T $entity): bool;
-
-    public function load(int $id): T;
-}
-
-class BlogPostRepository implements Repository&lt;BlogPost&gt;
-{
-    // ...
-}
-</code></pre>
-
-<p>This would work, but only if <code>BlogPost</code> implements the <code>Entity</code> interface.</p>
-
-<h2 id="a-few-more-parts">A few more parts</h2>
-
-<p>Although not yet implemented, Gina is confident that a few natural extensions are also possible and straightforward, if enough time is put into them.  They could probably be included in the initial RFC.</p>
-
-<p>First, allowing abstract classes to be generic as well.  That would allow for:</p>
-
-<pre><code class="php">abstract class BaseRepository&lt;T: Entity&gt;
-{ 
-    // ...
-}
-
-class BlogPostRepository extends BaseRepository&lt;BlogPost&gt; { ... }
-</code></pre>
-
-<p>Of particular note, the inheriting class wouldn't need to actually <em>do</em> anything beyond specifying the type.  That would be enough.  The net result is that we may see a proliferation of "empty extending classes" that just specify a type and have no body of their own, as a surrogate for what in other languages would be <code>$repo = new Repository&lt;BlogPost&gt;()</code>.  In PHP, that would instead be spelled:</p>
-
-<pre><code class="php">class BlogPostRepository extends BaseRepository&lt;BlogPost&gt; { ... }
-$repo = new BlogPostRepository();
-</code></pre>
-
-<p>(That's the "manual monomorphization" we talked about.)  Not ideal, but still much more powerful than the status quo as of PHP 8.4.</p>
-
-<p>Second, type declarations.  It would already be possible to type against <code>BlogPostRepository</code>, as that's just a boring old class like we've always known.  What would be a straightforward extension is allowing this:</p>
-
-<pre><code class="php">class DataProcessor
-{
-    public function __construct(private Repository&lt;UserEntity&gt; $repo) {}
-}
-</code></pre>
-
-<p>That is, declare that <code>$repo</code> must implement <code>Repository</code> <em>and</em> specify a type that is itself a child of <code>UserEntity</code> (which could be a class or another interface).  In the initial version it may not support a generic as part of a compound type (such as <code>private Repository&lt;UserEntity&gt;|null $repo</code>), but that should be feasible to add later, probably.</p>
-
-<h2 id="collections">Collections</h2>
-
-<p>One of the most common uses of generics is for collections, be they typed arrays or objects.  The details vary by language, but a collection known to be of a certain type is very valuable.  The previous blog post (linked above) included a discussion of a collection design by Derick Rethans and Larry Garfield, which included a custom one-off syntax for... essentially the behavior described here.  Updating that design for this syntax would give us three interfaces, or probably base classes:</p>
-
-<pre><code class="php">abstract class Sequence&lt;T&gt;
-{
-    private array $values = [];
-
-    public function append(T $new): static
-    {
-        $this-&gt;values[] = $new;
-        return $this;
-    }
-
-    public filter(callable $filter): static
-    {
-        // ...
-    }
-}
-
-abstract class Set&lt;T&gt;
-{
-    // ...
-}
-
-abstract class Dict&lt;K, V&gt;
-{
-    // ...
-}
-</code></pre>
-
-<p>And then they could be used like so:</p>
-
-<pre><code class="php">class Articles extends Sequence&lt;Article&gt; {}
-
-class Library extends Set&lt;Book&gt; {}
-
-class YearBooks extends Dict&lt;int, Book&gt; {}
-</code></pre>
-
-<p>Those concrete classes could have additional methods in them if desired, but that's optional.  The above would be sufficient to have a collection that mapped integers to Book objects, and had syntax-level guarantees those types would hold.</p>
-
-<p>The above design could be implemented either in core or user-space.  There's definite benefit to them being built-in, but the type-control portion at least would be available to user-space code, too.</p>
-
-<h2 id="longer-term">Longer term</h2>
-
-<p>There's a few more complex features that seem like they are doable, but require enough extra effort that they almost certainly wouldn't make sense in the initial RFC.  They could probably be in their own future RFCs, however, barring any surprises.</p>
-
-<h3 id="variance">Variance</h3>
-
-<p>In the initial version, generic types would be invariant.  <code>BlogPostRepository</code> is a child of <code>BaseRepository</code>, but just because <code>FeaturedBlogPost</code> is a child of <code>BlogPost</code> doesn't mean <code>BlogPostRepository</code> can accept <code>FeaturedBlogPost</code>.  The challenge is that the variance of parameter and return types are in opposite directions, and because a generic type may appear both as a parameter type (which can be seen as a write context) and a return type (which can be seen as a read context) it needs to be invariant, similar to how property types are invariant.  (This is a common challenge in languages with generics.)</p>
-
-<p>However, Kotlin and C# have a feature that we should be able to borrow for PHP.  If a generic type is used exclusively in parameters it can be marked as an <code>in</code> type to indicate it is contravariant.  For example:</p>
-
-<pre><code class="php">interface Saver&lt;in Type&gt;
-{
-    public function save(Type $object): bool;
-}
-
-class BlogPostSaver&lt;BlogPost&gt;
-{
-    public function save(BlogPost $object): bool { ... }
-}
-
-$bsaver = new BlogPostSaver();
-$bsaver-&gt;save(new FeaturedBlogPost());
-</code></pre>
-
-<p>Similarly, if a generic type is used exclusively as a return type, it can be marked <code>out</code>:</p>
-
-<pre><code class="php">interface Loader&lt;out Type&gt;
-{
-    public function load(int $id): Type;
-}
-
-class BlogPostLoader&lt;BlogPost&gt;
-{
-    public function load(int $id): BlogPost { ... }
-}
-
-$bloader = new BlogPostLoader();
-$post = $bloader-&gt;load(5);
-// $post could be a FeaturedBlogPost, potentially.
-</code></pre>
-
-<p>There are still a lot of bits to figure out here that may make it even more complex than anticipated.  That's why we're not looking into it in detail yet, and leaving it for future scope.</p>
-
-<h3 id="traits">Traits</h3>
-
-<p>PHP, of course, has another class-esque construct, Traits.  How generics would interact with Traits is still unclear.  It seems likely that something along the lines of the following could be made to work eventually:</p>
-
-<pre><code class="php">trait Tools&lt;T&gt; 
-{
-    public function useful(T $param): int { ... }
-}
-
-class C
-{
-    use Tools&lt;Book&gt;;
-}
-</code></pre>
-
-<p>However, there are some notable challenges here, largely around performance and avoiding code duplication.  They are likely solvable, but sufficiently complex that they won't be in an initial version.</p>
-
-<h3 id="generic-functions">Generic functions</h3>
-
-<p>So far we've only been talking about classes and class-likes.  What about functions?</p>
-
-<p>At least in theory, something like the following should be viable:</p>
-
-<pre><code class="php">function compareThings&lt;Thing&gt;(Thing $thingOne, Thing $thingTwo) { ... };
-
-compareThing&lt;Widget&gt;(new Widget(1), new Widget(2));
-</code></pre>
-
-<p>It's a bit clunky to have to specify the type manually on each call, but making that auto-detectable falls under the category of "type inference," as described below.</p>
-
-<p>There probably aren't a huge number of use cases for this pattern in practice; mainly ensuring that two parameters or a parameter and return have the same unspecified type, which is fairly niche.  It's also unclear what implications it would have for methods.  It seems possible, but maybe not practical.</p>
-
-<h2 id="what-is-still-hard">What is still hard</h2>
-
-<p>Notably absent from the above plan are, well, the Really Really Hard(tm) bits.  At this time, it's still not clear that they would be possible.</p>
-
-<h3 id="%60new%60-generics"><code>new</code> generics</h3>
-
-<p>In particular, a syntax like <code>$blogRepo = new Repository&lt;BlogPost&gt;()</code> is still not on the table.  The challenge is that the partial approach described here can put all the extra tracking data it needs on the <em>class</em>, and do the work at compile time.  Supporting on-the-fly declarations with <code>new</code> would require putting the extra tracking data on the <em>object</em>, and doing all the work at runtime.  That's an order of magnitude harder.</p>
-
-<h3 id="generic-compound-types">Generic compound types</h3>
-
-<p>Few if any languages support both generic types and union types.  PHP has had union and intersection types for some time, and made largely judicious use of them.  However, trying to make a class generic over a compound type makes the whole thing exponentially more complex.  This is one of the areas that Arnaud ran into in his earlier research.  Code like the following will likely never be possible, at least not if we care about performance at all:</p>
-
-<pre><code class="php">class SimpleRepository implements Repository&lt;BlogPost|User|Event&gt;
-{
-    // ...
-}
-
-class DataProcessor
-{
-    public function __construct(private Repository&lt;UserEntity|BlogPost&gt; $repo) {}
-}
-</code></pre>
-
-<p>In practice, that's probably fine.  The situations where that would even be useful are few and far between.</p>
-
-<p>As noted above, though, typing against a generic that is part of a union, like <code>public function setRepository(Repository&lt;UserEntity&gt;|null $repo) {}</code>, is probably possible in a follow-up RFC.</p>
-
-<h3 id="type-inference">Type inference</h3>
-
-<p>Type inference is a feature of many heavily typed languages where the compiler or engine can "figure out" what the type of something is supposed to be based on context.  As a trivial example:</p>
-
-<pre><code class="php">function concat(string $x, string $y)
-{
-    return $x . $y;
-}
-</code></pre>
-
-<p>It's readily obvious that the return type of that function is <code>string</code>, so a type inference engine will fill that in for you automatically.</p>
-
-<p>That would be very helpful for Generics, especially if runtime Generics ever became possible.</p>
-
-<pre><code class="php">class Car&lt;Driver&gt; {
-    public function __construct(private Driver $driver) {}
-}
-
-// This full version
-new Car&lt;StudentDriver&gt;(new StudentDriver());
-
-// Could be abbreviated to this, and the engine would figure out the rest.
-new Car(new StudentDriver());
-</code></pre>
-
-<p>A lot of Arnaud's research last year was into the feasibility of type inference to make generic code easier to work with.  This unfortunately remains in the Really Really Hard(tm) realm.  On the flipside, it's also largely irrelevant until and unless runtime generics (like in <code>new</code>) become feasible, which are already Really Really Hard(tm).</p>
-
-<p>All of the above remain challenges to a full PHP generics implementation.  Importantly, however, they are not made any harder by Gina's work into just the compile-time parts.  There's no guarantee that they will ever be possible, but they are not made any less possible by adopting the parts of generics we can do.</p>
-
-<h2 id="so%2C-should-we%3F">So, should we?</h2>
-
-<p>This work is still experimental.  As noted above, there's a few additional features still to add, and dozens of edge cases and crufty corners to sort out.  (What happens if you implement two generic interfaces?  Do anonymous classes make anything weirder?  Etc.)  There's much work ahead to bring compile-time generics to a votable state.</p>
-
-<p>The Foundation, of course, wants to be respectful of the time of our development team, the time of the many RFC reviewers, and the pocketbooks of our generous sponsors.  Foundation staff have already sunk quite a bit of time into the question of generics.  Before we sink more time into it, we want to ask the community (and PHP Internals especially)... Is it worth it?</p>
-
-<p>Would a partial-generics approach like that described here be acceptable?  Even if it may not be possible to go all the way to full generics, would "compile time-only generics" be a big enough win to justify spending more time on it?  Gina from The PHP Foundation team thinks it is, but PHP is larger than just our team, so we want to get feedback from the broader community.</p>
-
-<p><strong>Would you support (and vote in favor of) compile-time-only generics as described here?</strong></p>
-
-<p><div
-    class="thread-container"
-    data-reddit-thread="https://www.reddit.com/r/PHP/comments/1mhe7qf/compile_time_generics_yay_or_nay/"
-    data-reddit-max-depth="10"
-    data-reddit-show-content="false"
-    data-reddit-show-controls="true"
-></div>
-<script src="//unpkg.com/redditify/dist/redditify.min.js"></script>
-<link rel="stylesheet" href="//unpkg.com/redditify/dist/redditify.css">
-</p>
-]]></content><link href="https://thephp.foundation/blog/2025/08/05/compile-generics/"/><id>https://thephp.foundation/blog/2025/08/05/compile-generics/</id><updated>Mon, 04 Aug 2025 00:00:00 +0000</updated></entry><entry><author><name>Larry Garfield</name><uri>https://github.com/Crell</uri></author><title type="html"><![CDATA[PHP 8.4: How Property Hooks Happened]]></title><content type="html"><![CDATA[<p>PHP 8.4 is coming on 21 November this year.  It includes a host of new functionality, but the biggest, in more ways than one, is Property hooks.  Given the excitement around it, as well as its size, the PHP Foundation's Roman Pronsky asked me to write up a bit about the process we went through to produce this beast.</p>
-
-<p>What eventually became the twin RFCs of Property Hooks and Asymmetric Visibility is actually a very old discussion.  We'll look back at the decade-plus saga that got us here, how Ilija Tovilo and I got sucked in, how the design came to be, and how we managed to get it across the finish line.  Here's a teaser: It would not have happened without the PHP Foundation.</p>
-
-<h2 id="ancient-history">Ancient history</h2>
-
-<p>Ilija and I were not the first RFC to propose "property accessors," as they're called in most languages.  In fact, our RFC was the fifth:</p>
-
-<ol>
-<li>2009: <a href="https://wiki.php.net/rfc/propertygetsetsyntax">Property get/set syntax</a> by Dennis Robinson.  The core concepts and arguments behind it are all there, and haven't really changed in 15 years.  It never went to a vote.</li>
-<li>2012: <a href="https://wiki.php.net/rfc/propertygetsetsyntax-v1.2">Property get/set syntax v1.2</a> by Clint Priest and Nikita Popov.  It didn't pass the 2/3 threshold for a vote, but did pass 50%.</li>
-<li>2013: <a href="https://wiki.php.net/rfc/propertygetsetsyntax-alternative-typehinting-syntax">Property get/set syntax alternate typehinting syntax</a>, by Nikita Popov.  An alternate approach that proved very unpopular, failing 3 to 12.  However, it included a shorthand syntax that looks suspiciously like what eventually became property types.</li>
-<li>2021: <a href="https://wiki.php.net/rfc/property_accessors">Property Accessors</a> by Nikita Popov. More of a brainstorm of what property accessors could be, including specific use-case options like <code>lazy</code> or <code>guard</code>.  It never went to a vote, but Nikita did note that "We could likely get 80% of the value of accessors by supporting read-only properties and 90% by also supporting private-write properties."  (I don't fully agree, but much of the value is in private-write.)</li>
-</ol>
-
-<p>All of these attempts had a few things in common:</p>
-
-<ul>
-<li>Pseudo-functions that live on properties and intercept get/set operations.</li>
-<li>Asymmetric visibility</li>
-<li>Interface properties</li>
-</ul>
-
-<h2 id="a-new-team-enters-the-arena">A new team enters the arena</h2>
-
-<p>Fast forward to the summer of 2022.  Ilija Tovilo decided he wanted to take a swing at accessors next, and approached me for help.  Ilija and I had already worked together on the <a href="https://wiki.php.net/rfc/enumerations">Enums RFC</a>, so we knew we worked well together.  In part, that's because we have very different skill sets.  Ilija is rapidly becoming one of the most PHP engine-knowledgeable people around and quite proficient at writing C code, but is, by his own admission, not the most proficient writer of English.  I am a weirdo who enjoys language research, designing away edge cases, and can type fast enough to keep up with the Internals mailing list.  We complement each other well.</p>
-
-<p>Illija is also fully funded by the PHP Foundation to work on the engine, without which this amount of work would have been impossible.  I work on a volunteer basis, and as my employers allow.</p>
-
-<p>(Side note: As of this writing, I am between jobs.  If you're looking for a highly-experienced PHP Staff/Principal Engineer with experience in design, architecture, and leading teams, please <a href="https://github.com/Crell/">reach out</a> and let's talk!)</p>
-
-<h2 id="research%2C-then-development">Research, then development</h2>
-
-<p>With the initial goal of "making Nikita's proposal work-ish," I started digging into the research and design side.  My <a href="https://github.com/Crell/php-rfcs/blob/master/property-hooks/research.md">initial brainstorming</a> shows where our thoughts were at the time.  In short:</p>
-
-<ul>
-<li>There are two models of accessors: In untyped languages without visibility controls&mdash;like JavaScript and Python&mdash;accessors are methods with funny syntax.  In typed languages with visibility controls&mdash;like C#, Swift, and Kotlin&mdash;accessors are enhancements to a defined property.  As PHP is, let's face it, a typed language with visibility controls, that was clearly the model to follow (as had all previous RFCs).</li>
-<li>Yes, we really would need asymmetric visibility, accessors, and interface properties.  While technically separate features, they make the most sense in combination.</li>
-<li>The whole scope would be huge, so we needed to break it up where we could.  Splitting Asymmetric visibility off to its own RFC was the most natural place, which would be made easier by using Swift's <code>private(set)</code> style syntax.</li>
-</ul>
-
-<p>So in August of 2022 we put forward the first <a href="https://wiki.php.net/rfc/asymmetric-visibility">asymmetric visibility</a> RFC.  Given there was already a clear appetite for such functionality based on list discussions and on the recent <code>readonly</code> addition, which Nikita explicitly intended as a "junior asymmetric visibility," we expected some bikeshedding but overall a straightforward process.</p>
-
-<p>Boy were we wrong.</p>
-
-<h2 id="asymmetric-support">Asymmetric support</h2>
-
-<p>The Asymmetric Visibility RFC was far more contentious than we expected. Some people hated the idea.  Some wouldn't accept anything but the C#-style syntax.  We ran a poll of various different approaches, and our initial proposal (Swift-style placement and syntax) ended up winning by a slim margin, but disappointingly "the consensus position isn't your position, sorry" didn't really persuade anyone.</p>
-
-<p>Eventually, Asymmetric visibility finally went down in a 14:12 vote in January of 2023.  RFCs need 2/3 majorities to pass, so 14:12, while a simple majority, isn't enough.</p>
-
-<h2 id="hooking-it-up">Hooking it up</h2>
-
-<p>The failure of asymmetric visibility was a blow to both of us.  In most cases we didn't even know why the people who voted "no" did so, which made addressing their concerns guesswork.  Had we just wasted our time?  Would accessors even be acceptable?  The current RFC process is very bad at providing that kind of actionable feedback.</p>
-
-<p>While no one from the Foundation mentioned it, we were also both acutely aware that Ilija had been working on paid time for a proposal that ended up failing.</p>
-
-<p>Nonetheless, we had split the RFC in two deliberately so that even if only one was successful there was still a benefit.  We therefore turned our attention to the accessor part of the proposal (which included interface properties) and continued working.</p>
-
-<p>The model we developed was essentially a "direct port from Swift, with a few slight renames."</p>
-
-<p>The initial design included:</p>
-
-<ul>
-<li><code>get</code> - Totally takes over reading, and there's no physical property created.</li>
-<li><code>set</code> - Totally takes over writing, and there's no physical property created.</li>
-<li><code>beforeSet</code> - Intercepts the writing of a property but doesn't change the actual write itself.</li>
-<li><code>afterSet</code> - Called after the property is written, doesn't change the actual write itself.</li>
-</ul>
-
-<p>This is also when we changed the name from "accessors" to "hooks," which seemed a more accurate description given that model.  This later ended up not making sense, but Ilija had already taken the time to rename everything in the patch, so it was too much work to change back.  Sorry.</p>
-
-<p>The RFC text itself grew and grew.  PHP is a very mature (read: complex) language, and so there were lots of nooks and crannies that we had to account for.  Properties touch on almost everything: References, arrays, inheritance, final properties, interfaces, interaction with <code>readonly</code>, interaction with <code>__get</code>/<code>__set</code>, serialization, constructor property promotion, reflection...</p>
-
-<p>PHP is a big language, and we needed to think through and implement every possible edge case to avoid booby traps.</p>
-
-<h2 id="some-very-good-advice">Some very good Advice</h2>
-
-<p>We finally had a working design and implementation by April 2023 or so, but were quite nervous about it.  It was big, and we were both still smarting from the loss of asymmetric visibility.  Roman suggested that he run it past the PHP Foundation's Advisory Board for feedback first before going to the list, which turned out to be the best thing we could do.</p>
-
-<p>The Board came back with mostly positive feedback; they liked the concept, the design, the detail... but having 4 separate hooks felt very clumsy to them.  Especially with get/set wiping the backing property entirely and leaving the developer on their own.</p>
-
-<blockquote>
-<p><strong>The PHP Foundation's Advisory Board</strong> serves as a vital bridge between our major sponsors and the PHP development community. It's a Slack channel where we share early updates, insights, and ask for feedback. As well as receive insights and queries from sponsors' representatives. <br><br>
-
-Companies interested in joining this influential group and directly contributing to the future of PHP can become members of the Advisory Board by contributing a minimum of $12,000 to The&nbsp;PHP&nbsp;Foundation as at least a Silver Sponsor. <br/><br/>
-
-<strong><a href="https://thephp.foundation/sponsor/">Learn more about sponsorship opportunities.</a></strong><br/>
-</p>
-</blockquote>
-
-<p>I don't have the original chat log, but that resulted in a brief exchange that went approximately like this:</p>
-
-<pre><code class="text">Roman: The Advisory Board says three different set-ish hooks are a problem  
-Larry: Well, we kinda have to, because you can't access a property 
-       from within its own hook, that doesn't make sense.  
-Ilija: Er, actually we could do that easily.  
-Larry: Wait, what?  That... how... why...  
-Larry: *does some research*  
-Larry: Well crap, that's exactly what Kotlin does.  
-       Why didn't we research Kotlin in the first place?  
-Ilija: ¯\_(ツ)_/¯  
-Ilija: Well, I just switched it over to that. Looks nicer.
-</code></pre>
-
-<p>And so there we were, with half as many syntaxes for the same functionality, and a feature name (hooks) that no longer made sense.  Oh well.</p>
-
-<p>We finally made a public proposal at the start of May 2023.  Initial feedback was quite positive, though there was some pushback, including around the syntax from people who wanted the Javascript/Python style (naturally).  And the length.  Oh, the length.  If hooks isn't the longest RFC ever proposed, it's close.  But as we reiterated many times, that's because the problem space itself is highly complex.</p>
-
-<p>Sadly, time was not on our side.  Ilija was still working out some implementation edge cases and PHP 8.3’s feature-freeze was rapidly approaching.  So in early July, almost exactly a year after we started working on it, we decided to postpone hooks until 8.4 to give such a large change enough time to settle in and get adjusted if needed.</p>
-
-<h2 id="take-2">Take 2</h2>
-
-<p>After many distractions, we were able to bring the topic back up in <a href="https://externals.io/message/122445">February of 2024</a>, with the intent to bring it to a vote quickly, in March.  (We were so naive.)</p>
-
-<p>There was a lot more discussion this time around, though a lot of it was re-hashing edge cases we'd already addressed.  We also spent a considerable amount of time talking with the Foundation's developer team.  They, by and large, represent the most experienced developers of PHP Internals today, and were an invaluable resource.  That we could talk to them in real time via the Foundation's private chat also helped, as that's a far easier way to handle back-and-forth than a mailing list.</p>
-
-<p>There were a few significant changes we did end up making in response to feedback, from both the list and the Foundation team.  Most importantly, Ilija managed to make array properties work, which had been a challenge due to references.  Once again, being able to attack the problem from two directions (design and ergonomics from me, implementation from Ilija) let us improve the overall experience dramatically.</p>
-
-<h2 id="down-to-the-wire">Down to the wire</h2>
-
-<p>Even then, with all the positive feedback, it wasn't clear to us if it would pass.  Many people on the list had expressed support, but a lot of them were non-voters.</p>
-
-<p>Others had expressed essentially "fearful support"; They liked the idea, couldn't find fault with the implementation, but were concerned about just how big and complex the feature was.</p>
-
-<p>Still others, for various reasons, suggested moving certain sub-features to a separate, future RFC. Which is often code for "I don't like this part, but I don't want to vote against the RFC because of it, so please let me vote against it separately."  We explained, repeatedly, that this was already the slimmed down, partial version.  The other part was asymmetric visibility.</p>
-
-<p>After a lot of discussion and with a lot of trepidation, we called the vote in mid-April of 2024.  It passed 42:2.  I don't understand PHP Internals at times.</p>
-
-<h2 id="asymmetric-visibility-2%3A-the-wrath-of-ilija">Asymmetric Visibility 2: The Wrath of Ilija</h2>
-
-<p>Several people pointed out that hooks without asymmetric visibility had significant holes in it.  They were right, which is why we'd originally proposed that first.  We had decided that if hooks pass, we would take a second swing at asymmetric visibility.  So we did.</p>
-
-<p>The only actionable feedback we'd gotten the first time around was that without support for combining <code>readonly</code> and asymmetric visibility, the RFC felt "incomplete."  We went through a few variations on how to address that before landing on the final solution: Change <code>readonly</code> from being implicitly <code>private(set)</code> to implicitly <code>protected(set)</code>.  Otherwise, the discussion was mostly a retread of the year before.</p>
-
-<p>We were still stressing out about this one, too.  It hadn't passed before, why would it now?  However, this time it passed 24:7 at the start of August 2024.</p>
-
-<p>Looking at the results, while there were two people who changed from a No to a Yes, the biggest change from the first vote was simply who voted.  Most of the previous No votes... didn't vote this time.  But entirely new people showed up to vote yes.  Showing up to vote matters, folks.</p>
-
-<h2 id="on-to-the-next-adventure">On to the next adventure</h2>
-
-<p>25 months after the process started, PHP now joins the cadre of languages with robust, flexible properties that can do more than just hold dumb values.  It's been a wild ride, and at many points a needlessly stressful one.  The end result, though, is a host of powerful new features that make PHP 8.4 the most exciting PHP release in several years.  Really, they're the best thing since enums...</p>
-
-<p>I hope this tale is a useful insight for folks into how the sausage is made.  Now go enjoy interface properties, hooks, and asymmetric visibility.  Or enjoy not using hooks, but having the option to, which eliminates a lot of code.  Both work.</p>
-]]></content><link href="https://thephp.foundation/blog/2024/11/01/how-hooks-happened/"/><id>https://thephp.foundation/blog/2024/11/01/how-hooks-happened/</id><updated>Wed, 06 Nov 2024 00:00:00 +0000</updated></entry><entry><author><name>Arnaud Le Blanc</name><uri>https://github.com/arnaud-lb</uri></author><author><name>Derick Rethans</name><uri>https://derickrethans.nl</uri></author><author><name>Larry Garfield</name><uri>https://www.garfieldtech.com/</uri></author><title type="html"><![CDATA[State of Generics and Collections]]></title><content type="html"><![CDATA[<p>Generics have been on the list of wanted features for a long time by numerous PHP developers. The topic is often brought up in "What's New in PHP?" talks as well during Q&amp;A.</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2025-10-30T15:12:07+00:00</updated><entry><author><name>Arnaud Le Blanc</name><uri>https://github.com/arnaud-lb</uri></author><author><name>Derick Rethans</name><uri>https://derickrethans.nl</uri></author><author><name>Larry Garfield</name><uri>https://www.garfieldtech.com/</uri></author><title type="html"><![CDATA[State of Generics and Collections]]></title><content type="html"><![CDATA[<p>Generics have been on the list of wanted features for a long time by numerous PHP developers. The topic is often brought up in "What's New in PHP?" talks as well during Q&amp;A.</p>
 
 <p>In this article we will be exploring the different approaches, and what their current state is.</p>
 
@@ -1127,4 +484,647 @@ g($a); // error
 <li><a href="https://externals.io/message/125049">PHP Internals mailing list</a></li>
 <li><a href="https://www.reddit.com/r/PHP/comments/1ew7hik/state_of_generics_and_collections/">Reddit</a></li>
 </ul>
-]]></content><link href="https://thephp.foundation/blog/2024/08/19/state-of-generics-and-collections/"/><id>https://thephp.foundation/blog/2024/08/19/state-of-generics-and-collections/</id><updated>Mon, 19 Aug 2024 00:00:00 +0000</updated></entry></feed>
+]]></content><link href="https://thephp.foundation/blog/2024/08/19/state-of-generics-and-collections/"/><id>https://thephp.foundation/blog/2024/08/19/state-of-generics-and-collections/</id><updated>Mon, 19 Aug 2024 00:00:00 +0000</updated></entry><entry><author><name>Larry Garfield</name><uri>https://github.com/Crell</uri></author><title type="html"><![CDATA[PHP 8.5 Adds Pipe Operator: What it means]]></title><content type="html"><![CDATA[<p>PHP 8.5, due out November of this year, will bring with it another long-sought-after feature: the <a href="https://wiki.php.net/rfc/pipe-operator-v3">pipe operator</a> (<code>|&gt;</code>).  It's a small feature with huge potential, yet it still took years to happen.</p>
+
+<h2 id="what-is-a-pipe-operator%3F">What is a pipe operator?</h2>
+
+<p>The pipe operator, spelled <code>|&gt;</code>, is deceptively simple.  It takes the value on its left side and passes it as the single argument to a function (or in PHP's case, <code>callable</code>) on its right side:</p>
+
+<pre><code class="php">$result = "Hello World" |&gt; strlen(...)
+
+// Is equivalent to
+$result = strlen("Hello World");
+</code></pre>
+
+<p>On its own, that is not all that interesting.  Where it becomes interesting is when it is repeated, or chained, to form a "pipeline."  For example, here's real code from a real project I've worked on, recast to use pipes:</p>
+
+<pre><code class="php">$arr = [
+  new Widget(tags: ['a', 'b', 'c']),
+  new Widget(tags: ['c', 'd', 'e']),
+  new Widget(tags: ['x', 'y', 'a']),
+];
+
+$result = $arr
+    |&gt; fn($x) =&gt; array_column($x, 'tags') // Gets an array of arrays
+    |&gt; fn($x) =&gt; array_merge(...$x)       // Flatten into one big array
+    |&gt; array_unique(...)                  // Remove duplicates
+    |&gt; array_values(...)                  // Reindex the array.
+;
+
+// $result is ['a', 'b', 'c', 'd', 'e', 'x', 'y']
+</code></pre>
+
+<p>The same code without pipes would require either this horribly ugly nest of evil:</p>
+
+<pre><code class="php">array_values(array_unique(array_merge(...array_column($arr, 'tags'))));
+</code></pre>
+
+<p>Or manually creating a temporary variable for each step.  While temp variables are not the worst thing in the world, they are extra mental overhead, and mean that a chain like that cannot be used in a single-expression context, like a <code>match()</code> block.  A pipe chain can.</p>
+
+<p>Anyone who has worked on the Unix/Linux command line will likely recognize the similarity to the shell pipe, <code>|</code>.  That's very deliberate, as it is effectively the same thing: Use the output from the left side as the input on the right side.</p>
+
+<h2 id="where-did-it-come-from%3F">Where did it come from?</h2>
+
+<p>The <code>|&gt;</code> operator appears in many languages, mostly in the functional world.  F# has essentially the exact same operator, as does OCaml.  Elixir has a slightly fancier version (which we considered but ultimately decided against for now).  Numerous PHP libraries exist in the wild that offer similar capability with many extra expensive steps, including my own <a href="https://github.com/Crell/fp/">Crell/fp</a>.</p>
+
+<p>The story for PHP pipes, though, begins with Hack/HHVM, Facebook's PHP fork née competitive implementation.  Hack included many features beyond what PHP 5 of the day offered; many of them eventually ended up in later PHP versions.  One of its features was a unique spin on a pipe operator.</p>
+
+<p>In 2016, Sara Golemon, long-time PHP contributor and former Open Source lead on the HHVM project, proposed porting <a href="https://wiki.php.net/rfc/pipe-operator">Hack's pipes</a> to PHP directly.  In that RFC, the right side of a pipe wasn't a <code>callable</code> but an expression, and used a magic <code>$$</code> token (lovingly called <code>T_BLING</code>, at least according to yours truly) to inject the left-side result into it.  In that case, the example above would look like this:</p>
+
+<pre><code class="php">$result = $arr
+    |&gt; array_column($$, 'tags')
+    |&gt; array_merge(...$$)
+    |&gt; array_unique($$)
+    |&gt; array_values($$)
+;
+</code></pre>
+
+<p>While powerful, it was also somewhat limiting.  It was very non-standard, unlike any other language.  It also meant a weird, one-off syntax for partially-calling functions that worked only when paired with pipes.</p>
+
+<p>That RFC didn't go as far as a vote.  Nothing much happened for several years, until 2020/2021.  That's when I, fresh off of writing a book on functional programming in PHP that talked about function composition, decided to take a swing at it.  In particular, I partnered with a team to work on <a href="https://wiki.php.net/rfc/partial_function_application">Partial Function Application</a> (PFA) as a separate RFC from a more <a href="https://wiki.php.net/rfc/pipe-operator-v2">traditional pipe</a>.  The idea was that turning a multi-parameter function (like <code>array_column()</code> above) into the single-parameter function that <code>|&gt;</code> needed was a useful feature on its own, and should be usable elsewhere.  The syntax was a bit different than the Hack version, in order to make it more flexible: <code>some_function(?, 5, ?, 3, ...)</code>, which would take a 5-or-more parameter function and turn it into a 3 parameter function.</p>
+
+<p>Sadly, PFA didn't pass due to some engine complexity issues, and that largely undermined the v2 Pipe RFC, too.  However, we did get a consolation prize out of it: <a href="https://wiki.php.net/rfc/first_class_callable_syntax">First Class Callables</a> (the <code>array_values(...)</code> syntax), courtesy Nikita Popov, were by design a "junior", degenerate version of partial function application.</p>
+
+<p>Fast-forward to 2025, and I was sufficiently bored to take another swing at pipes.  This time with a better implementation with lots of hand-holding from Ilija Tovilo and Arnaud Le Blanc, both part of the PHP Foundation dev team, I was able to get it through.</p>
+
+<p>Third time's the charm.</p>
+
+<h2 id="more-than-the-sum-of-its-parts">More than the sum of its parts</h2>
+
+<p>Above, we described pipes as "deceptively simple."  The implementation itself is almost trivial; it's just syntax sugar for the temp variable version, effectively.  However, the best features are the ones that can combine with others or be used in novel ways to punch above their weight.</p>
+
+<p>We saw above how a long array manipulation process could now be condensed into a single chained expression.  Now imagine using that in places where only a single expression is allowed, such as a <code>match()</code>:</p>
+
+<pre><code class="php">$string = 'something GoesHERE';
+
+$newString = match ($format) {
+    'snake_case' =&gt; $string
+        |&gt; splitString(...)
+        |&gt; fn($x) =&gt; implode('_', $x)
+        |&gt; strtolower(...),
+    'lowerCamel' =&gt; $string
+        |&gt; splitString(...),
+        |&gt; fn($x) =&gt; array_map(ucfirst(...), $x)
+        |&gt; fn($x) =&gt; implode('', $x)
+        |&gt; lcfirst(...),
+    // Other case options here.
+};
+</code></pre>
+
+<p>Or, consider that the right-side can also be a function call that returns a <code>Closure</code>.  That means with a few functions that return functions:</p>
+
+<pre><code class="php">$profit = [1, 4, 5] 
+    |&gt; loadSeveral(...)
+    |&gt; filter(isOnSale(...))
+    |&gt; map(sellWidget(...))
+    |&gt; array_sum(...);
+</code></pre>
+
+<p>Which... gives us mostly the same thing as the long-discussed scalar methods!  Only pipes are more flexible as you can use any function on the right-side, not just those that have been blessed by the language designers as methods.</p>
+
+<p>At this point, pipe comes very close to being "extension functions", a feature of Kotlin and C# that allows writing functions that look like methods on an object, but are actually just stand-alone functions.  It's spelled a bit differently (<code>|</code> instead of <code>-</code>), but it's 75% of the way there, for free.</p>
+
+<p>Or take it a step further.  What if some steps in the pipe may return <code>null</code>?  We can, with a single function, "lift" the elements of our chain to handle <code>null</code> values in the same fashion as null-safe methods.</p>
+
+<pre><code class="php">function maybe(\Closure $c): \Closure
+{
+    return fn(mixed $arg) =&gt; $arg === null ? null : $c($arg);
+}
+
+$profit = [1, 4, 5] 
+    |&gt; maybe(loadSeveral(...))
+    |&gt; maybe(filter(isOnSale(...)))
+    |&gt; maybe(map(sellWidget(...)))
+    |&gt; maybe(array_sum(...));
+</code></pre>
+
+<p>That's right, we just implemented a Maybe Monad with a pipe and a single-line function.</p>
+
+<p>Now, think about that for streams...</p>
+
+<pre><code class="php">fopen('pipes.md', 'rb') // No variable, so it will close automatically when GCed.
+    |&gt; decode_rot13(...)
+    |&gt; lines_from_charstream(...)
+    |&gt; map(str_getcsv(...))
+    |&gt; map(Product::create(...))
+    |&gt; map($repo-&gt;save(...))
+;
+</code></pre>
+
+<p>The potential is absolutely huge.  I don't think it's immodest to say that the pipe operator has one of the highest "bangs for the buck" of any feature in recent memory, alongside such niceties as constructor property promotion.  And all thanks to a little syntax sugar.</p>
+
+<h2 id="what-comes-next%3F">What comes next?</h2>
+
+<p>Although pipes are a major milestone, we're not done.  There is active work on not one but two follow-up RFCs.</p>
+
+<p>The first is a second attempt at <a href="https://wiki.php.net/rfc/partial_function_application_v2">Partial Function Application</a>.  This is a larger feature, but with first-class callables already bringing in much of the necessary plumbing, which simplifies the implementation.  With pipes now providing a natural use case, as well as easy optimization points, it's worth a second attempt.  Whether it makes it into PHP 8.5, is delayed to 8.6, or is again rejected is still an open question as of this writing, though I am hopeful.  Major thanks to Arnaud Le Blanc from the PHP Foundation team for picking it up to update the implementation.</p>
+
+<p>The second is a <a href="https://wiki.php.net/rfc/function-composition">function composition operator</a>.  Where pipe executes immediately, function composition creates a new function by sticking two functions end-to-end.  That would mean the streams example above could be further optimized by combining the <code>map()</code> calls:</p>
+
+<pre><code class="php">fopen('pipes.md', 'rb')
+    |&gt; decode_rot13(...)
+    |&gt; lines_from_charstream(...)
+    |&gt; map(str_getcsv(...) + Product::create(...) + $repo-&gt;save(...))
+;
+</code></pre>
+
+<p>This one is definitely not going to make it into PHP 8.5, but I am hopeful that we'll be able to get it into 8.6.  Stay tuned.</p>
+
+<blockquote>
+  <p>Special thanks to Ilija Tovilo and Arnaud Le Blanc from the PHP Foundation team for their assistance with the pipe implementation.  If you’d like to help push PHP forward, consider <a href="https://thephp.foundation/sponsor/">becoming a sponsor</a>.</p>
+</blockquote>
+]]></content><link href="https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/"/><id>https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/</id><updated>Fri, 11 Jul 2025 00:00:00 +0000</updated></entry><entry><author><name>Larry Garfield</name><uri>https://github.com/Crell</uri></author><title type="html"><![CDATA[PHP 8.4: How Property Hooks Happened]]></title><content type="html"><![CDATA[<p>PHP 8.4 is coming on 21 November this year.  It includes a host of new functionality, but the biggest, in more ways than one, is Property hooks.  Given the excitement around it, as well as its size, the PHP Foundation's Roman Pronsky asked me to write up a bit about the process we went through to produce this beast.</p>
+
+<p>What eventually became the twin RFCs of Property Hooks and Asymmetric Visibility is actually a very old discussion.  We'll look back at the decade-plus saga that got us here, how Ilija Tovilo and I got sucked in, how the design came to be, and how we managed to get it across the finish line.  Here's a teaser: It would not have happened without the PHP Foundation.</p>
+
+<h2 id="ancient-history">Ancient history</h2>
+
+<p>Ilija and I were not the first RFC to propose "property accessors," as they're called in most languages.  In fact, our RFC was the fifth:</p>
+
+<ol>
+<li>2009: <a href="https://wiki.php.net/rfc/propertygetsetsyntax">Property get/set syntax</a> by Dennis Robinson.  The core concepts and arguments behind it are all there, and haven't really changed in 15 years.  It never went to a vote.</li>
+<li>2012: <a href="https://wiki.php.net/rfc/propertygetsetsyntax-v1.2">Property get/set syntax v1.2</a> by Clint Priest and Nikita Popov.  It didn't pass the 2/3 threshold for a vote, but did pass 50%.</li>
+<li>2013: <a href="https://wiki.php.net/rfc/propertygetsetsyntax-alternative-typehinting-syntax">Property get/set syntax alternate typehinting syntax</a>, by Nikita Popov.  An alternate approach that proved very unpopular, failing 3 to 12.  However, it included a shorthand syntax that looks suspiciously like what eventually became property types.</li>
+<li>2021: <a href="https://wiki.php.net/rfc/property_accessors">Property Accessors</a> by Nikita Popov. More of a brainstorm of what property accessors could be, including specific use-case options like <code>lazy</code> or <code>guard</code>.  It never went to a vote, but Nikita did note that "We could likely get 80% of the value of accessors by supporting read-only properties and 90% by also supporting private-write properties."  (I don't fully agree, but much of the value is in private-write.)</li>
+</ol>
+
+<p>All of these attempts had a few things in common:</p>
+
+<ul>
+<li>Pseudo-functions that live on properties and intercept get/set operations.</li>
+<li>Asymmetric visibility</li>
+<li>Interface properties</li>
+</ul>
+
+<h2 id="a-new-team-enters-the-arena">A new team enters the arena</h2>
+
+<p>Fast forward to the summer of 2022.  Ilija Tovilo decided he wanted to take a swing at accessors next, and approached me for help.  Ilija and I had already worked together on the <a href="https://wiki.php.net/rfc/enumerations">Enums RFC</a>, so we knew we worked well together.  In part, that's because we have very different skill sets.  Ilija is rapidly becoming one of the most PHP engine-knowledgeable people around and quite proficient at writing C code, but is, by his own admission, not the most proficient writer of English.  I am a weirdo who enjoys language research, designing away edge cases, and can type fast enough to keep up with the Internals mailing list.  We complement each other well.</p>
+
+<p>Illija is also fully funded by the PHP Foundation to work on the engine, without which this amount of work would have been impossible.  I work on a volunteer basis, and as my employers allow.</p>
+
+<p>(Side note: As of this writing, I am between jobs.  If you're looking for a highly-experienced PHP Staff/Principal Engineer with experience in design, architecture, and leading teams, please <a href="https://github.com/Crell/">reach out</a> and let's talk!)</p>
+
+<h2 id="research%2C-then-development">Research, then development</h2>
+
+<p>With the initial goal of "making Nikita's proposal work-ish," I started digging into the research and design side.  My <a href="https://github.com/Crell/php-rfcs/blob/master/property-hooks/research.md">initial brainstorming</a> shows where our thoughts were at the time.  In short:</p>
+
+<ul>
+<li>There are two models of accessors: In untyped languages without visibility controls&mdash;like JavaScript and Python&mdash;accessors are methods with funny syntax.  In typed languages with visibility controls&mdash;like C#, Swift, and Kotlin&mdash;accessors are enhancements to a defined property.  As PHP is, let's face it, a typed language with visibility controls, that was clearly the model to follow (as had all previous RFCs).</li>
+<li>Yes, we really would need asymmetric visibility, accessors, and interface properties.  While technically separate features, they make the most sense in combination.</li>
+<li>The whole scope would be huge, so we needed to break it up where we could.  Splitting Asymmetric visibility off to its own RFC was the most natural place, which would be made easier by using Swift's <code>private(set)</code> style syntax.</li>
+</ul>
+
+<p>So in August of 2022 we put forward the first <a href="https://wiki.php.net/rfc/asymmetric-visibility">asymmetric visibility</a> RFC.  Given there was already a clear appetite for such functionality based on list discussions and on the recent <code>readonly</code> addition, which Nikita explicitly intended as a "junior asymmetric visibility," we expected some bikeshedding but overall a straightforward process.</p>
+
+<p>Boy were we wrong.</p>
+
+<h2 id="asymmetric-support">Asymmetric support</h2>
+
+<p>The Asymmetric Visibility RFC was far more contentious than we expected. Some people hated the idea.  Some wouldn't accept anything but the C#-style syntax.  We ran a poll of various different approaches, and our initial proposal (Swift-style placement and syntax) ended up winning by a slim margin, but disappointingly "the consensus position isn't your position, sorry" didn't really persuade anyone.</p>
+
+<p>Eventually, Asymmetric visibility finally went down in a 14:12 vote in January of 2023.  RFCs need 2/3 majorities to pass, so 14:12, while a simple majority, isn't enough.</p>
+
+<h2 id="hooking-it-up">Hooking it up</h2>
+
+<p>The failure of asymmetric visibility was a blow to both of us.  In most cases we didn't even know why the people who voted "no" did so, which made addressing their concerns guesswork.  Had we just wasted our time?  Would accessors even be acceptable?  The current RFC process is very bad at providing that kind of actionable feedback.</p>
+
+<p>While no one from the Foundation mentioned it, we were also both acutely aware that Ilija had been working on paid time for a proposal that ended up failing.</p>
+
+<p>Nonetheless, we had split the RFC in two deliberately so that even if only one was successful there was still a benefit.  We therefore turned our attention to the accessor part of the proposal (which included interface properties) and continued working.</p>
+
+<p>The model we developed was essentially a "direct port from Swift, with a few slight renames."</p>
+
+<p>The initial design included:</p>
+
+<ul>
+<li><code>get</code> - Totally takes over reading, and there's no physical property created.</li>
+<li><code>set</code> - Totally takes over writing, and there's no physical property created.</li>
+<li><code>beforeSet</code> - Intercepts the writing of a property but doesn't change the actual write itself.</li>
+<li><code>afterSet</code> - Called after the property is written, doesn't change the actual write itself.</li>
+</ul>
+
+<p>This is also when we changed the name from "accessors" to "hooks," which seemed a more accurate description given that model.  This later ended up not making sense, but Ilija had already taken the time to rename everything in the patch, so it was too much work to change back.  Sorry.</p>
+
+<p>The RFC text itself grew and grew.  PHP is a very mature (read: complex) language, and so there were lots of nooks and crannies that we had to account for.  Properties touch on almost everything: References, arrays, inheritance, final properties, interfaces, interaction with <code>readonly</code>, interaction with <code>__get</code>/<code>__set</code>, serialization, constructor property promotion, reflection...</p>
+
+<p>PHP is a big language, and we needed to think through and implement every possible edge case to avoid booby traps.</p>
+
+<h2 id="some-very-good-advice">Some very good Advice</h2>
+
+<p>We finally had a working design and implementation by April 2023 or so, but were quite nervous about it.  It was big, and we were both still smarting from the loss of asymmetric visibility.  Roman suggested that he run it past the PHP Foundation's Advisory Board for feedback first before going to the list, which turned out to be the best thing we could do.</p>
+
+<p>The Board came back with mostly positive feedback; they liked the concept, the design, the detail... but having 4 separate hooks felt very clumsy to them.  Especially with get/set wiping the backing property entirely and leaving the developer on their own.</p>
+
+<blockquote>
+<p><strong>The PHP Foundation's Advisory Board</strong> serves as a vital bridge between our major sponsors and the PHP development community. It's a Slack channel where we share early updates, insights, and ask for feedback. As well as receive insights and queries from sponsors' representatives. <br><br>
+
+Companies interested in joining this influential group and directly contributing to the future of PHP can become members of the Advisory Board by contributing a minimum of $12,000 to The&nbsp;PHP&nbsp;Foundation as at least a Silver Sponsor. <br/><br/>
+
+<strong><a href="https://thephp.foundation/sponsor/">Learn more about sponsorship opportunities.</a></strong><br/>
+</p>
+</blockquote>
+
+<p>I don't have the original chat log, but that resulted in a brief exchange that went approximately like this:</p>
+
+<pre><code class="text">Roman: The Advisory Board says three different set-ish hooks are a problem  
+Larry: Well, we kinda have to, because you can't access a property 
+       from within its own hook, that doesn't make sense.  
+Ilija: Er, actually we could do that easily.  
+Larry: Wait, what?  That... how... why...  
+Larry: *does some research*  
+Larry: Well crap, that's exactly what Kotlin does.  
+       Why didn't we research Kotlin in the first place?  
+Ilija: ¯\_(ツ)_/¯  
+Ilija: Well, I just switched it over to that. Looks nicer.
+</code></pre>
+
+<p>And so there we were, with half as many syntaxes for the same functionality, and a feature name (hooks) that no longer made sense.  Oh well.</p>
+
+<p>We finally made a public proposal at the start of May 2023.  Initial feedback was quite positive, though there was some pushback, including around the syntax from people who wanted the Javascript/Python style (naturally).  And the length.  Oh, the length.  If hooks isn't the longest RFC ever proposed, it's close.  But as we reiterated many times, that's because the problem space itself is highly complex.</p>
+
+<p>Sadly, time was not on our side.  Ilija was still working out some implementation edge cases and PHP 8.3’s feature-freeze was rapidly approaching.  So in early July, almost exactly a year after we started working on it, we decided to postpone hooks until 8.4 to give such a large change enough time to settle in and get adjusted if needed.</p>
+
+<h2 id="take-2">Take 2</h2>
+
+<p>After many distractions, we were able to bring the topic back up in <a href="https://externals.io/message/122445">February of 2024</a>, with the intent to bring it to a vote quickly, in March.  (We were so naive.)</p>
+
+<p>There was a lot more discussion this time around, though a lot of it was re-hashing edge cases we'd already addressed.  We also spent a considerable amount of time talking with the Foundation's developer team.  They, by and large, represent the most experienced developers of PHP Internals today, and were an invaluable resource.  That we could talk to them in real time via the Foundation's private chat also helped, as that's a far easier way to handle back-and-forth than a mailing list.</p>
+
+<p>There were a few significant changes we did end up making in response to feedback, from both the list and the Foundation team.  Most importantly, Ilija managed to make array properties work, which had been a challenge due to references.  Once again, being able to attack the problem from two directions (design and ergonomics from me, implementation from Ilija) let us improve the overall experience dramatically.</p>
+
+<h2 id="down-to-the-wire">Down to the wire</h2>
+
+<p>Even then, with all the positive feedback, it wasn't clear to us if it would pass.  Many people on the list had expressed support, but a lot of them were non-voters.</p>
+
+<p>Others had expressed essentially "fearful support"; They liked the idea, couldn't find fault with the implementation, but were concerned about just how big and complex the feature was.</p>
+
+<p>Still others, for various reasons, suggested moving certain sub-features to a separate, future RFC. Which is often code for "I don't like this part, but I don't want to vote against the RFC because of it, so please let me vote against it separately."  We explained, repeatedly, that this was already the slimmed down, partial version.  The other part was asymmetric visibility.</p>
+
+<p>After a lot of discussion and with a lot of trepidation, we called the vote in mid-April of 2024.  It passed 42:2.  I don't understand PHP Internals at times.</p>
+
+<h2 id="asymmetric-visibility-2%3A-the-wrath-of-ilija">Asymmetric Visibility 2: The Wrath of Ilija</h2>
+
+<p>Several people pointed out that hooks without asymmetric visibility had significant holes in it.  They were right, which is why we'd originally proposed that first.  We had decided that if hooks pass, we would take a second swing at asymmetric visibility.  So we did.</p>
+
+<p>The only actionable feedback we'd gotten the first time around was that without support for combining <code>readonly</code> and asymmetric visibility, the RFC felt "incomplete."  We went through a few variations on how to address that before landing on the final solution: Change <code>readonly</code> from being implicitly <code>private(set)</code> to implicitly <code>protected(set)</code>.  Otherwise, the discussion was mostly a retread of the year before.</p>
+
+<p>We were still stressing out about this one, too.  It hadn't passed before, why would it now?  However, this time it passed 24:7 at the start of August 2024.</p>
+
+<p>Looking at the results, while there were two people who changed from a No to a Yes, the biggest change from the first vote was simply who voted.  Most of the previous No votes... didn't vote this time.  But entirely new people showed up to vote yes.  Showing up to vote matters, folks.</p>
+
+<h2 id="on-to-the-next-adventure">On to the next adventure</h2>
+
+<p>25 months after the process started, PHP now joins the cadre of languages with robust, flexible properties that can do more than just hold dumb values.  It's been a wild ride, and at many points a needlessly stressful one.  The end result, though, is a host of powerful new features that make PHP 8.4 the most exciting PHP release in several years.  Really, they're the best thing since enums...</p>
+
+<p>I hope this tale is a useful insight for folks into how the sausage is made.  Now go enjoy interface properties, hooks, and asymmetric visibility.  Or enjoy not using hooks, but having the option to, which eliminates a lot of code.  Both work.</p>
+]]></content><link href="https://thephp.foundation/blog/2024/11/01/how-hooks-happened/"/><id>https://thephp.foundation/blog/2024/11/01/how-hooks-happened/</id><updated>Wed, 06 Nov 2024 00:00:00 +0000</updated></entry><entry><author><name>Larry Garfield</name><uri>https://github.com/Crell</uri></author><author><name>Gina Banyard</name><uri>https://github.com/Girgias</uri></author><title type="html"><![CDATA[Compile time generics: yay or nay?]]></title><content type="html"><![CDATA[<p>One of the most sought-after features for PHP is Generics: The ability to have a type that takes another type as a parameter.  It's a feature found in most compiled languages by now, but implementing generics in an interpreted language like PHP, where all the type checking would have to be done at runtime, has always proven Really Really Hard(tm), Really Really Slow(tm), or both.</p>
+
+<p>But, experimentation by Gina from the PHP Foundation's dev team suggests we may be able to get 80% of the benefit for 20% of the work.  Is that enough?</p>
+
+<h2 id="the-short%2C-short-version">The short, short version</h2>
+
+<p>Gina and Larry believe it's possible to implement generics on only interfaces and abstract classes, which would offer a large chunk of the benefit of generics but avoid most of the pitfalls.</p>
+
+<p>In particular, interfaces and abstract classes could declare that they need one or more types specified:</p>
+
+<pre><code class="php">interface Exporter&lt;Thing&gt; { ... }
+</code></pre>
+
+<p>And then classes that implement/extend them would be required to fill in those types:</p>
+
+<pre><code class="php">class WidgetExporter implements Exporter&lt;Widget&gt; { ... }
+</code></pre>
+
+<p>And then anywhere the type <code>Thing</code> appeared in <code>Exporter</code>, it would turn into <code>Widget</code> in <code>WidgetExporter</code>.</p>
+
+<p>All of this is done at compile time, which makes it far easier and faster, and many/most errors would be caught at compile time.</p>
+
+<p>Runtime generics, where you could say <code>$fooExporter = new Exporter&lt;Foo&gt;()</code>, would still not be possible, but they do not get any harder as a result of going just part way.</p>
+
+<p><strong>Would you support (and vote in favor of) compile-time-only generics as described below?</strong></p>
+
+<h2 id="prior-research">Prior research</h2>
+
+<p>In 2023 and 2024, Arnaud Le Blanc from the Foundation team did <a href="https://thephp.foundation/blog/2024/08/19/state-of-generics-and-collections/">extensive experimentation</a> on generics, picking up on the previous work from Nikita Popov.  The full result of that experiment is available at that link, but in short, some parts of generics would be possible, even straightforward.  Where the edge cases run into problems, though, they are very big problems.</p>
+
+<p>In particular:</p>
+
+<ul>
+<li>Union types and generics combine to produce massive performance penalties.</li>
+<li>Many cases would result in a very cumbersome syntax unless we had really good type inference.</li>
+<li>Really good type inference is hard and slow, especially in PHP.</li>
+</ul>
+
+<p>Meanwhile, making arrays generic, and therefore typed, had its own challenges, especially given that PHP variables are not typed.</p>
+
+<p>Arnaud and Larry Garfield did further investigation afterward into introducing <a href="https://github.com/Crell/php-rfcs/blob/master/modules/spec-brainstorm.md">a "module" system</a> that would help PHP's compiler <a href="https://github.com/arnaud-lb/php-src/pull/10">see more code at once</a>, and thus be able to do type inference more readily, but sadly that also ran into many challenging edge cases.</p>
+
+<h2 id="associated-types">Associated Types</h2>
+
+<p>In mid-2025, the Foundation's Gina Banyard started working on "associated types," a generics-adjacent feature found in a few languages that happens entirely at compile time. It essentially allows a class or interface to specify that inheritors must specify a type to be used in certain situations.  Initially, it was intended as an alternative to the <a href="https://wiki.php.net/rfc/never-parameters-v2"><code>never</code> parameters</a> RFC, offering a better solution to the case of an interface that doesn't need to specify a particular type, but implementing classes do.</p>
+
+<p>The initial plan looked something like this:</p>
+
+<pre><code class="php">interface ImporterExporter
+{
+    type T;
+
+    public function import(string $input): T;
+
+    public function export(T $value): string;
+}
+
+class ThingImporter implements ImporterExporter
+{
+    public function import(string $input): Thing { ... }
+
+    public function export(Thing $value): string { ... }
+}
+</code></pre>
+
+<p>In which all references to <code>T</code> in the interface need to be replaced by the <em>same</em> type in the class; it can be any type, as long as it's the same in all cases.</p>
+
+<p>After some discussion with the rest of the team, however, it became apparent that if we just changed the spelling and squinted, associated types look an awful lot like generics.  Or rather, part of generics, as full generics is a very involved bit of functionality with lots of different complimentary parts.</p>
+
+<p>Which begged the question: Could we just do some of those parts, and get most of the benefit?  According to Gina's work, the answer is "Probably!"</p>
+
+<h2 id="abstract-generics">Abstract Generics</h2>
+
+<p>What Gina has implemented, though it still needs some polish and extension, is essentially "manually monomorphized generics," implemented at compile time.  "Monomorphization" is an approach to generics (there are others) where a type-specific version of a class is created "on the fly" by the compiler or engine when that type-specific version is used.  By "manual," we mean that it's up to the developer to do so in advance.</p>
+
+<p>Let's see what that looks like in practice.</p>
+
+<p>Consider our previous interface, but spelled this way instead:</p>
+
+<pre><code class="php">interface ImporterExporter&lt;T&gt;
+{
+    public function import(string $input): T;
+
+    public function export(T $value): string;
+}
+</code></pre>
+
+<p>That interface requires that any class implementing it specify what type <code>T</code> should be; it can be any type, as long as it's the same type in both places.</p>
+
+<pre><code class="php">class ThingExporter implements ImporterExporter&lt;Thing&gt;
+{
+    public function import(string $input): Thing { ... }
+
+    public function export(Thing $value): string { ... }
+}
+
+class WidgetExporter implements ImporterExporter&lt;Widget&gt;
+{
+    public function import(string $input): Widget { ... }
+
+    public function export(Widget $value): string { ... }
+}
+</code></pre>
+
+<p>This can all be enforced at compile time, where it's much cheaper, and cached by the opcache.</p>
+
+<p>This alone is not full generics capability, but it is in practice a good chunk of it.  It's also possible to specify that the generic type must conform to some other type, like another interface.  For instance:</p>
+
+<pre><code class="php">interface Repository&lt;T: Entity&gt;
+{
+    public function save(T $entity): bool;
+
+    public function load(int $id): T;
+}
+
+class BlogPostRepository implements Repository&lt;BlogPost&gt;
+{
+    // ...
+}
+</code></pre>
+
+<p>This would work, but only if <code>BlogPost</code> implements the <code>Entity</code> interface.</p>
+
+<h2 id="a-few-more-parts">A few more parts</h2>
+
+<p>Although not yet implemented, Gina is confident that a few natural extensions are also possible and straightforward, if enough time is put into them.  They could probably be included in the initial RFC.</p>
+
+<p>First, allowing abstract classes to be generic as well.  That would allow for:</p>
+
+<pre><code class="php">abstract class BaseRepository&lt;T: Entity&gt;
+{ 
+    // ...
+}
+
+class BlogPostRepository extends BaseRepository&lt;BlogPost&gt; { ... }
+</code></pre>
+
+<p>Of particular note, the inheriting class wouldn't need to actually <em>do</em> anything beyond specifying the type.  That would be enough.  The net result is that we may see a proliferation of "empty extending classes" that just specify a type and have no body of their own, as a surrogate for what in other languages would be <code>$repo = new Repository&lt;BlogPost&gt;()</code>.  In PHP, that would instead be spelled:</p>
+
+<pre><code class="php">class BlogPostRepository extends BaseRepository&lt;BlogPost&gt; { ... }
+$repo = new BlogPostRepository();
+</code></pre>
+
+<p>(That's the "manual monomorphization" we talked about.)  Not ideal, but still much more powerful than the status quo as of PHP 8.4.</p>
+
+<p>Second, type declarations.  It would already be possible to type against <code>BlogPostRepository</code>, as that's just a boring old class like we've always known.  What would be a straightforward extension is allowing this:</p>
+
+<pre><code class="php">class DataProcessor
+{
+    public function __construct(private Repository&lt;UserEntity&gt; $repo) {}
+}
+</code></pre>
+
+<p>That is, declare that <code>$repo</code> must implement <code>Repository</code> <em>and</em> specify a type that is itself a child of <code>UserEntity</code> (which could be a class or another interface).  In the initial version it may not support a generic as part of a compound type (such as <code>private Repository&lt;UserEntity&gt;|null $repo</code>), but that should be feasible to add later, probably.</p>
+
+<h2 id="collections">Collections</h2>
+
+<p>One of the most common uses of generics is for collections, be they typed arrays or objects.  The details vary by language, but a collection known to be of a certain type is very valuable.  The previous blog post (linked above) included a discussion of a collection design by Derick Rethans and Larry Garfield, which included a custom one-off syntax for... essentially the behavior described here.  Updating that design for this syntax would give us three interfaces, or probably base classes:</p>
+
+<pre><code class="php">abstract class Sequence&lt;T&gt;
+{
+    private array $values = [];
+
+    public function append(T $new): static
+    {
+        $this-&gt;values[] = $new;
+        return $this;
+    }
+
+    public filter(callable $filter): static
+    {
+        // ...
+    }
+}
+
+abstract class Set&lt;T&gt;
+{
+    // ...
+}
+
+abstract class Dict&lt;K, V&gt;
+{
+    // ...
+}
+</code></pre>
+
+<p>And then they could be used like so:</p>
+
+<pre><code class="php">class Articles extends Sequence&lt;Article&gt; {}
+
+class Library extends Set&lt;Book&gt; {}
+
+class YearBooks extends Dict&lt;int, Book&gt; {}
+</code></pre>
+
+<p>Those concrete classes could have additional methods in them if desired, but that's optional.  The above would be sufficient to have a collection that mapped integers to Book objects, and had syntax-level guarantees those types would hold.</p>
+
+<p>The above design could be implemented either in core or user-space.  There's definite benefit to them being built-in, but the type-control portion at least would be available to user-space code, too.</p>
+
+<h2 id="longer-term">Longer term</h2>
+
+<p>There's a few more complex features that seem like they are doable, but require enough extra effort that they almost certainly wouldn't make sense in the initial RFC.  They could probably be in their own future RFCs, however, barring any surprises.</p>
+
+<h3 id="variance">Variance</h3>
+
+<p>In the initial version, generic types would be invariant.  <code>BlogPostRepository</code> is a child of <code>BaseRepository</code>, but just because <code>FeaturedBlogPost</code> is a child of <code>BlogPost</code> doesn't mean <code>BlogPostRepository</code> can accept <code>FeaturedBlogPost</code>.  The challenge is that the variance of parameter and return types are in opposite directions, and because a generic type may appear both as a parameter type (which can be seen as a write context) and a return type (which can be seen as a read context) it needs to be invariant, similar to how property types are invariant.  (This is a common challenge in languages with generics.)</p>
+
+<p>However, Kotlin and C# have a feature that we should be able to borrow for PHP.  If a generic type is used exclusively in parameters it can be marked as an <code>in</code> type to indicate it is contravariant.  For example:</p>
+
+<pre><code class="php">interface Saver&lt;in Type&gt;
+{
+    public function save(Type $object): bool;
+}
+
+class BlogPostSaver&lt;BlogPost&gt;
+{
+    public function save(BlogPost $object): bool { ... }
+}
+
+$bsaver = new BlogPostSaver();
+$bsaver-&gt;save(new FeaturedBlogPost());
+</code></pre>
+
+<p>Similarly, if a generic type is used exclusively as a return type, it can be marked <code>out</code>:</p>
+
+<pre><code class="php">interface Loader&lt;out Type&gt;
+{
+    public function load(int $id): Type;
+}
+
+class BlogPostLoader&lt;BlogPost&gt;
+{
+    public function load(int $id): BlogPost { ... }
+}
+
+$bloader = new BlogPostLoader();
+$post = $bloader-&gt;load(5);
+// $post could be a FeaturedBlogPost, potentially.
+</code></pre>
+
+<p>There are still a lot of bits to figure out here that may make it even more complex than anticipated.  That's why we're not looking into it in detail yet, and leaving it for future scope.</p>
+
+<h3 id="traits">Traits</h3>
+
+<p>PHP, of course, has another class-esque construct, Traits.  How generics would interact with Traits is still unclear.  It seems likely that something along the lines of the following could be made to work eventually:</p>
+
+<pre><code class="php">trait Tools&lt;T&gt; 
+{
+    public function useful(T $param): int { ... }
+}
+
+class C
+{
+    use Tools&lt;Book&gt;;
+}
+</code></pre>
+
+<p>However, there are some notable challenges here, largely around performance and avoiding code duplication.  They are likely solvable, but sufficiently complex that they won't be in an initial version.</p>
+
+<h3 id="generic-functions">Generic functions</h3>
+
+<p>So far we've only been talking about classes and class-likes.  What about functions?</p>
+
+<p>At least in theory, something like the following should be viable:</p>
+
+<pre><code class="php">function compareThings&lt;Thing&gt;(Thing $thingOne, Thing $thingTwo) { ... };
+
+compareThing&lt;Widget&gt;(new Widget(1), new Widget(2));
+</code></pre>
+
+<p>It's a bit clunky to have to specify the type manually on each call, but making that auto-detectable falls under the category of "type inference," as described below.</p>
+
+<p>There probably aren't a huge number of use cases for this pattern in practice; mainly ensuring that two parameters or a parameter and return have the same unspecified type, which is fairly niche.  It's also unclear what implications it would have for methods.  It seems possible, but maybe not practical.</p>
+
+<h2 id="what-is-still-hard">What is still hard</h2>
+
+<p>Notably absent from the above plan are, well, the Really Really Hard(tm) bits.  At this time, it's still not clear that they would be possible.</p>
+
+<h3 id="%60new%60-generics"><code>new</code> generics</h3>
+
+<p>In particular, a syntax like <code>$blogRepo = new Repository&lt;BlogPost&gt;()</code> is still not on the table.  The challenge is that the partial approach described here can put all the extra tracking data it needs on the <em>class</em>, and do the work at compile time.  Supporting on-the-fly declarations with <code>new</code> would require putting the extra tracking data on the <em>object</em>, and doing all the work at runtime.  That's an order of magnitude harder.</p>
+
+<h3 id="generic-compound-types">Generic compound types</h3>
+
+<p>Few if any languages support both generic types and union types.  PHP has had union and intersection types for some time, and made largely judicious use of them.  However, trying to make a class generic over a compound type makes the whole thing exponentially more complex.  This is one of the areas that Arnaud ran into in his earlier research.  Code like the following will likely never be possible, at least not if we care about performance at all:</p>
+
+<pre><code class="php">class SimpleRepository implements Repository&lt;BlogPost|User|Event&gt;
+{
+    // ...
+}
+
+class DataProcessor
+{
+    public function __construct(private Repository&lt;UserEntity|BlogPost&gt; $repo) {}
+}
+</code></pre>
+
+<p>In practice, that's probably fine.  The situations where that would even be useful are few and far between.</p>
+
+<p>As noted above, though, typing against a generic that is part of a union, like <code>public function setRepository(Repository&lt;UserEntity&gt;|null $repo) {}</code>, is probably possible in a follow-up RFC.</p>
+
+<h3 id="type-inference">Type inference</h3>
+
+<p>Type inference is a feature of many heavily typed languages where the compiler or engine can "figure out" what the type of something is supposed to be based on context.  As a trivial example:</p>
+
+<pre><code class="php">function concat(string $x, string $y)
+{
+    return $x . $y;
+}
+</code></pre>
+
+<p>It's readily obvious that the return type of that function is <code>string</code>, so a type inference engine will fill that in for you automatically.</p>
+
+<p>That would be very helpful for Generics, especially if runtime Generics ever became possible.</p>
+
+<pre><code class="php">class Car&lt;Driver&gt; {
+    public function __construct(private Driver $driver) {}
+}
+
+// This full version
+new Car&lt;StudentDriver&gt;(new StudentDriver());
+
+// Could be abbreviated to this, and the engine would figure out the rest.
+new Car(new StudentDriver());
+</code></pre>
+
+<p>A lot of Arnaud's research last year was into the feasibility of type inference to make generic code easier to work with.  This unfortunately remains in the Really Really Hard(tm) realm.  On the flipside, it's also largely irrelevant until and unless runtime generics (like in <code>new</code>) become feasible, which are already Really Really Hard(tm).</p>
+
+<p>All of the above remain challenges to a full PHP generics implementation.  Importantly, however, they are not made any harder by Gina's work into just the compile-time parts.  There's no guarantee that they will ever be possible, but they are not made any less possible by adopting the parts of generics we can do.</p>
+
+<h2 id="so%2C-should-we%3F">So, should we?</h2>
+
+<p>This work is still experimental.  As noted above, there's a few additional features still to add, and dozens of edge cases and crufty corners to sort out.  (What happens if you implement two generic interfaces?  Do anonymous classes make anything weirder?  Etc.)  There's much work ahead to bring compile-time generics to a votable state.</p>
+
+<p>The Foundation, of course, wants to be respectful of the time of our development team, the time of the many RFC reviewers, and the pocketbooks of our generous sponsors.  Foundation staff have already sunk quite a bit of time into the question of generics.  Before we sink more time into it, we want to ask the community (and PHP Internals especially)... Is it worth it?</p>
+
+<p>Would a partial-generics approach like that described here be acceptable?  Even if it may not be possible to go all the way to full generics, would "compile time-only generics" be a big enough win to justify spending more time on it?  Gina from The PHP Foundation team thinks it is, but PHP is larger than just our team, so we want to get feedback from the broader community.</p>
+
+<p><strong>Would you support (and vote in favor of) compile-time-only generics as described here?</strong></p>
+
+<p><div
+    class="thread-container"
+    data-reddit-thread="https://www.reddit.com/r/PHP/comments/1mhe7qf/compile_time_generics_yay_or_nay/"
+    data-reddit-max-depth="10"
+    data-reddit-show-content="false"
+    data-reddit-show-controls="true"
+></div>
+<script src="//unpkg.com/redditify/dist/redditify.min.js"></script>
+<link rel="stylesheet" href="//unpkg.com/redditify/dist/redditify.css">
+</p>
+]]></content><link href="https://thephp.foundation/blog/2025/08/05/compile-generics/"/><id>https://thephp.foundation/blog/2025/08/05/compile-generics/</id><updated>Mon, 04 Aug 2025 00:00:00 +0000</updated></entry></feed>
