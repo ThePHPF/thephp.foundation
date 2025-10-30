@@ -11,7 +11,7 @@ published_at: 30 October 2025
 
 ---
 
-Thanks to investment from the Sovereign Tech Agency (STA), a German government backed organization supporting open-source infrastructure, the PHP Foundation is modernizing one of PHP’s oldest and most critical subsystems: Streams.
+Thanks to investment from the **[Sovereign Tech Agency (STA)](https://www.sovereign.tech/)**, a German government backed organization supporting open-source infrastructure, the PHP Foundation is modernizing one of PHP’s oldest and most critical subsystems: Streams.
 
 This post outlines the planned work and explains why these changes matter for the PHP ecosystem.
 
