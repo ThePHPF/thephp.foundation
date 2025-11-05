@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2025-10-30T15:12:07+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[The PHP Foundation Update, March 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2025-11-05T22:30:26+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[The PHP Foundation Update, March 2022]]></title><content type="html"><![CDATA[<p><code>&lt;?php echo 'Hello world!';</code></p>
 
 <p>We promised to publish monthly updates, but something everything went wrong in February.</p>
 
@@ -258,7 +258,119 @@ Office hours call: <a href="http://cal.com/pronskiy/php-foundation-office-hours"
 </p>
 
 <p>P.S. If you have any questions or wild ideas about how you'd like to support PHP, don't hesitate to reach out. We're all ears.</p>
-]]></content><link href="https://thephp.foundation/blog/2024/09/30/call-fo-sponsors/"/><id>https://thephp.foundation/blog/2024/09/30/call-fo-sponsors/</id><updated>Mon, 30 Sep 2024 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[The PHP Foundation: Impact and Transparency Report 2023]]></title><content type="html"><![CDATA[<h2 id="executive-summary">Executive Summary</h2>
+]]></content><link href="https://thephp.foundation/blog/2024/09/30/call-fo-sponsors/"/><id>https://thephp.foundation/blog/2024/09/30/call-fo-sponsors/</id><updated>Mon, 30 Sep 2024 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[Design Contest Results and Lessons Learned]]></title><content type="html"><![CDATA[<p>Over the last few weeks we ran a focused community contest to refresh the <strong>PHP 8.5 release page</strong>. Thank you to everyone who submitted, reviewed, voted, and discussed.</p>
+
+<blockquote>
+  <p><strong>Note about future redesigns</strong><br />
+  This contest was an experiment for a single release page. We might <strong>not</strong> use the same approach for a broader homepage redesign. If we did run a contest again, we would separate tracks (on-brand update vs blue-sky concept), use a dedicated voting tool or randomized ordering, keep log-damped voting, and set a 50/50 jury/community split with clearer criteria and a small shortlist honorarium.</p>
+</blockquote>
+
+<h2 id="%2A%2Aresults%2A%2A"><strong>Results</strong></h2>
+
+<h3 id="%2A%2Awinner%3A%2A%2A-%2A%2Anuno-guerra-%40nunowar%2A%2A-%E2%80%93-%2Aphp-is-awesome-%F0%9F%94%A5%2A"><strong>Winner:</strong> <strong>Nuno Guerra <a href="https://github.com/nunowar">@nunowar</a></strong> – <a href="https://github.com/php/web-php/issues/1539"><em>PHP is Awesome 🔥</em></a></h3>
+
+<p><a href="https://nunoguerra.com/dev/php/" target="_blank" rel="noopener noreferrer"><img src="/assets/post-images/2025/design-contest/nunowar.png" class="shadow-md rounded-lg"/></a></p>
+
+<p><strong>Prizes:</strong> <strong>$1,000  + AI Ultimate License from <a href="https://www.jetbrains.com/phpstorm/">JetBrains</a></strong>·+ <strong>$1,000 from <a href="https://getrector.com/">Rector</a></strong></p>
+
+<p>At JetBrains, we decided to support other contestants with gifts as well.</p>
+
+<h3 id="%2A%2Arunner-up%3A-hanna-stelmakh-%40hastelmakh%2A%2A-%E2%80%93-%2Aphp-8.5-release-page-design-contest-submission%2A"><strong>Runner-up: Hanna Stelmakh <a href="https://github.com/hastelmakh">@hastelmakh</a></strong> – <a href="https://github.com/php/web-php/issues/1534"><em>PHP 8.5 Release Page Design Contest Submission</em></a></h3>
+
+<p><a href="https://www.figma.com/proto/82kDxx1bh6ngC8Pv2Z2jUW/PHP-Release-8.5?page-id=0%3A1\&node-id=449-2387\&viewport=-7617%2C246%2C0.13\&t=f2P7pJOdSAEOKLDY-1" target="_blank" rel="noopener noreferrer"><img src="/assets/post-images/2025/design-contest/hastelmakh.png" class="shadow-md rounded-lg"/></a></p>
+
+<p><strong>Prize:</strong> <strong>$500 + AI Ultimate License from <a href="https://www.jetbrains.com/phpstorm/">JetBrains</a></strong></p>
+
+<h3 id="%2A%2Ashortlist%3A%2A%2A"><strong>Shortlist:</strong></h3>
+
+<p><a href="https://github.com/ben-joostens">@ben-joostens</a><strong>,</strong> <a href="https://github.com/tao">@tao</a>, <a href="https://github.com/lumnn">@lumnn</a>, <a href="https://github.com/thiagoolivier">@thiagoolivier</a>, <a href="https://github.com/mcpad2025-crypto">@mcpad2025-crypto</a>, <a href="https://github.com/minlivalievs-eng">@minlivalievs-eng</a>, <a href="https://github.com/giodi">@giodi</a>, <a href="https://github.com/everlastedSE">@everlastedSE</a>, <a href="https://github.com/asterd">@asterd</a>, <a href="https://github.com/ad-1984">@ad-1984</a>, <a href="https://github.com/Ayesh">@Ayesh</a>, <a href="https://github.com/StillMoe">@StillMoe</a>, <a href="https://github.com/KarinCheng">@KarinCheng</a>, <a href="https://github.com/christian-acceseo">@christian-acceseo</a></p>
+
+<p><strong>Shortlist thank-you:</strong> <a href="https://www.jetbrains.com/phpstorm/"><strong>PhpStorm</strong></a> <strong>/ <a href="https://www.jetbrains.com/ai-ides/buy/">AI Ultimate License</a> from JetBrains</strong> for all shortlisted participants.</p>
+
+<h2 id="%2A%2Aa-little-fun-along-the-way%2A%2A-"><strong>A little fun along the way</strong> <img style="display:inline;" width="40" src="https://ftp.ntu.edu.tw/php/images/ele-running.gif"/></h2>
+
+<p>Of course, no PHP contest would be complete without a bit of humor. Among all the serious submissions, one playful entry <a href="https://x.com/jon_bossenger/status/1983140310826795201">from X/Twitter</a> stood out:</p>
+
+<p><a href="https://php-85-hyperactive.vercel.app/" target="_blank" rel="noopener noreferrer"><img src="/assets/post-images/2025/design-contest/php-85-hyperactive.png" class="shadow-md rounded-lg"/></a></p>
+
+<p>It didn’t quite meet the “accessible and lightweight” brief, but it earned an honorary mention for spirit and commitment to vintage web aesthetics.</p>
+
+<h2 id="%2A%2Anext-steps%2A%2A"><strong>Next steps</strong></h2>
+
+<p>We will collaborate with Nuno Guerra to polish the winning design and may incorporate ideas from other entries where they improve clarity or accessibility. And finally we’ll adapt it to <a href="https://php.net">php.net</a>’s stack.</p>
+
+<p>In the spirit of PHP, contributions are welcome! We encourage all participants to join the <a href="https://github.com/php/web-php/issues/1592"><strong>implementation thread</strong></a> and help refine the final page.</p>
+
+<h2 id="%2A%2Ahow-the-scoring-worked%2A%2A"><strong>How the scoring worked</strong></h2>
+
+<p>We combined a jury score with a community vote and <strong>used a logarithmic transform</strong> to reduce social-media spikes. We counted <strong>👍 during the voting window</strong> for each shortlisted entry and <strong>ignored 👎</strong> and other reactions.</p>
+
+<ul>
+<li><p><strong>Jury (40%)</strong><br />
+Judges scored four criteria from 0 to 5. For each entry we averaged judges into <code>J</code> in the range 0–25.<br />
+Normalization: <code>J_norm = J / 25</code>.</p></li>
+<li><p><strong>Community vote (60%), log-damped</strong><br />
+For entry <em>i</em> with <code>V_i</code> upvotes and <code>T = Σ V_i</code> across the shortlist:<br />
+<code>V′_i = log(1 + V_i)</code> and <code>V_logshare = V′_i / Σ V′_k</code>.</p></li>
+<li><p><strong>Final score</strong><br />
+Final <code>= 0.4 × J_norm + 0.6 × V_logshare</code></p></li>
+</ul>
+
+<p>We will publish the full table with anonymized jury subtotals and final scores.</p>
+
+<h2 id="%2A%2Alessons-learned%2A%2A"><strong>Lessons learned</strong></h2>
+
+<p>We might not run this contest format again. <strong>But if we did, here’s what we would fix:</strong></p>
+
+<h3 id="%2A%2A1-scope-%26-brief%3A-on-brand-update-vs-full-rework%2A%2A"><strong>1) Scope &amp; brief: on-brand update vs full rework</strong></h3>
+
+<p>The scope was the <strong>PHP 8.5 release page</strong> with an <strong>on-brand</strong> constraint. Some entries explored broader rebrands.</p>
+
+<p><strong>Next time we would</strong></p>
+
+<ul>
+<li>Be more explicit on on-brand requirement.</li>
+<li><p>Potentially Split into <strong>two tracks</strong> judged and presented <strong>separately</strong>:</p>
+
+<ul>
+<li><strong>Track A:</strong> on-brand update of the specific page.<br />
+<strong>Track B:</strong> blue-sky concept for future reference.</li>
+</ul></li>
+</ul>
+
+<h3 id="%2A%2A2-%E2%80%9Cspec-work%E2%80%9D-concerns%2A%2A"><strong>2) “Spec work” concerns</strong></h3>
+
+<p>We kept scope small, didn’t require code, and recognized more than one entry (runner-up and shortlist thanks).</p>
+
+<p><strong>Next time we would:</strong></p>
+
+<ul>
+<li>Prepare a more detailed brief with the community.</li>
+<li>Offer a <strong>paid shortlist honorarium</strong>.</li>
+<li>Cap deliverables (mock-ups plus optional tiny HTML/CSS), no heavy code.</li>
+</ul>
+
+<h3 id="%2A%2A3-voting-%26-balance-order-bias%2C-social-reach%2C-weights%2A%2A"><strong>3) Voting &amp; balance (order bias, social reach, weights)</strong></h3>
+
+<p>Order bias and social amplification are real. In this contest we <strong>ignored downvotes</strong> and <strong>used log damping</strong> on upvotes.</p>
+
+<p><strong>Next time we would also:</strong></p>
+
+<ul>
+<li>Use a dedicated voting tool that shuffles candidates.</li>
+<li>Optionally hide aggregate reaction counts until voting closes.</li>
+<li>Set a 50/50 split between jury and community.</li>
+<li>Publish the full calculation sheet upfront for auditability.</li>
+</ul>
+
+<h2 id="%2A%2Athank-you%2A%2A"><strong>Thank you</strong></h2>
+
+<p>Thanks to all participants, voters, reviewers, and to the jury and design advisors for careful evaluations. Special thanks to <a href="https://www.jetbrains.com/"><strong>JetBrains</strong></a> and <a href="https://getrector.com/"><strong>Rector</strong></a> for supporting the community with prizes and encouragement.</p>
+
+<p>If you want to follow implementation, join the thread here: <a href="https://github.com/php/web-php/issues/1592"><strong>php/web-php/issues/1592</strong></a>.</p>
+
+<p>🐘💜</p>
+]]></content><link href="https://thephp.foundation/blog/2025/11/05/design-contest-results/"/><id>https://thephp.foundation/blog/2025/11/05/design-contest-results/</id><updated>Wed, 05 Nov 2025 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[The PHP Foundation: Impact and Transparency Report 2023]]></title><content type="html"><![CDATA[<h2 id="executive-summary">Executive Summary</h2>
 
 <p>At the beginning of 2024, The PHP Foundation is a collective of <strong>9 volunteer board members</strong>, <strong>1 full-time operations manager</strong> sponsored by JetBrains, and <strong>10 developers</strong> paid part-time/full-time who make more than half of the contributions to the PHP language and its extensions.</p>
 

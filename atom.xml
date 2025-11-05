@@ -3,9 +3,128 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2025-10-30T15:12:06+00:00</updated>
+    <updated>2025-11-05T22:30:25+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Design Contest Results and Lessons Learned]]></title>
+            <link href="https://thephp.foundation/blog/2025/11/05/design-contest-results/"/>
+            <updated>2025-11-05T00:00:00+00:00</updated>
+            <id>https://thephp.foundation/blog/2025/11/05/design-contest-results/</id>
+            <content type="html"><![CDATA[<p>Over the last few weeks we ran a focused community contest to refresh the <strong>PHP 8.5 release page</strong>. Thank you to everyone who submitted, reviewed, voted, and discussed.</p>
+
+<blockquote>
+  <p><strong>Note about future redesigns</strong><br />
+  This contest was an experiment for a single release page. We might <strong>not</strong> use the same approach for a broader homepage redesign. If we did run a contest again, we would separate tracks (on-brand update vs blue-sky concept), use a dedicated voting tool or randomized ordering, keep log-damped voting, and set a 50/50 jury/community split with clearer criteria and a small shortlist honorarium.</p>
+</blockquote>
+
+<h2 id="%2A%2Aresults%2A%2A"><strong>Results</strong></h2>
+
+<h3 id="%2A%2Awinner%3A%2A%2A-%2A%2Anuno-guerra-%40nunowar%2A%2A-%E2%80%93-%2Aphp-is-awesome-%F0%9F%94%A5%2A"><strong>Winner:</strong> <strong>Nuno Guerra <a href="https://github.com/nunowar">@nunowar</a></strong> – <a href="https://github.com/php/web-php/issues/1539"><em>PHP is Awesome 🔥</em></a></h3>
+
+<p><a href="https://nunoguerra.com/dev/php/" target="_blank" rel="noopener noreferrer"><img src="/assets/post-images/2025/design-contest/nunowar.png" class="shadow-md rounded-lg"/></a></p>
+
+<p><strong>Prizes:</strong> <strong>$1,000  + AI Ultimate License from <a href="https://www.jetbrains.com/phpstorm/">JetBrains</a></strong>·+ <strong>$1,000 from <a href="https://getrector.com/">Rector</a></strong></p>
+
+<p>At JetBrains, we decided to support other contestants with gifts as well.</p>
+
+<h3 id="%2A%2Arunner-up%3A-hanna-stelmakh-%40hastelmakh%2A%2A-%E2%80%93-%2Aphp-8.5-release-page-design-contest-submission%2A"><strong>Runner-up: Hanna Stelmakh <a href="https://github.com/hastelmakh">@hastelmakh</a></strong> – <a href="https://github.com/php/web-php/issues/1534"><em>PHP 8.5 Release Page Design Contest Submission</em></a></h3>
+
+<p><a href="https://www.figma.com/proto/82kDxx1bh6ngC8Pv2Z2jUW/PHP-Release-8.5?page-id=0%3A1\&node-id=449-2387\&viewport=-7617%2C246%2C0.13\&t=f2P7pJOdSAEOKLDY-1" target="_blank" rel="noopener noreferrer"><img src="/assets/post-images/2025/design-contest/hastelmakh.png" class="shadow-md rounded-lg"/></a></p>
+
+<p><strong>Prize:</strong> <strong>$500 + AI Ultimate License from <a href="https://www.jetbrains.com/phpstorm/">JetBrains</a></strong></p>
+
+<h3 id="%2A%2Ashortlist%3A%2A%2A"><strong>Shortlist:</strong></h3>
+
+<p><a href="https://github.com/ben-joostens">@ben-joostens</a><strong>,</strong> <a href="https://github.com/tao">@tao</a>, <a href="https://github.com/lumnn">@lumnn</a>, <a href="https://github.com/thiagoolivier">@thiagoolivier</a>, <a href="https://github.com/mcpad2025-crypto">@mcpad2025-crypto</a>, <a href="https://github.com/minlivalievs-eng">@minlivalievs-eng</a>, <a href="https://github.com/giodi">@giodi</a>, <a href="https://github.com/everlastedSE">@everlastedSE</a>, <a href="https://github.com/asterd">@asterd</a>, <a href="https://github.com/ad-1984">@ad-1984</a>, <a href="https://github.com/Ayesh">@Ayesh</a>, <a href="https://github.com/StillMoe">@StillMoe</a>, <a href="https://github.com/KarinCheng">@KarinCheng</a>, <a href="https://github.com/christian-acceseo">@christian-acceseo</a></p>
+
+<p><strong>Shortlist thank-you:</strong> <a href="https://www.jetbrains.com/phpstorm/"><strong>PhpStorm</strong></a> <strong>/ <a href="https://www.jetbrains.com/ai-ides/buy/">AI Ultimate License</a> from JetBrains</strong> for all shortlisted participants.</p>
+
+<h2 id="%2A%2Aa-little-fun-along-the-way%2A%2A-"><strong>A little fun along the way</strong> <img style="display:inline;" width="40" src="https://ftp.ntu.edu.tw/php/images/ele-running.gif"/></h2>
+
+<p>Of course, no PHP contest would be complete without a bit of humor. Among all the serious submissions, one playful entry <a href="https://x.com/jon_bossenger/status/1983140310826795201">from X/Twitter</a> stood out:</p>
+
+<p><a href="https://php-85-hyperactive.vercel.app/" target="_blank" rel="noopener noreferrer"><img src="/assets/post-images/2025/design-contest/php-85-hyperactive.png" class="shadow-md rounded-lg"/></a></p>
+
+<p>It didn’t quite meet the “accessible and lightweight” brief, but it earned an honorary mention for spirit and commitment to vintage web aesthetics.</p>
+
+<h2 id="%2A%2Anext-steps%2A%2A"><strong>Next steps</strong></h2>
+
+<p>We will collaborate with Nuno Guerra to polish the winning design and may incorporate ideas from other entries where they improve clarity or accessibility. And finally we’ll adapt it to <a href="https://php.net">php.net</a>’s stack.</p>
+
+<p>In the spirit of PHP, contributions are welcome! We encourage all participants to join the <a href="https://github.com/php/web-php/issues/1592"><strong>implementation thread</strong></a> and help refine the final page.</p>
+
+<h2 id="%2A%2Ahow-the-scoring-worked%2A%2A"><strong>How the scoring worked</strong></h2>
+
+<p>We combined a jury score with a community vote and <strong>used a logarithmic transform</strong> to reduce social-media spikes. We counted <strong>👍 during the voting window</strong> for each shortlisted entry and <strong>ignored 👎</strong> and other reactions.</p>
+
+<ul>
+<li><p><strong>Jury (40%)</strong><br />
+Judges scored four criteria from 0 to 5. For each entry we averaged judges into <code>J</code> in the range 0–25.<br />
+Normalization: <code>J_norm = J / 25</code>.</p></li>
+<li><p><strong>Community vote (60%), log-damped</strong><br />
+For entry <em>i</em> with <code>V_i</code> upvotes and <code>T = Σ V_i</code> across the shortlist:<br />
+<code>V′_i = log(1 + V_i)</code> and <code>V_logshare = V′_i / Σ V′_k</code>.</p></li>
+<li><p><strong>Final score</strong><br />
+Final <code>= 0.4 × J_norm + 0.6 × V_logshare</code></p></li>
+</ul>
+
+<p>We will publish the full table with anonymized jury subtotals and final scores.</p>
+
+<h2 id="%2A%2Alessons-learned%2A%2A"><strong>Lessons learned</strong></h2>
+
+<p>We might not run this contest format again. <strong>But if we did, here’s what we would fix:</strong></p>
+
+<h3 id="%2A%2A1-scope-%26-brief%3A-on-brand-update-vs-full-rework%2A%2A"><strong>1) Scope &amp; brief: on-brand update vs full rework</strong></h3>
+
+<p>The scope was the <strong>PHP 8.5 release page</strong> with an <strong>on-brand</strong> constraint. Some entries explored broader rebrands.</p>
+
+<p><strong>Next time we would</strong></p>
+
+<ul>
+<li>Be more explicit on on-brand requirement.</li>
+<li><p>Potentially Split into <strong>two tracks</strong> judged and presented <strong>separately</strong>:</p>
+
+<ul>
+<li><strong>Track A:</strong> on-brand update of the specific page.<br />
+<strong>Track B:</strong> blue-sky concept for future reference.</li>
+</ul></li>
+</ul>
+
+<h3 id="%2A%2A2-%E2%80%9Cspec-work%E2%80%9D-concerns%2A%2A"><strong>2) “Spec work” concerns</strong></h3>
+
+<p>We kept scope small, didn’t require code, and recognized more than one entry (runner-up and shortlist thanks).</p>
+
+<p><strong>Next time we would:</strong></p>
+
+<ul>
+<li>Prepare a more detailed brief with the community.</li>
+<li>Offer a <strong>paid shortlist honorarium</strong>.</li>
+<li>Cap deliverables (mock-ups plus optional tiny HTML/CSS), no heavy code.</li>
+</ul>
+
+<h3 id="%2A%2A3-voting-%26-balance-order-bias%2C-social-reach%2C-weights%2A%2A"><strong>3) Voting &amp; balance (order bias, social reach, weights)</strong></h3>
+
+<p>Order bias and social amplification are real. In this contest we <strong>ignored downvotes</strong> and <strong>used log damping</strong> on upvotes.</p>
+
+<p><strong>Next time we would also:</strong></p>
+
+<ul>
+<li>Use a dedicated voting tool that shuffles candidates.</li>
+<li>Optionally hide aggregate reaction counts until voting closes.</li>
+<li>Set a 50/50 split between jury and community.</li>
+<li>Publish the full calculation sheet upfront for auditability.</li>
+</ul>
+
+<h2 id="%2A%2Athank-you%2A%2A"><strong>Thank you</strong></h2>
+
+<p>Thanks to all participants, voters, reviewers, and to the jury and design advisors for careful evaluations. Special thanks to <a href="https://www.jetbrains.com/"><strong>JetBrains</strong></a> and <a href="https://getrector.com/"><strong>Rector</strong></a> for supporting the community with prizes and encouragement.</p>
+
+<p>If you want to follow implementation, join the thread here: <a href="https://github.com/php/web-php/issues/1592"><strong>php/web-php/issues/1592</strong></a>.</p>
+
+<p>🐘💜</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[Evolving PHP Streams for Async, Security, and Performance]]></title>
             <link href="https://thephp.foundation/blog/2025/10/30/php-streams-evolution/"/>
@@ -1151,66 +1270,6 @@ $profit = [1, 4, 5]
 <script src="//unpkg.com/redditify/dist/redditify.min.js"></script>
 <link rel="stylesheet" href="//unpkg.com/redditify/dist/redditify.css">
 </p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[FrankenPHP Is Now Officially Supported by&nbsp;The&nbsp;PHP&nbsp;Foundation]]></title>
-            <link href="https://thephp.foundation/blog/2025/05/15/frankenphp/"/>
-            <updated>2025-05-15T00:00:00+00:00</updated>
-            <id>https://thephp.foundation/blog/2025/05/15/frankenphp/</id>
-            <content type="html"><![CDATA[<p><a href="https://frankenphp.dev">FrankenPHP</a>, a modern high-performance PHP application server created by <a href="https://dunglas.dev">Kévin Dunglas</a> and sponsored by <a href="http://Les-Tilleuls.coop">Les-Tilleuls.coop</a>, is now officially supported by the PHP Foundation. FrankenPHP integrates PHP directly into Go and Caddy, simplifying deployment, improving performance, and reducing costs. It powers real-time features, supports advanced hosting scenarios, and offers a performance-boosting “worker mode” already integrated by Laravel, Symfony, and Yii. The PHP Foundation will actively contribute to FrankenPHP’s development and host its code on the official PHP GitHub, marking a major step toward modernizing the PHP ecosystem while keeping governance with the original maintainers.</p>
-
-<p><img src="/assets/post-images/2025/2025-05-15-frankenphp.png" alt="FrankenPHP-PHP-Foundation" /></p>
-
-<p>PHP is a programming language used by around 70% of websites and applications, and by key software and frameworks such as <a href="https://wordpress.org">WordPress</a>, <a href="https://laravel.com">Laravel</a>, and <a href="https://symfony.com">Symfony</a>.</p>
-
-<p>FrankenPHP offers a host of new features that allow to:</p>
-
-<ul>
-<li>simplify the development of applications written in PHP;</li>
-<li>drastically improve performance, while considerably reducing hosting costs (FinOps) and energy consumption (GreenOps);</li>
-<li>facilitate deployment in production, whether on bare-metal servers or in cloud-native environments;</li>
-<li>easily develop real-time features thanks to native <a href="https://mercure.rocks">Mercure</a> protocol support;</li>
-<li>extend PHP apps with Go, C, and C++ programming languages;</li>
-<li>support the PHP programming language in any application written in Go (server, proxy, in-house development...).</li>
-</ul>
-
-<p>Specifically, FrankenPHP integrates the official PHP interpreter as a module for Go and <a href="https://caddyserver.com">Caddy</a>, the popular next-generation web server that supports the latest web platform innovations in terms of performance, security, and DevOps: HTTP/3, compression with Zstandard, 103 Early Hints, automatic generation and renewal of HTTPS certificates, Encrypted Client Hello, structured logs, OpenMetrics/Prometheus metrics… Caddy is also co-maintained by Kévin and sponsored by Les-Tilleuls.coop.</p>
-
-<p>Thanks to its innovative architecture, FrankenPHP lets you install a complete PHP environment (interpreter, web server, extensions, etc.) optimized for performance and security, by downloading a standalone statically compiled executable or a Docker image.</p>
-
-<p>FrankenPHP also offers a performance-optimized mode called “worker mode”, which takes advantage of the capabilities of the Go programming language. When this optional mode is used, the PHP application will be able to retain in memory those elements that can be reused to process other HTTP requests instead of being completely reset to process each incoming HTTP request (“share nothing” model). Worker mode is especially useful for frameworks such as Symfony and Laravel that can prevent rebuilding their kernels and services again and again for nothing.</p>
-
-<p>Using this mode requires minimal adaptations to the code of modern PHP applications in line with good programming practice. The Laravel, Symfony and Yii frameworks already offer official integrations of FrankenPHP's worker mode, enabling worker mode to be activated without modifying the application code.</p>
-
-<p>According to <a href="https://sylius.com/blog/ecosystem/month-of-sylius-august-2024/#frankenphp">an analysis carried out this summer by Sylius</a>, the publisher of the eponymous e-commerce platform, the use of FrankenPHP's worker mode reduces the software's response times by 80%, while reducing by more than 6 the number of machines required to serve the same number of users.</p>
-
-<p>FrankenPHP is now a reliable, mature solution used in production for an ever-increasing number of projects. The project now has <a href="https://github.com/dunglas/frankenphp">almost 8,000 stars on GitHub</a>, has passed the symbolic 100-contributor mark, and is officially supported by numerous hosting providers, including Upsun, Laravel Cloud, and Clever Cloud.</p>
-
-<p>To get to this point, it was necessary to initiate close collaboration between the development teams of FrankenPHP, the PHP interpreter itself, the Caddy web server, and even the Go programming language.</p>
-
-<p>Today, we're proud to announce that, with the aim of intensifying this collaboration, enabling the project to gain momentum, and modernizing the entire PHP ecosystem, <strong>the FrankenPHP project is now officially supported by the PHP Foundation</strong>.</p>
-
-<p>In concrete terms, FrankenPHP's source code will be transferred to the PHP project's GitHub organization, and the PHP Foundation team will contribute to the maintenance and development of FrankenPHP to ensure its reliability, durability, and compatibility with the latest language innovations.</p>
-
-<p>Part of the FrankenPHP documentation will also be transferred to the PHP website.</p>
-
-<p>The governance of the project remains unchanged, and the current team of maintainers (Kévin Dunglas, Robert Landers, Alexander Stecher) will continue to be in charge of releases, as well as code reviews. They will be actively collaborating with the PHP Foundation team in charge of the language development.</p>
-
-<p>In addition to the support provided by the foundation, Les-Tilleuls.coop will continue to sponsor FrankenPHP (as well as PHP and Caddy) by providing developers and contributing financially.</p>
-
-<p>FrankenPHP is already <a href="https://caddyserver.com/#:~:text=4x%20faster%20PHP%20apps">promoted by Caddy</a> as the official, modern solution for using PHP with this server.<br />
-In the future, to simplify the PHP development experience (one-line installation of a complete development environment) and to promote a solution that, for projects requiring it, considerably improves the performance and efficiency of PHP applications, FrankenPHP may be highlighted on the PHP website as one of the ways to use the language (other SAPIs such as PHP-FPM will continue to be fully supported solutions).</p>
-
-<p>To find out more about FrankenPHP and the many new possibilities it offers, take a look at <a href="https://frankenphp.dev">its documentation</a>. To meet the software's authors and find out how it is used in production, don't miss <a href="https://api-platform.com/con/">the API Platform conference</a> (by the same authors as FrankenPHP) taking place on September 18 and 19 in France (Lille).</p>
-
-<p>Also, join us online for <a href="https://lp.jetbrains.com/phpverse-2025/"><strong>PHPverse on June 17</strong></a> — a special event celebrating PHP’s 30th anniversary.</p>
-
-<p>Finally, to help keep the PHP ecosystem innovating, <a href="https://thephp.foundation/sponsor/">support the foundation</a>!</p>
-
-<p><a href="https://thephp.foundation/">The PHP Foundation</a><br />
-<a href="http://Les-Tilleuls.coop">Les-Tilleuls.coop</a><br />
-<a href="https://caddyserver.com">The Caddy team</a></p>
 ]]></content>
         </entry>
     </feed>
