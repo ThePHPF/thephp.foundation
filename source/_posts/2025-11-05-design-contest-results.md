@@ -48,7 +48,7 @@ It didn’t quite meet the “accessible and lightweight” brief, but it earned
 
 ## **Next steps**
 
-We will collaborate with Nuno Guerra to polish the winning design and may incorporate ideas from other entries where they improve clarity or accessibility. And finally we’ll adapt it to [php.net](http://php.net)’s stack.
+We will collaborate with Nuno Guerra to polish the winning design and may incorporate ideas from other entries where they improve clarity or accessibility. And finally we’ll adapt it to [php.net](https://php.net)’s stack.
 
 In the spirit of PHP, contributions are welcome! We encourage all participants to join the [**implementation thread**](https://github.com/php/web-php/issues/1592) and help refine the final page.
 
