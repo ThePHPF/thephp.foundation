@@ -87,7 +87,7 @@ The scope was the **PHP 8.5 release page** with an **on-brand** constraint. Some
 
 ### **2) “Spec work” concerns**
 
-We kept scope small, didn’t require code, and recognized more than one entry (runner-up, third place, and shortlist thanks).
+We kept scope small, didn’t require code, and recognized more than one entry (runner-up and shortlist thanks).
 
 **Next time we would:**
 
