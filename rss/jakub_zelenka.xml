@@ -1,5 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2025-11-05T22:30:26+00:00</updated><entry><author><name>Jakub Zelenka</name><uri>https://github.com/bukka</uri></author><title type="html"><![CDATA[Introducing Web&nbsp;Services&nbsp;Tool for&nbsp;PHP-FPM]]></title><content type="html"><![CDATA[<p>The Web Services Tool (WST) is a command-line application developed to test PHP-FPM, <a href="https://www.sovereigntechfund.de/tech/php"><strong>commissioned by the Sovereign Tech Fund</strong></a> (STF). Its primary goal is to facilitate testing of the integration between different web servers and PHP-FPM across various environments and configurations.</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2025-11-10T14:36:30+00:00</updated><entry><author><name>Jakub Zelenka</name><uri>https://github.com/bukka</uri></author><title type="html"><![CDATA[Evolving PHP Streams for Async, Security, and Performance]]></title><content type="html"><![CDATA[<p>Thanks to investment from the <strong><a href="https://www.sovereign.tech/">Sovereign Tech Agency (STA)</a></strong>, a German government backed organization supporting open-source infrastructure, the PHP Foundation is modernizing one of PHP’s oldest and most critical subsystems: Streams.</p>
+
+<p>This post outlines the planned work and explains why these changes matter for the PHP ecosystem.</p>
+
+<h2 id="what-are-php-streams%3F">What Are PHP Streams?</h2>
+
+<p>Before diving into the improvements, let’s briefly revisit what Streams are and why they matter.</p>
+
+<p>Introduced around 2001, PHP streams provide a unified way to handle file and network I/O, allowing data from different sources such as files, sockets, or memory to be accessed through a consistent API using the same set of functions.</p>
+
+<p>Over time, PHP streams have proven to be a powerful and flexible subsystem, but some parts of the implementation have not evolved alongside modern use cases, performance expectations, and system capabilities. This project aims to make Streams faster, safer, and easier to extend for modern PHP applications.</p>
+
+<p>The actual scope is divided into four subsections.</p>
+
+<h2 id="performance-and-stability-improvements">Performance and Stability improvements</h2>
+
+<p>This part aims to improve performance and consistency in how PHP Streams copying and seeking.</p>
+
+<p>There is still room to improve performance in stream copying.</p>
+
+<p>For example, copying large files or handling network transfers can be made faster through asynchronous I/O mechanisms like io_uring on Linux. At the same time, we need to prevent potential crashes caused by memory-mapped files. The goal is to phase out mmap usage and introduce a new copying API as part of the upcoming I/O API, using io_uring or other system features where available.</p>
+
+<p>Seeking is currently problematic for filtered streams, which causes various inconsistencies. Developers working with filters often encounter limitations when rewinding or skipping data.</p>
+
+<p>The plan is to introduce a new seeking filter API that will allow seeking in streams where possible and disallow it where not. For example, seeking to the beginning should always be possible, but not all filters support seeking to arbitrary positions. Some may allow it, so a new internal API is needed.</p>
+
+<h2 id="error-handling-and-monitoring-enhancements">Error Handling and Monitoring Enhancements</h2>
+
+<p>This part is mainly about the introduction of new error reporting mechanisms for streams as well as the introduction of more hooks. Currently, many low-level I/O errors are surfaced inconsistently to user space. The goal is to standardize how Streams report errors and make them easier to debug.</p>
+
+<p>The primary idea for error reporting is to have a better way to handle errors so they can be collected and reported to user space. We’ll wrap existing errors and provide richer context options for developers.</p>
+
+<p>In terms of hooks, this would be useful for async code and could be done through a special polling wrapper. There should be some way to allow replacing some blocking operations (specifically for file IO). This is primarily meant as an internal change, but it will also be considered to possibly expose some hooks to user space if convenient and acceptable from a performance point of view.</p>
+
+<h2 id="networking-and-socket-improvements">Networking and Socket Improvements</h2>
+
+<p>This part is mainly about the introduction of a new polling API, improvements in the stream_select function, and resolving issues in socket handling.</p>
+
+<p>Modern network applications rely heavily on scalable event handling. The new polling API will introduce modern mechanisms such as epoll and kqueue, enabling PHP to handle multiple I/O streams more efficiently.</p>
+
+<p>Currently, only select is available for user space, which has known performance and scaling issues. This modernization will benefit frameworks and extensions that implement async networking or event-driven I/O.</p>
+
+<p>The purpose of the API is primarily to build an internal API that can be used internally for various tasks in the PHP core and as a base (fallback) for the future async IO API.</p>
+
+<p>The stream_select usage should be extended to better handle polling of filtered streams and provide an API for external objects that can provide extra data, as will be possible in the new polling API. This will require some refactoring and potentially sharing some of the logic with the new polling API.</p>
+
+<p>Additionally, several socket-specific improvements are planned. New socket context options will be added to provide better configuration capabilities. Various socket handling issues will be addressed, and utilities for working with file descriptors will be improved.</p>
+
+<h2 id="security-and-tls-enhancements">Security and TLS Enhancements</h2>
+
+<p>Another important part of this work targets the OpenSSL extension, which handles encrypted streams.</p>
+
+<p>Specifically, refactoring its async handling that is currently not well implemented and has various limitations. The refactoring will clarify what polling action is required for user space. For example, whether the stream needs to wait for reading or writing.</p>
+
+<p>In addition, we aim to improve TLS 1.3 support with options to select cipher suites and integrate TLS Sessions, PSK (Pre-Shared Key) and early data (0-RTT) support.</p>
+
+<p>To enable these changes, a new TLS 1.3 PHP testing library is being developed. It will allow customizing the protocol flow and testing TLS 1.3 features, including asynchronous behavior.</p>
+
+<h2 id="next-steps">Next Steps</h2>
+
+<p>Together, these efforts will modernize and strengthen PHP’s I/O layer for the next decade of web and CLI development.</p>
+
+<p>Work has started in 2025 and will go through 2026. Incremental progress will be shared publicly through PHP Foundation updates and PHP internals discussions, and RFCs.</p>
+
+<p>We’re grateful to the Sovereign Tech Agency for supporting this foundational investment in PHP’s core. Stay tuned for technical write-ups and benchmarks as the implementation progresses.</p>
+]]></content><link href="https://thephp.foundation/blog/2025/10/30/php-streams-evolution/"/><id>https://thephp.foundation/blog/2025/10/30/php-streams-evolution/</id><updated>Thu, 30 Oct 2025 00:00:00 +0000</updated></entry><entry><author><name>Jakub Zelenka</name><uri>https://github.com/bukka</uri></author><title type="html"><![CDATA[Introducing Web&nbsp;Services&nbsp;Tool for&nbsp;PHP-FPM]]></title><content type="html"><![CDATA[<p>The Web Services Tool (WST) is a command-line application developed to test PHP-FPM, <a href="https://www.sovereigntechfund.de/tech/php"><strong>commissioned by the Sovereign Tech Fund</strong></a> (STF). Its primary goal is to facilitate testing of the integration between different web servers and PHP-FPM across various environments and configurations.</p>
 
 <p>This blog post provides an introduction to the tool. We'll go through the history of PHP-FPM testing and the reasons that led to WST's development. The post also outlines the project structure, insights into the tool’s architecture, its current state, and the roadmap for future development.</p>
 
@@ -119,69 +184,4 @@ spec:
 <p>As more features and tests are added, its importance will only grow. We hope it will become an essential part of ensuring PHP-FPM's stability, performance, and evolution.</p>
 
 <p>💜️ 🐘</p>
-]]></content><link href="https://thephp.foundation/blog/2024/10/21/web-services-tool-for-php-fpm/"/><id>https://thephp.foundation/blog/2024/10/21/web-services-tool-for-php-fpm/</id><updated>Mon, 21 Oct 2024 00:00:00 +0000</updated></entry><entry><author><name>Jakub Zelenka</name><uri>https://github.com/bukka</uri></author><title type="html"><![CDATA[Evolving PHP Streams for Async, Security, and Performance]]></title><content type="html"><![CDATA[<p>Thanks to investment from the <strong><a href="https://www.sovereign.tech/">Sovereign Tech Agency (STA)</a></strong>, a German government backed organization supporting open-source infrastructure, the PHP Foundation is modernizing one of PHP’s oldest and most critical subsystems: Streams.</p>
-
-<p>This post outlines the planned work and explains why these changes matter for the PHP ecosystem.</p>
-
-<h2 id="what-are-php-streams%3F">What Are PHP Streams?</h2>
-
-<p>Before diving into the improvements, let’s briefly revisit what Streams are and why they matter.</p>
-
-<p>Introduced around 2001, PHP streams provide a unified way to handle file and network I/O, allowing data from different sources such as files, sockets, or memory to be accessed through a consistent API using the same set of functions.</p>
-
-<p>Over time, PHP streams have proven to be a powerful and flexible subsystem, but some parts of the implementation have not evolved alongside modern use cases, performance expectations, and system capabilities. This project aims to make Streams faster, safer, and easier to extend for modern PHP applications.</p>
-
-<p>The actual scope is divided into four subsections.</p>
-
-<h2 id="performance-and-stability-improvements">Performance and Stability improvements</h2>
-
-<p>This part aims to improve performance and consistency in how PHP Streams copying and seeking.</p>
-
-<p>There is still room to improve performance in stream copying.</p>
-
-<p>For example, copying large files or handling network transfers can be made faster through asynchronous I/O mechanisms like io_uring on Linux. At the same time, we need to prevent potential crashes caused by memory-mapped files. The goal is to phase out mmap usage and introduce a new copying API as part of the upcoming I/O API, using io_uring or other system features where available.</p>
-
-<p>Seeking is currently problematic for filtered streams, which causes various inconsistencies. Developers working with filters often encounter limitations when rewinding or skipping data.</p>
-
-<p>The plan is to introduce a new seeking filter API that will allow seeking in streams where possible and disallow it where not. For example, seeking to the beginning should always be possible, but not all filters support seeking to arbitrary positions. Some may allow it, so a new internal API is needed.</p>
-
-<h2 id="error-handling-and-monitoring-enhancements">Error Handling and Monitoring Enhancements</h2>
-
-<p>This part is mainly about the introduction of new error reporting mechanisms for streams as well as the introduction of more hooks. Currently, many low-level I/O errors are surfaced inconsistently to user space. The goal is to standardize how Streams report errors and make them easier to debug.</p>
-
-<p>The primary idea for error reporting is to have a better way to handle errors so they can be collected and reported to user space. We’ll wrap existing errors and provide richer context options for developers.</p>
-
-<p>In terms of hooks, this would be useful for async code and could be done through a special polling wrapper. There should be some way to allow replacing some blocking operations (specifically for file IO). This is primarily meant as an internal change, but it will also be considered to possibly expose some hooks to user space if convenient and acceptable from a performance point of view.</p>
-
-<h2 id="networking-and-socket-improvements">Networking and Socket Improvements</h2>
-
-<p>This part is mainly about the introduction of a new polling API, improvements in the stream_select function, and resolving issues in socket handling.</p>
-
-<p>Modern network applications rely heavily on scalable event handling. The new polling API will introduce modern mechanisms such as epoll and kqueue, enabling PHP to handle multiple I/O streams more efficiently.</p>
-
-<p>Currently, only select is available for user space, which has known performance and scaling issues. This modernization will benefit frameworks and extensions that implement async networking or event-driven I/O.</p>
-
-<p>The purpose of the API is primarily to build an internal API that can be used internally for various tasks in the PHP core and as a base (fallback) for the future async IO API.</p>
-
-<p>The stream_select usage should be extended to better handle polling of filtered streams and provide an API for external objects that can provide extra data, as will be possible in the new polling API. This will require some refactoring and potentially sharing some of the logic with the new polling API.</p>
-
-<p>Additionally, several socket-specific improvements are planned. New socket context options will be added to provide better configuration capabilities. Various socket handling issues will be addressed, and utilities for working with file descriptors will be improved.</p>
-
-<h2 id="security-and-tls-enhancements">Security and TLS Enhancements</h2>
-
-<p>Another important part of this work targets the OpenSSL extension, which handles encrypted streams.</p>
-
-<p>Specifically, refactoring its async handling that is currently not well implemented and has various limitations. The refactoring will clarify what polling action is required for user space. For example, whether the stream needs to wait for reading or writing.</p>
-
-<p>In addition, we aim to improve TLS 1.3 support with options to select cipher suites and integrate TLS Sessions, PSK (Pre-Shared Key) and early data (0-RTT) support.</p>
-
-<p>To enable these changes, a new TLS 1.3 PHP testing library is being developed. It will allow customizing the protocol flow and testing TLS 1.3 features, including asynchronous behavior.</p>
-
-<h2 id="next-steps">Next Steps</h2>
-
-<p>Together, these efforts will modernize and strengthen PHP’s I/O layer for the next decade of web and CLI development.</p>
-
-<p>Work has started in 2025 and will go through 2026. Incremental progress will be shared publicly through PHP Foundation updates and PHP internals discussions, and RFCs.</p>
-
-<p>We’re grateful to the Sovereign Tech Agency for supporting this foundational investment in PHP’s core. Stay tuned for technical write-ups and benchmarks as the implementation progresses.</p>
-]]></content><link href="https://thephp.foundation/blog/2025/10/30/php-streams-evolution/"/><id>https://thephp.foundation/blog/2025/10/30/php-streams-evolution/</id><updated>Thu, 30 Oct 2025 00:00:00 +0000</updated></entry></feed>
+]]></content><link href="https://thephp.foundation/blog/2024/10/21/web-services-tool-for-php-fpm/"/><id>https://thephp.foundation/blog/2024/10/21/web-services-tool-for-php-fpm/</id><updated>Mon, 21 Oct 2024 00:00:00 +0000</updated></entry></feed>
