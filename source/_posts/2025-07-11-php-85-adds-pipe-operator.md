@@ -32,8 +32,8 @@ $arr = [
 ];
 
 $result = $arr
-    |> fn($x) => array_column($x, 'tags') // Gets an array of arrays
-    |> fn($x) => array_merge(...$x)       // Flatten into one big array
+    |> (fn($x) => array_column($x, 'tags')) // Gets an array of arrays
+    |> (fn($x) => array_merge(...$x))       // Flatten into one big array
     |> array_unique(...)                  // Remove duplicates
     |> array_values(...)                  // Reindex the array.
 ;
@@ -90,12 +90,12 @@ $string = 'something GoesHERE';
 $newString = match ($format) {
     'snake_case' => $string
         |> splitString(...)
-        |> fn($x) => implode('_', $x)
+        |> (fn($x) => implode('_', $x))
         |> strtolower(...),
     'lowerCamel' => $string
         |> splitString(...),
-        |> fn($x) => array_map(ucfirst(...), $x)
-        |> fn($x) => implode('', $x)
+        |> (fn($x) => array_map(ucfirst(...), $x))
+        |> (fn($x) => implode('', $x))
         |> lcfirst(...),
     // Other case options here.
 };
