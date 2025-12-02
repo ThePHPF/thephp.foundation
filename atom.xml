@@ -3,7 +3,7 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2025-11-21T20:22:54+00:00</updated>
+    <updated>2025-12-02T13:45:56+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
@@ -1253,8 +1253,8 @@ $result = strlen("Hello World");
 ];
 
 $result = $arr
-    |&gt; fn($x) =&gt; array_column($x, 'tags') // Gets an array of arrays
-    |&gt; fn($x) =&gt; array_merge(...$x)       // Flatten into one big array
+    |&gt; (fn($x) =&gt; array_column($x, 'tags')) // Gets an array of arrays
+    |&gt; (fn($x) =&gt; array_merge(...$x))       // Flatten into one big array
     |&gt; array_unique(...)                  // Remove duplicates
     |&gt; array_values(...)                  // Reindex the array.
 ;
@@ -1308,12 +1308,12 @@ $result = $arr
 $newString = match ($format) {
     'snake_case' =&gt; $string
         |&gt; splitString(...)
-        |&gt; fn($x) =&gt; implode('_', $x)
+        |&gt; (fn($x) =&gt; implode('_', $x))
         |&gt; strtolower(...),
     'lowerCamel' =&gt; $string
         |&gt; splitString(...),
-        |&gt; fn($x) =&gt; array_map(ucfirst(...), $x)
-        |&gt; fn($x) =&gt; implode('', $x)
+        |&gt; (fn($x) =&gt; array_map(ucfirst(...), $x))
+        |&gt; (fn($x) =&gt; implode('', $x))
         |&gt; lcfirst(...),
     // Other case options here.
 };

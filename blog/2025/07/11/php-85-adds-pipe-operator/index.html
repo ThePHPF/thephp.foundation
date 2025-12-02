@@ -196,8 +196,8 @@ $result = strlen("Hello World");
 ];
 
 $result = $arr
-    |&gt; fn($x) =&gt; array_column($x, 'tags') // Gets an array of arrays
-    |&gt; fn($x) =&gt; array_merge(...$x)       // Flatten into one big array
+    |&gt; (fn($x) =&gt; array_column($x, 'tags')) // Gets an array of arrays
+    |&gt; (fn($x) =&gt; array_merge(...$x))       // Flatten into one big array
     |&gt; array_unique(...)                  // Remove duplicates
     |&gt; array_values(...)                  // Reindex the array.
 ;
@@ -251,12 +251,12 @@ $result = $arr
 $newString = match ($format) {
     'snake_case' =&gt; $string
         |&gt; splitString(...)
-        |&gt; fn($x) =&gt; implode('_', $x)
+        |&gt; (fn($x) =&gt; implode('_', $x))
         |&gt; strtolower(...),
     'lowerCamel' =&gt; $string
         |&gt; splitString(...),
-        |&gt; fn($x) =&gt; array_map(ucfirst(...), $x)
-        |&gt; fn($x) =&gt; implode('', $x)
+        |&gt; (fn($x) =&gt; array_map(ucfirst(...), $x))
+        |&gt; (fn($x) =&gt; implode('', $x))
         |&gt; lcfirst(...),
     // Other case options here.
 };
