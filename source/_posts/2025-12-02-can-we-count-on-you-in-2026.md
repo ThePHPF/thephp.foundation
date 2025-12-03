@@ -32,17 +32,12 @@ Now in our fourth year, The PHP Foundation has achieved several milestones that 
 We owe a special thanks to our major sponsors who make our work possible:
 
 ### **Platinum**
-
-[**Automattic**](https://automattic.com/)
-
-[**Sovereign Tech Agency**](https://www.sovereign.tech/)
-
-[**JetBrains**](https://www.jetbrains.com/)
+[**Automattic**](https://automattic.com/)  
+[**Sovereign Tech Agency**](https://www.sovereign.tech/)  
+[**JetBrains**](https://www.jetbrains.com/)  
 
 ### **Gold**
-
-[**Laravel**](https://laravel.com/)
-
+[**Laravel**](https://laravel.com/)  
 [**GoDaddy**](https://www.godaddy.com/)
 
 ### **Silver**
@@ -53,7 +48,7 @@ In total more than 550 donations were made by businesses and individual sponsors
 
 Your contributions enable us to support developers, fund crucial projects, and ensure PHP is a modern and reliable choice for web development.
 
-If you are yet to decide on sponsoring the foundation, [here](https://thephp.foundation/sponsor/) you can find information on how to join us and why it matters or reach out directly to contact@thephp.foundation.
+If you are yet to decide on sponsoring the foundation, [here](https://thephp.foundation/sponsor/) you can find information on how to join us and why it matters or reach out directly to [contact@thephp.foundation](mailto:contact@thephp.foundation).
 
 ## Outlook into 2026
 
