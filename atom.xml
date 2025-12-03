@@ -3,9 +3,74 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2025-12-02T13:45:56+00:00</updated>
+    <updated>2025-12-03T10:21:56+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Thank you for supporting The PHP Foundation in 2025! Can we count on you in 2026?]]></title>
+            <link href="https://thephp.foundation/blog/2025/12/02/can-we-count-on-you-in-2026/"/>
+            <updated>2025-12-02T00:00:00+00:00</updated>
+            <id>https://thephp.foundation/blog/2025/12/02/can-we-count-on-you-in-2026/</id>
+            <content type="html"><![CDATA[<p>As 2025 comes to a close, we at The PHP Foundation want to take a moment to thank everyone who has supported us this year. We firmly believe that our work on the PHP language continues to have a massive impact, and we couldn’t have done it without the amazing PHP community and our generous sponsors.</p>
+
+<div class="text-center my-10">
+  <a href="https://thephp.foundation/sponsor/" class="button-link">Become a Sponsor&nbsp;&nbsp;❤️</a>
+</div>
+
+<h2 id="%2A%2Aour-achievements-this-year%2A%2A"><strong>Our Achievements This Year</strong></h2>
+
+<p>Now in our fourth year, The PHP Foundation has achieved several milestones that have further strengthened the PHP ecosystem:</p>
+
+<ul>
+<li><a href="https://www.php.net/releases/8.5/en.php">Release of PHP 8.5</a></li>
+<li><a href="https://github.com/php/pie">PIE 1.0 Release</a></li>
+<li><a href="https://thephp.foundation/blog/2025/05/15/frankenphp/">Supporting FrankenPHP</a></li>
+<li><a href="https://thephp.foundation/blog/2025/09/05/php-mcp-sdk/">PHP MCP SDK together with Anthropic and Symfony</a></li>
+<li>2nd <a href="https://www.sovereign.tech/">Sovereign Tech Agency</a> Investment for the <a href="https://thephp.foundation/blog/2025/10/30/php-streams-evolution/">Stream Layer Rework</a></li>
+</ul>
+
+<h2 id="thank-you-to-our-sponsors">Thank You to Our Sponsors</h2>
+
+<p>We owe a special thanks to our major sponsors who make our work possible:</p>
+
+<h3 id="%2A%2Aplatinum%2A%2A"><strong>Platinum</strong></h3>
+
+<p><a href="https://automattic.com/"><strong>Automattic</strong></a><br />
+<a href="https://www.sovereign.tech/"><strong>Sovereign Tech Agency</strong></a><br />
+<a href="https://www.jetbrains.com/"><strong>JetBrains</strong></a></p>
+
+<h3 id="%2A%2Agold%2A%2A"><strong>Gold</strong></h3>
+
+<p><a href="https://laravel.com/"><strong>Laravel</strong></a><br />
+<a href="https://www.godaddy.com/"><strong>GoDaddy</strong></a></p>
+
+<h3 id="%2A%2Asilver%2A%2A"><strong>Silver</strong></h3>
+
+<p><a href="https://www.passbolt.com/"><strong>Passbolt</strong></a> 🆕, <a href="https://packagist.com/"><strong>Private Packagist</strong></a>, <a href="https://craftcms.com/"><strong>Craft CMS</strong></a>, <a href="https://cybozu.co.jp/en/company/"><strong>Cybozu</strong></a>, <a href="https://tideways.com/"><strong>Tideways</strong></a>. <a href="https://www.zend.com/"><strong>Zend by Perforce</strong></a>. <a href="https://symfony.com/"><strong>Symfony Corp</strong></a>, <a href="https://sentry.io/welcome/"><strong>Sentry</strong></a>. <a href="https://manychat.com/"><strong>Manychat</strong></a>, <a href="https://www.mercari.com/"><strong>Mercari Inc.</strong></a>, <a href="http://les-tilleuls.coop/"><strong>Les-Tilleuls.coop</strong></a>, <a href="https://www.pixiv.net/en/"><strong>pixiv Inc.</strong></a>, <a href="https://aternos.gmbh/en/"><strong>Aternos GmbH</strong></a>, <a href="https://chstudio.fr/en/homepage/"><strong>CH Studio</strong></a></p>
+
+<p>In total more than 550 donations were made by businesses and individual sponsors to The PHP Foundation throughout this year through OpenCollective and more through our GitHub sponsors.</p>
+
+<p>Your contributions enable us to support developers, fund crucial projects, and ensure PHP is a modern and reliable choice for web development.</p>
+
+<p>If you are yet to decide on sponsoring the foundation, <a href="https://thephp.foundation/sponsor/">here</a> you can find information on how to join us and why it matters or reach out directly to <a href="&#109;&#x61;i&#108;&#x74;&#111;&#58;&#x63;&#111;&#x6e;&#x74;&#97;&#x63;t&#64;&#x74;&#104;&#101;&#x70;&#104;&#x70;&#x2e;&#102;&#x6f;&#x75;&#110;&#x64;a&#116;&#x69;&#111;&#110;">contact@thephp.foundation</a>.</p>
+
+<h2 id="outlook-into-2026">Outlook into 2026</h2>
+
+<p>Big changes are ahead for 2026, when our founding and long-term executive director <a href="https://www.linkedin.com/in/pronskiy/">Roman Pronskiy</a> (JetBrains) will step down and the foundation will hire a dedicated executive director for the first time.</p>
+
+<p>This marks a new chapter as we recognize that The PHP Foundation has grown so much that we consider a dedicated management position to be required to ensure that our projects and goals are getting done.</p>
+
+<p>If you are interested in the Executive Director role, we are still <a href="https://thephp.foundation/blog/2025/11/10/seeking-new-executive-director/">looking for candidates to apply until December 15th, 2025</a>.</p>
+
+<p>Furthermore, we’d like to add 2 new developers to our team who applied to our program in autumn.</p>
+
+<p>And mainly, our team will continue to maintain, document, and improve PHP further with the next major release (8.6 or 9.0) coming at the end of 2026&#46;</p>
+
+<p>Thank you,<br />
+The PHP Foundation<br />
+🐘💜</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[The PHP Foundation is Seeking a New Executive Director]]></title>
             <link href="https://thephp.foundation/blog/2025/11/10/seeking-new-executive-director/"/>
@@ -1225,162 +1290,6 @@ new Car(new StudentDriver());
 <script src="//unpkg.com/redditify/dist/redditify.min.js"></script>
 <link rel="stylesheet" href="//unpkg.com/redditify/dist/redditify.css">
 </p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[PHP 8.5 Adds Pipe Operator: What it means]]></title>
-            <link href="https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/"/>
-            <updated>2025-07-11T00:00:00+00:00</updated>
-            <id>https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/</id>
-            <content type="html"><![CDATA[<p>PHP 8.5, due out November of this year, will bring with it another long-sought-after feature: the <a href="https://wiki.php.net/rfc/pipe-operator-v3">pipe operator</a> (<code>|&gt;</code>).  It's a small feature with huge potential, yet it still took years to happen.</p>
-
-<h2 id="what-is-a-pipe-operator%3F">What is a pipe operator?</h2>
-
-<p>The pipe operator, spelled <code>|&gt;</code>, is deceptively simple.  It takes the value on its left side and passes it as the single argument to a function (or in PHP's case, <code>callable</code>) on its right side:</p>
-
-<pre><code class="php">$result = "Hello World" |&gt; strlen(...)
-
-// Is equivalent to
-$result = strlen("Hello World");
-</code></pre>
-
-<p>On its own, that is not all that interesting.  Where it becomes interesting is when it is repeated, or chained, to form a "pipeline."  For example, here's real code from a real project I've worked on, recast to use pipes:</p>
-
-<pre><code class="php">$arr = [
-  new Widget(tags: ['a', 'b', 'c']),
-  new Widget(tags: ['c', 'd', 'e']),
-  new Widget(tags: ['x', 'y', 'a']),
-];
-
-$result = $arr
-    |&gt; (fn($x) =&gt; array_column($x, 'tags')) // Gets an array of arrays
-    |&gt; (fn($x) =&gt; array_merge(...$x))       // Flatten into one big array
-    |&gt; array_unique(...)                  // Remove duplicates
-    |&gt; array_values(...)                  // Reindex the array.
-;
-
-// $result is ['a', 'b', 'c', 'd', 'e', 'x', 'y']
-</code></pre>
-
-<p>The same code without pipes would require either this horribly ugly nest of evil:</p>
-
-<pre><code class="php">array_values(array_unique(array_merge(...array_column($arr, 'tags'))));
-</code></pre>
-
-<p>Or manually creating a temporary variable for each step.  While temp variables are not the worst thing in the world, they are extra mental overhead, and mean that a chain like that cannot be used in a single-expression context, like a <code>match()</code> block.  A pipe chain can.</p>
-
-<p>Anyone who has worked on the Unix/Linux command line will likely recognize the similarity to the shell pipe, <code>|</code>.  That's very deliberate, as it is effectively the same thing: Use the output from the left side as the input on the right side.</p>
-
-<h2 id="where-did-it-come-from%3F">Where did it come from?</h2>
-
-<p>The <code>|&gt;</code> operator appears in many languages, mostly in the functional world.  F# has essentially the exact same operator, as does OCaml.  Elixir has a slightly fancier version (which we considered but ultimately decided against for now).  Numerous PHP libraries exist in the wild that offer similar capability with many extra expensive steps, including my own <a href="https://github.com/Crell/fp/">Crell/fp</a>.</p>
-
-<p>The story for PHP pipes, though, begins with Hack/HHVM, Facebook's PHP fork née competitive implementation.  Hack included many features beyond what PHP 5 of the day offered; many of them eventually ended up in later PHP versions.  One of its features was a unique spin on a pipe operator.</p>
-
-<p>In 2016, Sara Golemon, long-time PHP contributor and former Open Source lead on the HHVM project, proposed porting <a href="https://wiki.php.net/rfc/pipe-operator">Hack's pipes</a> to PHP directly.  In that RFC, the right side of a pipe wasn't a <code>callable</code> but an expression, and used a magic <code>$$</code> token (lovingly called <code>T_BLING</code>, at least according to yours truly) to inject the left-side result into it.  In that case, the example above would look like this:</p>
-
-<pre><code class="php">$result = $arr
-    |&gt; array_column($$, 'tags')
-    |&gt; array_merge(...$$)
-    |&gt; array_unique($$)
-    |&gt; array_values($$)
-;
-</code></pre>
-
-<p>While powerful, it was also somewhat limiting.  It was very non-standard, unlike any other language.  It also meant a weird, one-off syntax for partially-calling functions that worked only when paired with pipes.</p>
-
-<p>That RFC didn't go as far as a vote.  Nothing much happened for several years, until 2020/2021.  That's when I, fresh off of writing a book on functional programming in PHP that talked about function composition, decided to take a swing at it.  In particular, I partnered with a team to work on <a href="https://wiki.php.net/rfc/partial_function_application">Partial Function Application</a> (PFA) as a separate RFC from a more <a href="https://wiki.php.net/rfc/pipe-operator-v2">traditional pipe</a>.  The idea was that turning a multi-parameter function (like <code>array_column()</code> above) into the single-parameter function that <code>|&gt;</code> needed was a useful feature on its own, and should be usable elsewhere.  The syntax was a bit different than the Hack version, in order to make it more flexible: <code>some_function(?, 5, ?, 3, ...)</code>, which would take a 5-or-more parameter function and turn it into a 3 parameter function.</p>
-
-<p>Sadly, PFA didn't pass due to some engine complexity issues, and that largely undermined the v2 Pipe RFC, too.  However, we did get a consolation prize out of it: <a href="https://wiki.php.net/rfc/first_class_callable_syntax">First Class Callables</a> (the <code>array_values(...)</code> syntax), courtesy Nikita Popov, were by design a "junior", degenerate version of partial function application.</p>
-
-<p>Fast-forward to 2025, and I was sufficiently bored to take another swing at pipes.  This time with a better implementation with lots of hand-holding from Ilija Tovilo and Arnaud Le Blanc, both part of the PHP Foundation dev team, I was able to get it through.</p>
-
-<p>Third time's the charm.</p>
-
-<h2 id="more-than-the-sum-of-its-parts">More than the sum of its parts</h2>
-
-<p>Above, we described pipes as "deceptively simple."  The implementation itself is almost trivial; it's just syntax sugar for the temp variable version, effectively.  However, the best features are the ones that can combine with others or be used in novel ways to punch above their weight.</p>
-
-<p>We saw above how a long array manipulation process could now be condensed into a single chained expression.  Now imagine using that in places where only a single expression is allowed, such as a <code>match()</code>:</p>
-
-<pre><code class="php">$string = 'something GoesHERE';
-
-$newString = match ($format) {
-    'snake_case' =&gt; $string
-        |&gt; splitString(...)
-        |&gt; (fn($x) =&gt; implode('_', $x))
-        |&gt; strtolower(...),
-    'lowerCamel' =&gt; $string
-        |&gt; splitString(...),
-        |&gt; (fn($x) =&gt; array_map(ucfirst(...), $x))
-        |&gt; (fn($x) =&gt; implode('', $x))
-        |&gt; lcfirst(...),
-    // Other case options here.
-};
-</code></pre>
-
-<p>Or, consider that the right-side can also be a function call that returns a <code>Closure</code>.  That means with a few functions that return functions:</p>
-
-<pre><code class="php">$profit = [1, 4, 5] 
-    |&gt; loadSeveral(...)
-    |&gt; filter(isOnSale(...))
-    |&gt; map(sellWidget(...))
-    |&gt; array_sum(...);
-</code></pre>
-
-<p>Which... gives us mostly the same thing as the long-discussed scalar methods!  Only pipes are more flexible as you can use any function on the right-side, not just those that have been blessed by the language designers as methods.</p>
-
-<p>At this point, pipe comes very close to being "extension functions", a feature of Kotlin and C# that allows writing functions that look like methods on an object, but are actually just stand-alone functions.  It's spelled a bit differently (<code>|</code> instead of <code>-</code>), but it's 75% of the way there, for free.</p>
-
-<p>Or take it a step further.  What if some steps in the pipe may return <code>null</code>?  We can, with a single function, "lift" the elements of our chain to handle <code>null</code> values in the same fashion as null-safe methods.</p>
-
-<pre><code class="php">function maybe(\Closure $c): \Closure
-{
-    return fn(mixed $arg) =&gt; $arg === null ? null : $c($arg);
-}
-
-$profit = [1, 4, 5] 
-    |&gt; maybe(loadSeveral(...))
-    |&gt; maybe(filter(isOnSale(...)))
-    |&gt; maybe(map(sellWidget(...)))
-    |&gt; maybe(array_sum(...));
-</code></pre>
-
-<p>That's right, we just implemented a Maybe Monad with a pipe and a single-line function.</p>
-
-<p>Now, think about that for streams...</p>
-
-<pre><code class="php">fopen('pipes.md', 'rb') // No variable, so it will close automatically when GCed.
-    |&gt; decode_rot13(...)
-    |&gt; lines_from_charstream(...)
-    |&gt; map(str_getcsv(...))
-    |&gt; map(Product::create(...))
-    |&gt; map($repo-&gt;save(...))
-;
-</code></pre>
-
-<p>The potential is absolutely huge.  I don't think it's immodest to say that the pipe operator has one of the highest "bangs for the buck" of any feature in recent memory, alongside such niceties as constructor property promotion.  And all thanks to a little syntax sugar.</p>
-
-<h2 id="what-comes-next%3F">What comes next?</h2>
-
-<p>Although pipes are a major milestone, we're not done.  There is active work on not one but two follow-up RFCs.</p>
-
-<p>The first is a second attempt at <a href="https://wiki.php.net/rfc/partial_function_application_v2">Partial Function Application</a>.  This is a larger feature, but with first-class callables already bringing in much of the necessary plumbing, which simplifies the implementation.  With pipes now providing a natural use case, as well as easy optimization points, it's worth a second attempt.  Whether it makes it into PHP 8.5, is delayed to 8.6, or is again rejected is still an open question as of this writing, though I am hopeful.  Major thanks to Arnaud Le Blanc from the PHP Foundation team for picking it up to update the implementation.</p>
-
-<p>The second is a <a href="https://wiki.php.net/rfc/function-composition">function composition operator</a>.  Where pipe executes immediately, function composition creates a new function by sticking two functions end-to-end.  That would mean the streams example above could be further optimized by combining the <code>map()</code> calls:</p>
-
-<pre><code class="php">fopen('pipes.md', 'rb')
-    |&gt; decode_rot13(...)
-    |&gt; lines_from_charstream(...)
-    |&gt; map(str_getcsv(...) + Product::create(...) + $repo-&gt;save(...))
-;
-</code></pre>
-
-<p>This one is definitely not going to make it into PHP 8.5, but I am hopeful that we'll be able to get it into 8.6.  Stay tuned.</p>
-
-<blockquote>
-  <p>Special thanks to Ilija Tovilo and Arnaud Le Blanc from the PHP Foundation team for their assistance with the pipe implementation.  If you’d like to help push PHP forward, consider <a href="https://thephp.foundation/sponsor/">becoming a sponsor</a>.</p>
-</blockquote>
 ]]></content>
         </entry>
     </feed>

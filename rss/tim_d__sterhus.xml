@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2025-12-02T13:45:56+00:00</updated><entry><author><name>Tim Düsterhus</name><uri>https://github.com/TimWolla/</uri></author><title type="html"><![CDATA[PHP’s New URI Extension: An Open Source Success Story]]></title><content type="html"><![CDATA[<p>URLs are a fundamental building block of the Web we rely on every day.</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2025-12-03T10:21:56+00:00</updated><entry><author><name>Tim Düsterhus</name><uri>https://github.com/TimWolla/</uri></author><title type="html"><![CDATA[PHP’s New URI Extension: An Open Source Success Story]]></title><content type="html"><![CDATA[<p>URLs are a fundamental building block of the Web we rely on every day.</p>
 
 <p>Their familiarity makes them appear deceptively simple: Seemingly clearly
 delineated components like scheme, hostname, path, and some others suggest that

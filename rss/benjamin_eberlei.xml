@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2025-12-03T10:21:56+00:00</updated><entry><author><name>Benjamin Eberlei</name><uri>https://x.com/beberlei</uri></author><title type="html"><![CDATA[Thank you for supporting The PHP Foundation in 2025! Can we count on you in 2026?]]></title><content type="html"><![CDATA[<p>As 2025 comes to a close, we at The PHP Foundation want to take a moment to thank everyone who has supported us this year. We firmly believe that our work on the PHP language continues to have a massive impact, and we couldn’t have done it without the amazing PHP community and our generous sponsors.</p>
+
+<div class="text-center my-10">
+  <a href="https://thephp.foundation/sponsor/" class="button-link">Become a Sponsor&nbsp;&nbsp;❤️</a>
+</div>
+
+<h2 id="%2A%2Aour-achievements-this-year%2A%2A"><strong>Our Achievements This Year</strong></h2>
+
+<p>Now in our fourth year, The PHP Foundation has achieved several milestones that have further strengthened the PHP ecosystem:</p>
+
+<ul>
+<li><a href="https://www.php.net/releases/8.5/en.php">Release of PHP 8.5</a></li>
+<li><a href="https://github.com/php/pie">PIE 1.0 Release</a></li>
+<li><a href="https://thephp.foundation/blog/2025/05/15/frankenphp/">Supporting FrankenPHP</a></li>
+<li><a href="https://thephp.foundation/blog/2025/09/05/php-mcp-sdk/">PHP MCP SDK together with Anthropic and Symfony</a></li>
+<li>2nd <a href="https://www.sovereign.tech/">Sovereign Tech Agency</a> Investment for the <a href="https://thephp.foundation/blog/2025/10/30/php-streams-evolution/">Stream Layer Rework</a></li>
+</ul>
+
+<h2 id="thank-you-to-our-sponsors">Thank You to Our Sponsors</h2>
+
+<p>We owe a special thanks to our major sponsors who make our work possible:</p>
+
+<h3 id="%2A%2Aplatinum%2A%2A"><strong>Platinum</strong></h3>
+
+<p><a href="https://automattic.com/"><strong>Automattic</strong></a><br />
+<a href="https://www.sovereign.tech/"><strong>Sovereign Tech Agency</strong></a><br />
+<a href="https://www.jetbrains.com/"><strong>JetBrains</strong></a></p>
+
+<h3 id="%2A%2Agold%2A%2A"><strong>Gold</strong></h3>
+
+<p><a href="https://laravel.com/"><strong>Laravel</strong></a><br />
+<a href="https://www.godaddy.com/"><strong>GoDaddy</strong></a></p>
+
+<h3 id="%2A%2Asilver%2A%2A"><strong>Silver</strong></h3>
+
+<p><a href="https://www.passbolt.com/"><strong>Passbolt</strong></a> 🆕, <a href="https://packagist.com/"><strong>Private Packagist</strong></a>, <a href="https://craftcms.com/"><strong>Craft CMS</strong></a>, <a href="https://cybozu.co.jp/en/company/"><strong>Cybozu</strong></a>, <a href="https://tideways.com/"><strong>Tideways</strong></a>. <a href="https://www.zend.com/"><strong>Zend by Perforce</strong></a>. <a href="https://symfony.com/"><strong>Symfony Corp</strong></a>, <a href="https://sentry.io/welcome/"><strong>Sentry</strong></a>. <a href="https://manychat.com/"><strong>Manychat</strong></a>, <a href="https://www.mercari.com/"><strong>Mercari Inc.</strong></a>, <a href="http://les-tilleuls.coop/"><strong>Les-Tilleuls.coop</strong></a>, <a href="https://www.pixiv.net/en/"><strong>pixiv Inc.</strong></a>, <a href="https://aternos.gmbh/en/"><strong>Aternos GmbH</strong></a>, <a href="https://chstudio.fr/en/homepage/"><strong>CH Studio</strong></a></p>
+
+<p>In total more than 550 donations were made by businesses and individual sponsors to The PHP Foundation throughout this year through OpenCollective and more through our GitHub sponsors.</p>
+
+<p>Your contributions enable us to support developers, fund crucial projects, and ensure PHP is a modern and reliable choice for web development.</p>
+
+<p>If you are yet to decide on sponsoring the foundation, <a href="https://thephp.foundation/sponsor/">here</a> you can find information on how to join us and why it matters or reach out directly to <a href="&#109;&#x61;i&#108;&#x74;&#111;&#58;&#x63;&#111;&#x6e;&#x74;&#97;&#x63;t&#64;&#x74;&#104;&#101;&#x70;&#104;&#x70;&#x2e;&#102;&#x6f;&#x75;&#110;&#x64;a&#116;&#x69;&#111;&#110;">contact@thephp.foundation</a>.</p>
+
+<h2 id="outlook-into-2026">Outlook into 2026</h2>
+
+<p>Big changes are ahead for 2026, when our founding and long-term executive director <a href="https://www.linkedin.com/in/pronskiy/">Roman Pronskiy</a> (JetBrains) will step down and the foundation will hire a dedicated executive director for the first time.</p>
+
+<p>This marks a new chapter as we recognize that The PHP Foundation has grown so much that we consider a dedicated management position to be required to ensure that our projects and goals are getting done.</p>
+
+<p>If you are interested in the Executive Director role, we are still <a href="https://thephp.foundation/blog/2025/11/10/seeking-new-executive-director/">looking for candidates to apply until December 15th, 2025</a>.</p>
+
+<p>Furthermore, we’d like to add 2 new developers to our team who applied to our program in autumn.</p>
+
+<p>And mainly, our team will continue to maintain, document, and improve PHP further with the next major release (8.6 or 9.0) coming at the end of 2026&#46;</p>
+
+<p>Thank you,<br />
+The PHP Foundation<br />
+🐘💜</p>
+]]></content><link href="https://thephp.foundation/blog/2025/12/02/can-we-count-on-you-in-2026/"/><id>https://thephp.foundation/blog/2025/12/02/can-we-count-on-you-in-2026/</id><updated>Tue, 02 Dec 2025 00:00:00 +0000</updated></entry></feed>
