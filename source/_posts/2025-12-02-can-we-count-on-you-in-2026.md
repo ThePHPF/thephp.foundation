@@ -13,6 +13,10 @@ published_at: 02 December 2025
 
 As 2025 comes to a close, we at The PHP Foundation want to take a moment to thank everyone who has supported us this year. We firmly believe that our work on the PHP language continues to have a massive impact, and we couldn’t have done it without the amazing PHP community and our generous sponsors.
 
+<div class="text-center my-10">
+  <a href="https://thephp.foundation/sponsor/" class="button-link">Become a Sponsor&nbsp;&nbsp;❤️</a>
+</div>
+
 ## **Our Achievements This Year**
 
 Now in our fourth year, The PHP Foundation has achieved several milestones that have further strengthened the PHP ecosystem:
