@@ -47,7 +47,7 @@ $f = complex(...);
 $f = complex(1, 2, 3, 4, ...);
 ```
 
-In practice, we expect most uses to be reducing a function down to a single remaining argument.  That makes it perfect to use as a callback.
+PFA supports a wide variety of complex use cases and features, like parameter reordering, named arguments, variadics, etc.  In practice, however, we expect most uses to be reducing a function down to a single remaining argument (that is, currying).  That makes it perfect to use as a callback.  Most of PHP's functions that take callbacks expect a single argument, and the few remaining take two (such as a value and a key).  PFA makes using arbitrarily complex, contextually-aware functions in those cases trivially easy.
 
 ```php
 // This
@@ -86,7 +86,7 @@ There was enough support, however, that Nikita asked "couldn't we just do `foo(.
 
 I've been looking to take a second swing at PFA since then, but needed the right time and right collaborators.  FCC has clearly shown itself to be a huge boon to the language, so why not go all the way?  It wasn't until the Pipes RFC passed earlier this year, though, that I was able to snare the PHP Foundation's Arnaud Le Blanc into working on a second version with me.  It didn't quite make it into PHP 8.5 for timing reasons, but it's now available in 8.6.
 
-So what changed?  One, FCC ended up already including a lot of the underlying engine trickery that was needed, but since Nikita wrote it, it was OK.  We were able to leverage that.  For another, the implementation is a bit different.  Rather than creating a special kind of pseudo-closure that can be extra-optimized, the new approach just creates a normal closure object like we've had for years.  That makes it much simpler to implement, and solves a ton of edge-case questions.  Three, now we have pipes.
+So what changed?  One, FCC ended up already including a lot of the underlying engine trickery that was needed for this version of PFA.  We were able to leverage that.  For another, the implementation is a bit different.  Rather than creating a special kind of pseudo-closure that can be extra-optimized, the new approach just creates a normal closure object like we've had for years.  That makes it much simpler to implement, and solves a ton of edge-case questions.  Three, now we have pipes.
 
 And oh boy oh boy is this an exciting combination.
 
@@ -111,7 +111,7 @@ One of the chief criticisms I've seen about the new pipe operator is the need to
 
 I've often seen PHP criticized for just stealing features from other languages and piling them in willy-nilly.  Frankly that's not always a bad thing: PHP, much like English, evolves by finding good ideas in other languages and *ahem* borrowing them, and making it our own.
 
-Partial function application is not a new concept.  It's been the foundation of many functional languages for decades.  Haskell, for instance, implicitly uses partial application for literally every function call.  Any function call can just omit its right-side arguments and poof, it becomes a partial application.
+Partial function application is not a new concept.  It's been the foundation of many functional languages for decades.  Haskell, for instance, implicitly uses partial application for literally every function call.  Any function call can just omit its right-most arguments and poof, it becomes a partial application.
 
 What I have not seen in any language, however, is the ability to partially apply arbitrary parameters.  That's important for PHP, because while Haskell's entire standard library was built around the assumption of right-most partial application, PHP's most definitely was not.  We needed to be able to turn arbitrary functions into unary (single-argument) functions to allow most parts of the standard library to work with... pipes.  Or as callbacks.
 
