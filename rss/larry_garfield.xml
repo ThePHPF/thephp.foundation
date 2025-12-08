@@ -1,5 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2025-12-03T10:21:56+00:00</updated><entry><author><name>Arnaud Le Blanc</name><uri>https://github.com/arnaud-lb</uri></author><author><name>Derick Rethans</name><uri>https://derickrethans.nl</uri></author><author><name>Larry Garfield</name><uri>https://www.garfieldtech.com/</uri></author><title type="html"><![CDATA[State of Generics and Collections]]></title><content type="html"><![CDATA[<p>Generics have been on the list of wanted features for a long time by numerous PHP developers. The topic is often brought up in "What's New in PHP?" talks as well during Q&amp;A.</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2025-12-08T10:37:40+00:00</updated><entry><author><name>Larry Garfield</name><uri>https://github.com/Crell</uri></author><title type="html"><![CDATA[PHP 8.6 kicks off with partial function application]]></title><content type="html"><![CDATA[<p>PHP 8.5 is still warm, but the work to push PHP forward continues.  The latest major feature for PHP 8.6 has just been approved: <a href="https://wiki.php.net/rfc/partial_function_application_v2">Partial Function Application</a> (PFA).</p>
+
+<h2 id="the-gist">The gist</h2>
+
+<p>In PHP 8.6, it will be possible to create a closure that simply delegates to another function without writing out the whole closure.</p>
+
+<pre><code class="php">// This
+$underscore = str_replace(' ', '_', ?);
+
+// Is effectively the same as this:
+$underscore = fn(string $s): string =&gt; str_replace(' ' , '_', $s);
+</code></pre>
+
+<p>Both lines will produce nearly identical opcodes, but the former is much easier to both write and to read, as it doesn't require messing about with redeclaring all the types and variable names.</p>
+
+<p>Any function (or method) call may use one of two placeholders, <code>?</code> or <code>...</code>, to indicate that it is only "partially invoking" that function.  Or "partially applying arguments to it."  It works with both positional and named arguments, too!</p>
+
+<pre><code class="php">function complex(int $a, int $b, int $c, int $d): string { ... }
+
+// This creates a closure that takes 2 ints and returns a string.
+$f = complex(?, 2, ?, 4);
+
+// This creates the same closure, but with named arguments.
+$f = complex(b: 2, d: 4, ...);
+
+// This reverses the order of the parameters, $f needs $c first, then $a.
+$f = complex(b: 2, d: 4, c: ?, a: ?);
+
+// Keep all arguments unbound. Hey look, first-class-callables!
+$f = complex(...);
+
+// This creates a zero argument closure, which just calls complex() when invoked!
+$f = complex(1, 2, 3, 4, ...);
+</code></pre>
+
+<p>PFA supports a wide variety of complex use cases and features, like parameter reordering, named arguments, variadics, etc.  In practice, however, we expect most uses to be reducing a function down to a single remaining argument (that is, currying).  That makes it perfect to use as a callback.  Most of PHP's functions that take callbacks expect a single argument, and the few remaining take two (such as a value and a key).  PFA makes using arbitrarily complex, contextually aware functions in those cases trivially easy.</p>
+
+<pre><code class="php">// This
+$result = array_map(in_array(?, $legal, strict: true), $input);
+
+// is much nicer than this
+$result = array_map(fn(string $s): bool =&gt; in_array($s, $legal, strict: true), $input);
+</code></pre>
+
+<p>By design, it's also the perfect complement for the new <a href="https://www.php.net/manual/en/language.operators.functional.php">pipe operator</a>.  To reuse some examples from the <a href="https://wiki.php.net/rfc/pipe-operator-v3">Pipe RFC</a>:</p>
+
+<pre><code class="php">$numberOfAdmins = getUsers()
+    |&gt; array_filter(?, isAdmin(...))
+    |&gt; count(...);
+
+$result = "Hello World"
+    |&gt; htmlentities(...)
+    |&gt; str_split(...)
+    |&gt; array_map(strtoupper(...), ?)
+    |&gt; array_filter(?, fn($v) =&gt; $v != 'O')
+;
+</code></pre>
+
+<p>What's more, optimizations around the pipe operator mean the closure doesn't even need to be created in those cases, so there's zero performance overhead.</p>
+
+<p>The RFC has more details on all the ins and outs of the new syntax.</p>
+
+<h2 id="the-long-view">The long view</h2>
+
+<p>If all of this sounds a lot like an extended version of "first class callables," it should.  Or rather, "first class callables," are the training wheels version of partial function application.</p>
+
+<p>PFA was <a href="https://wiki.php.net/rfc/partial_function_application">first proposed</a> way back in 2021, by a team of Joe Watkins, Levi Morrison, Paul Crovella, and myself.  That version was largely similar on the surface, but had a different implementation that caused some consternation.  In particular, Nikita Popov (at the time still PHP's de facto lead developer) felt that it introduced too much complexity in the engine.  His hesitancy convinced many others to reject it at the time, though there was still a lot of interest and support.</p>
+
+<p>There was enough support, however, that Nikita asked "couldn't we just do <code>foo(...)</code> to delay all the variables, and skip the rest of the RFC?"  The result of that was the <a href="https://wiki.php.net/rfc/first_class_callable_syntax">First Class Callables</a> RFC, released in PHP 8.1.</p>
+
+<p>I've been looking to take a second swing at PFA since then, but needed the right time and right collaborators.  FCC has clearly shown itself to be a huge boon to the language, so why not go all the way?  It wasn't until the Pipes RFC passed earlier this year, though, that I was able to snare the PHP Foundation's Arnaud Le Blanc into working on a second version with me.  It didn't quite make it into PHP 8.5 for timing reasons, but it's now available in 8.6.</p>
+
+<p>So what changed?  One, FCC ended up already including a lot of the underlying engine trickery that was needed for this version of PFA.  We were able to leverage that.  For another, the implementation is a bit different.  Rather than creating a special kind of pseudo-closure that can be extra-optimized, the new approach just creates a normal closure object like we've had for years.  That makes it much simpler to implement and solve a ton of edge-case questions.  Three, now we have pipes.</p>
+
+<p>And oh boy is this an exciting combination.</p>
+
+<h2 id="a-long-time-coming">A long time coming</h2>
+
+<p>PFA for PHP really began even before 2021.  As discussed in the <a href="https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/">Pipes blog post</a> from July, way back in 2016 Sara Golemon proposed porting Hack/HHVM's pipe syntax to PHP:</p>
+
+<pre><code class="php">$result = $arr
+    |&gt; array_column($$, 'tags')
+    |&gt; array_merge(...$$)
+    |&gt; array_unique($$)
+    |&gt; array_values($$)
+;
+</code></pre>
+
+<p>That was never approved, but led us to try splitting the syntax in two: The pipe operator itself, and partial function application instead of <code>$$</code>.  We tried in 2021 to get both, but both failed.  Now we have both.</p>
+
+<p>One of the chief criticisms I've seen about the new pipe operator is the need to wrap up multi-parameter functions into an inline arrow function, and then wrap that in <code>()</code> to keep the parser happy.  Which is a fair criticism!  And the perfect fix for that criticism is... partial function application.  Which we now have.  The twins have been reunited.</p>
+
+<h2 id="php-breaks-the-mold">PHP breaks the mold</h2>
+
+<p>I've often seen PHP criticized for just stealing features from other languages and piling them in willy-nilly.  Frankly that's not always a bad thing: PHP, much like English, evolves by finding good ideas in other languages and <em>ahem</em> borrowing them, and making it our own.</p>
+
+<p>Partial function application is not a new concept.  It's been the foundation of many functional languages for decades.  Haskell, for instance, implicitly uses partial application for literally every function call.  Any function call can just omit its right-most arguments and poof, it becomes a partial application.</p>
+
+<p>What I have not seen in any language, however, is the ability to partially apply arbitrary parameters.  That's important for PHP, because while Haskell's entire standard library was built around the assumption of right-most partial application, PHP's most definitely was not.  We needed to be able to turn arbitrary functions into unary (single-argument) functions to allow most parts of the standard library to work with... pipes.  Or as callbacks.</p>
+
+<p>And now we can.  I do not know of any other language that has as flexible, powerful, and compact a partial function application syntax as PHP 8.6 will have.  Here, PHP would seem to be the innovator.</p>
+
+<p>Rock on, ElePHPants!</p>
+
+<h2 id="what-comes-next%3F">What comes next?</h2>
+
+<p>There's one more major piece of the puzzle still to come: <a href="https://wiki.php.net/rfc/function-composition">Function composition</a>.  Where pipe executes immediately, function composition creates a new function by sticking two functions end-to-end.  Sara Golemon helpfully got it started, but it still needs some work before it can be formally proposed.</p>
+
+<p>That would complete the trifecta of "Functional Features" we've been trying to get into PHP for years to allow a much more natural use of functional techniques.</p>
+
+<p>Each of these RFCs is, on its own, useful but not earth-shattering.  Taken together... "synergy" may be a dirty word outside of management consulting, but in this case it applies.  We are very close to blowing open PHP's functional capabilities in much the way that PHP 5.2 finally blew open its object-oriented capabilities.  And as a multi-paradigm language, we'll be able to freely mix and match OOP and FP approaches where they make the most sense.</p>
+
+<p>I can't wait!</p>
+]]></content><link href="https://thephp.foundation/blog/2025/12/08/partial-application/"/><id>https://thephp.foundation/blog/2025/12/08/partial-application/</id><updated>Mon, 08 Dec 2025 00:00:00 +0000</updated></entry><entry><author><name>Arnaud Le Blanc</name><uri>https://github.com/arnaud-lb</uri></author><author><name>Derick Rethans</name><uri>https://derickrethans.nl</uri></author><author><name>Larry Garfield</name><uri>https://www.garfieldtech.com/</uri></author><title type="html"><![CDATA[State of Generics and Collections]]></title><content type="html"><![CDATA[<p>Generics have been on the list of wanted features for a long time by numerous PHP developers. The topic is often brought up in "What's New in PHP?" talks as well during Q&amp;A.</p>
 
 <p>In this article we will be exploring the different approaches, and what their current state is.</p>
 

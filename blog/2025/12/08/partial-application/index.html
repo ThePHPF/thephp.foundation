@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Thank you for supporting The PHP Foundation in 2025! Can we count on you in 2026? &mdash; The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language</title>
+    <title>PHP 8.6 kicks off with partial function application &mdash; The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language</title>
     <meta name="description" content="The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language">
     <meta charset="utf-8">
     <meta name="theme-color" content="#ffffff">
@@ -19,18 +19,18 @@
     <meta name="yandex-verification" content="6990192232fdf071" />
     <meta name="msvalidate.01" content="5D1EB82347E6BF271A01DCDBF7E59BED" />
 
-    <meta property="og:url" content="https://thephp.foundation/blog/2025/12/02/can-we-count-on-you-in-2026/">
+    <meta property="og:url" content="https://thephp.foundation/blog/2025/12/08/partial-application/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Thank you for supporting The PHP Foundation in 2025! Can we count on you in 2026?">
+    <meta property="og:title" content="PHP 8.6 kicks off with partial function application">
     <meta property="og:description" content="The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language">
-    <meta property="og:image" content="https://thephp.foundation/assets/share/2025-12-02-can-we-count-on-you-in-2026.png">
+    <meta property="og:image" content="https://thephp.foundation/assets/share/2025-12-08-partial-application.png">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="https://thephp.foundation">
-    <meta property="twitter:url" content="https://thephp.foundation/blog/2025/12/02/can-we-count-on-you-in-2026/">
-    <meta name="twitter:title" content="Thank you for supporting The PHP Foundation in 2025! Can we count on you in 2026?">
+    <meta property="twitter:url" content="https://thephp.foundation/blog/2025/12/08/partial-application/">
+    <meta name="twitter:title" content="PHP 8.6 kicks off with partial function application">
     <meta name="twitter:description" content="The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language">
-    <meta name="twitter:image" content="https://thephp.foundation/assets/share/2025-12-02-can-we-count-on-you-in-2026.png">
+    <meta name="twitter:image" content="https://thephp.foundation/assets/share/2025-12-08-partial-application.png">
 
     <link rel="apple-touch-startup-image" href="https://thephp.foundation/assets/icons/php_foundation.svg">
     <meta name="mobile-web-app-capable" content="yes">
@@ -157,102 +157,152 @@
 
 <div class="bg-white px-6 lg:px-8 my-16" itemscope itemtype="https://schema.org/Article">
     <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
-        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" itemprop="name">Thank you for supporting The PHP Foundation in 2025! Can we count on you in 2026?</h1>
+        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" itemprop="name">PHP 8.6 kicks off with partial function application</h1>
 
         <div class="flex flex-col md:flex-row md:items-center gap-x-4 text-xs mt-2">
                 <div>
-            Published on <span itemprop="datePublished">Dec 02, 2025</span>
+            Published on <span itemprop="datePublished">Dec 08, 2025</span>
             by
-                        <span itemprop="publisher" itemscope itemtype="https://schema.org/Person"><a href="https://x.com/beberlei" target="_blank" rel="noopener noreferrer" itemprop="url"><span itemprop="name">Benjamin Eberlei</span></a></span>                    </div>
+                        <span itemprop="publisher" itemscope itemtype="https://schema.org/Person"><a href="https://github.com/Crell" target="_blank" rel="noopener noreferrer" itemprop="url"><span itemprop="name">Larry Garfield</span></a></span>                    </div>
                     
         
                 <div class="flex gap-x-2 mt-2 md:mt-0">
-                        <a href="https://thephp.foundation/blog/tag/news"
+                        <a href="https://thephp.foundation/blog/tag/stories"
                class="rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
-                News
+                Stories
             </a>
                     </div>
                 </div>
 
         <div class="mt-6 text-xl leading-8" itemprop="text">
-            <p>As 2025 comes to a close, we at The PHP Foundation want to take a moment to thank everyone who has supported us this year. We firmly believe that our work on the PHP language continues to have a massive impact, and we couldn’t have done it without the amazing PHP community and our generous sponsors.</p>
+            <p>PHP 8.5 is still warm, but the work to push PHP forward continues.  The latest major feature for PHP 8.6 has just been approved: <a href="https://wiki.php.net/rfc/partial_function_application_v2">Partial Function Application</a> (PFA).</p>
 
-<div class="text-center my-10">
-  <a href="https://thephp.foundation/sponsor/" class="button-link">Become a Sponsor&nbsp;&nbsp;❤️</a>
-</div>
+<h2 id="the-gist">The gist</h2>
 
-<h2 id="%2A%2Aour-achievements-this-year%2A%2A"><strong>Our Achievements This Year</strong></h2>
+<p>In PHP 8.6, it will be possible to create a closure that simply delegates to another function without writing out the whole closure.</p>
 
-<p>Now in our fourth year, The PHP Foundation has achieved several milestones that have further strengthened the PHP ecosystem:</p>
+<pre><code class="php">// This
+$underscore = str_replace(' ', '_', ?);
 
-<ul>
-<li><a href="https://www.php.net/releases/8.5/en.php">Release of PHP 8.5</a></li>
-<li><a href="https://github.com/php/pie">PIE 1.0 Release</a></li>
-<li><a href="https://thephp.foundation/blog/2025/05/15/frankenphp/">Supporting FrankenPHP</a></li>
-<li><a href="https://thephp.foundation/blog/2025/09/05/php-mcp-sdk/">PHP MCP SDK together with Anthropic and Symfony</a></li>
-<li>2nd <a href="https://www.sovereign.tech/">Sovereign Tech Agency</a> Investment for the <a href="https://thephp.foundation/blog/2025/10/30/php-streams-evolution/">Stream Layer Rework</a></li>
-</ul>
+// Is effectively the same as this:
+$underscore = fn(string $s): string =&gt; str_replace(' ' , '_', $s);
+</code></pre>
 
-<h2 id="thank-you-to-our-sponsors">Thank You to Our Sponsors</h2>
+<p>Both lines will produce nearly identical opcodes, but the former is much easier to both write and to read, as it doesn't require messing about with redeclaring all the types and variable names.</p>
 
-<p>We owe a special thanks to our major sponsors who make our work possible:</p>
+<p>Any function (or method) call may use one of two placeholders, <code>?</code> or <code>...</code>, to indicate that it is only "partially invoking" that function.  Or "partially applying arguments to it."  It works with both positional and named arguments, too!</p>
 
-<h3 id="%2A%2Aplatinum%2A%2A"><strong>Platinum</strong></h3>
+<pre><code class="php">function complex(int $a, int $b, int $c, int $d): string { ... }
 
-<p><a href="https://automattic.com/"><strong>Automattic</strong></a><br />
-<a href="https://www.sovereign.tech/"><strong>Sovereign Tech Agency</strong></a><br />
-<a href="https://www.jetbrains.com/"><strong>JetBrains</strong></a></p>
+// This creates a closure that takes 2 ints and returns a string.
+$f = complex(?, 2, ?, 4);
 
-<h3 id="%2A%2Agold%2A%2A"><strong>Gold</strong></h3>
+// This creates the same closure, but with named arguments.
+$f = complex(b: 2, d: 4, ...);
 
-<p><a href="https://laravel.com/"><strong>Laravel</strong></a><br />
-<a href="https://www.godaddy.com/"><strong>GoDaddy</strong></a></p>
+// This reverses the order of the parameters, $f needs $c first, then $a.
+$f = complex(b: 2, d: 4, c: ?, a: ?);
 
-<h3 id="%2A%2Asilver%2A%2A"><strong>Silver</strong></h3>
+// Keep all arguments unbound. Hey look, first-class-callables!
+$f = complex(...);
 
-<p><a href="https://www.passbolt.com/"><strong>Passbolt</strong></a> 🆕, <a href="https://packagist.com/"><strong>Private Packagist</strong></a>, <a href="https://craftcms.com/"><strong>Craft CMS</strong></a>, <a href="https://cybozu.co.jp/en/company/"><strong>Cybozu</strong></a>, <a href="https://tideways.com/"><strong>Tideways</strong></a>. <a href="https://www.zend.com/"><strong>Zend by Perforce</strong></a>. <a href="https://symfony.com/"><strong>Symfony Corp</strong></a>, <a href="https://sentry.io/welcome/"><strong>Sentry</strong></a>. <a href="https://manychat.com/"><strong>Manychat</strong></a>, <a href="https://www.mercari.com/"><strong>Mercari Inc.</strong></a>, <a href="http://les-tilleuls.coop/"><strong>Les-Tilleuls.coop</strong></a>, <a href="https://www.pixiv.net/en/"><strong>pixiv Inc.</strong></a>, <a href="https://aternos.gmbh/en/"><strong>Aternos GmbH</strong></a>, <a href="https://chstudio.fr/en/homepage/"><strong>CH Studio</strong></a></p>
+// This creates a zero argument closure, which just calls complex() when invoked!
+$f = complex(1, 2, 3, 4, ...);
+</code></pre>
 
-<p>In total more than 550 donations were made by businesses and individual sponsors to The PHP Foundation throughout this year through OpenCollective and more through our GitHub sponsors.</p>
+<p>PFA supports a wide variety of complex use cases and features, like parameter reordering, named arguments, variadics, etc.  In practice, however, we expect most uses to be reducing a function down to a single remaining argument (that is, currying).  That makes it perfect to use as a callback.  Most of PHP's functions that take callbacks expect a single argument, and the few remaining take two (such as a value and a key).  PFA makes using arbitrarily complex, contextually aware functions in those cases trivially easy.</p>
 
-<p>Your contributions enable us to support developers, fund crucial projects, and ensure PHP is a modern and reliable choice for web development.</p>
+<pre><code class="php">// This
+$result = array_map(in_array(?, $legal, strict: true), $input);
 
-<p>If you are yet to decide on sponsoring the foundation, <a href="https://thephp.foundation/sponsor/">here</a> you can find information on how to join us and why it matters or reach out directly to <a href="&#109;&#x61;i&#108;&#x74;&#111;&#58;&#x63;&#111;&#x6e;&#x74;&#97;&#x63;t&#64;&#x74;&#104;&#101;&#x70;&#104;&#x70;&#x2e;&#102;&#x6f;&#x75;&#110;&#x64;a&#116;&#x69;&#111;&#110;">contact@thephp.foundation</a>.</p>
+// is much nicer than this
+$result = array_map(fn(string $s): bool =&gt; in_array($s, $legal, strict: true), $input);
+</code></pre>
 
-<h2 id="outlook-into-2026">Outlook into 2026</h2>
+<p>By design, it's also the perfect complement for the new <a href="https://www.php.net/manual/en/language.operators.functional.php">pipe operator</a>.  To reuse some examples from the <a href="https://wiki.php.net/rfc/pipe-operator-v3">Pipe RFC</a>:</p>
 
-<p>Big changes are ahead for 2026, when our founding and long-term executive director <a href="https://www.linkedin.com/in/pronskiy/">Roman Pronskiy</a> (JetBrains) will step down and the foundation will hire a dedicated executive director for the first time.</p>
+<pre><code class="php">$numberOfAdmins = getUsers()
+    |&gt; array_filter(?, isAdmin(...))
+    |&gt; count(...);
 
-<p>This marks a new chapter as we recognize that The PHP Foundation has grown so much that we consider a dedicated management position to be required to ensure that our projects and goals are getting done.</p>
+$result = "Hello World"
+    |&gt; htmlentities(...)
+    |&gt; str_split(...)
+    |&gt; array_map(strtoupper(...), ?)
+    |&gt; array_filter(?, fn($v) =&gt; $v != 'O')
+;
+</code></pre>
 
-<p>If you are interested in the Executive Director role, we are still <a href="https://thephp.foundation/blog/2025/11/10/seeking-new-executive-director/">looking for candidates to apply until December 15th, 2025</a>.</p>
+<p>What's more, optimizations around the pipe operator mean the closure doesn't even need to be created in those cases, so there's zero performance overhead.</p>
 
-<p>Furthermore, we’d like to add 2 new developers to our team who applied to our program in autumn.</p>
+<p>The RFC has more details on all the ins and outs of the new syntax.</p>
 
-<p>And mainly, our team will continue to maintain, document, and improve PHP further with the next major release (8.6 or 9.0) coming at the end of 2026&#46;</p>
+<h2 id="the-long-view">The long view</h2>
 
-<p>Thank you,<br />
-The PHP Foundation<br />
-🐘💜</p>
+<p>If all of this sounds a lot like an extended version of "first class callables," it should.  Or rather, "first class callables," are the training wheels version of partial function application.</p>
+
+<p>PFA was <a href="https://wiki.php.net/rfc/partial_function_application">first proposed</a> way back in 2021, by a team of Joe Watkins, Levi Morrison, Paul Crovella, and myself.  That version was largely similar on the surface, but had a different implementation that caused some consternation.  In particular, Nikita Popov (at the time still PHP's de facto lead developer) felt that it introduced too much complexity in the engine.  His hesitancy convinced many others to reject it at the time, though there was still a lot of interest and support.</p>
+
+<p>There was enough support, however, that Nikita asked "couldn't we just do <code>foo(...)</code> to delay all the variables, and skip the rest of the RFC?"  The result of that was the <a href="https://wiki.php.net/rfc/first_class_callable_syntax">First Class Callables</a> RFC, released in PHP 8.1.</p>
+
+<p>I've been looking to take a second swing at PFA since then, but needed the right time and right collaborators.  FCC has clearly shown itself to be a huge boon to the language, so why not go all the way?  It wasn't until the Pipes RFC passed earlier this year, though, that I was able to snare the PHP Foundation's Arnaud Le Blanc into working on a second version with me.  It didn't quite make it into PHP 8.5 for timing reasons, but it's now available in 8.6.</p>
+
+<p>So what changed?  One, FCC ended up already including a lot of the underlying engine trickery that was needed for this version of PFA.  We were able to leverage that.  For another, the implementation is a bit different.  Rather than creating a special kind of pseudo-closure that can be extra-optimized, the new approach just creates a normal closure object like we've had for years.  That makes it much simpler to implement and solve a ton of edge-case questions.  Three, now we have pipes.</p>
+
+<p>And oh boy is this an exciting combination.</p>
+
+<h2 id="a-long-time-coming">A long time coming</h2>
+
+<p>PFA for PHP really began even before 2021.  As discussed in the <a href="https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/">Pipes blog post</a> from July, way back in 2016 Sara Golemon proposed porting Hack/HHVM's pipe syntax to PHP:</p>
+
+<pre><code class="php">$result = $arr
+    |&gt; array_column($$, 'tags')
+    |&gt; array_merge(...$$)
+    |&gt; array_unique($$)
+    |&gt; array_values($$)
+;
+</code></pre>
+
+<p>That was never approved, but led us to try splitting the syntax in two: The pipe operator itself, and partial function application instead of <code>$$</code>.  We tried in 2021 to get both, but both failed.  Now we have both.</p>
+
+<p>One of the chief criticisms I've seen about the new pipe operator is the need to wrap up multi-parameter functions into an inline arrow function, and then wrap that in <code>()</code> to keep the parser happy.  Which is a fair criticism!  And the perfect fix for that criticism is... partial function application.  Which we now have.  The twins have been reunited.</p>
+
+<h2 id="php-breaks-the-mold">PHP breaks the mold</h2>
+
+<p>I've often seen PHP criticized for just stealing features from other languages and piling them in willy-nilly.  Frankly that's not always a bad thing: PHP, much like English, evolves by finding good ideas in other languages and <em>ahem</em> borrowing them, and making it our own.</p>
+
+<p>Partial function application is not a new concept.  It's been the foundation of many functional languages for decades.  Haskell, for instance, implicitly uses partial application for literally every function call.  Any function call can just omit its right-most arguments and poof, it becomes a partial application.</p>
+
+<p>What I have not seen in any language, however, is the ability to partially apply arbitrary parameters.  That's important for PHP, because while Haskell's entire standard library was built around the assumption of right-most partial application, PHP's most definitely was not.  We needed to be able to turn arbitrary functions into unary (single-argument) functions to allow most parts of the standard library to work with... pipes.  Or as callbacks.</p>
+
+<p>And now we can.  I do not know of any other language that has as flexible, powerful, and compact a partial function application syntax as PHP 8.6 will have.  Here, PHP would seem to be the innovator.</p>
+
+<p>Rock on, ElePHPants!</p>
+
+<h2 id="what-comes-next%3F">What comes next?</h2>
+
+<p>There's one more major piece of the puzzle still to come: <a href="https://wiki.php.net/rfc/function-composition">Function composition</a>.  Where pipe executes immediately, function composition creates a new function by sticking two functions end-to-end.  Sara Golemon helpfully got it started, but it still needs some work before it can be formally proposed.</p>
+
+<p>That would complete the trifecta of "Functional Features" we've been trying to get into PHP for years to allow a much more natural use of functional techniques.</p>
+
+<p>Each of these RFCs is, on its own, useful but not earth-shattering.  Taken together... "synergy" may be a dirty word outside of management consulting, but in this case it applies.  We are very close to blowing open PHP's functional capabilities in much the way that PHP 5.2 finally blew open its object-oriented capabilities.  And as a multi-paradigm language, we'll be able to freely mix and match OOP and FP approaches where they make the most sense.</p>
+
+<p>I can't wait!</p>
 
         </div>
 
         <div class="border-t pt-5 my-5">
                         <nav class="flex flex-row justify-between article -mx-2 mb-5">
-                                <a href="https://thephp.foundation/blog/2025/11/10/seeking-new-executive-director/"
+                                <a href="https://thephp.foundation/blog/2025/12/02/can-we-count-on-you-in-2026/"
                    class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[#7f52ff] transition-all no-underline">
                     <div class="mb-1 text-sm text-gray-600 font-medium">Previous</div>
-                    <div class="font-bold text-blue-500">The PHP Foundation is Seeking a New Executive Director</div>
+                    <div class="font-bold text-blue-500">Thank you for supporting The PHP Foundation in 2025! Can we count on you in 2026?</div>
                 </a>
                 
-                                <a href="https://thephp.foundation/blog/2025/12/08/partial-application/"
-                   class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[rgba(127,82,255,.8)] transition-all no-underline">
-                    <div class="mb-1 text-sm text-gray-600 font-medium">Next</div>
-                    <div class="font-bold text-blue-500">PHP 8.6 kicks off with partial function application</div>
-                </a>
                             </nav>
             
             <div>
-                <a href="https://github.com/ThePHPF/thephp.foundation/edit/main/source/_posts/2025-12-02-can-we-count-on-you-in-2026.md"
+                <a href="https://github.com/ThePHPF/thephp.foundation/edit/main/source/_posts/2025-12-08-partial-application.md"
                    class="nav-org" rel="noopener noreferrer" target="_blank">Edit this page on GitHub</a>
             </div>
         </div>

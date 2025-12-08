@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2025-12-03T10:21:56+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[Design Contest Results and Lessons Learned]]></title><content type="html"><![CDATA[<p>Over the last few weeks we ran a focused community contest to refresh the <strong>PHP 8.5 release page</strong>. Thank you to everyone who submitted, reviewed, voted, and discussed.</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2025-12-08T10:37:40+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[Design Contest Results and Lessons Learned]]></title><content type="html"><![CDATA[<p>Over the last few weeks we ran a focused community contest to refresh the <strong>PHP 8.5 release page</strong>. Thank you to everyone who submitted, reviewed, voted, and discussed.</p>
 
 <blockquote>
   <p><strong>Note about future redesigns</strong><br />
