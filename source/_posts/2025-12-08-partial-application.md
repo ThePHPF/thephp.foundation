@@ -7,7 +7,7 @@ author:
   - name: Larry Garfield
     url: https://github.com/Crell
 
-published_at: 06 December 2025
+published_at: 08 December 2025
 ---
 
 PHP 8.5 is still warm, but the work to push PHP forward continues.  The latest major feature for PHP 8.6 has just been approved: [Partial Function Application](https://wiki.php.net/rfc/partial_function_application_v2) (PFA).
@@ -47,7 +47,7 @@ $f = complex(...);
 $f = complex(1, 2, 3, 4, ...);
 ```
 
-PFA supports a wide variety of complex use cases and features, like parameter reordering, named arguments, variadics, etc.  In practice, however, we expect most uses to be reducing a function down to a single remaining argument (that is, currying).  That makes it perfect to use as a callback.  Most of PHP's functions that take callbacks expect a single argument, and the few remaining take two (such as a value and a key).  PFA makes using arbitrarily complex, contextually-aware functions in those cases trivially easy.
+PFA supports a wide variety of complex use cases and features, like parameter reordering, named arguments, variadics, etc.  In practice, however, we expect most uses to be reducing a function down to a single remaining argument (that is, currying).  That makes it perfect to use as a callback.  Most of PHP's functions that take callbacks expect a single argument, and the few remaining take two (such as a value and a key).  PFA makes using arbitrarily complex, contextually aware functions in those cases trivially easy.
 
 ```php
 // This
@@ -86,9 +86,9 @@ There was enough support, however, that Nikita asked "couldn't we just do `foo(.
 
 I've been looking to take a second swing at PFA since then, but needed the right time and right collaborators.  FCC has clearly shown itself to be a huge boon to the language, so why not go all the way?  It wasn't until the Pipes RFC passed earlier this year, though, that I was able to snare the PHP Foundation's Arnaud Le Blanc into working on a second version with me.  It didn't quite make it into PHP 8.5 for timing reasons, but it's now available in 8.6.
 
-So what changed?  One, FCC ended up already including a lot of the underlying engine trickery that was needed for this version of PFA.  We were able to leverage that.  For another, the implementation is a bit different.  Rather than creating a special kind of pseudo-closure that can be extra-optimized, the new approach just creates a normal closure object like we've had for years.  That makes it much simpler to implement, and solves a ton of edge-case questions.  Three, now we have pipes.
+So what changed?  One, FCC ended up already including a lot of the underlying engine trickery that was needed for this version of PFA.  We were able to leverage that.  For another, the implementation is a bit different.  Rather than creating a special kind of pseudo-closure that can be extra-optimized, the new approach just creates a normal closure object like we've had for years.  That makes it much simpler to implement and solve a ton of edge-case questions.  Three, now we have pipes.
 
-And oh boy oh boy is this an exciting combination.
+And oh boy is this an exciting combination.
 
 ## A long time coming
 
@@ -125,6 +125,6 @@ There's one more major piece of the puzzle still to come: [Function composition]
 
 That would complete the trifecta of "Functional Features" we've been trying to get into PHP for years to allow a much more natural use of functional techniques.
 
-Each of these RFCs is, on its own, useful but not earth-shattering.  Taken together... "synergy" may be a dirty word outside of management consulting, but in this case it applies.  We are very close to blowing open PHP's functional capabilities in much the way that PHP 5.2 finally blew open it's object-oriented capabilities.  And as a multi-paradigm language, we'll be able to freely mix and match OOP and FP approaches where they make the most sense.
+Each of these RFCs is, on its own, useful but not earth-shattering.  Taken together... "synergy" may be a dirty word outside of management consulting, but in this case it applies.  We are very close to blowing open PHP's functional capabilities in much the way that PHP 5.2 finally blew open its object-oriented capabilities.  And as a multi-paradigm language, we'll be able to freely mix and match OOP and FP approaches where they make the most sense.
 
 I can't wait!
