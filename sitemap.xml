@@ -2,9 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://thephp.foundation</loc>
-    <lastmod>2025-12-08</lastmod>
+    <lastmod>2026-01-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+  </url>
+    <url>
+    <loc>https://thephp.foundation/blog/2026/01/26/meet-team-blue-php-foundation-sponsor/</loc>
+    <lastmod>2026-01-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/blog/2025/12/08/partial-application/</loc>
@@ -392,55 +398,55 @@
   </url>
       <url>
     <loc>https://thephp.foundation/branding</loc>
-    <lastmod>2025-12-08T10:37:40+00:00</lastmod>
+    <lastmod>2026-01-26T11:02:57+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/code-of-conduct</loc>
-    <lastmod>2025-12-08T10:37:40+00:00</lastmod>
+    <lastmod>2026-01-26T11:02:57+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/contact</loc>
-    <lastmod>2025-12-08T10:37:40+00:00</lastmod>
+    <lastmod>2026-01-26T11:02:57+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/foundation</loc>
-    <lastmod>2025-12-08T10:37:40+00:00</lastmod>
+    <lastmod>2026-01-26T11:02:57+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/get-involved</loc>
-    <lastmod>2025-12-08T10:37:40+00:00</lastmod>
+    <lastmod>2026-01-26T11:02:57+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/governance</loc>
-    <lastmod>2025-12-08T10:37:40+00:00</lastmod>
+    <lastmod>2026-01-26T11:02:57+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/privacy-policy</loc>
-    <lastmod>2025-12-08T10:37:40+00:00</lastmod>
+    <lastmod>2026-01-26T11:02:57+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/sponsor</loc>
-    <lastmod>2025-12-08T10:37:40+00:00</lastmod>
+    <lastmod>2026-01-26T11:02:57+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
     <loc>https://thephp.foundation/structure</loc>
-    <lastmod>2025-12-08T10:37:40+00:00</lastmod>
+    <lastmod>2026-01-26T11:02:57+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>

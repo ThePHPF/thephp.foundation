@@ -3,9 +3,56 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2025-12-08T10:37:40+00:00</updated>
+    <updated>2026-01-26T11:02:57+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Meet team.blue: A PHP Foundation Sponsor supporting the language at the core of its ecosystem]]></title>
+            <link href="https://thephp.foundation/blog/2026/01/26/meet-team-blue-php-foundation-sponsor/"/>
+            <updated>2026-01-26T00:00:00+00:00</updated>
+            <id>https://thephp.foundation/blog/2026/01/26/meet-team-blue-php-foundation-sponsor/</id>
+            <content type="html"><![CDATA[<p>Starting January 2026, <strong>team.blue</strong> joined the PHP Foundation as a <strong>Gold Sponsor</strong>, reinforcing its long-term commitment to supporting the open-source technologies that power millions of businesses across Europe.</p>
+
+<p><a href="https://team.blue/">team.blue</a> is a leading AI-powered digital enabler serving small and medium businesses (SMBs) and agencies across Europe. With more than 4,000 experts, 3.3 million customers, and operations in over 22 countries, team.blue provides businesses with the digital tools they need to build, grow, and scale online. Its ecosystem spans domains, hosting, cloud solutions, website and e-commerce tools, and a fast-growing portfolio of AI-driven SaaS products. For team.blue, PHP represents a foundational technology across its platforms and services.</p>
+
+<h2 id="php%3A-the-engine-behind-team.blue%27s-platforms">PHP: the engine behind team.blue's platforms</h2>
+
+<p>PHP's performance, stability, and extensive ecosystem also provide a scalable basis for delivering AI-powered capabilities and intelligent user journeys, enabling million SMBs to grow and succeed online. PHP underpins:</p>
+
+<ul>
+<li><p><strong>Shared hosting and managed WordPress products</strong> at brands like Combell, Register.it, and TransIP.</p></li>
+<li><p><strong>PHP-based SaaS products</strong> (core app logic, integrations, and day-to-day feature work).</p></li>
+<li><p><strong>Internal tools and systems</strong> used across the group.</p></li>
+</ul>
+
+<p>PHP's mature ecosystem and proven scalability allow team.blue to build sophisticated digital tools that help SMBs and agencies grow online, demonstrating how the language powers modern high-traffic platforms across diverse use cases.</p>
+
+<p>Discover more about the team.blue ecosystem: <a href="https://team.blue/our-ecosystem/">https://team.blue/our-ecosystem/</a></p>
+
+<h2 id="giving-back-to-the-php-community">Giving back to the PHP community</h2>
+
+<p><figure class="max-w-screen-md mx-auto text-center mb-6" id="quote-kirk-barlow">
+    <svg class="w-10 h-10 mx-auto mb-3 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+        <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
+    </svg>
+    <blockquote>
+        <p class="italic text-gray-900">“Open-source communities have always been essential to how we build and scale. PHP sits at the core of our hosting and WordPress ecosystem, so we are proud to give back and support the Foundation in ensuring its long-term growth. This sponsorship reinforces our belief that open-source thrives when everyone contributes.”</p>
+    </blockquote>
+    <figcaption class="flex items-center justify-center mt-3 space-x-3 rtl:space-x-reverse">
+        <img class="w-10 h-10 rounded-full" src="/assets/post-images/2026/team-blue/kirk-barlow.png" alt="profile picture">
+        <div class="flex items-center">
+            <cite class="pl-0.5 font-medium text-gray-900">Kirk Barlow, </cite>
+            <cite class="pl-1 text-gray-500">Group Chief Technical Officer, team.blue</cite>
+        </div>
+    </figcaption>
+</figure>
+</p>
+
+<p>As a Gold Sponsor, team.blue is putting tangible support behind PHP, helping accelerate progress, maintain strong security, and back the ecosystem globally, while directly supporting the essential work of maintenance, continuous improvement, and ensuring the language remains ready for what comes next.</p>
+
+<p>Learn more about team.blue and its mission to make online business success simpler: <a href="https://team.blue/">https://team.blue/</a></p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[PHP 8.6 kicks off with partial function application]]></title>
             <link href="https://thephp.foundation/blog/2025/12/08/partial-application/"/>
@@ -970,89 +1017,6 @@ The development of <a href="https://github.com/php/php-src">the PHP core</a> is 
 <p>Please join us in welcoming Joe back — and if you haven’t yet, check out what he’s been working on: <a href="https://github.com/krakjoe">github.com/krakjoe</a>.</p>
 
 <p>💜🐘</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Announcing the Official PHP SDK for MCP]]></title>
-            <link href="https://thephp.foundation/blog/2025/09/05/php-mcp-sdk/"/>
-            <updated>2025-09-05T00:00:00+00:00</updated>
-            <id>https://thephp.foundation/blog/2025/09/05/php-mcp-sdk/</id>
-            <content type="html"><![CDATA[<p><strong>The PHP Foundation</strong>, <strong>Anthropic’s MCP team, and Symfony</strong> are collaborating on the <strong>official PHP SDK for the Model Context Protocol (MCP)</strong>. Our goal is a <strong>framework-agnostic, production-ready</strong> reference implementation the PHP ecosystem can rely on.</p>
-
-<p>The Symfony team will lead maintenance, with contributions from the broader community, including <a href="https://github.com/CodeWithKyrian">Kyrian Obikwelu</a> (<a href="https://github.com/php-mcp">PHP-MCP</a>).</p>
-
-<p>This initiative consolidates earlier work into a single, trusted implementation – <a href="https://github.com/modelcontextprotocol/php-sdk"><strong>modelcontextprotocol/php-sdk</strong></a> – starting with the server and expanding to client capabilities.</p>
-
-<p>⭐ Star the repo, try it, open issues/PRs, and join discussions.</p>
-
-<!--
-- [Symfony announcement](https://symfony.com/blog/symfony-to-provide-the-official-mcp-sdk)  
-- [MCP blog announcement]()
--->
-
-<h2 id="%2A%2Awhat-is-mcp-and-why-is-it-important%2A%2A"><strong>What is MCP and why is it important</strong></h2>
-
-<p>The <a href="https://modelcontextprotocol.io/">Model Context Protocol</a> (MCP) is an open protocol introduced by <a href="https://www.anthropic.com/">Anthropic</a> to enable AI applications to connect with and utilize external tools and data sources, akin to a standardized "USB-C port" for AI systems.</p>
-
-<blockquote>
-  <p>💡 Fun fact: MCP co-creator <a href="https://x.com/dsp_"><strong>David Soria Parra</strong></a> was release manager for <a href="https://wiki.php.net/todo/php54">PHP 5.4</a> and <a href="https://wiki.php.net/todo/php55">5.5</a>, and a long-time PHP core contributor. His PHP code still runs inside <a href="https://github.com/symfony/http-foundation/blob/6.1/IpUtils.php#L105">every Symfony and Laravel project</a> today. Cheers, David! 💜</p>
-</blockquote>
-
-<p>To make it easier to build MCP servers, the community provides SDKs – lightweight frameworks that handle the protocol details so developers can focus on their applications.</p>
-
-<p>There were several official SDKs for different programming languages. However, there was no official PHP SDK, even though a few community implementations existed.</p>
-
-<p>That’s why <strong>the PHP Foundation stepped up to coordinate</strong> the development and maintenance of the official PHP SDK for MCP.</p>
-
-<p>This brings two important benefits:</p>
-
-<ul>
-<li>A <strong>trusted reference implementation</strong> developers can rely on.</li>
-<li>Visibility of <strong>PHP’s readiness for AI development</strong> outside its own ecosystem.</li>
-</ul>
-
-<h2 id="%2A%2Awhat%E2%80%99s-happening%2A%2A"><strong>What’s happening</strong></h2>
-
-<p><strong>The PHP Foundation</strong> has partnered with the MCP team at <strong>Anthropic</strong> and the <strong>Symfony</strong> team to develop the <strong>official MCP SDK for PHP.</strong></p>
-
-<p>The Symfony team will be lead maintainers of the SDK as they have a proven track record of building high-quality framework-agnostic components that much of the PHP ecosystem relies on.</p>
-
-<p>Additionally, <a href="https://github.com/CodeWithKyrian">Kyrian Obikwelu</a> joined the maintainer team and brings his previous experience and work on MCP libraries. Other PHP MCP SDK authors are welcome to participate as well.</p>
-
-<p><strong>Roadmap (high level):</strong></p>
-
-<ol>
-<li>Server-side building blocks (initial release)</li>
-<li>Client capabilities and additional transports as the spec evolves</li>
-<li>Docs, examples, and stability hardening driven by real-world use</li>
-</ol>
-
-<p>We’ll keep this implementation framework-agnostic so it works well in any platform, legacy apps, and custom stacks. Community adapters and examples will live alongside the core packages.</p>
-
-<h2 id="%2A%2Aget-involved%2A%2A"><strong>Get involved</strong></h2>
-
-<p><strong>Try it:</strong> install the SDK, scaffold a small MCP server, and expose one or two safe tools.</p>
-
-<p><strong>Contribute:</strong> issues, docs, and PRs are very welcome – especially around testing, and real-world examples.</p>
-
-<p><strong>Bring your framework:</strong> we’re keen on first‑class integrations for Laravel, WordPress, Drupal, Laminas, and more. We keep a list of integrations in the repo as well.</p>
-
-<p><strong>Start here:</strong></p>
-
-<ul>
-<li>SDK repo: <a href="https://github.com/modelcontextprotocol/php-sdk"><strong>modelcontextprotocol/php-sdk</strong></a></li>
-<li>Composer package: <a href="https://packagist.org/packages/mcp/sdk"><strong>https://packagist.org/packages/mcp/sdk</strong></a></li>
-<li>MCP spec &amp; ecosystem: <a href="https://modelcontextprotocol.io/specification/2025-06-18"><strong>https://modelcontextprotocol.io/</strong></a></li>
-</ul>
-
-<blockquote>
-  <p><a href="https://symfony.com/blog/let-s-build-the-symfony-ai-ecosystem-together"><strong>Join the Symfony AI Hackathon</strong></a><br />
-  The in-person event will be <a href="https://maps.app.goo.gl/ML4e5SqtcwGRYJH8A">hosted at Quentic in Berlin</a>, and requires a <a href="https://www.eventbrite.com/e/symfony-ai-hackathon-tickets-1591414586869">free registration via Eventbrite</a> upfront. For online participation, please make sure to join our <a href="https://symfony.com/slack">Slack Workspace</a> and the &#35;ai channel to follow along and raise your topics or questions.</p>
-</blockquote>
-
-<p>This SDK helps ensure PHP is visible as a great language choice to a wider audience when working in the AI ecosystem.
-Let’s build it together!<br />
-💜🐘</p>
 ]]></content>
         </entry>
     </feed>
