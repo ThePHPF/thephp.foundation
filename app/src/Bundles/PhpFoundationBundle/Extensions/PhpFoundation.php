@@ -106,6 +106,11 @@ class PhpFoundation extends AbstractExtension
                     'website' => 'https://www.godaddy.com/',
                     'image' => '/assets/sponsors/godaddy.png',
                 ],
+                [
+                    'name' => 'team.blue',
+                    'website' => 'https://team.blue/',
+                    'image' => '/assets/sponsors/team-blue.jpg',
+                ],
             ],
             'Platinum' => [
                 [
