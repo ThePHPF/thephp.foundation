@@ -28,6 +28,10 @@
     "npx-watch": [
       "Composer\\Config::disableProcessTimeout",
       "npx tailwind -i assets/css/app.css -o source/assets/css/app.css --watch"
+    ],
+    "serve": [
+      "Composer\\Config::disableProcessTimeout",
+      "bash serve.sh"
     ]
   },
   "config": {
