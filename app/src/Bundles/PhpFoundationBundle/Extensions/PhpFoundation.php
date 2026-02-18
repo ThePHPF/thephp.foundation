@@ -94,6 +94,11 @@ class PhpFoundation extends AbstractExtension
                     'website' => 'https://passbolt.com/',
                     'image' => '/assets/sponsors/passbolt.png',
                 ],
+                [
+                    'name' => 'CH Studio',
+                    'website' => 'https://chstudio.fr/',
+                    'image' => '/assets/sponsors/chstudio.png',
+                ],
             ],
             'Gold' => [
                 [
