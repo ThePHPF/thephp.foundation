@@ -1,9 +1,11 @@
 <div
     class="thread-container"
-    data-reddit-thread="{{ url }}"
+    data-reddit-thread=""
+    data-reddit-search="PHP"
     data-reddit-max-depth="10"
     data-reddit-show-content="false"
     data-reddit-show-controls="true"
 ></div>
-<script src="//unpkg.com/redditify/dist/redditify.min.js"></script>
-<link rel="stylesheet" href="//unpkg.com/redditify/dist/redditify.css">
+<script>window.REDDITIFY_PROXY_URL = 'https://redditify-proxy.root-8f3.workers.dev';</script>
+<link rel="stylesheet" href="https://unpkg.com/redditify/dist/redditify.css">
+<script src="https://unpkg.com/redditify/dist/redditify.min.js"></script>

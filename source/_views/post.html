@@ -39,6 +39,10 @@
         </div>
 
         <div class="border-t pt-5 my-5">
+            {{ include('redditify.html') }}
+        </div>
+        
+        <div class="border-t pt-5 my-5">
             {% if page.previous_post or page.next_post %}
             <nav class="flex flex-row justify-between article -mx-2 mb-5">
                 {% if page.previous_post %}
