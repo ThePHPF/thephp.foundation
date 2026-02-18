@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-01-26T11:02:57+00:00</updated><entry><author><name>Larry Garfield</name><uri>https://github.com/Crell</uri></author><author><name>Gina Banyard</name><uri>https://github.com/Girgias</uri></author><title type="html"><![CDATA[Compile time generics: yay or nay?]]></title><content type="html"><![CDATA[<p>One of the most sought-after features for PHP is Generics: The ability to have a type that takes another type as a parameter.  It's a feature found in most compiled languages by now, but implementing generics in an interpreted language like PHP, where all the type checking would have to be done at runtime, has always proven Really Really Hard(tm), Really Really Slow(tm), or both.</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-02-18T16:03:43+00:00</updated><entry><author><name>Larry Garfield</name><uri>https://github.com/Crell</uri></author><author><name>Gina Banyard</name><uri>https://github.com/Girgias</uri></author><title type="html"><![CDATA[Compile time generics: yay or nay?]]></title><content type="html"><![CDATA[<p>One of the most sought-after features for PHP is Generics: The ability to have a type that takes another type as a parameter.  It's a feature found in most compiled languages by now, but implementing generics in an interpreted language like PHP, where all the type checking would have to be done at runtime, has always proven Really Really Hard(tm), Really Really Slow(tm), or both.</p>
 
 <p>But, experimentation by Gina from the PHP Foundation's dev team suggests we may be able to get 80% of the benefit for 20% of the work.  Is that enough?</p>
 
@@ -341,12 +341,14 @@ new Car(new StudentDriver());
 
 <p><div
     class="thread-container"
-    data-reddit-thread="https://www.reddit.com/r/PHP/comments/1mhe7qf/compile_time_generics_yay_or_nay/"
+    data-reddit-thread=""
+    data-reddit-search="PHP"
     data-reddit-max-depth="10"
     data-reddit-show-content="false"
     data-reddit-show-controls="true"
 ></div>
-<script src="//unpkg.com/redditify/dist/redditify.min.js"></script>
-<link rel="stylesheet" href="//unpkg.com/redditify/dist/redditify.css">
+<script>window.REDDITIFY_PROXY_URL = 'https://redditify-proxy.root-8f3.workers.dev';</script>
+<link rel="stylesheet" href="https://unpkg.com/redditify/dist/redditify.css">
+<script src="https://unpkg.com/redditify/dist/redditify.min.js"></script>
 </p>
 ]]></content><link href="https://thephp.foundation/blog/2025/08/05/compile-generics/"/><id>https://thephp.foundation/blog/2025/08/05/compile-generics/</id><updated>Mon, 04 Aug 2025 00:00:00 +0000</updated></entry></feed>
