@@ -3,9 +3,37 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2026-02-27T12:56:02+00:00</updated>
+    <updated>2026-03-06T17:55:30+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Working Together on the Future of PHP]]></title>
+            <link href="https://thephp.foundation/blog/2026/03/05/working-together-on-the-future-of-php/"/>
+            <updated>2026-03-05T00:00:00+00:00</updated>
+            <id>https://thephp.foundation/blog/2026/03/05/working-together-on-the-future-of-php/</id>
+            <content type="html"><![CDATA[<p>I’m incredibly excited to be joining the PHP Foundation as the Executive Director and continuing the work that has been done under the leadership of Roman Pronskiy and the Board. For those who don’t know me, I look forward to meeting you!</p>
+
+<h2 id="a-little-about-me">A little about me</h2>
+
+<p>PHP was my introduction to open source, when PHP 3 was the latest release. It was mind blowing to see an amazing group of smart, funny people collaborate with each other, help newbies, and build impactful things together while still having fun. People who lived thousands of miles away from each other and who had never met each other. People who had completely different backgrounds and daily lives. People who spoke different languages and lived in different time zones. They all managed to find a way to come together as a community. They wrote code, they organized events, they started local user groups, they built projects together, and they helped each other learn. Forgive my sentimentality, but it was (and still is) magical.</p>
+
+<p>It was this sense of community that fascinated me most, and I found myself moving from PHP development to open source community management. Since officially making that switch in 2010, I’ve worked for companies like GitHub, Sourceforge, and Pivotal, striving to make open source healthier, more inclusive, and better for everyone. I wanted anyone with an interest to be able to join the open source party, bring their unique set of skills, and experience the magic firsthand.</p>
+
+<p>For the last 6 years, I have worked as the Community Manager for an open source project called <a href="https://chaoss.community">CHAOSS</a> which focuses on open source community health and sustainability. It has been an unforgettable experience, I’m very proud of what we all accomplished together, and I love that community very much. But as I find my career pivoting back toward PHP, it honestly feels like coming home again.</p>
+
+<h2 id="looking-to-the-future">Looking to the future</h2>
+
+<p>The progress that has been made by the Foundation in the last few years is remarkable! Moving forward, you can expect to see the same kind of commitment to improving the PHP language and to keeping PHP relevant and sustainable.</p>
+
+<p>In addition, we aim to increase the Foundation’s transparency and openness, and to strengthen our collaborative relationships with users, sponsors, contributors, organizations, and the PHP community at large. A solid and thriving PHP ecosystem belongs to and benefits us all, but none of us can make that happen alone.</p>
+
+<h2 id="let%E2%80%99s-chat%21">Let’s chat!</h2>
+
+<p>Because we’re all in this together, I want to spend the next 1-2 months really listening to what you have to say. I have an <a href="https://calendar.app.google/UkqNQzuzYBbEYjLYA">open calendar</a> and I encourage you to reserve some time with me. I want to hear from PHP developers, contributors, companies using PHP, independent consultants, sponsors, community members, and anyone else interested in the future of PHP. I want to hear about your goals, your motivations, your pain points, and yes, even your wacky and unorthodox ideas. And if meetings aren’t your thing, that’s completely understandable. You can also send me an <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#101;&#x6c;&#105;&#122;&#x61;b&#101;&#x74;&#x68;&#64;&#x74;&#x68;&#101;&#112;&#x68;&#112;&#46;&#x66;o&#117;&#x6e;&#x64;&#97;&#x74;&#x69;&#111;&#110;">email</a>. (I’ll even check my inbox!)</p>
+
+<p>PHP’s secret recipe has always been its community and I can’t wait to be collaborating with you all again!</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[Welcoming Elizabeth Barron as the New Executive Director of The PHP Foundation]]></title>
             <link href="https://thephp.foundation/blog/2026/02/27/welcoming-elizabeth-barron-new-executive-director/"/>
@@ -892,103 +920,6 @@ Keep the code small and clean. We won’t review large generated codebases.</li>
 <p>Let’s make the PHP 8.5 release page a joy to browse – clear, fast, and friendly for everyone!</p>
 
 <p>🐘💜</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[The PHP Foundation application form for 2026 is now open]]></title>
-            <link href="https://thephp.foundation/blog/2025/09/30/application-form-2026/"/>
-            <updated>2025-09-30T00:00:00+00:00</updated>
-            <id>https://thephp.foundation/blog/2025/09/30/application-form-2026/</id>
-            <content type="html"><![CDATA[<blockquote>
-  <p>The PHP Foundation is a non-profit organization with a mission to support, advance, and develop the PHP language.</p>
-  
-  <p>Current major sponsors include JetBrains, Automattic, Sovereign Tech Agency, Laravel, GoDaddy.com, Private Packagist, Craft CMS, Zend by Perforce, Tideways, Symfony, Mercari Inc., Les-Tilleuls.coop, pixiv Inc., Aternos GmbH, Sentry, Cybozu, Manychat, and Passbolt.</p>
-  
-  <p>The foundation pays <a href="https://thephp.foundation/structure/#core_developers">11 developers</a> to work on the language. See what the foundation achieved in 2024 in the <a href="https://thephp.foundation/blog/2025/03/31/transparency-and-impact-report-2024/">Impact and transparency report</a>. You can also watch <a href="https://www.youtube.com/watch?v=2qTJgx2QF9M">Roman Pronskiy's video overview</a> of what the Foundation is working on.</p>
-</blockquote>
-
-<p>We're opening a regular round of applications for developer positions. We intend to decide on whom we will hire by the end of November. If selected, you would start your work January 1st, 2026.</p>
-
-<p>The application form will be <strong>open until October 30, 2025</strong>.</p>
-
-<p style="text-align: center;">
-<a href="https://forms.gle/v9iTTRFwemRkZett7" class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">Apply</a>
-</p>
-
-<div class="alert italic">
-    <span class="inline-block font-bold">⚠️ Note: This is not a job for PHP developers or aspiring PHP developers.</span><br><br>
-The development of <a href="https://github.com/php/php-src">the PHP core</a> is done in the С programming language, and requires proficiency in system programming.
-</div>
-
-<h2 id="what-are-the-requirements%3F">What are the requirements?</h2>
-
-<p>As before, we require experience in PHP core development. Ideally, you should have all, but at least some of the following:</p>
-
-<ul>
-<li>Pull-requests / commits to <a href="https://github.com/php/php-src">php/php-src</a></li>
-<li>Experience in writing PHP extensions</li>
-<li>Participation in PHP mailing lists</li>
-<li>Contributions to other open-source projects</li>
-</ul>
-
-<h2 id="what-are-you-going-to-work-on%3F">What are you going to work on?</h2>
-
-<p>Strategic areas we'd like you to work on:</p>
-
-<ul>
-<li>Performance</li>
-<li>Security</li>
-<li>Infrastructure</li>
-<li>Web APIs (json, PDO, streams, etc.)</li>
-</ul>
-
-<p>This is not an exhaustive list. We encourage you to <strong>provide as detailed a description of what you want to work on as possible</strong>.</p>
-
-<p>Our primary selection criterion is <strong>pragmatism</strong>. We place greater emphasis on solutions that improve the developer experience and benefit businesses that rely on PHP, rather than new syntax features.</p>
-
-<p>Out of scope:</p>
-
-<ul>
-<li>Pure documentation works</li>
-<li>Userland PHP packages</li>
-<li>Websites</li>
-<li>Translations</li>
-</ul>
-
-<h2 id="what-does-working-with-the-php-foundation-involve%3F">What does working with the PHP Foundation involve?</h2>
-
-<p>Working for the PHP Foundation offers a lot of freedom, but it also requires discipline. Your work will roughly consist of the following:</p>
-
-<ul>
-<li>40% Triaging issues and fixing bugs</li>
-<li>30% Working on strategic areas</li>
-<li>20% Code reviews</li>
-<li>&#62;10% Preparing RFCs and developing new language features</li>
-</ul>
-
-<p>As you can see, developing new RFCs is a fairly small part of the job. Most of the work is typical maintenance of an open-source project.</p>
-
-<p>We are a fully distributed team. You can work from any place<strong>&#42;</strong> and at any time. All communication is asynchronous via Slack, GitHub, and Email. We meet for synchronous calls once a month.</p>
-
-<p>Your work should be in line with the foundation's mission statement, and we expect you to follow <a href="https://thephp.foundation/code-of-conduct/">the code of conduct</a>.</p>
-
-<blockquote>
-  <p><strong>PHP Foundation Mission Statement</strong></p>
-  
-  <p>The PHP Foundation is a collective of people and organizations relying on the PHP language. Its mission is to ensure the long-term prosperity of the PHP language. The PHP Foundation focuses on providing financial support and guidance to PHP language developers to support its goals of improving the language for its users, providing high-quality maintenance, and improving the PHP language project to retain current contributors and to integrate new contributors. The PHP Foundation aims to promote the public image of the PHP language in the interest of retaining existing and gaining new users and contributors.</p>
-</blockquote>
-
-<p><em><strong>&#42;</strong> We do not consider applications from persons residing in sanctioned territories.</em></p>
-
-<h2 id="how-to-apply%3F">How to apply?</h2>
-
-<p>Submit your application now, and we will get back to you shortly. If you have any questions or suggestions, reach out to contact@thephp.foundation.</p>
-
-<p style="text-align: center;">
-<a href="https://forms.gle/v9iTTRFwemRkZett7" target="_blank" class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">Open submission form</a>
-</p>
-
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeYNVQoK2r9c6EtoMnDaIpLzDc95egt1a1mcfiHTovqMDhFuw/viewform?embedded=true" width="100%" height="1866" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 ]]></content>
         </entry>
     </feed>
