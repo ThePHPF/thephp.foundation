@@ -1,11 +1,22 @@
 name: Build and Deploy to Netlify
 on:
   pull_request_target:
+    types: [ opened, synchronize, reopened, labeled ]
 jobs:
   build:
     runs-on: "ubuntu-22.04"
-    if: github.repository_owner == 'ThePHPF'
+    permissions:
+      contents: read
+      pull-requests: write # Required when require-reapproval=true
+    if: "github.repository_owner == 'ThePHPF'"
     steps:
+      # Check the gate and reset it on every workflow run 
+      - name: Ensure PR has "safe to preview" label, if PR is from a fork
+        uses: nilsreichardt/verify-safe-to-test-label@a65b1d76a873fe060b8ece697f238ef8805e6e23
+        with:
+          label: "safe to preview"
+          require-reapproval: true      
+    
       - uses: actions/checkout@v4
         with:
           ref: "refs/pull/${{ github.event.number }}/merge"
