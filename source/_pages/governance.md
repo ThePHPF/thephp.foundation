@@ -351,7 +351,8 @@ Technical Lead responsibilities:
 
 | Name                    | Role                             | Seat             | Status                       |
 |:------------------------|:---------------------------------|:-----------------|:-----------------------------|
-| Roman Pronskiy          | Board Member, Executive Director | Platinum Sponsor | Active                       |
+| Elizabeth Barron        | Executive Director               |       -          | Active                       |
+| Roman Pronskiy          | Board Member                     | Platinum Sponsor | Active                       |
 | Nils Adermann           | Board Member                     | Sponsor          | Active                       |
 | Matthew Weier O'Phinney | Board Member                     | Sponsor          | Active                       |
 | Nicolas Grekas          | Board Member                     | Sponsor          | Active                       |
@@ -359,5 +360,6 @@ Technical Lead responsibilities:
 | Sebastian Bergmann      | Board Member                     | Community        | Active                       |
 | Josepha Haden Chomphosy | Board Member                     | Community        | Active                       |
 | Sara Golemon            | Board Member                     | Community        | Active                       |
+| Matt Stauffer           | Board Member                     | Community        | Active                       |
 | Nikita Popov            | Board Member                     | Community        | Moved to fellows in Aug 2025 |
 | Joe Watkins             | Board Member                     | Community        | Moved to staff in Aug 2024   |
