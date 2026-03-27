@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./source/**/*.html"],
+  content: ["./source/**/*.html", "./source/**/*.md"],
   theme: {
     extend: {
       backgroundSize: {
