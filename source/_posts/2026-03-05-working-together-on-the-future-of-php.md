@@ -6,7 +6,7 @@ tags:
 author:
   name: Elizabeth Barron
   url: https://www.linkedin.com/in/elizabethn/
-published_at: 5 March 2026
+published_at: 6 March 2026
 ---
 
 I’m incredibly excited to be joining the PHP Foundation as the Executive Director and continuing the work that has been done under the leadership of Roman Pronskiy and the Board. For those who don’t know me, I look forward to meeting you! 
