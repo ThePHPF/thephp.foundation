@@ -29,7 +29,7 @@ The primary task of the PHP Foundation is to fund developers to work on PHP. Fun
 through the Open Collective platform may be used in the first place to engage the services of
 PHP developers to further advance the development and maintenance of the language.
 
-PHP’s Request for Comments (RFC) process operates independently of the PHP Foundation. Decisions regarding the language are made through this community-driven process.
+PHP’s Request for Comments (RFC) process operates independently of the PHP Foundation. Decisions regarding the language are made through this community-driven process, as outlined [here](https://wiki.php.net/rfc/howto).
 
 ## Team Timeline
 
