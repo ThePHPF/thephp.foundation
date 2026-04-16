@@ -28,6 +28,7 @@ Before I share the findings, It is important to note a few things:
 ### High Level Summary of Findings
 
 Overall, these were the biggest takeaways:
+
 - PHP’s biggest challenges are perception, coordination, and onboarding, not technical capability
 - The community loves the language and would choose PHP over other options, despite the challenges
 - The ecosystem is large but fragmented
@@ -40,7 +41,7 @@ I've classified the feedback I received into four primary buckets:
 
 ![Categories](/assets/post-images/2026/feedback-strategy-pt1/community-feedback-categories.jpg)
 
-I created this [slide presentation](https://github.com/ThePHPF/talks/blob/main/board-presentations/PHP%20Community%20Feedback%20Summary%20-%20April%202026.pdf) to share and summarize the feedback I received. I encourage you to take a look. 
+I created this [slide presentation](https://raw.githubusercontent.com/ThePHPF/talks/main/board-presentations/PHP%20Community%20Feedback%20Summary%20-%20April%202026.pdf) to share and summarize the feedback I received. You can also [view it on GitHub](https://github.com/ThePHPF/talks/blob/main/board-presentations/PHP%20Community%20Feedback%20Summary%20-%20April%202026.pdf). I encourage you to take a look. 
 
 ### What’s Next?
 
