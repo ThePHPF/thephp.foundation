@@ -28,6 +28,7 @@ Before I share the findings, It is important to note a few things:
 ### High Level Summary of Findings
 
 Overall, these were the biggest takeaways:
+
 - PHP’s biggest challenges are perception, coordination, and onboarding, not technical capability
 - The community loves the language and would choose PHP over other options, despite the challenges
 - The ecosystem is large but fragmented
