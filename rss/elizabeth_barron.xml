@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-04-16T17:59:56+00:00</updated><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Welcoming Matt Stauffer to The PHP Foundation Board]]></title><content type="html"><![CDATA[<p><img src="/assets/post-images/2026/matt-stauffer/matt-stauffer.jpg" width="300" alt="headshot of matt stauffer" class="mb-4 sm:mr-4 sm:float-left"/> We are thrilled to announce that <a href="https://www.linkedin.com/in/mattstauffer/">Matt Stauffer</a> has agreed to join The PHP Foundation Board, where he will bring his decades of experience in the PHP ecosystem. Matt joins the Board as a community representative and was voted in by the existing Board members. Not only is Matt a Laravel expert, he has created / maintained dozens of PHP and JavaScript open source packages, he is a published author, and he hosts several successful industry podcasts. We are grateful for his insight, input, and leadership as we further our mission of sustaining a thriving PHP language and ecosystem.</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-04-16T18:21:46+00:00</updated><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Integrating Community Feedback into Foundation Strategy Part 1]]></title><content type="html"><![CDATA[<h2 id="integrating-community-input-into-foundation-strategy">Integrating Community Input Into Foundation Strategy</h2>
+
+<h3 id="part-1%3A-feedback-from-the-community">Part 1: Feedback from the Community</h3>
+
+<p>Oh my friends, we have so much to talk about.</p>
+
+<p>I’ve been with The PHP Foundation for a few weeks, and many people have asked me about my vision, goals, and strategy for the upcoming year. In my opinion, The PHP Foundation’s stated mission of <em>ensuring the long-term prosperity of the PHP language</em> can be interpreted many different ways. So what exactly does this mean in terms of actionable efforts that will impact the community in the ways that align with this mission?</p>
+
+<p>To answer that question, my goal was simple: listen to people who have a vested interest in the success of PHP and see what themes emerge. So I opened my calendar, messages, and email, and you all answered the call.</p>
+
+<p>So far, I have connected with around 60 people from 18 countries. I’ve heard from PHP community members, people working in the ecosystem, maintainers of PHP projects, consultants, sponsors, core developers, leaders of other open source foundations, user group organizers, and of course, our own Foundation staff and Board members. I am thrilled that you all had a lot to say, because as I’ve said before, apathy is a much harder problem to tackle.</p>
+
+<p>Before I share the findings, It is important to note a few things:</p>
+
+<ul>
+<li>Even though people identified many issues that could be better, there is still much love for PHP and the community.</li>
+<li>Some of the issues brought to me are not within the scope of The PHP Foundation’s authority. That being said, there are places where we can offer our support.</li>
+<li>These findings represent the concerns that were brought to me, and they aren’t presented as “fact” or official opinions of The PHP Foundation.</li>
+<li>Some of the findings may be of no surprise to you. And some of them may not resonate with you personally. I’d just ask that you keep in mind that the feedback is honestly presented as it was shared, and that these are also valid experiences from others.</li>
+</ul>
+
+<h3 id="high-level-summary-of-findings">High Level Summary of Findings</h3>
+
+<p>Overall, these were the biggest takeaways:
+- PHP’s biggest challenges are perception, coordination, and onboarding, not technical capability
+- The community loves the language and would choose PHP over other options, despite the challenges
+- The ecosystem is large but fragmented
+- The newcomer experience, education, and talent pipeline have room for improvement
+- The PHP Foundation’s role and impact is not well understood
+- Funding is a shared challenge across open source
+- AI brings much uncertainty and many polarizing opinions, so agreeing upon a unified approach will be very challenging</p>
+
+<p>I've classified the feedback I received into four primary buckets:</p>
+
+<p><img src="/assets/post-images/2026/feedback-strategy-pt1/community-feedback-categories.jpg" alt="Categories" /></p>
+
+<p>I created this <a href="https://github.com/ThePHPF/talks/blob/main/board-presentations/PHP%20Community%20Feedback%20Summary%20-%20April%202026.pdf">slide presentation</a> to share and summarize the feedback I received. I encourage you to take a look.</p>
+
+<h3 id="what%E2%80%99s-next%3F">What’s Next?</h3>
+
+<p>In a follow up blog post (Part 2), I will be sharing The PHP Foundation’s strategies that aim to address some of these issues. And as always, please don’t hesitate to reach out if you have input or feedback to share. You can reach me via <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#101;&#x6c;&#105;&#122;&#x61;b&#101;&#x74;&#x68;&#64;&#x74;&#x68;&#101;&#112;&#x68;&#112;&#46;&#x66;o&#117;&#x6e;&#x64;&#97;&#x74;&#x69;&#111;&#110;">email</a> or you can schedule some 1:1 time with me on my <a href="https://calendar.app.google/z2ckJ5LDn4qSyHCx7">calendar</a>.</p>
+]]></content><link href="https://thephp.foundation/blog/2026/04/16/integrating-community-feedback-into-foundation-strategy-part1/"/><id>https://thephp.foundation/blog/2026/04/16/integrating-community-feedback-into-foundation-strategy-part1/</id><updated>Thu, 16 Apr 2026 18:21:46 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Welcoming Matt Stauffer to The PHP Foundation Board]]></title><content type="html"><![CDATA[<p><img src="/assets/post-images/2026/matt-stauffer/matt-stauffer.jpg" width="300" alt="headshot of matt stauffer" class="mb-4 sm:mr-4 sm:float-left"/> We are thrilled to announce that <a href="https://www.linkedin.com/in/mattstauffer/">Matt Stauffer</a> has agreed to join The PHP Foundation Board, where he will bring his decades of experience in the PHP ecosystem. Matt joins the Board as a community representative and was voted in by the existing Board members. Not only is Matt a Laravel expert, he has created / maintained dozens of PHP and JavaScript open source packages, he is a published author, and he hosts several successful industry podcasts. We are grateful for his insight, input, and leadership as we further our mission of sustaining a thriving PHP language and ecosystem.</p>
 
 <p>Please join us in welcoming Matt to the Foundation Board!</p>
 ]]></content><link href="https://thephp.foundation/blog/2026/03/25/welcoming-matt-stauffer-to-the-php-foundation-board/"/><id>https://thephp.foundation/blog/2026/03/25/welcoming-matt-stauffer-to-the-php-foundation-board/</id><updated>Fri, 27 Mar 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Working Together on the Future of PHP]]></title><content type="html"><![CDATA[<p>I’m incredibly excited to be joining the PHP Foundation as the Executive Director and continuing the work that has been done under the leadership of Roman Pronskiy and the Board. For those who don’t know me, I look forward to meeting you!</p>
