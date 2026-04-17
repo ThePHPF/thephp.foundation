@@ -41,7 +41,7 @@ I've classified the feedback I received into four primary buckets:
 
 ![Categories](/assets/post-images/2026/feedback-strategy-pt1/community-feedback-categories.jpg)
 
-I created this [slide presentation](https://raw.githubusercontent.com/ThePHPF/talks/main/board-presentations/PHP%20Community%20Feedback%20Summary%20-%20April%202026.pdf) to share and summarize the feedback I received. You can also [view it on GitHub](https://github.com/ThePHPF/talks/blob/main/board-presentations/PHP%20Community%20Feedback%20Summary%20-%20April%202026.pdf). I encourage you to take a look. 
+I created this [slide presentation](https://raw.githubusercontent.com/ThePHPF/talks/main/board-presentations/PHP%20Community%20Feedback%20Summary%20-%20April%202026.pdf) to share and summarize the feedback I received. You can also [view it on GitHub as a PDF](https://github.com/ThePHPF/talks/blob/main/board-presentations/PHP%20Community%20Feedback%20Summary%20-%20April%202026.pdf) or [in Markdown](https://github.com/ThePHPF/talks/blob/main/board-presentations/PHP%20Community%20Feedback%20Summary%20-%20April%202026.md). I encourage you to take a look. 
 
 ### What’s Next?
 
