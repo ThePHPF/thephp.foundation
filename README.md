@@ -19,8 +19,9 @@ tags:
 author:
   name: Your name
   url: A URL with information on you
+published_at: DD Month YYYY
 ---
-Markdown content starts here
+Markdown content starts here - no header title needed
 ```
 
 ### Adding images
