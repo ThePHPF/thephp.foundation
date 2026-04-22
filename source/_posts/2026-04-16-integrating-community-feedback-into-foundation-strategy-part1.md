@@ -6,6 +6,7 @@ tags:
 author:
   name: Elizabeth Barron
   url: https://www.linkedin.com/in/elizabethn/
+published_at: 16 April 2026
 ---
 ## Integrating Community Input Into Foundation Strategy 
 ### Part 1: Feedback from the Community
