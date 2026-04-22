@@ -5,6 +5,8 @@ It is built using the PHP static-site generator [Sculpin](https://sculpin.io), a
 
 ## Submitting blog posts
 
+### Creating content
+
 To submit a blog post, create a pull request, adding a new file under `source/_posts/` in the format `{4-digit Year}-{2-digit Month}-{2-digit Day}-{dash-separated title}.md`.
 All posts are written using Markdown with frontmatter YAML, and should have the following general format:
 
@@ -17,13 +19,21 @@ tags:
 author:
   name: Your name
   url: A URL with information on you
+published_at: DD Month YYYY
 ---
-Markdown content starts here
+Markdown content starts here - no header title needed
 ```
 
-## Developing/maintaining the site
+### Adding images
 
-The site
+Images for the post should be saved in `post-images/YEAR/folder_for_your_post` and referenced with the full path for the image to render properly on the website.
+
+### Previewing and publishing your post
+
+After your PR is created, you (or someone else) can preview your post by adding the `safe to preview` label to the PR. This will trigger deployment to a testing server, and the PR can be merged once checked. It's important to preview both on desktop _and_ a mobile device before merging.
+
+
+## Developing/maintaining the site
 
 ### Requirements
 
