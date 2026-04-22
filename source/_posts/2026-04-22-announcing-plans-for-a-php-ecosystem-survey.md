@@ -1,4 +1,12 @@
-## Announcing Plans for a PHP Ecosystem Survey and Report
+---
+title: Announcing Plans for a PHP Ecosystem Survey and Report
+layout: post
+tags:
+    - survey
+author:
+  name: Elizabeth Barron
+  url: https://www.linkedin.com/in/elizabethn/
+---
 
 This year, The PHP Foundation, in collaboration with PhpStorm, a JetBrains IDE, will release an official ecosystem report with data-driven insights into the current state and the future of PHP development. The report will be based on data collected from a PHP developer survey, where we’ll ask developers about their experience with the language and ecosystem.
 
