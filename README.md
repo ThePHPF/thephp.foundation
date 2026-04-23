@@ -32,6 +32,10 @@ Images for the post should be saved in `post-images/YEAR/folder_for_your_post` a
 
 After your PR is created, you (or someone else) can preview your post by adding the `safe to preview` label to the PR. This will trigger deployment to a testing server, and the PR can be merged once checked. It's important to preview both on desktop _and_ a mobile device before merging.
 
+### Adding to Reddit
+
+We are using redditify to connect Reddit threads to individual PHPF blog posts, but it is a manual step to open the thread on Reddit. You will need to click the "Discuss on Reddit" button at the bottom of the page, which will take you to Reddit. A post with the title and link to post will be pre-filled, so you can just submit as-is. Comments on that thread will then show up at the bottom of the blog post.
+
 
 ## Developing/maintaining the site
 
