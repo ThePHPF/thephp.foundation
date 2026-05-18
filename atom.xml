@@ -3,9 +3,57 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2026-04-23T17:57:06+00:00</updated>
+    <updated>2026-05-18T15:35:34+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Announcing the Ecosystem Security Team at The PHP Foundation]]></title>
+            <link href="https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/"/>
+            <updated>2026-05-18T00:00:00+00:00</updated>
+            <id>https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/</id>
+            <content type="html"><![CDATA[<p>The core <a href="https://thephp.foundation/#our-mission">mission</a> of the PHP Foundation is to ensure the long-term prosperity of the PHP language. Today, your, or your company's, financial contributions primarily fund developers working on the PHP language. In addition to sponsorships, the PHP Foundation uses grants to enable projects like last year's <a href="https://thephp.foundation/blog/2025/04/10/php-core-security-audit-results/">PHP Core Security Audit</a> funded by the <a href="https://www.sovereign.tech">Sovereign Tech Agency</a>.</p>
+
+<p>In March, the <a href="https://www.linuxfoundation.org/press/linux-foundation-announces-12.5-million-in-grant-funding-from-leading-organizations-to-advance-open-source-security">Linux Foundation announced a grant</a> with the goal of strengthening the security of the open source software ecosystem. This funding is managed by <a href="https://alpha-omega.dev">Alpha-Omega</a> and the Open Source Security Foundation <a href="https://openssf.org">(OpenSSF)</a>.</p>
+
+<p><strong>We're delighted to announce the PHP Foundation has been awarded a grant from <a href="https://alpha-omega.dev">Alpha-Omega</a> to help improve the security of the PHP open source ecosystem.</strong></p>
+
+<p>PHP is foundational to the modern web, and ensuring its security is essential for a significant portion of the web's functionality and integrity.</p>
+
+<p>New security tools making use of AI are accelerating the discovery of vulnerabilities in open source software. Initiatives like <a href="https://www.anthropic.com/glasswing">Project Glasswing</a> are attempting to prepare software for the increasing accessibility of such tooling to bad actors. A number of large PHP projects have already received and acted on credible audit reports and concrete issues found by these new tools.</p>
+
+<p>At the same time, many projects have been reporting a drastic increase in the volume of vulnerability reports they have to deal with, many bearing the hallmarks of lazy AI generation. These low-quality reports waste maintainers' time and overshadow legitimate issues.</p>
+
+<p>The PHP Foundation is creating a PHP Ecosystem Security Team to help our ecosystem maintainers with these new challenges. This new PHP Foundation team will help triage vulnerability reports and disclose them responsibly as necessary. It will work on tooling to discover, classify and remediate security vulnerabilities and share emerging techniques on using them effectively and help the PHP ecosystem adopt these tools. The team will respect maintainer bandwidth, provide high-quality reports, coordinate project access to new security tooling, support projects with only a few maintainers, and find solutions for projects with <a href="https://alpha-omega.dev/blog/weekend-at-bernies-which-of-your-dependencies-are-wearing-sunglasses/">no active maintainers at all</a>.</p>
+
+<p>We're excited our friends at the <a href="https://www.drupal.org/association">Drupal Association</a> were awarded a similar grant from Alpha-Omega to secure the Drupal ecosystem built on top of PHP. The PHP Foundation is looking forward to collaborating with the Drupal Security Team on shared approaches and we hope to be joined by more experts from individual PHP projects and subcommunities as we build out the new team.</p>
+
+<p>The PHP Foundation grant will fund a six-month full-time position titled "Ecosystem AI Security Engineer in Residence at the PHP Foundation" to lead this effort and to prepare a sustainability plan for the time after this initial phase. This person will act as a trusted intermediary between security researchers and maintainers in urgent, high-risk situations, and will collaborate with peers in similar roles across other language ecosystems. Additionally, grant funding will also be employed toward the team goals described above where they cannot be accomplished by the single paid lead position or with the help of PHP community volunteers.</p>
+
+<p>After many conversations with community leaders in the PHP ecosystem, known security experts and Foundation stakeholders, the PHP Foundation board voted unanimously to offer the position to <a href="https://phpc.social/@edorian">Volker Dusch (@edorian)</a>. We asked Volker to introduce himself.</p>
+
+<h2 id="meet-volker">Meet Volker</h2>
+
+<p><img src="/assets/post-images/2026/ecosystem-security/volker-dusch.png" width="300" alt="headshot of volker dusch" class="mb-4 sm:mr-4 sm:float-left"/>👋,</p>
+
+<p>Some of you may know me as one of the PHP 8.5 Release Managers, or might have met me at one of more than 100 PHP-related conferences I've visited or spoken at in the last 20 years.</p>
+
+<p>PHP has been the main programming language of my professional career, from helping maintain PHPUnit for a couple of years and more recently, working on various language RFCs.</p>
+
+<p>In the past, I've worked on a high-traffic social networking site, remote monitoring of solar plants and software for medical trials. Currently, I'm working on PHP performance and monitoring tooling at Tideways, which I'm grateful to for allowing me to take some time off to focus on this new challenge.</p>
+
+<h2 id="interested-in-hearing-from-me%3F-got-feedback%3F">Interested in hearing from me? Got feedback?</h2>
+
+<p>My goal is to be open and communicate early about how the Ecosystem Security Team is taking shape while making the most of the resources we have.</p>
+
+<p>Big projects and foundational libraries are on my radar for security analysis already, and I\'m especially keen to hear from people who want to actively collaborate and have the bandwidth to do so.</p>
+
+<p>So if you want to put your project forward or have questions or comments for me, I'd love to hear from you!</p>
+
+<p>Get in touch via email: <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#x76;&#111;&#x6c;&#x6b;&#101;&#x72;&#64;&#x74;&#x68;&#101;&#x70;&#104;&#x70;&#x2e;&#102;&#x6f;&#117;&#x6e;&#x64;&#97;&#x74;&#105;&#x6f;&#x6e;">volker@thephp.foundation</a>.</p>
+
+<p>You can also find me on <a href="https://phpc.social/@edorian">Mastodon</a> and <a href="https://www.linkedin.com/in/volker-dusch/">LinkedIn</a>.</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[Announcing Plans for a PHP Ecosystem Survey and Report]]></title>
             <link href="https://thephp.foundation/blog/2026/04/22/announcing-plans-for-a-php-ecosystem-survey/"/>
@@ -529,125 +577,6 @@ The PHP Foundation<br />
 </ul>
 
 <p>Questions about the position or application process? Contact: <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x65;&#x64;&#x2d;&#x73;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#116;&#104;&#101;&#112;&#104;&#112;&#46;&#102;&#111;&#117;&#110;&#100;&#97;tio&#x6e;">ed-search@thephp.foundation</a>.</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Design Contest Results and Lessons Learned]]></title>
-            <link href="https://thephp.foundation/blog/2025/11/05/design-contest-results/"/>
-            <updated>2025-11-05T00:00:00+00:00</updated>
-            <id>https://thephp.foundation/blog/2025/11/05/design-contest-results/</id>
-            <content type="html"><![CDATA[<p>Over the last few weeks we ran a focused community contest to refresh the <strong>PHP 8.5 release page</strong>. Thank you to everyone who submitted, reviewed, voted, and discussed.</p>
-
-<blockquote>
-  <p><strong>Note about future redesigns</strong><br />
-  This contest was an experiment for a single release page. We might <strong>not</strong> use the same approach for a broader homepage redesign. If we did run a contest again, we would separate tracks (on-brand update vs blue-sky concept), use a dedicated voting tool or randomized ordering, keep log-damped voting, and set a 50/50 jury/community split with clearer criteria and a small shortlist honorarium.</p>
-</blockquote>
-
-<h2 id="%2A%2Aresults%2A%2A"><strong>Results</strong></h2>
-
-<h3 id="%2A%2Awinner%3A%2A%2A-%2A%2Anuno-guerra-%40nunowar%2A%2A-%E2%80%93-%2Aphp-is-awesome-%F0%9F%94%A5%2A"><strong>Winner:</strong> <strong>Nuno Guerra <a href="https://github.com/nunowar">@nunowar</a></strong> – <a href="https://github.com/php/web-php/issues/1539"><em>PHP is Awesome 🔥</em></a></h3>
-
-<p><a href="https://nunoguerra.com/dev/php/" target="_blank" rel="noopener noreferrer"><img src="/assets/post-images/2025/design-contest/nunowar.png" class="shadow-md rounded-lg"/></a></p>
-
-<p><strong>Prizes:</strong> <strong>$1,000  + AI Ultimate License from <a href="https://www.jetbrains.com/phpstorm/">JetBrains</a></strong>·+ <strong>$1,000 from <a href="https://getrector.com/">Rector</a></strong></p>
-
-<p>At JetBrains, we decided to support other contestants with gifts as well.</p>
-
-<h3 id="%2A%2Arunner-up%3A-hanna-stelmakh-%40hastelmakh%2A%2A-%E2%80%93-%2Aphp-8.5-release-page-design-contest-submission%2A"><strong>Runner-up: Hanna Stelmakh <a href="https://github.com/hastelmakh">@hastelmakh</a></strong> – <a href="https://github.com/php/web-php/issues/1534"><em>PHP 8.5 Release Page Design Contest Submission</em></a></h3>
-
-<p><a href="https://www.figma.com/proto/82kDxx1bh6ngC8Pv2Z2jUW/PHP-Release-8.5?page-id=0%3A1\&node-id=449-2387\&viewport=-7617%2C246%2C0.13\&t=f2P7pJOdSAEOKLDY-1" target="_blank" rel="noopener noreferrer"><img src="/assets/post-images/2025/design-contest/hastelmakh.png" class="shadow-md rounded-lg"/></a></p>
-
-<p><strong>Prize:</strong> <strong>$500 + AI Ultimate License from <a href="https://www.jetbrains.com/phpstorm/">JetBrains</a></strong></p>
-
-<h3 id="%2A%2Ashortlist%3A%2A%2A"><strong>Shortlist:</strong></h3>
-
-<p><a href="https://github.com/ben-joostens">@ben-joostens</a><strong>,</strong> <a href="https://github.com/tao">@tao</a>, <a href="https://github.com/lumnn">@lumnn</a>, <a href="https://github.com/thiagoolivier">@thiagoolivier</a>, <a href="https://github.com/mcpad2025-crypto">@mcpad2025-crypto</a>, <a href="https://github.com/minlivalievs-eng">@minlivalievs-eng</a>, <a href="https://github.com/giodi">@giodi</a>, <a href="https://github.com/everlastedSE">@everlastedSE</a>, <a href="https://github.com/asterd">@asterd</a>, <a href="https://github.com/ad-1984">@ad-1984</a>, <a href="https://github.com/Ayesh">@Ayesh</a>, <a href="https://github.com/StillMoe">@StillMoe</a>, <a href="https://github.com/KarinCheng">@KarinCheng</a>, <a href="https://github.com/christian-acceseo">@christian-acceseo</a></p>
-
-<p><strong>Shortlist thank-you:</strong> <a href="https://www.jetbrains.com/phpstorm/"><strong>PhpStorm</strong></a> <strong>/ <a href="https://www.jetbrains.com/ai-ides/buy/">AI Ultimate License</a> from JetBrains</strong> for all shortlisted participants.</p>
-
-<h2 id="%2A%2Aa-little-fun-along-the-way%2A%2A-"><strong>A little fun along the way</strong> <img style="display:inline;" width="40" src="https://ftp.ntu.edu.tw/php/images/ele-running.gif"/></h2>
-
-<p>Of course, no PHP contest would be complete without a bit of humor. Among all the serious submissions, one playful entry <a href="https://x.com/jon_bossenger/status/1983140310826795201">from X/Twitter</a> stood out:</p>
-
-<p><a href="https://php-85-hyperactive.vercel.app/" target="_blank" rel="noopener noreferrer"><img src="/assets/post-images/2025/design-contest/php-85-hyperactive.png" class="shadow-md rounded-lg"/></a></p>
-
-<p>It didn’t quite meet the “accessible and lightweight” brief, but it earned an honorary mention for spirit and commitment to vintage web aesthetics.</p>
-
-<h2 id="%2A%2Anext-steps%2A%2A"><strong>Next steps</strong></h2>
-
-<p>We will collaborate with Nuno Guerra to polish the winning design and may incorporate ideas from other entries where they improve clarity or accessibility. And finally we’ll adapt it to <a href="https://php.net">php.net</a>’s stack.</p>
-
-<p>In the spirit of PHP, contributions are welcome! We encourage all participants to join the <a href="https://github.com/php/web-php/issues/1592"><strong>implementation thread</strong></a> and help refine the final page.</p>
-
-<h2 id="%2A%2Ahow-the-scoring-worked%2A%2A"><strong>How the scoring worked</strong></h2>
-
-<p>We combined a jury score with a community vote and <strong>used a logarithmic transform</strong> to reduce social-media spikes. We counted <strong>👍 during the voting window</strong> for each shortlisted entry and <strong>ignored 👎</strong> and other reactions.</p>
-
-<ul>
-<li><p><strong>Jury (40%)</strong><br />
-Judges scored four criteria from 0 to 5. For each entry we averaged judges into <code>J</code> in the range 0–25.<br />
-Normalization: <code>J_norm = J / 25</code>.</p></li>
-<li><p><strong>Community vote (60%), log-damped</strong><br />
-For entry <em>i</em> with <code>V_i</code> upvotes and <code>T = Σ V_i</code> across the shortlist:<br />
-<code>V′_i = log(1 + V_i)</code> and <code>V_logshare = V′_i / Σ V′_k</code>.</p></li>
-<li><p><strong>Final score</strong><br />
-Final <code>= 0.4 × J_norm + 0.6 × V_logshare</code></p></li>
-</ul>
-
-<p>We will publish the full table with anonymized jury subtotals and final scores.</p>
-
-<h2 id="%2A%2Alessons-learned%2A%2A"><strong>Lessons learned</strong></h2>
-
-<p>We might not run this contest format again. <strong>But if we did, here’s what we would fix:</strong></p>
-
-<h3 id="%2A%2A1-scope-%26-brief%3A-on-brand-update-vs-full-rework%2A%2A"><strong>1) Scope &amp; brief: on-brand update vs full rework</strong></h3>
-
-<p>The scope was the <strong>PHP 8.5 release page</strong> with an <strong>on-brand</strong> constraint. Some entries explored broader rebrands.</p>
-
-<p><strong>Next time we would</strong></p>
-
-<ul>
-<li>Be more explicit on on-brand requirement.</li>
-<li><p>Potentially Split into <strong>two tracks</strong> judged and presented <strong>separately</strong>:</p>
-
-<ul>
-<li><strong>Track A:</strong> on-brand update of the specific page.<br />
-<strong>Track B:</strong> blue-sky concept for future reference.</li>
-</ul></li>
-</ul>
-
-<h3 id="%2A%2A2-%E2%80%9Cspec-work%E2%80%9D-concerns%2A%2A"><strong>2) “Spec work” concerns</strong></h3>
-
-<p>We kept scope small, didn’t require code, and recognized more than one entry (runner-up and shortlist thanks).</p>
-
-<p><strong>Next time we would:</strong></p>
-
-<ul>
-<li>Prepare a more detailed brief with the community.</li>
-<li>Offer a <strong>paid shortlist honorarium</strong>.</li>
-<li>Cap deliverables (mock-ups plus optional tiny HTML/CSS), no heavy code.</li>
-</ul>
-
-<h3 id="%2A%2A3-voting-%26-balance-order-bias%2C-social-reach%2C-weights%2A%2A"><strong>3) Voting &amp; balance (order bias, social reach, weights)</strong></h3>
-
-<p>Order bias and social amplification are real. In this contest we <strong>ignored downvotes</strong> and <strong>used log damping</strong> on upvotes.</p>
-
-<p><strong>Next time we would also:</strong></p>
-
-<ul>
-<li>Use a dedicated voting tool that shuffles candidates.</li>
-<li>Optionally hide aggregate reaction counts until voting closes.</li>
-<li>Set a 50/50 split between jury and community.</li>
-<li>Publish the full calculation sheet upfront for auditability.</li>
-</ul>
-
-<h2 id="%2A%2Athank-you%2A%2A"><strong>Thank you</strong></h2>
-
-<p>Thanks to all participants, voters, reviewers, and to the jury and design advisors for careful evaluations. Special thanks to <a href="https://www.jetbrains.com/"><strong>JetBrains</strong></a> and <a href="https://getrector.com/"><strong>Rector</strong></a> for supporting the community with prizes and encouragement.</p>
-
-<p>If you want to follow implementation, join the thread here: <a href="https://github.com/php/web-php/issues/1592"><strong>php/web-php/issues/1592</strong></a>.</p>
-
-<p>🐘💜</p>
 ]]></content>
         </entry>
     </feed>
