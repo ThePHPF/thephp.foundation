@@ -32,7 +32,7 @@ After many conversations with community leaders in the PHP ecosystem, known secu
 Meet Volker
 -----------
 
-<img src="/assets/post-images/2026/ecosystem-security/volker-dusch" width="300" alt="headshot of volker dusch" class="mb-4 sm:mr-4 sm:float-left"/>👋,
+<img src="/assets/post-images/2026/ecosystem-security/volker-dusch.png" width="300" alt="headshot of volker dusch" class="mb-4 sm:mr-4 sm:float-left"/>👋,
 
 Some of you may know me as one of the PHP 8.5 Release Managers, or might have met me at one of more than 100 PHP-related conferences I've visited or spoken at in the last 20 years.
 
