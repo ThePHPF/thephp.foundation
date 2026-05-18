@@ -11,7 +11,7 @@ published_at: 18 May 2026
 ---
 The core [mission](https://thephp.foundation/#our-mission) of the PHP Foundation is to ensure the long-term prosperity of the PHP language. Today, your, or your company's, financial contributions primarily fund developers working on the PHP language. In addition to sponsorships, the PHP Foundation uses grants to enable projects like last year's [PHP Core Security Audit](https://thephp.foundation/blog/2025/04/10/php-core-security-audit-results/) funded by the [Sovereign Tech Agency](https://www.sovereign.tech).
 
-In March, the [Linux Foundation announced a grant](https://www.linuxfoundation.org/press/linux-foundation-announces-12.5-million-in-grant-funding-from-leading-organizations-to-advance-open-source-security) with the goal of strengthening the security of the open source software ecosystem. This funding is managed by [Alpha-Omega](https://alpha-omega.dev) and the [Open Source Security Foundation [(OpenSSF)](https://openssf.org).
+In March, the [Linux Foundation announced a grant](https://www.linuxfoundation.org/press/linux-foundation-announces-12.5-million-in-grant-funding-from-leading-organizations-to-advance-open-source-security) with the goal of strengthening the security of the open source software ecosystem. This funding is managed by [Alpha-Omega](https://alpha-omega.dev) and the Open Source Security Foundation [(OpenSSF)](https://openssf.org).
 
 **We're delighted to announce the PHP Foundation has been awarded a grant from [Alpha-Omega](https://alpha-omega.dev) to help improve the security of the PHP open source ecosystem.**
 
