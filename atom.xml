@@ -3,7 +3,7 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2026-05-18T15:35:34+00:00</updated>
+    <updated>2026-05-18T17:33:58+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
@@ -45,7 +45,7 @@
 
 <p>My goal is to be open and communicate early about how the Ecosystem Security Team is taking shape while making the most of the resources we have.</p>
 
-<p>Big projects and foundational libraries are on my radar for security analysis already, and I\'m especially keen to hear from people who want to actively collaborate and have the bandwidth to do so.</p>
+<p>Big projects and foundational libraries are on my radar for security analysis already, and I'm especially keen to hear from people who want to actively collaborate and have the bandwidth to do so.</p>
 
 <p>So if you want to put your project forward or have questions or comments for me, I'd love to hear from you!</p>
 
