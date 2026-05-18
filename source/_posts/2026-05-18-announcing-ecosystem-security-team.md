@@ -45,7 +45,7 @@ Interested in hearing from me? Got feedback?
 
 My goal is to be open and communicate early about how the Ecosystem Security Team is taking shape while making the most of the resources we have.
 
-Big projects and foundational libraries are on my radar for security analysis already, and I\'m especially keen to hear from people who want to actively collaborate and have the bandwidth to do so.
+Big projects and foundational libraries are on my radar for security analysis already, and I'm especially keen to hear from people who want to actively collaborate and have the bandwidth to do so.
 
 So if you want to put your project forward or have questions or comments for me, I'd love to hear from you!
 
