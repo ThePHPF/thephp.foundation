@@ -13,6 +13,6 @@ Follow us on social media:
 - Mastodon: [@ThePHPF@phpc.social](https://phpc.social/@ThePHPF)
 - X: [@ThePHPF](https://x.com/thephpf)
 - Discord: [PHPc #the-php-foundation](https://discord.gg/S6tS6UTvaF)
-- Linked In: [PHP Foundation](https://www.linkedin.com/company/phpfoundation/)
+- LinkedIn: [The PHP Foundation](https://www.linkedin.com/company/phpfoundation/)
 
 {% include "newsletter.html" %}
