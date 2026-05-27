@@ -3,9 +3,477 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2026-05-26T18:52:48+00:00</updated>
+    <updated>2026-05-27T19:35:30+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[The PHP Foundation Impact and Transparency Report 2025]]></title>
+            <link href="https://thephp.foundation/blog/2026/05/27/impact-and-transparency-report-2025/"/>
+            <updated>2026-05-27T00:00:00+00:00</updated>
+            <id>https://thephp.foundation/blog/2026/05/27/impact-and-transparency-report-2025/</id>
+            <content type="html"><![CDATA[<h2 id="executive-summary">Executive Summary</h2>
+
+<p>PHP turned 30 in 2025. With The PHP Foundation's support, the PHP project marked the year by shipping PHP 8.5. The PHP Foundation also launched PIE 1.0, initiated a project to modernize PHP's stream layer, and authored roughly 42% of all commits to PHP's core. This work was supported by 536 sponsors and individual contributors, and it could not have happened without them.</p>
+
+<p>At the end of 2025, The PHP Foundation consisted of 8 volunteer board members, an Executive Director sponsored by <a href="https://www.jetbrains.com/">JetBrains</a>, and 11 contracted developers who worked part- and full-time to strengthen and improve the core PHP language through bug and security fixes, feature development, and contributing to the RFC process through discussion and development of new RFCs.</p>
+
+<p>The total contributions received from sponsors and individual donors was $730,534, which enabled The PHP Foundation to advance its mission in a meaningful way.</p>
+
+<h3 id="about-the-php-foundation">About the PHP Foundation</h3>
+
+<p>The PHP Foundation's main focus is to ensure the sustainability and long term viability of the PHP language. Our priorities continue to be:</p>
+
+<ul>
+<li>Improving the language for users</li>
+<li>Providing high-quality maintenance</li>
+<li>Improving the project to retain current contributors and integrate new ones</li>
+<li>Promoting the public image of PHP</li>
+</ul>
+
+<p>It should be noted that The PHP Foundation does not control the decisions made by the PHP community regarding the language, nor does it assume any governance over the language itself. PHP has always been, and will continue to be a community-owned Open Source project.</p>
+
+<h2 id="what-we-shipped-in-2025">What we shipped in 2025</h2>
+
+<p>Leadership at The PHP Foundation coordinated several high-level initiatives, including:</p>
+
+<ul>
+<li>The completion of a <a href="https://thephp.foundation/blog/2025/04/10/php-core-security-audit-results/">Security Audit</a> by <a href="https://ostif.org/">Open Source Technology Improvement Fund (OSTIF)</a>, funded by the <a href="https://www.sovereign.tech/">Sovereign Tech Agency</a> through the Sovereign Tech Fund (STF), and sustained security advisory work across the team</li>
+<li>The <a href="https://thephp.foundation/blog/2025/05/15/frankenphp/">addition of FrankenPHP</a> to the PHP GitHub organization, in collaboration with <a href="https://les-tilleuls.coop/en/">Les-Tilleuls.coop</a></li>
+<li>The development of the <a href="https://thephp.foundation/blog/2025/09/05/php-mcp-sdk/">official PHP SDK for MCP</a>, in collaboration with the <a href="https://symfony.com/">Symfony</a> Team and <a href="https://www.anthropic.com/">Anthropic</a></li>
+</ul>
+
+<p>In addition, in 2025, eleven Foundation-funded contractors collectively logged thousands of hours advancing PHP's language, runtime, security posture, ecosystem tooling, and community reach.</p>
+
+<p>Key achievements included:</p>
+
+<ul>
+<li>Successful delivery of PHP 8.5</li>
+<li>Launch of PIE 1.0 and initiation of the formal PECL deprecation process</li>
+<li>Launch of the STF Streams modernization project</li>
+<li>PHP Foundation representation at the OpenSSF <a href="https://orcwg.org/">Open Regulatory Compliance Working Group</a> on the EU Cyber Resilience Act</li>
+</ul>
+
+<h2 id="the-php-foundation-staff">The PHP Foundation Staff</h2>
+
+<p>Our 2025 team was stable and productive, and worked very well together. We ended 2025 by adding one more contractor to the team in H2: <a href="https://thephp.foundation/blog/2025/09/25/joe-watkins/">Joe Watkins</a>.</p>
+
+<p>Therefore, as of January 1, 2026, 11 Foundation developers work on PHP:</p>
+
+<ul>
+<li>Arnaud Le Blanc <a href="https://github.com/arnaud-lb">@arnaud-lb</a></li>
+<li>David Carlier <a href="https://github.com/devnexen">@devnexen</a></li>
+<li>Derick Rethans <a href="https://github.com/derickr">@derickr</a></li>
+<li>Gina P. Banyard <a href="https://github.com/Girgias">@Girgias</a></li>
+<li>Ilija Tovilo <a href="https://github.com/iluuu1994">@iluuu1994</a></li>
+<li>Jakub Zelenka <a href="https://github.com/bukka">@bukka</a></li>
+<li>James Titcumb <a href="https://github.com/asgrim">@asgrim</a></li>
+<li>Joe Watkins <a href="https://github.com/krakjoe">@krakjoe</a></li>
+<li>Máté Kocsis <a href="https://github.com/kocsismate">@kocsismate</a></li>
+<li>Saki Takamachi <a href="https://github.com/SakiTakamachi">@SakiTakamachi</a></li>
+<li>Shivam Mathur <a href="https://github.com/shivammathur">@shivammathur</a></li>
+</ul>
+
+<h3 id="team-achievements">Team Achievements</h3>
+
+<p><img src="/assets/post-images/2026/impact-report-2025/php_foundation_stats_2025.png" width="1052" alt="PHP Foundation 2025 contribution statistics infographic showing key metrics: Foundation developers contributed 2,929 commits and 662 merged PRs across 9 PHP repositories; 1,685 community PRs reviewed in php-src; Foundation developers authored 42% of commits, 32% of merged PRs, and 25% of bug-fix PRs in php-src; Foundation leads 90%+ of activity in php/pie, php/php-windows-builder, and php/web-downloads; 14 PIE releases shipped including version 1.0; team delivered 40+ international conference talks throughout 2025. The infographic presents these accomplishments in an organized, visually hierarchical layout highlighting The PHP Foundation team's productive year." class="mb-4 sm:mr-4"/></p>
+
+<p>We acknowledge the limitations in providing any metrics; very rarely do metrics accurately represent the full scenario (for instance, a 1-line commit and a 100-line commit are counted equally in the overall number of commits). Additionally, some metrics are more difficult to capture than others. Therefore, we offer this set of obtainable metrics to collectively demonstrate the team's impact. To clarify the data points above:</p>
+
+<ul>
+<li>PRs merged = PRs that were authored by a contractor that were merged by anyone</li>
+<li>Community PR Reviews = PRs from other people that were reviewed/commented on by contractors</li>
+<li>% of Bug Fixes = the percent of all bug fix PRs that were authored by a contractor but merged by anyone in the community. PRs were considered “fixes” if they included the words “fix,” “resolve,” or “bug” in the title of the PR</li>
+</ul>
+
+<h4 id="language-%26-runtime">Language &amp; runtime</h4>
+
+<ul>
+<li><strong>URL/URI parsing RFC</strong> (Máté Kocsis) passed in May, representing PHP's most significant standard-library addition in years, including upstream contributions to the uriparser C library.</li>
+<li><strong>Gina P. Banyard</strong> drove the entire PHP 8.5 deprecations and warnings RFC to php-src and authored 173 merged PRs (roughly 16% of all merged PRs to php-src in 2025).</li>
+<li><strong>Arnaud Le Blanc's</strong> Tail Call VM technique merged in August, removing PHP's dependency on a single compiler for peak performance; he also co-developed Partial Function Applications v2 and Context Managers with Larry Garfield.</li>
+<li><strong>Ilija Tovilo</strong> was the team's leading committer to php-src (565 commits) and advanced the Pattern Matching RFC alongside deep performance work on zend_op size and TMP|VAR consolidation.</li>
+<li><strong>Saki Takamachi</strong> delivered BCMath optimizations and created xsse, a portable SIMD abstraction library already in use in php-src.</li>
+<li><strong>Jakub Zelenka</strong> progressed with implementation of JsonSchema support for the JSON extension.</li>
+</ul>
+
+<h4 id="security">Security</h4>
+
+<p>Jakub Zelenka led sustained multi-month investigations on multiple security advisories, which included the handling of PHP security releases. Jakub also represented the PHP Foundation in the OpenSSF working group shaping EU Cyber Resilience Act compliance.  David Carlier delivered a steady stream of overflow, double-free, and memory leak fixes across GD, ZIP, intl, PDO_SQLite, sodium, and Fiber, upstreaming several directly to libgd. Shivam Mathur is responsible for security upgrades to Windows PHP builds addressing 50+ CVEs/security issues, and continues to support builds for 100+ extensions for Windows. Derick Rethans patched an XSS in php.net and ran an emergency CVE response for the rsync server.</p>
+
+<h4 id="streams-modernization-sovereign-tech-fund">Streams modernization (Sovereign Tech Fund)</h4>
+
+<p>The STF underwrote a 530-hour modernization of PHP's stream layer, delivering a new Polling API, TLS 1.3 improvements with session resumption (PSK, tickets, early data), redesigned stream error handling, an io_uring/IOCP abstraction, modernized copy infrastructure (copy_file_range, splice, sendfile), filter seeking improvements, and socket option enhancements. This is an ongoing project and will see more progress in 2026.</p>
+
+<h4 id="ecosystem-%26-infrastructure">Ecosystem &amp; infrastructure</h4>
+
+<p>The PHP Foundation has demonstrated meaningful contributions in several areas:</p>
+
+<ul>
+<li><strong>PIE (the new PHP extension installer)</strong>: James Titcumb authored 482 of 537 commits to php/pie (roughly 90% of the codebase)  and 109 of 156 merged PRs. He shipped 14 PIE releases including 1.0 in June, formally initiated PECL's deprecation, and delivered five conference talks evangelizing the project.</li>
+<li><strong>Windows infrastructure</strong>: Shivam Mathur authored 95% of commits to php/php-windows-builder and 98% of commits to php/web-downloads. Without his work, PHP would have no Windows distribution maintainer.</li>
+<li><strong>French documentation</strong>: 38% of commits and 47% of merged PRs to php/doc-fr in 2025 came from David Carlier, a community-facing impact that is often invisible in English-language reporting but reaches Francophone PHP developers worldwide.</li>
+<li><strong>Infrastructure:</strong> Derick Rethans migrated nearly every php.net property (wiki, downloads, qa, pecl, bugs, docs, www, and more) to modern Ansible-managed infrastructure, expanded WebAssembly support for interactive examples in the manual, and contributed alongside Shivam and Roman on the redesigned downloads page. Máté Kocsis and Ilija built statistical benchmarking infrastructure (Welch T-Test, Wilcoxon, Valgrind, variance reduction) underpinning the team's performance work.</li>
+</ul>
+
+<h4 id="strategic-r%26d">Strategic R&amp;D</h4>
+
+<p>Joe Watkins joined in H2 and published ORT, a PHP tensor library with backends for SSE2/SSE4.1/AVX2/AVX512, NEON, CUDA, RISC-V64, and WebAssembly (including a custom IEEE 754-2008 float16 implementation in C) reaching 97% test coverage and positioning PHP to participate in AI/ML workloads. Arnaud explored generational and Boehm GC, plus Modules and Snapshots PoCs.</p>
+
+<h4 id="maintenance-%26-stewardship">Maintenance &amp; stewardship</h4>
+
+<p>Beyond headline projects, the team spent a large percentage of their time carrying PHP's day-to-day weight: continuous bug triage (Ilija's largest recurring line item every month), monthly release management across 8.3.x and 8.4.x, cross-platform fixes spanning Windows, macOS, FreeBSD, Solaris, and Haiku, French (David) and Japanese (Saki) documentation contributions, mailing list moderation, and dozens of code reviews monthly across virtually every PHP subsystem. Additionally, the team spent time on maintenance and stable releases of external extensions including imagick and GnuPG, and tools like PHP-FPM that are part of PHP core.</p>
+
+<h3 id="rfcs">RFCs</h3>
+
+<p>The following list covers RFCs authored or co-authored by PHP Foundation contractors in 2025, along with their RFCs that changed status in 2025.</p>
+
+<table>
+  <tr>
+   <td><strong>RFC</strong>
+   </td>
+   <td><strong>Author</strong>
+   </td>
+   <td><strong>Status</strong>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://wiki.php.net/rfc/url_parsing_api">URL Parsing API (ext/uri)</a>
+   </td>
+   <td>Máté Kocsis
+   </td>
+   <td>Implemented in PHP 8.5
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://wiki.php.net/rfc/deprecations_php_8_5">PHP 8.5 Deprecations</a>
+   </td>
+   <td>Gina P. Banyard, Christoph M. Becker*, Daniel Scherzer*, Tim Düsterhus*, Theodore Brown*, Jorg Sowa*, David Carlier, Jakub Zelenka, Nicolas Grekas*, Volker Dusch*, Calvin Buckle*
+   </td>
+   <td>Implemented in PHP 8.5
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://wiki.php.net/rfc/warnings-php-8-5">PHP 8.5 Warnings</a>
+   </td>
+   <td>Gina P. Banyard
+   </td>
+   <td>Implemented in PHP 8.5
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://wiki.php.net/rfc/get-error-exception-handler">Add get_error_handler(), get_exception_handler()</a>
+   </td>
+   <td>Arnaud Le Blanc
+   </td>
+   <td>Implemented in PHP 8.5
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://wiki.php.net/rfc/stream_errors">Stream Error Handling</a>
+   </td>
+   <td>Jakub Zelenka
+   </td>
+   <td>Accepted
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://wiki.php.net/rfc/tls_session_resumption_api">TLS Session Resumption</a>
+   </td>
+   <td>Jakub Zelenka
+   </td>
+   <td>Accepted
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://wiki.php.net/rfc/make_round_behave_correctly_as_float">Make round() behave correctly as float</a>
+   </td>
+   <td>Saki Takamachi
+   </td>
+   <td>Draft
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://wiki.php.net/rfc/policy-release-process-update">Policy Release Process Update</a>
+   </td>
+   <td>Jakub Zelenka
+   </td>
+   <td>Accepted
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://wiki.php.net/rfc/context-managers">Context Managers</a>
+   </td>
+   <td>Arnaud Le Blanc & Larry Garfield*
+   </td>
+   <td>In Discussion
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://wiki.php.net/rfc/partial_function_application_v2">Partial Function Application v2</a>
+   </td>
+   <td>Arnaud Le Blanc & Larry Garfield*
+   </td>
+   <td>In Implementation
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://wiki.php.net/rfc/uri_followup">URI Followup</a>
+   </td>
+   <td>Máté Kocsis
+   </td>
+   <td>Vote started
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://wiki.php.net/rfc/adopt_pie_deprecate_pecl">Deprecate PECL / Adopt PIE</a>
+   </td>
+   <td>James Titcumb
+   </td>
+   <td>Accepted
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://wiki.php.net/rfc/pattern-matching">Pattern Matching</a>
+   </td>
+   <td>Ilija Tovilo & Larry Garfield*
+   </td>
+   <td>In Discussion
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://wiki.php.net/rfc/json_schema_validation">JSON Validation Schema Support</a>
+   </td>
+   <td>Jakub Zelenka
+   </td>
+   <td>In Discussion
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://wiki.php.net/rfc/void-as-null">Void as Null</a>
+   </td>
+   <td>Gina P. Banyard
+   </td>
+   <td>In Discussion
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://wiki.php.net/rfc/tidyexception-for-tidy">TidyException Type for Tidy</a>
+   </td>
+   <td>David Carlier
+   </td>
+   <td>In Discussion
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://wiki.php.net/rfc/deprecate-function-bool-type-juggling">Deprecate Type Juggling</a>
+   </td>
+   <td>Gina P. Banyard
+   </td>
+   <td>Declined
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://wiki.php.net/rfc/make_opcache_required">Make OPcache a non-optional part of PHP</a>
+   </td>
+   <td>Tim Düsterhus*, Arnaud Le Blanc, Ilija Tovilo
+   </td>
+   <td>Implemented in 8.5
+   </td>
+   </tr>
+   <tr>
+    <td><a href="https://wiki.php.net/rfc/static-aviz">Asymmetric Visibility for Static Properties</a>
+    </td>
+   <td>Ilija Tovilo & Larry Garfield*
+   </td>
+   <td>Implemented in 8.5
+   </td>
+  </tr>
+   <tr>
+    <td><a href="https://wiki.php.net/rfc/uri_followup">Followup Improvements for ext/uri</a>
+    </td>
+   <td>Máté Kocsis
+   </td>
+   <td>Accepted
+   </td>
+  </tr>
+</table>
+
+<p>*This person was not a contractor for The PHP Foundation at time of authorship, but is acknowledged here for their contribution to the RFC</p>
+
+<h2 id="the-php-foundation-sponsors">The PHP Foundation Sponsors</h2>
+
+<p>Our sponsors and individual contributors are the lifeblood of The PHP Foundation, for without their continued support, we would not be able to continue making meaningful contributions and improvements to the PHP language.</p>
+
+<p>Our highest level sponsors for 2025 were <a href="https://www.sovereign.tech/">Sovereign Tech Agency,</a> <a href="https://www.jetbrains.com/">JetBrains</a>, <a href="https://automattic.com/">Automattic</a>, <a href="GoDaddy.com">GoDaddy.com</a>, <a href="https://www.passbolt.com/">Passbolt</a>, <a href="https://sentry.io/welcome/">Sentry</a>, <a href="http://Les-Tilleuls.coop">Les-Tilleuls.coop</a>, <a href="https://craftcms.com/">Craft CMS</a>, <a href="https://packagist.com/">Private Packagist</a>, <a href="https://cybozu.co.jp/en/company/">Cybozu</a>, <a href="https://tideways.com/">Tideways</a>, <a href="https://manychat.com/">Manychat</a>, <a href="https://www.perforce.com/products/zend">Zend by Perforce</a>, <a href="https://chstudio.fr/">CH Studio</a>, and <a href="https://aternos.gmbh/en/">Aternos GmbH</a>.</p>
+
+<p>Overall, 536 organizations and individuals sponsored The PHP Foundation in 2025, which is substantially less than the previous year. This is an indication of an increasingly challenging fundraising space in the open source ecosystem, a reality our peers at other Foundations and Open Source projects are also navigating.</p>
+
+<p>We are incredibly grateful for all those who have financially supported and continue to support The PHP Foundation.</p>
+
+<h2 id="the-php-foundation-financial-report">The PHP Foundation Financial Report</h2>
+
+<p>In 2025, The PHP Foundation was financially backed by organizations and individuals with the goal of paying a competitive salary to as many core developers as possible. These numbers represent figures in USD.</p>
+
+<table>
+  <tr>
+   <td>
+   </td>
+   <td><strong>2021-2022</strong>
+   </td>
+   <td><strong>2023</strong>
+   </td>
+   <td><strong>2024</strong>
+   </td>
+   <td><strong>2025**</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Total donated
+   </td>
+   <td>$ 712,484
+   </td>
+   <td>$ 478,767
+   </td>
+   <td>$ 683,550
+   </td>
+   <td>$ 730,534
+   </td>
+  </tr>
+  <tr>
+   <td>Fees *
+   </td>
+   <td>$ 90,273
+   </td>
+   <td>$ 60,098
+   </td>
+   <td>$ 83,110
+   </td>
+   <td>$ 85,343
+   </td>
+  </tr>
+  <tr>
+   <td>Total received
+   </td>
+   <td>$ 622,211
+   </td>
+   <td>$ 418,669
+   </td>
+   <td>$ 600,440
+   </td>
+   <td>$ 645,191
+   </td>
+  </tr>
+  <tr>
+   <td>Expenses
+   </td>
+   <td>$ 133,285
+   </td>
+   <td>$ 275,181
+   </td>
+   <td>$ 635,487
+   </td>
+   <td>$ 784,376
+   </td>
+  </tr>
+</table>
+
+<p>*Fees include a 10% Open Source Collective fiscal host fee (dealing with contracts, expense reviews and payments, bank account management, official registrations and dealing with government requirements, open collective platform development etc), and 1-5% percent of payment processing fees, depending on the payment method used.</p>
+
+<p>**Starting in 2025, some funds were donated and paid in Euro; please allow for small rounding variance due to conversion rates.</p>
+
+<p>All incoming and outgoing transactions of The PHP Foundation are publicly available to view for anyone: <a href="https://opencollective.com/phpfoundation#category-BUDGET">https://opencollective.com/phpfoundation#category-BUDGET</a></p>
+
+<h2 id="the-php-foundation-brand-%26-public-channels">The PHP Foundation Brand &amp; Public Channels</h2>
+
+<p>The PHP Foundation represents a community of core PHP developers and advocates for the PHP programming language. The PHP Foundation used the channels listed below for public communication:</p>
+
+<ul>
+<li>24.8K LinkedIn page followers: <a href="https://www.linkedin.com/company/phpfoundation">https://www.linkedin.com/company/phpfoundation</a></li>
+<li>13.7K X followers: <a href="https://x.com/thephpf">https://x.com/thephpf</a></li>
+<li>1.2K Mastodon followers: <a href="https://phpc.social/@thephpf">https://phpc.social/@thephpf</a></li>
+<li>1.2K Bluesky followers: <a href="https://bsky.app/profile/thephpf.bsky.social">https://bsky.app/profile/thephpf.bsky.social</a></li>
+<li>3390 Subscribers to The PHP Foundation Newsletter</li>
+</ul>
+
+<p>We will continue to grow our social media presence as a means of connecting with the broader PHP community.</p>
+
+<h2 id="looking-back%3A-goals-for-2025">Looking Back: Goals for 2025</h2>
+
+<p>In the previous report, we outlined a few organizational and technical goals. Let's take a look at how we did.</p>
+
+<h3 id="organization-goals">Organization Goals</h3>
+
+<ul>
+<li><p><strong>Secure funding to support core development and marketing initiatives.</strong> ✅</p>
+
+<p>The PHP Foundation received funds as noted above to continue our focus on core development and the marketing of PHP and The PHP Foundation.</p></li>
+<li><p><strong>Launch the "PHP 30" anniversary campaign in collaboration with JetBrains.</strong> ✅</p>
+
+<p>The PHP Foundation celebrated <a href="https://thephp.foundation/blog/2025/06/08/php-30/">30 years of PHP</a> at the PHPverse conference hosted by JetBrains.</p></li>
+<li><p><strong>Consolidate and grow social media presence across multiple platforms. ✅</strong></p>
+
+<p>The reach and engagement for our social media accounts grew in every platform.</p></li>
+<li><p><strong>Increase website traffic through improved documentation and resources. ❓</strong></p>
+
+<p>We only added tracking to the <a href="https://php.net">php.net</a> website toward the end of 2024, so we did not have a baseline for comparison. This is something we can measure moving forward.</p></li>
+<li><p><strong>Develop an Ambassador Program. ❌</strong></p>
+
+<p>This was discussed, but not launched. Look for a version of this in 2026.</p></li>
+<li><p><strong>Begin preparation for the "PHP Next" marketing campaign to highlight PHP's modernization. ❌</strong></p>
+
+<p>This was discussed, but not launched. Look for a version of this in 2026.</p></li>
+<li><p><strong>Modernize PHP's website with updated downloads page, documentation, and homepage. ⚠️ Partial</strong></p>
+
+<p>This was partially completed and included a <a href="https://www.php.net/releases/8.5/en.php">redesigned page for the 8.5 release</a> and a clearer and more functional Downloads page. There is still work to be done on the homepage and in the documentation.</p></li>
+</ul>
+
+<h3 id="technical-goals">Technical Goals</h3>
+
+<ul>
+<li><p><strong>Continue on-going maintenance and development of the PHP core. ✅</strong></p>
+
+<p>As demonstrated in this report, our contractors continue to focus on improving the PHP core.</p></li>
+<li><p><strong>Establish a working group for integrating modern HTTP server capabilities into PHP core. ✅</strong></p>
+
+<p>Instead, the PHP project incorporated the FrankenPHP project into its GitHub organization, offering a modern solution to running PHP in an HTTP server. This change was initiated by engineers at <a href="https://les-tilleuls.coop/en/">Les-Tilleuls.coop</a>, and implemented in partnership with the PHP Foundation.</p></li>
+<li><p><strong>Address key developer experience pain points, particularly for first-time users. ⚠️ Partial</strong></p>
+
+<p>This was partially completed with the improvements on the Downloads page, but there is still much work and research to be done here.</p></li>
+</ul>
+
+<h2 id="looking-ahead%3A-goals-for-2026">Looking Ahead: Goals for 2026</h2>
+
+<p>2026 brings its own challenges but we are committed to continuing to make a measurable difference in the PHP language and ecosystem.</p>
+
+<h3 id="organization-goals">Organization Goals</h3>
+
+<ul>
+<li>Complete the executive transition initiated in Q4 2025</li>
+<li>Complete the onboarding of a Director of Fundraising</li>
+<li>Expand support for the PHP Ecosystem</li>
+<li>Improve Foundation communication, transparency, and internal documentation</li>
+<li>Build a plan to improve public perception of PHP</li>
+<li>Balance spending with funding and creating a systematic approach to fundraising</li>
+</ul>
+
+<h3 id="technical-goals">Technical Goals</h3>
+
+<ul>
+<li>Create Cryptography working group</li>
+<li>Explore support for continued security-focused work</li>
+</ul>
+
+<h2 id="budget-plan-for-2026">Budget plan for 2026</h2>
+
+<p>Total expenses exceeded total received donations by approximately $139,000 in 2025, which was a deliberate choice to maintain investment in technical headcount while we strengthen relationships with sponsors and individual contributors. The PHP Foundation remains financially solvent with healthy reserves, and reducing this gap is a 2026 priority.</p>
+
+<p>We will also continue to utilize <a href="https://opencollective.com/phpfoundation">Open Collective</a> as our fiscal host, as they provide transparency and a suite of valuable financial services for The PHP Foundation.</p>
+
+<h2 id="outro">Outro</h2>
+
+<p>The work in this report is the runway for what's next. We head into 2026 with real momentum and a clear sense of what the community has asked of us.  None of the technical leadership, the security work, the new partnerships ahead, and the support for the PHP ecosystem happens without the people who fund us. <a href="https://thephp.foundation/sponsor/">With your help</a>, together we can keep PHP thriving in a changing open source world.</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[Announcing the Ecosystem Security Team at The PHP Foundation]]></title>
             <link href="https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/"/>
@@ -422,161 +890,6 @@ $result = "Hello World"
 <p>Thank you,<br />
 The PHP Foundation<br />
 🐘💜</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[The PHP Foundation is Seeking a New Executive Director]]></title>
-            <link href="https://thephp.foundation/blog/2025/11/10/seeking-new-executive-director/"/>
-            <updated>2025-11-10T00:00:00+00:00</updated>
-            <id>https://thephp.foundation/blog/2025/11/10/seeking-new-executive-director/</id>
-            <content type="html"><![CDATA[<p>We're opening the search for our next Executive Director, marking an important milestone in the continued growth and evolution of the PHP Foundation.</p>
-
-<p>After four years at the helm of the PHP Foundation, <a href="https://x.com/pronskiy">Roman Pronskiy</a> will conclude his tenure as Executive Director in early 2026. Roman founded and helped build the Foundation from the ground up into a stable, well-run organization, expanded our team of core developers, and deepened collaboration across the PHP ecosystem. As his role at JetBrains grows, Roman has decided to focus his efforts there while continuing to support the PHP Foundation’s next chapter.</p>
-
-<p>We’re immensely grateful for Roman’s vision and leadership, which shaped the foundation’s first years and set a strong course for the future. He will continue serving on the Board of Directors as JetBrains’ representative, providing continuity as JetBrains remains a platinum sponsor and steadfast supporter of PHP. Roman will work closely with the incoming Executive Director to make the transition smooth and complete.</p>
-
-<p>The Board has formed a search committee consisting of two board members Sebastian Bergmann and Nils Adermann as well as two community representatives Lorna Jane Mitchell and Ben Ramsey. The search committee will manage the selection process and find a leader who can build on the Foundation's momentum and guide us through our next phase of growth.</p>
-
-<p><strong>What we're looking for:</strong></p>
-
-<ul>
-<li>Strong leadership experience in open source communities</li>
-<li>Deep knowledge of the PHP ecosystem</li>
-<li>Excellent project management and communication skills</li>
-<li>Strategic thinking and a vision for the foundation's future</li>
-<li>Experience working with diverse stakeholders and sponsors</li>
-</ul>
-
-<p>This is an opportunity to shape the future of one of the world's most widely-used programming languages and support the vibrant community that sustains it.</p>
-
-<p><strong>How you can help:</strong></p>
-
-<p>We need the PHP community's help in finding the right person for this role. If you know someone who would be an excellent Executive Director for the PHP Foundation, please encourage them to apply or reach out to us directly.</p>
-
-<p>The full job description and application details can be found below.</p>
-
-<p>For questions about the search process, please contact <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x65;&#x64;&#x2d;&#x73;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#116;&#104;&#101;&#112;&#104;&#112;&#46;&#102;&#111;&#117;&#110;&#100;&#97;tio&#x6e;">ed-search@thephp.foundation</a>.</p>
-
-<p>🐘💜</p>
-
-<h1 id="executive-director-%E2%80%93-the-php-foundation">Executive Director – The PHP Foundation</h1>
-
-<p><strong>Position Type:</strong> Full-time or Part-time (if part-time, responsibility includes hiring necessary staff to fulfill the complete role)<br />
-<strong>Location:</strong> Remote, no visa opportunity<br />
-<strong>Reports To:</strong> Board of Directors<br />
-<strong>Term:</strong> 1 year, renewable subject to annual performance evaluation<br />
-<strong>Compensation:</strong> Total Compensation $90,000-$160,000 (Base: $90,000 - $105,000 USD / year, Performance based bonus up to $65,000 USD)</p>
-
-<h2 id="about-the-php-foundation">About The PHP Foundation</h2>
-
-<p>PHP is one of the world's most widely-used programming languages, powering millions of websites and applications. The PHP Foundation is a collective of people and organizations relying on the PHP language. Its mission is to ensure the long-term prosperity of the PHP language.</p>
-
-<p>The PHP Foundation focuses on providing financial support and guidance to PHP language developers to support its goals of improving the language for its users, providing high-quality maintenance, and improving the PHP language project to retain current contributors and to integrate new contributors.</p>
-
-<p>The PHP Foundation aims to promote the public image of the PHP language in the interest of retaining existing and gaining new users and contributors.</p>
-
-<p>The PHP Foundation operates as a collective under the Open Source Collective, a 501(c)(6) non-profit organization based in the United States. The Executive Director role will be structured as a contractor position with this entity.</p>
-
-<h2 id="the-role">The Role</h2>
-
-<p>The Executive Director serves as the operational leader of the PHP Foundation, defining its strategic vision and translating it into reality while managing day-to-day operations and serving as the primary bridge between the Board, staff, community, and sponsors.</p>
-
-<p>While the programming language PHP is over 30 years old, the PHP Foundation was only created in 2021. The Executive Director will be responsible for maturing the foundation’s internal structure and will play a crucial role in ensuring the foundation can effectively support this vital ecosystem.</p>
-
-<h2 id="key-responsibilities">Key Responsibilities</h2>
-
-<h3 id="strategic-leadership">Strategic Leadership</h3>
-
-<ul>
-<li>Develop strategic initiatives for the PHP Foundation and the PHP language in alignment with the foundation's mission and goals</li>
-<li>Annual presentation of new strategy and evaluation of previous year’s performance to the Board for approval</li>
-<li>Develop and implement marketing strategies to fulfill the foundation’s mission to promote the public image of the PHP language</li>
-</ul>
-
-<h3 id="fundraising-%26-financial-oversight">Fundraising &amp; Financial Oversight</h3>
-
-<ul>
-<li>Responsible for fundraising to provide the budget for implementing proposed strategy</li>
-<li>Manage finances, budgets and fundraising</li>
-<li>Prepare quarterly operations summaries and financial statements</li>
-</ul>
-
-<h3 id="operational-management">Operational Management</h3>
-
-<ul>
-<li>Manage day-to-day operations, staff, including contracted PHP core developers</li>
-<li>Oversee hiring, performance management, and development of Foundation staff</li>
-<li>Ensure efficient execution of foundation programs and initiatives</li>
-<li>Provide regular updates at board meetings</li>
-</ul>
-
-<h3 id="stakeholder-relations">Stakeholder Relations</h3>
-
-<ul>
-<li>Represent the foundation externally and maintain relationships with sponsors, partners, and community stakeholders</li>
-<li>Serve as the public face of the foundation at conferences and community events</li>
-</ul>
-
-<h2 id="required-qualifications">Required Qualifications</h2>
-
-<ul>
-<li>Demonstrated leadership experience in relevant organizations or communities</li>
-<li>Strong project management and organizational skills</li>
-<li>Excellent written and verbal communication skills</li>
-<li>Financial management and budgeting experience</li>
-<li>Proven ability to work with diverse stakeholders and build consensus</li>
-</ul>
-
-<h2 id="additional-experience-we-value">Additional Experience We Value</h2>
-
-<ul>
-<li>Experience in free and open source software communities</li>
-<li>Knowledge of the PHP ecosystem and its community dynamics</li>
-<li>Experience in fundraising or sponsor relations</li>
-<li>Network within the PHP community</li>
-<li>Experience managing remote teams</li>
-<li>Public speaking and presentation skills</li>
-<li>Previous experience in open source foundation governance</li>
-<li>Experience in or working with public relations or marketing</li>
-</ul>
-
-<h2 id="compensation-and-terms">Compensation and Terms</h2>
-
-<ul>
-<li>Contracting position with Open Source Collective 501(c)(6)</li>
-<li>Fully remote, no visa opportunities</li>
-<li>At full-time, base pay of $90,000 - $105,000 / year, invoiced monthly</li>
-<li>Annual performance based bonus up to $65,000 tied especially to fundraising goals</li>
-<li>Travel to a few community events per year required with expenses covered, additional travel encouraged if event organizers cover expenses</li>
-<li>Renewable annually based on performance and mutual agreement with Board of Directors</li>
-</ul>
-
-<h2 id="selection-process">Selection Process</h2>
-
-<p>A search committee of Board members and community representatives is managing the candidate search and evaluation process. The process includes:</p>
-
-<ol>
-<li>Application review and initial screening by the search committee</li>
-<li>Interviews with the search committee</li>
-<li>Committee presents top candidates to the full Board of Directors</li>
-<li>Presentation of vision and strategy to the full Board</li>
-<li>Final selection by full Board vote (2/3 majority required)</li>
-</ol>
-
-<p>Applications will be accepted on a rolling basis until 2025-12-15.</p>
-
-<h2 id="how-to-apply">How to Apply</h2>
-
-<p>Please fill in our <a href="https://docs.google.com/forms/d/1V-OHLizny6ob8BivWJv7KneHToPyRKE6Whdmnn_hl3M/edit"><strong>Google form</strong></a> including:</p>
-
-<ul>
-<li>Cover letter describing your interest and relevant experience</li>
-<li>Resume/CV</li>
-<li>Brief vision statement (500-1000 words) addressing: your understanding of the foundation's current position, key opportunities and challenges you see for the foundation, and your approach to the role</li>
-<li>During the interview process we will ask you to provide at least 3 references who we can contact</li>
-</ul>
-
-<p>Questions about the position or application process? Contact: <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x65;&#x64;&#x2d;&#x73;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#116;&#104;&#101;&#112;&#104;&#112;&#46;&#102;&#111;&#117;&#110;&#100;&#97;tio&#x6e;">ed-search@thephp.foundation</a>.</p>
 ]]></content>
         </entry>
     </feed>
