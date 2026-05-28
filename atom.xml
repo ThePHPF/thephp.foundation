@@ -3,9 +3,48 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2026-05-28T14:23:53+00:00</updated>
+    <updated>2026-05-28T19:54:56+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[The PHP Foundation’s Elizabeth Barron to keynote JetBrains PHPverse 2026]]></title>
+            <link href="https://thephp.foundation/blog/2026/05/28/phpverse-keynote/"/>
+            <updated>2026-05-28T00:00:00+00:00</updated>
+            <id>https://thephp.foundation/blog/2026/05/28/phpverse-keynote/</id>
+            <content type="html"><![CDATA[<p>PHP has undergone a remarkable transformation in recent years, and The PHP Foundation has played a major role in contributing to the development and maintenance of the language. The upcoming <a href="https://blog.jetbrains.com/phpstorm/2026/04/join-us-for-phpverse-2026-on-june-9/?utm_source=thephp.foundation&amp;utm_medium=referral&amp;utm_campaign=phpverse2026">JetBrains PHPverse conference</a> is a great opportunity to reflect on what has been done to reinforce PHP's position as a robust, modern language for web development.</p>
+
+<p>Elizabeth Barron, <a href="https://thephp.foundation/blog/2026/02/27/welcoming-elizabeth-barron-new-executive-director/">The PHP Foundation’s Executive Director</a>, is joining the lineup of JetBrains PHPverse 2026 speakers with a keynote talk “Getting to Know The PHP Foundation”. <a href="https://lp.jetbrains.com/phpverse-2026/?utm_source=thephp.foundation&amp;utm_medium=referral&amp;utm_campaign=phpverse2026">Tune in</a> on <strong>June 9</strong> to learn what The PHP Foundation actually does, which initiatives are planned for the rest of 2026, and how the community can help support the PHP ecosystem.</p>
+
+<h3 id="about-jetbrains-phpverse">About JetBrains PHPverse</h3>
+
+<p><a href="https://lp.jetbrains.com/phpverse-2026/?utm_source=thephp.foundation&amp;utm_medium=referral&amp;utm_campaign=phpverse2026">JetBrains PHPverse</a> is a free online conference and community event bringing together the big and vibrant PHP herd. It was first held in 2025, reaching out to more than 55,000 developers worldwide.</p>
+
+<p>Besides The PHP Foundation’s keynote, expect a <a href="https://lp.jetbrains.com/phpverse-2026/?utm_source=thephp.foundation&amp;utm_medium=referral&amp;utm_campaign=phpverse2026#speakers">curated lineup</a> of talks from some of the most influential voices in the PHP ecosystem, covering the major PHP frameworks, tools, and shipping PHP code with AI:</p>
+
+<ul>
+<li>Fabien Potencier, Founder of Symfony</li>
+<li>Jeffrey Way, Founder of Laracasts</li>
+<li>Larry Garfield, Functional Programming Enthusiast</li>
+<li>Jonathan Bossenger, Developer Advocate at Automattic</li>
+<li>Nils Adermann, Co-Founder of Packagist</li>
+<li>Ashley Hindle, Founder and CEO of Fuel</li>
+</ul>
+
+<p>The conversations and deep dives are hosted by <a href="https://x.com/enunomaduro">Nuno Maduro</a>, creator of Pest, Larastan, and Laravel Pint, and <a href="https://x.com/brendt_gd">Brent Roose</a>, Developer Advocate for PHP at <a href="https://www.jetbrains.com/?utm_source=thephp.foundation&amp;utm_medium=referral&amp;utm_campaign=phpverse2026">JetBrains</a>.</p>
+
+<h3 id="join-the-conversation">Join the conversation</h3>
+
+<p>For The PHP Foundation, JetBrains PHPverse is not just a talking stage, but a chance to engage in a conversation with thousands of engineers who use PHP every day.</p>
+
+<p>We invite every member of the PHP community to join us for this day of learning and connection. Whether you’re interested in the latest RFCs, projects supported by the Foundation, or what’s next for tools you are using, there is something at PHPverse for everyone.</p>
+
+<p><a href="https://lp.jetbrains.com/phpverse-2026/?utm_source=thephp.foundation&utm_medium=referral&utm_campaign=phpverse2026#register-for-phpverse-2026" class="button-link">Register for JetBrains PHPverse 2026</a></p>
+
+<p>We also encourage you to join the <a href="https://discord.gg/uEUkSNhdd8">official Discord server</a> to ask questions and engage with the speakers and fellow developers.</p>
+
+<p>Looking forward to seeing you on June 9!</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[The PHP Foundation Impact and Transparency Report 2025]]></title>
             <link href="https://thephp.foundation/blog/2026/05/27/impact-and-transparency-report-2025/"/>
@@ -825,71 +864,6 @@ $result = "Hello World"
 <p>Each of these RFCs is, on its own, useful but not earth-shattering.  Taken together... "synergy" may be a dirty word outside of management consulting, but in this case it applies.  We are very close to blowing open PHP's functional capabilities in much the way that PHP 5.2 finally blew open its object-oriented capabilities.  And as a multi-paradigm language, we'll be able to freely mix and match OOP and FP approaches where they make the most sense.</p>
 
 <p>I can't wait!</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Thank you for supporting The PHP Foundation in 2025! Can we count on you in 2026?]]></title>
-            <link href="https://thephp.foundation/blog/2025/12/02/can-we-count-on-you-in-2026/"/>
-            <updated>2025-12-02T00:00:00+00:00</updated>
-            <id>https://thephp.foundation/blog/2025/12/02/can-we-count-on-you-in-2026/</id>
-            <content type="html"><![CDATA[<p>As 2025 comes to a close, we at The PHP Foundation want to take a moment to thank everyone who has supported us this year. We firmly believe that our work on the PHP language continues to have a massive impact, and we couldn’t have done it without the amazing PHP community and our generous sponsors.</p>
-
-<div class="text-center my-10">
-  <a href="https://thephp.foundation/sponsor/" class="button-link">Become a Sponsor&nbsp;&nbsp;❤️</a>
-</div>
-
-<h2 id="%2A%2Aour-achievements-this-year%2A%2A"><strong>Our Achievements This Year</strong></h2>
-
-<p>Now in our fourth year, The PHP Foundation has achieved several milestones that have further strengthened the PHP ecosystem:</p>
-
-<ul>
-<li><a href="https://www.php.net/releases/8.5/en.php">Release of PHP 8.5</a></li>
-<li><a href="https://github.com/php/pie">PIE 1.0 Release</a></li>
-<li><a href="https://thephp.foundation/blog/2025/05/15/frankenphp/">Supporting FrankenPHP</a></li>
-<li><a href="https://thephp.foundation/blog/2025/09/05/php-mcp-sdk/">PHP MCP SDK together with Anthropic and Symfony</a></li>
-<li>2nd <a href="https://www.sovereign.tech/">Sovereign Tech Agency</a> Investment for the <a href="https://thephp.foundation/blog/2025/10/30/php-streams-evolution/">Stream Layer Rework</a></li>
-</ul>
-
-<h2 id="thank-you-to-our-sponsors">Thank You to Our Sponsors</h2>
-
-<p>We owe a special thanks to our major sponsors who make our work possible:</p>
-
-<h3 id="%2A%2Aplatinum%2A%2A"><strong>Platinum</strong></h3>
-
-<p><a href="https://automattic.com/"><strong>Automattic</strong></a><br />
-<a href="https://www.sovereign.tech/"><strong>Sovereign Tech Agency</strong></a><br />
-<a href="https://www.jetbrains.com/"><strong>JetBrains</strong></a></p>
-
-<h3 id="%2A%2Agold%2A%2A"><strong>Gold</strong></h3>
-
-<p><a href="https://laravel.com/"><strong>Laravel</strong></a><br />
-<a href="https://www.godaddy.com/"><strong>GoDaddy</strong></a></p>
-
-<h3 id="%2A%2Asilver%2A%2A"><strong>Silver</strong></h3>
-
-<p><a href="https://www.passbolt.com/"><strong>Passbolt</strong></a> 🆕, <a href="https://packagist.com/"><strong>Private Packagist</strong></a>, <a href="https://craftcms.com/"><strong>Craft CMS</strong></a>, <a href="https://cybozu.co.jp/en/company/"><strong>Cybozu</strong></a>, <a href="https://tideways.com/"><strong>Tideways</strong></a>. <a href="https://www.zend.com/"><strong>Zend by Perforce</strong></a>. <a href="https://symfony.com/"><strong>Symfony Corp</strong></a>, <a href="https://sentry.io/welcome/"><strong>Sentry</strong></a>. <a href="https://manychat.com/"><strong>Manychat</strong></a>, <a href="https://www.mercari.com/"><strong>Mercari Inc.</strong></a>, <a href="http://les-tilleuls.coop/"><strong>Les-Tilleuls.coop</strong></a>, <a href="https://www.pixiv.net/en/"><strong>pixiv Inc.</strong></a>, <a href="https://aternos.gmbh/en/"><strong>Aternos GmbH</strong></a>, <a href="https://chstudio.fr/en/homepage/"><strong>CH Studio</strong></a></p>
-
-<p>In total more than 550 donations were made by businesses and individual sponsors to The PHP Foundation throughout this year through OpenCollective and more through our GitHub sponsors.</p>
-
-<p>Your contributions enable us to support developers, fund crucial projects, and ensure PHP is a modern and reliable choice for web development.</p>
-
-<p>If you are yet to decide on sponsoring the foundation, <a href="https://thephp.foundation/sponsor/">here</a> you can find information on how to join us and why it matters or reach out directly to <a href="&#109;&#x61;i&#108;&#x74;&#111;&#58;&#x63;&#111;&#x6e;&#x74;&#97;&#x63;t&#64;&#x74;&#104;&#101;&#x70;&#104;&#x70;&#x2e;&#102;&#x6f;&#x75;&#110;&#x64;a&#116;&#x69;&#111;&#110;">contact@thephp.foundation</a>.</p>
-
-<h2 id="outlook-into-2026">Outlook into 2026</h2>
-
-<p>Big changes are ahead for 2026, when our founding and long-term executive director <a href="https://www.linkedin.com/in/pronskiy/">Roman Pronskiy</a> (JetBrains) will step down and the foundation will hire a dedicated executive director for the first time.</p>
-
-<p>This marks a new chapter as we recognize that The PHP Foundation has grown so much that we consider a dedicated management position to be required to ensure that our projects and goals are getting done.</p>
-
-<p>If you are interested in the Executive Director role, we are still <a href="https://thephp.foundation/blog/2025/11/10/seeking-new-executive-director/">looking for candidates to apply until December 15th, 2025</a>.</p>
-
-<p>Furthermore, we’d like to add 2 new developers to our team who applied to our program in autumn.</p>
-
-<p>And mainly, our team will continue to maintain, document, and improve PHP further with the next major release (8.6 or 9.0) coming at the end of 2026&#46;</p>
-
-<p>Thank you,<br />
-The PHP Foundation<br />
-🐘💜</p>
 ]]></content>
         </entry>
     </feed>
