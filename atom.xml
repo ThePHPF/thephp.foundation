@@ -3,7 +3,7 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2026-05-27T19:35:30+00:00</updated>
+    <updated>2026-05-28T14:23:53+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
@@ -50,7 +50,7 @@
 <li>Successful delivery of PHP 8.5</li>
 <li>Launch of PIE 1.0 and initiation of the formal PECL deprecation process</li>
 <li>Launch of the STF Streams modernization project</li>
-<li>PHP Foundation representation at the OpenSSF <a href="https://orcwg.org/">Open Regulatory Compliance Working Group</a> on the EU Cyber Resilience Act</li>
+<li>PHP Foundation representation at the <a href="https://orcwg.org/">Open Regulatory Compliance Working Group</a> on the EU Cyber Resilience Act</li>
 </ul>
 
 <h2 id="the-php-foundation-staff">The PHP Foundation Staff</h2>
@@ -98,7 +98,7 @@
 
 <h4 id="security">Security</h4>
 
-<p>Jakub Zelenka led sustained multi-month investigations on multiple security advisories, which included the handling of PHP security releases. Jakub also represented the PHP Foundation in the OpenSSF working group shaping EU Cyber Resilience Act compliance.  David Carlier delivered a steady stream of overflow, double-free, and memory leak fixes across GD, ZIP, intl, PDO_SQLite, sodium, and Fiber, upstreaming several directly to libgd. Shivam Mathur is responsible for security upgrades to Windows PHP builds addressing 50+ CVEs/security issues, and continues to support builds for 100+ extensions for Windows. Derick Rethans patched an XSS in php.net and ran an emergency CVE response for the rsync server.</p>
+<p>Jakub Zelenka led sustained multi-month investigations on multiple security advisories, which included the handling of PHP security releases. Jakub also represented the PHP Foundation in the Open Regulatory Compliance Working Group shaping EU Cyber Resilience Act compliance.  David Carlier delivered a steady stream of overflow, double-free, and memory leak fixes across GD, ZIP, intl, PDO_SQLite, sodium, and Fiber, upstreaming several directly to libgd. Shivam Mathur is responsible for security upgrades to Windows PHP builds addressing 50+ CVEs/security issues, and continues to support builds for 100+ extensions for Windows. Derick Rethans patched an XSS in php.net and ran an emergency CVE response for the rsync server.</p>
 
 <h4 id="streams-modernization-sovereign-tech-fund">Streams modernization (Sovereign Tech Fund)</h4>
 
