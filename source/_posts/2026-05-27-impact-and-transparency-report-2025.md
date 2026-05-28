@@ -44,7 +44,7 @@ Key achievements included:
 * Successful delivery of PHP 8.5
 * Launch of PIE 1.0 and initiation of the formal PECL deprecation process
 * Launch of the STF Streams modernization project
-* PHP Foundation representation at the OpenSSF [Open Regulatory Compliance Working Group](https://orcwg.org/) on the EU Cyber Resilience Act
+* PHP Foundation representation at the [Open Regulatory Compliance Working Group](https://orcwg.org/) on the EU Cyber Resilience Act
 
 
 ## The PHP Foundation Staff
@@ -88,7 +88,7 @@ We acknowledge the limitations in providing any metrics; very rarely do metrics 
 
 #### Security
 
-Jakub Zelenka led sustained multi-month investigations on multiple security advisories, which included the handling of PHP security releases. Jakub also represented the PHP Foundation in the OpenSSF working group shaping EU Cyber Resilience Act compliance.  David Carlier delivered a steady stream of overflow, double-free, and memory leak fixes across GD, ZIP, intl, PDO_SQLite, sodium, and Fiber, upstreaming several directly to libgd. Shivam Mathur is responsible for security upgrades to Windows PHP builds addressing 50+ CVEs/security issues, and continues to support builds for 100+ extensions for Windows. Derick Rethans patched an XSS in php.net and ran an emergency CVE response for the rsync server.
+Jakub Zelenka led sustained multi-month investigations on multiple security advisories, which included the handling of PHP security releases. Jakub also represented the PHP Foundation in the Open Regulatory Compliance Working Group shaping EU Cyber Resilience Act compliance.  David Carlier delivered a steady stream of overflow, double-free, and memory leak fixes across GD, ZIP, intl, PDO_SQLite, sodium, and Fiber, upstreaming several directly to libgd. Shivam Mathur is responsible for security upgrades to Windows PHP builds addressing 50+ CVEs/security issues, and continues to support builds for 100+ extensions for Windows. Derick Rethans patched an XSS in php.net and ran an emergency CVE response for the rsync server.
 
 #### Streams modernization (Sovereign Tech Fund)
 
