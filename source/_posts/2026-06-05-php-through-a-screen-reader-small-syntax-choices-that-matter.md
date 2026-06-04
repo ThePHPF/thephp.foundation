@@ -1,5 +1,5 @@
 ---
-title: PHP Through a Screen Reader: Small Syntax Choices That Matter
+title: "PHP Through a Screen Reader: Small Syntax Choices That Matter"
 layout: post
 tags:
     - update
