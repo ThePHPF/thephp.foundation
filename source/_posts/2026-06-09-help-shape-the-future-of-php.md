@@ -17,7 +17,7 @@ We invite everyone who works with PHP to [participate](https://surveys.jetbrains
 
 <img src="/assets/post-images/2026/state-of-php-survey/banner.png" width="1052" alt="illustrated PHP elephant with a safari hat and the words join our expedition." class="mb-4 sm:mr-4"/>
 
-### Why we are launching the State of PHP survey
+### Why we're launching the State of PHP survey
 PHP has been around for more than 30 years, and it continues to evolve alongside the people and organizations that depend on it. The ecosystem is broad: developers use PHP across many countries, industries, experience levels, frameworks, deployment environments, and workflows. To support PHP effectively, we need better insight into that ecosystem.
 The goal is to gather representative input from PHP developers of all backgrounds. Whether you have been writing PHP for decades or only recently started, your perspective is invaluable.
 
@@ -36,4 +36,4 @@ The more developers participate, the more useful and representative the final re
 
 Thank you for helping us map the PHP ecosystem and for being part of the first State of PHP survey.
 
--- The PHP Foundation and PhpStorm team
+-- The PHP Foundation and PhpStorm teams
