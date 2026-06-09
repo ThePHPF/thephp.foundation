@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-05-28T19:54:56+00:00</updated><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Welcoming Matt Stauffer to The PHP Foundation Board]]></title><content type="html"><![CDATA[<p><img src="/assets/post-images/2026/matt-stauffer/matt-stauffer.jpg" width="300" alt="headshot of matt stauffer" class="mb-4 sm:mr-4 sm:float-left"/> We are thrilled to announce that <a href="https://www.linkedin.com/in/mattstauffer/">Matt Stauffer</a> has agreed to join The PHP Foundation Board, where he will bring his decades of experience in the PHP ecosystem. Matt joins the Board as a community representative and was voted in by the existing Board members. Not only is Matt a Laravel expert, he has created / maintained dozens of PHP and JavaScript open source packages, he is a published author, and he hosts several successful industry podcasts. We are grateful for his insight, input, and leadership as we further our mission of sustaining a thriving PHP language and ecosystem.</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-06-09T14:54:35+00:00</updated><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Welcoming Matt Stauffer to The PHP Foundation Board]]></title><content type="html"><![CDATA[<p><img src="/assets/post-images/2026/matt-stauffer/matt-stauffer.jpg" width="300" alt="headshot of matt stauffer" class="mb-4 sm:mr-4 sm:float-left"/> We are thrilled to announce that <a href="https://www.linkedin.com/in/mattstauffer/">Matt Stauffer</a> has agreed to join The PHP Foundation Board, where he will bring his decades of experience in the PHP ecosystem. Matt joins the Board as a community representative and was voted in by the existing Board members. Not only is Matt a Laravel expert, he has created / maintained dozens of PHP and JavaScript open source packages, he is a published author, and he hosts several successful industry podcasts. We are grateful for his insight, input, and leadership as we further our mission of sustaining a thriving PHP language and ecosystem.</p>
 
 <p>Please join us in welcoming Matt to the Foundation Board!</p>
 ]]></content><link href="https://thephp.foundation/blog/2026/03/25/welcoming-matt-stauffer-to-the-php-foundation-board/"/><id>https://thephp.foundation/blog/2026/03/25/welcoming-matt-stauffer-to-the-php-foundation-board/</id><updated>Fri, 27 Mar 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[The PHP Foundation Impact and Transparency Report 2025]]></title><content type="html"><![CDATA[<h2 id="executive-summary">Executive Summary</h2>
@@ -564,7 +564,37 @@
 <p>Because we’re all in this together, I want to spend the next 1-2 months really listening to what you have to say. I have an <a href="https://calendar.app.google/UkqNQzuzYBbEYjLYA">open calendar</a> and I encourage you to reserve some time with me. I want to hear from PHP developers, contributors, companies using PHP, independent consultants, sponsors, community members, and anyone else interested in the future of PHP. I want to hear about your goals, your motivations, your pain points, and yes, even your wacky and unorthodox ideas. And if meetings aren’t your thing, that’s completely understandable. You can also send me an <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#101;&#x6c;&#105;&#122;&#x61;b&#101;&#x74;&#x68;&#64;&#x74;&#x68;&#101;&#112;&#x68;&#112;&#46;&#x66;o&#117;&#x6e;&#x64;&#97;&#x74;&#x69;&#111;&#110;">email</a>. (I’ll even check my inbox!)</p>
 
 <p>PHP’s secret recipe has always been its community and I can’t wait to be collaborating with you all again!</p>
-]]></content><link href="https://thephp.foundation/blog/2026/03/05/working-together-on-the-future-of-php/"/><id>https://thephp.foundation/blog/2026/03/05/working-together-on-the-future-of-php/</id><updated>Fri, 06 Mar 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Integrating Community Feedback into Foundation Strategy Part 1]]></title><content type="html"><![CDATA[<h2 id="integrating-community-input-into-foundation-strategy">Integrating Community Input Into Foundation Strategy</h2>
+]]></content><link href="https://thephp.foundation/blog/2026/03/05/working-together-on-the-future-of-php/"/><id>https://thephp.foundation/blog/2026/03/05/working-together-on-the-future-of-php/</id><updated>Fri, 06 Mar 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Help Shape the Future of PHP: Take the State of PHP Survey]]></title><content type="html"><![CDATA[<p>PHP is powered by a global community of developers, maintainers, contributors, companies, and users. To better understand that community and the ecosystem around it, The PHP Foundation and <a href="https://www.jetbrains.com/phpstorm/">PhpStorm</a>, a JetBrains IDE, are launching the first annual <a href="https://surveys.jetbrains.com/s3/phpf-b-state-of-php-2026">State of PHP survey</a>.</p>
+
+<p>This survey is an effort to build a clearer picture of how PHP is used today: who is using it, which tools and frameworks developers rely on, what challenges they face, how they feel about the language, and where they see PHP going next.</p>
+
+<p>We invite everyone who works with PHP to <a href="https://surveys.jetbrains.com/s3/phpf-b-state-of-php-2026">participate</a>.</p>
+
+<p><img src="/assets/post-images/2026/state-of-php-survey/banner.png" width="1052" alt="illustrated PHP elephant with a safari hat and the words join our expedition." class="mb-4 sm:mr-4"/></p>
+
+<h3 id="why-we%27re-launching-the-state-of-php-survey">Why we're launching the State of PHP survey</h3>
+
+<p>PHP has been around for more than 30 years, and it continues to evolve alongside the people and organizations that depend on it. The ecosystem is broad: developers use PHP across many countries, industries, experience levels, frameworks, deployment environments, and workflows. To support PHP effectively, we need better insight into that ecosystem.
+The goal is to gather representative input from PHP developers of all backgrounds. Whether you have been writing PHP for decades or only recently started, your perspective is invaluable.</p>
+
+<h3 id="what-happens-with-the-results">What happens with the results</h3>
+
+<p>The aggregated results will be published in the State of PHP 2026 report later this year, which will be announced in <a href="https://x.com/ThePHPF">The PHP Foundation</a> and <a href="https://x.com/phpstorm">PhpStorm’s</a> social media channels and newsletters.</p>
+
+<p>The report will help the community better understand current PHP usage and trends. It will also provide useful insight for contributors, maintainers, tool authors, educators, companies, and everyone working to strengthen PHP and its ecosystem.</p>
+
+<h3 id="take-the-survey">Take the survey</h3>
+
+<p>We encourage all PHP developers to take part and to share the survey with colleagues and local PHP communities.</p>
+
+<p><a href="https://surveys.jetbrains.com/s3/phpf-b-state-of-php-2026" class="button-link">Take the Survey</a></p>
+
+<p>The more developers participate, the more useful and representative the final report will be.</p>
+
+<p>Thank you for helping us map the PHP ecosystem and for being part of the first State of PHP survey.</p>
+
+<p>-- The PHP Foundation and PhpStorm teams</p>
+]]></content><link href="https://thephp.foundation/blog/2026/06/09/help-shape-the-future-of-php/"/><id>https://thephp.foundation/blog/2026/06/09/help-shape-the-future-of-php/</id><updated>Tue, 09 Jun 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Integrating Community Feedback into Foundation Strategy Part 1]]></title><content type="html"><![CDATA[<h2 id="integrating-community-input-into-foundation-strategy">Integrating Community Input Into Foundation Strategy</h2>
 
 <h3 id="part-1%3A-feedback-from-the-community">Part 1: Feedback from the Community</h3>
 
