@@ -36,4 +36,4 @@ The more developers participate, the more useful and representative the final re
 
 Thank you for helping us map the PHP ecosystem and for being part of the first State of PHP survey.
 
-The PHP Foundation and PhpStorm team
+-- The PHP Foundation and PhpStorm team
