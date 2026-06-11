@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Integrating Community Feedback into Foundation Strategy Part 2 &mdash; The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language</title>
+    <meta name="description" content="The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language">
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="index, follow">
+        <link href="https://phpc.social/@thephpf" rel="me" />
+    <link rel="stylesheet" href="https://thephp.foundation/assets/css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/base16/danqing.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+
+    <meta name="yandex-verification" content="6990192232fdf071" />
+    <meta name="msvalidate.01" content="5D1EB82347E6BF271A01DCDBF7E59BED" />
+
+    <meta property="og:url" content="https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Integrating Community Feedback into Foundation Strategy Part 2">
+    <meta property="og:description" content="The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language">
+    <meta property="og:image" content="https://thephp.foundation/assets/share/2026-06-11-integrating-community-feedback-into-foundation-strategy-part2.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="https://thephp.foundation">
+    <meta property="twitter:url" content="https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/">
+    <meta name="twitter:title" content="Integrating Community Feedback into Foundation Strategy Part 2">
+    <meta name="twitter:description" content="The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language">
+    <meta name="twitter:image" content="https://thephp.foundation/assets/share/2026-06-11-integrating-community-feedback-into-foundation-strategy-part2.png">
+
+    <link rel="apple-touch-startup-image" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" sizes="76x76" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="120x120" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="128x128" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="152x152" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="196x196" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="512x512" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="1024x1024" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="2048x2048" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="128x128" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="196x196" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="512x512" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="2048x2048" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+
+    <link rel="alternate" type="application/atom+xml" href="https://thephp.foundation/atom.xml"
+          title="The PHP Foundation activity feed"/>
+                <script src="//cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+    </head>
+<body class="bg-white">
+
+<div role="region" aria-label="PHPverse 2025 announcement" class="w-full bg-green-500 text-white text-center py-1 text-sm font-medium z-50 hover:text-white hidden">
+    <a href="banner link stub" target="_blank" rel="noopener noreferrer" class="text-white no-underline hover:underline hover:text-white visited:hover:text-white">banner text stub</a>
+</div>
+
+<header x-data="{ isOpen: false }" @keydown.escape="isOpen = false" @click.away="isOpen = false" itemscope
+        itemtype="https://schema.org/WPHeader">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between relative">
+        <div class="absolute inset-x-0 bottom-0 h-px bg-slate-900/5"></div>
+        <div class="flex lg:flex-1 items-center gap-4">
+            <a href="https://thephp.foundation/" class="-m-1.5 p-1.5">
+                <img class="h-16 w-auto" src="https://thephp.foundation/assets/icons/php_foundation.svg"
+                     alt="PHP Foundation">
+            </a>
+            <span class="text-[#27282c] font-semibold text-sm md:text-xl" itemprop="headline">The PHP Foundation</span>
+        </div>
+        <div class="flex lg:hidden">
+            <button type="button"
+                    @click="isOpen = true"
+                    class="m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                     aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                </svg>
+            </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12" itemscope itemtype="https://schema.org/SiteNavigationElement">
+            <a href="https://thephp.foundation/structure" class="text-gray-700 hover:underline" itemprop="url">Who we are</a>
+
+            <a href="https://thephp.foundation/foundation" class="text-gray-700 hover:underline" itemprop="url">What we do</a>
+
+            <a href="https://thephp.foundation/blog" class="text-gray-700 hover:underline" itemprop="url">News</a>
+
+            <a href="https://thephp.foundation/presentations" class="text-gray-700 hover:underline" itemprop="url">Talks</a>
+
+            <a href="https://thephp.foundation/contact" class="text-gray-700 hover:underline" itemprop="url">Contact</a>
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-8">
+            <a href="https://php.net" target="_blank" rel="noopener noreferrer"
+               class="text-sm font-semibold leading-6 text-gray-700 nav-org hover:border-none hover:underline">
+                php.net</a>
+
+            <a href="/sponsor" class="button-link">Sponsor</a>
+        </div>
+    </nav>
+    <div x-show="isOpen" x-cloak>
+        <div class="fixed inset-0 z-50"></div>
+        <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="mx-auto flex max-w-7xl items-center justify-between relative">
+                <div class="flex lg:flex-1 items-center gap-4">
+                    <a href="https://thephp.foundation/" class="-m-1.5 p-1.5">
+                        <img class="h-16 w-auto" src="https://thephp.foundation/assets/icons/php_foundation.svg"
+                             alt="PHP Foundation">
+                    </a>
+                    <span class="text-[#27282c] font-semibold text-sm md:text-xl">The PHP Foundation</span>
+                </div>
+                <div class="flex">
+                    <button type="button"
+                            @click="isOpen = false"
+                            class="m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                             aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <nav class="mt-6 flow-root px-6 py-6">
+                <div class="-my-6 divide-y divide-gray-500/10">
+                    <div class="space-y-2 py-6" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                        <a href="https://thephp.foundation/structure" itemprop="url"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Who
+                            we are</a>
+
+                        <a href="https://thephp.foundation/foundation" itemprop="url"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">What
+                            we do</a>
+
+                        <a href="https://thephp.foundation/blog" itemprop="url"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">News</a>
+
+                        <a href="https://thephp.foundation/presentations" itemprop="url"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Talks</a>
+
+                        <a href="https://thephp.foundation/contact" itemprop="url"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Contact</a>
+                    </div>
+                    <div class="py-6">
+                        <a href="/sponsor" rel="noopener noreferrer"
+                           class="block py-2 text-center no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">Sponsor</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div class="bg-white px-6 lg:px-8 my-16" itemscope itemtype="https://schema.org/Article">
+    <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
+        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" itemprop="name">Integrating Community Feedback into Foundation Strategy Part 2</h1>
+
+        <div class="flex flex-col md:flex-row md:items-center gap-x-4 text-xs mt-2">
+                <div>
+            Published on <span itemprop="datePublished">Jun 11, 2026</span>
+            by <span itemprop="publisher" itemscope itemtype="https://schema.org/Person"><a href="https://www.linkedin.com/in/elizabethn/" target="_blank" rel="noopener noreferrer" itemprop="url"><span itemprop="name">Elizabeth Barron</span></a></span>
+        </div>
+                    
+        
+                <div class="flex gap-x-2 mt-2 md:mt-0">
+                        <a href="https://thephp.foundation/blog/tag/strategy"
+               class="rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
+                Strategy
+            </a>
+                    </div>
+                </div>
+
+        <div class="mt-6 text-xl leading-8" itemprop="text">
+            <p>In April 2026, during the first weeks of my tenure as Executive Director, I conducted a listening tour with around 60 people from 18 countries spanning every part of the PHP ecosystem (see <em><a href="https://thephp.foundation/blog/2026/04/16/integrating-community-feedback-into-foundation-strategy-part1/">Integrating Community Feedback into Foundation Strategy: Part 1</a></em>). Since then, I have continued to listen and connect with those of you in the community who have something to share. The themes that have surfaced are <a href="https://thephp.foundation/blog/2026/04/16/integrating-community-feedback-into-foundation-strategy-part1/">clear, consistent, and actionable</a>. This document outlines how the PHP Foundation will respond in 2026.</p>
+
+<p>In short, the community loves PHP and believes in the Foundation's role, but is asking us to be clearer, more visible, and more coordinated in addressing existing and future challenges. The 2026 strategy answers those concerns through four themes:</p>
+
+<ol>
+<li><strong>Repositioning PHP</strong>: close the gap between today's PHP and the outdated perception that still shapes hiring and tech-stack decisions.</li>
+<li><strong>Initiatives with Community as Partners</strong>: scale our impact through six Special Interest Groups that address documented gaps.</li>
+<li><strong>Visibility &amp; Voice of the Foundation</strong>: consistently surface priorities, work, and impact to the community, sponsors, and the Board.</li>
+<li><strong>Language Stewardship</strong>: support the technical work that already happens around PHP core and the RFC process while staying clear about the Foundation's role as facilitator and resource, not the driver of decisions.</li>
+</ol>
+
+<p><a href="https://thephp.foundation/blog/2026/05/27/impact-and-transparency-report-2025/">Through our 2025 work</a>, and in addition to addressing community feedback, the Foundation set <a href="https://thephp.foundation/blog/2026/05/27/impact-and-transparency-report-2025/#looking-ahead%3A-goals-for-2026">goals for 2026</a>, which are also baked into this strategy.</p>
+
+<p>By the end of 2026, success looks like: a regular communication cadence for increased transparency; six operational Special Interest Groups with active community engagement and clear goals; a more diversified sponsor base and a clear, repeatable story about modern PHP that the community can carry into rooms where decisions get made.</p>
+
+<h3 id="strategic-themes-for-2026">Strategic Themes for 2026</h3>
+
+<p>Four themes organize the 2026 plan. Each maps directly to a category of community feedback and 2026 goals. Together, they answer the dominant request from the listening tour: be more visible, more coordinated, and more clearly responsive to what the community has told us.</p>
+
+<h4 id="theme-1%3A-repositioning-php">Theme 1: Repositioning PHP</h4>
+
+<p>The PHP people remember is not the PHP that exists today. Closing that gap is a multi-year effort. 2026 lays the groundwork: a coordinated voice, better assets for advocacy, and new platforms to tell the story of PHP at scale.</p>
+
+<p><strong>Initiatives</strong></p>
+
+<ul>
+<li><strong>Foundation-hosted podcast.</strong> A Foundation-hosted series surfacing the companies and engineering teams running modern PHP at scale. The target audience is decision-makers and engineers outside the PHP bubble.</li>
+<li><strong>PHP Ambassador Program.</strong> Brings together interested speakers; provides “State of Modern PHP” storytelling assets and CfP coordination that turn individual advocacy into a coordinated effort. More below.</li>
+</ul>
+
+<h4 id="theme-2%3A-initiatives-with-community-as-partners">Theme 2: Initiatives with Community as Partners</h4>
+
+<p>The Foundation has limited staff and limited budget, but the community has enormous capacity for making change. In 2026 we will create six structured Special Interest Groups that give community members multiple ways to contribute and focus their energy on the challenges that currently exist for the PHP ecosystem.</p>
+
+<p><strong>Initiatives</strong></p>
+
+<ul>
+<li><strong>Launch six Special Interest Groups.</strong> Build infrastructure to include interested community members in facing challenges across the ecosystem and from a variety of lenses. Details of these groups are below.</li>
+</ul>
+
+<h4 id="theme-3%3A-visibility-%26-voice-of-the-foundation">Theme 3: Visibility &amp; Voice of the Foundation</h4>
+
+<p>The PHP Foundation and Board will regularly articulate what they are doing and why, and they will be consistently accessible and engaged with the PHP community.</p>
+
+<p><strong>Initiatives</strong></p>
+
+<ul>
+<li><strong>Communication plan.</strong> Build a quarterly reporting cadence with a focus on bugs and issues we are prioritizing; revive the newsletter; publish Board minutes in a public repository.</li>
+<li><strong>Community engagement.</strong> Continue connection through community Discord channels; build a system to promote events where contractors and Board members will be; launch monthly Office Hours/Interviews with contractors/Board members.</li>
+<li><strong>Website clarity.</strong> Publish a clear articulation of Foundation priorities, the distribution of work across contractors, and the Foundation's role relative to the language and the community.</li>
+</ul>
+
+<h4 id="theme-4%3A-language-stewardship">Theme 4: Language Stewardship</h4>
+
+<p>This category contains the work the Foundation contributes to but does not own. The PHP codebase and the future of the language belong to the community. The Foundation's role is to support, facilitate, and convene, not to direct. In 2026, we will be explicit about that role and we will invest where the Foundation can meaningfully help.</p>
+
+<p><strong>Initiatives</strong></p>
+
+<ul>
+<li><strong>Contributor responsiveness and communication.</strong> Foundation contractors continue to lead in PR review and merge throughput; we will publish quarterly numbers so the community can see progress made by the team.</li>
+<li><strong>PHP core documentation.</strong> Identify and fund a focused effort to refresh the internals book and contributor onboarding documentation, in coordination with internals maintainers. Create a more maintainable system for keeping documentation up to date, moving forward.</li>
+<li><strong>PHP Security.</strong> The Alpha-Omega grant will position the Foundation at the center of a coordinated effort to improve security practices and procedures and fix security vulnerabilities across the PHP ecosystem.</li>
+</ul>
+
+<h3 id="community-special-interest-groups">Community Special Interest Groups</h3>
+
+<p>The PHP Foundation will launch six community special interest groups, with staggered launches from May through September. Each addresses one or more documented gaps from the listening tour, and each includes participation from the community, along with Foundation staff support. These are meant to be collaborative efforts with existing groups and individuals who have already spent time and energy addressing these topics.</p>
+
+<h4 id="%2A%2Aat-a-glance%3A%2A%2A"><strong>At a Glance:</strong></h4>
+
+<table>
+  <tr>
+   <td><strong>Group</strong>
+   </td>
+   <td><strong>Addresses</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Ecosystem Security Team
+   </td>
+   <td>Cross-community security concerns, triage, disclosure, agentic-tooling assisted vulnerability research, maintainer support. 
+   </td>
+  </tr>
+  <tr>
+   <td>PHP Ambassador Program
+   </td>
+   <td>Advocacy, representation, marketing of PHP
+   </td>
+  </tr>
+  <tr>
+   <td>PHP Onboarding Initiative
+   </td>
+   <td>New user experience, learning resources, education
+   </td>
+  </tr>
+  <tr>
+   <td>Cryptography Special Interest Group
+   </td>
+   <td>Post-Quantum Cryptography readiness in PHP and related cryptography conversations
+   </td>
+  </tr>
+  <tr>
+   <td>Community Events Coalition
+   </td>
+   <td>User groups, conferences, growing the community
+   </td>
+  </tr>
+  <tr>
+   <td>PHP Accessibility & Inclusion Special Interest Group
+   </td>
+   <td>Inclusion, accessibility, language translations, helping the ecosystem build healthy community norms, being a resource for maintainers
+   </td>
+  </tr>
+</table>
+
+<h4 id="about-the-special-interest-groups%3A">About the Special Interest Groups:</h4>
+
+<h4 id="1.-ecosystem-security-team">1. Ecosystem Security Team</h4>
+
+<p><strong>Purpose:</strong> Improves security of the PHP ecosystem and helps maintainers as AI-assisted vulnerability research becomes more common. Proactively identifies vulnerabilities and triages vulnerability reports. Builds tooling to assess, classify, and address security issues. Assists maintainers in scanning projects and acts as a trusted resource to monitor and support them in critical scenarios. <em>Note: The Team has <a href="https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/">already launched</a></em> *. They have connected with 30 organizations and projects so far and performed over a thousand scans and affected changes in hundreds of repos. If you’re interested in a scan, or have questions for the team, <a href="https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/#:~:text=Get%20in%20touch%20via%20email%3A%20volker%40thephp.foundation.">get in touch</a>!*</p>
+
+<p><strong>Success in 2026:</strong> Documentation for maintainers on available tooling, best practices and report triage; sustainability plan for continuing the work at the end of the grant; 1000+ projects scanned across the PHP ecosystem.</p>
+
+<h4 id="2.-php-ambassador-program">2. PHP Ambassador Program</h4>
+
+<p><strong>Purpose:</strong> Advocacy for PHP <strong>outside</strong> the PHP ecosystem. Provides resources for people who want to give talks at open-source conferences and other open-source events; shares CfPs and maintains a calendar of conferences outside the PHP world; develops shared talk assets and messaging, including a maintained "State of Modern PHP" deck.</p>
+
+<p><strong>Success in 2026:</strong> at least 3 talks delivered by ambassadors at non-PHP open-source venues; a shared CfP calendar in active use;  at least 10 participating community members; regular cadence of virtual gatherings of participants established.</p>
+
+<h4 id="3.-php-onboarding-initiative">3. PHP Onboarding Initiative</h4>
+
+<p><strong>Purpose:</strong> Improves the experience of new users from first encounter through first deployment. Identifies setup pain points; coordinates education and learning resources; explores a structured mentorship program; documents a clear onboarding path that newcomers can follow; works with the php.net website team to improve documentation and experience.</p>
+
+<p><strong>Success in 2026:</strong> a published "getting started with PHP" path replacing the scattered resources currently in existence; a mentorship pilot with at least 5 mentor/mentee pairs; documented setup-time benchmarks against which 2027 progress can be measured; monthly virtual gatherings of participants established.</p>
+
+<h4 id="4.-cryptography-special-interest-group">4. Cryptography Special Interest Group</h4>
+
+<p><strong>Purpose</strong>: Provides a venue for Post-Quantum Cryptography discussions, and moves The PHP Foundation into a more active role in the PHP ecosystem's response; maps where cryptography exists across both PHP core and the wider ecosystem; tracks upstream developments in OpenSSL and libsodium; also provides a venue for related conversations and initiatives that may arise.</p>
+
+<p><strong>Success in 2026:</strong> a published "clear public readiness roadmap" that regulators, enterprise adopters, and the broader community can reference. Regular cadence of meetings is established.</p>
+
+<h4 id="5.-community-events-coalition">5. Community Events Coalition</h4>
+
+<p><strong>Purpose:</strong> Brings together user group leaders and conference organizers. Maintains a shared speaker pool; shares venue, sponsor, and operations resources; restores and maintains the PHP user group directory; helps promote new CfPs and new events; surfaces contribution opportunities for those looking to volunteer.</p>
+
+<p><strong>Success in 2026:</strong> the user group directory is current and active; at least one shared resource bundle (speaker pool, sponsor decks, venue tips) is in circulation; monthly virtual gatherings of organizers established.</p>
+
+<h4 id="6.-php-accessibility-%26-inclusion-special-interest-group">6. PHP Accessibility &amp; Inclusion Special Interest Group</h4>
+
+<p><strong>Purpose:</strong> Works to make the language, its documentation, and its learning resources more accessible to a wider range of people across abilities, geographies, languages, and career stages. Supports community leaders and maintainers in building healthy, inclusive communities, including helping draft codes of conduct, and providing peer support for CoC report responses.</p>
+
+<p>This group intentionally launches later, after the Foundation has demonstrated it can successfully implement and facilitate community-based Special Interest Groups. Sequencing should not be read as deprioritization: an interim advisory group will be convened in July-August to prepare the SIG’s goals and ensure that inclusion principles are baked into the charters of the earlier-launching groups.</p>
+
+<p><strong>Success in 2026:</strong> SIG is operational with an active roster and well-articulated goals; a shared code-of-conduct template and response plan for projects to use; an accessibility audit of the primary PHP web properties planned for implementation in 2027.</p>
+
+<h3 id="fundraising-%26-sustainability">Fundraising &amp; Sustainability</h3>
+
+<p>Fundraising is the single most consequential operational priority in 2026. The 2025 reserve drawdown is sustainable for now, but a multi-year drawdown would erode the Foundation's ability to maintain technical headcount. So although this was a measured and deliberate strategy, we are actively working to minimize the drawdown in 2026.</p>
+
+<h4 id="2026-priorities">2026 Priorities</h4>
+
+<ul>
+<li><strong>Sponsor research.</strong> Structured conversations with current and prospective sponsors in or before Q3 to understand what they value, what benefits would matter, and where the Foundation's value proposition is unclear.</li>
+<li><strong>Refreshed tiers and benefits, if needed.</strong> New or revised sponsorship tiers informed by the research, with clearer benefits and clearer reporting back to sponsors.</li>
+<li><strong>Fundraising Initiative.</strong> A fundraising initiative that is already in discussion will be launched. Target net contribution: $40,000.</li>
+<li><strong>Cross-ecosystem fundraising conversation.</strong> Active presence in the conversations that other foundations and policy bodies are having about open-source funding sustainability. PHP is not the only ecosystem facing harder fundraising; visibility in that conversation builds relationships and protects the Foundation's position.</li>
+<li><strong>Advisory Board engagement.</strong> Quarterly Advisory Board meetings, increased activity in internal channels, stronger collaboration on perception of PHP, storytelling, and technical strategy.</li>
+</ul>
+
+<h4 id="2026-financial-targets">2026 Financial Targets</h4>
+
+<ul>
+<li>Total raised irrespective of grants: $700,000+ (versus $625,000 in 2025)</li>
+<li>Open Collective active contributors: 600+ (versus 536 in 2025)</li>
+<li>Top-10 sponsor concentration: reduced from ~51% to &lt;45% of revenue</li>
+<li>At least 15 new Silver or higher level sponsors</li>
+<li>Reserve drawdown halted or materially reduced by Q1 2027</li>
+<li>Grant applications for 2027 where applicable</li>
+</ul>
+
+<h3 id="2026-timeline-for-implementation">2026 Timeline for Implementation</h3>
+
+<p>The timeline below includes high-level initiatives, but it should be noted that there will be many other smaller efforts along the way, driven by standard Foundation operations, individual goals of the community groups, and unforeseen developments and opportunities that emerge throughout the year. This is not a comprehensive list of everything the Foundation will do in 2026.</p>
+
+<h4 id="q2-2026">Q2 2026</h4>
+
+<table>
+  <tr>
+   <td>May
+   </td>
+   <td>
+<ul>
+
+<li>Alpha-Omega grant received and Ecosystem Security Team launched</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>June
+   </td>
+   <td>
+<ul>
+
+<li>PHP Ambassador Program launches</li>
+
+<li>Quarterly Advisory Board meetings begin</li>
+
+<li>Revive monthly newsletter</li>
+
+<li>Website content refresh</li>
+
+<li>State of PHP Survey launched</li>
+</ul>
+   </td>
+  </tr>
+</table>
+
+<h4 id="q3-2026">Q3 2026</h4>
+
+<table>
+  <tr>
+   <td>July
+   </td>
+   <td>
+<ul>
+
+<li>Foundation podcast launches</li>
+
+<li>PHP Onboarding Initiative launches</li>
+
+<li>Fundraising project launches</li>
+
+<li>Begin quarterly reports on contractor progress</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>August
+   </td>
+   <td>
+<ul>
+
+<li>Cryptography Special Interest Group launches</li>
+
+<li>Sponsor research ends, fundraising tiers refreshed</li>
+
+<li>Monthly Office Hours launches</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>September
+   </td>
+   <td>
+<ul>
+
+<li>Community Events Coalition launches</li>
+</ul>
+   </td>
+  </tr>
+</table>
+
+<h4 id="q4-2026">Q4 2026</h4>
+
+<table>
+  <tr>
+   <td>October
+   </td>
+   <td>
+<ul>
+
+<li>PHP Accessibility & Inclusion Special Interest Group launches</li>
+
+<li>Survey results released</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>November
+   </td>
+   <td>
+<ul>
+
+<li>EOY fundraising push for 2027. </li>
+<li>Ecosystem Security Grant ends.</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>December
+   </td>
+   <td>
+<ul>
+
+<li>Impact Report for 2026 published</li>
+</ul>
+   </td>
+  </tr>
+</table>
+
+<h3 id="risks-%26-mitigations">Risks &amp; Mitigations</h3>
+
+<table>
+  <tr>
+   <td><strong>Risk</strong>
+   </td>
+   <td><strong>Mitigation</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Special Interest Groups stall or fail to attract engagement.
+   </td>
+   <td>Staggered launches give the Foundation operational headroom; ED-supported launch of each will have engagement as top priority.
+   </td>
+  </tr>
+  <tr>
+   <td>Accessibility & Inclusion SIG launch timing is read as deprioritization.
+   </td>
+   <td>Named in the framework announcement from day one; interim advisory grouping will convene in July; inclusion principles baked into earlier SIG infrastructure.
+   </td>
+  </tr>
+  <tr>
+   <td>Communication cadence not sustained.
+   </td>
+   <td>Quarterly reporting will be tied to Advisory Board cycles; newsletter will be sent on a regular schedule.
+   </td>
+  </tr>
+  <tr>
+   <td>Reserve drawdown continues if fundraising targets slip.
+   </td>
+   <td>Sponsor research front-loaded in Q3; Fundraising effort happens in July; Advisory Board engagement improves; cost discipline maintained.
+   </td>
+  </tr>
+  <tr>
+   <td>Sponsor concentration risk persists.
+   </td>
+   <td>Active outreach to mid-tier prospects; exploring new lower-cost tiers to widen the base; community fundraising to grow non-sponsor revenue.
+   </td>
+  </tr>
+</table>
+
+<h3 id="ongoing-operations">Ongoing Operations</h3>
+
+<p>Alongside the strategic initiatives above, the Foundation maintains an annual operating rhythm. These activities are not part of the 2026 strategic story but are essential to the Foundation's stability and to the community's experience of working with us.</p>
+
+<ul>
+<li><strong>Contractor applications and renewals.</strong> Annual review of existing contracts and evaluation of new applications. The 2026 round will be informed by the results of our findings— particularly contributor responsiveness, internals documentation, and ecosystem technical leadership. Renewal decisions intersect directly with the 2026 fundraising targets and the reserve picture, so this cycle is tracked alongside the financial plan.</li>
+<li><strong>Community survey partnership.</strong> The Foundation continues to partner on the running of community surveys. These provide quantitative signals that complement the qualitative listening tour and give us year-over-year measurement of the community's experience. Findings inform both the next year's strategy and public reporting.</li>
+<li><strong>End-of-year fundraising drive.</strong> The annual November/December campaign anchors the Open Collective contributor count and is the moment when the broadest swath of the community contributes. The 2026 campaign will lean into the year's narrative— listening tour, Special Interest Groups, and technical impact— to make the case for the Foundation as clearly as possible. There is also a potential to tap into the 5th anniversary of the Foundation itself.</li>
+<li><strong>Board minutes publication.</strong> Board minutes are published on an ongoing basis as part of the Foundation's governance transparency. This practice continues in 2026 alongside the broader push to make Foundation operations more legible to the community.</li>
+<li><strong>Monthly expense and contribution tracking.</strong> Monthly tracking and reporting of expenses and Open Collective contributions provides the public financial baseline.</li>
+</ul>
+
+<h3 id="gathering-more-data">Gathering More Data</h3>
+
+<p>It should be noted that these strategies and ideas are based on the <a href="https://thephp.foundation/blog/2026/04/16/integrating-community-feedback-into-foundation-strategy-part1/">initial findings</a>, and it would be wise to gather even more data that will inform future decisions and plans. We have recently launched a <a href="https://thephp.foundation/blog/2026/06/09/help-shape-the-future-of-php/">State of PHP Survey</a> in partnership with <a href="https://www.jetbrains.com/phpstorm/">PhpStorm</a> from JetBrains, and will be releasing the results later in the year. We will also be open to coordinating future surveys and means of data collection.</p>
+
+<h3 id="getting-involved">Getting Involved</h3>
+
+<p>If you're interested in joining or learning more about a Special Interest Group, the best place to start is by letting us know through this <a href="https://forms.gle/PqNRftrMGAhMCWBe9">general interest form.</a> We'll also be sharing more details about each group through our newsletter and social media accounts as they launch.</p>
+
+<p>We also want to encourage you to complete the survey as it will be helpful for the entire community to have more insight into how PHP is being used. Please go take the <a href="https://thephp.foundation/blog/2026/06/09/help-shape-the-future-of-php/">State of PHP Survey</a>.</p>
+
+<p>Lastly, as you know, <em>none</em> of this work is possible without the financial generosity of our community. We are incredibly grateful for all our individual and organizational supporters. If you would like to support The PHP Foundation's mission, please see our Open Collectives:</p>
+
+<ul>
+<li>To donate in USD: <a href="https://opencollective.com/phpfoundation">https://opencollective.com/phpfoundation</a></li>
+<li>To donate in EUR: <a href="https://opencollective.com/php-foundation-eur">https://opencollective.com/php-foundation-eur</a></li>
+</ul>
+
+<p>Whether you're an individual developer, a company that runs PHP, a community organizer, or other type of PHP community member, we would love to include you on this journey. PHP thrives when we all take part!</p>
+
+        </div>
+
+        <div class="border-t pt-5 my-5">
+            <div
+    class="thread-container"
+    data-reddit-thread=""
+    data-reddit-search="PHP"
+    data-reddit-suggest-title="Integrating Community Feedback into Foundation Strategy Part 2"
+    data-reddit-max-depth="10"
+    data-reddit-show-content="false"
+    data-reddit-show-controls="true"
+></div>
+<script>window.REDDITIFY_PROXY_URL = 'https://redditify-proxy.root-8f3.workers.dev';</script>
+<link rel="stylesheet" href="https://unpkg.com/redditify/dist/redditify.css">
+<script src="https://unpkg.com/redditify/dist/redditify.min.js"></script>
+
+        </div>
+        
+        <div class="border-t pt-5 my-5">
+                        <nav class="flex flex-row justify-between article -mx-2 mb-5">
+                                <a href="https://thephp.foundation/blog/2026/06/09/help-shape-the-future-of-php/"
+                   class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[#7f52ff] transition-all no-underline">
+                    <div class="mb-1 text-sm text-gray-600 font-medium">Previous</div>
+                    <div class="font-bold text-blue-500">Help Shape the Future of PHP: Take the State of PHP Survey</div>
+                </a>
+                
+                            </nav>
+            
+            <div>
+                <a href="https://github.com/ThePHPF/thephp.foundation/edit/main/source/_posts/2026-06-11-integrating-community-feedback-into-foundation-strategy-part2.md"
+                   class="nav-org" rel="noopener noreferrer" target="_blank">Edit this page on GitHub</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-gray-900">
+    <div class="mx-auto max-w-7xl overflow-hidden px-6 py-12 lg:px-8">
+        <ul class="list-none grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-1 max-w-xl mx-auto text-sm leading-6 text-gray-400" >
+            <li><a href="/sponsor"          class="text-gray-400 hover:text-gray-100 no-underline">Sponsor</a></li>
+            <li><a href="/structure"        class="text-gray-400 hover:text-gray-100 no-underline">Structure</a></li>
+            <li><a href="/structure#admins" class="text-gray-400 hover:text-gray-100 no-underline">Board</a></li>
+            <li><a href="/structure#core_developers"        class="text-gray-400 hover:text-gray-100 no-underline">Developers</a></li>
+            <li><a href="/blog"             class="text-gray-400 hover:text-gray-100 no-underline">News</a></li>
+            <li><a href="/presentations"    class="text-gray-400 hover:text-gray-100 no-underline">Talks</a></li>
+            <li><a href="/branding"         class="text-gray-400 hover:text-gray-100 no-underline">Brand Guide</a></li>
+            <li><a href="/governance"       class="text-gray-400 hover:text-gray-100 no-underline">Governance</a></li>
+            <li><a href="/code-of-conduct"  class="text-gray-400 hover:text-gray-100 no-underline">Code of Conduct</a></li>
+            <li><a href="/contact"          class="text-gray-400 hover:text-gray-100 no-underline">Contact</a></li>
+        </ul>
+
+        <div class="mt-10 flex justify-center space-x-10 items-center">
+            <a href="https://twitter.com/thephpf" target="_blank" rel="noopener noreferrer"
+               class="text-gray-400 hover:text-gray-500">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                    <g>
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                    </g>
+                </svg>
+            </a>
+
+            <a href="https://github.com/ThePHPF/thephp.foundation" class="text-gray-400 hover:text-gray-500"
+               target="_blank" rel="noopener noreferrer">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                          clip-rule="evenodd"/>
+                </svg>
+            </a>
+
+            <a href="https://phpc.social/@thephpf" class="text-gray-400 hover:text-gray-500" target="_blank"
+               rel="noopener noreferrer">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"/>
+                </svg>
+            </a>
+
+            <a href="https://www.linkedin.com/company/phpfoundation/" class="text-gray-400 hover:text-gray-500"
+               target="_blank" rel="noopener noreferrer">
+                <svg class="h-6 w-6"
+                     viewBox="0 0 56.693 56.693" fill="currentColor"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <path d="M30.071,27.101v-0.077c-0.016,0.026-0.033,0.052-0.05,0.077H30.071z"/>
+                        <path
+                                d="M49.265,4.667H7.145c-2.016,0-3.651,1.596-3.651,3.563v42.613c0,1.966,1.635,3.562,3.651,3.562h42.12   c2.019,0,3.654-1.597,3.654-3.562V8.23C52.919,6.262,51.283,4.667,49.265,4.667z M18.475,46.304h-7.465V23.845h7.465V46.304z    M14.743,20.777h-0.05c-2.504,0-4.124-1.725-4.124-3.88c0-2.203,1.67-3.88,4.223-3.88c2.554,0,4.125,1.677,4.175,3.88   C18.967,19.052,17.345,20.777,14.743,20.777z M45.394,46.304h-7.465V34.286c0-3.018-1.08-5.078-3.781-5.078   c-2.062,0-3.29,1.389-3.831,2.731c-0.197,0.479-0.245,1.149-0.245,1.821v12.543h-7.465c0,0,0.098-20.354,0-22.459h7.465v3.179   c0.992-1.53,2.766-3.709,6.729-3.709c4.911,0,8.594,3.211,8.594,10.11V46.304z"/>
+                    </g>
+                </svg>
+            </a>
+        </div>
+        <div class="mt-10 text-center text-xs leading-5 text-gray-500" itemprop="copyrightHolder">&copy; The PHP Foundation</div>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const anchors = new AnchorJS()
+        anchors.add()
+
+        for (const element of document.getElementsByClassName('anchorjs-link')) {
+            element.addEventListener('click', function () {
+                navigator.clipboard.writeText(window.location.origin + window.location.pathname + element.getAttribute('href'))
+            })
+        }
+    })
+</script>
+
+
+<script>hljs.highlightAll();</script>
+
+<script src="https://cdn.usefathom.com/script.js" data-site="PJKRZUTE" defer></script>
+<!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="https://analytics.thephp.foundation/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '1']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+<noscript><p><img referrerpolicy="no-referrer-when-downgrade" src="https://analytics.thephp.foundation/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Matomo Code -->
+
+</body>
+</html>
