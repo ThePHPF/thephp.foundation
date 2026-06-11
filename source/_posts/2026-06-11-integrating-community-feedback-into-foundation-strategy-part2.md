@@ -31,7 +31,7 @@ Four themes organize the 2026 plan. Each maps directly to a category of communit
 
 #### Theme 1: Repositioning PHP
 
-The PHP people remember is not the PHP that exists today. Closing that gap is a multi-year effort. 2026 lays the groundwork: a coordinated voice, better assets for advocacy, and new platforms to tell the story of PHP at scale.
+The PHP that people remember is not the PHP that exists today. Closing that gap is a multi-year effort. 2026 lays the groundwork: a coordinated voice, better assets for advocacy, and new platforms to tell the story of PHP at scale.
 
 **Initiatives**
 
