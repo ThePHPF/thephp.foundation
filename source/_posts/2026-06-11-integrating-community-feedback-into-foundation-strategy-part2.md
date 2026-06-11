@@ -203,7 +203,7 @@ Fundraising is the single most consequential operational priority in 2026. The 2
 
 The timeline below includes high-level initiatives, but it should be noted that there will be many other smaller efforts along the way, driven by standard Foundation operations, individual goals of the community groups, and unforeseen developments and opportunities that emerge throughout the year. This is not a comprehensive list of everything the Foundation will do in 2026. 
 
-**Q2 2026**
+#### Q2 2026
 
 
 <table>
@@ -238,7 +238,7 @@ The timeline below includes high-level initiatives, but it should be noted that 
 </table>
 
 
-**Q3 2026**
+#### Q3 2026
 
 
 <table>
@@ -285,7 +285,7 @@ The timeline below includes high-level initiatives, but it should be noted that 
 </table>
 
 
-**Q4 2026**
+#### Q4 2026
 
 
 <table>
@@ -395,7 +395,7 @@ We also want to encourage you to complete the survey as it will be helpful for t
 
 Lastly, as you know, *none* of this work is possible without the financial generosity of our community. We are incredibly grateful for all our individual and organizational supporters. If you would like to support The PHP Foundation's mission, please see our Open Collectives: 
 
-- To donate in USD: https://opencollective.com/phpfoundation
-- To donate in EUR: https://opencollective.com/php-foundation-eur
+- To donate in USD: [https://opencollective.com/phpfoundation](https://opencollective.com/phpfoundation)
+- To donate in EUR: [https://opencollective.com/php-foundation-eur](https://opencollective.com/php-foundation-eur)
 
 Whether you're an individual developer, a company that runs PHP, a community organizer, or other type of PHP community member, we would love to include you on this journey. PHP thrives when we all take part!
