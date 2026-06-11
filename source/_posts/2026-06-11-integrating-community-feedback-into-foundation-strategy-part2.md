@@ -21,7 +21,7 @@ In short, the community loves PHP and believes in the Foundation's role, but is 
 
 [Through our 2025 work](https://thephp.foundation/blog/2026/05/27/impact-and-transparency-report-2025/), and in addition to addressing community feedback, the Foundation set [goals for 2026](https://thephp.foundation/blog/2026/05/27/impact-and-transparency-report-2025/#looking-ahead%3A-goals-for-2026), which are also baked into this strategy.
 
-By the end of 2026, success looks like: a regular communication cadence for increased transparency; six operational Special Interest Groups with active community engagement and clear goals; a more diversified sponsor base and a clear, repeatable story about modern PHP that the community can carry into rooms where decisions get made.
+By the end of 2026, success looks like: a regular communication cadence for increased transparency; six operational [Special Interest Groups](https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/#community-special-interest-groups) with active community engagement and clear goals; a more diversified sponsor base and a clear, repeatable story about modern PHP that the community can carry into rooms where decisions get made.
 
 
 ### Strategic Themes for 2026
