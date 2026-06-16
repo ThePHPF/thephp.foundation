@@ -6,7 +6,7 @@ tags:
 author:
   name: André Polykanine
   url: https://oire.org/about
-published_at: 05 June 2026
+published_at: 16 June 2026
 ---
 
 I'm a backend developer, and PHP is my main language; it is also my favorite one. I've been developing in PHP since 2008, and today, when I start a web project, I choose PHP proudly, because I know what works well for me.
