@@ -3,9 +3,60 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2026-06-11T19:48:30+00:00</updated>
+    <updated>2026-06-16T14:15:03+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[PHP Through a Screen Reader: Small Syntax Choices That Matter]]></title>
+            <link href="https://thephp.foundation/blog/2026/06/16/php-through-a-screen-reader-small-syntax-choices-that-matter/"/>
+            <updated>2026-06-16T00:00:00+00:00</updated>
+            <id>https://thephp.foundation/blog/2026/06/16/php-through-a-screen-reader-small-syntax-choices-that-matter/</id>
+            <content type="html"><![CDATA[<p>I'm a backend developer, and PHP is my main language; it is also my favorite one. I've been developing in PHP since 2008, and today, when I start a web project, I choose PHP proudly, because I know what works well for me.</p>
+
+<p>There is one particularity in my developer experience: I'm totally blind from birth. So I use a <a href="https://www.visionaustralia.org/technology-products/resources/beginner-guides/introduction-to-screen-readers">screen reader</a>, a tool that sends information to speech and/or a <a href="https://www.sightadvicefaq.org.uk/technology/Reading-and-writing/Braille-Display">Braille display</a>.</p>
+
+<p>Of course, blind programmers are not a single organism with a shared configuration file. We use different tools and tolerance levels for punctuation spoken at 500 miles per hour. Still, PHP has many qualities that make it comfortable to read and write non-visually.</p>
+
+<h2 id="syntax-as-landmarks">Syntax as landmarks</h2>
+
+<p>Accessibility in programming is often discussed through tools, and tools matter a lot; but the language itself matters too, because syntax is something we hear, search, remember, and sometimes read on a Braille display.</p>
+
+<p>As we all know, every variable in PHP starts with <code>$</code>, and although this is often treated as one of those old PHP quirks people love to mention, for a screen reader user it is rather a practical landmark. I do not need to infer whether <code>user</code> is a variable, a constant, a class name, a function, or something else, because <code>$user</code> announces itself immediately. Without that marker, something like <code>User user = new User()</code> becomes, in speech, “user user equals new user left parenthesis right parenthesis”, or in my birdspeak, “user user equal new user left right”; this is understandable, yes, but it still requires a tiny effort to decrypt. A thousand tiny little efforts a day, actually.</p>
+
+<p>Functions also have a clear marker: the <code>function</code> keyword, and arrow functions have <code>fn</code>. These words are searchable, predictable anchors in a file, especially because not every blind developer lives inside a large visual IDE. Many of us use code or even text editors, command-line tools and search where they work well, so if I want to jump through functions in a file, the word <code>function</code> is my friend.</p>
+
+<p>PHP’s modern object-oriented syntax also has a pleasant rhythm:</p>
+
+<pre><code class="php">public function getDisplayName(): string
+</code></pre>
+
+<p>Maybe because I come from a linguistics background, it matters to me that this is a good phrase to hear and read: it has full words, it has structure — visibility, <code>function</code>, name, parameter list, colon, return type. I do not want to start a language war — well, not today — but when code is read linearly through speech or Braille, explicit syntax can be more comfortable than compact syntax.</p>
+
+<p>The same is true for braces and semicolons: a closing brace tells me that a block has ended, a semicolon tells me that a statement has ended, and both save me from reconstructing structure from indentation alone. Indentation is useful, of course, but braces act as milestones: block ended, period, go further.</p>
+
+<p>Naming conventions matter too. In PHP, we commonly see <code>camelCase</code>, <code>PascalCase</code>, and <code>UPPER_SNAKE_CASE</code>. For me, <code>camelCase</code> is convenient because screen readers often separate the words naturally, while <code>UPPER_SNAKE_CASE</code> constants are noticeable, especially in Braille. The ordinary snake case is harder: if punctuation is enabled, — and it is while writing code&#33; — <code>my_very_descriptive_variable_name</code> may become “my underscore very underscore descriptive underscore variable underscore name”. You can tune punctuation settings, and I have done it, but it still adds work.</p>
+
+<p>PHP is not perfect; no language is. But accessibility is not only elegance: sometimes it is predictability, explicitness, and being able to search for <code>function</code>, hear a friendly <code>$</code>, distinguish a constant on a Braille display, and know that a block ended because there is a <code>}</code>.</p>
+
+<h2 id="what-about-learning%3F">What about learning?</h2>
+
+<p>The second part of the story is learning. The PHP language itself can be friendly to assistive technology, but programming education is much more uneven. Many tutorials today are video-first, visually dense, and full of phrases like “click here”, “as you can see”, or “now we get this result”. That is fine if the important information is also spoken or written, but it becomes a barrier when the tutorial depends on visual context that is never explained.</p>
+
+<p>Here is a simple rule of thumb: close your eyes and try to understand what is happening in a course or conference talk. If you cannot, the blind part of your audience is immediately excluded. A blind learner cannot use “this button here” if “here” only means the instructor’s mouse pointer, cannot copy code from a screenshot, and cannot easily follow a refactoring if the teacher silently selects a block and says, “now we just fix it this way”.</p>
+
+<p>And this is not only about blindness. Clear teaching helps everyone: beginners, people learning in a second language, people watching on a phone, and people returning to a tutorial six months later.</p>
+
+<p>So here is my practical wish for people teaching PHP: provide the code as text, ideally in a Git repository. Say what file you are editing, say what function you are in, and do not rely only on “as you can see”. If something changes on screen, describe the change; if you show an error, read the important part of the error; if you use a diagram, briefly explain what it means. If you publish slides, make sure code examples are real text, and not just images, and consider publishing a transcript.</p>
+
+<p>Good written material also matters. PHP has always had a strong culture of documentation and examples, and that is not just convenient; it is an accessibility feature.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Accessibility is essential for users, but developers need accessibility too. For me, part of PHP’s approachability is that the code gives me landmarks: it speaks in a structure I can follow, lets me search, and marks important parts in ways that are not only visual.</p>
+
+<p>These are small things, but programming is made of small things repeated many times, and when those small things reduce friction, they let more people build.</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[Integrating Community Feedback into Foundation Strategy Part 2]]></title>
             <link href="https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/"/>
@@ -1077,41 +1128,6 @@ The goal is to gather representative input from PHP developers of all background
 <p>Because we’re all in this together, I want to spend the next 1-2 months really listening to what you have to say. I have an <a href="https://calendar.app.google/UkqNQzuzYBbEYjLYA">open calendar</a> and I encourage you to reserve some time with me. I want to hear from PHP developers, contributors, companies using PHP, independent consultants, sponsors, community members, and anyone else interested in the future of PHP. I want to hear about your goals, your motivations, your pain points, and yes, even your wacky and unorthodox ideas. And if meetings aren’t your thing, that’s completely understandable. You can also send me an <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#101;&#x6c;&#105;&#122;&#x61;b&#101;&#x74;&#x68;&#64;&#x74;&#x68;&#101;&#112;&#x68;&#112;&#46;&#x66;o&#117;&#x6e;&#x64;&#97;&#x74;&#x69;&#111;&#110;">email</a>. (I’ll even check my inbox!)</p>
 
 <p>PHP’s secret recipe has always been its community and I can’t wait to be collaborating with you all again!</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Welcoming Elizabeth Barron as the New Executive Director of The PHP Foundation]]></title>
-            <link href="https://thephp.foundation/blog/2026/02/27/welcoming-elizabeth-barron-new-executive-director/"/>
-            <updated>2026-02-27T00:00:00+00:00</updated>
-            <id>https://thephp.foundation/blog/2026/02/27/welcoming-elizabeth-barron-new-executive-director/</id>
-            <content type="html"><![CDATA[<p>We're excited to welcome <a href="https://www.linkedin.com/in/elizabethn">Elizabeth Barron</a> as the next Executive Director of The PHP Foundation, following a thorough process led by our search committee of <a href="https://www.linkedin.com/in/nilsadermann/">Nils Adermann</a>, <a href="https://www.linkedin.com/in/sebastian-bergmann-phpunit">Sebastian Bergmann</a>, <a href="https://www.linkedin.com/in/lornajane/">Lorna Mitchell</a>, and <a href="https://www.linkedin.com/in/benramsey/">Ben Ramsey</a>.</p>
-
-<p>Elizabeth brings a rare combination of deep roots in the PHP community and proven leadership in open-source governance. She co-founded a volunteer-based nonprofit dedicated to supporting women and non-binary individuals in the PHP industry, served as Community Manager at GitHub where she led developer outreach programs including the Patchwork initiative, and has been active in CHAOSS – a project focused on open-source community health metrics.</p>
-
-<p>Her experience spanning community building, fundraising, outreach operations, and open-source strategy makes her a natural fit to lead the foundation into its next chapter.</p>
-
-<p>As previously announced, founding Executive Director <a href="https://www.linkedin.com/in/pronskiy/">Roman Pronskiy</a> is transitioning to focus on his growing role at <a href="https://www.jetbrains.com/">JetBrains</a>, while continuing to serve on the Board of Directors. Roman will work closely with Elizabeth to ensure a smooth handover.</p>
-
-<p><figure class="max-w-screen-md mx-auto text-center mb-6" id="quote-elizabeth-barron">
-    <svg class="w-10 h-10 mx-auto mb-3 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
-        <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
-    </svg>
-    <blockquote>
-        <p class="italic text-gray-900">“In just a few years, The PHP Foundation has built something remarkable, and I'm honored to take on this role and continue that work. PHP powers a huge part of the web, and I'm excited to work with the Board, our core developers, and the broader PHP community to strengthen and expand the Foundation's impact so that together we can ensure PHP thrives for decades to come.”</p>
-    </blockquote>
-    <figcaption class="flex items-center justify-center mt-3 space-x-3 rtl:space-x-reverse">
-        <img class="w-10 h-10 rounded-full" src="/assets/team/elizabeth_barron.jpeg" alt="profile picture">
-        <div class="flex items-center">
-            <cite class="pl-0.5 font-medium text-gray-900">Elizabeth Barron, </cite>
-            <cite class="pl-1 text-gray-500">Executive Director, The PHP Foundation</cite>
-        </div>
-    </figcaption>
-</figure>
-</p>
-
-<p><br>
-Please join us in welcoming Elizabeth. We're looking forward to what's ahead.
-🐘💜</p>
 ]]></content>
         </entry>
     </feed>
