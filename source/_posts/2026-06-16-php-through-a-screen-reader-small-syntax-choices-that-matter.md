@@ -2,7 +2,7 @@
 title: "PHP Through a Screen Reader: Small Syntax Choices That Matter"
 layout: post
 tags:
-    - update
+    - accessibility
 author:
   name: André Polykanine
   url: https://oire.org/about
