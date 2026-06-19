@@ -7,7 +7,7 @@ tags:
 author:
   name: Elizabeth Barron
   url: https://www.linkedin.com/in/elizabethn/
-published_at: 18 June 2026
+published_at: 19 June 2026
 ---
 
 We are excited to announce that we have scheduled the first meeting for the PHP Ambassador Program! This is the second  Special Interest Group launched by The PHP Foundation, and we are inviting you to be a part of it. 
