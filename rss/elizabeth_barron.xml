@@ -1,8 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-06-17T19:09:46+00:00</updated><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Welcoming Matt Stauffer to The PHP Foundation Board]]></title><content type="html"><![CDATA[<p><img src="/assets/post-images/2026/matt-stauffer/matt-stauffer.jpg" width="300" alt="headshot of matt stauffer" class="mb-4 sm:mr-4 sm:float-left"/> We are thrilled to announce that <a href="https://www.linkedin.com/in/mattstauffer/">Matt Stauffer</a> has agreed to join The PHP Foundation Board, where he will bring his decades of experience in the PHP ecosystem. Matt joins the Board as a community representative and was voted in by the existing Board members. Not only is Matt a Laravel expert, he has created / maintained dozens of PHP and JavaScript open source packages, he is a published author, and he hosts several successful industry podcasts. We are grateful for his insight, input, and leadership as we further our mission of sustaining a thriving PHP language and ecosystem.</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-06-19T15:04:37+00:00</updated><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[The PHP Foundation’s Elizabeth Barron to keynote JetBrains PHPverse 2026]]></title><content type="html"><![CDATA[<p>PHP has undergone a remarkable transformation in recent years, and The PHP Foundation has played a major role in contributing to the development and maintenance of the language. The upcoming <a href="https://blog.jetbrains.com/phpstorm/2026/04/join-us-for-phpverse-2026-on-june-9/?utm_source=thephp.foundation&amp;utm_medium=referral&amp;utm_campaign=phpverse2026">JetBrains PHPverse conference</a> is a great opportunity to reflect on what has been done to reinforce PHP's position as a robust, modern language for web development.</p>
+
+<p>Elizabeth Barron, <a href="https://thephp.foundation/blog/2026/02/27/welcoming-elizabeth-barron-new-executive-director/">The PHP Foundation’s Executive Director</a>, is joining the lineup of JetBrains PHPverse 2026 speakers with a keynote talk “Getting to Know The PHP Foundation”. <a href="https://lp.jetbrains.com/phpverse-2026/?utm_source=thephp.foundation&amp;utm_medium=referral&amp;utm_campaign=phpverse2026">Tune in</a> on <strong>June 9</strong> to learn what The PHP Foundation actually does, which initiatives are planned for the rest of 2026, and how the community can help support the PHP ecosystem.</p>
+
+<h3 id="about-jetbrains-phpverse">About JetBrains PHPverse</h3>
+
+<p><a href="https://lp.jetbrains.com/phpverse-2026/?utm_source=thephp.foundation&amp;utm_medium=referral&amp;utm_campaign=phpverse2026">JetBrains PHPverse</a> is a free online conference and community event bringing together the big and vibrant PHP herd. It was first held in 2025, reaching out to more than 55,000 developers worldwide.</p>
+
+<p>Besides The PHP Foundation’s keynote, expect a <a href="https://lp.jetbrains.com/phpverse-2026/?utm_source=thephp.foundation&amp;utm_medium=referral&amp;utm_campaign=phpverse2026#speakers">curated lineup</a> of talks from some of the most influential voices in the PHP ecosystem, covering the major PHP frameworks, tools, and shipping PHP code with AI:</p>
+
+<ul>
+<li>Fabien Potencier, Founder of Symfony</li>
+<li>Jeffrey Way, Founder of Laracasts</li>
+<li>Larry Garfield, Functional Programming Enthusiast</li>
+<li>Jonathan Bossenger, Developer Advocate at Automattic</li>
+<li>Nils Adermann, Co-Founder of Packagist</li>
+<li>Ashley Hindle, Founder and CEO of Fuel</li>
+</ul>
+
+<p>The conversations and deep dives are hosted by <a href="https://x.com/enunomaduro">Nuno Maduro</a>, creator of Pest, Larastan, and Laravel Pint, and <a href="https://x.com/brendt_gd">Brent Roose</a>, Developer Advocate for PHP at <a href="https://www.jetbrains.com/?utm_source=thephp.foundation&amp;utm_medium=referral&amp;utm_campaign=phpverse2026">JetBrains</a>.</p>
+
+<h3 id="join-the-conversation">Join the conversation</h3>
+
+<p>For The PHP Foundation, JetBrains PHPverse is not just a talking stage, but a chance to engage in a conversation with thousands of engineers who use PHP every day.</p>
+
+<p>We invite every member of the PHP community to join us for this day of learning and connection. Whether you’re interested in the latest RFCs, projects supported by the Foundation, or what’s next for tools you are using, there is something at PHPverse for everyone.</p>
+
+<p><a href="https://lp.jetbrains.com/phpverse-2026/?utm_source=thephp.foundation&utm_medium=referral&utm_campaign=phpverse2026#register-for-phpverse-2026" class="button-link">Register for JetBrains PHPverse 2026</a></p>
+
+<p>We also encourage you to join the <a href="https://discord.gg/uEUkSNhdd8">official Discord server</a> to ask questions and engage with the speakers and fellow developers.</p>
+
+<p>Looking forward to seeing you on June 9!</p>
+]]></content><link href="https://thephp.foundation/blog/2026/05/28/phpverse-keynote/"/><id>https://thephp.foundation/blog/2026/05/28/phpverse-keynote/</id><updated>Thu, 28 May 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[The PHP Ambassador Program is Open]]></title><content type="html"><![CDATA[<p>We are excited to announce that we have scheduled the first meeting for the PHP Ambassador Program! This is the second  Special Interest Group launched by The PHP Foundation, and we are inviting you to be a part of it.</p>
+
+<p>As mentioned in our <a href="https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/#2.-php-ambassador-program">2026 Strategy document</a>, this group will be focused on improving the perception of PHP outside the PHP bubble. It will center on external advocacy and empowering the community to help tell the story of modern PHP in whatever capacity makes sense for them. Whether it be at a local open source group, inside a company, or at an open source conference, we want to provide PHP community members with the tools and resources they need to advocate on behalf of the PHP ecosystem.</p>
+
+<p>The first meeting is <strong>1 hour long</strong> and scheduled for <strong>Tuesday, June 30, 2026 at 10:30 am EDT / 2:30 pm UTC</strong>. This will be a kick-off session where we collaborate on the goals and objectives of the group and schedule a date/time for future meetings. If you would like to participate but you are unable to attend, that’s okay! (We know time zones are hard.) We will share post-meeting notes in a public repository within The PHP Foundation GitHub organization, along with ways in which you can contribute asynchronously.</p>
+
+<p>If you would like to attend our kick-off meeting, you can <a href="https://forms.gle/amMY3Anvh83jUE4Q6">fill out this form</a> to register your interest. From there, we will send you meeting details. If you have already filled this out, you do not need to fill it out again. We will be contacting you shortly.</p>
+
+<p>Please join us if you would like to help improve the perception of PHP!</p>
+]]></content><link href="https://thephp.foundation/blog/2026/06/19/the-php-ambassador-program-is-open/"/><id>https://thephp.foundation/blog/2026/06/19/the-php-ambassador-program-is-open/</id><updated>Fri, 19 Jun 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Announcing Plans for a PHP Ecosystem Survey and Report]]></title><content type="html"><![CDATA[<p>This year, The PHP Foundation, in collaboration with PhpStorm, a JetBrains IDE, will release an official ecosystem report with data-driven insights into the current state and the future of PHP development. The report will be based on data collected from a PHP developer survey, where we’ll ask developers about their experience with the language and ecosystem.</p>
+
+<p>Our goal is to capture perspectives from across the PHP community – we want as many voices as possible to be included. To make that happen, we’re starting by collecting suggestions for survey questions.</p>
+
+<p>This week, you can submit your proposed questions and upvote others through a <a href="https://app.sli.do/event/3NShya1PmdgByuuufXoqpF">dedicated form</a>. We’ll review all submissions and select the most interesting ones to include in the survey, which will launch in June. If you have an idea for a question, you can <a href="https://app.sli.do/event/3NShya1PmdgByuuufXoqpF">submit your question here.</a></p>
+
+<p>The submissions are open until <strong>April 28, 2026</strong>. We look forward to hearing from you!</p>
+]]></content><link href="https://thephp.foundation/blog/2026/04/22/announcing-plans-for-a-php-ecosystem-survey/"/><id>https://thephp.foundation/blog/2026/04/22/announcing-plans-for-a-php-ecosystem-survey/</id><updated>Wed, 22 Apr 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Help Shape the Future of PHP: Take the State of PHP Survey]]></title><content type="html"><![CDATA[<p>PHP is powered by a global community of developers, maintainers, contributors, companies, and users. To better understand that community and the ecosystem around it, The PHP Foundation and <a href="https://www.jetbrains.com/phpstorm/">PhpStorm</a>, a JetBrains IDE, are launching the first annual <a href="https://surveys.jetbrains.com/s3/phpf-b-state-of-php-2026">State of PHP survey</a>.</p>
+
+<p>This survey is an effort to build a clearer picture of how PHP is used today: who is using it, which tools and frameworks developers rely on, what challenges they face, how they feel about the language, and where they see PHP going next.</p>
+
+<p>We invite everyone who works with PHP to <a href="https://surveys.jetbrains.com/s3/phpf-b-state-of-php-2026">participate</a>.</p>
+
+<p><img src="/assets/post-images/2026/state-of-php-survey/banner.png" width="1052" alt="illustrated PHP elephant with a safari hat and the words join our expedition." class="mb-4 sm:mr-4"/></p>
+
+<h3 id="why-we%27re-launching-the-state-of-php-survey">Why we're launching the State of PHP survey</h3>
+
+<p>PHP has been around for more than 30 years, and it continues to evolve alongside the people and organizations that depend on it. The ecosystem is broad: developers use PHP across many countries, industries, experience levels, frameworks, deployment environments, and workflows. To support PHP effectively, we need better insight into that ecosystem.
+The goal is to gather representative input from PHP developers of all backgrounds. Whether you have been writing PHP for decades or only recently started, your perspective is invaluable.</p>
+
+<h3 id="what-happens-with-the-results">What happens with the results</h3>
+
+<p>The aggregated results will be published in the State of PHP 2026 report later this year, which will be announced in <a href="https://x.com/ThePHPF">The PHP Foundation</a> and <a href="https://x.com/phpstorm">PhpStorm’s</a> social media channels and newsletters.</p>
+
+<p>The report will help the community better understand current PHP usage and trends. It will also provide useful insight for contributors, maintainers, tool authors, educators, companies, and everyone working to strengthen PHP and its ecosystem.</p>
+
+<h3 id="take-the-survey">Take the survey</h3>
+
+<p>We encourage all PHP developers to take part and to share the survey with colleagues and local PHP communities.</p>
+
+<p><a href="https://surveys.jetbrains.com/s3/phpf-b-state-of-php-2026" class="button-link">Take the Survey</a></p>
+
+<p>The more developers participate, the more useful and representative the final report will be.</p>
+
+<p>Thank you for helping us map the PHP ecosystem and for being part of the first State of PHP survey.</p>
+
+<p>-- The PHP Foundation and PhpStorm teams</p>
+]]></content><link href="https://thephp.foundation/blog/2026/06/09/help-shape-the-future-of-php/"/><id>https://thephp.foundation/blog/2026/06/09/help-shape-the-future-of-php/</id><updated>Tue, 09 Jun 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Welcoming Matt Stauffer to The PHP Foundation Board]]></title><content type="html"><![CDATA[<p><img src="/assets/post-images/2026/matt-stauffer/matt-stauffer.jpg" width="300" alt="headshot of matt stauffer" class="mb-4 sm:mr-4 sm:float-left"/> We are thrilled to announce that <a href="https://www.linkedin.com/in/mattstauffer/">Matt Stauffer</a> has agreed to join The PHP Foundation Board, where he will bring his decades of experience in the PHP ecosystem. Matt joins the Board as a community representative and was voted in by the existing Board members. Not only is Matt a Laravel expert, he has created / maintained dozens of PHP and JavaScript open source packages, he is a published author, and he hosts several successful industry podcasts. We are grateful for his insight, input, and leadership as we further our mission of sustaining a thriving PHP language and ecosystem.</p>
 
 <p>Please join us in welcoming Matt to the Foundation Board!</p>
-]]></content><link href="https://thephp.foundation/blog/2026/03/25/welcoming-matt-stauffer-to-the-php-foundation-board/"/><id>https://thephp.foundation/blog/2026/03/25/welcoming-matt-stauffer-to-the-php-foundation-board/</id><updated>Fri, 27 Mar 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[The PHP Foundation Impact and Transparency Report 2025]]></title><content type="html"><![CDATA[<h2 id="executive-summary">Executive Summary</h2>
+]]></content><link href="https://thephp.foundation/blog/2026/03/25/welcoming-matt-stauffer-to-the-php-foundation-board/"/><id>https://thephp.foundation/blog/2026/03/25/welcoming-matt-stauffer-to-the-php-foundation-board/</id><updated>Fri, 27 Mar 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Announcing the Ecosystem Security Team at The PHP Foundation]]></title><content type="html"><![CDATA[<p>The core <a href="https://thephp.foundation/#our-mission">mission</a> of the PHP Foundation is to ensure the long-term prosperity of the PHP language. Today, your, or your company's, financial contributions primarily fund developers working on the PHP language. In addition to sponsorships, the PHP Foundation uses grants to enable projects like last year's <a href="https://thephp.foundation/blog/2025/04/10/php-core-security-audit-results/">PHP Core Security Audit</a> funded by the <a href="https://www.sovereign.tech">Sovereign Tech Agency</a>.</p>
+
+<p>In March, the <a href="https://www.linuxfoundation.org/press/linux-foundation-announces-12.5-million-in-grant-funding-from-leading-organizations-to-advance-open-source-security">Linux Foundation announced a grant</a> with the goal of strengthening the security of the open source software ecosystem. This funding is managed by <a href="https://alpha-omega.dev">Alpha-Omega</a> and the Open Source Security Foundation <a href="https://openssf.org">(OpenSSF)</a>.</p>
+
+<p><strong>We're delighted to announce the PHP Foundation has been awarded a grant from <a href="https://alpha-omega.dev">Alpha-Omega</a> to help improve the security of the PHP open source ecosystem.</strong></p>
+
+<p>PHP is foundational to the modern web, and ensuring its security is essential for a significant portion of the web's functionality and integrity.</p>
+
+<p>New security tools making use of AI are accelerating the discovery of vulnerabilities in open source software. Initiatives like <a href="https://www.anthropic.com/glasswing">Project Glasswing</a> are attempting to prepare software for the increasing accessibility of such tooling to bad actors. A number of large PHP projects have already received and acted on credible audit reports and concrete issues found by these new tools.</p>
+
+<p>At the same time, many projects have been reporting a drastic increase in the volume of vulnerability reports they have to deal with, many bearing the hallmarks of lazy AI generation. These low-quality reports waste maintainers' time and overshadow legitimate issues.</p>
+
+<p>The PHP Foundation is creating a PHP Ecosystem Security Team to help our ecosystem maintainers with these new challenges. This new PHP Foundation team will help triage vulnerability reports and disclose them responsibly as necessary. It will work on tooling to discover, classify and remediate security vulnerabilities and share emerging techniques on using them effectively and help the PHP ecosystem adopt these tools. The team will respect maintainer bandwidth, provide high-quality reports, coordinate project access to new security tooling, support projects with only a few maintainers, and find solutions for projects with <a href="https://alpha-omega.dev/blog/weekend-at-bernies-which-of-your-dependencies-are-wearing-sunglasses/">no active maintainers at all</a>.</p>
+
+<p>We're excited our friends at the <a href="https://www.drupal.org/association">Drupal Association</a> were awarded a similar grant from Alpha-Omega to secure the Drupal ecosystem built on top of PHP. The PHP Foundation is looking forward to collaborating with the Drupal Security Team on shared approaches and we hope to be joined by more experts from individual PHP projects and subcommunities as we build out the new team.</p>
+
+<p>The PHP Foundation grant will fund a six-month full-time position titled "Ecosystem AI Security Engineer in Residence at the PHP Foundation" to lead this effort and to prepare a sustainability plan for the time after this initial phase. This person will act as a trusted intermediary between security researchers and maintainers in urgent, high-risk situations, and will collaborate with peers in similar roles across other language ecosystems. Additionally, grant funding will also be employed toward the team goals described above where they cannot be accomplished by the single paid lead position or with the help of PHP community volunteers.</p>
+
+<p>After many conversations with community leaders in the PHP ecosystem, known security experts and Foundation stakeholders, the PHP Foundation board voted unanimously to offer the position to <a href="https://phpc.social/@edorian">Volker Dusch (@edorian)</a>. We asked Volker to introduce himself.</p>
+
+<h2 id="meet-volker">Meet Volker</h2>
+
+<p><img src="/assets/post-images/2026/ecosystem-security/volker-dusch.png" width="300" alt="headshot of volker dusch" class="mb-4 sm:mr-4 sm:float-left"/>👋,</p>
+
+<p>Some of you may know me as one of the PHP 8.5 Release Managers, or might have met me at one of more than 100 PHP-related conferences I've visited or spoken at in the last 20 years.</p>
+
+<p>PHP has been the main programming language of my professional career, from helping maintain PHPUnit for a couple of years and more recently, working on various language RFCs.</p>
+
+<p>In the past, I've worked on a high-traffic social networking site, remote monitoring of solar plants and software for medical trials. Currently, I'm working on PHP performance and monitoring tooling at Tideways, which I'm grateful to for allowing me to take some time off to focus on this new challenge.</p>
+
+<h2 id="interested-in-hearing-from-me%3F-got-feedback%3F">Interested in hearing from me? Got feedback?</h2>
+
+<p>My goal is to be open and communicate early about how the Ecosystem Security Team is taking shape while making the most of the resources we have.</p>
+
+<p>Big projects and foundational libraries are on my radar for security analysis already, and I'm especially keen to hear from people who want to actively collaborate and have the bandwidth to do so.</p>
+
+<p>So if you want to put your project forward or have questions or comments for me, I'd love to hear from you!</p>
+
+<p>Get in touch via email: <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#x76;&#111;&#x6c;&#x6b;&#101;&#x72;&#64;&#x74;&#x68;&#101;&#x70;&#104;&#x70;&#x2e;&#102;&#x6f;&#117;&#x6e;&#x64;&#97;&#x74;&#105;&#x6f;&#x6e;">volker@thephp.foundation</a>.</p>
+
+<p>You can also find me on <a href="https://phpc.social/@edorian">Mastodon</a> and <a href="https://www.linkedin.com/in/volker-dusch/">LinkedIn</a>.</p>
+]]></content><link href="https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/"/><id>https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/</id><updated>Mon, 18 May 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[The PHP Foundation Impact and Transparency Report 2025]]></title><content type="html"><![CDATA[<h2 id="executive-summary">Executive Summary</h2>
 
 <p>PHP turned 30 in 2025. With The PHP Foundation's support, the PHP project marked the year by shipping PHP 8.5. The PHP Foundation also launched PIE 1.0, initiated a project to modernize PHP's stream layer, and authored roughly 42% of all commits to PHP's core. This work was supported by 536 sponsors and individual contributors, and it could not have happened without them.</p>
 
@@ -463,87 +582,28 @@
 <h2 id="outro">Outro</h2>
 
 <p>The work in this report is the runway for what's next. We head into 2026 with real momentum and a clear sense of what the community has asked of us.  None of the technical leadership, the security work, the new partnerships ahead, and the support for the PHP ecosystem happens without the people who fund us. <a href="https://thephp.foundation/sponsor/">With your help</a>, together we can keep PHP thriving in a changing open source world.</p>
-]]></content><link href="https://thephp.foundation/blog/2026/05/27/impact-and-transparency-report-2025/"/><id>https://thephp.foundation/blog/2026/05/27/impact-and-transparency-report-2025/</id><updated>Wed, 27 May 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Announcing the Ecosystem Security Team at The PHP Foundation]]></title><content type="html"><![CDATA[<p>The core <a href="https://thephp.foundation/#our-mission">mission</a> of the PHP Foundation is to ensure the long-term prosperity of the PHP language. Today, your, or your company's, financial contributions primarily fund developers working on the PHP language. In addition to sponsorships, the PHP Foundation uses grants to enable projects like last year's <a href="https://thephp.foundation/blog/2025/04/10/php-core-security-audit-results/">PHP Core Security Audit</a> funded by the <a href="https://www.sovereign.tech">Sovereign Tech Agency</a>.</p>
+]]></content><link href="https://thephp.foundation/blog/2026/05/27/impact-and-transparency-report-2025/"/><id>https://thephp.foundation/blog/2026/05/27/impact-and-transparency-report-2025/</id><updated>Wed, 27 May 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Working Together on the Future of PHP]]></title><content type="html"><![CDATA[<p>I’m incredibly excited to be joining the PHP Foundation as the Executive Director and continuing the work that has been done under the leadership of Roman Pronskiy and the Board. For those who don’t know me, I look forward to meeting you!</p>
 
-<p>In March, the <a href="https://www.linuxfoundation.org/press/linux-foundation-announces-12.5-million-in-grant-funding-from-leading-organizations-to-advance-open-source-security">Linux Foundation announced a grant</a> with the goal of strengthening the security of the open source software ecosystem. This funding is managed by <a href="https://alpha-omega.dev">Alpha-Omega</a> and the Open Source Security Foundation <a href="https://openssf.org">(OpenSSF)</a>.</p>
+<h2 id="a-little-about-me">A little about me</h2>
 
-<p><strong>We're delighted to announce the PHP Foundation has been awarded a grant from <a href="https://alpha-omega.dev">Alpha-Omega</a> to help improve the security of the PHP open source ecosystem.</strong></p>
+<p>PHP was my introduction to open source, when PHP 3 was the latest release. It was mind blowing to see an amazing group of smart, funny people collaborate with each other, help newbies, and build impactful things together while still having fun. People who lived thousands of miles away from each other and who had never met each other. People who had completely different backgrounds and daily lives. People who spoke different languages and lived in different time zones. They all managed to find a way to come together as a community. They wrote code, they organized events, they started local user groups, they built projects together, and they helped each other learn. Forgive my sentimentality, but it was (and still is) magical.</p>
 
-<p>PHP is foundational to the modern web, and ensuring its security is essential for a significant portion of the web's functionality and integrity.</p>
+<p>It was this sense of community that fascinated me most, and I found myself moving from PHP development to open source community management. Since officially making that switch in 2010, I’ve worked for companies like GitHub, Sourceforge, and Pivotal, striving to make open source healthier, more inclusive, and better for everyone. I wanted anyone with an interest to be able to join the open source party, bring their unique set of skills, and experience the magic firsthand.</p>
 
-<p>New security tools making use of AI are accelerating the discovery of vulnerabilities in open source software. Initiatives like <a href="https://www.anthropic.com/glasswing">Project Glasswing</a> are attempting to prepare software for the increasing accessibility of such tooling to bad actors. A number of large PHP projects have already received and acted on credible audit reports and concrete issues found by these new tools.</p>
+<p>For the last 6 years, I have worked as the Community Manager for an open source project called <a href="https://chaoss.community">CHAOSS</a> which focuses on open source community health and sustainability. It has been an unforgettable experience, I’m very proud of what we all accomplished together, and I love that community very much. But as I find my career pivoting back toward PHP, it honestly feels like coming home again.</p>
 
-<p>At the same time, many projects have been reporting a drastic increase in the volume of vulnerability reports they have to deal with, many bearing the hallmarks of lazy AI generation. These low-quality reports waste maintainers' time and overshadow legitimate issues.</p>
+<h2 id="looking-to-the-future">Looking to the future</h2>
 
-<p>The PHP Foundation is creating a PHP Ecosystem Security Team to help our ecosystem maintainers with these new challenges. This new PHP Foundation team will help triage vulnerability reports and disclose them responsibly as necessary. It will work on tooling to discover, classify and remediate security vulnerabilities and share emerging techniques on using them effectively and help the PHP ecosystem adopt these tools. The team will respect maintainer bandwidth, provide high-quality reports, coordinate project access to new security tooling, support projects with only a few maintainers, and find solutions for projects with <a href="https://alpha-omega.dev/blog/weekend-at-bernies-which-of-your-dependencies-are-wearing-sunglasses/">no active maintainers at all</a>.</p>
+<p>The progress that has been made by the Foundation in the last few years is remarkable! Moving forward, you can expect to see the same kind of commitment to improving the PHP language and to keeping PHP relevant and sustainable.</p>
 
-<p>We're excited our friends at the <a href="https://www.drupal.org/association">Drupal Association</a> were awarded a similar grant from Alpha-Omega to secure the Drupal ecosystem built on top of PHP. The PHP Foundation is looking forward to collaborating with the Drupal Security Team on shared approaches and we hope to be joined by more experts from individual PHP projects and subcommunities as we build out the new team.</p>
+<p>In addition, we aim to increase the Foundation’s transparency and openness, and to strengthen our collaborative relationships with users, sponsors, contributors, organizations, and the PHP community at large. A solid and thriving PHP ecosystem belongs to and benefits us all, but none of us can make that happen alone.</p>
 
-<p>The PHP Foundation grant will fund a six-month full-time position titled "Ecosystem AI Security Engineer in Residence at the PHP Foundation" to lead this effort and to prepare a sustainability plan for the time after this initial phase. This person will act as a trusted intermediary between security researchers and maintainers in urgent, high-risk situations, and will collaborate with peers in similar roles across other language ecosystems. Additionally, grant funding will also be employed toward the team goals described above where they cannot be accomplished by the single paid lead position or with the help of PHP community volunteers.</p>
+<h2 id="let%E2%80%99s-chat%21">Let’s chat!</h2>
 
-<p>After many conversations with community leaders in the PHP ecosystem, known security experts and Foundation stakeholders, the PHP Foundation board voted unanimously to offer the position to <a href="https://phpc.social/@edorian">Volker Dusch (@edorian)</a>. We asked Volker to introduce himself.</p>
+<p>Because we’re all in this together, I want to spend the next 1-2 months really listening to what you have to say. I have an <a href="https://calendar.app.google/UkqNQzuzYBbEYjLYA">open calendar</a> and I encourage you to reserve some time with me. I want to hear from PHP developers, contributors, companies using PHP, independent consultants, sponsors, community members, and anyone else interested in the future of PHP. I want to hear about your goals, your motivations, your pain points, and yes, even your wacky and unorthodox ideas. And if meetings aren’t your thing, that’s completely understandable. You can also send me an <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#101;&#x6c;&#105;&#122;&#x61;b&#101;&#x74;&#x68;&#64;&#x74;&#x68;&#101;&#112;&#x68;&#112;&#46;&#x66;o&#117;&#x6e;&#x64;&#97;&#x74;&#x69;&#111;&#110;">email</a>. (I’ll even check my inbox!)</p>
 
-<h2 id="meet-volker">Meet Volker</h2>
-
-<p><img src="/assets/post-images/2026/ecosystem-security/volker-dusch.png" width="300" alt="headshot of volker dusch" class="mb-4 sm:mr-4 sm:float-left"/>👋,</p>
-
-<p>Some of you may know me as one of the PHP 8.5 Release Managers, or might have met me at one of more than 100 PHP-related conferences I've visited or spoken at in the last 20 years.</p>
-
-<p>PHP has been the main programming language of my professional career, from helping maintain PHPUnit for a couple of years and more recently, working on various language RFCs.</p>
-
-<p>In the past, I've worked on a high-traffic social networking site, remote monitoring of solar plants and software for medical trials. Currently, I'm working on PHP performance and monitoring tooling at Tideways, which I'm grateful to for allowing me to take some time off to focus on this new challenge.</p>
-
-<h2 id="interested-in-hearing-from-me%3F-got-feedback%3F">Interested in hearing from me? Got feedback?</h2>
-
-<p>My goal is to be open and communicate early about how the Ecosystem Security Team is taking shape while making the most of the resources we have.</p>
-
-<p>Big projects and foundational libraries are on my radar for security analysis already, and I'm especially keen to hear from people who want to actively collaborate and have the bandwidth to do so.</p>
-
-<p>So if you want to put your project forward or have questions or comments for me, I'd love to hear from you!</p>
-
-<p>Get in touch via email: <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#x76;&#111;&#x6c;&#x6b;&#101;&#x72;&#64;&#x74;&#x68;&#101;&#x70;&#104;&#x70;&#x2e;&#102;&#x6f;&#117;&#x6e;&#x64;&#97;&#x74;&#105;&#x6f;&#x6e;">volker@thephp.foundation</a>.</p>
-
-<p>You can also find me on <a href="https://phpc.social/@edorian">Mastodon</a> and <a href="https://www.linkedin.com/in/volker-dusch/">LinkedIn</a>.</p>
-]]></content><link href="https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/"/><id>https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/</id><updated>Mon, 18 May 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[The PHP Foundation’s Elizabeth Barron to keynote JetBrains PHPverse 2026]]></title><content type="html"><![CDATA[<p>PHP has undergone a remarkable transformation in recent years, and The PHP Foundation has played a major role in contributing to the development and maintenance of the language. The upcoming <a href="https://blog.jetbrains.com/phpstorm/2026/04/join-us-for-phpverse-2026-on-june-9/?utm_source=thephp.foundation&amp;utm_medium=referral&amp;utm_campaign=phpverse2026">JetBrains PHPverse conference</a> is a great opportunity to reflect on what has been done to reinforce PHP's position as a robust, modern language for web development.</p>
-
-<p>Elizabeth Barron, <a href="https://thephp.foundation/blog/2026/02/27/welcoming-elizabeth-barron-new-executive-director/">The PHP Foundation’s Executive Director</a>, is joining the lineup of JetBrains PHPverse 2026 speakers with a keynote talk “Getting to Know The PHP Foundation”. <a href="https://lp.jetbrains.com/phpverse-2026/?utm_source=thephp.foundation&amp;utm_medium=referral&amp;utm_campaign=phpverse2026">Tune in</a> on <strong>June 9</strong> to learn what The PHP Foundation actually does, which initiatives are planned for the rest of 2026, and how the community can help support the PHP ecosystem.</p>
-
-<h3 id="about-jetbrains-phpverse">About JetBrains PHPverse</h3>
-
-<p><a href="https://lp.jetbrains.com/phpverse-2026/?utm_source=thephp.foundation&amp;utm_medium=referral&amp;utm_campaign=phpverse2026">JetBrains PHPverse</a> is a free online conference and community event bringing together the big and vibrant PHP herd. It was first held in 2025, reaching out to more than 55,000 developers worldwide.</p>
-
-<p>Besides The PHP Foundation’s keynote, expect a <a href="https://lp.jetbrains.com/phpverse-2026/?utm_source=thephp.foundation&amp;utm_medium=referral&amp;utm_campaign=phpverse2026#speakers">curated lineup</a> of talks from some of the most influential voices in the PHP ecosystem, covering the major PHP frameworks, tools, and shipping PHP code with AI:</p>
-
-<ul>
-<li>Fabien Potencier, Founder of Symfony</li>
-<li>Jeffrey Way, Founder of Laracasts</li>
-<li>Larry Garfield, Functional Programming Enthusiast</li>
-<li>Jonathan Bossenger, Developer Advocate at Automattic</li>
-<li>Nils Adermann, Co-Founder of Packagist</li>
-<li>Ashley Hindle, Founder and CEO of Fuel</li>
-</ul>
-
-<p>The conversations and deep dives are hosted by <a href="https://x.com/enunomaduro">Nuno Maduro</a>, creator of Pest, Larastan, and Laravel Pint, and <a href="https://x.com/brendt_gd">Brent Roose</a>, Developer Advocate for PHP at <a href="https://www.jetbrains.com/?utm_source=thephp.foundation&amp;utm_medium=referral&amp;utm_campaign=phpverse2026">JetBrains</a>.</p>
-
-<h3 id="join-the-conversation">Join the conversation</h3>
-
-<p>For The PHP Foundation, JetBrains PHPverse is not just a talking stage, but a chance to engage in a conversation with thousands of engineers who use PHP every day.</p>
-
-<p>We invite every member of the PHP community to join us for this day of learning and connection. Whether you’re interested in the latest RFCs, projects supported by the Foundation, or what’s next for tools you are using, there is something at PHPverse for everyone.</p>
-
-<p><a href="https://lp.jetbrains.com/phpverse-2026/?utm_source=thephp.foundation&utm_medium=referral&utm_campaign=phpverse2026#register-for-phpverse-2026" class="button-link">Register for JetBrains PHPverse 2026</a></p>
-
-<p>We also encourage you to join the <a href="https://discord.gg/uEUkSNhdd8">official Discord server</a> to ask questions and engage with the speakers and fellow developers.</p>
-
-<p>Looking forward to seeing you on June 9!</p>
-]]></content><link href="https://thephp.foundation/blog/2026/05/28/phpverse-keynote/"/><id>https://thephp.foundation/blog/2026/05/28/phpverse-keynote/</id><updated>Thu, 28 May 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Announcing Plans for a PHP Ecosystem Survey and Report]]></title><content type="html"><![CDATA[<p>This year, The PHP Foundation, in collaboration with PhpStorm, a JetBrains IDE, will release an official ecosystem report with data-driven insights into the current state and the future of PHP development. The report will be based on data collected from a PHP developer survey, where we’ll ask developers about their experience with the language and ecosystem.</p>
-
-<p>Our goal is to capture perspectives from across the PHP community – we want as many voices as possible to be included. To make that happen, we’re starting by collecting suggestions for survey questions.</p>
-
-<p>This week, you can submit your proposed questions and upvote others through a <a href="https://app.sli.do/event/3NShya1PmdgByuuufXoqpF">dedicated form</a>. We’ll review all submissions and select the most interesting ones to include in the survey, which will launch in June. If you have an idea for a question, you can <a href="https://app.sli.do/event/3NShya1PmdgByuuufXoqpF">submit your question here.</a></p>
-
-<p>The submissions are open until <strong>April 28, 2026</strong>. We look forward to hearing from you!</p>
-]]></content><link href="https://thephp.foundation/blog/2026/04/22/announcing-plans-for-a-php-ecosystem-survey/"/><id>https://thephp.foundation/blog/2026/04/22/announcing-plans-for-a-php-ecosystem-survey/</id><updated>Wed, 22 Apr 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Integrating Community Feedback into Foundation Strategy Part 2]]></title><content type="html"><![CDATA[<p>In April 2026, during the first weeks of my tenure as Executive Director, I conducted a listening tour with around 60 people from 18 countries spanning every part of the PHP ecosystem (see <em><a href="https://thephp.foundation/blog/2026/04/16/integrating-community-feedback-into-foundation-strategy-part1/">Integrating Community Feedback into Foundation Strategy: Part 1</a></em>). Since then, I have continued to listen and connect with those of you in the community who have something to share. The themes that have surfaced are <a href="https://thephp.foundation/blog/2026/04/16/integrating-community-feedback-into-foundation-strategy-part1/">clear, consistent, and actionable</a>. This document outlines how the PHP Foundation will respond in 2026.</p>
+<p>PHP’s secret recipe has always been its community and I can’t wait to be collaborating with you all again!</p>
+]]></content><link href="https://thephp.foundation/blog/2026/03/05/working-together-on-the-future-of-php/"/><id>https://thephp.foundation/blog/2026/03/05/working-together-on-the-future-of-php/</id><updated>Fri, 06 Mar 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Integrating Community Feedback into Foundation Strategy Part 2]]></title><content type="html"><![CDATA[<p>In April 2026, during the first weeks of my tenure as Executive Director, I conducted a listening tour with around 60 people from 18 countries spanning every part of the PHP ecosystem (see <em><a href="https://thephp.foundation/blog/2026/04/16/integrating-community-feedback-into-foundation-strategy-part1/">Integrating Community Feedback into Foundation Strategy: Part 1</a></em>). Since then, I have continued to listen and connect with those of you in the community who have something to share. The themes that have surfaced are <a href="https://thephp.foundation/blog/2026/04/16/integrating-community-feedback-into-foundation-strategy-part1/">clear, consistent, and actionable</a>. This document outlines how the PHP Foundation will respond in 2026.</p>
 
 <p>In short, the community loves PHP and believes in the Foundation's role, but is asking us to be clearer, more visible, and more coordinated in addressing existing and future challenges. The 2026 strategy answers those concerns through four themes:</p>
 
@@ -914,58 +974,7 @@
 </ul>
 
 <p>Whether you're an individual developer, a company that runs PHP, a community organizer, or other type of PHP community member, we would love to include you on this journey. PHP thrives when we all take part!</p>
-]]></content><link href="https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/"/><id>https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/</id><updated>Thu, 11 Jun 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Working Together on the Future of PHP]]></title><content type="html"><![CDATA[<p>I’m incredibly excited to be joining the PHP Foundation as the Executive Director and continuing the work that has been done under the leadership of Roman Pronskiy and the Board. For those who don’t know me, I look forward to meeting you!</p>
-
-<h2 id="a-little-about-me">A little about me</h2>
-
-<p>PHP was my introduction to open source, when PHP 3 was the latest release. It was mind blowing to see an amazing group of smart, funny people collaborate with each other, help newbies, and build impactful things together while still having fun. People who lived thousands of miles away from each other and who had never met each other. People who had completely different backgrounds and daily lives. People who spoke different languages and lived in different time zones. They all managed to find a way to come together as a community. They wrote code, they organized events, they started local user groups, they built projects together, and they helped each other learn. Forgive my sentimentality, but it was (and still is) magical.</p>
-
-<p>It was this sense of community that fascinated me most, and I found myself moving from PHP development to open source community management. Since officially making that switch in 2010, I’ve worked for companies like GitHub, Sourceforge, and Pivotal, striving to make open source healthier, more inclusive, and better for everyone. I wanted anyone with an interest to be able to join the open source party, bring their unique set of skills, and experience the magic firsthand.</p>
-
-<p>For the last 6 years, I have worked as the Community Manager for an open source project called <a href="https://chaoss.community">CHAOSS</a> which focuses on open source community health and sustainability. It has been an unforgettable experience, I’m very proud of what we all accomplished together, and I love that community very much. But as I find my career pivoting back toward PHP, it honestly feels like coming home again.</p>
-
-<h2 id="looking-to-the-future">Looking to the future</h2>
-
-<p>The progress that has been made by the Foundation in the last few years is remarkable! Moving forward, you can expect to see the same kind of commitment to improving the PHP language and to keeping PHP relevant and sustainable.</p>
-
-<p>In addition, we aim to increase the Foundation’s transparency and openness, and to strengthen our collaborative relationships with users, sponsors, contributors, organizations, and the PHP community at large. A solid and thriving PHP ecosystem belongs to and benefits us all, but none of us can make that happen alone.</p>
-
-<h2 id="let%E2%80%99s-chat%21">Let’s chat!</h2>
-
-<p>Because we’re all in this together, I want to spend the next 1-2 months really listening to what you have to say. I have an <a href="https://calendar.app.google/UkqNQzuzYBbEYjLYA">open calendar</a> and I encourage you to reserve some time with me. I want to hear from PHP developers, contributors, companies using PHP, independent consultants, sponsors, community members, and anyone else interested in the future of PHP. I want to hear about your goals, your motivations, your pain points, and yes, even your wacky and unorthodox ideas. And if meetings aren’t your thing, that’s completely understandable. You can also send me an <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#101;&#x6c;&#105;&#122;&#x61;b&#101;&#x74;&#x68;&#64;&#x74;&#x68;&#101;&#112;&#x68;&#112;&#46;&#x66;o&#117;&#x6e;&#x64;&#97;&#x74;&#x69;&#111;&#110;">email</a>. (I’ll even check my inbox!)</p>
-
-<p>PHP’s secret recipe has always been its community and I can’t wait to be collaborating with you all again!</p>
-]]></content><link href="https://thephp.foundation/blog/2026/03/05/working-together-on-the-future-of-php/"/><id>https://thephp.foundation/blog/2026/03/05/working-together-on-the-future-of-php/</id><updated>Fri, 06 Mar 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Help Shape the Future of PHP: Take the State of PHP Survey]]></title><content type="html"><![CDATA[<p>PHP is powered by a global community of developers, maintainers, contributors, companies, and users. To better understand that community and the ecosystem around it, The PHP Foundation and <a href="https://www.jetbrains.com/phpstorm/">PhpStorm</a>, a JetBrains IDE, are launching the first annual <a href="https://surveys.jetbrains.com/s3/phpf-b-state-of-php-2026">State of PHP survey</a>.</p>
-
-<p>This survey is an effort to build a clearer picture of how PHP is used today: who is using it, which tools and frameworks developers rely on, what challenges they face, how they feel about the language, and where they see PHP going next.</p>
-
-<p>We invite everyone who works with PHP to <a href="https://surveys.jetbrains.com/s3/phpf-b-state-of-php-2026">participate</a>.</p>
-
-<p><img src="/assets/post-images/2026/state-of-php-survey/banner.png" width="1052" alt="illustrated PHP elephant with a safari hat and the words join our expedition." class="mb-4 sm:mr-4"/></p>
-
-<h3 id="why-we%27re-launching-the-state-of-php-survey">Why we're launching the State of PHP survey</h3>
-
-<p>PHP has been around for more than 30 years, and it continues to evolve alongside the people and organizations that depend on it. The ecosystem is broad: developers use PHP across many countries, industries, experience levels, frameworks, deployment environments, and workflows. To support PHP effectively, we need better insight into that ecosystem.
-The goal is to gather representative input from PHP developers of all backgrounds. Whether you have been writing PHP for decades or only recently started, your perspective is invaluable.</p>
-
-<h3 id="what-happens-with-the-results">What happens with the results</h3>
-
-<p>The aggregated results will be published in the State of PHP 2026 report later this year, which will be announced in <a href="https://x.com/ThePHPF">The PHP Foundation</a> and <a href="https://x.com/phpstorm">PhpStorm’s</a> social media channels and newsletters.</p>
-
-<p>The report will help the community better understand current PHP usage and trends. It will also provide useful insight for contributors, maintainers, tool authors, educators, companies, and everyone working to strengthen PHP and its ecosystem.</p>
-
-<h3 id="take-the-survey">Take the survey</h3>
-
-<p>We encourage all PHP developers to take part and to share the survey with colleagues and local PHP communities.</p>
-
-<p><a href="https://surveys.jetbrains.com/s3/phpf-b-state-of-php-2026" class="button-link">Take the Survey</a></p>
-
-<p>The more developers participate, the more useful and representative the final report will be.</p>
-
-<p>Thank you for helping us map the PHP ecosystem and for being part of the first State of PHP survey.</p>
-
-<p>-- The PHP Foundation and PhpStorm teams</p>
-]]></content><link href="https://thephp.foundation/blog/2026/06/09/help-shape-the-future-of-php/"/><id>https://thephp.foundation/blog/2026/06/09/help-shape-the-future-of-php/</id><updated>Tue, 09 Jun 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Integrating Community Feedback into Foundation Strategy Part 1]]></title><content type="html"><![CDATA[<h2 id="integrating-community-input-into-foundation-strategy">Integrating Community Input Into Foundation Strategy</h2>
+]]></content><link href="https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/"/><id>https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/</id><updated>Thu, 11 Jun 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Integrating Community Feedback into Foundation Strategy Part 1]]></title><content type="html"><![CDATA[<h2 id="integrating-community-input-into-foundation-strategy">Integrating Community Input Into Foundation Strategy</h2>
 
 <h3 id="part-1%3A-feedback-from-the-community">Part 1: Feedback from the Community</h3>
 
