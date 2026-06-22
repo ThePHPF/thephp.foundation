@@ -43,7 +43,7 @@ When scanning many projects, one challenge is to scale that effort, get reproduc
 
 To pool our efforts, we are working with the Security Engineers from other languages and the Team at Alpha-Omega on shared tooling that allows for that.
 
-The tool in question is [https://github.com/alpha-omega-security/scrutineer](https://github.com/alpha-omega-security/scrutineer) and here I want to give a special shoutout to [Alexandre Daubois](https://github.com/alexandre-daubois) from [les-tilleuls.coop](https://les-tilleuls.coop) as the work he is doing there is proving very valuable.
+The tool in question is [https://github.com/alpha-omega-security/scrutineer](https://github.com/alpha-omega-security/scrutineer) and here I want to give a special shoutout to [Alexandre Daubois](https://github.com/alexandre-daubois) from [Les-Tilleuls.coop](https://les-tilleuls.coop) as the work he is doing there is proving very valuable.
 
 Not only does this enable us to have more structured results and an easier reporting process, it also helps to get scanning work by people with access to different, otherwise unavailable, models or more resource capacity. Using Scrutineer this way we can tailor the used containers towards the PHP ecosystem to improve the quality of the results by allowing the tooling to create and validate reproducers easily. Without these feedback loops, the report quality would be drastically lower and require more clean-up work.
 
