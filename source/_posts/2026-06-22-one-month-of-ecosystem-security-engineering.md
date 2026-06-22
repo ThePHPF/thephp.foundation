@@ -11,86 +11,90 @@ author:
 published_at: 22 June 2026
 ---
 
-Last month I shared with you that, thanks to the PHP Foundation, we were able to secure a [grant by Alpha-Omega through the Linux Foundation](https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/) that allows us to help improve the security of the PHP open source ecosystem. Today I want to update you on the progress so far.
+Last month I shared with you that the PHP Foundation secured a [grant by Alpha-Omega through the Linux Foundation](https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/)  to help improve the security of the PHP open source ecosystem, and that the PHP Foundation is forming a new Ecosystem Security Team. Today I want to update you on the progress so far.
 
-After getting set up with the role, I quickly jumped into three main topics: assess people's most pressing needs, assemble a team of volunteers for help and start using the tools and resources we’ve been given to scan projects. From there it was figuring out collaborative toolchains, access, budgets, reporting, and effective ways to distribute findings and support maintainers.
+After a brief set up period, I quickly jumped into three main activities:
 
-From talking to 35 project maintainers about our project scanning efforts and the security concerns they have, we shared hundreds of potential findings, leading to nearly a hundred fixes across the ecosystem already, and many great and useful conversations.
+- Assessing PHP community members' most pressing needs;
+- assembling a team of volunteers to help;
+- and applying the resources granted on tools to scan PHP ecosystem projects.
 
-What I didn’t include in these numbers are mass fixes of the same finding across many repos. For example, in one case, we had around 200 repos apply the same fix to their GitHub Actions as they are managed via a central template. I didn’t want to inflate the numbers so these instances are counted as “one” fix.
+I worked on setting up collaborative toolchains, managing access (unclear to me what this refers to?), budgets (what did you do with which budgets?), defining and then tracking metrics for reporting, and identifying effective ways to distribute security vulnerability findings and supporting maintainers.
 
-In total, we scanned and rescanned over 300 of the most downloaded Composer packages and nearly all big frameworks, got in touch with maintainers or found people to jump in and help address findings where that was needed.
+Starting with talking to 35 project maintainers about our project scanning efforts and the security concerns they have, we eventually shared hundreds of potential security vulnerability findings, leading to nearly a hundred publicly available fixes across the ecosystem already, and many great and useful conversations.
 
-I want to extend a personal thanks to [Graham Campbell](https://github.com/grahamcampbell), who has been very helpful in getting me started with ideas and initial issue validation in the first couple of days of my new role and who’s continued to be responsive and helpful with solving issues in other projects.  
+Additionally there were mass fixes of the same finding across many repositories. For example, in one case, we had around 200 repositories apply the same fix to their GitHub Actions as they are managed via a central template. I didn’t want to inflate the numbers so these instances are counted as a single fix.
+
+In total, we scanned and rescanned over 300 of the most downloaded Composer packages and nearly all big frameworks. We got in touch with the respective maintainers or found people to jump in and help address security vulnerabilities where that was needed.
+
+I want to extend a personal thank you to [Graham Campbell](https://github.com/grahamcampbell), who has been very helpful in getting me started with ideas and initial issue validation in the first couple of days of my new role and who has continued to be responsive and helpful with solving issues in other projects.  
 
 
 ## Current efforts
 
-To best make use of the resources we’ve been given, project scanning continues at a steady pace. Using our access to AI models and extended “Cyber” capabilities we’ve been given to not only find, but also help triage and reproduce issues, help with impact analysis and, where needed, fixes.
+Project scanning for security vulnerabilities continues at a steady pace to make the most use of the resources we’ve been provided. We do not only search for vulnerabilities, but also help triage, reproduce issues, help with impact analysis, and where necessary supply fixes, using our access to AI models and their extended “Cyber” capabilities.
 
-I will continue to talk to everyone who approaches me while working to ensure there is a steady flow of public-facing communication about our efforts.
+I will continue to talk to everyone who approaches me while providing a steady flow of public-facing communication about our efforts.
 
-All maintainers that approached me so far were kind enough to offer to validate the tooling's findings themselves; meaning I could focus on generating reproducers and letting the experts figure out if something is a security issue, a bugfix, or an invalid report, with the maintainers doing their own reporting and disclosure on their terms and in a way that fits their timeline.
+All maintainers who approached me so far were kind enough to offer to validate the generated findings themselves. I was able to focus primarily on generating reproducers and letting the experts figure out whether a particular finding represents a security issue, a bugfix, or an invalid report. The maintainers in these cases, were handling their own reporting and disclosure on their own terms and in a way that fits their timeline.
 
-I’m personally delighted by the great community response, both quantitatively and qualitatively, nearly everyone has been supportive and with only one negative maintainer interaction and one person we’re still looking to get in touch with, I couldn’t be happier with the maturity, readiness and friendliness of the wider community. I didn’t expect anything else from PHP, but it’s great to be proven right. 
+I’m personally delighted by the great community response, both quantitatively and qualitatively: Nearly everyone has been supportive and I encountered only one negative maintainer interaction and one person we are still looking to get in touch with. I couldn’t be happier with the maturity, readiness and friendliness of the wider community. I didn’t expect anything else from PHP, but it’s great to be proven right. 
 
-I want to highlight three areas of work going forward: automated scanning, custom efforts and the volunteers that gathered around this effort so far.
+I want to highlight three areas of work going forward: automated scanning, more bespoke analysis and the volunteers that gathered around this effort so far (this last one isn't an area of work, not sure what this means?).
 
 
 ### Shared tooling: Scrutineer
 
-When scanning many projects, one challenge is to scale that effort, get reproducible and reliable outputs, avoid false positives, and use the resources we have effectively without duplicating work, all while allowing each person that does the scanning to run multiple agents in parallel without human interaction during the initial scanning process. This work should also be done in containerized environments that ensure the infrastructure we use for scanning is secure.
+When scanning many projects, you face challenges: Getting reproducible and reliable outputs, avoiding false positives, and using our resources effectively without duplicating work, all while allowing each person scanning to run multiple agents in parallel without human interaction during the initial scanning process. Security analysis needs to be performed in isolated containerized environments that keep the infrastructure we use for scanning secure.
 
-To pool our efforts, we are working with the Security Engineers from other languages and the Team at Alpha-Omega on shared tooling that allows for that.
+To pool our efforts, we are working with the Security Engineers from other languages and the Team at Alpha-Omega on shared tooling for this purpose. Specifically we're collaborating on [Scrutineer](https://github.com/alpha-omega-security/scrutineer). I want to give a special shout out to [Alexandre Daubois](https://github.com/alexandre-daubois) from [Les-Tilleuls.coop](https://les-tilleuls.coop) , his contributions to Scrutineer has been very valuable.
 
-The tool in question is [https://github.com/alpha-omega-security/scrutineer](https://github.com/alpha-omega-security/scrutineer) and here I want to give a special shoutout to [Alexandre Daubois](https://github.com/alexandre-daubois) from [Les-Tilleuls.coop](https://les-tilleuls.coop) as the work he is doing there is proving very valuable.
-
-Not only does this enable us to have more structured results and an easier reporting process, it also helps to get scanning work by people with access to different, otherwise unavailable, models or more resource capacity. Using Scrutineer this way we can tailor the used containers towards the PHP ecosystem to improve the quality of the results by allowing the tooling to create and validate reproducers easily. Without these feedback loops, the report quality would be drastically lower and require more clean-up work.
+Scrutineer enables more structured results and an easier reporting process. It also helps to let people with access to different, otherwise unavailable, AI models, or with access to more resource capacity, scan projects on our behalf. Using Scrutineer we can tailor the containers used for analysis towards the PHP ecosystem to improve the quality of scanning results through tooling to create and validate reproducers. The report quality would be drastically lower and require more clean-up work without effective automated feedback loops.
 
 
-### Custom work
+### Helping projects with individual approaches
 
-The other big goal we started out with is to be available for helping projects and maintainers with digesting reports, creating reproducers, deduplicating findings and suggesting and validating fixes.
+We help projects and maintainers digest reports, create reproducers, deduplicate security vulnerability findings and suggest and validate fixes.
 
-When getting started with the role, I was not sure how many projects would reach out regarding these problems. What I’m hearing these days is that the quality of reports they are getting has been going up significantly in the last couple of months, so I’ve not been getting many requests.  From talking to maintainers about the topic, many use their own coding agents to validate and reproduce these findings effectively, but sometimes, for more complex issues, the path from a potential vulnerability to an exploit can be something that currently available models don’t find or refuse to help with; in these cases, I could be of help.
+When I accepted my new role, I was unsure how many projects would reach out for help with these tasks. I've received feedback, that the quality of reports maintainers are receiving has gone up significantly in the last couple of months. So I’ve not received many requests to assist with processing reports and proposed fixes. Many maintainers report that they use their own coding agents to validate and reproduce received security vulnerability findings effectively. But for some more complex issues currently available AI models cannot help or refuse to help with working on an exploit for a potential vulnerability. In these cases, I can be of help.
 
-Additionally, sometimes, the automated scanning doesn’t produce clean results or the threat modeling or attack vectors are not clear enough, in these cases I spend time with each project to better understand what the models should be assessing and steer them in that direction.
+Sometimes, the automated scanning doesn’t produce clear results or the threat modeling or attack vectors are not clear enough. In these cases, I spend time with each project to better understand what the AI models should be assessing and steer them in that direction.
 
-A special mention here is the PHP project itself. Due to its popularity, it’s always been a place for many people to try their new security tooling out. With agentic security approaches, the nature as a programming language and the inherent complexity that comes with it make it so that the average quality is a lot lower, and that reports are harder to digest there than they are in userland libraries with a clearer threat model and surface.
+A special mention here is the PHP project itself: Many people like to try their new security tools on PHP, due to its popularity. The inherent complexity of a programming language runtime results in significantly lower quality results from agentic security approaches. The reports the PHP project receives are harder to digest than they are in userland PHP libraries with a clearer threat model and attack surface.
 
-I wasn’t able to do much for PHP itself yet due to time constraints, and will hopefully be working on that more in the coming months. The communication with the team is great and I’m eager to get properly started and see where I can be of help there.
+I was not yet able to help PHP itself much so far, due to time constraints. I intend to work on core PHP a lot more in the coming months. The communication with the PHP core developer team is great and I’m eager to get properly started and see where I can help them.
 
 
 ### Assembling a team
 
-We want this effort to be sustainable past the 6 months of the grant, and I was delighted to see that the Foundation is launching [Community Special Interest Groups](https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/#community-special-interest-groups). We started assembling a team around the security and maintainer support efforts.
+I was delighted to see that the PHP Foundation is launching [Community Special Interest Groups](https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/#community-special-interest-groups). One of them is the Ecosystem Security Team, which the PHP Foundation wishes to sustain far beyond the 6 months of the initial grant funding, s I've begun to assemble a team around these security and maintainer support efforts.
 
-If you want to reach out and talk with like-minded people about security, you can find a couple of us in the #ecosystem-security channel on the [phpc Discord](https://discord.com/invite/RYajXKxuuK), who were kind enough to have a channel for us and #the-php-foundation in general. I’m “@edorian” on there, if you want to say hi.
+If you want to reach out and talk with like-minded people about security, you can find a couple of us in the #ecosystem-security channel on the [phpc Discord](https://discord.com/invite/RYajXKxuuK). The PHP Community Foundation were kind enough to create a channel for us and #the-php-foundation in general. I’m “@edorian” on there, if you want to say hi.
 
 For sensitive topics, you can always [get in touch](https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/#:~:text=Get%20in%20touch%20via%20email%3A%20volker%40thephp.foundation.) with me directly.
 
-Next to Alexandre, who I already mentioned above, a name I’ve been coming across a lot when talking to maintainers was [Ilia Alshanetsky](https://github.com/iliaal). Ilia has been doing a lot of independent work and I asked him to join so we can better coordinate efforts.
+Next to Alexandre, who I already mentioned above, a name I’ve come across a lot when talking to maintainers was [Ilia Alshanetsky](https://github.com/iliaal). Ilia has been doing a lot of independent work and I asked him to join the Ecosystem Security Team so we can better coordinate our efforts.
 
 
 ### Challenges
 
-The first couple weeks of the new role have been a rather dynamic affair, from [uncertainties around model access](https://www.anthropic.com/news/fable-mythos-access) and scanning budget, to coordinating with the SEIRs (Security Engineers in Residence) from other languages and finding ways of collaboration and setting ourselves shared goals to the vastness of our own ecosystem and getting in touch with everyone to pausing my previous job to make time for this effort, the work has been interesting. I want to especially thank the folks at [Alpha-Omega](https://alpha-omega.dev/) and Elizabeth Barron, Nils Adermann and Benjamin Eberlei who have been a massive help in making this process easy and quick so I could jump directly into the work.  
+The first couple of weeks in my new role have been a rather dynamic affair: There were [uncertainties around model access](https://www.anthropic.com/news/fable-mythos-access) and scanning budget. I began to coordinate with the SEIRs (Security Engineers in Residence) of other languages to find ways to collaborate and to set ourselves shared goals. I learned of the vastness of the PHP ecosystem and had to get in touch with so many people. I had to pause my previous job to make time for this effort, but it has been nothing but interesting. I want to especially thank the folks at [Alpha-Omega](https://alpha-omega.dev/) and Elizabeth Barron, Nils Adermann and Benjamin Eberlei who have been a massive help in making this process easy and quick so I could jump directly into the work.  
 
 
 ## Looking ahead
 
-To summarize the goals I set myself for the next month:
+The goals I set myself for the next month are:
 
 * Scan another 250 projects and report all collected findings
 * Perform a dedicated, deeper analysis of core projects and libraries
 * Spend more time helping out with php-src and PHP Extensions issues
 
-I will continue to be available for help for any project maintainers that are reaching out.
+I will continue to be available for help for any project maintainers who reach out.
 
 
 ### Get in touch
 
-To repeat what was already mentioned above: we have capacity for scanning and helping more maintainers.
+To repeat what was already mentioned above: We have capacity to scan and help more maintainers.
 
 Discord: [#ecosystem-security](https://discord.com/channels/356354025865740288/1507370983013744681) on the #phpc community sever [(Invite)](https://discord.com/invite/RYajXKxuuK)
 
