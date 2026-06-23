@@ -8,7 +8,7 @@ tags:
 author:
   name: Volker Dusch
   url: https://de.linkedin.com/in/volker-dusch
-published_at: 22 June 2026
+published_at: 23 June 2026
 ---
 
 Last month I shared with you that the PHP Foundation secured a [grant by Alpha-Omega through the Linux Foundation](https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/) to help improve the security of the PHP open source ecosystem, and that it is forming a new Ecosystem Security Team. Today I want to update you on the progress so far.
