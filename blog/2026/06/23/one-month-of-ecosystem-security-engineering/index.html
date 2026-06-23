@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>The PHP Ambassador Program is Open &mdash; The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language</title>
-    <meta name="description" content="The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language">
+    <title>One Month of Ecosystem Security Engineering &mdash; The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language</title>
+    <meta name="description" content="A first-month update on the PHP Foundation&#039;s ecosystem security work">
     <meta charset="utf-8">
     <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,18 +19,18 @@
     <meta name="yandex-verification" content="6990192232fdf071" />
     <meta name="msvalidate.01" content="5D1EB82347E6BF271A01DCDBF7E59BED" />
 
-    <meta property="og:url" content="https://thephp.foundation/blog/2026/06/19/the-php-ambassador-program-is-open/">
+    <meta property="og:url" content="https://thephp.foundation/blog/2026/06/23/one-month-of-ecosystem-security-engineering/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="The PHP Ambassador Program is Open">
-    <meta property="og:description" content="The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language">
-    <meta property="og:image" content="https://thephp.foundation/assets/share/2026-06-19-the-php-ambassador-program-is-open.png">
+    <meta property="og:title" content="One Month of Ecosystem Security Engineering">
+    <meta property="og:description" content="A first-month update on the PHP Foundation&#039;s ecosystem security work">
+    <meta property="og:image" content="https://thephp.foundation/assets/share/2026-06-23-one-month-of-ecosystem-security-engineering.png">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="https://thephp.foundation">
-    <meta property="twitter:url" content="https://thephp.foundation/blog/2026/06/19/the-php-ambassador-program-is-open/">
-    <meta name="twitter:title" content="The PHP Ambassador Program is Open">
-    <meta name="twitter:description" content="The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language">
-    <meta name="twitter:image" content="https://thephp.foundation/assets/share/2026-06-19-the-php-ambassador-program-is-open.png">
+    <meta property="twitter:url" content="https://thephp.foundation/blog/2026/06/23/one-month-of-ecosystem-security-engineering/">
+    <meta name="twitter:title" content="One Month of Ecosystem Security Engineering">
+    <meta name="twitter:description" content="A first-month update on the PHP Foundation&#039;s ecosystem security work">
+    <meta name="twitter:image" content="https://thephp.foundation/assets/share/2026-06-23-one-month-of-ecosystem-security-engineering.png">
 
     <link rel="apple-touch-startup-image" href="https://thephp.foundation/assets/icons/php_foundation.svg">
     <meta name="mobile-web-app-capable" content="yes">
@@ -157,19 +157,19 @@
 
 <div class="bg-white px-6 lg:px-8 my-16" itemscope itemtype="https://schema.org/Article">
     <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
-        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" itemprop="name">The PHP Ambassador Program is Open</h1>
+        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" itemprop="name">One Month of Ecosystem Security Engineering</h1>
 
         <div class="flex flex-col md:flex-row md:items-center gap-x-4 text-xs mt-2">
                 <div>
-            Published on <span itemprop="datePublished">Jun 19, 2026</span>
-            by <span itemprop="publisher" itemscope itemtype="https://schema.org/Person"><a href="https://www.linkedin.com/in/elizabethn/" target="_blank" rel="noopener noreferrer" itemprop="url"><span itemprop="name">Elizabeth Barron</span></a></span>
+            Published on <span itemprop="datePublished">Jun 23, 2026</span>
+            by <span itemprop="publisher" itemscope itemtype="https://schema.org/Person"><a href="https://de.linkedin.com/in/volker-dusch" target="_blank" rel="noopener noreferrer" itemprop="url"><span itemprop="name">Volker Dusch</span></a></span>
         </div>
                     
         
                 <div class="flex gap-x-2 mt-2 md:mt-0">
-                        <a href="https://thephp.foundation/blog/tag/ambassadors"
+                        <a href="https://thephp.foundation/blog/tag/security"
                class="rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
-                Ambassadors
+                Security
             </a>
                         <a href="https://thephp.foundation/blog/tag/SIGs"
                class="rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
@@ -179,15 +179,85 @@
                 </div>
 
         <div class="mt-6 text-xl leading-8" itemprop="text">
-            <p>We are excited to announce that we have scheduled the first meeting for the PHP Ambassador Program! This is the second  Special Interest Group launched by The PHP Foundation, and we are inviting you to be a part of it.</p>
+            <p>Last month I shared with you that the PHP Foundation secured a <a href="https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/">grant by Alpha-Omega through the Linux Foundation</a> to help improve the security of the PHP open source ecosystem, and that it is forming a new Ecosystem Security Team. Today I want to update you on the progress so far.</p>
 
-<p>As mentioned in our <a href="https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/#2.-php-ambassador-program">2026 Strategy document</a>, this group will be focused on improving the perception of PHP outside the PHP bubble. It will center on external advocacy and empowering the community to help tell the story of modern PHP in whatever capacity makes sense for them. Whether it be at a local open source group, inside a company, or at an open source conference, we want to provide PHP community members with the tools and resources they need to advocate on behalf of the PHP ecosystem.</p>
+<p>After a brief set-up period, I jumped into three main activities:</p>
 
-<p>The first meeting is <strong>1 hour long</strong> and scheduled for <strong>Tuesday, June 30, 2026 at 10:30 am EDT / 2:30 pm UTC</strong>. This will be a kick-off session where we collaborate on the goals and objectives of the group and schedule a date/time for future meetings. If you would like to participate but you are unable to attend, that’s okay! (We know time zones are hard.) We will share post-meeting notes in a public repository within The PHP Foundation GitHub organization, along with ways in which you can contribute asynchronously.</p>
+<ul>
+<li>assessing PHP community members' most pressing needs</li>
+<li>assembling a team of volunteers to help</li>
+<li>applying the resources granted to scan PHP ecosystem projects</li>
+</ul>
 
-<p>If you would like to attend our kick-off meeting, you can <a href="https://forms.gle/amMY3Anvh83jUE4Q6">fill out this form</a> to register your interest. From there, we will send you meeting details. If you have already filled this out, you do not need to fill it out again. We will be contacting you shortly.</p>
+<p>Setup included getting started with building collaborative toolchains, ensuring access to scanning budgets and models, defining our metrics for reporting, and identifying effective ways to distribute security vulnerability findings and to support maintainers.</p>
 
-<p>Please join us if you would like to help improve the perception of PHP!</p>
+<p>So far we talked to 35 project maintainers about our project scanning efforts and the security concerns they have. We shared hundreds of potential security vulnerability findings, leading to nearly a hundred publicly available fixes across the ecosystem already, and many great and useful conversations.</p>
+
+<p>Additionally there were mass fixes of the same finding across many repositories. For example, in one case, we had around 200 repositories apply the same fix to their GitHub Actions as they are managed via a central template. I didn’t want to inflate the numbers so these instances are counted as a single fix.</p>
+
+<p>In total, we scanned and rescanned over 300 of the most downloaded Composer packages and nearly all big frameworks. We got in touch with the respective maintainers or found people to jump in and help address security vulnerabilities where that was needed.</p>
+
+<p>I want to extend a personal thank you to <a href="https://github.com/grahamcampbell">Graham Campbell</a>, who has been very helpful in getting me started with ideas and initial issue validation in the first couple of days of my new role and who has continued to be responsive and helpful with solving issues in other projects.</p>
+
+<h2 id="current-efforts">Current efforts</h2>
+
+<p>Project scanning for security vulnerabilities continues at a steady pace to make the most use of the resources we've been provided with. We do not only search for vulnerabilities, but also help triage, reproduce issues, help with impact analysis, and where necessary supply fixes by using our access to AI models and their extended “Cyber” capabilities.</p>
+
+<p>I will continue to talk to everyone who approaches me while providing a steady flow of public-facing communication about our efforts.</p>
+
+<p>All maintainers who approached me so far were kind enough to offer to validate the generated findings themselves. I was able to focus primarily on generating reproducers and letting the experts figure out whether a particular finding represents a security issue, a bugfix, or an invalid report. The maintainers in these cases were handling their own reporting and disclosure on their own terms and in a way that fits their timeline.</p>
+
+<p>I’m personally delighted by the great community response, both quantitatively and qualitatively: Nearly everyone has been supportive and I encountered only one negative maintainer interaction and one person we are still looking to get in touch with. I couldn’t be happier with the maturity, readiness and friendliness of the wider community. I didn’t expect anything else from PHP, but it’s great to be proven right.</p>
+
+<h3 id="shared-tooling%3A-scrutineer">Shared tooling: Scrutineer</h3>
+
+<p>When scanning many projects, we face challenges: Getting reproducible and reliable outputs, avoiding false positives, and using our resources effectively without duplicating work, all while allowing each person scanning to run multiple agents in parallel without human interaction during the initial scanning process. Security analysis needs to be performed in isolated containerized environments that keep the infrastructure we use for scanning secure.</p>
+
+<p>To pool our efforts, we are working with the Ecosystem Security Engineers from other languages and the Team at Alpha-Omega on shared tooling for this purpose. Specifically we're collaborating on <a href="https://github.com/alpha-omega-security/scrutineer">Scrutineer</a>. I want to give a special shout out to <a href="https://github.com/alexandre-daubois">Alexandre Daubois</a> from <a href="https://les-tilleuls.coop">Les-Tilleuls.coop</a>. His contributions to Scrutineer have been very valuable in enabling more people to effectively scan PHP projects.</p>
+
+<p>Scrutineer enables more structured results and an easier reporting process. It also helps to let people with access to different, otherwise unavailable, AI models, or with access to more resource capacity, scan projects on our behalf. Using Scrutineer we can tailor the containers used for analysis towards the PHP ecosystem to improve the quality of scanning results through tooling to create and validate reproducers. The report quality would be drastically lower and require more clean-up work without effective automated feedback loops.</p>
+
+<h3 id="helping-projects-with-individual-approaches">Helping projects with individual approaches</h3>
+
+<p>We help projects and maintainers digest reports, create reproducers, deduplicate security vulnerability findings, and suggest and validate fixes.</p>
+
+<p>When I accepted my new role, I was unsure how many projects would reach out for help with these tasks. I've received feedback that the quality of reports maintainers are receiving has gone up significantly in the last couple of months. So I've not received many requests to assist with processing reports and proposed fixes. Many maintainers report that they use their own coding agents to validate and reproduce received security vulnerability findings effectively. But for some more complex issues, currently available AI models cannot help or refuse to help with working on an exploit for a potential vulnerability. In these cases, I can be of help.</p>
+
+<p>Sometimes, the automated scanning doesn’t produce clear results or the threat modeling or attack vectors are not clear enough. In these cases, I spend time with each project to better understand what the AI models should be assessing and steer them in that direction.</p>
+
+<p>A special mention here is the PHP project itself: Many people like to try their new security tools on PHP, due to its popularity. The inherent complexity of a programming language runtime results in significantly lower quality results from agentic security approaches. The reports the PHP project receives are harder to digest than they are in userland PHP libraries with a clearer threat model and attack surface.</p>
+
+<p>I was not yet able to help PHP itself much so far, due to time constraints. I intend to work on core PHP a lot more in the coming months. The communication with the PHP core developer team is great and I’m eager to get properly started and see where I can help them.</p>
+
+<h3 id="assembling-a-team">Assembling a team</h3>
+
+<p>I was delighted to see that the PHP Foundation is launching <a href="https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/#community-special-interest-groups">Community Special Interest Groups</a>. One of them is the Ecosystem Security Team, which the PHP Foundation wishes to sustain far beyond the 6 months of the initial grant funding, so I've begun to assemble a team around these security and maintainer support efforts.</p>
+
+<p>If you want to reach out and talk with like-minded people about security, you can find a couple of us in the #ecosystem-security channel on the <a href="https://discord.com/invite/RYajXKxuuK">phpc Discord</a>. The <a href="https://phpcommunity.org">PHP Community Foundation</a> was kind enough to create a channel for us and #the-php-foundation in general. I’m “@edorian” on there, if you want to say hi.</p>
+
+<p>For sensitive topics, you can always <a href="https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/#:~:text=Get%20in%20touch%20via%20email%3A%20volker%40thephp.foundation.">get in touch</a> with me directly.</p>
+
+<p>Next to Alexandre, who I already mentioned above, a name I’ve come across a lot when talking to maintainers was <a href="https://github.com/iliaal">Ilia Alshanetsky</a>. Ilia has been doing a lot of independent work and I asked him to join the Ecosystem Security Team so we can better coordinate our efforts.</p>
+
+<h2 id="looking-ahead">Looking ahead</h2>
+
+<p>The goals I set myself for the next month are:</p>
+
+<ul>
+<li>Scan another 250 projects and report all collected findings</li>
+<li>Perform a dedicated, deeper analysis of core projects and libraries</li>
+<li>Spend more time helping out with php-src and PHP Extensions issues</li>
+</ul>
+
+<p>I will continue to be available to help any project maintainers who reach out.</p>
+
+<h3 id="get-in-touch">Get in touch</h3>
+
+<p>To repeat what was already mentioned above: We have capacity to scan and help more maintainers.</p>
+
+<p>Discord: <a href="https://discord.com/channels/356354025865740288/1507370983013744681">#ecosystem-security</a> on the #phpc community server <a href="https://discord.com/invite/RYajXKxuuK">(Invite)</a></p>
+
+<p>Email: <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#x76;&#111;&#x6c;&#x6b;&#101;&#x72;&#64;&#x74;&#x68;&#101;&#x70;&#104;&#x70;&#x2e;&#102;&#x6f;&#117;&#x6e;&#x64;&#97;&#x74;&#105;&#x6f;&#x6e;">volker@thephp.foundation</a></p>
 
         </div>
 
@@ -196,7 +266,7 @@
     class="thread-container"
     data-reddit-thread=""
     data-reddit-search="PHP"
-    data-reddit-suggest-title="The PHP Ambassador Program is Open"
+    data-reddit-suggest-title="One Month of Ecosystem Security Engineering"
     data-reddit-max-depth="10"
     data-reddit-show-content="false"
     data-reddit-show-controls="true"
@@ -209,21 +279,16 @@
         
         <div class="border-t pt-5 my-5">
                         <nav class="flex flex-row justify-between article -mx-2 mb-5">
-                                <a href="https://thephp.foundation/blog/2026/06/16/php-through-a-screen-reader-small-syntax-choices-that-matter/"
+                                <a href="https://thephp.foundation/blog/2026/06/19/the-php-ambassador-program-is-open/"
                    class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[#7f52ff] transition-all no-underline">
                     <div class="mb-1 text-sm text-gray-600 font-medium">Previous</div>
-                    <div class="font-bold text-blue-500">PHP Through a Screen Reader: Small Syntax Choices That Matter</div>
+                    <div class="font-bold text-blue-500">The PHP Ambassador Program is Open</div>
                 </a>
                 
-                                <a href="https://thephp.foundation/blog/2026/06/23/one-month-of-ecosystem-security-engineering/"
-                   class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[rgba(127,82,255,.8)] transition-all no-underline">
-                    <div class="mb-1 text-sm text-gray-600 font-medium">Next</div>
-                    <div class="font-bold text-blue-500">One Month of Ecosystem Security Engineering</div>
-                </a>
                             </nav>
             
             <div>
-                <a href="https://github.com/ThePHPF/thephp.foundation/edit/main/source/_posts/2026-06-19-the-php-ambassador-program-is-open.md"
+                <a href="https://github.com/ThePHPF/thephp.foundation/edit/main/source/_posts/2026-06-23-one-month-of-ecosystem-security-engineering.md"
                    class="nav-org" rel="noopener noreferrer" target="_blank">Edit this page on GitHub</a>
             </div>
         </div>
