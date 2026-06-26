@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-06-26T17:02:34+00:00</updated><entry><author><name>Shivam Mathur</name><uri>https://github.com/shivammathur</uri></author><title type="html"><![CDATA[Maintaining PHP Build infrastructure for Windows: Tooling for builds and security updates]]></title><content type="html"><![CDATA[<p>Most PHP developers never think about how PHP is built. They download it or install it using a command or a pre-built image and get started with their work. That is exactly how it should feel. A build system is doing its job when the final result looks great and works as expected.</p>
+
+<p>Behind every official PHP for Windows release is a lot of infrastructure: compilers, SDKs, dependency libraries, extension compatibility, CI pipelines, and security updates that keep the supported PHP versions working.</p>
+
+<p>As part of my work for The PHP Foundation, the focus has been on the Windows side of PHP: maintaining and improving the build infrastructure, updating dependencies, supporting extension builds, and making the process more reliable for current and future PHP releases.</p>
+
+<p>This post is a look at that work, why it matters, and what goes into keeping PHP healthy on Windows.</p>
+
+<h2 id="why-windows-support-still-matters">Why Windows support still matters</h2>
+
+<p>PHP is widely used on Linux, as the most common use case is running web applications, but Windows support remains important for several reasons.</p>
+
+<p>Many developers use Windows as their local development environment, and many companies run PHP applications on Windows servers. A lot of users depend on it for local testing environments, CLI tooling, and extensions that must work reliably on Windows. As per the <a href="https://survey.stackoverflow.co/2025/technology#1-computer-operating-systems">Stack Overflow annual developer survey in 2025</a> close to 50% of respondents use Windows for development.</p>
+
+<p>Official PHP builds for Windows matter because they provide a trusted baseline and are part of the PHP project’s release process.</p>
+
+<p>That means Windows support is not only about producing the final PHP build. It is about maintaining the full chain that makes a reliable PHP runtime possible.</p>
+
+<h2 id="the-build-system-is-now-a-toolchain">The build system is now a toolchain</h2>
+
+<p>Building PHP on Windows is very different from building PHP on Unix-like systems.</p>
+
+<p>On Linux and macOS, building PHP usually depends on package managers for dependencies and easy-to-use popular build toolchains. On Windows, PHP uses a separate build system built around MSVC, Windows SDK that handles various MSVC versions, custom build scripts, and custom prebuilt dependencies with patches specific to PHP.</p>
+
+<p>A PHP Windows build needs to know:</p>
+
+<ul>
+<li>Which Visual Studio toolset to use</li>
+<li>Which Windows SDK to target</li>
+<li>Which dependency packages are available</li>
+<li>Which library versions are compatible with each PHP branch</li>
+<li>Whether a build is x64, x86, thread-safe, non-thread-safe, debug, or release</li>
+</ul>
+
+<p>A major part of my work has been consolidating this into a modern toolchain: <a href="https://github.com/php/php-windows-builder">php/php-windows-builder</a>.</p>
+
+<h3 id="php-extension-builds-for-windows">PHP extension builds for Windows</h3>
+
+<p>We started with the purpose of making it easier to build PHP extensions on Windows. The goal was giving extension authors a path to produce builds that are compatible with the newer <a href="https://github.com/php/pie">PIE</a> direction. But because this new way of distribution for PHP’s extensions using PIE is still evolving, we also revived Windows builds for extension releases on PECL. As part of that, we have released builds for more than 100 actively maintained extensions.</p>
+
+<p>That matters because Windows extension builds have historically been challenging for maintainers. Extension authors often do not have the full Windows build environment locally, and many contributors are more familiar with Linux-based workflows. A builder with a unified interface with known inputs gives the ecosystem a common place to test, debug, and improve Windows builds.</p>
+
+<pre><code class="yaml">- name: Build the extension
+  uses: php/php-windows-builder/extension@v1
+  with:
+    extension-url: https://github.com/xdebug/xdebug
+    extension-ref: '3.5.3'
+    php-version: '8.5'
+    ts: nts
+    arch: x64
+    args: --with-xdebug
+    libs: zlib
+</code></pre>
+
+<p>This is not only about convenience. It changes what is possible. For most extensions, building for Windows is as easy as copying one of the <a href="https://github.com/php/php-windows-builder/tree/master/examples">example workflows</a> we have.</p>
+
+<h3 id="automating-windows-release-builds">Automating Windows release builds</h3>
+
+<p>In addition to improving support for building PHP extensions, we also improved how the PHP runtime is built and maintained on Windows. We now have automated workflows in <a href="https://github.com/php/php-windows-builder">php/php-windows-builder</a> that build PHP on new tags in <a href="https://github.com/php/php-src">php/php-src</a>, run tests, deploy them to the <a href="https://www.php.net/downloads.php?os=windows">downloads server</a>, and make them available on the PHP website. This is a huge improvement on what used to be a manual process with delays, where the builds were run manually by one person in the Windows team and tested after publishing.</p>
+
+<p><img src="/assets/post-images/2026/windows-build-infrastructure/php-windows-release-flow.svg" alt="Automated PHP for Windows release flow" /></p>
+
+<h3 id="dependency-updates-and-testing">Dependency updates and testing</h3>
+
+<p>As part of the PHP build infrastructure improvements, we also created a test bench workflow. It allows us to build PHP with unpublished builds of PHP dependencies directly from GitHub workflow artifacts rather than fetching them from the PHP servers. That allows us to test dependency updates.</p>
+
+<p>Before this test-bench infrastructure existed, some dependency updates were delayed or avoided because testing them properly on Windows was too slow, too manual, or too challenging. With a dedicated builder and test bench, dependency updates can be tested more quickly across PHP branches and configurations. That helps us move faster on both compatibility and security work.</p>
+
+<p>PHP 8.0 through PHP 8.3 use the Visual Studio 2019 toolset, while newer versions such as PHP 8.4 and PHP 8.5 use the Visual Studio 2022 toolset. PHP 8.6 will use the Visual Studio 2026 toolset. These transitions sound simple, but in practice they affect compiler flags, dependency builds, extension compatibility, CI base images, and long-term support decisions.</p>
+
+<p>Keeping this working means constantly testing combinations of PHP branches, Visual Studio versions, and dependency packages. <a href="https://github.com/php/php-windows-builder">php/php-windows-builder</a> gives us a structured way to do that instead of relying on one-off manual builds.</p>
+
+<h2 id="security-work%3A-cves%2C-dependency-updates%2C-and-backported-fixes">Security work: CVEs, dependency updates, and backported fixes</h2>
+
+<p>A big part of maintaining PHP for Windows is security work.</p>
+
+<p>That often means updating the dependency libraries that PHP and its extensions rely on when they receive CVE fixes or when new features demand it. These include libraries such as libcurl, OpenSSL, ICU, SQLite, libxml2, libjpeg, and more than 40 others.</p>
+
+<p>When one of these libraries fixes a vulnerability, the Windows dependency stack has to be reviewed, rebuilt, and tested. The work is not as simple as bumping a version number.</p>
+
+<p>A new dependency release can change ABI behavior, remove APIs, require another dependency to be rebuilt, expose new compiler warnings, or break an extension that used to compile cleanly.</p>
+
+<p>For example, updating OpenSSL requires rebuilding curl and other libraries that depend on it. Updating ICU can introduce MSVC warnings or header-level changes that affect the <code>intl</code> extension. Updating Apache has to be evaluated carefully because PHP’s Apache module needs to remain compatible with the wider Windows ecosystem, including users running third-party installers <a href="https://mariadb.org/xampp-needs-more-apache-friends/">lacking maintainers</a>, but still have a large user-base.</p>
+
+<p>There is also backporting work. Sometimes the safest path for a supported PHP branch is not to move an entire dependency stack forward, but to apply or adapt targeted security patches. That means reviewing upstream fixes, checking whether they apply cleanly to the version used by PHP for Windows, rebuilding the affected library, and validating that the patched build remains compatible with PHP and its extensions.</p>
+
+<p>This balance matters. We want users to receive security fixes quickly, but we also need to avoid introducing regressions into supported PHP releases. Security maintenance on Windows is therefore a careful process of tracking CVEs, reviewing upstream changes, rebuilding dependencies, backporting fixes where appropriate, and validating the result through PHP’s test suites and real extension builds.</p>
+
+<p>This is one of the less visible parts of the work, but also one of the most important. A secure PHP runtime depends not only on PHP source code but also on the native libraries that are shipped with it.</p>
+
+<p><img src="/assets/post-images/2026/windows-build-infrastructure/php-85-cve-bin-tool-findings.svg" alt="Known CVEs detected in PHP 8.5 Windows builds" /></p>
+
+<p>As part of this process, we updated these dependencies addressing a number of security issues reported for them over the last year.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Dependency</th>
+  <th>Old version</th>
+  <th>Updated version</th>
+  <th>Security issues resolved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Apache</td>
+  <td>2.4.43</td>
+  <td>2.4.68</td>
+  <td>CVE-2026-49975, CVE-2026-48913, CVE-2026-44631, CVE-2026-44186, CVE-2026-44185, CVE-2026-44119, CVE-2026-43951, CVE-2026-42536, CVE-2026-42535, CVE-2026-34356, CVE-2026-34355, CVE-2026-29170, CVE-2026-29167, CVE-2026-23918, CVE-2026-24072, CVE-2026-28780, CVE-2026-29168, CVE-2026-29169, CVE-2026-33006, CVE-2026-33007, CVE-2026-33523, CVE-2026-33857, CVE-2026-34032, CVE-2026-34059, CVE-2025-49630, CVE-2025-55753, CVE-2025-58098, CVE-2025-59775, CVE-2025-65082, CVE-2025-66200, CVE-2025-54090, CVE-2024-42516, CVE-2024-43204, CVE-2024-43394, CVE-2024-47252, CVE-2025-23048, CVE-2025-49812</td>
+</tr>
+<tr>
+  <td>Firebird client</td>
+  <td>3.0.6</td>
+  <td>3.0.14</td>
+  <td>CVE-2025-54989</td>
+</tr>
+<tr>
+  <td>FreeType</td>
+  <td>2.11.1</td>
+  <td>2.14.3</td>
+  <td>CVE-2022-27404, CVE-2022-27405, CVE-2022-27406, CVE-2025-27363</td>
+</tr>
+<tr>
+  <td>libavif</td>
+  <td>0.9.0</td>
+  <td>1.4.2</td>
+  <td>CVE-2025-48174, CVE-2025-48175, CVE-2023-6350, CVE-2023-6351, CVE-2023-6704</td>
+</tr>
+<tr>
+  <td>libcurl</td>
+  <td>8.17.0</td>
+  <td>8.20.0</td>
+  <td>CVE-2025-15224, CVE-2025-15079, CVE-2025-14819, CVE-2026-1965, CVE-2026-3783, CVE-2026-3784, CVE-2026-3805, CVE-2026-4873, CVE-2026-5545, CVE-2026-5773, CVE-2026-6253, CVE-2026-6276, CVE-2026-6429, CVE-2026-7009, CVE-2026-7168</td>
+</tr>
+<tr>
+  <td>liblzma / XZ</td>
+  <td>5.8.2</td>
+  <td>5.8.3</td>
+  <td>CVE-2026-34743</td>
+</tr>
+<tr>
+  <td>libpng</td>
+  <td>1.6.34</td>
+  <td>1.6.56</td>
+  <td>CVE-2026-33416, CVE-2026-33636</td>
+</tr>
+<tr>
+  <td>PostgreSQL client</td>
+  <td>14.18/16.9</td>
+  <td>14.22/16.13</td>
+  <td>CVE-2025-8713, CVE-2025-8714, CVE-2025-8715, CVE-2025-12817, CVE-2025-12818, CVE-2026-2003, CVE-2026-2004, CVE-2026-2005, CVE-2026-2006</td>
+</tr>
+<tr>
+  <td>Cyrus SASL</td>
+  <td>2.1.27</td>
+  <td>2.1.28</td>
+  <td>CVE-2022-24407</td>
+</tr>
+<tr>
+  <td>libsodium</td>
+  <td>1.0.18</td>
+  <td>1.0.22</td>
+  <td>CVE-2025-69277</td>
+</tr>
+<tr>
+  <td>libssh2</td>
+  <td>1.11.1</td>
+  <td>1.11.1</td>
+  <td>Patch for CVE-2026-7598 was backported</td>
+</tr>
+<tr>
+  <td>libxml2</td>
+  <td>2.10.4</td>
+  <td>2.10.4</td>
+  <td>Patches for the following CVEs were backported - CVE-2026-0989, CVE-2026-0990, CVE-2026-0992, CVE-2026-1757, CVE-2025-7425</td>
+</tr>
+<tr>
+  <td>libxslt</td>
+  <td>1.1.37</td>
+  <td>1.1.43</td>
+  <td>CVE-2024-55549, CVE-2025-24855, CVE-2025-11731, CVE-2025-7424, CVE-2025-10911</td>
+</tr>
+<tr>
+  <td>nghttp2</td>
+  <td>1.64.0</td>
+  <td>1.69.0</td>
+  <td>CVE-2026-27135</td>
+</tr>
+<tr>
+  <td>OpenSSL</td>
+  <td>3.0.18</td>
+  <td>3.0.21/3.5.7</td>
+  <td>CVE-2026-45447, CVE-2026-34182, CVE-2026-34183, CVE-2026-42764, CVE-2026-45445, CVE-2026-7383, CVE-2026-9076, CVE-2026-34180, CVE-2026-34181, CVE-2026-42766, CVE-2026-42767, CVE-2026-42768, CVE-2026-42769, CVE-2026-42770, CVE-2026-45446, CVE-2026-31790, CVE-2026-28387, CVE-2026-28388, CVE-2026-35188, CVE-2026-42765, CVE-2026-42771, CVE-2026-28386, CVE-2026-28389, CVE-2026-28390, CVE-2026-31789</td>
+</tr>
+<tr>
+  <td>SQLite</td>
+  <td>3.39.2</td>
+  <td>3.53.2</td>
+  <td>CVE-2025-7709, CVE-2025-70873, CVE-2025-7458.</td>
+</tr>
+<tr>
+  <td>zlib</td>
+  <td>1.2.12</td>
+  <td>1.3.2</td>
+  <td>CVE-2022-37434</td>
+</tr>
+</tbody>
+</table>
+
+<p>We also refreshed these dependencies to newer releases for bug fixes and new features.</p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">Dependency</th>
+  <th align="left">Old version</th>
+  <th align="left">Updated version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">GLib</td>
+  <td align="left">2.53.3</td>
+  <td align="left">2.88.1</td>
+</tr>
+<tr>
+  <td align="left">libwebp</td>
+  <td align="left">1.3.2</td>
+  <td align="left">1.6.0</td>
+</tr>
+<tr>
+  <td align="left">libjpeg-turbo</td>
+  <td align="left">2.1.0</td>
+  <td align="left">3.1.4</td>
+</tr>
+<tr>
+  <td align="left">LMDB</td>
+  <td align="left">0.9.22</td>
+  <td align="left">0.9.35</td>
+</tr>
+<tr>
+  <td align="left">libiconv</td>
+  <td align="left">1.17</td>
+  <td align="left">1.19</td>
+</tr>
+<tr>
+  <td align="left">libintl</td>
+  <td align="left">0.18.3</td>
+  <td align="left">1.0</td>
+</tr>
+<tr>
+  <td align="left">libffi</td>
+  <td align="left">3.3-4</td>
+  <td align="left">3.5.2</td>
+</tr>
+<tr>
+  <td align="left">Oniguruma</td>
+  <td align="left">6.9.8</td>
+  <td align="left">6.9.10</td>
+</tr>
+<tr>
+  <td align="left">libenchant2</td>
+  <td align="left">2.2.8</td>
+  <td align="left">2.8.16</td>
+</tr>
+<tr>
+  <td align="left">OpenLDAP</td>
+  <td align="left">2.4.47</td>
+  <td align="left">2.6.13</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="ci-has-become-essential">CI has become essential</h2>
+
+<p>Modern PHP Windows work depends heavily on CI.</p>
+
+<p>It is not enough to build PHP once locally and release it. We need repeatable testing across branches, architectures, dependency versions, and runtime combinations.</p>
+
+<p>As part of <a href="https://github.com/php/php-windows-builder">php/php-windows-builder</a>, we now have a GitHub Actions-based approach to building PHP and its extensions; this is an improvement from the early days of building these on the Windows machine provided by Microsoft.</p>
+
+<h2 id="preparing-for-the-future">Preparing for the future</h2>
+
+<p>Windows support also has to look ahead.</p>
+
+<p>One major area is architecture support. Historically, PHP for Windows has shipped x86 and x64 builds. But the value of x86 support continues to decrease as modern Windows systems are overwhelmingly 64-bit, while interest in ARM64 is growing.</p>
+
+<p>That creates an important long-term question: what should the official PHP Windows build matrix look like in the future?</p>
+
+<p>Dropping x86 and investing in ARM64 may make more sense for future versions. But that kind of decision cannot be made casually. It requires understanding who still depends on x86, what compatibility is actually being preserved, and what new users would benefit from ARM64 builds.</p>
+
+<p>Part of the job is to make these transitions possible before they become urgent.</p>
+
+<h2 id="in-closing">In closing</h2>
+
+<p>Open source maintenance is invisible by design. If everything goes well, users do not notice that a dependency was rebuilt, a compiler issue was fixed, an extension was patched, or a CI workflow was improved. They just download PHP and continue working.</p>
+
+<p>That is the goal.</p>
+
+<p>But it is also why it is worth talking about this work occasionally. The reliability of a project like PHP depends on many layers of maintenance that happen outside the spotlight.</p>
+
+<p>The Windows side of PHP has its own set of challenges, and continuing to invest in it helps keep PHP accessible to more developers, more environments, and more use cases.</p>
+]]></content><link href="https://thephp.foundation/blog/2026/06/26/maintaining-php-build-infrastructure-for-windows-tooling-for-builds-and-security-updates/"/><id>https://thephp.foundation/blog/2026/06/26/maintaining-php-build-infrastructure-for-windows-tooling-for-builds-and-security-updates/</id><updated>Fri, 26 Jun 2026 00:00:00 +0000</updated></entry></feed>

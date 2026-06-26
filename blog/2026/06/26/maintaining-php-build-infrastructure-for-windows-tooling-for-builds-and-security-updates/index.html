@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Maintaining PHP Build infrastructure for Windows: Tooling for builds and security updates &mdash; The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language</title>
+    <meta name="description" content="Information about the criticality and details of providing support for PHP builds on Windows.">
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="index, follow">
+        <link href="https://phpc.social/@thephpf" rel="me" />
+    <link rel="stylesheet" href="https://thephp.foundation/assets/css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/base16/danqing.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+
+    <meta name="yandex-verification" content="6990192232fdf071" />
+    <meta name="msvalidate.01" content="5D1EB82347E6BF271A01DCDBF7E59BED" />
+
+    <meta property="og:url" content="https://thephp.foundation/blog/2026/06/26/maintaining-php-build-infrastructure-for-windows-tooling-for-builds-and-security-updates/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Maintaining PHP Build infrastructure for Windows: Tooling for builds and security updates">
+    <meta property="og:description" content="Information about the criticality and details of providing support for PHP builds on Windows.">
+    <meta property="og:image" content="https://thephp.foundation/assets/share/2026-06-26-maintaining-php-build-infrastructure-for-windows-tooling-for-builds-and-security-updates.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="https://thephp.foundation">
+    <meta property="twitter:url" content="https://thephp.foundation/blog/2026/06/26/maintaining-php-build-infrastructure-for-windows-tooling-for-builds-and-security-updates/">
+    <meta name="twitter:title" content="Maintaining PHP Build infrastructure for Windows: Tooling for builds and security updates">
+    <meta name="twitter:description" content="Information about the criticality and details of providing support for PHP builds on Windows.">
+    <meta name="twitter:image" content="https://thephp.foundation/assets/share/2026-06-26-maintaining-php-build-infrastructure-for-windows-tooling-for-builds-and-security-updates.png">
+
+    <link rel="apple-touch-startup-image" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" sizes="76x76" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="120x120" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="128x128" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="152x152" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="196x196" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="512x512" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="1024x1024" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="2048x2048" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="128x128" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="196x196" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="512x512" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="2048x2048" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+
+    <link rel="alternate" type="application/atom+xml" href="https://thephp.foundation/atom.xml"
+          title="The PHP Foundation activity feed"/>
+                <script src="//cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+    </head>
+<body class="bg-white">
+
+<div role="region" aria-label="PHPverse 2025 announcement" class="w-full bg-green-500 text-white text-center py-1 text-sm font-medium z-50 hover:text-white hidden">
+    <a href="banner link stub" target="_blank" rel="noopener noreferrer" class="text-white no-underline hover:underline hover:text-white visited:hover:text-white">banner text stub</a>
+</div>
+
+<header x-data="{ isOpen: false }" @keydown.escape="isOpen = false" @click.away="isOpen = false" itemscope
+        itemtype="https://schema.org/WPHeader">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between relative">
+        <div class="absolute inset-x-0 bottom-0 h-px bg-slate-900/5"></div>
+        <div class="flex lg:flex-1 items-center gap-4">
+            <a href="https://thephp.foundation/" class="-m-1.5 p-1.5">
+                <img class="h-16 w-auto" src="https://thephp.foundation/assets/icons/php_foundation.svg"
+                     alt="PHP Foundation">
+            </a>
+            <span class="text-[#27282c] font-semibold text-sm md:text-xl" itemprop="headline">The PHP Foundation</span>
+        </div>
+        <div class="flex lg:hidden">
+            <button type="button"
+                    @click="isOpen = true"
+                    class="m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                     aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                </svg>
+            </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12" itemscope itemtype="https://schema.org/SiteNavigationElement">
+            <a href="https://thephp.foundation/structure" class="text-gray-700 hover:underline" itemprop="url">Who we are</a>
+
+            <a href="https://thephp.foundation/foundation" class="text-gray-700 hover:underline" itemprop="url">What we do</a>
+
+            <a href="https://thephp.foundation/blog" class="text-gray-700 hover:underline" itemprop="url">News</a>
+
+            <a href="https://thephp.foundation/presentations" class="text-gray-700 hover:underline" itemprop="url">Talks</a>
+
+            <a href="https://thephp.foundation/contact" class="text-gray-700 hover:underline" itemprop="url">Contact</a>
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-8">
+            <a href="https://php.net" target="_blank" rel="noopener noreferrer"
+               class="text-sm font-semibold leading-6 text-gray-700 nav-org hover:border-none hover:underline">
+                php.net</a>
+
+            <a href="/sponsor" class="button-link">Sponsor</a>
+        </div>
+    </nav>
+    <div x-show="isOpen" x-cloak>
+        <div class="fixed inset-0 z-50"></div>
+        <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="mx-auto flex max-w-7xl items-center justify-between relative">
+                <div class="flex lg:flex-1 items-center gap-4">
+                    <a href="https://thephp.foundation/" class="-m-1.5 p-1.5">
+                        <img class="h-16 w-auto" src="https://thephp.foundation/assets/icons/php_foundation.svg"
+                             alt="PHP Foundation">
+                    </a>
+                    <span class="text-[#27282c] font-semibold text-sm md:text-xl">The PHP Foundation</span>
+                </div>
+                <div class="flex">
+                    <button type="button"
+                            @click="isOpen = false"
+                            class="m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                             aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <nav class="mt-6 flow-root px-6 py-6">
+                <div class="-my-6 divide-y divide-gray-500/10">
+                    <div class="space-y-2 py-6" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                        <a href="https://thephp.foundation/structure" itemprop="url"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Who
+                            we are</a>
+
+                        <a href="https://thephp.foundation/foundation" itemprop="url"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">What
+                            we do</a>
+
+                        <a href="https://thephp.foundation/blog" itemprop="url"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">News</a>
+
+                        <a href="https://thephp.foundation/presentations" itemprop="url"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Talks</a>
+
+                        <a href="https://thephp.foundation/contact" itemprop="url"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Contact</a>
+                    </div>
+                    <div class="py-6">
+                        <a href="/sponsor" rel="noopener noreferrer"
+                           class="block py-2 text-center no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">Sponsor</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div class="bg-white px-6 lg:px-8 my-16" itemscope itemtype="https://schema.org/Article">
+    <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
+        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" itemprop="name">Maintaining PHP Build infrastructure for Windows: Tooling for builds and security updates</h1>
+
+        <div class="flex flex-col md:flex-row md:items-center gap-x-4 text-xs mt-2">
+                <div>
+            Published on <span itemprop="datePublished">Jun 26, 2026</span>
+            by <span itemprop="publisher" itemscope itemtype="https://schema.org/Person"><a href="https://github.com/shivammathur" target="_blank" rel="noopener noreferrer" itemprop="url"><span itemprop="name">Shivam Mathur</span></a></span>
+        </div>
+                    
+        
+                <div class="flex gap-x-2 mt-2 md:mt-0">
+                        <a href="https://thephp.foundation/blog/tag/windows"
+               class="rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
+                Windows
+            </a>
+                        <a href="https://thephp.foundation/blog/tag/security"
+               class="rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
+                Security
+            </a>
+                    </div>
+                </div>
+
+        <div class="mt-6 text-xl leading-8" itemprop="text">
+            <p>Most PHP developers never think about how PHP is built. They download it or install it using a command or a pre-built image and get started with their work. That is exactly how it should feel. A build system is doing its job when the final result looks great and works as expected.</p>
+
+<p>Behind every official PHP for Windows release is a lot of infrastructure: compilers, SDKs, dependency libraries, extension compatibility, CI pipelines, and security updates that keep the supported PHP versions working.</p>
+
+<p>As part of my work for The PHP Foundation, the focus has been on the Windows side of PHP: maintaining and improving the build infrastructure, updating dependencies, supporting extension builds, and making the process more reliable for current and future PHP releases.</p>
+
+<p>This post is a look at that work, why it matters, and what goes into keeping PHP healthy on Windows.</p>
+
+<h2 id="why-windows-support-still-matters">Why Windows support still matters</h2>
+
+<p>PHP is widely used on Linux, as the most common use case is running web applications, but Windows support remains important for several reasons.</p>
+
+<p>Many developers use Windows as their local development environment, and many companies run PHP applications on Windows servers. A lot of users depend on it for local testing environments, CLI tooling, and extensions that must work reliably on Windows. As per the <a href="https://survey.stackoverflow.co/2025/technology#1-computer-operating-systems">Stack Overflow annual developer survey in 2025</a> close to 50% of respondents use Windows for development.</p>
+
+<p>Official PHP builds for Windows matter because they provide a trusted baseline and are part of the PHP project’s release process.</p>
+
+<p>That means Windows support is not only about producing the final PHP build. It is about maintaining the full chain that makes a reliable PHP runtime possible.</p>
+
+<h2 id="the-build-system-is-now-a-toolchain">The build system is now a toolchain</h2>
+
+<p>Building PHP on Windows is very different from building PHP on Unix-like systems.</p>
+
+<p>On Linux and macOS, building PHP usually depends on package managers for dependencies and easy-to-use popular build toolchains. On Windows, PHP uses a separate build system built around MSVC, Windows SDK that handles various MSVC versions, custom build scripts, and custom prebuilt dependencies with patches specific to PHP.</p>
+
+<p>A PHP Windows build needs to know:</p>
+
+<ul>
+<li>Which Visual Studio toolset to use</li>
+<li>Which Windows SDK to target</li>
+<li>Which dependency packages are available</li>
+<li>Which library versions are compatible with each PHP branch</li>
+<li>Whether a build is x64, x86, thread-safe, non-thread-safe, debug, or release</li>
+</ul>
+
+<p>A major part of my work has been consolidating this into a modern toolchain: <a href="https://github.com/php/php-windows-builder">php/php-windows-builder</a>.</p>
+
+<h3 id="php-extension-builds-for-windows">PHP extension builds for Windows</h3>
+
+<p>We started with the purpose of making it easier to build PHP extensions on Windows. The goal was giving extension authors a path to produce builds that are compatible with the newer <a href="https://github.com/php/pie">PIE</a> direction. But because this new way of distribution for PHP’s extensions using PIE is still evolving, we also revived Windows builds for extension releases on PECL. As part of that, we have released builds for more than 100 actively maintained extensions.</p>
+
+<p>That matters because Windows extension builds have historically been challenging for maintainers. Extension authors often do not have the full Windows build environment locally, and many contributors are more familiar with Linux-based workflows. A builder with a unified interface with known inputs gives the ecosystem a common place to test, debug, and improve Windows builds.</p>
+
+<pre><code class="yaml">- name: Build the extension
+  uses: php/php-windows-builder/extension@v1
+  with:
+    extension-url: https://github.com/xdebug/xdebug
+    extension-ref: '3.5.3'
+    php-version: '8.5'
+    ts: nts
+    arch: x64
+    args: --with-xdebug
+    libs: zlib
+</code></pre>
+
+<p>This is not only about convenience. It changes what is possible. For most extensions, building for Windows is as easy as copying one of the <a href="https://github.com/php/php-windows-builder/tree/master/examples">example workflows</a> we have.</p>
+
+<h3 id="automating-windows-release-builds">Automating Windows release builds</h3>
+
+<p>In addition to improving support for building PHP extensions, we also improved how the PHP runtime is built and maintained on Windows. We now have automated workflows in <a href="https://github.com/php/php-windows-builder">php/php-windows-builder</a> that build PHP on new tags in <a href="https://github.com/php/php-src">php/php-src</a>, run tests, deploy them to the <a href="https://www.php.net/downloads.php?os=windows">downloads server</a>, and make them available on the PHP website. This is a huge improvement on what used to be a manual process with delays, where the builds were run manually by one person in the Windows team and tested after publishing.</p>
+
+<p><img src="/assets/post-images/2026/windows-build-infrastructure/php-windows-release-flow.svg" alt="Automated PHP for Windows release flow" /></p>
+
+<h3 id="dependency-updates-and-testing">Dependency updates and testing</h3>
+
+<p>As part of the PHP build infrastructure improvements, we also created a test bench workflow. It allows us to build PHP with unpublished builds of PHP dependencies directly from GitHub workflow artifacts rather than fetching them from the PHP servers. That allows us to test dependency updates.</p>
+
+<p>Before this test-bench infrastructure existed, some dependency updates were delayed or avoided because testing them properly on Windows was too slow, too manual, or too challenging. With a dedicated builder and test bench, dependency updates can be tested more quickly across PHP branches and configurations. That helps us move faster on both compatibility and security work.</p>
+
+<p>PHP 8.0 through PHP 8.3 use the Visual Studio 2019 toolset, while newer versions such as PHP 8.4 and PHP 8.5 use the Visual Studio 2022 toolset. PHP 8.6 will use the Visual Studio 2026 toolset. These transitions sound simple, but in practice they affect compiler flags, dependency builds, extension compatibility, CI base images, and long-term support decisions.</p>
+
+<p>Keeping this working means constantly testing combinations of PHP branches, Visual Studio versions, and dependency packages. <a href="https://github.com/php/php-windows-builder">php/php-windows-builder</a> gives us a structured way to do that instead of relying on one-off manual builds.</p>
+
+<h2 id="security-work%3A-cves%2C-dependency-updates%2C-and-backported-fixes">Security work: CVEs, dependency updates, and backported fixes</h2>
+
+<p>A big part of maintaining PHP for Windows is security work.</p>
+
+<p>That often means updating the dependency libraries that PHP and its extensions rely on when they receive CVE fixes or when new features demand it. These include libraries such as libcurl, OpenSSL, ICU, SQLite, libxml2, libjpeg, and more than 40 others.</p>
+
+<p>When one of these libraries fixes a vulnerability, the Windows dependency stack has to be reviewed, rebuilt, and tested. The work is not as simple as bumping a version number.</p>
+
+<p>A new dependency release can change ABI behavior, remove APIs, require another dependency to be rebuilt, expose new compiler warnings, or break an extension that used to compile cleanly.</p>
+
+<p>For example, updating OpenSSL requires rebuilding curl and other libraries that depend on it. Updating ICU can introduce MSVC warnings or header-level changes that affect the <code>intl</code> extension. Updating Apache has to be evaluated carefully because PHP’s Apache module needs to remain compatible with the wider Windows ecosystem, including users running third-party installers <a href="https://mariadb.org/xampp-needs-more-apache-friends/">lacking maintainers</a>, but still have a large user-base.</p>
+
+<p>There is also backporting work. Sometimes the safest path for a supported PHP branch is not to move an entire dependency stack forward, but to apply or adapt targeted security patches. That means reviewing upstream fixes, checking whether they apply cleanly to the version used by PHP for Windows, rebuilding the affected library, and validating that the patched build remains compatible with PHP and its extensions.</p>
+
+<p>This balance matters. We want users to receive security fixes quickly, but we also need to avoid introducing regressions into supported PHP releases. Security maintenance on Windows is therefore a careful process of tracking CVEs, reviewing upstream changes, rebuilding dependencies, backporting fixes where appropriate, and validating the result through PHP’s test suites and real extension builds.</p>
+
+<p>This is one of the less visible parts of the work, but also one of the most important. A secure PHP runtime depends not only on PHP source code but also on the native libraries that are shipped with it.</p>
+
+<p><img src="/assets/post-images/2026/windows-build-infrastructure/php-85-cve-bin-tool-findings.svg" alt="Known CVEs detected in PHP 8.5 Windows builds" /></p>
+
+<p>As part of this process, we updated these dependencies addressing a number of security issues reported for them over the last year.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Dependency</th>
+  <th>Old version</th>
+  <th>Updated version</th>
+  <th>Security issues resolved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Apache</td>
+  <td>2.4.43</td>
+  <td>2.4.68</td>
+  <td>CVE-2026-49975, CVE-2026-48913, CVE-2026-44631, CVE-2026-44186, CVE-2026-44185, CVE-2026-44119, CVE-2026-43951, CVE-2026-42536, CVE-2026-42535, CVE-2026-34356, CVE-2026-34355, CVE-2026-29170, CVE-2026-29167, CVE-2026-23918, CVE-2026-24072, CVE-2026-28780, CVE-2026-29168, CVE-2026-29169, CVE-2026-33006, CVE-2026-33007, CVE-2026-33523, CVE-2026-33857, CVE-2026-34032, CVE-2026-34059, CVE-2025-49630, CVE-2025-55753, CVE-2025-58098, CVE-2025-59775, CVE-2025-65082, CVE-2025-66200, CVE-2025-54090, CVE-2024-42516, CVE-2024-43204, CVE-2024-43394, CVE-2024-47252, CVE-2025-23048, CVE-2025-49812</td>
+</tr>
+<tr>
+  <td>Firebird client</td>
+  <td>3.0.6</td>
+  <td>3.0.14</td>
+  <td>CVE-2025-54989</td>
+</tr>
+<tr>
+  <td>FreeType</td>
+  <td>2.11.1</td>
+  <td>2.14.3</td>
+  <td>CVE-2022-27404, CVE-2022-27405, CVE-2022-27406, CVE-2025-27363</td>
+</tr>
+<tr>
+  <td>libavif</td>
+  <td>0.9.0</td>
+  <td>1.4.2</td>
+  <td>CVE-2025-48174, CVE-2025-48175, CVE-2023-6350, CVE-2023-6351, CVE-2023-6704</td>
+</tr>
+<tr>
+  <td>libcurl</td>
+  <td>8.17.0</td>
+  <td>8.20.0</td>
+  <td>CVE-2025-15224, CVE-2025-15079, CVE-2025-14819, CVE-2026-1965, CVE-2026-3783, CVE-2026-3784, CVE-2026-3805, CVE-2026-4873, CVE-2026-5545, CVE-2026-5773, CVE-2026-6253, CVE-2026-6276, CVE-2026-6429, CVE-2026-7009, CVE-2026-7168</td>
+</tr>
+<tr>
+  <td>liblzma / XZ</td>
+  <td>5.8.2</td>
+  <td>5.8.3</td>
+  <td>CVE-2026-34743</td>
+</tr>
+<tr>
+  <td>libpng</td>
+  <td>1.6.34</td>
+  <td>1.6.56</td>
+  <td>CVE-2026-33416, CVE-2026-33636</td>
+</tr>
+<tr>
+  <td>PostgreSQL client</td>
+  <td>14.18/16.9</td>
+  <td>14.22/16.13</td>
+  <td>CVE-2025-8713, CVE-2025-8714, CVE-2025-8715, CVE-2025-12817, CVE-2025-12818, CVE-2026-2003, CVE-2026-2004, CVE-2026-2005, CVE-2026-2006</td>
+</tr>
+<tr>
+  <td>Cyrus SASL</td>
+  <td>2.1.27</td>
+  <td>2.1.28</td>
+  <td>CVE-2022-24407</td>
+</tr>
+<tr>
+  <td>libsodium</td>
+  <td>1.0.18</td>
+  <td>1.0.22</td>
+  <td>CVE-2025-69277</td>
+</tr>
+<tr>
+  <td>libssh2</td>
+  <td>1.11.1</td>
+  <td>1.11.1</td>
+  <td>Patch for CVE-2026-7598 was backported</td>
+</tr>
+<tr>
+  <td>libxml2</td>
+  <td>2.10.4</td>
+  <td>2.10.4</td>
+  <td>Patches for the following CVEs were backported - CVE-2026-0989, CVE-2026-0990, CVE-2026-0992, CVE-2026-1757, CVE-2025-7425</td>
+</tr>
+<tr>
+  <td>libxslt</td>
+  <td>1.1.37</td>
+  <td>1.1.43</td>
+  <td>CVE-2024-55549, CVE-2025-24855, CVE-2025-11731, CVE-2025-7424, CVE-2025-10911</td>
+</tr>
+<tr>
+  <td>nghttp2</td>
+  <td>1.64.0</td>
+  <td>1.69.0</td>
+  <td>CVE-2026-27135</td>
+</tr>
+<tr>
+  <td>OpenSSL</td>
+  <td>3.0.18</td>
+  <td>3.0.21/3.5.7</td>
+  <td>CVE-2026-45447, CVE-2026-34182, CVE-2026-34183, CVE-2026-42764, CVE-2026-45445, CVE-2026-7383, CVE-2026-9076, CVE-2026-34180, CVE-2026-34181, CVE-2026-42766, CVE-2026-42767, CVE-2026-42768, CVE-2026-42769, CVE-2026-42770, CVE-2026-45446, CVE-2026-31790, CVE-2026-28387, CVE-2026-28388, CVE-2026-35188, CVE-2026-42765, CVE-2026-42771, CVE-2026-28386, CVE-2026-28389, CVE-2026-28390, CVE-2026-31789</td>
+</tr>
+<tr>
+  <td>SQLite</td>
+  <td>3.39.2</td>
+  <td>3.53.2</td>
+  <td>CVE-2025-7709, CVE-2025-70873, CVE-2025-7458.</td>
+</tr>
+<tr>
+  <td>zlib</td>
+  <td>1.2.12</td>
+  <td>1.3.2</td>
+  <td>CVE-2022-37434</td>
+</tr>
+</tbody>
+</table>
+
+<p>We also refreshed these dependencies to newer releases for bug fixes and new features.</p>
+
+<table>
+<thead>
+<tr>
+  <th align="left">Dependency</th>
+  <th align="left">Old version</th>
+  <th align="left">Updated version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">GLib</td>
+  <td align="left">2.53.3</td>
+  <td align="left">2.88.1</td>
+</tr>
+<tr>
+  <td align="left">libwebp</td>
+  <td align="left">1.3.2</td>
+  <td align="left">1.6.0</td>
+</tr>
+<tr>
+  <td align="left">libjpeg-turbo</td>
+  <td align="left">2.1.0</td>
+  <td align="left">3.1.4</td>
+</tr>
+<tr>
+  <td align="left">LMDB</td>
+  <td align="left">0.9.22</td>
+  <td align="left">0.9.35</td>
+</tr>
+<tr>
+  <td align="left">libiconv</td>
+  <td align="left">1.17</td>
+  <td align="left">1.19</td>
+</tr>
+<tr>
+  <td align="left">libintl</td>
+  <td align="left">0.18.3</td>
+  <td align="left">1.0</td>
+</tr>
+<tr>
+  <td align="left">libffi</td>
+  <td align="left">3.3-4</td>
+  <td align="left">3.5.2</td>
+</tr>
+<tr>
+  <td align="left">Oniguruma</td>
+  <td align="left">6.9.8</td>
+  <td align="left">6.9.10</td>
+</tr>
+<tr>
+  <td align="left">libenchant2</td>
+  <td align="left">2.2.8</td>
+  <td align="left">2.8.16</td>
+</tr>
+<tr>
+  <td align="left">OpenLDAP</td>
+  <td align="left">2.4.47</td>
+  <td align="left">2.6.13</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="ci-has-become-essential">CI has become essential</h2>
+
+<p>Modern PHP Windows work depends heavily on CI.</p>
+
+<p>It is not enough to build PHP once locally and release it. We need repeatable testing across branches, architectures, dependency versions, and runtime combinations.</p>
+
+<p>As part of <a href="https://github.com/php/php-windows-builder">php/php-windows-builder</a>, we now have a GitHub Actions-based approach to building PHP and its extensions; this is an improvement from the early days of building these on the Windows machine provided by Microsoft.</p>
+
+<h2 id="preparing-for-the-future">Preparing for the future</h2>
+
+<p>Windows support also has to look ahead.</p>
+
+<p>One major area is architecture support. Historically, PHP for Windows has shipped x86 and x64 builds. But the value of x86 support continues to decrease as modern Windows systems are overwhelmingly 64-bit, while interest in ARM64 is growing.</p>
+
+<p>That creates an important long-term question: what should the official PHP Windows build matrix look like in the future?</p>
+
+<p>Dropping x86 and investing in ARM64 may make more sense for future versions. But that kind of decision cannot be made casually. It requires understanding who still depends on x86, what compatibility is actually being preserved, and what new users would benefit from ARM64 builds.</p>
+
+<p>Part of the job is to make these transitions possible before they become urgent.</p>
+
+<h2 id="in-closing">In closing</h2>
+
+<p>Open source maintenance is invisible by design. If everything goes well, users do not notice that a dependency was rebuilt, a compiler issue was fixed, an extension was patched, or a CI workflow was improved. They just download PHP and continue working.</p>
+
+<p>That is the goal.</p>
+
+<p>But it is also why it is worth talking about this work occasionally. The reliability of a project like PHP depends on many layers of maintenance that happen outside the spotlight.</p>
+
+<p>The Windows side of PHP has its own set of challenges, and continuing to invest in it helps keep PHP accessible to more developers, more environments, and more use cases.</p>
+
+        </div>
+
+        <div class="border-t pt-5 my-5">
+            <div
+    class="thread-container"
+    data-reddit-thread=""
+    data-reddit-search="PHP"
+    data-reddit-suggest-title="Maintaining PHP Build infrastructure for Windows: Tooling for builds and security updates"
+    data-reddit-max-depth="10"
+    data-reddit-show-content="false"
+    data-reddit-show-controls="true"
+></div>
+<script>window.REDDITIFY_PROXY_URL = 'https://redditify-proxy.root-8f3.workers.dev';</script>
+<link rel="stylesheet" href="https://unpkg.com/redditify/dist/redditify.css">
+<script src="https://unpkg.com/redditify/dist/redditify.min.js"></script>
+
+        </div>
+        
+        <div class="border-t pt-5 my-5">
+                        <nav class="flex flex-row justify-between article -mx-2 mb-5">
+                                <a href="https://thephp.foundation/blog/2026/06/23/one-month-of-ecosystem-security-engineering/"
+                   class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[#7f52ff] transition-all no-underline">
+                    <div class="mb-1 text-sm text-gray-600 font-medium">Previous</div>
+                    <div class="font-bold text-blue-500">One Month of Ecosystem Security Engineering</div>
+                </a>
+                
+                            </nav>
+            
+            <div>
+                <a href="https://github.com/ThePHPF/thephp.foundation/edit/main/source/_posts/2026-06-26-maintaining-php-build-infrastructure-for-windows-tooling-for-builds-and-security-updates.md"
+                   class="nav-org" rel="noopener noreferrer" target="_blank">Edit this page on GitHub</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-gray-900">
+    <div class="mx-auto max-w-7xl overflow-hidden px-6 py-12 lg:px-8">
+        <ul class="list-none grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-1 max-w-xl mx-auto text-sm leading-6 text-gray-400" >
+            <li><a href="/sponsor"          class="text-gray-400 hover:text-gray-100 no-underline">Sponsor</a></li>
+            <li><a href="/structure"        class="text-gray-400 hover:text-gray-100 no-underline">Structure</a></li>
+            <li><a href="/structure#admins" class="text-gray-400 hover:text-gray-100 no-underline">Board</a></li>
+            <li><a href="/structure#core_developers"        class="text-gray-400 hover:text-gray-100 no-underline">Developers</a></li>
+            <li><a href="/blog"             class="text-gray-400 hover:text-gray-100 no-underline">News</a></li>
+            <li><a href="/presentations"    class="text-gray-400 hover:text-gray-100 no-underline">Talks</a></li>
+            <li><a href="/branding"         class="text-gray-400 hover:text-gray-100 no-underline">Brand Guide</a></li>
+            <li><a href="/governance"       class="text-gray-400 hover:text-gray-100 no-underline">Governance</a></li>
+            <li><a href="/code-of-conduct"  class="text-gray-400 hover:text-gray-100 no-underline">Code of Conduct</a></li>
+            <li><a href="/contact"          class="text-gray-400 hover:text-gray-100 no-underline">Contact</a></li>
+        </ul>
+
+        <div class="mt-10 flex justify-center space-x-10 items-center">
+            <a href="https://twitter.com/thephpf" target="_blank" rel="noopener noreferrer"
+               class="text-gray-400 hover:text-gray-500">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                    <g>
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                    </g>
+                </svg>
+            </a>
+
+            <a href="https://github.com/ThePHPF/thephp.foundation" class="text-gray-400 hover:text-gray-500"
+               target="_blank" rel="noopener noreferrer">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                          clip-rule="evenodd"/>
+                </svg>
+            </a>
+
+            <a href="https://phpc.social/@thephpf" class="text-gray-400 hover:text-gray-500" target="_blank"
+               rel="noopener noreferrer">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"/>
+                </svg>
+            </a>
+
+            <a href="https://www.linkedin.com/company/phpfoundation/" class="text-gray-400 hover:text-gray-500"
+               target="_blank" rel="noopener noreferrer">
+                <svg class="h-6 w-6"
+                     viewBox="0 0 56.693 56.693" fill="currentColor"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <path d="M30.071,27.101v-0.077c-0.016,0.026-0.033,0.052-0.05,0.077H30.071z"/>
+                        <path
+                                d="M49.265,4.667H7.145c-2.016,0-3.651,1.596-3.651,3.563v42.613c0,1.966,1.635,3.562,3.651,3.562h42.12   c2.019,0,3.654-1.597,3.654-3.562V8.23C52.919,6.262,51.283,4.667,49.265,4.667z M18.475,46.304h-7.465V23.845h7.465V46.304z    M14.743,20.777h-0.05c-2.504,0-4.124-1.725-4.124-3.88c0-2.203,1.67-3.88,4.223-3.88c2.554,0,4.125,1.677,4.175,3.88   C18.967,19.052,17.345,20.777,14.743,20.777z M45.394,46.304h-7.465V34.286c0-3.018-1.08-5.078-3.781-5.078   c-2.062,0-3.29,1.389-3.831,2.731c-0.197,0.479-0.245,1.149-0.245,1.821v12.543h-7.465c0,0,0.098-20.354,0-22.459h7.465v3.179   c0.992-1.53,2.766-3.709,6.729-3.709c4.911,0,8.594,3.211,8.594,10.11V46.304z"/>
+                    </g>
+                </svg>
+            </a>
+        </div>
+        <div class="mt-10 text-center text-xs leading-5 text-gray-500" itemprop="copyrightHolder">&copy; The PHP Foundation</div>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const anchors = new AnchorJS()
+        anchors.add()
+
+        for (const element of document.getElementsByClassName('anchorjs-link')) {
+            element.addEventListener('click', function () {
+                navigator.clipboard.writeText(window.location.origin + window.location.pathname + element.getAttribute('href'))
+            })
+        }
+    })
+</script>
+
+
+<script>hljs.highlightAll();</script>
+
+<script src="https://cdn.usefathom.com/script.js" data-site="PJKRZUTE" defer></script>
+<!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="https://analytics.thephp.foundation/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '1']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+<noscript><p><img referrerpolicy="no-referrer-when-downgrade" src="https://analytics.thephp.foundation/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Matomo Code -->
+
+</body>
+</html>
