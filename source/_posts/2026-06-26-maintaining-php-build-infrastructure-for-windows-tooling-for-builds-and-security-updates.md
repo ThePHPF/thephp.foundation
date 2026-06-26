@@ -1,5 +1,6 @@
 ---
 title: "Maintaining PHP Build infrastructure for Windows: Tooling for builds and security updates"
+description: "Information about the criticality and details of providing support for PHP builds on Windows."
 layout: post
 tags:
     - windows
