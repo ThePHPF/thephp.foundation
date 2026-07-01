@@ -13,6 +13,7 @@ All posts are written using Markdown with frontmatter YAML, and should have the 
 ```markdown
 ---
 title: Title for the post
+description: one sentence describing the post
 layout: post
 tags:
     - update
