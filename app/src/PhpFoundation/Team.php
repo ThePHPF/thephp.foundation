@@ -294,6 +294,16 @@ class Team
                 'github' => 'https://github.com/menelion',
                 'url' => 'https://oire.org/about',
             ],
+            'the-php-foundation' => [
+                'name' => 'The PHP Foundation',
+                'image' => '/assets/icons/php_foundation.svg',
+                'job' => null,
+                'mastodon' => 'https://phpc.social/@thephpf',
+                'linkedin' => 'https://www.linkedin.com/company/phpfoundation/',
+                'github' => 'https://github.com/ThePHPF/',
+                'twitter' => 'https://twitter.com/thephpf',
+                'url' => 'https://thephp.foundation',
+            ],
         ];
     }
 

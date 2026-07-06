@@ -7,7 +7,9 @@
         {% if company %}
             <div class="text-black" itemprop="company">{{ company }}</div>
         {% endif %}
+        {% if job %}
         <div class="text-[#7f52ff]" itemprop="jobTitle">{{ job }}</div>
+        {% endif %}
         <ul class="flex space-x-4 list-none p-0 m-0">
             
             {% if linkedin %}

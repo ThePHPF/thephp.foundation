@@ -41,7 +41,9 @@
                      class="w-16 h-16 rounded-full lg:w-20 lg:h-20"/>
                 <div class="max-w-xl flex-auto leading-6 space-y-1">
                     <div class="text-lg/8 font-semibold tracking-tight text-gray-900">{{ author.name }}</div>
+                    {% if author.job %}
                     <div class="text-base/7 text-[#7f52ff]">{{ author.job }}</div>
+                    {% endif %}
                     <ul class="flex space-x-4 list-none p-0 m-0">
                         {% if author.linkedin %}
                         <li>
