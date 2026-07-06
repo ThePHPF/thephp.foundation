@@ -273,7 +273,7 @@ class Team
             'larry-garfield' => [
                 'name' => 'Larry Garfield',
                 'image' => 'https://avatars.githubusercontent.com/u/254863?v=4',
-                'job' => 'TODO',
+                'job' => null,
                 'mastodon' => 'https://phpc.social/@Crell',
                 'github' => 'https://github.com/crell',
                 'url' => 'https://www.garfieldtech.com/',
@@ -281,7 +281,7 @@ class Team
             'tim-dusterhus' => [
                 'name' => 'Tim Düsterhus',
                 'image' => 'https://avatars.githubusercontent.com/u/209270?v=4',
-                'job' => 'TODO',
+                'job' => null,
                 'mastodon' => 'https://phpc.social/@timwolla',
                 'github' => 'https://github.com/timwolla',
                 'url' => 'https://github.com/TimWolla/',
@@ -289,7 +289,7 @@ class Team
             'andre-polykanine' => [
                 'name' => 'André Polykanine',
                 'image' => 'https://avatars.githubusercontent.com/u/595597?v=4',
-                'job' => 'TODO',
+                'job' => null,
                 'mastodon' => 'https://dragonscave.space/@menelion',
                 'github' => 'https://github.com/menelion',
                 'url' => 'https://oire.org/about',
