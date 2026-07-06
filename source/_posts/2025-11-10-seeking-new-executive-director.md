@@ -4,9 +4,7 @@ layout: post
 tags:
   - news
 author:
-  - name: Nils Adermann
-    url: https://x.com/naderman
-
+  - nils-adermann
 published_at: 10 November 2025
 
 ---

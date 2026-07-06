@@ -4,8 +4,7 @@ layout: post
 tags:
   - stories
 author:
-  - name: Larry Garfield
-    url: https://github.com/Crell
+  - larry-garfield
 published_at: 6 November 2024
 ---
 

@@ -4,9 +4,7 @@ layout: post
 tags:
   - team
 author:
-  - name: Roman Pronskiy
-    url: https://twitter.com/pronskiy
-
+  - roman-pronskiy
 published_at: 30 September 2025
 
 ---

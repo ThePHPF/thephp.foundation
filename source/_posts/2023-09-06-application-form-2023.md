@@ -5,11 +5,8 @@ layout: post
 tags:
   - team
 author:
-  - name: Roman Pronskiy
-    url: https://twitter.com/pronskiy
-  
-  - name: Nils Adermann
-    url: https://twitter.com/naderman
+    - roman-pronskiy
+    - nils-adermann
 published_at: 06 September 2023
 
 ---

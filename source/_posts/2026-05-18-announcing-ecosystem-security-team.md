@@ -5,8 +5,7 @@ tags:
     - security
     - team
 author:
-  name: Elizabeth Barron
-  url: https://www.linkedin.com/in/elizabethn/
+  - elizabeth-barron
 published_at: 18 May 2026
 ---
 The core [mission](https://thephp.foundation/#our-mission) of the PHP Foundation is to ensure the long-term prosperity of the PHP language. Today, your, or your company's, financial contributions primarily fund developers working on the PHP language. In addition to sponsorships, the PHP Foundation uses grants to enable projects like last year's [PHP Core Security Audit](https://thephp.foundation/blog/2025/04/10/php-core-security-audit-results/) funded by the [Sovereign Tech Agency](https://www.sovereign.tech).

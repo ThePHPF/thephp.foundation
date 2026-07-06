@@ -4,8 +4,7 @@ layout: post
 tags:
   - news
 author:
-  - name: Roman Pronskiy
-    url: https://twitter.com/pronskiy
+  - roman-pronskiy
 published_at: 15 May 2025
 ---
 

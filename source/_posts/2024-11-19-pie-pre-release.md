@@ -4,8 +4,7 @@ layout: post
 tags:
   - news
 author:
-  - name: James Titcumb
-    url: https://phpc.social/@asgrim
+  - james-titcumb
 published_at: 19 November 2024
 ---
 

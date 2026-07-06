@@ -21,7 +21,19 @@ pagination:
         {% for post in page.pagination.items %}
         <article class="flex max-w-xl flex-col items-start">
             <div class="flex items-center gap-x-4 text-xs">
-                <div class="text-gray-500">{{ post.published_at|date("M d, Y") }}</div>
+                <div class="text-gray-500">
+                    Published on {{ post.published_at|date("M d, Y") }}
+
+                    <span class="mt-2 text-xs">by
+                        {% for item in post.author %}
+                        {% set author = fetch_member_by_code(item) %}
+                        <span itemprop="publisher" itemscope itemtype="https://schema.org/Person"><a
+                                href="{{ author.url }}" itemprop="url" class="no-underline" target="_blank"
+                                rel="noopener noreferrer"><span itemprop="name">{{ author.name }}</span></a></span>{% if
+                        loop.last == false %}, {% endif %}
+                        {% endfor %}
+                    </span>
+                </div>
                 {% if post.tags is defined%}
                 <div>
                     {% for tag in post.tags %}
@@ -39,20 +51,6 @@ pagination:
                         {{ post.title|raw }}
                     </a>
                 </h3>
-                {% if post.author.name is defined%}
-                <div class="mt-2 text-xs">
-                    Published on <span>{{ post.published_at|date("M d, Y") }}</span>
-                    by by <a href="{{ post.author.url }}" target="_blank" rel="noopener noreferrer">{{ post.author.name }}</a>
-                </div>
-                {% elseif post.author is iterable%}
-                <div class="mt-2 text-xs">
-                    Published on <span>{{ post.published_at|date("M d, Y") }}</span>
-                    by
-                    {% for author in post.author %}
-                    <a href="{{ author.url }}" target="_blank" rel="noopener noreferrer">{{ author.name }}</a>{% if loop.last == false  %}, {% endif %}
-                    {% endfor %}
-                </div>
-                {% endif %}
                 <div class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
                     {{ post.content|striptags|length > 100 ? (post.content|striptags|slice(0, 150) ~ '...')|raw :
                     post.content|striptags|raw }}

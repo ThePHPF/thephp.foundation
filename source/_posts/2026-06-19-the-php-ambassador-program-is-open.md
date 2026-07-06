@@ -5,8 +5,7 @@ tags:
     - ambassadors
     - SIGs
 author:
-  name: Elizabeth Barron
-  url: https://www.linkedin.com/in/elizabethn/
+  - elizabeth-barron
 published_at: 19 June 2026
 ---
 

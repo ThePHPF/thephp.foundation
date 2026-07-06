@@ -4,12 +4,9 @@ layout: post
 tags:
   - news
 author:
-  - name: Arnaud Le Blanc
-    url: https://github.com/arnaud-lb
-  - name: Derick Rethans
-    url: https://derickrethans.nl
-  - name: Larry Garfield
-    url: https://www.garfieldtech.com/
+    - arnaud-le-blanc
+    - derick-rethans
+    - larry-garfield
 published_at: 19 August 2024
 ---
 

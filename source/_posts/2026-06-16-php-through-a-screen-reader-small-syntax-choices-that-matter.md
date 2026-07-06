@@ -4,8 +4,7 @@ layout: post
 tags:
     - accessibility
 author:
-  name: André Polykanine
-  url: https://oire.org/about
+  - andre-polykanine
 published_at: 16 June 2026
 ---
 

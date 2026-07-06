@@ -5,8 +5,7 @@ layout: post
 tags:
     - roundup
 author:
-  name: Ayesh Karunaratne
-  url: https://twitter.com/Ayeshlive
+    - ayesh-karunaratne
 published_at: 28 April 2022
 ---
 

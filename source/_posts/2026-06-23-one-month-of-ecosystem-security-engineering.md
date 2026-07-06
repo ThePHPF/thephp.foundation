@@ -6,8 +6,7 @@ tags:
     - security
     - SIGs
 author:
-  name: Volker Dusch
-  url: https://de.linkedin.com/in/volker-dusch
+  - volker-dusch
 published_at: 23 June 2026
 ---
 

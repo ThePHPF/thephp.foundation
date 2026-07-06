@@ -4,10 +4,9 @@ layout: post
 tags:
   - news
 author:
-  - name: Roman Pronskiy
-    url: https://twitter.com/pronskiy
-  - name: Joe Watkins
-    url: https://github.com/krakjoe
+  - roman-pronskiy
+  - joe-watkins
+
 published_at: 25 September 2025
 ---
 

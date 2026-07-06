@@ -4,8 +4,7 @@ layout: post
 tags:
 - roundup
 author:
-  name: Roman Pronskiy
-  url: https://twitter.com/pronskiy  
+    - roman-pronskiy
 published_at: 06 June 2023
 
 ---
