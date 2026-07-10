@@ -139,7 +139,7 @@ class Team
                 'name' => 'Gina Peter Banyard',
                 'image' => 'https://avatars.githubusercontent.com/u/7906688?s=200&v=4',
                 'job' => 'Core Developer',
-                'twitter' => 'https://twitter.com/Girgias',
+                'mastodon' => 'https://phpc.social/@Girgias',
                 'github' => 'https://github.com/girgias',
                 'url' => 'https://github.com/Girgias',
             ],
