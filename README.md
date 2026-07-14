@@ -18,12 +18,13 @@ layout: post
 tags:
     - update
 author:
-  name: Your name
-  url: A URL with information on you
+- Your name as it appears in the Team.php file, example: roman-pronskiy (multiple entries are allowed, one per line)
 published_at: DD Month YYYY
 ---
 Markdown content starts here - no header title needed
 ```
+
+_Note: new authors will need to have their information added to the [Team.php file](https://github.com/ThePHPF/thephp.foundation/blob/main/app/src/PhpFoundation/Team.php) before publishing_
 
 ### Adding images
 
