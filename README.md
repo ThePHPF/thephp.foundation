@@ -18,7 +18,7 @@ layout: post
 tags:
     - update
 author:
-  name: Your name as it appears in the Team.php file, example: roman-pronskiy
+- Your name as it appears in the Team.php file, example: roman-pronskiy (multiple entries are allowed, one per line)
 published_at: DD Month YYYY
 ---
 Markdown content starts here - no header title needed
