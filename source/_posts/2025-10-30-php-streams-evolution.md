@@ -4,9 +4,7 @@ layout: post
 tags:
   - development
 author:
-  - name: Jakub Zelenka
-    url: https://github.com/bukka
-
+  - jakub-zelenka
 published_at: 30 October 2025
 
 ---

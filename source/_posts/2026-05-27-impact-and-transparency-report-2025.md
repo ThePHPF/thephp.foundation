@@ -4,8 +4,7 @@ layout: post
 tags:
     - report
 author:
-  name: Elizabeth Barron
-  url: https://www.linkedin.com/in/elizabethn/
+  - elizabeth-barron
 published_at: 27 May 2026
 ---
 ## Executive Summary

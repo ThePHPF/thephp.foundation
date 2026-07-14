@@ -4,8 +4,7 @@ layout: post
 tags:
     - survey
 author:
-  name: Elizabeth Barron
-  url: https://www.linkedin.com/in/elizabethn/
+  - elizabeth-barron
 published_at: 09 June 2026
 ---
 

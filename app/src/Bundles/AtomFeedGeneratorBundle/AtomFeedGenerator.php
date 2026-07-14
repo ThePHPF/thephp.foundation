@@ -2,6 +2,7 @@
 
 namespace App\Bundles\AtomFeedGeneratorBundle;
 
+use App\PhpFoundation\Team;
 use App\Sitemap\Author;
 use App\Sitemap\Entry;
 use App\Sitemap\SitemapGenerator;
@@ -58,10 +59,8 @@ class AtomFeedGenerator implements EventSubscriberInterface
             }
 
             $authors = [];
-            if ($name = $data->get('author.name')) {
-                $authors[] = new Author($name, $data->get('author.url'));
-            } else {
-                foreach ($data->get('author') as $author) {
+            foreach ((array)$data->get('author') as $author) {
+                if ($author = Team::getMemberByCode($author)) {
                     $authors[] = new Author($author['name'], $author['url']);
                 }
             }

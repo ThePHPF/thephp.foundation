@@ -5,8 +5,7 @@ tags:
   - news
   - sponsors
 author:
-  - name: Roman Pronskiy
-    url: https://twitter.com/pronskiy
+  - roman-pronskiy
 published_at: 26 January 2026
 ---
 

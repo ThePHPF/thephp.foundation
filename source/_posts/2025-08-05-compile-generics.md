@@ -4,10 +4,8 @@ layout: post
 tags:
   - stories
 author:
-  - name: Larry Garfield
-    url: https://github.com/Crell
-  - name: Gina Banyard
-    url: https://github.com/Girgias
+  - larry-garfield
+  - gina-peter-banyard
 published_at: 04 August 2025
 ---
 

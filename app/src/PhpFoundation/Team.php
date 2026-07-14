@@ -1,0 +1,316 @@
+<?php
+
+namespace App\PhpFoundation;
+
+class Team
+{
+    public static function getStructure(): array
+    {
+        return [
+            [
+                'title' => 'Staff',
+                'description' => 'The PHP Foundation staff members who coordinate operations and fundraising.',
+                'members' => ['elizabeth-barron', 'ben-marks'],
+            ],
+            [
+                'title' => 'Board',
+                'description' => 'The Board of Directors consists of veteran PHP core developers, PHP community leaders, representatives of sponsors, and other key stakeholders. The PHP Foundation does not compensate board members.',
+                'members' => ['sebastian-bergmann', 'nils-adermann', 'benjamin-eberlei', 'josepha-haden', 'roman-pronskiy', 'nicolas-grekas', 'sara-golemon', 'matthew-weier-o-phinney', 'matt-stauffer'],
+            ],
+            [
+                'title' => 'Core Developers',
+                'description' => 'The PHP Foundation contracts 12 full-time and part-time engineers to maintain and develop the PHP language and to support the PHP ecosystem.',
+                'members' => ['derick-rethans', 'gina-peter-banyard', 'ilija-tovilo', 'jakub-zelenka', 'mate-kocsis', 'arnaud-le-blanc', 'david-carlier', 'james-titcumb', 'saki-takamachi', 'shivam-mathur', 'joe-watkins', 'volker-dusch'],
+            ],
+            [
+                'title' => 'Community',
+                'description' => 'Active community members who help the PHP Foundation.',
+                'members' => ['rasmus-lerdorf', 'dmitry-stogov', 'nikita-popov', 'ayesh-karunaratne', 'tobias-nyholm', 'sergey-panteleev'],
+            ],
+        ];
+    }
+
+    public static function getMembers(): array
+    {
+        return [
+            'elizabeth-barron' => [
+                'name' => 'Elizabeth Barron',
+                'image' => '/assets/team/elizabeth_barron.jpeg',
+                'job' => 'Executive Director',
+                'mastodon' => 'https://fosstodon.org/@elizabeth',
+                'linkedin' => 'https://www.linkedin.com/in/elizabethn',
+                'url' => 'https://www.linkedin.com/in/elizabethn/',
+            ],
+            'ben-marks' => [
+                'name' => 'Ben Marks',
+                'image' => '/assets/team/ben_marks.jpeg',
+                'job' => 'Director (Fundraising)',
+                'twitter' => 'https://twitter.com/benmarks',
+                'github' => 'https://github.com/benmarks',
+                'url' => 'https://www.linkedin.com/in/bhmarks/',
+            ],
+            'sebastian-bergmann' => [
+                'name' => 'Sebastian Bergmann',
+                'image' => 'https://avatars.githubusercontent.com/u/25218?s=200&v=4',
+                'job' => 'Board member',
+                'mastodon' => 'https://phpc.social/@sebastian',
+                'github' => 'https://github.com/sebastianbergmann',
+                'url' => 'https://github.com/sebastianbergmann',
+            ],
+            'nils-adermann' => [
+                'name' => 'Nils Adermann',
+                'company' => 'Private Packagist',
+                'image' => 'https://avatars.githubusercontent.com/u/154844?s=200&v=4',
+                'job' => 'Board member',
+                'linkedin' => 'https://www.linkedin.com/in/nilsadermann',
+                'mastodon' => 'https://phpc.social/@naderman',
+                'twitter' => 'https://twitter.com/naderman',
+                'github' => 'https://github.com/naderman',
+                'url' => 'https://twitter.com/naderman',
+            ],
+            'benjamin-eberlei' => [
+                'name' => 'Benjamin Eberlei',
+                'company' => 'Tideways',
+                'image' => 'https://avatars.githubusercontent.com/u/26936?s=200&v=4',
+                'job' => 'Board member',
+                'twitter' => 'https://twitter.com/beberlei',
+                'github' => 'https://github.com/beberlei',
+                'url' => 'https://x.com/beberlei',
+            ],
+            'josepha-haden' => [
+                'name' => 'Josepha Haden',
+                'image' => 'https://2.gravatar.com/avatar/b1384df9e94641211dd00e4e8203d80c?s=200',
+                'job' => 'Board member',
+                'twitter' => 'https://twitter.com/JosephaHaden',
+                'url' => 'https://twitter.com/JosephaHaden',
+            ],
+            'roman-pronskiy' => [
+                'name' => 'Roman Pronskiy',
+                'company' => 'JetBrains',
+                'image' => 'https://avatars.githubusercontent.com/u/1196825?s=200&v=4',
+                'job' => 'Board member',
+                'twitter' => 'https://twitter.com/pronskiy',
+                'github' => 'https://github.com/pronskiy',
+                'url' => 'https://twitter.com/pronskiy',
+            ],
+            'nicolas-grekas' => [
+                'name' => 'Nicolas Grekas',
+                'company' => 'Symfony',
+                'image' => 'https://avatars.githubusercontent.com/u/243674?s=200&v=4',
+                'job' => 'Board member',
+                'twitter' => 'https://twitter.com/nicolasgrekas',
+                'github' => 'https://github.com/nicolas-grekas/',
+                'url' => 'https://twitter.com/nicolasgrekas',
+            ],
+            'sara-golemon' => [
+                'name' => 'Sara Golemon',
+                'image' => 'https://avatars.githubusercontent.com/u/812538?s=200&v=4',
+                'job' => 'Board member',
+                'mastodon' => 'https://phpc.social/@pollita',
+                'github' => 'https://github.com/sgolemon',
+                'url' => 'https://phpc.social/@pollita',
+            ],
+            'matthew-weier-o-phinney' => [
+                'name' => 'Matthew Weier O\'Phinney',
+                'company' => 'Perforce',
+                'image' => 'https://avatars.githubusercontent.com/u/25943?s=200&v=4',
+                'job' => 'Board member',
+                'mastodon' => 'https://phpc.social/@mwop',
+                'github' => 'https://github.com/weierophinney',
+                'url' => 'https://phpc.social/@mwop',
+            ],
+            'matt-stauffer' => [
+                'name' => 'Matt Stauffer',
+                'company' => 'Tighten',
+                'image' => 'https://avatars.githubusercontent.com/u/151829?s=200&v=4',
+                'job' => 'Board member',
+                'github' => 'https://github.com/mattstauffer',
+                'url' => 'https://github.com/mattstauffer',
+            ],
+            'derick-rethans' => [
+                'name' => 'Derick Rethans',
+                'image' => 'https://avatars.githubusercontent.com/u/208074?s=200&v=4',
+                'job' => 'Core Developer',
+                'mastodon' => 'https://phpc.social/@derickr',
+                'github' => 'https://github.com/derickr',
+                'url' => 'https://derickrethans.nl',
+            ],
+            'gina-peter-banyard' => [
+                'name' => 'Gina Peter Banyard',
+                'image' => 'https://avatars.githubusercontent.com/u/7906688?s=200&v=4',
+                'job' => 'Core Developer',
+                'mastodon' => 'https://phpc.social/@Girgias',
+                'github' => 'https://github.com/girgias',
+                'url' => 'https://github.com/Girgias',
+            ],
+            'ilija-tovilo' => [
+                'name' => 'Ilija Tovilo',
+                'image' => 'https://avatars.githubusercontent.com/u/1752683?s=200&v=4',
+                'job' => 'Core Developer',
+                'twitter' => 'https://twitter.com/IlijaTovilo',
+                'github' => 'https://github.com/iluuu1994',
+                'url' => 'https://twitter.com/IlijaTovilo',
+            ],
+            'jakub-zelenka' => [
+                'name' => 'Jakub Zelenka',
+                'image' => 'https://avatars.githubusercontent.com/u/137594?s=200&v=4',
+                'job' => 'Core Developer',
+                'github' => 'https://github.com/bukka',
+                'url' => 'https://github.com/bukka',
+            ],
+            'mate-kocsis' => [
+                'name' => 'Máté Kocsis',
+                'image' => 'https://avatars.githubusercontent.com/u/6057627?s=200&v=4',
+                'job' => 'Core Developer',
+                'twitter' => 'https://twitter.com/kocsismate90',
+                'github' => 'https://github.com/kocsismate',
+                'url' => 'https://twitter.com/kocsismate90',
+            ],
+            'arnaud-le-blanc' => [
+                'name' => 'Arnaud Le Blanc',
+                'image' => 'https://avatars.githubusercontent.com/u/365207?s=200&v=4',
+                'job' => 'Core Developer',
+                'twitter' => 'https://twitter.com/arnaud_lb',
+                'github' => 'https://github.com/arnaud-lb',
+                'url' => 'https://github.com/arnaud-lb',
+            ],
+            'david-carlier' => [
+                'name' => 'David Carlier',
+                'image' => 'https://avatars.githubusercontent.com/u/4922778?s=200&v=4',
+                'job' => 'Core Developer',
+                'twitter' => 'https://twitter.com/devnexen',
+                'github' => 'https://github.com/devnexen',
+                'url' => 'https://twitter.com/devnexen',
+            ],
+            'james-titcumb' => [
+                'name' => 'James Titcumb',
+                'image' => 'https://avatars.githubusercontent.com/u/496145?s=200&v=4',
+                'job' => 'Core Developer',
+                'mastodon' => 'https://phpc.social/@asgrim',
+                'github' => 'https://github.com/asgrim',
+                'url' => 'https://phpc.social/@asgrim',
+            ],
+            'saki-takamachi' => [
+                'name' => 'Saki Takamachi',
+                'image' => 'https://avatars.githubusercontent.com/u/34942839?s=200&v=4',
+                'job' => 'Core Developer',
+                'twitter' => 'https://twitter.com/takamachi1saki',
+                'github' => 'https://github.com/SakiTakamachi',
+                'url' => 'https://twitter.com/takamachi1saki',
+            ],
+            'shivam-mathur' => [
+                'name' => 'Shivam Mathur',
+                'image' => 'https://avatars.githubusercontent.com/u/1571086?s=200&v=4',
+                'job' => 'Core Developer',
+                'twitter' => 'https://twitter.com/meshivammathur',
+                'github' => 'https://github.com/shivammathur',
+                'url' => 'https://github.com/shivammathur',
+            ],
+            'joe-watkins' => [
+                'name' => 'Joe Watkins',
+                'image' => 'https://avatars.githubusercontent.com/u/2236138?s=200&v=4',
+                'job' => 'Core Developer',
+                'twitter' => 'https://twitter.com/krakjoe',
+                'github' => 'https://github.com/krakjoe',
+                'url' => 'https://github.com/krakjoe',
+            ],
+            'volker-dusch' => [
+                'name' => 'Volker Dusch',
+                'image' => 'https://avatars.githubusercontent.com/u/247397?s=200&v=4',
+                'job' => 'Ecosystem AI Security Engineer in Residence',
+                'mastodon' => 'https://phpc.social/@edorian',
+                'github' => 'https://github.com/edorian',
+                'url' => 'https://de.linkedin.com/in/volker-dusch',
+            ],
+            'rasmus-lerdorf' => [
+                'name' => 'Rasmus Lerdorf',
+                'image' => 'https://avatars.githubusercontent.com/u/54641?s=200&v=4',
+                'job' => 'PHP Fellow',
+                'twitter' => 'https://twitter.com/rasmus',
+                'github' => 'https://github.com/rlerdorf',
+                'url' => 'https://twitter.com/rasmus',
+            ],
+            'dmitry-stogov' => [
+                'name' => 'Dmitry Stogov',
+                'image' => 'https://avatars.githubusercontent.com/u/2510034?s=200&v=4',
+                'job' => 'PHP Fellow',
+                'twitter' => 'https://twitter.com/dstogov',
+                'github' => 'https://github.com/dstogov',
+                'url' => 'https://twitter.com/dstogov',
+            ],
+            'nikita-popov' => [
+                'name' => 'Nikita Popov',
+                'image' => 'https://avatars.githubusercontent.com/u/216080?s=200&v=4',
+                'job' => 'PHP Fellow',
+                'twitter' => 'https://twitter.com/nikita_ppv',
+                'github' => 'https://github.com/nikic',
+                'url' => 'https://twitter.com/nikita_ppv',
+            ],
+            'ayesh-karunaratne' => [
+                'name' => 'Ayesh Karunaratne',
+                'image' => 'https://avatars.githubusercontent.com/u/811553?s=200&v=4',
+                'job' => 'PHP Core Roundup',
+                'twitter' => 'https://twitter.com/Ayeshlive',
+                'github' => 'https://github.com/Ayesh',
+                'url' => 'https://aye.sh',
+            ],
+            'tobias-nyholm' => [
+                'name' => 'Tobias Nyholm',
+                'image' => 'https://avatars.githubusercontent.com/u/1275206?s=200&v=4',
+                'job' => 'Code of Conduct Team',
+                'twitter' => 'https://twitter.com/TobiasNyholm',
+                'github' => 'https://github.com/Nyholm',
+                'url' => 'https://twitter.com/TobiasNyholm',
+            ],
+            'sergey-panteleev' => [
+                'name' => 'Sergey Panteleev',
+                'image' => 'https://avatars.githubusercontent.com/u/4685504?s=200&v=4',
+                'job' => 'Website',
+                'twitter' => 'https://twitter.com/s_panteleev',
+                'github' => 'https://github.com/saundefined',
+                'url' => 'https://sergeypanteleev.com',
+            ],
+            'larry-garfield' => [
+                'name' => 'Larry Garfield',
+                'image' => 'https://avatars.githubusercontent.com/u/254863?v=4',
+                'job' => null,
+                'mastodon' => 'https://phpc.social/@Crell',
+                'github' => 'https://github.com/crell',
+                'url' => 'https://www.garfieldtech.com/',
+            ],
+            'tim-dusterhus' => [
+                'name' => 'Tim Düsterhus',
+                'image' => 'https://avatars.githubusercontent.com/u/209270?v=4',
+                'job' => null,
+                'mastodon' => 'https://phpc.social/@timwolla',
+                'github' => 'https://github.com/timwolla',
+                'url' => 'https://github.com/TimWolla/',
+            ],
+            'andre-polykanine' => [
+                'name' => 'André Polykanine',
+                'image' => 'https://avatars.githubusercontent.com/u/595597?v=4',
+                'job' => null,
+                'mastodon' => 'https://dragonscave.space/@menelion',
+                'github' => 'https://github.com/menelion',
+                'url' => 'https://oire.org/about',
+            ],
+            'the-php-foundation' => [
+                'name' => 'The PHP Foundation',
+                'image' => '/assets/icons/php_foundation.svg',
+                'job' => null,
+                'mastodon' => 'https://phpc.social/@thephpf',
+                'linkedin' => 'https://www.linkedin.com/company/phpfoundation/',
+                'github' => 'https://github.com/ThePHPF/',
+                'twitter' => 'https://twitter.com/thephpf',
+                'url' => 'https://thephp.foundation',
+            ],
+        ];
+    }
+
+    public static function getMemberByCode(string $code): array
+    {
+        $members = self::getMembers();
+
+        return $members[$code] ?? [];
+    }
+}

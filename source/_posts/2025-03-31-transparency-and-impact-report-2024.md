@@ -4,8 +4,7 @@ layout: post
 tags: 
   - report
 author:
-  name: Roman Pronskiy
-  url: https://twitter.com/pronskiy
+  - roman-pronskiy
 published_at: 31 March 2025
 ---
 

@@ -2,6 +2,7 @@
 
 namespace App\Bundles\SharingImageGeneratorBundle;
 
+use App\PhpFoundation\Team;
 use Dflydev\DotAccessConfiguration\Configuration;
 use Sculpin\Core\Event\SourceSetEvent;
 use Sculpin\Core\Sculpin;
@@ -59,11 +60,14 @@ class SharingImageGenerator implements EventSubscriberInterface
                 $image->setTitle($title);
             }
 
-            if ($name = $data->get('author.name')) {
-                $image->setAuthor("by $name");
-            } elseif (!empty($data->get('author'))) {
-                $image->setAuthor('by ' . implode(', ', array_column($data->get('author'), 'name')));
+            $authors = [];
+            foreach ((array)$data->get('author') as $author) {
+                if ($item = Team::getMemberByCode($author)) {
+                    $authors[] = $item['name'];
+                }
             }
+
+            $image->setAuthor('by ' . implode(', ', $authors));
 
             $image->save("output_$env/assets/share/$filename");
         }

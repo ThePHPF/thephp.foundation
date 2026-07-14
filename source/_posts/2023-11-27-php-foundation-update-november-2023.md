@@ -4,8 +4,7 @@ layout: post
 tags:
     - update
 author:
-    name: Roman Pronskiy
-    url: https://twitter.com/pronskiy
+    - roman-pronskiy
 published_at: 27 November 2023
 ---
 ```<?php echo 'Hello world!';```

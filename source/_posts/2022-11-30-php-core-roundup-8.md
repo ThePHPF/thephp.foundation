@@ -5,8 +5,7 @@ layout: post
 tags:
     - roundup
 author:
-  name: Ayesh Karunaratne
-  url: https://aye.sh
+    - ayesh-karunaratne
 published_at: 2 December 2022
 ---
 

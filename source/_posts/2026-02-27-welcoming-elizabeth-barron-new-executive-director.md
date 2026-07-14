@@ -4,9 +4,7 @@ layout: post
 tags:
   - news
 author:
-  - name: The PHP Foundation
-    url: https://thephp.foundation
-
+  - the-php-foundation
 published_at: 27 February 2026
 
 ---

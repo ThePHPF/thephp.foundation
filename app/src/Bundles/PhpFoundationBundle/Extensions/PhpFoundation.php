@@ -2,6 +2,7 @@
 
 namespace App\Bundles\PhpFoundationBundle\Extensions;
 
+use App\PhpFoundation\Team;
 use SculpinKernel;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
@@ -18,10 +19,12 @@ class PhpFoundation extends AbstractExtension
         return 'include_php';
     }
 
-    public function getFunctions()
+    public function getFunctions(): array
     {
         return [
             new TwigFunction('fetch_sponsors', [$this, 'fetchSponsors']),
+            new TwigFunction('fetch_structure', [$this, 'fetchStructure']),
+            new TwigFunction('fetch_member_by_code', [$this, 'fetchMemberByCode']),
         ];
     }
 
@@ -193,5 +196,26 @@ class PhpFoundation extends AbstractExtension
                 ],
             ],
         ];
+    }
+
+    public function fetchStructure(): array
+    {
+        $structure = Team::getStructure();
+
+        foreach ($structure as &$block) {
+            foreach ($block['members'] as &$member) {
+                if ($item = Team::getMemberByCode($member)) {
+                    $member = $item;
+                }
+            }
+            unset($member);
+        }
+
+        return $structure;
+    }
+
+    public function fetchMemberByCode(string $code): array
+    {
+        return Team::getMemberByCode($code);
     }
 }

@@ -4,9 +4,7 @@ layout: post
 tags:
   - news
 author:
-  - name: Benjamin Eberlei
-    url: https://x.com/beberlei
-
+  - benjamin-eberlei
 published_at: 02 December 2025
 
 ---

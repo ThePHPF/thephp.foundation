@@ -6,8 +6,7 @@ tags:
     - windows
     - security
 author:
-  name: Shivam Mathur
-  url: https://github.com/shivammathur
+  - shivam-mathur
 published_at: 26 June 2026
 ---
 

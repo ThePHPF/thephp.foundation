@@ -5,8 +5,7 @@ layout: post
 tags:
     - interview
 author:
-    name: Sebastian Bergmann
-    url: https://github.com/sebastianbergmann
+    - sebastian-bergmann
 published_at: 6 May 2022
 ---
 

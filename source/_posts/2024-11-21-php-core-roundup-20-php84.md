@@ -5,11 +5,8 @@ layout: post
 tags:
   - roundup
 author:
-  - name: Ayesh Karunaratne
-    url: https://aye.sh
-
-  - name: Sergey Panteleev
-    url: https://sergeypanteleev.com
+  - ayesh-karunaratne
+  - sergey-panteleev
 ---
 
 We are thrilled to announce that after a year of hard work, dedication, and collaboration, [**PHP 8.4**](https://www.php.net/releases/8.4/) is officially here!

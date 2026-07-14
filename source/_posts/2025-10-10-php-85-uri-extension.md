@@ -4,9 +4,7 @@ layout: post
 tags:
   - stories
 author:
-  - name: Tim Düsterhus
-    url: https://github.com/TimWolla/
-
+  - tim-dusterhus
 published_at: 10 October 2025
 
 ---
