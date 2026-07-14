@@ -3,9 +3,25 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2026-07-14T14:18:46+00:00</updated>
+    <updated>2026-07-14T14:26:07+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Welcoming Alexandre Daubois to The PHP Foundation]]></title>
+            <link href="https://thephp.foundation/blog/2026/07/14/welcoming-alexandre-daubois/"/>
+            <updated>2026-07-14T00:00:00+00:00</updated>
+            <id>https://thephp.foundation/blog/2026/07/14/welcoming-alexandre-daubois/</id>
+            <content type="html"><![CDATA[<p>As you know, the main objective of The PHP Foundation’s mission is the sustainability of the PHP language, and a large part of that mission is focused on PHP core maintenance tasks. Included in this maintenance body of work are tasks such as issue triage, code reviews, and bug fixes. We take this responsibility very seriously, especially when it comes to security.</p>
+
+<p>In recent months, there has been a marked increase in the number of security reports to <a href="https://github.com/php/php-src">php-src</a>, due to the increased availability of AI tools and the ease with which these reports can be generated. Some of these reports are not valid security issues or are basic duplicates of previously filed reports. But even so, every one of these reports must be triaged and validated, then if deemed valid, they must be classified, fixed, reviewed, and merged. There is a very small team that currently handles these reports, and it is becoming more difficult to not only keep up with the influx, but to address issues that already exist.</p>
+
+<p><img src="/assets/post-images/2026/alexandre-daubois/alexandre-daubois.jpg" width="300" alt="photo of alexandre daubois giving a talk" class="mb-4 sm:mr-4 sm:float-left"/>As a result, we are thrilled to add <a href="https://www.linkedin.com/in/alexandre-daubois/?locale=en">Alexandre Daubois</a> to our team of contracted developers, focused on security. Alexandre will be spending a few hours a week helping with triage and the handling and fixing of incoming security reports.</p>
+
+<p>As the current CTO of <a href="http://Les-Tilleuls.coop">Les-Tilleuls.coop</a>, Alexandre brings a wealth of experience in addressing and fixing security issues. He has deep knowledge of Symfony, FrankenPHP, PHP core, and Scrutineer, and has already been instrumental in implementing recommendations from The PHP Foundation’s Ecosystem Security Team. We are confident that his contributions will make a huge impact in our ability to process incoming reports and effectively harden the PHP language.</p>
+
+<p>Please join us in welcoming Alexandre to The PHP Foundation team!</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[Meet TYPO3: Supporting the Open-Source Foundation of Its Ecosystem]]></title>
             <link href="https://thephp.foundation/blog/2026/07/01/meet-typo3/"/>
@@ -1414,54 +1430,6 @@ The goal is to gather representative input from PHP developers of all background
 <h2 id="outro">Outro</h2>
 
 <p>The work in this report is the runway for what's next. We head into 2026 with real momentum and a clear sense of what the community has asked of us.  None of the technical leadership, the security work, the new partnerships ahead, and the support for the PHP ecosystem happens without the people who fund us. <a href="https://thephp.foundation/sponsor/">With your help</a>, together we can keep PHP thriving in a changing open source world.</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Announcing the Ecosystem Security Team at The PHP Foundation]]></title>
-            <link href="https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/"/>
-            <updated>2026-05-18T00:00:00+00:00</updated>
-            <id>https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/</id>
-            <content type="html"><![CDATA[<p>The core <a href="https://thephp.foundation/#our-mission">mission</a> of the PHP Foundation is to ensure the long-term prosperity of the PHP language. Today, your, or your company's, financial contributions primarily fund developers working on the PHP language. In addition to sponsorships, the PHP Foundation uses grants to enable projects like last year's <a href="https://thephp.foundation/blog/2025/04/10/php-core-security-audit-results/">PHP Core Security Audit</a> funded by the <a href="https://www.sovereign.tech">Sovereign Tech Agency</a>.</p>
-
-<p>In March, the <a href="https://www.linuxfoundation.org/press/linux-foundation-announces-12.5-million-in-grant-funding-from-leading-organizations-to-advance-open-source-security">Linux Foundation announced a grant</a> with the goal of strengthening the security of the open source software ecosystem. This funding is managed by <a href="https://alpha-omega.dev">Alpha-Omega</a> and the Open Source Security Foundation <a href="https://openssf.org">(OpenSSF)</a>.</p>
-
-<p><strong>We're delighted to announce the PHP Foundation has been awarded a grant from <a href="https://alpha-omega.dev">Alpha-Omega</a> to help improve the security of the PHP open source ecosystem.</strong></p>
-
-<p>PHP is foundational to the modern web, and ensuring its security is essential for a significant portion of the web's functionality and integrity.</p>
-
-<p>New security tools making use of AI are accelerating the discovery of vulnerabilities in open source software. Initiatives like <a href="https://www.anthropic.com/glasswing">Project Glasswing</a> are attempting to prepare software for the increasing accessibility of such tooling to bad actors. A number of large PHP projects have already received and acted on credible audit reports and concrete issues found by these new tools.</p>
-
-<p>At the same time, many projects have been reporting a drastic increase in the volume of vulnerability reports they have to deal with, many bearing the hallmarks of lazy AI generation. These low-quality reports waste maintainers' time and overshadow legitimate issues.</p>
-
-<p>The PHP Foundation is creating a PHP Ecosystem Security Team to help our ecosystem maintainers with these new challenges. This new PHP Foundation team will help triage vulnerability reports and disclose them responsibly as necessary. It will work on tooling to discover, classify and remediate security vulnerabilities and share emerging techniques on using them effectively and help the PHP ecosystem adopt these tools. The team will respect maintainer bandwidth, provide high-quality reports, coordinate project access to new security tooling, support projects with only a few maintainers, and find solutions for projects with <a href="https://alpha-omega.dev/blog/weekend-at-bernies-which-of-your-dependencies-are-wearing-sunglasses/">no active maintainers at all</a>.</p>
-
-<p>We're excited our friends at the <a href="https://www.drupal.org/association">Drupal Association</a> were awarded a similar grant from Alpha-Omega to secure the Drupal ecosystem built on top of PHP. The PHP Foundation is looking forward to collaborating with the Drupal Security Team on shared approaches and we hope to be joined by more experts from individual PHP projects and subcommunities as we build out the new team.</p>
-
-<p>The PHP Foundation grant will fund a six-month full-time position titled "Ecosystem AI Security Engineer in Residence at the PHP Foundation" to lead this effort and to prepare a sustainability plan for the time after this initial phase. This person will act as a trusted intermediary between security researchers and maintainers in urgent, high-risk situations, and will collaborate with peers in similar roles across other language ecosystems. Additionally, grant funding will also be employed toward the team goals described above where they cannot be accomplished by the single paid lead position or with the help of PHP community volunteers.</p>
-
-<p>After many conversations with community leaders in the PHP ecosystem, known security experts and Foundation stakeholders, the PHP Foundation board voted unanimously to offer the position to <a href="https://phpc.social/@edorian">Volker Dusch (@edorian)</a>. We asked Volker to introduce himself.</p>
-
-<h2 id="meet-volker">Meet Volker</h2>
-
-<p><img src="/assets/post-images/2026/ecosystem-security/volker-dusch.png" width="300" alt="headshot of volker dusch" class="mb-4 sm:mr-4 sm:float-left"/>👋,</p>
-
-<p>Some of you may know me as one of the PHP 8.5 Release Managers, or might have met me at one of more than 100 PHP-related conferences I've visited or spoken at in the last 20 years.</p>
-
-<p>PHP has been the main programming language of my professional career, from helping maintain PHPUnit for a couple of years and more recently, working on various language RFCs.</p>
-
-<p>In the past, I've worked on a high-traffic social networking site, remote monitoring of solar plants and software for medical trials. Currently, I'm working on PHP performance and monitoring tooling at Tideways, which I'm grateful to for allowing me to take some time off to focus on this new challenge.</p>
-
-<h2 id="interested-in-hearing-from-me%3F-got-feedback%3F">Interested in hearing from me? Got feedback?</h2>
-
-<p>My goal is to be open and communicate early about how the Ecosystem Security Team is taking shape while making the most of the resources we have.</p>
-
-<p>Big projects and foundational libraries are on my radar for security analysis already, and I'm especially keen to hear from people who want to actively collaborate and have the bandwidth to do so.</p>
-
-<p>So if you want to put your project forward or have questions or comments for me, I'd love to hear from you!</p>
-
-<p>Get in touch via email: <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#x76;&#111;&#x6c;&#x6b;&#101;&#x72;&#64;&#x74;&#x68;&#101;&#x70;&#104;&#x70;&#x2e;&#102;&#x6f;&#117;&#x6e;&#x64;&#97;&#x74;&#105;&#x6f;&#x6e;">volker@thephp.foundation</a>.</p>
-
-<p>You can also find me on <a href="https://phpc.social/@edorian">Mastodon</a> and <a href="https://www.linkedin.com/in/volker-dusch/">LinkedIn</a>.</p>
 ]]></content>
         </entry>
     </feed>
