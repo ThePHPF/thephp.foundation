@@ -16,7 +16,7 @@ In recent months, there has been a marked increase in the number of security rep
 
 <img src="/assets/post-images/2026/alexandre-daubois/alexandre-daubois.jpg" width="300" alt="photo of alexandre daubois giving a talk" class="mb-4 sm:mr-4 sm:float-left"/>As a result, we are thrilled to add [Alexandre Daubois](https://www.linkedin.com/in/alexandre-daubois/?locale=en) to our team of contracted developers, focused on security. Alexandre will be spending a few hours a week helping with triage and the handling and fixing of incoming security reports. 
 
-As the current CTO of [Les-Tilleuls.coop](http://Les-Tilleuls.coop), Alexandre brings a wealth of experience in addressing and fixing security issues. He has deep knowledge of Symfony, FrankenPHP, PHP core, and Scrutineer, and has already been instrumental in implementing recommendations from The PHP Foundation’s Ecosystem Security Team. We are confident that his contributions will make a huge impact in our ability to process incoming reports and effectively harden the PHP language.
+As the current CTO of [Les-Tilleuls.coop](https://Les-Tilleuls.coop), Alexandre brings a wealth of experience in addressing and fixing security issues. He has deep knowledge of Symfony, FrankenPHP, PHP core, and Scrutineer, and has already been instrumental in implementing recommendations from The PHP Foundation’s Ecosystem Security Team. We are confident that his contributions will make a huge impact in our ability to process incoming reports and effectively harden the PHP language.
 
 Please join us in welcoming Alexandre to The PHP Foundation team!
 
