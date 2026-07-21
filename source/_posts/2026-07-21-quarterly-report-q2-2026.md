@@ -67,6 +67,10 @@ Volker founded the [PHP Ecosystem Security Team](https://thephp.foundation/blog/
 
 Our 13th contractor, Alexandre Daubois, is brand new to the team, so we won't have updates to share until the next quarterly report.
 
+### The PHP Foundation Leadership
+
+In addition to our team of developers, The Foundation's Executive Director (that's me!) and Director of Fundraising (Ben Marks) have also been hard at work making progress on our goals. Q2 focused on getting a lay of the land through a listening tour, creating and kicking off implementation of a strategy plan for the rest of the year, and onboarding new contractors, sponsors, and Board members. We launched the PHP Ambassador program, quarterly Advisory Board meetings, the State of PHP Survey, and revived the monthly newsletter. We continue to focus on increasing Foundation transparency and collaboration with the community, and expanding our mission to include other initiatives besides PHP core language development. 
+
 ---
 
-We are happy to share these updates with you, and if you have any questions about what our developers are working on, you can connect with us in The PHP Foundation Discord channel on the [PHPC server](https://phpc.chat/).
+We are happy to share these updates with you, and if you have any questions about what any of our contractors are working on, you can connect with us in The PHP Foundation Discord channel on the [PHPC server](https://phpc.chat/).
