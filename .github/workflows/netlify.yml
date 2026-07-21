@@ -1,6 +1,6 @@
 name: Build and Deploy to Netlify
 on:
-  pull_request_target:
+  pull_request:
     types: [ opened, synchronize, reopened, labeled ]
 jobs:
   build:
