@@ -10,6 +10,23 @@ title: Presentations
 
     <div class="my-16 gap-8 flex flex-col">
         {{ include('presentations-item.html', {
+            iframe: 'https://www.youtube.com/embed/ltoPWEzPqEQ',
+            date: 'Jun 09, 2026',
+            place: 'Amsterdam, Netherlands',
+            conference: 'JetBrains PHPverse 2026',
+            title: 'Getting to Know The PHP Foundation',
+            description: 'Many know The PHP Foundation exists; few know what it actually does. In this talk, Elizabeth explains why the Foundation was founded, what it works on, and how it supports the PHP ecosystem.',
+            team: [
+                {
+                    image: '/assets/team/elizabeth_barron.jpeg',
+                    url: 'https://www.linkedin.com/in/elizabethn',
+                    name: 'Elizabeth Barron',
+                    job: 'Executive Director',
+                }
+            ]
+        }) }}
+
+        {{ include('presentations-item.html', {
             iframe: 'https://www.youtube.com/embed/XE4g1Tl6RQw',
             date: 'Feb 05-06, 2024',
             place: 'Amsterdam, Netherlands',
