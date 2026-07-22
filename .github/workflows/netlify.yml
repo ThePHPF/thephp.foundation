@@ -15,11 +15,12 @@ jobs:
         uses: nilsreichardt/verify-safe-to-test-label@a65b1d76a873fe060b8ece697f238ef8805e6e23
         with:
           label: "safe to preview"
-          require-reapproval: true      
+          require-reapproval: true
     
       - uses: actions/checkout@v4
         with:
           ref: "refs/pull/${{ github.event.number }}/merge"
+          allow-unsafe-pr-checkout: true
 
       - name: Setup Node
         uses: actions/setup-node@v4
