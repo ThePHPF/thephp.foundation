@@ -22,16 +22,22 @@
             </div>
         </div>
         <div class="mt-6 flex border-t border-gray-900/5 pt-6 gap-x-8">
-            {% for user in team %}
-            <div class="relative flex items-center gap-x-4" itemprop="performer" itemscope itemtype="https://schema.org/Person">
+            {% for item in team %}
+            {% set user = fetch_member_by_code(item) %}
+            {% if user %}
+            <div class="relative flex items-center gap-x-4" itemprop="performer" itemscope
+                 itemtype="https://schema.org/Person">
                 <img src="{{ user.image }}" itemprop="image"
                      alt="{{ user.name }}" class="h-10 w-10 rounded-full bg-gray-50">
                 <div class="text-sm leading-6">
                     <a href="{{ user.url }}" class="text-gray-900 font-semibold no-underline"
                        target="_blank" rel="noopener noreferrer" itemprop="name">{{ user.name }}</a>
+                    {% if user.job %}
                     <div class="text-gray-600" itemprop="jobTitle">{{ user.job }}</div>
+                    {% endif %}
                 </div>
             </div>
+            {% endif %}
             {% endfor %}
         </div>
     </div>
