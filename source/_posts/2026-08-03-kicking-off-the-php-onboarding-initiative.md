@@ -7,7 +7,7 @@ tags:
     - onboarding
 author:
   - elizabeth-barron
-published_at: 24 July 2026
+published_at: 03 August 2026
 ---
 One of the most common pieces of feedback we hear from the PHP community is that the newcomer experience could use some improvement, and that we may be losing new users because of it. This is something that we as a community can address, and it's why The PHP Foundation made it part of our [strategy document](https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/#3.-php-onboarding-initiative) for the rest of 2026. Improving that experience matters a lot to us, because a better new user experience means more community growth and retention. We are launching the PHP Onboarding Initiative Special Interest Group to provide space for collaborative problem solving in this area.
 
@@ -22,6 +22,6 @@ Some of the identified issues in the PHP newcomer experience include:
 
 These problems are not new and they aren't easy to solve, but one thing about the PHP community that I personally love is its dedication to sharing knowledge with new learners and helping newcomers find their way. This sense of community and support for newcomers is why many of us are still here (including myself!). Wouldn't it be great if we could come together and create a better and more consistent experience for newcomers to PHP?
 
-If this is something that is of interest to you, we are hosting a kick-off meeting on **Monday, August 17 at 13:00 UTC**. To request an invite to this meeting, please register your interest using [this form](https://forms.gle/VNmijQm4gWjuDjnJA). Note: if you have already indicated your interest through this form, you do not need to submit it again.
+If this is something that is of interest to you, we are hosting a kick-off meeting on **Monday, August 24 at 13:00 UTC**. To request an invite to this meeting, please register your interest using [this form](https://forms.gle/VNmijQm4gWjuDjnJA). Note: if you have already indicated your interest through this form, you do not need to submit it again.
 
 If you cannot attend this meeting, that's okay! You are welcome to join the #the-php-foundation channel in the [#phpc Discord server](https://discord.phpc.social/) for access to this and the other Special Interest Group chats. We also have a [GitHub repository](https://github.com/ThePHPF/SIG-onboarding) where you can connect asynchronously.
