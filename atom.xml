@@ -3,9 +3,34 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2026-07-22T09:36:45+00:00</updated>
+    <updated>2026-08-03T17:49:35+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Kicking off the PHP Onboarding Initiative Special Interest Group]]></title>
+            <link href="https://thephp.foundation/blog/2026/08/03/kicking-off-the-php-onboarding-initiative/"/>
+            <updated>2026-08-03T00:00:00+00:00</updated>
+            <id>https://thephp.foundation/blog/2026/08/03/kicking-off-the-php-onboarding-initiative/</id>
+            <content type="html"><![CDATA[<p>One of the most common pieces of feedback we hear from the PHP community is that the newcomer experience could use some improvement, and that we may be losing new users because of it. This is something that we as a community can address, and it's why The PHP Foundation made it part of our <a href="https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/#3.-php-onboarding-initiative">strategy document</a> for the rest of 2026. Improving that experience matters a lot to us, because a better new user experience means more community growth and retention. We are launching the PHP Onboarding Initiative Special Interest Group to provide space for collaborative problem solving in this area.</p>
+
+<p>Some of the identified issues in the PHP newcomer experience include:</p>
+
+<ul>
+<li><strong>Where to begin:</strong> It is difficult for new PHP users to know where to start. There are many resources and tutorials available, but it is hard to know which ones are updated and accurate, and the sheer number of them is overwhelming. Building and helping people find resources that cater to their needs is something that would be helpful for newcomers.</li>
+<li><strong>Minding the gap:</strong> The <a href="http://php.net/docs">php.net Manual</a> is a fantastic resource, but it is more of a reference than an educational resource for beginners that are learning to code. There is a current gap between documentation for complete beginners and users who already grasp the basics and use the manual differently.</li>
+<li><strong>Limited presence in formal education:</strong> PHP is largely missing in universities and bootcamps. Although there are some places in the world where PHP (or a related framework/project) is taught, the presence of PHP is inconsistent. There won't be a "one-size-fits-all" approach to building more partnerships with educational institutions. But this is something that we can figure out together. (Also, this may overlap with the mission of the <a href="https://github.com/ThePHPF/SIG-ambassadors">PHP Ambassadors</a> Special Interest Group that has already launched.)</li>
+<li><strong>Finding your people:</strong> The onboarding experience differs greatly among newcomers, with some having connections to the community, and others fending for themselves. It would be ideal if we could provide a more consistent approach to bringing newcomers together and connecting them with the community.</li>
+<li><strong>Mentorship is hard to find:</strong> Although there have been previous attempts at mentorship programs, those have proven challenging to sustain. But <a href="https://www.linuxfoundation.org/hubfs/LF%20Research/LFX%20Mentorship%20in%20Open%20Source%20-%20Report.pdf?hsLang=en">research shows</a> that mentorship can make all the difference when it comes to retaining users and turning them into potential contributors and community members, especially when it comes to those from marginalized and underrepresented groups.</li>
+<li><strong>Installation process</strong> Ensuring that this process is as easy and straightforward as possible, and centering the experience of new users is something that we should continue to be mindful of. Because this will likely involve the php.net website, this is another potential overlap with the mission of the <a href="https://github.com/ThePHPF/SIG-ambassadors">Marketing Subgroup of the PHP Ambassadors</a> Special Interest Group.</li>
+</ul>
+
+<p>These problems are not new and they aren't easy to solve, but one thing about the PHP community that I personally love is its dedication to sharing knowledge with new learners and helping newcomers find their way. This sense of community and support for newcomers is why many of us are still here (including myself!). Wouldn't it be great if we could come together and create a better and more consistent experience for newcomers to PHP?</p>
+
+<p>If this is something that is of interest to you, we are hosting a kick-off meeting on <strong>Monday, August 24 at 13:00 UTC</strong>. To request an invite to this meeting, please register your interest using <a href="https://forms.gle/VNmijQm4gWjuDjnJA">this form</a>. Note: if you have already indicated your interest through this form, you do not need to submit it again.</p>
+
+<p>If you cannot attend this meeting, that's okay! You are welcome to join the #the-php-foundation channel in the <a href="https://discord.phpc.social/">#phpc Discord server</a> for access to this and the other Special Interest Group chats. We also have a <a href="https://github.com/ThePHPF/SIG-onboarding">GitHub repository</a> where you can connect asynchronously.</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[Quarterly Progress Report - Q2 2026]]></title>
             <link href="https://thephp.foundation/blog/2026/07/21/quarterly-report-q2-2026/"/>
@@ -995,45 +1020,6 @@ The goal is to gather representative input from PHP developers of all background
 <p>Thank you for helping us map the PHP ecosystem and for being part of the first State of PHP survey.</p>
 
 <p>-- The PHP Foundation and PhpStorm teams</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[The PHP Foundation’s Elizabeth Barron to keynote JetBrains PHPverse 2026]]></title>
-            <link href="https://thephp.foundation/blog/2026/05/28/phpverse-keynote/"/>
-            <updated>2026-05-28T00:00:00+00:00</updated>
-            <id>https://thephp.foundation/blog/2026/05/28/phpverse-keynote/</id>
-            <content type="html"><![CDATA[<p>PHP has undergone a remarkable transformation in recent years, and The PHP Foundation has played a major role in contributing to the development and maintenance of the language. The upcoming <a href="https://blog.jetbrains.com/phpstorm/2026/04/join-us-for-phpverse-2026-on-june-9/?utm_source=thephp.foundation&amp;utm_medium=referral&amp;utm_campaign=phpverse2026">JetBrains PHPverse conference</a> is a great opportunity to reflect on what has been done to reinforce PHP's position as a robust, modern language for web development.</p>
-
-<p>Elizabeth Barron, <a href="https://thephp.foundation/blog/2026/02/27/welcoming-elizabeth-barron-new-executive-director/">The PHP Foundation’s Executive Director</a>, is joining the lineup of JetBrains PHPverse 2026 speakers with a keynote talk “Getting to Know The PHP Foundation”. <a href="https://lp.jetbrains.com/phpverse-2026/?utm_source=thephp.foundation&amp;utm_medium=referral&amp;utm_campaign=phpverse2026">Tune in</a> on <strong>June 9</strong> to learn what The PHP Foundation actually does, which initiatives are planned for the rest of 2026, and how the community can help support the PHP ecosystem.</p>
-
-<h3 id="about-jetbrains-phpverse">About JetBrains PHPverse</h3>
-
-<p><a href="https://lp.jetbrains.com/phpverse-2026/?utm_source=thephp.foundation&amp;utm_medium=referral&amp;utm_campaign=phpverse2026">JetBrains PHPverse</a> is a free online conference and community event bringing together the big and vibrant PHP herd. It was first held in 2025, reaching out to more than 55,000 developers worldwide.</p>
-
-<p>Besides The PHP Foundation’s keynote, expect a <a href="https://lp.jetbrains.com/phpverse-2026/?utm_source=thephp.foundation&amp;utm_medium=referral&amp;utm_campaign=phpverse2026#speakers">curated lineup</a> of talks from some of the most influential voices in the PHP ecosystem, covering the major PHP frameworks, tools, and shipping PHP code with AI:</p>
-
-<ul>
-<li>Fabien Potencier, Founder of Symfony</li>
-<li>Jeffrey Way, Founder of Laracasts</li>
-<li>Larry Garfield, Functional Programming Enthusiast</li>
-<li>Jonathan Bossenger, Developer Advocate at Automattic</li>
-<li>Nils Adermann, Co-Founder of Packagist</li>
-<li>Ashley Hindle, Founder and CEO of Fuel</li>
-</ul>
-
-<p>The conversations and deep dives are hosted by <a href="https://x.com/enunomaduro">Nuno Maduro</a>, creator of Pest, Larastan, and Laravel Pint, and <a href="https://x.com/brendt_gd">Brent Roose</a>, Developer Advocate for PHP at <a href="https://www.jetbrains.com/?utm_source=thephp.foundation&amp;utm_medium=referral&amp;utm_campaign=phpverse2026">JetBrains</a>.</p>
-
-<h3 id="join-the-conversation">Join the conversation</h3>
-
-<p>For The PHP Foundation, JetBrains PHPverse is not just a talking stage, but a chance to engage in a conversation with thousands of engineers who use PHP every day.</p>
-
-<p>We invite every member of the PHP community to join us for this day of learning and connection. Whether you’re interested in the latest RFCs, projects supported by the Foundation, or what’s next for tools you are using, there is something at PHPverse for everyone.</p>
-
-<p><a href="https://lp.jetbrains.com/phpverse-2026/?utm_source=thephp.foundation&utm_medium=referral&utm_campaign=phpverse2026#register-for-phpverse-2026" class="button-link">Register for JetBrains PHPverse 2026</a></p>
-
-<p>We also encourage you to join the <a href="https://discord.gg/uEUkSNhdd8">official Discord server</a> to ask questions and engage with the speakers and fellow developers.</p>
-
-<p>Looking forward to seeing you on June 9!</p>
 ]]></content>
         </entry>
     </feed>
