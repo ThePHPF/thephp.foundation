@@ -307,7 +307,7 @@ class Team
                 'job' => 'Board member',
                 'github' => 'https://github.com/annezazu',
                 'linkedin' => 'https://www.linkedin.com/in/anneguionmccarthy/',
-            ]
+            ],
             'the-php-foundation' => [
                 'name' => 'The PHP Foundation',
                 'image' => '/assets/icons/php_foundation.svg',
