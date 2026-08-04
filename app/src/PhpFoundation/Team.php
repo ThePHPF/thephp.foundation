@@ -15,7 +15,7 @@ class Team
             [
                 'title' => 'Board',
                 'description' => 'The Board of Directors consists of veteran PHP core developers, PHP community leaders, representatives of sponsors, and other key stakeholders. The PHP Foundation does not compensate board members.',
-                'members' => ['sebastian-bergmann', 'nils-adermann', 'benjamin-eberlei', 'josepha-haden', 'roman-pronskiy', 'nicolas-grekas', 'sara-golemon', 'matthew-weier-o-phinney', 'matt-stauffer'],
+                'members' => ['sebastian-bergmann', 'nils-adermann', 'benjamin-eberlei', 'josepha-haden', 'roman-pronskiy', 'nicolas-grekas', 'sara-golemon', 'matthew-weier-o-phinney', 'matt-stauffer', 'anne-mccarthy'],
             ],
             [
                 'title' => 'Core Developers',
@@ -300,6 +300,14 @@ class Team
                 'mastodon' => 'https://dragonscave.space/@menelion',
                 'github' => 'https://github.com/menelion',
                 'url' => 'https://oire.org/about',
+            ],
+            'anne-mccarthy' => [
+                'name' => 'Anne McCarthy',
+                'company' => 'Automattic',
+                'image' => 'https://avatars.githubusercontent.com/u/26996883?v=4',
+                'job' => 'Board member',
+                'github' => 'https://github.com/annezazu',
+                'linkedin' => 'https://www.linkedin.com/in/anneguionmccarthy/',
             ],
             'the-php-foundation' => [
                 'name' => 'The PHP Foundation',
