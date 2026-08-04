@@ -303,6 +303,7 @@ class Team
             ],
             'anne-mccarthy' => [
                 'name' => 'Anne McCarthy',
+                'company' => 'Automattic',
                 'image' => 'https://avatars.githubusercontent.com/u/26996883?v=4',
                 'job' => 'Board member',
                 'github' => 'https://github.com/annezazu',
