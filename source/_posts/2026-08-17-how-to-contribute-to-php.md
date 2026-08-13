@@ -26,7 +26,7 @@ Before we go any further, I want to clear up the difference between a few differ
 - **The PHP ecosystem** — everything else built around PHP: packages, frameworks, tooling, conferences, education, communities, and publications.
 - **The PHP Foundation** — an organization that supports the long-term health of PHP, including funding programmers and coordinating and supporting community initiatives.
 
-And to clear up an important governance distinction, since this is posted on the PHP Foundation's blog: the Foundation does not own PHP, it doesn't govern its development, and it doesn't dictate RFCs. PHP is an independent open-source project with its own contributors and its own decision-making processm, and we like it that way! The Foundation exists to support that work.
+And to clear up an important governance distinction, since this is posted on the PHP Foundation's blog: the Foundation does not own PHP, it doesn't govern its development, and it doesn't dictate RFCs. PHP is an independent open-source project with its own contributors and its own decision-making process, and we like it that way! The Foundation exists to support that work.
 
 # Part One: Contributing directly to PHP
 
@@ -113,7 +113,7 @@ There's also the other half of this process: **reviewing and testing someone els
 
 Technical discussion about the direction of PHP happens openly on GitHub and on the [internals mailing list](https://www.php.net/mailing-lists.php), PHP's long-running development mailing list. You don't have to write C to follow along, and you don't have to be an established contributor to add value.
 
-In fact, many people participating internals conversation internals aren't traditional core developers. That goes both ways: it means you, even as a newcomer, are as welcome to participate as anyone, but it also means not every reply you might receive should carry the same weight. That means a strong objection from one participant can't be seen as the same as a decision; weigh feedback by its reasoning and don't be discouraged by a single dissenting voice.
+In fact, many people participating in internals conversations aren't traditional core developers. That goes both ways: it means you, even as a newcomer, are as welcome to participate as anyone, but it also means not every reply you might receive should carry the same weight. That means a strong objection from one participant can't be seen as the same as a decision; weigh feedback by its reasoning and don't be discouraged by a single dissenting voice.
 
 There's no exact guide to contributing to internals, but there are a few consistent steps toward positive contribution. First, it pays to start by observing. Despite the attempt to make everything explicit, communities like internals often have norms that aren't written down. Spend some time searching previous discussions before raising something; long-running topics have often been debated before, and referencing that history shows you've done the reading. Bring technical evidence and concrete real-world use cases rather than preferences. And remember that the people you're talking to are donating their attention as well as their code; a well-researched message respects that.
 
@@ -186,7 +186,7 @@ At some point you'll get stuck in one of these processes, or you'll open a pull 
 
 When you need help, there are a few good places to turn:
 
-- **General questions and getting unstuck:** The [PHP Community Discord](https://phpc.chat/) is the most active real-time gathering spot, with channels ranging from beginner questions to core development. For longer-form questions, the [r/PHP subreddit](https://www.reddit.com/r/PHP/) and the [php tag on Stack Overflow](https://stackoverflow.com/questions/tagged/php) are both well-trafficked.
+- **General questions and getting unstuck:** The [PHP Community Discord](https://phpc.chat/) is the most active real-time gathering spot, with channels ranging from beginner questions to core development. For longer-form questions, the [r/PHP subreddit](https://www.reddit.com/r/PHP/) and the [`php` tag on Stack Overflow](https://stackoverflow.com/questions/tagged/php) are both well-trafficked.
 - **Core and internals questions:** For questions specific to working on `php-src`, that same Discord has a `#php-internals` channel where core developers hang out, and the [internals mailing list](https://www.php.net/mailing-lists.php) is the canonical venue for development discussion.
 - **A `php-src` PR or RFC that's gone quiet:** The internals mailing list is the right place to politely follow up. A short, respectful message linking your PR or proposal is a normal and accepted way to ask for eyes on stalled work.
 
