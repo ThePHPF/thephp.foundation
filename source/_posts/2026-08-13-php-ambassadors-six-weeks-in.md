@@ -41,7 +41,7 @@ As the smallest of the three groups, we tasked ourselves with identifying and li
 ### Marketing
 
 
-There is an [active draft PR](https://github.com/php/web-php/pull/1962) that proposes some initial structural updates to the php.net website. This group has iterated on this numerous times and this draft has been collaboratively created. The php.net website was one of the things most mentioned to me in the [Listening Tour](https://thephp.foundation/blog/2026/04/16/integrating-community-feedback-into-foundation-strategy-part1/) as a place that could use some help, so it’s great to see this next iteration being created by the community. I would venture to say this is the first in many iterations to come! Thanks to [Matt Stauffer](https://www.linkedin.com/in/mattstauffer/) for shepherding this group and keeping progress moving forward. 
+There is an [active draft PR](https://github.com/php/web-php/pull/1962) that proposes some initial structural updates to the php.net website. The original PR was created largely from the work of Mark Randall, and it has gone through several collaborative iterations. The php.net website was one of the things most mentioned to me in the [Listening Tour](https://thephp.foundation/blog/2026/04/16/integrating-community-feedback-into-foundation-strategy-part1/) as a place that could use some help, so it’s great to see this next iteration being created by the community. I would venture to say this is the first in many iterations to come! Thanks to [Matt Stauffer](https://www.linkedin.com/in/mattstauffer/) for shepherding this group and keeping progress moving forward. 
 
 **Group Info:**
 
