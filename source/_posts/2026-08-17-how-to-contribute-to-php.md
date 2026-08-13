@@ -40,11 +40,11 @@ Let's walk through these, roughly from the lowest barrier to entry to the highes
 
 ## 1. Test prereleases
 
-Every new major or minor PHP version ships as a series of prereleases–alphas, betas, and release candidates–before the final release. These exist so the community can catch problems while they're still cheap to fix. The more real-world code that runs against a prerelease, the more confident everyone can be that the final release won't break things.
+Every new major, minor, or patch PHP version ships with a prerelease. Patch versions just get an RC (release candidate), and major/minor versions receive a series of prereleases–alphas, betas, and release candidates–before the final release. These exist so the community can catch problems while they're still cheap to fix. The more real-world code that runs against a prerelease, the more confident everyone can be that the final release won't break things.
 
 If you maintain a package, run its test suite against the next prerelease. If you run a large real-world application, run its tests on the prerelease, or point a local or staging environment at it. When something breaks, you've found either a genuine regression worth reporting or a change you'll need to prepare for, both of which are valuable.
 
-PHP announces each alpha, beta, and release candidate on [php.net](https://www.php.net/), together with the source downloads and release schedule for that verison. You can use your preferred version management or container tooling to install the prerelease, or build it yourself locally, and then run your application's or package's test suite against it. If you find something that looks like a regression in PHP itself, reduce it to the smallest reproduction you can and report it to the [`php-src` issue tracker](https://github.com/php/php-src/issues).
+PHP announces each alpha, beta, and release candidate on [php.net](https://www.php.net/), together with the source downloads and release schedule for that version. You can use your preferred version management or container tooling to install the prerelease, or build it yourself locally, and then run your application's or package's test suite against it. If you find something that looks like a regression in PHP itself, reduce it to the smallest reproduction you can and report it to the [`php-src` issue tracker](https://github.com/php/php-src/issues).
 
 **First step:** Grab the current prerelease and run something you already maintain against it.
 
@@ -112,6 +112,8 @@ There's also the other half of this process: **reviewing and testing someone els
 ## 6. Participate in internals
 
 Technical discussion about the direction of PHP happens openly on GitHub and on the [internals mailing list](https://www.php.net/mailing-lists.php), PHP's long-running development mailing list. You don't have to write C to follow along, and you don't have to be an established contributor to add value.
+
+In fact, many people participating internals conversation internals aren't traditional core developers. That goes both ways: it means you, even as a newcomer, are as welcome to participate as anyone, but it also means not every reply you might receive should carry the same weight. That means a strong objection from one participant can't be seen as the same as a decision; weigh feedback by its reasoning and don't be discouraged by a single dissenting voice.
 
 There's no exact guide to contributing to internals, but there are a few consistent steps toward positive contribution. First, it pays to start by observing. Despite the attempt to make everything explicit, communities like internals often have norms that aren't written down. Spend some time searching previous discussions before raising something; long-running topics have often been debated before, and referencing that history shows you've done the reading. Bring technical evidence and concrete real-world use cases rather than preferences. And remember that the people you're talking to are donating their attention as well as their code; a well-researched message respects that.
 
