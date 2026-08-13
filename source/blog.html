@@ -24,10 +24,13 @@ use:
                     <span class="mt-2 text-xs">by
                         {% for item in post.author %}
                         {% set author = fetch_member_by_code(item) %}
+
+                        {% if author %}
                         <span itemprop="publisher" itemscope itemtype="https://schema.org/Person"><a
                                 href="{{ author.url }}" itemprop="url" class="no-underline" target="_blank"
                                 rel="noopener noreferrer"><span itemprop="name">{{ author.name }}</span></a></span>{% if
                         loop.last == false %}, {% endif %}
+                        {% endif %}
                         {% endfor %}
                     </span>
                 </div>
