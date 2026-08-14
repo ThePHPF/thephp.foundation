@@ -16,10 +16,11 @@ published_at: 11 August 2026
 > vulnerability. You might be feeling overwhelmed, or unsure whether you can trust the
 > report, or simply unsure what the correct next step is.
 >
-> Take a breath. **Nothing bad has happened yet.** A report is not a breach. It is a
-> head start: someone is telling you privately about a problem so that you can fix it
-> before anyone gets hurt. This guide walks you through the whole process, and it
-> ends with concrete steps to make your project more resilient for the next time.
+> Take a breath. **Nothing bad has happened.** A report is not a breach. It is a
+> head start: someone is telling you privately about a potential problem. You have
+> time to validate it, assess it, and you get to decide what to do next. This guide
+> walks you through the whole process, and it ends with concrete steps to make your
+> project more resilient for the next time.
 >
 > And at any point where you get stuck: **you are not alone.** You can always ask the
 > Ecosystem Security Team for help. Contact details are at the [end of this
@@ -59,9 +60,10 @@ The whole process on one screen. Details in the numbered sections below.
    isolated environment. → [§4](#4.-handle-proof-of-concept-code-safely)
 5. **Fix privately.** Use a temporary private fork; do not push to any public branch.
    → [§5](#5.-prepare-the-fix-privately)
-6. **Write the advisory.** For Composer packages: ecosystem = **Composer**, package
-   name exactly as on Packagist, affected-version ranges precise. Composer will
-   actively **block** installation of what you list.
+6. **Write the advisory.** For Composer packages, three fields decide whether the
+   tooling works: set the ecosystem to **Composer**, use the exact Packagist package
+   name, and give precise affected-version ranges. Composer will actively **block**
+   installation of the versions you list.
    → [§6](#6.-write-the-github-security-advisory)
 7. **Publish in the right order:** merge → tag & release → publish the advisory →
    announce. → [§7](#7.-coordinate-the-release-and-publication)
@@ -86,8 +88,12 @@ and your users do not yet have a fix. So until you publish:
   mention it in a public commit message.
 - **Do not** push a fix to `main` or any public branch. A commit titled "fix SQL
   injection in login handler" *is* the disclosure.
-- **Do not** post about it on social media, a blog, or a mailing list. Not even a
-  vague "big security release coming soon": teasers invite people to go looking.
+- **Do not** post the details on social media, a blog, or a mailing list, and be
+  careful with vague teasers, which invite people to go looking. Announcing an
+  upcoming security release is a legitimate practice that many projects follow, so
+  that users can plan to update quickly; if you do it, keep the announcement to the
+  date and the fact that a security release is coming, never the component, the
+  symptom, or the versions involved.
 - **Do not** go silent on the reporter either. Silence is how well-meaning reporters
   become frustrated reporters who eventually publish on their own.
 
@@ -107,17 +113,20 @@ real, but it does not take the decision away from you.
 Reply quickly, even if you have nothing substantial to say yet. A short message buys
 you time and goodwill:
 
-> Thanks for the report. I've received it and will look into it. I maintain this
-> project in my spare time, so please allow up to two weeks for a first assessment.
-> I'll get back to you here.
+> Thanks for the report. I've received it and will look into it as soon as I can.
+> I maintain this project in my spare time. I'll get back to you here.
 
-That is genuinely all it takes. Set expectations you can actually meet: "two weeks"
-kept is better than "tomorrow" broken. If the report arrived by email but your
+That is genuinely all it takes. If you already know you can keep a commitment, adding
+a timeframe ("please allow up to two weeks for a first assessment") is a courtesy to
+the reporter, but only promise what you can meet: "two weeks" kept is better than
+"tomorrow" broken. If the report arrived by email but your
 repository has [GitHub Private Vulnerability
 Reporting](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability)
 enabled (see [§9](#9.-improving-your-security-posture-for-the-long-term)), this is a
-good moment to move the conversation there: it keeps discussion, patch, and timeline
-in one private place.
+good moment to move the conversation there: it keeps the discussion and the patch in
+one private place. Do not expect it to do your release planning, though — an advisory
+has no field for an embargo or a disclosure date, so the timeline is something you and
+the reporter agree on in the conversation and then keep to.
 
 ## 3. Triage the report
 
@@ -132,7 +141,8 @@ Read the report carefully and try to answer four questions:
    configuration?
 3. **What can an attacker actually achieve?** Reading data, modifying data, executing
    code, denial of service?
-4. **Which versions are affected?** Including old release branches people still use.
+4. **Which versions are affected?** Including older major and minor versions that
+   people still use.
 
 The answers determine everything downstream: severity, urgency, and what the fix and
 advisory should say. Three notes from practice:
@@ -174,25 +184,41 @@ software. Treat it with exactly the suspicion that description deserves. Even an
 honest reporter's PoC may delete files, open network connections, or hammer your CPU
 as a side effect of demonstrating the bug.
 
-Instead, reproduce in an **isolated, disposable environment**:
+Instead, reproduce in an **isolated, disposable environment**. The best one is the one
+you will actually use, so start at the top of this list and only move down if the
+issue demands it:
 
-- **A well-secured virtual machine** is the recommended baseline: a fresh VM with a
+- **A microVM sandbox** is the sweet spot: roughly as convenient as a container, but
+  running its own kernel instead of sharing the host's, so the boundary is enforced by
+  hardware. [Docker Sandboxes](https://docs.docker.com/ai/sandboxes/) (`sbx`) gives
+  each sandbox its own filesystem, network stack, and Docker daemon, with network
+  access denied by default. Benjamin Eberlei describes [a ready-made sbx setup with
+  PHP, Composer, and the usual
+  extensions](https://www.beberlei.de/post/sbx-sandboxed-claude-complete-with-php-and-tools)
+  that you can lift straight into this workflow.
+- **A container** (Docker/Podman) is convenient for typical PHP-level issues and fine
+  for most web-application-class vulnerabilities. How much isolation you get depends
+  on where you run it: on Linux, containers share the host kernel, so anything that
+  smells like memory corruption, native extensions, or kernel interaction deserves a
+  stronger boundary. On macOS and Windows, Docker Desktop and OrbStack already run
+  your containers inside a lightweight Linux VM, so a kernel boundary sits between the
+  container and your actual machine.
+- **A well-secured virtual machine** is the belt-and-braces option: a fresh VM with a
   current OS, no credentials or personal data inside, no shared folders into your host,
   clipboard sharing disabled, and a snapshot taken *before* you run anything so you can
   roll back afterwards. If the PoC does not need internet access, disable networking
   entirely, or restrict it to host-only.
-- **A container** (Docker/Podman) is convenient for typical PHP-level issues and fine
-  for most web-application-class vulnerabilities. Be aware that containers share the
-  host kernel, so for anything that smells like memory corruption, native extensions,
-  or kernel interaction, prefer a real VM.
 - **A cloud throwaway** (a short-lived VM at any provider, destroyed afterwards) works
   too, as long as no credentials of yours live on it.
 
 Inside the isolated environment, the workflow is simple: check out the affected
 version of your project, install dependencies, run the PoC, observe. Read the PoC
 before running it. Not as a substitute for isolation, but because understanding
-*how* it triggers the bug is exactly the insight you need for the fix and, later, for
-a regression test.
+*how* it triggers the bug is exactly the insight you need for the fix and for the
+regression test. In fact, this is the natural moment to turn the reproducer into a
+failing test ([§5](#5.-prepare-the-fix-privately)). Many maintainers treat "I have a
+test that fails" as the point at which they accept a report, on the grounds that you
+cannot accept what you cannot reproduce.
 
 Two closing rules for this section:
 
@@ -210,21 +236,32 @@ Two closing rules for this section:
 GitHub Security Advisories give you a **temporary private fork** for exactly this
 purpose. On the advisory page, click *"Start a temporary private fork"*. Then:
 
-1. Develop the fix in the private fork and open the pull request **there**, never
+1. Do all of the work in the private fork and open the pull request **there**, never
    against your public repository.
-2. Keep commit messages neutral while working; the advisory will tell the full story
-   later. (Referencing the GHSA ID in the final commit is fine, since it only resolves
-   to something public after publication.)
-3. Write a **regression test** that fails on the vulnerable code and passes with the
-   fix. This is the part of the work that keeps paying off: the bug can never quietly
-   come back. If the PoC helped you understand the issue, distill it into a safe,
-   minimal test case. The test should demonstrate the *condition*, not ship a
-   working exploit.
-4. Invite the reporter as a collaborator on the advisory and let them verify the fix.
-   They found the hole; they are the best-qualified person to confirm it is closed.
-5. Decide **which release branches** get the fix. If you still support older major
-   versions, users on those versions deserve a patched release too, or an explicit
-   statement in the advisory that they must upgrade.
+2. **Write the regression test first.** A test that fails on the vulnerable code is
+   the proof that you have really understood and reproduced the issue, and once the
+   fix is in you can no longer watch it fail. If you built a reproducer during triage
+   ([§4](#4.-handle-proof-of-concept-code-safely)), you already have most of it;
+   distill it into a safe, minimal test case that demonstrates the *condition* rather
+   than shipping a working exploit. This is the part of the work that keeps paying
+   off: the bug can never quietly come back.
+3. **Then write the fix**, and keep commit messages neutral while working; the
+   advisory will tell the full story later. (Referencing the GHSA ID in the final
+   commit is fine, since it only resolves to something public after publication.)
+4. **Sweep for the same class of bug** before you go any further. Publishing an
+   advisory puts a spotlight on that weakness class, for human readers and for the
+   people pointing LLMs at your code, so you want to be reasonably confident that the
+   same mistake is not sitting three files over, waiting to be found the day after
+   you publish.
+5. Invite the reporter as a collaborator on the advisory and let them verify the fix.
+   They already have a working reproducer, so it costs them little. How much weight
+   their confirmation carries is your judgement call: a researcher who handed you a
+   precise reproducer is the best-qualified person to confirm the hole is closed,
+   while a report generated in bulk by a tool is not.
+6. Decide **which versions** get the fix. If you still support older major versions,
+   users on those versions deserve a patched release too, or an explicit statement in
+   the advisory that they must upgrade. Severity, the age of the older version, and
+   the effort a backport would take should all feed into that decision.
 
 Gotchas that bite first-timers:
 
@@ -232,11 +269,14 @@ Gotchas that bite first-timers:
   environment) before merging.
 - Don't `git push --no-verify` out of habit. Hooks that scan for secrets or enforce
   checks exist for days exactly like this one.
-- Publishing the advisory **deletes the temporary private fork**. Make sure everything
-  you need (the commits, the discussion outcomes) has landed before you publish.
+- The temporary private fork **does not outlive the advisory**: depending on where you
+  are in the process, publishing removes it, or GitHub asks you to delete it before it
+  lets you publish. Either way, make sure everything you need (the commits, the
+  discussion outcomes) has landed somewhere permanent first.
 - **Do not fix silently.** A patch released without an advisory leaves every
   downstream user blind: `composer audit` won't warn them, Dependabot won't open a PR,
-  and most will never upgrade. The advisory is not an admission of failure; it is the
+  and most people do not update their dependencies often, so they stay vulnerable
+  until they happen to. The advisory is not an admission of failure; it is the
   mechanism by which your fix actually reaches people.
 
 ## 6. Write the GitHub Security Advisory
@@ -266,7 +306,10 @@ the metadata right is what makes that machinery work.
   Dependabot alerts fire for your users.
 - **Package name: the exact Packagist name**, in `vendor/package` form. For example
   `phpunit/phpunit`, not `PHPUnit` and not the GitHub repository slug if it differs.
-  A typo here silently breaks the matching.
+  A typo here silently breaks the matching. The check takes five seconds: append what
+  you typed to `https://packagist.org/packages/` and it must land on your package,
+  the way [packagist.org/packages/phpunit/phpunit](https://packagist.org/packages/phpunit/phpunit)
+  does.
 - **Affected version ranges: precise and Composer-flavored**, e.g.
   `>= 10.0.0, < 10.5.17`, and one *Affected product* entry per affected release
   series if you patched several (a single field cannot hold multiple ranges). The
@@ -278,6 +321,9 @@ the metadata right is what makes that machinery work.
   description does not replace it. And getting these ranges right matters more than
   it used to, because Composer no longer merely *reports* your advisory. It
   *enforces* it. Read on.
+- **Patched version: the version you are about to release**, the one you want users to
+  move to. It is what the tooling offers people as the way out, so it belongs in the
+  form even though you have not tagged it yet at the time you draft the advisory.
 
 ### Composer blocks the versions your advisory lists
 
@@ -303,7 +349,7 @@ For you as the advisory author, this has three practical consequences:
    the strongest argument against fixing silently ([§5](#5.-prepare-the-fix-privately)):
    an advisory does not just inform, it actively keeps the vulnerable versions out of
    `vendor/` directories across the ecosystem.
-2. **Over-broad version ranges cause real breakage.** Every version your advisory
+2. **Overbroad version ranges cause real breakage.** Every version your advisory
    covers becomes uninstallable by default, worldwide, within hours. If the ranges
    sweep in versions that were never vulnerable, users of those versions face failing
    builds, and their bug reports will land in *your* inbox. This is not hypothetical:
@@ -337,13 +383,22 @@ The rest of the form:
 - **CWE:** pick the closest weakness class. The reporter's suggestion is usually right.
 - **CVSS / severity:** score honestly. If required conditions lower the practical
   severity (authentication needed, non-default configuration), reflect that in the
-  vector rather than in an argument in the description. If CVSS makes your eyes glaze
-  over, ask; scoring help is a two-minute favor for the Ecosystem Security Team.
-- **CVE:** request a CVE ID through GitHub from the advisory (GitHub is a CNA and
-  this is the normal path for Composer packages). Request it once you have *accepted*
-  the report: not before you are sure it is valid, and not in a scramble at
-  publication time. If a coordinating party such as a CNA has already reserved a CVE
-  for this issue, use *"I have an existing CVE ID"* instead of requesting a second one.
+  vector rather than in an argument in the description. Keep this in proportion,
+  though: the score is far less important than the advisory itself. If CVSS makes your
+  eyes glaze over, an LLM will produce a reasonable first vector for you, and the
+  Ecosystem Security Team will happily check it; scoring help is a two-minute favor.
+  Do not let the number hold up the publication.
+- **CVE:** you can request a CVE ID through GitHub from the advisory (GitHub is a CNA
+  and this is the normal path for Composer packages). Be clear about what it buys you.
+  A CVE ID is a stable identifier for people outside your immediate ecosystem: Linux
+  distributions shipping your code, corporate vulnerability management, other CNAs
+  coordinating a shared issue. What actually protects the average user of your package
+  is the GHSA, which is what Composer, `composer audit`, and Dependabot act on. CVE
+  requests through GitHub currently take weeks to come back, so treat the ID as
+  something that arrives when it arrives: request it once you have *accepted* the
+  report, and never delay the fix, the release, or the advisory while waiting for it.
+  If a coordinating party such as a CNA has already reserved a CVE for this issue, use
+  *"I have an existing CVE ID"* instead of requesting a second one.
 - **Credit:** add the reporter (and anyone who helped) in the credits section. It
   costs you nothing and it is a large part of what makes responsible reporting worth
   a researcher's while.
@@ -352,7 +407,7 @@ The rest of the form:
 
 *You are here if: fix ready, advisory drafted, everyone in the private thread agrees.*
 
-Order matters. On the day you have chosen:
+Order matters. On the day you have chosen for your release, follow these steps:
 
 1. **Merge** the fix from the private fork.
 2. **Tag and release** the fixed version(s), and confirm the release actually shows
@@ -369,9 +424,11 @@ users have no warning to upgrade.
 
 Two coordination notes:
 
-- If the report came through a coordinator (such as the Ecosystem Security Team or a
-  CNA), agree on the publication date with them in advance so CVE publication and any
-  wider announcement can happen in step.
+- If the report came through a coordinator such as a CNA, agree on the publication
+  date with them in advance so CVE publication and any wider announcement can happen
+  in step. The Ecosystem Security Team does not normally ask you to coordinate your
+  release with us; if a particular case ever calls for it, we will say so explicitly.
+  We do not want to stand between a report and a fix.
 - If details leak early (someone tweets, a public issue appears, you spot the bug
   being discussed), the embargo is effectively over. Publish what you have as soon as
   possible, even if the situation is not as tidy as you wanted.
@@ -395,9 +452,11 @@ Two coordination notes:
 - **Check your other supported branches** one final time; it is easy to patch the
   current major and forget the LTS branch.
 - **Hold a fifteen-minute retrospective with yourself:** How did this bug get in?
-  Would a static analyzer, a stricter type, or a test convention have caught it? Is
-  there a *class* of similar bugs to sweep for? One structural improvement per
-  incident compounds quickly.
+  Would a static analyzer, a stricter type, or a test convention have caught it? The
+  sweep for siblings of this bug should already be behind you at this point
+  ([§5](#5.-prepare-the-fix-privately)); what you are looking for here is the one
+  structural change that stops the whole class from recurring. One such improvement
+  per incident compounds quickly.
 
 ## 9. Improving your security posture for the long term
 
@@ -418,9 +477,12 @@ value-for-effort; even the first three items put you ahead of most projects.
    reporting on this repository"), which versions you support with security fixes,
    and roughly what response time to expect. Three honest sentences beat a page of
    boilerplate.
-3. **Watch your own security tab.** Enable notifications for security advisories and
-   Dependabot alerts on your repositories, so the next report does not sit unseen for
-   months.
+3. **Watch your own security tab.** Two different things land there and both are worth
+   a notification: *security advisories*, which is where a report about **your** code
+   arrives, and *Dependabot alerts*, which tell you that a dependency **you** use has
+   a published vulnerability. Make sure you are notified about both: watch the
+   repository with security alerts enabled, and check the notification settings on
+   your GitHub account, so that neither sits unseen for months.
 
 **Protect your accounts and releases**
 
@@ -451,7 +513,7 @@ value-for-effort; even the first three items put you ahead of most projects.
    scripts, or configuration the pipeline will happily execute. This class of attack
    is known as [Poisoned Pipeline Execution](https://owasp.org/www-project-top-10-ci-cd-security-risks/CICD-SEC-04-Poisoned-Pipeline-Execution)
    (OWASP CICD-SEC-4). A branch that does not exist cannot receive a poisoned pull
-   request, and no wall you build protects better than the door that was never built.
+   request, and no door protects better than the one that was never built.
    Review your branches and remove stale experiments, leftovers from old sprints,
    and "we might still need this" remnants. The same goes for unused workflows,
    third-party actions, and permissions nobody questions anymore. See [The attack
@@ -466,10 +528,11 @@ value-for-effort; even the first three items put you ahead of most projects.
    credentials, network access, and write permission to your repository. The five
    weakness classes that show up almost everywhere, PHPUnit's own workflows included
    (52 findings before hardening, zero after):
-   - **Template injection:** never interpolate {% verbatim %}`${{ ... }}`{% endverbatim %} expressions (branch
-     names, PR titles, and other attacker-controllable values) directly into shell
-     scripts; pass them through `env:` variables instead. This is the GitHub Actions
-     equivalent of SQL injection.
+   - **Template injection:** never interpolate
+     {% verbatim %}`${{ ... }}`{% endverbatim %} expressions (branch names, PR titles,
+     and other attacker-controllable values) directly into shell scripts; pass them
+     through `env:` variables instead. This is the GitHub Actions equivalent of SQL
+     injection.
    - **Credential persistence:** set `persist-credentials: false` on
      `actions/checkout`, so the workflow token does not sit in `.git/config` for
      every later step (or exfiltrated artifact) to read.
@@ -479,15 +542,19 @@ value-for-effort; even the first three items put you ahead of most projects.
      attack reached 23,000 repositories. Let Renovate or Dependabot keep the SHAs
      current.
    - **Overly broad permissions:** set `permissions: {}` at the workflow level and
-     grant minimal scopes per job, with a comment explaining each grant.
+     grant minimal scopes per job, with a comment explaining each grant. Set the
+     baseline for the whole repository, too: under Settings → Actions → General →
+     Workflow permissions, choose read-only, so that a workflow which forgets to
+     declare `permissions:` does not start out with write access to your repository.
    - **Unnecessary third-party actions:** if the runner's built-in tooling (e.g. the
      `gh` CLI) can do the job, drop the wrapper action. Every action is more code
-     running next to your secrets.
+     running next to your secrets, and one more upstream that can be compromised to
+     reach you.
 
    You do not need to memorize this list: run [zizmor](https://docs.zizmor.sh/)
    against `.github/workflows`, fix what it finds, and add it to CI so regressions
-   are caught immediately. The worked example (each weakness, its exploit, its fix)
-   is in [Hardening GitHub Actions
+   are caught immediately. A full walkthrough, taking each weakness in turn with an
+   example exploit and its fix, is in [Hardening GitHub Actions
    workflows](https://phpunit.expert/articles/hardening-github-actions-workflows.html).
    Be especially careful with the `pull_request_target` and `workflow_run` triggers,
    which run with the base repository's permissions against fork contributions.
@@ -556,7 +623,6 @@ early is always better than guessing; there is no question too basic.
 
 ---
 
-*This is a living guide. If anything was unclear, took too long to figure out, or
-turned out to be wrong in practice, please tell us; that feedback directly improves
-the experience of the next maintainer. Reach us at the addresses in
-[§10](#10.-getting-help), or edit this page on GitHub via the link below.*
+*If anything here was unclear, took too long to figure out, or turned out to be wrong
+in practice, please tell us; that feedback directly improves the experience of the
+next maintainer. You can reach us at the addresses in [§10](#10.-getting-help).*
