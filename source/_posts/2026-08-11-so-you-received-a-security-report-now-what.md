@@ -66,7 +66,8 @@ The whole process on one screen. Details in the numbered sections below.
    installation of the versions you list.
    → [§6](#6.-write-the-github-security-advisory)
 7. **Publish in the right order:** merge → tag & release → publish the advisory →
-   announce. → [§7](#7.-coordinate-the-release-and-publication)
+   submit it to FriendsOfPHP → announce.
+   → [§7](#7.-coordinate-the-release-and-publication)
 8. **Wrap up:** credit the reporter, check older branches, do a short retrospective.
    → [§8](#8.-wrap-up)
 9. **Improve your posture** so the next report is easier: SECURITY.md, private
@@ -349,8 +350,10 @@ For you as the advisory author, this has three practical consequences:
    the strongest argument against fixing silently ([§5](#5.-prepare-the-fix-privately)):
    an advisory does not just inform, it actively keeps the vulnerable versions out of
    `vendor/` directories across the ecosystem.
-2. **Overbroad version ranges cause real breakage.** Every version your advisory
-   covers becomes uninstallable by default, worldwide, within hours. If the ranges
+2. **Overbroad version ranges cause real breakage.** Once your advisory data reaches
+   Composer (see step 4 in [§7](#7.-coordinate-the-release-and-publication) for what
+   governs how long that takes), every version it covers becomes uninstallable by
+   default, everywhere, for everyone. If the ranges
    sweep in versions that were never vulnerable, users of those versions face failing
    builds, and their bug reports will land in *your* inbox. This is not hypothetical:
    for a PHPUnit advisory in April 2026, GitHub silently rewrote the carefully
@@ -358,14 +361,17 @@ For you as the advisory author, this has three practical consequences:
    every older PHPUnit version uninstallable overnight, including all of PHPUnit 11,
    which was never affected. The full timeline is documented in [The Bouncer in the
    Dependency Resolver](https://phpunit.expert/articles/the-bouncer-in-the-dependency-resolver.html#a-real-world-example).
-3. **Know the correction path.** Packagist aggregates advisories from the GitHub
-   Advisory Database *and* from
+3. **Know the FriendsOfPHP route, in both directions.** Packagist aggregates
+   advisories from the GitHub Advisory Database *and* from
    [`FriendsOfPHP/security-advisories`](https://github.com/FriendsOfPHP/security-advisories),
-   and the FriendsOfPHP data takes precedence. If the published affected-version data
-   is wrong (whether through your own mistake or an edit on GitHub's side), a pull
-   request to FriendsOfPHP/security-advisories with the correct constraints is the
-   fastest way to fix what Composer actually enforces, alongside a correction PR to
-   the [GitHub Advisory Database](https://github.com/github/advisory-database).
+   and the FriendsOfPHP data takes precedence. That makes a pull request there both
+   the fastest way to get your advisory in front of Composer in the first place
+   ([§7](#7.-coordinate-the-release-and-publication)) and the fastest way to fix what
+   Composer enforces if the published affected-version data turns out to be wrong,
+   whether through your own mistake or an edit on GitHub's side. For a correction,
+   send a PR to the [GitHub Advisory
+   Database](https://github.com/github/advisory-database) as well, so that the two
+   sources do not disagree.
 
 The flip side is worth telling your *users* about, too (in your announcement or your
 documentation): with a current Composer, they are protected by default, and
@@ -414,7 +420,18 @@ Order matters. On the day you have chosen for your release, follow these steps:
    up on Packagist before continuing.
 3. **Publish the advisory.** From this moment the vulnerability is public, which is
    fine, because the fix already is too.
-4. **Announce** through your normal channels (release notes, Mastodon, Discord, blog),
+4. **Send a pull request to
+   [`FriendsOfPHP/security-advisories`](https://github.com/FriendsOfPHP/security-advisories).**
+   Do not skip this on the grounds that you have already filed a GHSA. Composer does
+   not look at the advisories published on individual repositories; it goes through
+   Packagist, which consumes the *reviewed* GitHub Advisory Database, and GitHub's
+   review step currently lags behind repository-level publication by days or even
+   weeks. Until your advisory clears that queue, `composer audit` stays quiet and the
+   dependency resolver keeps handing out the vulnerable versions. The FriendsOfPHP
+   pull request is what closes that gap promptly. And if your project is not hosted
+   on GitHub at all, this is not an optimization: it is the only route into the
+   ecosystem's tooling.
+5. **Announce** through your normal channels (release notes, Mastodon, Discord, blog),
    linking to the advisory. Keep it factual: what the issue is, who is affected, which
    version to upgrade to.
 
@@ -439,8 +456,13 @@ Two coordination notes:
 
 - **Verify the pipeline worked:** the advisory appears in the GitHub Advisory
   Database, `composer audit` flags the vulnerable version in a test project, and
-  Dependabot alerts fire where expected. If matching does not work, the ecosystem or
-  package-name field is the usual suspect ([§6](#6.-write-the-github-security-advisory)).
+  Dependabot alerts fire where expected. Do not expect all of this on publication day:
+  the advisory on your repository has to clear GitHub's review queue before Composer
+  sees it, which is exactly what the FriendsOfPHP pull request
+  ([§7](#7.-coordinate-the-release-and-publication)) is there to short-circuit. If it
+  still has not arrived after a few days, check the ecosystem and package-name fields
+  first ([§6](#6.-write-the-github-security-advisory)); those are the usual suspects
+  when matching silently fails.
 - **Verify the blocking is not too eager:** in a scratch project, check that the
   *fixed* version and unaffected release series still install and update cleanly.
   Compare the affected-version ranges shown in the [GitHub Advisory
