@@ -3,7 +3,7 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2026-08-15T11:37:00+00:00</updated>
+    <updated>2026-08-18T18:38:39+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
@@ -94,7 +94,7 @@
             <id>https://thephp.foundation/blog/2026/08/04/anne-mccarthy-joins-the-board/</id>
             <content type="html"><![CDATA[<p><img src="/assets/post-images/2026/anne-mccarthy/anne-mccarthy.jpg" width="300" alt="photo of anne mccarthy giving a presentation" class="mb-4 sm:mr-4 sm:float-left"/>The PHP Foundation Governing Board consists of a variety of folks from across the PHP ecosystem that share a vested interest in the success and sustainability of PHP. Representatives from the community, the core contribution team, and sponsors comprise this team to provide guidance and insight into the Foundation's objectives and initiatives. After a unanimous decision, we are incredibly pleased to be adding <a href="https://www.linkedin.com/in/anneguionmccarthy/">Anne McCarthy</a>, Architect and Open Source Director for Automattic, to our Board as a platinum sponsor representative.</p>
 
-<p>Anne brings 15 years of technical and open source experience, and has spent the last 12 years at Automattic, dedicated to improving the experience of the Wordpress community of users and contributors alike. They bring a balanced mix of thoughtful empathy and deep technical knowledge and will be a tremendous asset to the Foundation moving forward.</p>
+<p>Anne brings 15 years of technical and open source experience, and has spent the last 12 years at Automattic, dedicated to improving the experience of the WordPress community of users and contributors alike. They bring a balanced mix of thoughtful empathy and deep technical knowledge and will be a tremendous asset to the Foundation moving forward.</p>
 
 <blockquote>
   <p>Open source comes down to people trying, caring, and showing up to benefit the collective. This feels like an especially powerful act in today's world so it's a real honor to join the PHP Foundation Board to support those who have given so much to PHP and all the other projects built with it. -- Anne McCarthy</p>
