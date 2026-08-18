@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-08-18T18:54:32+00:00</updated><entry><author><name>Matt Stauffer</name><uri>https://github.com/mattstauffer</uri></author><title type="html"><![CDATA[How to Contribute to PHP]]></title><content type="html"><![CDATA[<p>PHP has powered a huge portion of the web for a <em>long</em> time now. It's launched untold numbers of careers and businesses, and many developers attribute their entire careers to the language. But when we find ourselves wanting to give back, it's not always clear how; sure, PHP is open source, but where do we contribute? How?</p>
+
+<p>I've run into that wall before. My immediate issue was that I didn't write C, followed pretty immediately by how overwhelming it felt to learn the entire RFC-and-mailing-list-driven contribution process.</p>
+
+<p>Thankfully, it turns out there are many ways to contribute to PHP, and writing C or proposing an RFC are just two of many options. I'm glad to share I've found <em>many</em> other ways to give back, and I'm confident you can as well.</p>
+
+<p>When we talk about "contributing to PHP," there are really two ways: <strong>contributing directly to the PHP project</strong>, and <strong>contributing to the broader PHP ecosystem</strong>. Both are needed and both are valid, so we'll walk through both in this guide. Wherever any potential path gets technical, we'll point you to the canonical instructions rather than duplicate them here.</p>
+
+<h2 id="php%2C-the-php-foundation%2C-and-the-ecosystem">PHP, the PHP Foundation, and the ecosystem</h2>
+
+<p>Before we go any further, I want to clear up the difference between a few different concepts with "PHP" in their names which we'll be referring to throughout this post:</p>
+
+<ul>
+<li><strong>The PHP project</strong> — a language, and the open-source project around it: the implementation, tests, documentation, and releases, and the technical decision-making that guides it all.</li>
+<li><strong>The PHP ecosystem</strong> — everything else built around PHP: packages, frameworks, tooling, conferences, education, communities, and publications.</li>
+<li><strong>The PHP Foundation</strong> — an organization that supports the long-term health of PHP, including funding programmers and coordinating and supporting community initiatives.</li>
+</ul>
+
+<p>And to clear up an important governance distinction, since this is posted on the PHP Foundation's blog: the Foundation does not own PHP, it doesn't govern its development, and it doesn't dictate RFCs. PHP is an independent open-source project with its own contributors and its own decision-making process, and we like it that way! The Foundation exists to support that work.</p>
+
+<h1 id="part-one%3A-contributing-directly-to-php">Part One: Contributing directly to PHP</h1>
+
+<h2 id="core-contribution-is-broader-than-you-might-think">Core contribution is broader than you might think</h2>
+
+<p>When most people picture the idea of "contributing to PHP core," the first thing that comes to mind is proposing a new language feature. But that's actually the deepest end of that pool, and it's only a small part of the work it takes to run a language.</p>
+
+<p>There are so many other ways people can contribute to the project, including testing releases, reporting bugs, reproducing bugs others have reported, writing tests, improving documentation, reviewing changes, fixing issues, participating in internals discussion, and, yes, RFCs.</p>
+
+<p>Let's walk through these, roughly from the lowest barrier to entry to the highest.</p>
+
+<h2 id="1.-test-prereleases">1. Test prereleases</h2>
+
+<p>Every new major, minor, or patch PHP version ships with a prerelease. Patch versions just get an RC (release candidate), and major/minor versions receive a series of prereleases — alphas, betas, and release candidates — before the final release. These exist so the community can catch problems while they're still cheap to fix. The more real-world code that runs against a prerelease, the more confident everyone can be that the final release won't break things.</p>
+
+<p>If you maintain a package, run its test suite against the next prerelease. If you run a large real-world application, run its tests on the prerelease, or point a local or staging environment at it. When something breaks, you've found either a genuine regression worth reporting or a change you'll need to prepare for, both of which are valuable.</p>
+
+<p>If you want to go a step further, test against PHP's master branch continuously rather than only at prerelease time; projects like PHPUnit and Xdebug already do this, so they catch regressions the moment they land. One caveat: don't gate your CI on it. Let a master-branch build fail without failing your whole suite, since you're deliberately testing against unreleased, in-progress code. PHPUnit's Sebastian Bergmann has written up <a href="https://phpunit.expert/articles/how-php-and-its-ecosystem-test-each-other.html">how PHP and its ecosystem test each other this way</a>.</p>
+
+<p>PHP announces each alpha, beta, and release candidate on <a href="https://www.php.net/">php.net</a>, together with the source downloads and release schedule for that version. You can use your preferred version management or container tooling to install the prerelease, or <a href="https://github.com/php/php-src#building-php-source-code">build it yourself locally</a>, and then run your application's or package's test suite against it. If you find something that looks like a regression in PHP itself, reduce it to the smallest reproduction you can and report it to the <a href="https://github.com/php/php-src/issues"><code>php-src</code> issue tracker</a>.</p>
+
+<p><strong>First step:</strong> Grab the current prerelease and run something you already maintain against it.</p>
+
+<h2 id="2.-report-and-reproduce-bugs">2. Report and reproduce bugs</h2>
+
+<p>A good bug report is itself a contribution, and so is confirming or reproducing someone else's.</p>
+
+<p>Before you file anything, search the <a href="https://github.com/php/php-src/issues">existing <code>php-src</code> issues in GitHub</a>; this problem may already be known. If it isn't, the most valuable thing you can do is reduce it to a <strong>minimal reproduction</strong>: the smallest snippet of code that will reliably trigger the undesirable behavior, along with your PHP version, platform, and any other relevant environment details. The <a href="https://github.com/php/php-src/blob/master/CONTRIBUTING.md"><code>php-src</code> contribution guide</a> has additional guidance on filing and working with issues.</p>
+
+<p>And to clear up a common misconception, it's still valuable to report a bug even if you don't know how to fix it.</p>
+
+<p><strong>First step:</strong> Search the issues, then either file your own issue or try to reproduce someone else's unconfirmed report.</p>
+
+<h2 id="3.-improve-documentation">3. Improve documentation</h2>
+
+<p>PHP's documentation is vast, and like all large (and long-running) documentation projects, it still contains plenty of unclear passages, missing examples, and pages describing behavior that has changed since its writing. Improving any of these helps every developer who lands on that page after you.</p>
+
+<p>For small changes, you don't even need to set up the documentation project locally: the PHP manual's <a href="https://doc.php.net/guide/contributing.md">contribution guide</a> explains how to propose an edit directly through GitHub. If you're interested in translation work, there's a separate <a href="https://doc.php.net/guide/translating.md">translation guide</a>.</p>
+
+<p>Here are a few concrete examples: clarifying a confusing sentence, adding a clear example to a function that lacks (and needs) one, documenting an edge case you had to discover the hard way, correcting behavior that's drifted over versions, or improving a translation into your language. And "improving the docs" isn't only about what's written: the documentation project also has tooling (CI, linting, etc.) that welcomes contributions.</p>
+
+<p><strong>First step:</strong> The next time a docs page confuses you, propose a fix instead of just closing the tab in frustration.</p>
+
+<h2 id="4.-write-tests">4. Write tests</h2>
+
+<p>PHP has its own test format, called <strong>PHPT</strong>: plain-text files that describe a bit of PHP to run and the output it should produce. They're how the language guards against regressions, and they're a natural bridge between everyday PHP development and working in <code>php-src</code>.</p>
+
+<p>A PHPT test is deliberately simple. At its core it's three sections: the description, a section describing the code to run, and a section describing the expected output:</p>
+
+<pre><code>--TEST--
+strlen() returns the number of bytes in a string
+--FILE--
+&lt;?php
+var_dump(strlen("hello"));
+?&gt;
+--EXPECT--
+int(5)
+</code></pre>
+
+<p>The <a href="https://php.github.io/php-src/miscellaneous/writing-tests.html"><code>php-src</code> testing guide</a> walks through the full PHPT format and how to write useful tests; once you're working from a local PHP build, the <a href="https://php.github.io/php-src/miscellaneous/running-tests.html">test-running guide</a> explains how to execute them.</p>
+
+<p>Similar to how it's valuable to report an issue even if you don't know how to fix it, it's valuable to write a test for a bug even if you don't know how to fix it. If you can write PHPT that reliably fails on a known bug, you've pinned the problem down precisely and made the process of writing and validating a fix that much easier.</p>
+
+<p><strong>First step:</strong> Turn a bug you've reproduced into a failing PHPT.</p>
+
+<h2 id="5.-fix-or-review-issues-in-php-src">5. Fix or review issues in php-src</h2>
+
+<p>This is the point where contribution moves into the implementation itself, and where knowing some C starts to matter. It's a bigger step, but still very clear. Here's generally how it works:</p>
+
+<ol>
+<li>Get PHP building locally.</li>
+<li>Find a scoped, well-defined existing problem to work on.</li>
+<li>Comprehend the problem, and reproduce it for yourself locally.</li>
+<li>Add or update tests that capture the correct behavior.</li>
+<li>Implement the fix.</li>
+<li>Open a pull request.</li>
+<li>Work through any review with the maintainers.</li>
+</ol>
+
+<p>I know "just get PHP building locally" is doing a lot of work in that first step. The <a href="https://php.github.io/php-src/"><code>php-src</code> developer documentation</a> and <a href="https://github.com/php/php-src/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a> are the best places to start with setting up a development environment and understanding the contribution workflow.</p>
+
+<p>There's also the other half of this process: <strong>reviewing and testing someone else's pull request.</strong> Pull down an open PR, build it, check that it does what it claims, and then leave your findings on the PR. And this may actually be simpler than opening your first PR from scratch.</p>
+
+<p><strong>First step:</strong> Get PHP building locally, then browse the <a href="https://github.com/php/php-src/issues"><code>php-src</code> issues</a> for a narrowly scoped, already-verified bug in an area you understand.</p>
+
+<h2 id="6.-participate-in-internals">6. Participate in internals</h2>
+
+<p>Technical discussion about the direction of PHP happens openly on the <a href="https://www.php.net/mailing-lists.php">internals mailing list</a>, PHP's long-running development mailing list. You don't have to write C to follow along, and you don't have to be an established contributor to add value.</p>
+
+<p>In fact, many people participating in internals conversations aren't traditional core developers. That goes both ways: it means you, even as a newcomer, are as welcome to participate as anyone, but it also means not every reply you might receive should carry the same weight. That means a strong objection from one participant can't be seen as the same as a decision; weigh feedback by its reasoning and don't be discouraged by a single dissenting voice.</p>
+
+<p>The internals mailing list also does have a <a href="https://github.com/php/php-src/blob/master/docs/mailinglist-rules.md">written guide</a>, which lays out how to participate. I'd recommend reading the whole thing before you post.</p>
+
+<p><strong>First step:</strong> Subscribe to the <a href="https://www.php.net/mailing-lists.php">internals mailing list</a>, or browse past and current discussions on <a href="https://externals.io/">externals.io</a>, and just listen for a while.</p>
+
+<h2 id="7.-rfcs%3A-changing-the-language-itself">7. RFCs: changing the language itself</h2>
+
+<p>RFCs (Requests for Comments) are the processes by which significant changes to the language are formally proposed and decided. They're the part of contributing to core that gets the most attention, so it's worth being clear about what they are and aren't.</p>
+
+<p>First: <strong>not every code change requires an RFC.</strong> Plenty of bug fixes land through ordinary pull requests. RFCs exist for new features and other changes significant enough to need formal decision-making through the RFC process.</p>
+
+<p>Second: <strong>an RFC is much more than an idea.</strong> A proposal that will be taken seriously requires research into prior art, careful design, analysis of backward-compatibility impact, a credible implementation plan (and often an implementation), a period of discussion, revision in response to feedback, a formal vote, and technical review throughout. The idea is the easy part; everything around it is the work.</p>
+
+<p>Two things newcomers often miss:</p>
+
+<ul>
+<li><strong>You can contribute to an RFC without being its author.</strong> Testing a proposed implementation, poking holes in the design, surfacing a compatibility problem, or providing real-world use cases all move a proposal forward.</li>
+<li><strong>An accepted proposal still has to become good software.</strong> A "yes" vote is the beginning of the implementation's real life, not the end.</li>
+</ul>
+
+<p>If you're not ready to author an RFC yourself, a great way to learn the process is to follow one that's currently under discussion. Read the proposal and its linked internals discussion, try the implementation if one is available, and look for places where your own experience can add useful evidence: compatibility concerns, interactions with existing features, real-world use cases, or behavior the proposal may not have considered. You don't need voting privileges to participate in the discussion or test the implementation.</p>
+
+<p><strong>First step:</strong> Browse the <a href="https://wiki.php.net/rfc">current RFC list</a>, choose one that's under discussion, and follow it end to end. If you're considering proposing your own change, start with the official <a href="https://wiki.php.net/rfc/howto">How to create an RFC</a> guide.</p>
+
+<h1 id="part-two%3A-contributing-to-php%27s-ecosystem">Part Two: Contributing to PHP's ecosystem</h1>
+
+<p>The PHP project is only part of the story. Most developers spend more of their time in the ecosystem around it — the packages, frameworks, tools, communities, and education that make PHP an ecosystem, not just a language. Contributing here is not a consolation prize for people who can't work on core; for most of the community, it's where their highest-value contributions actually live.</p>
+
+<h2 id="1.-help-existing-open-source-projects">1. Help existing open-source projects</h2>
+
+<p>The packages, frameworks, and tools you already use are maintained by real people; often very few of them, and often unpaid. They almost all need help: issue triage, pull-request review, documentation, testing against upcoming PHP versions, and general maintenance. Abandoned-but-widely-used projects sometimes need someone to step in and adopt them entirely — and that includes PHP's own bundled extensions, many of which have few or no active maintainers, so a domain you know well may be a genuine gap you can fill.</p>
+
+<p>It's tempting to think the way to contribute is to build something new. But <em>creating another package is not necessarily more valuable than maintaining one thousands of people already depend on.</em> In fact, it's often worse. Strengthening what exists is often the more valuable choice.</p>
+
+<p><strong>First step:</strong> Pick a dependency you rely on and spend an hour in its issue tracker.</p>
+
+<h2 id="2.-teach-and-help-developers">2. Teach and help developers</h2>
+
+<p>Teaching is infrastructure. An ecosystem is only as healthy as its ability to bring new people in and help existing developers level up, and that ability runs almost entirely on people who take the time to explain things.</p>
+
+<p>That includes writing tutorials and documentation, producing upgrade guides, giving talks, mentoring, answering questions in forums and chat, and helping newcomers land their very first contribution. None of this requires permission, and all of it builds on the rest.</p>
+
+<p><strong>First step:</strong> Write up the last thing you had to figure out the hard way.</p>
+
+<h2 id="3.-strengthen-php-communities">3. Strengthen PHP communities</h2>
+
+<p>The PHP community exists because people build and sustain the spaces it lives in: local meetups, conferences, online communities.</p>
+
+<p>You don't need to start a conference. Consider volunteering to assist a local meetup, or simply working to make a newcomer feel welcome in one. Or, if you haven't attended one yet, just show up!</p>
+
+<p><strong>First step:</strong> Show up to a local or online PHP community and meet people; if you're already there and want to do more, ask how you can help.</p>
+
+<h2 id="4.-help-php-show-up-outside-the-php-bubble">4. Help PHP show up outside the PHP bubble</h2>
+
+<p>Plenty of the world's developers have formed their impression of PHP from someone else's read on the language from the '90s. The best way to update these impressions is to make sure PHP is represented accurately where non-PHP developers actually are.</p>
+
+<p>That looks like giving PHP talks at general software conferences, contributing PHP SDKs or examples to language-neutral projects, adding modern PHP examples to developer education, publishing case studies from real applications, and improving PHP support in general-purpose developer tooling.</p>
+
+<p>That outward-facing work is exactly what the Foundation's Ambassador Program is built to coordinate.</p>
+
+<h1 id="part-three%3A-php-foundation-opportunities">Part Three: PHP Foundation opportunities</h1>
+
+<p>In addition to everything above, the Foundation explicitly offers some structured ways to plug in. These are intentionally building space for contributions outside of code, like marketing, conference speaking, research, and more.</p>
+
+<p>In 2026, the Foundation is launching six <strong>Special Interest Groups</strong>, covering the following areas: ecosystem security, <a href="https://thephp.foundation/blog/2026/06/19/the-php-ambassador-program-is-open/">PHP advocacy</a>, <a href="https://thephp.foundation/blog/2026/08/03/kicking-off-the-php-onboarding-initiative/">onboarding</a>, cryptography, community events, and accessibility and inclusion. The Foundation also periodically looks for community participation in surveys, consultations, and other initiatives.</p>
+
+<p>And for people or organizations that don't have contributor time to spare, <a href="https://thephp.foundation/sponsor/"><strong>financial support</strong> to the Foundation</a> is another way to enable this work — funding the contributors and initiatives that keep PHP moving.</p>
+
+<h2 id="when-you-get-stuck-or-hear-nothing-back">When you get stuck (or hear nothing back)</h2>
+
+<p>At some point you'll get stuck in one of these processes, or you'll open a pull request and hear nothing back for a while. Both are normal, and neither means you necessarily did anything wrong. Contribution runs largely based on the work of volunteers, and volunteer attention is limited.</p>
+
+<p>When you need help, there are a few good places to turn:</p>
+
+<ul>
+<li><strong>General questions and getting unstuck:</strong> The <a href="https://phpc.chat/">PHP Community Discord</a> is the most active real-time gathering spot, with channels ranging from beginner questions to core development. There's even a <code>#php-src-help</code> channel specifically for this sort of work. For longer-form questions, the <a href="https://www.reddit.com/r/PHP/">r/PHP subreddit</a> and the <a href="https://stackoverflow.com/questions/tagged/php"><code>php</code> tag on Stack Overflow</a> are both well-trafficked.</li>
+<li><strong>Core and internals questions:</strong> For questions specific to working on <code>php-src</code>, that same Discord has a <code>#php-internals</code> channel where core developers hang out, and the <a href="https://www.php.net/mailing-lists.php">internals mailing list</a> is the canonical venue for development discussion.</li>
+<li><strong>A <code>php-src</code> PR or RFC that's gone quiet:</strong> The internals mailing list is the right place to politely follow up. A short, respectful message linking your PR or proposal is a normal and accepted way to ask for eyes on stalled work.</li>
+</ul>
+
+<h2 id="pick-one-thing">Pick one thing</h2>
+
+<p>You don't have to try everything in this article. Pick one that fits your current level of experience and available time, and run with it.</p>
+
+<ul>
+<li><strong>If you have 30 minutes:</strong> fix a confusing docs page, confirm an open issue, or answer someone's question.</li>
+<li><strong>If you have an afternoon:</strong> test a prerelease, build a minimal reproducible example, or investigate a bug.</li>
+<li><strong>If you want a project:</strong> write a test, take on a scoped issue, or help maintain a package you depend on.</li>
+<li><strong>If you want an ongoing role:</strong> review contributions, maintain software, organize community, or get involved in internals or Foundation work.</li>
+</ul>
+
+<p>Whatever you pick, hold onto this:</p>
+
+<p><strong>If you write PHP, you are qualified to contribute to PHP.</strong> Don't let anyone tell you otherwise.</p>
+]]></content><link href="https://thephp.foundation/blog/2026/08/17/how-to-contribute-to-php/"/><id>https://thephp.foundation/blog/2026/08/17/how-to-contribute-to-php/</id><updated>Mon, 17 Aug 2026 00:00:00 +0000</updated></entry></feed>
