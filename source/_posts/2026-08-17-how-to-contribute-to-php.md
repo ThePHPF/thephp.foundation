@@ -34,15 +34,17 @@ And to clear up an important governance distinction, since this is posted on the
 
 When most people picture the idea of "contributing to PHP core," the first thing that comes to mind is proposing a new language feature. But that's actually the deepest end of that pool, and it's only a small part of the work it takes to run a language.
 
-There are so many other ways people can contribute to the project, including testing releases, reporting bugs, reproducing bugs others have reported, writing tests, improving documentation, reviewing changes, fixing issues, participating in internals discussion, and–yes–RFCs.
+There are so many other ways people can contribute to the project, including testing releases, reporting bugs, reproducing bugs others have reported, writing tests, improving documentation, reviewing changes, fixing issues, participating in internals discussion, and, yes, RFCs.
 
 Let's walk through these, roughly from the lowest barrier to entry to the highest.
 
 ## 1. Test prereleases
 
-Every new major, minor, or patch PHP version ships with a prerelease. Patch versions just get an RC (release candidate), and major/minor versions receive a series of prereleases–alphas, betas, and release candidates–before the final release. These exist so the community can catch problems while they're still cheap to fix. The more real-world code that runs against a prerelease, the more confident everyone can be that the final release won't break things.
+Every new major, minor, or patch PHP version ships with a prerelease. Patch versions just get an RC (release candidate), and major/minor versions receive a series of prereleases — alphas, betas, and release candidates — before the final release. These exist so the community can catch problems while they're still cheap to fix. The more real-world code that runs against a prerelease, the more confident everyone can be that the final release won't break things.
 
 If you maintain a package, run its test suite against the next prerelease. If you run a large real-world application, run its tests on the prerelease, or point a local or staging environment at it. When something breaks, you've found either a genuine regression worth reporting or a change you'll need to prepare for, both of which are valuable.
+
+If you want to go a step further, test against PHP's master branch continuously rather than only at prerelease time; projects like PHPUnit and Xdebug already do this, so they catch regressions the moment they land. One caveat: don't gate your CI on it. Let a master-branch build fail without failing your whole suite, since you're deliberately testing against unreleased, in-progress code. PHPUnit's Sebastian Bergmann has written up [how PHP and its ecosystem test each other this way](https://phpunit.expert/articles/how-php-and-its-ecosystem-test-each-other.html).
 
 PHP announces each alpha, beta, and release candidate on [php.net](https://www.php.net/), together with the source downloads and release schedule for that version. You can use your preferred version management or container tooling to install the prerelease, or [build it yourself locally](https://github.com/php/php-src#building-php-source-code), and then run your application's or package's test suite against it. If you find something that looks like a regression in PHP itself, reduce it to the smallest reproduction you can and report it to the [`php-src` issue tracker](https://github.com/php/php-src/issues).
 
@@ -64,7 +66,7 @@ PHP's documentation is vast, and like all large (and long-running) documentation
 
 For small changes, you don't even need to set up the documentation project locally: the PHP manual's [contribution guide](https://doc.php.net/guide/contributing.md) explains how to propose an edit directly through GitHub. If you're interested in translation work, there's a separate [translation guide](https://doc.php.net/guide/translating.md).
 
-Here are a few concrete examples: clarifying a confusing sentence, adding a clear example to a function that lacks (and needs) one, documenting an edge case you had to discover the hard way, correcting behavior that's drifted over versions, or improving a translation into your language.
+Here are a few concrete examples: clarifying a confusing sentence, adding a clear example to a function that lacks (and needs) one, documenting an edge case you had to discover the hard way, correcting behavior that's drifted over versions, or improving a translation into your language. And "improving the docs" isn't only about what's written: the documentation project also has tooling (CI, linting, etc.) that welcomes contributions.
 
 **First step:** The next time a docs page confuses you, propose a fix instead of just closing the tab in frustration.
 
@@ -101,7 +103,7 @@ This is the point where contribution moves into the implementation itself, and w
 4. Add or update tests that capture the correct behavior.
 5. Implement the fix.
 6. Open a pull request.
-7. Work through review with the maintainers.
+7. Work through any review with the maintainers.
 
 I know "just get PHP building locally" is doing a lot of work in that first step. The [`php-src` developer documentation](https://php.github.io/php-src/) and [CONTRIBUTING.md](https://github.com/php/php-src/blob/master/CONTRIBUTING.md) are the best places to start with setting up a development environment and understanding the contribution workflow.
 
@@ -111,11 +113,11 @@ There's also the other half of this process: **reviewing and testing someone els
 
 ## 6. Participate in internals
 
-Technical discussion about the direction of PHP happens openly on GitHub and on the [internals mailing list](https://www.php.net/mailing-lists.php), PHP's long-running development mailing list. You don't have to write C to follow along, and you don't have to be an established contributor to add value.
+Technical discussion about the direction of PHP happens openly on the [internals mailing list](https://www.php.net/mailing-lists.php), PHP's long-running development mailing list. You don't have to write C to follow along, and you don't have to be an established contributor to add value.
 
 In fact, many people participating in internals conversations aren't traditional core developers. That goes both ways: it means you, even as a newcomer, are as welcome to participate as anyone, but it also means not every reply you might receive should carry the same weight. That means a strong objection from one participant can't be seen as the same as a decision; weigh feedback by its reasoning and don't be discouraged by a single dissenting voice.
 
-There's no exact guide to contributing to internals, but there are a few consistent steps toward positive contribution. First, it pays to start by observing. Despite the attempt to make everything explicit, communities like internals often have norms that aren't written down. Spend some time searching previous discussions before raising something; long-running topics have often been debated before, and referencing that history shows you've done the reading. Bring technical evidence and concrete real-world use cases rather than preferences. And remember that the people you're talking to are donating their attention as well as their code; a well-researched message respects that.
+The internals mailing list also does have a [written guide](https://github.com/php/php-src/blob/master/docs/mailinglist-rules.md), which lays out how to participate. I'd recommend reading the whole thing before you post.
 
 **First step:** Subscribe to the [internals mailing list](https://www.php.net/mailing-lists.php), or browse past and current discussions on [externals.io](https://externals.io/), and just listen for a while.
 
@@ -123,7 +125,7 @@ There's no exact guide to contributing to internals, but there are a few consist
 
 RFCs (Requests for Comments) are the processes by which significant changes to the language are formally proposed and decided. They're the part of contributing to core that gets the most attention, so it's worth being clear about what they are and aren't.
 
-First: **not every language change requires an RFC.** Plenty of bug fixes land through ordinary pull requests. RFCs exist for new features and other changes significant enough to need formal decision-making through the RFC process.
+First: **not every code change requires an RFC.** Plenty of bug fixes land through ordinary pull requests. RFCs exist for new features and other changes significant enough to need formal decision-making through the RFC process.
 
 Second: **an RFC is much more than an idea.** A proposal that will be taken seriously requires research into prior art, careful design, analysis of backward-compatibility impact, a credible implementation plan (and often an implementation), a period of discussion, revision in response to feedback, a formal vote, and technical review throughout. The idea is the easy part; everything around it is the work.
 
@@ -138,11 +140,11 @@ If you're not ready to author an RFC yourself, a great way to learn the process 
 
 # Part Two: Contributing to PHP's ecosystem
 
-The PHP project is only part of the story. Most developers spend most of their time in the ecosystem around it–the packages, frameworks, tools, communities, and education that make PHP an ecosystem, not just a language. Contributing here is not a consolation prize for people who can't work on core; for most of the community, it's where their highest-value contributions actually live.
+The PHP project is only part of the story. Most developers spend more of their time in the ecosystem around it — the packages, frameworks, tools, communities, and education that make PHP an ecosystem, not just a language. Contributing here is not a consolation prize for people who can't work on core; for most of the community, it's where their highest-value contributions actually live.
 
 ## 1. Help existing open-source projects
 
-The packages, frameworks, and tools you already use are maintained by real people; often very few of them, and often unpaid. They almost all need help: issue triage, pull-request review, documentation, testing against upcoming PHP versions, and general maintenance. Abandoned-but-widely-used projects sometimes need someone to step in and adopt them entirely.
+The packages, frameworks, and tools you already use are maintained by real people; often very few of them, and often unpaid. They almost all need help: issue triage, pull-request review, documentation, testing against upcoming PHP versions, and general maintenance. Abandoned-but-widely-used projects sometimes need someone to step in and adopt them entirely — and that includes PHP's own bundled extensions, many of which have few or no active maintainers, so a domain you know well may be a genuine gap you can fill.
 
 It's tempting to think the way to contribute is to build something new. But *creating another package is not necessarily more valuable than maintaining one thousands of people already depend on.* In fact, it's often worse. Strengthening what exists is often the more valuable choice.
 
@@ -178,7 +180,7 @@ In addition to everything above, the Foundation explicitly offers some structure
 
 In 2026, the Foundation is launching six **Special Interest Groups**, covering the following areas: ecosystem security, [PHP advocacy](https://thephp.foundation/blog/2026/06/19/the-php-ambassador-program-is-open/), [onboarding](https://thephp.foundation/blog/2026/08/03/kicking-off-the-php-onboarding-initiative/), cryptography, community events, and accessibility and inclusion. The Foundation also periodically looks for community participation in surveys, consultations, and other initiatives.
 
-And for people or organizations that don't have contributor time to spare, [**financial support** to the Foundation](https://thephp.foundation/sponsor/) is another way to enable this work–funding the contributors and initiatives that keep PHP moving.
+And for people or organizations that don't have contributor time to spare, [**financial support** to the Foundation](https://thephp.foundation/sponsor/) is another way to enable this work — funding the contributors and initiatives that keep PHP moving.
 
 ## When you get stuck (or hear nothing back)
 
@@ -186,7 +188,7 @@ At some point you'll get stuck in one of these processes, or you'll open a pull 
 
 When you need help, there are a few good places to turn:
 
-- **General questions and getting unstuck:** The [PHP Community Discord](https://phpc.chat/) is the most active real-time gathering spot, with channels ranging from beginner questions to core development. For longer-form questions, the [r/PHP subreddit](https://www.reddit.com/r/PHP/) and the [`php` tag on Stack Overflow](https://stackoverflow.com/questions/tagged/php) are both well-trafficked.
+- **General questions and getting unstuck:** The [PHP Community Discord](https://phpc.chat/) is the most active real-time gathering spot, with channels ranging from beginner questions to core development. There's even a `#php-src-help` channel specifically for this sort of work. For longer-form questions, the [r/PHP subreddit](https://www.reddit.com/r/PHP/) and the [`php` tag on Stack Overflow](https://stackoverflow.com/questions/tagged/php) are both well-trafficked.
 - **Core and internals questions:** For questions specific to working on `php-src`, that same Discord has a `#php-internals` channel where core developers hang out, and the [internals mailing list](https://www.php.net/mailing-lists.php) is the canonical venue for development discussion.
 - **A `php-src` PR or RFC that's gone quiet:** The internals mailing list is the right place to politely follow up. A short, respectful message linking your PR or proposal is a normal and accepted way to ask for eyes on stalled work.
 
@@ -195,7 +197,7 @@ When you need help, there are a few good places to turn:
 You don't have to try everything in this article. Pick one that fits your current level of experience and available time, and run with it.
 
 - **If you have 30 minutes:** fix a confusing docs page, confirm an open issue, or answer someone's question.
-- **If you have an afternoon:** test a prerelease, build a minimal reproduction, or investigate a bug.
+- **If you have an afternoon:** test a prerelease, build a minimal reproducible example, or investigate a bug.
 - **If you want a project:** write a test, take on a scoped issue, or help maintain a package you depend on.
 - **If you want an ongoing role:** review contributions, maintain software, organize community, or get involved in internals or Foundation work.
 
