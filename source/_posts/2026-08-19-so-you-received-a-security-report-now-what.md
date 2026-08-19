@@ -7,7 +7,7 @@ tags:
     - SIGs
 author:
   - sebastian-bergmann
-published_at: 11 August 2026
+published_at: 19 August 2026
 ---
 **A guide for PHP project maintainers, from the PHP Foundation Ecosystem Security Team**
 
