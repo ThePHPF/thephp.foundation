@@ -49,7 +49,6 @@ final class SharingImageGenerator
 
         header('Content-type: image/png');
         imagepng($image);
-        imagedestroy($image);
     }
 
     public function save(string $path): void
@@ -57,7 +56,6 @@ final class SharingImageGenerator
         $image = $this->prepare();
 
         imagepng($image, $path);
-        imagedestroy($image);
     }
 
     private function prepare(): GdImage
