@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-08-26T17:08:04+00:00</updated><entry><author><name>Ayesh Karunaratne</name><uri>https://aye.sh</uri></author><title type="html"><![CDATA[PHP Core Roundup #7]]></title><content type="html"><![CDATA[<p>Welcome to the seventh in the <em>PHP Core Roundup</em> series, where we summarize the latest improvements, bug fixes, proposals, and other developments in PHP.</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-08-31T19:53:41+00:00</updated><entry><author><name>Ayesh Karunaratne</name><uri>https://aye.sh</uri></author><title type="html"><![CDATA[PHP Core Roundup #7]]></title><content type="html"><![CDATA[<p>Welcome to the seventh in the <em>PHP Core Roundup</em> series, where we summarize the latest improvements, bug fixes, proposals, and other developments in PHP.</p>
 
 <p>We are merely three weeks away from PHP 8.2 GA release, and we already have changes implemented and being discussed for the next PHP version, PHP 8.3! Exciting times!</p>
 
