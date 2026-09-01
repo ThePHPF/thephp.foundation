@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-09-01T13:28:19+00:00</updated><entry><author><name>Ayesh Karunaratne</name><uri>https://aye.sh</uri></author><title type="html"><![CDATA[PHP Core Roundup #7]]></title><content type="html"><![CDATA[<p>Welcome to the seventh in the <em>PHP Core Roundup</em> series, where we summarize the latest improvements, bug fixes, proposals, and other developments in PHP.</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-09-01T14:03:05+00:00</updated><entry><author><name>Ayesh Karunaratne</name><uri>https://aye.sh</uri></author><title type="html"><![CDATA[PHP Core Roundup #7]]></title><content type="html"><![CDATA[<p>Welcome to the seventh in the <em>PHP Core Roundup</em> series, where we summarize the latest improvements, bug fixes, proposals, and other developments in PHP.</p>
 
 <p>We are merely three weeks away from PHP 8.2 GA release, and we already have changes implemented and being discussed for the next PHP version, PHP 8.3! Exciting times!</p>
 
 <p><a href="https://twitter.com/ThePHPF/status/1581716848944779264"><img src="/assets/post-images/2022/roundup-7/tweet-thephpf-status.png" alt="Right now, we are working on a transparency report, renewing contracts, and establishing high-level goals for next year. We have a lot of exciting stuff to share soon, so please stay tuned!" title="The PHP Foundation 💜 on Twitter" /></a></p>
 
-<p><div class="px-4 pt-3 border-b border-t -mx-4 border-gray-200">
+<p><div class="mx-auto max-w-4xl px-6 border-b border-t border-gray-200 lg:px-0 pt-3">
     <div class="bg-white py-8">
         <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
             <div class="max-w-xl text-4xl font-medium tracking-tight text-gray-900 lg:col-span-6">
@@ -270,7 +270,7 @@ This RFC proposes to allow the syntax shown in the snippet above, which is appar
 <p><br>
 We publish the posts on our website, and you can subscribe to a newsletter; You don’t necessarily have to be a PHP Foundation backer to follow <em>PHP Core Roundup</em>.</p>
 
-<p><div class="px-4 pt-3 border-b border-t -mx-4 border-gray-200">
+<p><div class="mx-auto max-w-4xl px-6 border-b border-t border-gray-200 lg:px-0 pt-3">
     <div class="bg-white py-8">
         <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
             <div class="max-w-xl text-4xl font-medium tracking-tight text-gray-900 lg:col-span-6">
@@ -551,7 +551,7 @@ $response-&gt;withStatus(201)-&gt;withStatus(202);
 <p><br>
 We publish the posts on our website, and you can subscribe to a newsletter; You don’t necessarily have to be a PHP Foundation backer to follow <em>PHP Core Roundup</em>.</p>
 
-<p><div class="px-4 pt-3 border-b border-t -mx-4 border-gray-200">
+<p><div class="mx-auto max-w-4xl px-6 border-b border-t border-gray-200 lg:px-0 pt-3">
     <div class="bg-white py-8">
         <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
             <div class="max-w-xl text-4xl font-medium tracking-tight text-gray-900 lg:col-span-6">
@@ -1172,7 +1172,7 @@ echo $result; // 18.1428571428
 
 <p>You don’t necessarily have to be a PHP Foundation backer to follow the PHP Roundup. We’ll be publishing the posts on our website, and you can subscribe to a newsletter:</p>
 
-<p><div class="px-4 pt-3 border-b border-t -mx-4 border-gray-200">
+<p><div class="mx-auto max-w-4xl px-6 border-b border-t border-gray-200 lg:px-0 pt-3">
     <div class="bg-white py-8">
         <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
             <div class="max-w-xl text-4xl font-medium tracking-tight text-gray-900 lg:col-span-6">
@@ -1380,7 +1380,7 @@ echo $result; // 18.1428571428
 
 <p>We look forward to bringing you updates on our <a href="https://thephp.foundation/blog/tag/roundup/">PHP Core Roundup series</a> and our newsletter:</p>
 
-<p><div class="px-4 pt-3 border-b border-t -mx-4 border-gray-200">
+<p><div class="mx-auto max-w-4xl px-6 border-b border-t border-gray-200 lg:px-0 pt-3">
     <div class="bg-white py-8">
         <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
             <div class="max-w-xl text-4xl font-medium tracking-tight text-gray-900 lg:col-span-6">
@@ -1421,7 +1421,7 @@ echo $result; // 18.1428571428
 
 <p>You don’t necessarily have to be a PHP Foundation backer to follow the PHP Roundup. We’ll be publishing the posts on our website, and you can subscribe to the newsletter:</p>
 
-<p><div class="px-4 pt-3 border-b border-t -mx-4 border-gray-200">
+<p><div class="mx-auto max-w-4xl px-6 border-b border-t border-gray-200 lg:px-0 pt-3">
     <div class="bg-white py-8">
         <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
             <div class="max-w-xl text-4xl font-medium tracking-tight text-gray-900 lg:col-span-6">
@@ -1681,7 +1681,7 @@ class C {}
 <p><br>
 We publish the posts on our website, and you can subscribe to a newsletter; You don’t necessarily have to be a PHP Foundation backer to follow <em>PHP Core Roundup</em>.</p>
 
-<p><div class="px-4 pt-3 border-b border-t -mx-4 border-gray-200">
+<p><div class="mx-auto max-w-4xl px-6 border-b border-t border-gray-200 lg:px-0 pt-3">
     <div class="bg-white py-8">
         <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
             <div class="max-w-xl text-4xl font-medium tracking-tight text-gray-900 lg:col-span-6">
@@ -2174,7 +2174,7 @@ echo $result; // 18.1428571428
 
 <p>We’ll be publishing the posts on our website, and you can subscribe to a newsletter; You don’t necessarily have to be a PHP Foundation backer to follow <em>PHP Core Roundup</em>.</p>
 
-<p><div class="px-4 pt-3 border-b border-t -mx-4 border-gray-200">
+<p><div class="mx-auto max-w-4xl px-6 border-b border-t border-gray-200 lg:px-0 pt-3">
     <div class="bg-white py-8">
         <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
             <div class="max-w-xl text-4xl font-medium tracking-tight text-gray-900 lg:col-span-6">
@@ -2524,7 +2524,7 @@ The RFC missed the 2/3 vote with 27 votes in favor and 16 against.</p>
   <p>Started over a year ago, the PHP Core Roundup series offers a summary of the latest developments, discussions, and news about PHP Core, contributed by both PHP Foundation members and other participants. This post is the thirteenth in the PHP Core Roundup series.</p>
 </blockquote>
 
-<p><div class="px-4 pt-3 border-b border-t -mx-4 border-gray-200">
+<p><div class="mx-auto max-w-4xl px-6 border-b border-t border-gray-200 lg:px-0 pt-3">
     <div class="bg-white py-8">
         <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
             <div class="max-w-xl text-4xl font-medium tracking-tight text-gray-900 lg:col-span-6">
@@ -3052,7 +3052,7 @@ We are incredibly grateful for the commitment and dedication of all contributors
 
 <p>You don’t necessarily have to be a PHP Foundation backer to follow the PHP Roundup. We’ll be publishing the posts on our website, and you can subscribe to a newsletter:</p>
 
-<p><div class="px-4 pt-3 border-b border-t -mx-4 border-gray-200">
+<p><div class="mx-auto max-w-4xl px-6 border-b border-t border-gray-200 lg:px-0 pt-3">
     <div class="bg-white py-8">
         <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
             <div class="max-w-xl text-4xl font-medium tracking-tight text-gray-900 lg:col-span-6">
@@ -3192,7 +3192,7 @@ We are incredibly grateful for the commitment and dedication of all contributors
   <p>Started over a year ago, the PHP Core Roundup series offers a summary of the latest developments, discussions, and news about PHP Core, contributed by both PHP Foundation members and other participants. This post is the thirteenth in the PHP Core Roundup series.</p>
 </blockquote>
 
-<p><div class="px-4 pt-3 border-b border-t -mx-4 border-gray-200">
+<p><div class="mx-auto max-w-4xl px-6 border-b border-t border-gray-200 lg:px-0 pt-3">
     <div class="bg-white py-8">
         <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
             <div class="max-w-xl text-4xl font-medium tracking-tight text-gray-900 lg:col-span-6">
@@ -3597,7 +3597,7 @@ We are incredibly grateful for the commitment and dedication of all contributors
 <p><br>
 We publish the posts on our website, and you can subscribe to a newsletter; You don’t necessarily have to be a PHP Foundation backer to follow <em>PHP Core Roundup</em>.</p>
 
-<p><div class="px-4 pt-3 border-b border-t -mx-4 border-gray-200">
+<p><div class="mx-auto max-w-4xl px-6 border-b border-t border-gray-200 lg:px-0 pt-3">
     <div class="bg-white py-8">
         <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
             <div class="max-w-xl text-4xl font-medium tracking-tight text-gray-900 lg:col-span-6">
@@ -3976,7 +3976,7 @@ This RFC proposes to add consistently for stream wrappers in glob() function. Wi
   <p>Started over a year ago, the PHP Core Roundup series offers a summary of the latest developments, discussions, and news about PHP Core, contributed by both PHP Foundation members and other participants. This post is the thirteenth in the PHP Core Roundup series.</p>
 </blockquote>
 
-<p><div class="px-4 pt-3 border-b border-t -mx-4 border-gray-200">
+<p><div class="mx-auto max-w-4xl px-6 border-b border-t border-gray-200 lg:px-0 pt-3">
     <div class="bg-white py-8">
         <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
             <div class="max-w-xl text-4xl font-medium tracking-tight text-gray-900 lg:col-span-6">
@@ -4498,7 +4498,7 @@ We are incredibly grateful for the commitment and dedication of all contributors
 <p><br>
 We publish the posts on our website, and you can subscribe to a newsletter; You don’t necessarily have to be a PHP Foundation backer to follow <em>PHP Core Roundup</em>.</p>
 
-<p><div class="px-4 pt-3 border-b border-t -mx-4 border-gray-200">
+<p><div class="mx-auto max-w-4xl px-6 border-b border-t border-gray-200 lg:px-0 pt-3">
     <div class="bg-white py-8">
         <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
             <div class="max-w-xl text-4xl font-medium tracking-tight text-gray-900 lg:col-span-6">
@@ -4837,7 +4837,7 @@ class C {
   <p>Started over a year ago, the PHP Core Roundup series offers a summary of the latest developments, discussions, and news about PHP Core, contributed by both PHP Foundation members and other participants. This post is the thirteenth in the PHP Core Roundup series.</p>
 </blockquote>
 
-<p><div class="px-4 pt-3 border-b border-t -mx-4 border-gray-200">
+<p><div class="mx-auto max-w-4xl px-6 border-b border-t border-gray-200 lg:px-0 pt-3">
     <div class="bg-white py-8">
         <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
             <div class="max-w-xl text-4xl font-medium tracking-tight text-gray-900 lg:col-span-6">
@@ -5286,7 +5286,7 @@ We are incredibly grateful for the commitment and dedication of all contributors
 <p><br>
 We publish the posts on our website, and you can subscribe to a newsletter; You don’t necessarily have to be a PHP Foundation backer to follow <em>PHP Core Roundup</em>.</p>
 
-<p><div class="px-4 pt-3 border-b border-t -mx-4 border-gray-200">
+<p><div class="mx-auto max-w-4xl px-6 border-b border-t border-gray-200 lg:px-0 pt-3">
     <div class="bg-white py-8">
         <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
             <div class="max-w-xl text-4xl font-medium tracking-tight text-gray-900 lg:col-span-6">
@@ -5624,7 +5624,7 @@ class C {
   <p>Started over a year ago, the PHP Core Roundup series offers a summary of the latest developments, discussions, and news about PHP Core, contributed by both PHP Foundation members and other participants. This post is the thirteenth in the PHP Core Roundup series.</p>
 </blockquote>
 
-<p><div class="px-4 pt-3 border-b border-t -mx-4 border-gray-200">
+<p><div class="mx-auto max-w-4xl px-6 border-b border-t border-gray-200 lg:px-0 pt-3">
     <div class="bg-white py-8">
         <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
             <div class="max-w-xl text-4xl font-medium tracking-tight text-gray-900 lg:col-span-6">
@@ -6017,7 +6017,7 @@ We are incredibly grateful for the commitment and dedication of all contributors
 <p><br>
 We publish the posts on our website, and you can subscribe to a newsletter; You don’t necessarily have to be a PHP Foundation backer to follow <em>PHP Core Roundup</em>.</p>
 
-<p><div class="px-4 pt-3 border-b border-t -mx-4 border-gray-200">
+<p><div class="mx-auto max-w-4xl px-6 border-b border-t border-gray-200 lg:px-0 pt-3">
     <div class="bg-white py-8">
         <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
             <div class="max-w-xl text-4xl font-medium tracking-tight text-gray-900 lg:col-span-6">
