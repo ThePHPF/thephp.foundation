@@ -15,7 +15,7 @@ class Team
             [
                 'title' => 'Board',
                 'description' => 'The Board of Directors consists of veteran PHP core developers, PHP community leaders, representatives of sponsors, and other key stakeholders. The PHP Foundation does not compensate board members.',
-                'members' => ['sebastian-bergmann', 'nils-adermann', 'benjamin-eberlei', 'josepha-haden', 'roman-pronskiy', 'nicolas-grekas', 'sara-golemon', 'matthew-weier-o-phinney', 'matt-stauffer', 'anne-mccarthy'],
+                'members' => ['sebastian-bergmann', 'nils-adermann', 'benjamin-eberlei', 'josepha-haden', 'nicolas-grekas', 'sara-golemon', 'matthew-weier-o-phinney', 'matt-stauffer', 'anne-mccarthy', 'brent-roose'],
             ],
             [
                 'title' => 'Core Developers',
@@ -25,7 +25,7 @@ class Team
             [
                 'title' => 'Community',
                 'description' => 'Active community members who help the PHP Foundation.',
-                'members' => ['rasmus-lerdorf', 'dmitry-stogov', 'nikita-popov', 'ayesh-karunaratne', 'tobias-nyholm', 'sergey-panteleev'],
+                'members' => ['rasmus-lerdorf', 'dmitry-stogov', 'nikita-popov', 'ayesh-karunaratne', 'tobias-nyholm', 'sergey-panteleev','roman-pronskiy'],
             ],
         ];
     }
@@ -88,7 +88,7 @@ class Team
                 'name' => 'Roman Pronskiy',
                 'company' => 'JetBrains',
                 'image' => 'https://avatars.githubusercontent.com/u/1196825?s=200&v=4',
-                'job' => 'Board member',
+                'job' => 'Emeritus Board member',
                 'twitter' => 'https://twitter.com/pronskiy',
                 'github' => 'https://github.com/pronskiy',
                 'url' => 'https://twitter.com/pronskiy',
@@ -308,6 +308,16 @@ class Team
                 'job' => 'Board member',
                 'github' => 'https://github.com/annezazu',
                 'linkedin' => 'https://www.linkedin.com/in/anneguionmccarthy/',
+            ],
+            'brent-roose' => [
+                'name' => 'Brent Roose',
+                'company' => 'JetBrains',
+                'image' => 'https://avatars.githubusercontent.com/u/6905297?v=4',
+                'job' => 'Board member',
+                'github' => 'https://github.com/brendt',
+                'linkedin' => 'https://www.linkedin.com/in/brent-roose-20b02a275/',
+                'mastodon' => 'https://phpc.social/@brendt',
+                'twitter' => 'https://x.com/brendt_gd',
             ],
             'the-php-foundation' => [
                 'name' => 'The PHP Foundation',
