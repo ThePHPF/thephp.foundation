@@ -6,7 +6,7 @@ tags:
   - stories
 author:
   - sebastian-bergmann
-published_at: 28 August 2026
+published_at: 2 September 2026
 ---
 
 Germany is spending €108 million to move its federal websites onto a PHP application.
