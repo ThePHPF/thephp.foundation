@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-08-31T19:53:41+00:00</updated><entry><author><name>Sebastian Bergmann</name><uri>https://github.com/sebastianbergmann</uri></author><title type="html"><![CDATA[So You Received a Security Report. Now What?]]></title><content type="html"><![CDATA[<p><strong>A guide for PHP project maintainers, from the PHP Foundation Ecosystem Security Team</strong></p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-09-01T13:28:19+00:00</updated><entry><author><name>Sebastian Bergmann</name><uri>https://github.com/sebastianbergmann</uri></author><title type="html"><![CDATA[So You Received a Security Report. Now What?]]></title><content type="html"><![CDATA[<p><strong>A guide for PHP project maintainers, from the PHP Foundation Ecosystem Security Team</strong></p>
 
 <blockquote>
   <p>You maintain a PHP project. Someone (maybe Volker from the PHP Foundation, maybe an
