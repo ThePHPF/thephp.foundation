@@ -309,6 +309,14 @@ class Team
                 'github' => 'https://github.com/annezazu',
                 'linkedin' => 'https://www.linkedin.com/in/anneguionmccarthy/',
             ],
+            'weilin-du' => [
+                'name' => 'Weilin Du',
+                'image' => 'https://avatars.githubusercontent.com/u/108666168?v=4',
+                'job' => 'PHP Core Developer',
+                'mastodon' => 'https://phpc.social/@LamentXU',
+                'github' => 'https://github.com/LamentXU123',
+                'url' => 'https://lamentxu.top/',
+            ],
             'brent-roose' => [
                 'name' => 'Brent Roose',
                 'company' => 'JetBrains',
