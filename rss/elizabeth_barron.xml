@@ -1,55 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-09-01T14:03:05+00:00</updated><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Help Shape the Future of PHP: Take the State of PHP Survey]]></title><content type="html"><![CDATA[<p>PHP is powered by a global community of developers, maintainers, contributors, companies, and users. To better understand that community and the ecosystem around it, The PHP Foundation and <a href="https://www.jetbrains.com/phpstorm/">PhpStorm</a>, a JetBrains IDE, are launching the first annual <a href="https://surveys.jetbrains.com/s3/phpf-b-state-of-php-2026">State of PHP survey</a>.</p>
-
-<p>This survey is an effort to build a clearer picture of how PHP is used today: who is using it, which tools and frameworks developers rely on, what challenges they face, how they feel about the language, and where they see PHP going next.</p>
-
-<p>We invite everyone who works with PHP to <a href="https://surveys.jetbrains.com/s3/phpf-b-state-of-php-2026">participate</a>.</p>
-
-<p><img src="/assets/post-images/2026/state-of-php-survey/banner.png" width="1052" alt="illustrated PHP elephant with a safari hat and the words join our expedition." class="mb-4 sm:mr-4"/></p>
-
-<h3 id="why-we%27re-launching-the-state-of-php-survey">Why we're launching the State of PHP survey</h3>
-
-<p>PHP has been around for more than 30 years, and it continues to evolve alongside the people and organizations that depend on it. The ecosystem is broad: developers use PHP across many countries, industries, experience levels, frameworks, deployment environments, and workflows. To support PHP effectively, we need better insight into that ecosystem.
-The goal is to gather representative input from PHP developers of all backgrounds. Whether you have been writing PHP for decades or only recently started, your perspective is invaluable.</p>
-
-<h3 id="what-happens-with-the-results">What happens with the results</h3>
-
-<p>The aggregated results will be published in the State of PHP 2026 report later this year, which will be announced in <a href="https://x.com/ThePHPF">The PHP Foundation</a> and <a href="https://x.com/phpstorm">PhpStorm’s</a> social media channels and newsletters.</p>
-
-<p>The report will help the community better understand current PHP usage and trends. It will also provide useful insight for contributors, maintainers, tool authors, educators, companies, and everyone working to strengthen PHP and its ecosystem.</p>
-
-<h3 id="take-the-survey">Take the survey</h3>
-
-<p>We encourage all PHP developers to take part and to share the survey with colleagues and local PHP communities.</p>
-
-<p><a href="https://surveys.jetbrains.com/s3/phpf-b-state-of-php-2026" class="button-link">Take the Survey</a></p>
-
-<p>The more developers participate, the more useful and representative the final report will be.</p>
-
-<p>Thank you for helping us map the PHP ecosystem and for being part of the first State of PHP survey.</p>
-
-<p>-- The PHP Foundation and PhpStorm teams</p>
-]]></content><link href="https://thephp.foundation/blog/2026/06/09/help-shape-the-future-of-php/"/><id>https://thephp.foundation/blog/2026/06/09/help-shape-the-future-of-php/</id><updated>Tue, 09 Jun 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Join Us for The PHP Foundation Community Hour]]></title><content type="html"><![CDATA[<p>Here at The PHP Foundation, we are continuously looking for ways in which we can increase our connections with the PHP community, especially when the goal is to improve the sustainability of the PHP language. Increasing the contributor pool ties in directly with sustainability, so encouraging contributions back to the PHP ecosystem is something we want to foster and support.</p>
-
-<p><strong>As part of this effort, we are excited to be launching a monthly one-hour interactive podcast in partnership with the folks at <a href="https://www.phparch.com/">PHP Architect</a>.</strong> This podcast will be called <strong>The PHP Foundation Community Hour</strong> and will feature various Foundation staff, contractors, and friends who will be sharing tips and insight into different contribution paths. These will be hosted on the second Thursday of every month on the <a href="https://www.phparch.com/php-foundation-community-hour-podcast/">PHP Architect podcast platform</a>.</p>
-
-<p>The PHP Foundation Community Hour is meant to be a casual interactive session and we welcome your questions before and during the event. If you want to submit a question beforehand to our guests, you can use <a href="https://forms.gle/aeAq34EXyhs3wZBQ7">this form</a> to do so. Please keep in mind that while we may choose to answer select questions that fall outside our topic, we are mostly focused on helping people understand how they can contribute to PHP.</p>
-
-<p>Our first episode is coming in a few weeks! Here are the details:</p>
-
-<ul>
-<li>First Episode Time/Date: September 10, 2026 at 12:30 pm Eastern / 16:30 UTC</li>
-<li>Topic: Getting Started with Contributing to PHP</li>
-<li>Guest: Matt Stauffer</li>
-<li>Host: Elizabeth Barron</li>
-<li><a href="https://calendar.google.com/calendar/ical/c_ce0269971d31f57bb6a079df26f0e97aae764cf6d93aab43c509b20002339275%40group.calendar.google.com/public/basic.ics">Subscribe to the calendar through an .ics link</a> to see upcoming guests</li>
-<li><a href="https://www.phparch.com/php-foundation-community-hour-podcast/">Subscribe on Spotify, YouTube, and other platforms</a></li>
-</ul>
-
-<p>We want to extend a heap of gratitude to the folks at <a href="https://www.phparch.com/">PHP Architect</a> for providing the infrastructure, platform, and technical support that enables us to host these events.</p>
-
-<p>Hope you can join us on September 10!</p>
-]]></content><link href="https://thephp.foundation/blog/2026/08/31/join-us-for-the-php-foundation-community-hour/"/><id>https://thephp.foundation/blog/2026/08/31/join-us-for-the-php-foundation-community-hour/</id><updated>Mon, 31 Aug 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Working Together on the Future of PHP]]></title><content type="html"><![CDATA[<p>I’m incredibly excited to be joining the PHP Foundation as the Executive Director and continuing the work that has been done under the leadership of Roman Pronskiy and the Board. For those who don’t know me, I look forward to meeting you!</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-09-02T13:55:38+00:00</updated><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Working Together on the Future of PHP]]></title><content type="html"><![CDATA[<p>I’m incredibly excited to be joining the PHP Foundation as the Executive Director and continuing the work that has been done under the leadership of Roman Pronskiy and the Board. For those who don’t know me, I look forward to meeting you!</p>
 
 <h2 id="a-little-about-me">A little about me</h2>
 
@@ -70,28 +20,48 @@ The goal is to gather representative input from PHP developers of all background
 <p>Because we’re all in this together, I want to spend the next 1-2 months really listening to what you have to say. I have an <a href="https://calendar.app.google/UkqNQzuzYBbEYjLYA">open calendar</a> and I encourage you to reserve some time with me. I want to hear from PHP developers, contributors, companies using PHP, independent consultants, sponsors, community members, and anyone else interested in the future of PHP. I want to hear about your goals, your motivations, your pain points, and yes, even your wacky and unorthodox ideas. And if meetings aren’t your thing, that’s completely understandable. You can also send me an <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#101;&#x6c;&#105;&#122;&#x61;b&#101;&#x74;&#x68;&#64;&#x74;&#x68;&#101;&#112;&#x68;&#112;&#46;&#x66;o&#117;&#x6e;&#x64;&#97;&#x74;&#x69;&#111;&#110;">email</a>. (I’ll even check my inbox!)</p>
 
 <p>PHP’s secret recipe has always been its community and I can’t wait to be collaborating with you all again!</p>
-]]></content><link href="https://thephp.foundation/blog/2026/03/05/working-together-on-the-future-of-php/"/><id>https://thephp.foundation/blog/2026/03/05/working-together-on-the-future-of-php/</id><updated>Fri, 06 Mar 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[The PHP Ambassador Program is Open]]></title><content type="html"><![CDATA[<p>We are excited to announce that we have scheduled the first meeting for the PHP Ambassador Program! This is the second  Special Interest Group launched by The PHP Foundation, and we are inviting you to be a part of it.</p>
+]]></content><link href="https://thephp.foundation/blog/2026/03/05/working-together-on-the-future-of-php/"/><id>https://thephp.foundation/blog/2026/03/05/working-together-on-the-future-of-php/</id><updated>Fri, 06 Mar 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Announcing the Ecosystem Security Team at The PHP Foundation]]></title><content type="html"><![CDATA[<p>The core <a href="https://thephp.foundation/#our-mission">mission</a> of the PHP Foundation is to ensure the long-term prosperity of the PHP language. Today, your, or your company's, financial contributions primarily fund developers working on the PHP language. In addition to sponsorships, the PHP Foundation uses grants to enable projects like last year's <a href="https://thephp.foundation/blog/2025/04/10/php-core-security-audit-results/">PHP Core Security Audit</a> funded by the <a href="https://www.sovereign.tech">Sovereign Tech Agency</a>.</p>
 
-<p>As mentioned in our <a href="https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/#2.-php-ambassador-program">2026 Strategy document</a>, this group will be focused on improving the perception of PHP outside the PHP bubble. It will center on external advocacy and empowering the community to help tell the story of modern PHP in whatever capacity makes sense for them. Whether it be at a local open source group, inside a company, or at an open source conference, we want to provide PHP community members with the tools and resources they need to advocate on behalf of the PHP ecosystem.</p>
+<p>In March, the <a href="https://www.linuxfoundation.org/press/linux-foundation-announces-12.5-million-in-grant-funding-from-leading-organizations-to-advance-open-source-security">Linux Foundation announced a grant</a> with the goal of strengthening the security of the open source software ecosystem. This funding is managed by <a href="https://alpha-omega.dev">Alpha-Omega</a> and the Open Source Security Foundation <a href="https://openssf.org">(OpenSSF)</a>.</p>
 
-<p>The first meeting is <strong>1 hour long</strong> and scheduled for <strong>Tuesday, June 30, 2026 at 10:30 am EDT / 2:30 pm UTC</strong>. This will be a kick-off session where we collaborate on the goals and objectives of the group and schedule a date/time for future meetings. If you would like to participate but you are unable to attend, that’s okay! (We know time zones are hard.) We will share post-meeting notes in a public repository within The PHP Foundation GitHub organization, along with ways in which you can contribute asynchronously.</p>
+<p><strong>We're delighted to announce the PHP Foundation has been awarded a grant from <a href="https://alpha-omega.dev">Alpha-Omega</a> to help improve the security of the PHP open source ecosystem.</strong></p>
 
-<p>If you would like to attend our kick-off meeting, you can <a href="https://forms.gle/amMY3Anvh83jUE4Q6">fill out this form</a> to register your interest. From there, we will send you meeting details. If you have already filled this out, you do not need to fill it out again. We will be contacting you shortly.</p>
+<p>PHP is foundational to the modern web, and ensuring its security is essential for a significant portion of the web's functionality and integrity.</p>
 
-<p>Please join us if you would like to help improve the perception of PHP!</p>
-]]></content><link href="https://thephp.foundation/blog/2026/06/19/the-php-ambassador-program-is-open/"/><id>https://thephp.foundation/blog/2026/06/19/the-php-ambassador-program-is-open/</id><updated>Fri, 19 Jun 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Roman Pronskiy Leaves The PHP Foundation Board and Brent Roose Joins]]></title><content type="html"><![CDATA[<p><img src="/assets/post-images/2026/brent-roose/brent-roose.jpg" width="300" alt="headshot of brent roose" class="mb-4 sm:mr-4 sm:float-left"/>The PHP Foundation is excited to announce the addition of <a href="https://stitcher.io/">Brent Roose</a> from JetBrains to the Foundation's Board of Directors. Brent fills the JetBrains Platinum Sponsor seat and was unanimously voted to join by the existing members.</p>
+<p>New security tools making use of AI are accelerating the discovery of vulnerabilities in open source software. Initiatives like <a href="https://www.anthropic.com/glasswing">Project Glasswing</a> are attempting to prepare software for the increasing accessibility of such tooling to bad actors. A number of large PHP projects have already received and acted on credible audit reports and concrete issues found by these new tools.</p>
 
-<p>Brent is a developer advocate for PHP at JetBrains, but he is also a writer, content creator, event organizer, community leader, and open source contributor. He is a well-recognized voice on <a href="https://www.youtube.com/@phpannotated">PHP Annotated</a>, maintains an active blog at <a href="https://stitcher.io/">stitcher.io</a>, and is the creator of the <a href="https://github.com/tempestphp/tempest-framework">Tempest</a> framework for PHP, one of his bigger open source projects.</p>
+<p>At the same time, many projects have been reporting a drastic increase in the volume of vulnerability reports they have to deal with, many bearing the hallmarks of lazy AI generation. These low-quality reports waste maintainers' time and overshadow legitimate issues.</p>
 
-<blockquote>
-  <p><em>PHP has been my passion for over 15 years, and I'm happy to contribute to its success in any way I can. I'm looking forward to joining the Foundation board and see what the future holds for this amazing language and community. --Brent Roose</em></p>
-</blockquote>
+<p>The PHP Foundation is creating a PHP Ecosystem Security Team to help our ecosystem maintainers with these new challenges. This new PHP Foundation team will help triage vulnerability reports and disclose them responsibly as necessary. It will work on tooling to discover, classify and remediate security vulnerabilities and share emerging techniques on using them effectively and help the PHP ecosystem adopt these tools. The team will respect maintainer bandwidth, provide high-quality reports, coordinate project access to new security tooling, support projects with only a few maintainers, and find solutions for projects with <a href="https://alpha-omega.dev/blog/weekend-at-bernies-which-of-your-dependencies-are-wearing-sunglasses/">no active maintainers at all</a>.</p>
 
-<p>As Roman Pronskiy's term comes to an end, Brent will be replacing Roman as the JetBrains representative on the Board. As one of the founding members and first Executive Director of The PHP Foundation, Roman's impact is undeniable. The PHP Foundation would not be where it is today without his influence, his effort, and his guidance. We are incredibly grateful for his dedication and commitment to the Foundation's mission and the sustainability of the PHP language. Thank you for everything, Roman! ❤️🐘</p>
-]]></content><link href="https://thephp.foundation/blog/2026/09/01/welcome-brent-roose/"/><id>https://thephp.foundation/blog/2026/09/01/welcome-brent-roose/</id><updated>Tue, 01 Sep 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Welcoming Matt Stauffer to The PHP Foundation Board]]></title><content type="html"><![CDATA[<p><img src="/assets/post-images/2026/matt-stauffer/matt-stauffer.jpg" width="300" alt="headshot of matt stauffer" class="mb-4 sm:mr-4 sm:float-left"/> We are thrilled to announce that <a href="https://www.linkedin.com/in/mattstauffer/">Matt Stauffer</a> has agreed to join The PHP Foundation Board, where he will bring his decades of experience in the PHP ecosystem. Matt joins the Board as a community representative and was voted in by the existing Board members. Not only is Matt a Laravel expert, he has created / maintained dozens of PHP and JavaScript open source packages, he is a published author, and he hosts several successful industry podcasts. We are grateful for his insight, input, and leadership as we further our mission of sustaining a thriving PHP language and ecosystem.</p>
+<p>We're excited our friends at the <a href="https://www.drupal.org/association">Drupal Association</a> were awarded a similar grant from Alpha-Omega to secure the Drupal ecosystem built on top of PHP. The PHP Foundation is looking forward to collaborating with the Drupal Security Team on shared approaches and we hope to be joined by more experts from individual PHP projects and subcommunities as we build out the new team.</p>
 
-<p>Please join us in welcoming Matt to the Foundation Board!</p>
-]]></content><link href="https://thephp.foundation/blog/2026/03/25/welcoming-matt-stauffer-to-the-php-foundation-board/"/><id>https://thephp.foundation/blog/2026/03/25/welcoming-matt-stauffer-to-the-php-foundation-board/</id><updated>Fri, 27 Mar 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Quarterly Progress Report - Q2 2026]]></title><content type="html"><![CDATA[<p>Our <a href="https://thephp.foundation/structure/#Core%20Developers">team of core developers</a> works very hard to strengthen and improve the PHP language. In an effort to improve the way we communicate this work, from now on, we will be posting quarterly updates regarding their individual projects and efforts.</p>
+<p>The PHP Foundation grant will fund a six-month full-time position titled "Ecosystem AI Security Engineer in Residence at the PHP Foundation" to lead this effort and to prepare a sustainability plan for the time after this initial phase. This person will act as a trusted intermediary between security researchers and maintainers in urgent, high-risk situations, and will collaborate with peers in similar roles across other language ecosystems. Additionally, grant funding will also be employed toward the team goals described above where they cannot be accomplished by the single paid lead position or with the help of PHP community volunteers.</p>
+
+<p>After many conversations with community leaders in the PHP ecosystem, known security experts and Foundation stakeholders, the PHP Foundation board voted unanimously to offer the position to <a href="https://phpc.social/@edorian">Volker Dusch (@edorian)</a>. We asked Volker to introduce himself.</p>
+
+<h2 id="meet-volker">Meet Volker</h2>
+
+<p><img src="/assets/post-images/2026/ecosystem-security/volker-dusch.png" width="300" alt="headshot of volker dusch" class="mb-4 sm:mr-4 sm:float-left"/>👋,</p>
+
+<p>Some of you may know me as one of the PHP 8.5 Release Managers, or might have met me at one of more than 100 PHP-related conferences I've visited or spoken at in the last 20 years.</p>
+
+<p>PHP has been the main programming language of my professional career, from helping maintain PHPUnit for a couple of years and more recently, working on various language RFCs.</p>
+
+<p>In the past, I've worked on a high-traffic social networking site, remote monitoring of solar plants and software for medical trials. Currently, I'm working on PHP performance and monitoring tooling at Tideways, which I'm grateful to for allowing me to take some time off to focus on this new challenge.</p>
+
+<h2 id="interested-in-hearing-from-me%3F-got-feedback%3F">Interested in hearing from me? Got feedback?</h2>
+
+<p>My goal is to be open and communicate early about how the Ecosystem Security Team is taking shape while making the most of the resources we have.</p>
+
+<p>Big projects and foundational libraries are on my radar for security analysis already, and I'm especially keen to hear from people who want to actively collaborate and have the bandwidth to do so.</p>
+
+<p>So if you want to put your project forward or have questions or comments for me, I'd love to hear from you!</p>
+
+<p>Get in touch via email: <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#x76;&#111;&#x6c;&#x6b;&#101;&#x72;&#64;&#x74;&#x68;&#101;&#x70;&#104;&#x70;&#x2e;&#102;&#x6f;&#117;&#x6e;&#x64;&#97;&#x74;&#105;&#x6f;&#x6e;">volker@thephp.foundation</a>.</p>
+
+<p>You can also find me on <a href="https://phpc.social/@edorian">Mastodon</a> and <a href="https://www.linkedin.com/in/volker-dusch/">LinkedIn</a>.</p>
+]]></content><link href="https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/"/><id>https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/</id><updated>Mon, 18 May 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Quarterly Progress Report - Q2 2026]]></title><content type="html"><![CDATA[<p>Our <a href="https://thephp.foundation/structure/#Core%20Developers">team of core developers</a> works very hard to strengthen and improve the PHP language. In an effort to improve the way we communicate this work, from now on, we will be posting quarterly updates regarding their individual projects and efforts.</p>
 
 <p>Our core team consists of 13 people, distributed across 8 countries. Most of our contractors work part-time for The PHP Foundation and have other ventures aside from working on the PHP core. Also, this report is not meant to be a comprehensive list of everything our contractors shipped, but a high-level summary of their most impactful work.</p>
 
@@ -156,14 +126,592 @@ The goal is to gather representative input from PHP developers of all background
 <hr />
 
 <p>We are happy to share these updates with you, and if you have any questions about what any of our contractors are working on, you can connect with us in The PHP Foundation Discord channel on the <a href="https://phpc.chat/">PHPC server</a>.</p>
-]]></content><link href="https://thephp.foundation/blog/2026/07/21/quarterly-report-q2-2026/"/><id>https://thephp.foundation/blog/2026/07/21/quarterly-report-q2-2026/</id><updated>Tue, 21 Jul 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Announcing Plans for a PHP Ecosystem Survey and Report]]></title><content type="html"><![CDATA[<p>This year, The PHP Foundation, in collaboration with PhpStorm, a JetBrains IDE, will release an official ecosystem report with data-driven insights into the current state and the future of PHP development. The report will be based on data collected from a PHP developer survey, where we’ll ask developers about their experience with the language and ecosystem.</p>
+]]></content><link href="https://thephp.foundation/blog/2026/07/21/quarterly-report-q2-2026/"/><id>https://thephp.foundation/blog/2026/07/21/quarterly-report-q2-2026/</id><updated>Tue, 21 Jul 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Join Us for The PHP Foundation Community Hour]]></title><content type="html"><![CDATA[<p>Here at The PHP Foundation, we are continuously looking for ways in which we can increase our connections with the PHP community, especially when the goal is to improve the sustainability of the PHP language. Increasing the contributor pool ties in directly with sustainability, so encouraging contributions back to the PHP ecosystem is something we want to foster and support.</p>
+
+<p><strong>As part of this effort, we are excited to be launching a monthly one-hour interactive podcast in partnership with the folks at <a href="https://www.phparch.com/">PHP Architect</a>.</strong> This podcast will be called <strong>The PHP Foundation Community Hour</strong> and will feature various Foundation staff, contractors, and friends who will be sharing tips and insight into different contribution paths. These will be hosted on the second Thursday of every month on the <a href="https://www.phparch.com/php-foundation-community-hour-podcast/">PHP Architect podcast platform</a>.</p>
+
+<p>The PHP Foundation Community Hour is meant to be a casual interactive session and we welcome your questions before and during the event. If you want to submit a question beforehand to our guests, you can use <a href="https://forms.gle/aeAq34EXyhs3wZBQ7">this form</a> to do so. Please keep in mind that while we may choose to answer select questions that fall outside our topic, we are mostly focused on helping people understand how they can contribute to PHP.</p>
+
+<p>Our first episode is coming in a few weeks! Here are the details:</p>
+
+<ul>
+<li>First Episode Time/Date: September 10, 2026 at 12:30 pm Eastern / 16:30 UTC</li>
+<li>Topic: Getting Started with Contributing to PHP</li>
+<li>Guest: Matt Stauffer</li>
+<li>Host: Elizabeth Barron</li>
+<li><a href="https://calendar.google.com/calendar/ical/c_ce0269971d31f57bb6a079df26f0e97aae764cf6d93aab43c509b20002339275%40group.calendar.google.com/public/basic.ics">Subscribe to the calendar through an .ics link</a> to see upcoming guests</li>
+<li><a href="https://www.phparch.com/php-foundation-community-hour-podcast/">Subscribe on Spotify, YouTube, and other platforms</a></li>
+</ul>
+
+<p>We want to extend a heap of gratitude to the folks at <a href="https://www.phparch.com/">PHP Architect</a> for providing the infrastructure, platform, and technical support that enables us to host these events.</p>
+
+<p>Hope you can join us on September 10!</p>
+]]></content><link href="https://thephp.foundation/blog/2026/08/31/join-us-for-the-php-foundation-community-hour/"/><id>https://thephp.foundation/blog/2026/08/31/join-us-for-the-php-foundation-community-hour/</id><updated>Mon, 31 Aug 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Roman Pronskiy Leaves The PHP Foundation Board and Brent Roose Joins]]></title><content type="html"><![CDATA[<p><img src="/assets/post-images/2026/brent-roose/brent-roose.jpg" width="300" alt="headshot of brent roose" class="mb-4 sm:mr-4 sm:float-left"/>The PHP Foundation is excited to announce the addition of <a href="https://stitcher.io/">Brent Roose</a> from JetBrains to the Foundation's Board of Directors. Brent fills the JetBrains Platinum Sponsor seat and was unanimously voted to join by the existing members.</p>
+
+<p>Brent is a developer advocate for PHP at JetBrains, but he is also a writer, content creator, event organizer, community leader, and open source contributor. He is a well-recognized voice on <a href="https://www.youtube.com/@phpannotated">PHP Annotated</a>, maintains an active blog at <a href="https://stitcher.io/">stitcher.io</a>, and is the creator of the <a href="https://github.com/tempestphp/tempest-framework">Tempest</a> framework for PHP, one of his bigger open source projects.</p>
+
+<blockquote>
+  <p><em>PHP has been my passion for over 15 years, and I'm happy to contribute to its success in any way I can. I'm looking forward to joining the Foundation board and see what the future holds for this amazing language and community. --Brent Roose</em></p>
+</blockquote>
+
+<p>As Roman Pronskiy's term comes to an end, Brent will be replacing Roman as the JetBrains representative on the Board. As one of the founding members and first Executive Director of The PHP Foundation, Roman's impact is undeniable. The PHP Foundation would not be where it is today without his influence, his effort, and his guidance. We are incredibly grateful for his dedication and commitment to the Foundation's mission and the sustainability of the PHP language. Thank you for everything, Roman! ❤️🐘</p>
+]]></content><link href="https://thephp.foundation/blog/2026/09/01/welcome-brent-roose/"/><id>https://thephp.foundation/blog/2026/09/01/welcome-brent-roose/</id><updated>Tue, 01 Sep 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Help Shape the Future of PHP: Take the State of PHP Survey]]></title><content type="html"><![CDATA[<p>PHP is powered by a global community of developers, maintainers, contributors, companies, and users. To better understand that community and the ecosystem around it, The PHP Foundation and <a href="https://www.jetbrains.com/phpstorm/">PhpStorm</a>, a JetBrains IDE, are launching the first annual <a href="https://surveys.jetbrains.com/s3/phpf-b-state-of-php-2026">State of PHP survey</a>.</p>
+
+<p>This survey is an effort to build a clearer picture of how PHP is used today: who is using it, which tools and frameworks developers rely on, what challenges they face, how they feel about the language, and where they see PHP going next.</p>
+
+<p>We invite everyone who works with PHP to <a href="https://surveys.jetbrains.com/s3/phpf-b-state-of-php-2026">participate</a>.</p>
+
+<p><img src="/assets/post-images/2026/state-of-php-survey/banner.png" width="1052" alt="illustrated PHP elephant with a safari hat and the words join our expedition." class="mb-4 sm:mr-4"/></p>
+
+<h3 id="why-we%27re-launching-the-state-of-php-survey">Why we're launching the State of PHP survey</h3>
+
+<p>PHP has been around for more than 30 years, and it continues to evolve alongside the people and organizations that depend on it. The ecosystem is broad: developers use PHP across many countries, industries, experience levels, frameworks, deployment environments, and workflows. To support PHP effectively, we need better insight into that ecosystem.
+The goal is to gather representative input from PHP developers of all backgrounds. Whether you have been writing PHP for decades or only recently started, your perspective is invaluable.</p>
+
+<h3 id="what-happens-with-the-results">What happens with the results</h3>
+
+<p>The aggregated results will be published in the State of PHP 2026 report later this year, which will be announced in <a href="https://x.com/ThePHPF">The PHP Foundation</a> and <a href="https://x.com/phpstorm">PhpStorm’s</a> social media channels and newsletters.</p>
+
+<p>The report will help the community better understand current PHP usage and trends. It will also provide useful insight for contributors, maintainers, tool authors, educators, companies, and everyone working to strengthen PHP and its ecosystem.</p>
+
+<h3 id="take-the-survey">Take the survey</h3>
+
+<p>We encourage all PHP developers to take part and to share the survey with colleagues and local PHP communities.</p>
+
+<p><a href="https://surveys.jetbrains.com/s3/phpf-b-state-of-php-2026" class="button-link">Take the Survey</a></p>
+
+<p>The more developers participate, the more useful and representative the final report will be.</p>
+
+<p>Thank you for helping us map the PHP ecosystem and for being part of the first State of PHP survey.</p>
+
+<p>-- The PHP Foundation and PhpStorm teams</p>
+]]></content><link href="https://thephp.foundation/blog/2026/06/09/help-shape-the-future-of-php/"/><id>https://thephp.foundation/blog/2026/06/09/help-shape-the-future-of-php/</id><updated>Tue, 09 Jun 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Announcing Plans for a PHP Ecosystem Survey and Report]]></title><content type="html"><![CDATA[<p>This year, The PHP Foundation, in collaboration with PhpStorm, a JetBrains IDE, will release an official ecosystem report with data-driven insights into the current state and the future of PHP development. The report will be based on data collected from a PHP developer survey, where we’ll ask developers about their experience with the language and ecosystem.</p>
 
 <p>Our goal is to capture perspectives from across the PHP community – we want as many voices as possible to be included. To make that happen, we’re starting by collecting suggestions for survey questions.</p>
 
 <p>This week, you can submit your proposed questions and upvote others through a <a href="https://app.sli.do/event/3NShya1PmdgByuuufXoqpF">dedicated form</a>. We’ll review all submissions and select the most interesting ones to include in the survey, which will launch in June. If you have an idea for a question, you can <a href="https://app.sli.do/event/3NShya1PmdgByuuufXoqpF">submit your question here.</a></p>
 
 <p>The submissions are open until <strong>April 28, 2026</strong>. We look forward to hearing from you!</p>
-]]></content><link href="https://thephp.foundation/blog/2026/04/22/announcing-plans-for-a-php-ecosystem-survey/"/><id>https://thephp.foundation/blog/2026/04/22/announcing-plans-for-a-php-ecosystem-survey/</id><updated>Wed, 22 Apr 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[The PHP Foundation Impact and Transparency Report 2025]]></title><content type="html"><![CDATA[<h2 id="executive-summary">Executive Summary</h2>
+]]></content><link href="https://thephp.foundation/blog/2026/04/22/announcing-plans-for-a-php-ecosystem-survey/"/><id>https://thephp.foundation/blog/2026/04/22/announcing-plans-for-a-php-ecosystem-survey/</id><updated>Wed, 22 Apr 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Kicking off the PHP Onboarding Initiative Special Interest Group]]></title><content type="html"><![CDATA[<p>One of the most common pieces of feedback we hear from the PHP community is that the newcomer experience could use some improvement, and that we may be losing new users because of it. This is something that we as a community can address, and it's why The PHP Foundation made it part of our <a href="https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/#3.-php-onboarding-initiative">strategy document</a> for the rest of 2026. Improving that experience matters a lot to us, because a better new user experience means more community growth and retention. We are launching the PHP Onboarding Initiative Special Interest Group to provide space for collaborative problem solving in this area.</p>
+
+<p>Some of the identified issues in the PHP newcomer experience include:</p>
+
+<ul>
+<li><strong>Where to begin:</strong> It is difficult for new PHP users to know where to start. There are many resources and tutorials available, but it is hard to know which ones are updated and accurate, and the sheer number of them is overwhelming. Building and helping people find resources that cater to their needs is something that would be helpful for newcomers.</li>
+<li><strong>Minding the gap:</strong> The <a href="http://php.net/docs">php.net Manual</a> is a fantastic resource, but it is more of a reference than an educational resource for beginners that are learning to code. There is a current gap between documentation for complete beginners and users who already grasp the basics and use the manual differently.</li>
+<li><strong>Limited presence in formal education:</strong> PHP is largely missing in universities and bootcamps. Although there are some places in the world where PHP (or a related framework/project) is taught, the presence of PHP is inconsistent. There won't be a "one-size-fits-all" approach to building more partnerships with educational institutions. But this is something that we can figure out together. (Also, this may overlap with the mission of the <a href="https://github.com/ThePHPF/SIG-ambassadors">PHP Ambassadors</a> Special Interest Group that has already launched.)</li>
+<li><strong>Finding your people:</strong> The onboarding experience differs greatly among newcomers, with some having connections to the community, and others fending for themselves. It would be ideal if we could provide a more consistent approach to bringing newcomers together and connecting them with the community.</li>
+<li><strong>Mentorship is hard to find:</strong> Although there have been previous attempts at mentorship programs, those have proven challenging to sustain. But <a href="https://www.linuxfoundation.org/hubfs/LF%20Research/LFX%20Mentorship%20in%20Open%20Source%20-%20Report.pdf?hsLang=en">research shows</a> that mentorship can make all the difference when it comes to retaining users and turning them into potential contributors and community members, especially when it comes to those from marginalized and underrepresented groups.</li>
+<li><strong>Installation process</strong> Ensuring that this process is as easy and straightforward as possible, and centering the experience of new users is something that we should continue to be mindful of. Because this will likely involve the php.net website, this is another potential overlap with the mission of the <a href="https://github.com/ThePHPF/SIG-ambassadors">Marketing Subgroup of the PHP Ambassadors</a> Special Interest Group.</li>
+</ul>
+
+<p>These problems are not new and they aren't easy to solve, but one thing about the PHP community that I personally love is its dedication to sharing knowledge with new learners and helping newcomers find their way. This sense of community and support for newcomers is why many of us are still here (including myself!). Wouldn't it be great if we could come together and create a better and more consistent experience for newcomers to PHP?</p>
+
+<p>If this is something that is of interest to you, we are hosting a kick-off meeting on <strong>Monday, August 24 at 13:00 UTC</strong>. To request an invite to this meeting, please register your interest using <a href="https://forms.gle/VNmijQm4gWjuDjnJA">this form</a>. Note: if you have already indicated your interest through this form, you do not need to submit it again.</p>
+
+<p>If you cannot attend this meeting, that's okay! You are welcome to join the #the-php-foundation channel in the <a href="https://discord.phpc.social/">#phpc Discord server</a> for access to this and the other Special Interest Group chats. We also have a <a href="https://github.com/ThePHPF/SIG-onboarding">GitHub repository</a> where you can connect asynchronously.</p>
+]]></content><link href="https://thephp.foundation/blog/2026/08/03/kicking-off-the-php-onboarding-initiative/"/><id>https://thephp.foundation/blog/2026/08/03/kicking-off-the-php-onboarding-initiative/</id><updated>Mon, 03 Aug 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Integrating Community Feedback into Foundation Strategy Part 1]]></title><content type="html"><![CDATA[<h2 id="integrating-community-input-into-foundation-strategy">Integrating Community Input Into Foundation Strategy</h2>
+
+<h3 id="part-1%3A-feedback-from-the-community">Part 1: Feedback from the Community</h3>
+
+<p>Oh my friends, we have so much to talk about.</p>
+
+<p>I’ve been with The PHP Foundation for a few weeks, and many people have asked me about my vision, goals, and strategy for the upcoming year. In my opinion, The PHP Foundation’s stated mission of <em>ensuring the long-term prosperity of the PHP language</em> can be interpreted many different ways. So what exactly does this mean in terms of actionable efforts that will impact the community in the ways that align with this mission?</p>
+
+<p>To answer that question, my goal was simple: listen to people who have a vested interest in the success of PHP and see what themes emerge. So I opened my calendar, messages, and email, and you all answered the call.</p>
+
+<p>So far, I have connected with around 60 people from 18 countries. I’ve heard from PHP community members, people working in the ecosystem, maintainers of PHP projects, consultants, sponsors, core developers, leaders of other open source foundations, user group organizers, and of course, our own Foundation staff and Board members. I am thrilled that you all had a lot to say, because as I’ve said before, apathy is a much harder problem to tackle.</p>
+
+<p>Before I share the findings, It is important to note a few things:</p>
+
+<ul>
+<li>Even though people identified many issues that could be better, there is still much love for PHP and the community.</li>
+<li>Some of the issues brought to me are not within the scope of The PHP Foundation’s authority. That being said, there are places where we can offer our support.</li>
+<li>These findings represent the concerns that were brought to me, and they aren’t presented as “fact” or official opinions of The PHP Foundation.</li>
+<li>Some of the findings may be of no surprise to you. And some of them may not resonate with you personally. I’d just ask that you keep in mind that the feedback is honestly presented as it was shared, and that these are also valid experiences from others.</li>
+</ul>
+
+<h3 id="high-level-summary-of-findings">High Level Summary of Findings</h3>
+
+<p>Overall, these were the biggest takeaways:</p>
+
+<ul>
+<li>PHP’s biggest challenges are perception, coordination, and onboarding, not technical capability</li>
+<li>The community loves the language and would choose PHP over other options, despite the challenges</li>
+<li>The ecosystem is large but fragmented</li>
+<li>The newcomer experience, education, and talent pipeline have room for improvement</li>
+<li>The PHP Foundation’s role and impact is not well understood</li>
+<li>Funding is a shared challenge across open source</li>
+<li>AI brings much uncertainty and many polarizing opinions, so agreeing upon a unified approach will be very challenging</li>
+</ul>
+
+<p>I've classified the feedback I received into four primary buckets:</p>
+
+<p><img src="/assets/post-images/2026/feedback-strategy-pt1/community-feedback-categories.jpg" alt="Categories" /></p>
+
+<p>I created this <a href="https://raw.githubusercontent.com/ThePHPF/talks/main/board-presentations/PHP%20Community%20Feedback%20Summary%20-%20April%202026.pdf">slide presentation</a> to share and summarize the feedback I received. You can also <a href="https://github.com/ThePHPF/talks/blob/main/board-presentations/PHP%20Community%20Feedback%20Summary%20-%20April%202026.pdf">view it on GitHub as a PDF</a> or <a href="https://github.com/ThePHPF/talks/blob/main/board-presentations/PHP%20Community%20Feedback%20Summary%20-%20April%202026.md">in Markdown</a>. I encourage you to take a look.</p>
+
+<h3 id="what%E2%80%99s-next%3F">What’s Next?</h3>
+
+<p>In a follow up blog post (Part 2), I will be sharing The PHP Foundation’s strategies that aim to address some of these issues. And as always, please don’t hesitate to reach out if you have input or feedback to share. You can reach me via <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#101;&#x6c;&#105;&#122;&#x61;b&#101;&#x74;&#x68;&#64;&#x74;&#x68;&#101;&#112;&#x68;&#112;&#46;&#x66;o&#117;&#x6e;&#x64;&#97;&#x74;&#x69;&#111;&#110;">email</a> or you can schedule some 1:1 time with me on my <a href="https://calendar.app.google/z2ckJ5LDn4qSyHCx7">calendar</a>.</p>
+]]></content><link href="https://thephp.foundation/blog/2026/04/16/integrating-community-feedback-into-foundation-strategy-part1/"/><id>https://thephp.foundation/blog/2026/04/16/integrating-community-feedback-into-foundation-strategy-part1/</id><updated>Thu, 16 Apr 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Integrating Community Feedback into Foundation Strategy Part 2]]></title><content type="html"><![CDATA[<p>In April 2026, during the first weeks of my tenure as Executive Director, I conducted a listening tour with around 60 people from 18 countries spanning every part of the PHP ecosystem (see <em><a href="https://thephp.foundation/blog/2026/04/16/integrating-community-feedback-into-foundation-strategy-part1/">Integrating Community Feedback into Foundation Strategy: Part 1</a></em>). Since then, I have continued to listen and connect with those of you in the community who have something to share. The themes that have surfaced are <a href="https://thephp.foundation/blog/2026/04/16/integrating-community-feedback-into-foundation-strategy-part1/">clear, consistent, and actionable</a>. This document outlines how the PHP Foundation will respond in 2026.</p>
+
+<p>In short, the community loves PHP and believes in the Foundation's role, but is asking us to be clearer, more visible, and more coordinated in addressing existing and future challenges. The 2026 strategy answers those concerns through four themes:</p>
+
+<ol>
+<li><strong>Repositioning PHP</strong>: close the gap between today's PHP and the outdated perception that still shapes hiring and tech-stack decisions.</li>
+<li><strong>Initiatives with Community as Partners</strong>: scale our impact through six Special Interest Groups that address documented gaps.</li>
+<li><strong>Visibility &amp; Voice of the Foundation</strong>: consistently surface priorities, work, and impact to the community, sponsors, and the Board.</li>
+<li><strong>Language Stewardship</strong>: support the technical work that already happens around PHP core and the RFC process while staying clear about the Foundation's role as facilitator and resource, not the driver of decisions.</li>
+</ol>
+
+<p><a href="https://thephp.foundation/blog/2026/05/27/impact-and-transparency-report-2025/">Through our 2025 work</a>, and in addition to addressing community feedback, the Foundation set <a href="https://thephp.foundation/blog/2026/05/27/impact-and-transparency-report-2025/#looking-ahead%3A-goals-for-2026">goals for 2026</a>, which are also baked into this strategy.</p>
+
+<p>By the end of 2026, success looks like: a regular communication cadence for increased transparency; six operational <a href="https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/#community-special-interest-groups">Special Interest Groups</a> with active community engagement and clear goals; a more diversified sponsor base and a clear, repeatable story about modern PHP that the community can carry into rooms where decisions get made.</p>
+
+<h3 id="strategic-themes-for-2026">Strategic Themes for 2026</h3>
+
+<p>Four themes organize the 2026 plan. Each maps directly to a category of community feedback and 2026 goals. Together, they answer the dominant request from the listening tour: be more visible, more coordinated, and more clearly responsive to what the community has told us.</p>
+
+<h4 id="theme-1%3A-repositioning-php">Theme 1: Repositioning PHP</h4>
+
+<p>The PHP that people remember is not the PHP that exists today. Closing that gap is a multi-year effort. 2026 lays the groundwork: a coordinated voice, better assets for advocacy, and new platforms to tell the story of PHP at scale.</p>
+
+<p><strong>Initiatives</strong></p>
+
+<ul>
+<li><strong>Foundation-hosted podcast.</strong> A Foundation-hosted series surfacing the companies and engineering teams running modern PHP at scale. The target audience is decision-makers and engineers outside the PHP bubble.</li>
+<li><strong>PHP Ambassador Program.</strong> Brings together interested speakers; provides “State of Modern PHP” storytelling assets and CfP coordination that turn individual advocacy into a coordinated effort. More below.</li>
+</ul>
+
+<h4 id="theme-2%3A-initiatives-with-community-as-partners">Theme 2: Initiatives with Community as Partners</h4>
+
+<p>The Foundation has limited staff and limited budget, but the community has enormous capacity for making change. In 2026 we will create six structured Special Interest Groups that give community members multiple ways to contribute and focus their energy on the challenges that currently exist for the PHP ecosystem.</p>
+
+<p><strong>Initiatives</strong></p>
+
+<ul>
+<li><strong>Launch six Special Interest Groups.</strong> Build infrastructure to include interested community members in facing challenges across the ecosystem and from a variety of lenses. Details of these groups are below.</li>
+</ul>
+
+<h4 id="theme-3%3A-visibility-%26-voice-of-the-foundation">Theme 3: Visibility &amp; Voice of the Foundation</h4>
+
+<p>The PHP Foundation and Board will regularly articulate what they are doing and why, and they will be consistently accessible and engaged with the PHP community.</p>
+
+<p><strong>Initiatives</strong></p>
+
+<ul>
+<li><strong>Communication plan.</strong> Build a quarterly reporting cadence with a focus on bugs and issues we are prioritizing; revive the newsletter; publish Board minutes in a public repository.</li>
+<li><strong>Community engagement.</strong> Continue connection through community Discord channels; build a system to promote events where contractors and Board members will be; launch monthly Office Hours/Interviews with contractors/Board members.</li>
+<li><strong>Website clarity.</strong> Publish a clear articulation of Foundation priorities, the distribution of work across contractors, and the Foundation's role relative to the language and the community.</li>
+</ul>
+
+<h4 id="theme-4%3A-language-stewardship">Theme 4: Language Stewardship</h4>
+
+<p>This category contains the work the Foundation contributes to but does not own. The PHP codebase and the future of the language belong to the community. The Foundation's role is to support, facilitate, and convene, not to direct. In 2026, we will be explicit about that role and we will invest where the Foundation can meaningfully help.</p>
+
+<p><strong>Initiatives</strong></p>
+
+<ul>
+<li><strong>Contributor responsiveness and communication.</strong> Foundation contractors continue to lead in PR review and merge throughput; we will publish quarterly numbers so the community can see progress made by the team.</li>
+<li><strong>PHP core documentation.</strong> Identify and fund a focused effort to refresh the internals book and contributor onboarding documentation, in coordination with internals maintainers. Create a more maintainable system for keeping documentation up to date, moving forward.</li>
+<li><strong>PHP Security.</strong> The Alpha-Omega grant will position the Foundation at the center of a coordinated effort to improve security practices and procedures and fix security vulnerabilities across the PHP ecosystem.</li>
+</ul>
+
+<h3 id="community-special-interest-groups">Community Special Interest Groups</h3>
+
+<p>The PHP Foundation will launch six community special interest groups, with staggered launches from May through September. Each addresses one or more documented gaps from the listening tour, and each includes participation from the community, along with Foundation staff support. These are meant to be collaborative efforts with existing groups and individuals who have already spent time and energy addressing these topics.</p>
+
+<h4 id="%2A%2Aat-a-glance%3A%2A%2A"><strong>At a Glance:</strong></h4>
+
+<table>
+  <tr>
+   <td><strong>Group</strong>
+   </td>
+   <td><strong>Addresses</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Ecosystem Security Team
+   </td>
+   <td>Cross-community security concerns, triage, disclosure, agentic-tooling assisted vulnerability research, maintainer support. 
+   </td>
+  </tr>
+  <tr>
+   <td>PHP Ambassador Program
+   </td>
+   <td>Advocacy, representation, marketing of PHP
+   </td>
+  </tr>
+  <tr>
+   <td>PHP Onboarding Initiative
+   </td>
+   <td>New user experience, learning resources, education
+   </td>
+  </tr>
+  <tr>
+   <td>Cryptography Special Interest Group
+   </td>
+   <td>Post-Quantum Cryptography readiness in PHP and related cryptography conversations
+   </td>
+  </tr>
+  <tr>
+   <td>Community Events Coalition
+   </td>
+   <td>User groups, conferences, growing the community
+   </td>
+  </tr>
+  <tr>
+   <td>PHP Accessibility & Inclusion Special Interest Group
+   </td>
+   <td>Inclusion, accessibility, language translations, helping the ecosystem build healthy community norms, being a resource for maintainers
+   </td>
+  </tr>
+</table>
+
+<h4 id="about-the-special-interest-groups%3A">About the Special Interest Groups:</h4>
+
+<h4 id="1.-ecosystem-security-team">1. Ecosystem Security Team</h4>
+
+<p><strong>Purpose:</strong> Improves security of the PHP ecosystem and helps maintainers as AI-assisted vulnerability research becomes more common. Proactively identifies vulnerabilities and triages vulnerability reports. Builds tooling to assess, classify, and address security issues. Assists maintainers in scanning projects and acts as a trusted resource to monitor and support them in critical scenarios. <em>Note: The Team has <a href="https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/">already launched</a></em> *. They have connected with 30 organizations and projects so far and performed over a thousand scans and affected changes in hundreds of repos. If you’re interested in a scan, or have questions for the team, <a href="https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/#:~:text=Get%20in%20touch%20via%20email%3A%20volker%40thephp.foundation.">get in touch</a>!*</p>
+
+<p><strong>Success in 2026:</strong> Documentation for maintainers on available tooling, best practices and report triage; sustainability plan for continuing the work at the end of the grant; 1000+ projects scanned across the PHP ecosystem.</p>
+
+<h4 id="2.-php-ambassador-program">2. PHP Ambassador Program</h4>
+
+<p><strong>Purpose:</strong> Advocacy for PHP <strong>outside</strong> the PHP ecosystem. Provides resources for people who want to give talks at open-source conferences and other open-source events; shares CfPs and maintains a calendar of conferences outside the PHP world; develops shared talk assets and messaging, including a maintained "State of Modern PHP" deck.</p>
+
+<p><strong>Success in 2026:</strong> at least 3 talks delivered by ambassadors at non-PHP open-source venues; a shared CfP calendar in active use;  at least 10 participating community members; regular cadence of virtual gatherings of participants established.</p>
+
+<h4 id="3.-php-onboarding-initiative">3. PHP Onboarding Initiative</h4>
+
+<p><strong>Purpose:</strong> Improves the experience of new users from first encounter through first deployment. Identifies setup pain points; coordinates education and learning resources; explores a structured mentorship program; documents a clear onboarding path that newcomers can follow; works with the php.net website team to improve documentation and experience.</p>
+
+<p><strong>Success in 2026:</strong> a published "getting started with PHP" path replacing the scattered resources currently in existence; a mentorship pilot with at least 5 mentor/mentee pairs; documented setup-time benchmarks against which 2027 progress can be measured; monthly virtual gatherings of participants established.</p>
+
+<h4 id="4.-cryptography-special-interest-group">4. Cryptography Special Interest Group</h4>
+
+<p><strong>Purpose</strong>: Provides a venue for Post-Quantum Cryptography discussions, and moves The PHP Foundation into a more active role in the PHP ecosystem's response; maps where cryptography exists across both PHP core and the wider ecosystem; tracks upstream developments in OpenSSL and libsodium; also provides a venue for related conversations and initiatives that may arise.</p>
+
+<p><strong>Success in 2026:</strong> a published "clear public readiness roadmap" that regulators, enterprise adopters, and the broader community can reference. Regular cadence of meetings is established.</p>
+
+<h4 id="5.-community-events-coalition">5. Community Events Coalition</h4>
+
+<p><strong>Purpose:</strong> Brings together user group leaders and conference organizers. Maintains a shared speaker pool; shares venue, sponsor, and operations resources; restores and maintains the PHP user group directory; helps promote new CfPs and new events; surfaces contribution opportunities for those looking to volunteer.</p>
+
+<p><strong>Success in 2026:</strong> the user group directory is current and active; at least one shared resource bundle (speaker pool, sponsor decks, venue tips) is in circulation; monthly virtual gatherings of organizers established.</p>
+
+<h4 id="6.-php-accessibility-%26-inclusion-special-interest-group">6. PHP Accessibility &amp; Inclusion Special Interest Group</h4>
+
+<p><strong>Purpose:</strong> Works to make the language, its documentation, and its learning resources more accessible to a wider range of people across abilities, geographies, languages, and career stages. Supports community leaders and maintainers in building healthy, inclusive communities, including helping draft codes of conduct, and providing peer support for CoC report responses.</p>
+
+<p>This group intentionally launches later, after the Foundation has demonstrated it can successfully implement and facilitate community-based Special Interest Groups. Sequencing should not be read as deprioritization: an interim advisory group will be convened in July-August to prepare the SIG’s goals and ensure that inclusion principles are baked into the charters of the earlier-launching groups.</p>
+
+<p><strong>Success in 2026:</strong> SIG is operational with an active roster and well-articulated goals; a shared code-of-conduct template and response plan for projects to use; an accessibility audit of the primary PHP web properties planned for implementation in 2027.</p>
+
+<h3 id="fundraising-%26-sustainability">Fundraising &amp; Sustainability</h3>
+
+<p>Fundraising is the single most consequential operational priority in 2026. The 2025 reserve drawdown is sustainable for now, but a multi-year drawdown would erode the Foundation's ability to maintain technical headcount. So although this was a measured and deliberate strategy, we are actively working to minimize the drawdown in 2026.</p>
+
+<h4 id="2026-priorities">2026 Priorities</h4>
+
+<ul>
+<li><strong>Sponsor research.</strong> Structured conversations with current and prospective sponsors in or before Q3 to understand what they value, what benefits would matter, and where the Foundation's value proposition is unclear.</li>
+<li><strong>Refreshed tiers and benefits, if needed.</strong> New or revised sponsorship tiers informed by the research, with clearer benefits and clearer reporting back to sponsors.</li>
+<li><strong>Fundraising Initiative.</strong> A fundraising initiative that is already in discussion will be launched. Target net contribution: $40,000.</li>
+<li><strong>Cross-ecosystem fundraising conversation.</strong> Active presence in the conversations that other foundations and policy bodies are having about open-source funding sustainability. PHP is not the only ecosystem facing harder fundraising; visibility in that conversation builds relationships and protects the Foundation's position.</li>
+<li><strong>Advisory Board engagement.</strong> Quarterly Advisory Board meetings, increased activity in internal channels, stronger collaboration on perception of PHP, storytelling, and technical strategy.</li>
+</ul>
+
+<h4 id="2026-financial-targets">2026 Financial Targets</h4>
+
+<ul>
+<li>Total raised irrespective of grants: $700,000+ (versus $625,000 in 2025)</li>
+<li>Open Collective active contributors: 600+ (versus 536 in 2025)</li>
+<li>Top-10 sponsor concentration: reduced from ~51% to &lt;45% of revenue</li>
+<li>At least 15 new Silver or higher level sponsors</li>
+<li>Reserve drawdown halted or materially reduced by Q1 2027</li>
+<li>Grant applications for 2027 where applicable</li>
+</ul>
+
+<h3 id="2026-timeline-for-implementation">2026 Timeline for Implementation</h3>
+
+<p>The timeline below includes high-level initiatives, but it should be noted that there will be many other smaller efforts along the way, driven by standard Foundation operations, individual goals of the community groups, and unforeseen developments and opportunities that emerge throughout the year. This is not a comprehensive list of everything the Foundation will do in 2026.</p>
+
+<h4 id="q2-2026">Q2 2026</h4>
+
+<table>
+  <tr>
+   <td>May
+   </td>
+   <td>
+<ul>
+
+<li>Alpha-Omega grant received and Ecosystem Security Team launched</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>June
+   </td>
+   <td>
+<ul>
+
+<li>PHP Ambassador Program launches</li>
+
+<li>Quarterly Advisory Board meetings begin</li>
+
+<li>Revive monthly newsletter</li>
+
+<li>Website content refresh</li>
+
+<li>State of PHP Survey launched</li>
+</ul>
+   </td>
+  </tr>
+</table>
+
+<h4 id="q3-2026">Q3 2026</h4>
+
+<table>
+  <tr>
+   <td>July
+   </td>
+   <td>
+<ul>
+
+<li>Foundation podcast launches</li>
+
+<li>PHP Onboarding Initiative launches</li>
+
+<li>Fundraising project launches</li>
+
+<li>Begin quarterly reports on contractor progress</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>August
+   </td>
+   <td>
+<ul>
+
+<li>Cryptography Special Interest Group launches</li>
+
+<li>Sponsor research ends, fundraising tiers refreshed</li>
+
+<li>Monthly Office Hours launches</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>September
+   </td>
+   <td>
+<ul>
+
+<li>Community Events Coalition launches</li>
+</ul>
+   </td>
+  </tr>
+</table>
+
+<h4 id="q4-2026">Q4 2026</h4>
+
+<table>
+  <tr>
+   <td>October
+   </td>
+   <td>
+<ul>
+
+<li>PHP Accessibility & Inclusion Special Interest Group launches</li>
+
+<li>Survey results released</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>November
+   </td>
+   <td>
+<ul>
+
+<li>EOY fundraising push for 2027. </li>
+<li>Ecosystem Security Grant ends.</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>December
+   </td>
+   <td>
+<ul>
+
+<li>Impact Report for 2026 published</li>
+</ul>
+   </td>
+  </tr>
+</table>
+
+<h3 id="risks-%26-mitigations">Risks &amp; Mitigations</h3>
+
+<table>
+  <tr>
+   <td><strong>Risk</strong>
+   </td>
+   <td><strong>Mitigation</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Special Interest Groups stall or fail to attract engagement.
+   </td>
+   <td>Staggered launches give the Foundation operational headroom; ED-supported launch of each will have engagement as top priority.
+   </td>
+  </tr>
+  <tr>
+   <td>Accessibility & Inclusion SIG launch timing is read as deprioritization.
+   </td>
+   <td>Named in the framework announcement from day one; interim advisory grouping will convene in July; inclusion principles baked into earlier SIG infrastructure.
+   </td>
+  </tr>
+  <tr>
+   <td>Communication cadence not sustained.
+   </td>
+   <td>Quarterly reporting will be tied to Advisory Board cycles; newsletter will be sent on a regular schedule.
+   </td>
+  </tr>
+  <tr>
+   <td>Reserve drawdown continues if fundraising targets slip.
+   </td>
+   <td>Sponsor research front-loaded in Q3; Fundraising effort happens in July; Advisory Board engagement improves; cost discipline maintained.
+   </td>
+  </tr>
+  <tr>
+   <td>Sponsor concentration risk persists.
+   </td>
+   <td>Active outreach to mid-tier prospects; exploring new lower-cost tiers to widen the base; community fundraising to grow non-sponsor revenue.
+   </td>
+  </tr>
+</table>
+
+<h3 id="ongoing-operations">Ongoing Operations</h3>
+
+<p>Alongside the strategic initiatives above, the Foundation maintains an annual operating rhythm. These activities are not part of the 2026 strategic story but are essential to the Foundation's stability and to the community's experience of working with us.</p>
+
+<ul>
+<li><strong>Contractor applications and renewals.</strong> Annual review of existing contracts and evaluation of new applications. The 2026 round will be informed by the results of our findings— particularly contributor responsiveness, internals documentation, and ecosystem technical leadership. Renewal decisions intersect directly with the 2026 fundraising targets and the reserve picture, so this cycle is tracked alongside the financial plan.</li>
+<li><strong>Community survey partnership.</strong> The Foundation continues to partner on the running of community surveys. These provide quantitative signals that complement the qualitative listening tour and give us year-over-year measurement of the community's experience. Findings inform both the next year's strategy and public reporting.</li>
+<li><strong>End-of-year fundraising drive.</strong> The annual November/December campaign anchors the Open Collective contributor count and is the moment when the broadest swath of the community contributes. The 2026 campaign will lean into the year's narrative— listening tour, Special Interest Groups, and technical impact— to make the case for the Foundation as clearly as possible. There is also a potential to tap into the 5th anniversary of the Foundation itself.</li>
+<li><strong>Board minutes publication.</strong> Board minutes are published on an ongoing basis as part of the Foundation's governance transparency. This practice continues in 2026 alongside the broader push to make Foundation operations more legible to the community.</li>
+<li><strong>Monthly expense and contribution tracking.</strong> Monthly tracking and reporting of expenses and Open Collective contributions provides the public financial baseline.</li>
+</ul>
+
+<h3 id="gathering-more-data">Gathering More Data</h3>
+
+<p>It should be noted that these strategies and ideas are based on the <a href="https://thephp.foundation/blog/2026/04/16/integrating-community-feedback-into-foundation-strategy-part1/">initial findings</a>, and it would be wise to gather even more data that will inform future decisions and plans. We have recently launched a <a href="https://thephp.foundation/blog/2026/06/09/help-shape-the-future-of-php/">State of PHP Survey</a> in partnership with <a href="https://www.jetbrains.com/phpstorm/">PhpStorm</a> from JetBrains, and will be releasing the results later in the year. We will also be open to coordinating future surveys and means of data collection.</p>
+
+<h3 id="getting-involved">Getting Involved</h3>
+
+<p>If you're interested in joining or learning more about a Special Interest Group, the best place to start is by letting us know through this <a href="https://forms.gle/PqNRftrMGAhMCWBe9">general interest form.</a> We'll also be sharing more details about each group through our newsletter and social media accounts as they launch.</p>
+
+<p>We also want to encourage you to complete the survey as it will be helpful for the entire community to have more insight into how PHP is being used. Please go take the <a href="https://thephp.foundation/blog/2026/06/09/help-shape-the-future-of-php/">State of PHP Survey</a>.</p>
+
+<p>Lastly, as you know, <em>none</em> of this work is possible without the financial generosity of our community. We are incredibly grateful for all our individual and organizational supporters. If you would like to support The PHP Foundation's mission, please see our Open Collectives:</p>
+
+<ul>
+<li>To donate in USD: <a href="https://opencollective.com/phpfoundation">https://opencollective.com/phpfoundation</a></li>
+<li>To donate in EUR: <a href="https://opencollective.com/php-foundation-eur">https://opencollective.com/php-foundation-eur</a></li>
+</ul>
+
+<p>Whether you're an individual developer, a company that runs PHP, a community organizer, or other type of PHP community member, we would love to include you on this journey. PHP thrives when we all take part!</p>
+]]></content><link href="https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/"/><id>https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/</id><updated>Thu, 11 Jun 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Welcoming Matt Stauffer to The PHP Foundation Board]]></title><content type="html"><![CDATA[<p><img src="/assets/post-images/2026/matt-stauffer/matt-stauffer.jpg" width="300" alt="headshot of matt stauffer" class="mb-4 sm:mr-4 sm:float-left"/> We are thrilled to announce that <a href="https://www.linkedin.com/in/mattstauffer/">Matt Stauffer</a> has agreed to join The PHP Foundation Board, where he will bring his decades of experience in the PHP ecosystem. Matt joins the Board as a community representative and was voted in by the existing Board members. Not only is Matt a Laravel expert, he has created / maintained dozens of PHP and JavaScript open source packages, he is a published author, and he hosts several successful industry podcasts. We are grateful for his insight, input, and leadership as we further our mission of sustaining a thriving PHP language and ecosystem.</p>
+
+<p>Please join us in welcoming Matt to the Foundation Board!</p>
+]]></content><link href="https://thephp.foundation/blog/2026/03/25/welcoming-matt-stauffer-to-the-php-foundation-board/"/><id>https://thephp.foundation/blog/2026/03/25/welcoming-matt-stauffer-to-the-php-foundation-board/</id><updated>Fri, 27 Mar 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[PHP Ambassadors: Six Weeks In]]></title><content type="html"><![CDATA[<p>When we <a href="https://thephp.foundation/blog/2026/06/19/the-php-ambassador-program-is-open/">launched the PHP Ambassador Program</a> on June 19, 2026, we honestly didn’t know what to expect. We knew the need for something like this was definitely there, and it <em>seemed</em> like something the community would be interested in being a part of. But as they say, “you never know how a thing is going to go, until it goes.”  I mentioned in my <a href="https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/">strategy document</a> that I was hoping to enlist 10 people to attend a regular cadence of meetings. (Honestly, 10 people seemed like a reasonable number.)</p>
+
+<p>Not only did you all surpass that number by leaps and bounds, you continue to show up and join the group. <em>We now have 150 people who have expressed interest in the Program</em>. I couldn’t be more excited about your enthusiasm!</p>
+
+<h2 id="what-we-learned">What we learned</h2>
+
+<p>Some things we’ve learned about this group:</p>
+
+<ul>
+<li><strong>Maintain flexible infrastructure choices:</strong> When starting a new community, it's important to remember that it’s ok to try different options for infrastructure. Every community takes on a life of its own, and for this group, GitHub Discussions did not seem to take hold as a place where the community wanted to interact. As well, Google Meet did not provide us with the options for meeting management that we wanted. And third, inviting folks individually to meetings became unwieldy and got me flagged as a spammer. So instead of using GitHub, Google Meet, and Google invites, we are using Discord, Zoom, and a Google calendar to manage this community's interactions and these meetings.</li>
+<li><strong>Divide and conquer:</strong> We had enough interest to break the larger group into smaller, more focused groups:
+
+<ul>
+<li>Research: focused on locating and vetting sources of information and truth that the community can use in their articles and presentations</li>
+<li>Marketing: focused on the messaging of PHP (including the php.net website)</li>
+<li>Speakers: focused on providing structure and resources for people who want to give talks outside the PHP ecosystem</li>
+</ul></li>
+<li><strong>Give opportunities for overlap:</strong> As our topics of discussion became more focused, many people wanted to be in more than one group at a time. Also, a 30 minute breakout once a month is not enough to make real progress.  For those reasons, we have afforded each group their own meeting space, while maintaining the monthly meeting that includes everyone. Allowing people to participate in more than one group at a time means there will be more opportunities for cross-pollination and coordination among the three subgroups.</li>
+</ul>
+
+<h2 id="group-progress">Group Progress</h2>
+
+<p>Ideas are great, but what about actions? We have a goal in each group to build tangible assets and to keep momentum going. Launching is hard, but maintaining engagement and providing real outcomes is harder. So let's talk about what each of these groups is currently working on.</p>
+
+<h3 id="research">Research</h3>
+
+<p>As the smallest of the three groups, we tasked ourselves with identifying and listing the current available resources that are out there around PHP usage and other data points that might be of interest to our community. We felt that it was important to have a lay of the land as a starting point. We are still working on putting this into a format that we can share in the <a href="https://github.com/ThePHPF/SIG-ambassadors/tree/main/subgroup-research">Research portion of the SIG-Ambassador Repo</a>, but we have some notes started. If you know of a source of data that should be included, please share with us by <a href="https://github.com/ThePHPF/SIG-ambassadors/issues">opening an issue in the repo</a>.</p>
+
+<p><strong>Group Info:</strong></p>
+
+<ul>
+<li>Discord channel: <a href="https://discord.com/channels/356354025865740288/1530212583833997392">#php-amb-research</a></li>
+<li>GitHub repo: <a href="https://github.com/ThePHPF/SIG-ambassadors/tree/main/subgroup-research">Research subgroup</a></li>
+<li>Next meeting: <strong>Friday, August 28, 2026 at 13:00 UTC</strong></li>
+</ul>
+
+<h3 id="marketing">Marketing</h3>
+
+<p>There is an <a href="https://github.com/php/web-php/pull/1962">active draft PR</a> that proposes some initial structural updates to the php.net website. The original PR was created largely from the work of Mark Randall, and it has gone through several collaborative iterations. The php.net website was one of the things most mentioned to me in the <a href="https://thephp.foundation/blog/2026/04/16/integrating-community-feedback-into-foundation-strategy-part1/">Listening Tour</a> as a place that could use some help, so it’s great to see this next iteration being created by the community. I would venture to say this is the first in many iterations to come! Thanks to <a href="https://www.linkedin.com/in/mattstauffer/">Matt Stauffer</a> for shepherding this group and keeping progress moving forward.</p>
+
+<p><strong>Group Info:</strong></p>
+
+<ul>
+<li>Discord channel: <a href="https://discord.com/channels/356354025865740288/1530212454309826571">#php-amb-marketing</a></li>
+<li>GitHub repo: <a href="https://github.com/ThePHPF/SIG-ambassadors/tree/main/subgroup-marketing">Marketing subgroup</a></li>
+<li>Next meeting: <strong>Friday, August 14, 2026 at 14:00 UTC</strong></li>
+</ul>
+
+<h3 id="speakers">Speakers</h3>
+
+<p><a href="https://www.linkedin.com/in/secondej/">James Seconde</a> from Vonage has done an amazing job shepherding this third and final group: the speakers. He has started a PR that offers <a href="https://github.com/ThePHPF/SIG-ambassadors/pull/24">guidelines for a more structured, Foundation-backed Speaker Program</a>. The community has chimed in, but we are still open to receiving feedback on how a program like this might work. This group has also started compiling a <a href="https://docs.google.com/spreadsheets/d/1TCy25FqB_c2n1UhwtGN4AdL_plMPHQceNi6UpOSjBok/edit">spreadsheet of events</a> outside our PHP bubble as a resource for PHP Ambassador speakers (or anyone else in the community). We would appreciate more eyes on this and the addition of more information. If you have thoughts on either of these things, we highly encourage you to join this group!</p>
+
+<p><strong>Group Info:</strong></p>
+
+<ul>
+<li>Discord channel: <a href="https://discord.com/channels/356354025865740288/1530212493019058257">#php-amb-speakers</a></li>
+<li>GitHub repo: <a href="https://github.com/ThePHPF/SIG-ambassadors/tree/main/subgroup-speakers">Speakers subgroup</a></li>
+<li>Next meeting: <strong>Thursday, August 27, 2026 at 13:00 UTC</strong></li>
+</ul>
+
+<h2 id="join-us%21">Join us!</h2>
+
+<p>If shaping the messaging around PHP and improving the perception of the language outside our bubbles is important to you, we would love to include you in this group!</p>
+
+<p>Even if you aren’t sure where you fit in, you can participate in the larger effort:</p>
+
+<ul>
+<li>Discord: <a href="https://discord.com/channels/356354025865740288/1521534247813255229">#php-ambassadors</a></li>
+<li>Repo: <a href="https://github.com/ThePHPF/SIG-ambassadors/tree/main">SIG-Ambassadors</a></li>
+<li>Calendar of meetings: <a href="https://calendar.google.com/calendar/u/3?cid=Y19lMzY3ZGQyMzRiNTkwZGExY2M1NjM3ZTEyZmE2ODJlYjA0YzZkOWU4N2E5OWY1ZDY2YzMxNjI5YmIxYTE4MDNkQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20">Subscribe here</a></li>
+<li>Next meeting: <strong>Friday, August 14, 2026 at 13:00 UTC</strong></li>
+</ul>
+
+<p>To be added to the mailing list where you will be kept up-to-date on all the PHP Ambassador news, register your interest using <a href="https://forms.gle/cAFDZ1gC22ajxx6VA">this form</a>. (Of course you can unsubscribe at any time, and we will still love you. We promise.)</p>
+]]></content><link href="https://thephp.foundation/blog/2026/08/13/php-ambassadors-six-weeks-in/"/><id>https://thephp.foundation/blog/2026/08/13/php-ambassadors-six-weeks-in/</id><updated>Thu, 13 Aug 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[The PHP Ambassador Program is Open]]></title><content type="html"><![CDATA[<p>We are excited to announce that we have scheduled the first meeting for the PHP Ambassador Program! This is the second  Special Interest Group launched by The PHP Foundation, and we are inviting you to be a part of it.</p>
+
+<p>As mentioned in our <a href="https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/#2.-php-ambassador-program">2026 Strategy document</a>, this group will be focused on improving the perception of PHP outside the PHP bubble. It will center on external advocacy and empowering the community to help tell the story of modern PHP in whatever capacity makes sense for them. Whether it be at a local open source group, inside a company, or at an open source conference, we want to provide PHP community members with the tools and resources they need to advocate on behalf of the PHP ecosystem.</p>
+
+<p>The first meeting is <strong>1 hour long</strong> and scheduled for <strong>Tuesday, June 30, 2026 at 10:30 am EDT / 2:30 pm UTC</strong>. This will be a kick-off session where we collaborate on the goals and objectives of the group and schedule a date/time for future meetings. If you would like to participate but you are unable to attend, that’s okay! (We know time zones are hard.) We will share post-meeting notes in a public repository within The PHP Foundation GitHub organization, along with ways in which you can contribute asynchronously.</p>
+
+<p>If you would like to attend our kick-off meeting, you can <a href="https://forms.gle/amMY3Anvh83jUE4Q6">fill out this form</a> to register your interest. From there, we will send you meeting details. If you have already filled this out, you do not need to fill it out again. We will be contacting you shortly.</p>
+
+<p>Please join us if you would like to help improve the perception of PHP!</p>
+]]></content><link href="https://thephp.foundation/blog/2026/06/19/the-php-ambassador-program-is-open/"/><id>https://thephp.foundation/blog/2026/06/19/the-php-ambassador-program-is-open/</id><updated>Fri, 19 Jun 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[The PHP Foundation Impact and Transparency Report 2025]]></title><content type="html"><![CDATA[<h2 id="executive-summary">Executive Summary</h2>
 
 <p>PHP turned 30 in 2025. With The PHP Foundation's support, the PHP project marked the year by shipping PHP 8.5. The PHP Foundation also launched PIE 1.0, initiated a project to modernize PHP's stream layer, and authored roughly 42% of all commits to PHP's core. This work was supported by 536 sponsors and individual contributors, and it could not have happened without them.</p>
 
@@ -624,470 +1172,16 @@ The goal is to gather representative input from PHP developers of all background
 <h2 id="outro">Outro</h2>
 
 <p>The work in this report is the runway for what's next. We head into 2026 with real momentum and a clear sense of what the community has asked of us.  None of the technical leadership, the security work, the new partnerships ahead, and the support for the PHP ecosystem happens without the people who fund us. <a href="https://thephp.foundation/sponsor/">With your help</a>, together we can keep PHP thriving in a changing open source world.</p>
-]]></content><link href="https://thephp.foundation/blog/2026/05/27/impact-and-transparency-report-2025/"/><id>https://thephp.foundation/blog/2026/05/27/impact-and-transparency-report-2025/</id><updated>Wed, 27 May 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[PHP Ambassadors: Six Weeks In]]></title><content type="html"><![CDATA[<p>When we <a href="https://thephp.foundation/blog/2026/06/19/the-php-ambassador-program-is-open/">launched the PHP Ambassador Program</a> on June 19, 2026, we honestly didn’t know what to expect. We knew the need for something like this was definitely there, and it <em>seemed</em> like something the community would be interested in being a part of. But as they say, “you never know how a thing is going to go, until it goes.”  I mentioned in my <a href="https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/">strategy document</a> that I was hoping to enlist 10 people to attend a regular cadence of meetings. (Honestly, 10 people seemed like a reasonable number.)</p>
+]]></content><link href="https://thephp.foundation/blog/2026/05/27/impact-and-transparency-report-2025/"/><id>https://thephp.foundation/blog/2026/05/27/impact-and-transparency-report-2025/</id><updated>Wed, 27 May 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Welcoming Alexandre Daubois to The PHP Foundation]]></title><content type="html"><![CDATA[<p>As you know, the main objective of The PHP Foundation’s mission is the sustainability of the PHP language, and a large part of that mission is focused on PHP core maintenance tasks. Included in this maintenance body of work are tasks such as issue triage, code reviews, and bug fixes. We take this responsibility very seriously, especially when it comes to security.</p>
 
-<p>Not only did you all surpass that number by leaps and bounds, you continue to show up and join the group. <em>We now have 150 people who have expressed interest in the Program</em>. I couldn’t be more excited about your enthusiasm!</p>
+<p>In recent months, there has been a marked increase in the number of security reports to <a href="https://github.com/php/php-src">php-src</a>, due to the increased availability of AI tools and the ease with which these reports can be generated. Some of these reports are not valid security issues or are basic duplicates of previously filed reports. But even so, every one of these reports must be triaged and validated, then if deemed valid, they must be classified, fixed, reviewed, and merged. There is a very small team that currently handles these reports, and it is becoming more difficult to not only keep up with the influx, but to address issues that already exist.</p>
 
-<h2 id="what-we-learned">What we learned</h2>
+<p><img src="/assets/post-images/2026/alexandre-daubois/alexandre-daubois.jpg" width="300" alt="photo of alexandre daubois giving a talk" class="mb-4 sm:mr-4 sm:float-left"/>As a result, we are thrilled to add <a href="https://www.linkedin.com/in/alexandre-daubois/?locale=en">Alexandre Daubois</a> to our team of contracted developers, focused on security. Alexandre will be spending a few hours a week helping with triage and the handling and fixing of incoming security reports.</p>
 
-<p>Some things we’ve learned about this group:</p>
+<p>As the current CTO of <a href="https://Les-Tilleuls.coop">Les-Tilleuls.coop</a>, Alexandre brings a wealth of experience in addressing and fixing security issues. He has deep knowledge of Symfony, FrankenPHP, PHP core, and Scrutineer, and has already been instrumental in implementing recommendations from The PHP Foundation’s Ecosystem Security Team. We are confident that his contributions will make a huge impact in our ability to process incoming reports and effectively harden the PHP language.</p>
 
-<ul>
-<li><strong>Maintain flexible infrastructure choices:</strong> When starting a new community, it's important to remember that it’s ok to try different options for infrastructure. Every community takes on a life of its own, and for this group, GitHub Discussions did not seem to take hold as a place where the community wanted to interact. As well, Google Meet did not provide us with the options for meeting management that we wanted. And third, inviting folks individually to meetings became unwieldy and got me flagged as a spammer. So instead of using GitHub, Google Meet, and Google invites, we are using Discord, Zoom, and a Google calendar to manage this community's interactions and these meetings.</li>
-<li><strong>Divide and conquer:</strong> We had enough interest to break the larger group into smaller, more focused groups:
-
-<ul>
-<li>Research: focused on locating and vetting sources of information and truth that the community can use in their articles and presentations</li>
-<li>Marketing: focused on the messaging of PHP (including the php.net website)</li>
-<li>Speakers: focused on providing structure and resources for people who want to give talks outside the PHP ecosystem</li>
-</ul></li>
-<li><strong>Give opportunities for overlap:</strong> As our topics of discussion became more focused, many people wanted to be in more than one group at a time. Also, a 30 minute breakout once a month is not enough to make real progress.  For those reasons, we have afforded each group their own meeting space, while maintaining the monthly meeting that includes everyone. Allowing people to participate in more than one group at a time means there will be more opportunities for cross-pollination and coordination among the three subgroups.</li>
-</ul>
-
-<h2 id="group-progress">Group Progress</h2>
-
-<p>Ideas are great, but what about actions? We have a goal in each group to build tangible assets and to keep momentum going. Launching is hard, but maintaining engagement and providing real outcomes is harder. So let's talk about what each of these groups is currently working on.</p>
-
-<h3 id="research">Research</h3>
-
-<p>As the smallest of the three groups, we tasked ourselves with identifying and listing the current available resources that are out there around PHP usage and other data points that might be of interest to our community. We felt that it was important to have a lay of the land as a starting point. We are still working on putting this into a format that we can share in the <a href="https://github.com/ThePHPF/SIG-ambassadors/tree/main/subgroup-research">Research portion of the SIG-Ambassador Repo</a>, but we have some notes started. If you know of a source of data that should be included, please share with us by <a href="https://github.com/ThePHPF/SIG-ambassadors/issues">opening an issue in the repo</a>.</p>
-
-<p><strong>Group Info:</strong></p>
-
-<ul>
-<li>Discord channel: <a href="https://discord.com/channels/356354025865740288/1530212583833997392">#php-amb-research</a></li>
-<li>GitHub repo: <a href="https://github.com/ThePHPF/SIG-ambassadors/tree/main/subgroup-research">Research subgroup</a></li>
-<li>Next meeting: <strong>Friday, August 28, 2026 at 13:00 UTC</strong></li>
-</ul>
-
-<h3 id="marketing">Marketing</h3>
-
-<p>There is an <a href="https://github.com/php/web-php/pull/1962">active draft PR</a> that proposes some initial structural updates to the php.net website. The original PR was created largely from the work of Mark Randall, and it has gone through several collaborative iterations. The php.net website was one of the things most mentioned to me in the <a href="https://thephp.foundation/blog/2026/04/16/integrating-community-feedback-into-foundation-strategy-part1/">Listening Tour</a> as a place that could use some help, so it’s great to see this next iteration being created by the community. I would venture to say this is the first in many iterations to come! Thanks to <a href="https://www.linkedin.com/in/mattstauffer/">Matt Stauffer</a> for shepherding this group and keeping progress moving forward.</p>
-
-<p><strong>Group Info:</strong></p>
-
-<ul>
-<li>Discord channel: <a href="https://discord.com/channels/356354025865740288/1530212454309826571">#php-amb-marketing</a></li>
-<li>GitHub repo: <a href="https://github.com/ThePHPF/SIG-ambassadors/tree/main/subgroup-marketing">Marketing subgroup</a></li>
-<li>Next meeting: <strong>Friday, August 14, 2026 at 14:00 UTC</strong></li>
-</ul>
-
-<h3 id="speakers">Speakers</h3>
-
-<p><a href="https://www.linkedin.com/in/secondej/">James Seconde</a> from Vonage has done an amazing job shepherding this third and final group: the speakers. He has started a PR that offers <a href="https://github.com/ThePHPF/SIG-ambassadors/pull/24">guidelines for a more structured, Foundation-backed Speaker Program</a>. The community has chimed in, but we are still open to receiving feedback on how a program like this might work. This group has also started compiling a <a href="https://docs.google.com/spreadsheets/d/1TCy25FqB_c2n1UhwtGN4AdL_plMPHQceNi6UpOSjBok/edit">spreadsheet of events</a> outside our PHP bubble as a resource for PHP Ambassador speakers (or anyone else in the community). We would appreciate more eyes on this and the addition of more information. If you have thoughts on either of these things, we highly encourage you to join this group!</p>
-
-<p><strong>Group Info:</strong></p>
-
-<ul>
-<li>Discord channel: <a href="https://discord.com/channels/356354025865740288/1530212493019058257">#php-amb-speakers</a></li>
-<li>GitHub repo: <a href="https://github.com/ThePHPF/SIG-ambassadors/tree/main/subgroup-speakers">Speakers subgroup</a></li>
-<li>Next meeting: <strong>Thursday, August 27, 2026 at 13:00 UTC</strong></li>
-</ul>
-
-<h2 id="join-us%21">Join us!</h2>
-
-<p>If shaping the messaging around PHP and improving the perception of the language outside our bubbles is important to you, we would love to include you in this group!</p>
-
-<p>Even if you aren’t sure where you fit in, you can participate in the larger effort:</p>
-
-<ul>
-<li>Discord: <a href="https://discord.com/channels/356354025865740288/1521534247813255229">#php-ambassadors</a></li>
-<li>Repo: <a href="https://github.com/ThePHPF/SIG-ambassadors/tree/main">SIG-Ambassadors</a></li>
-<li>Calendar of meetings: <a href="https://calendar.google.com/calendar/u/3?cid=Y19lMzY3ZGQyMzRiNTkwZGExY2M1NjM3ZTEyZmE2ODJlYjA0YzZkOWU4N2E5OWY1ZDY2YzMxNjI5YmIxYTE4MDNkQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20">Subscribe here</a></li>
-<li>Next meeting: <strong>Friday, August 14, 2026 at 13:00 UTC</strong></li>
-</ul>
-
-<p>To be added to the mailing list where you will be kept up-to-date on all the PHP Ambassador news, register your interest using <a href="https://forms.gle/cAFDZ1gC22ajxx6VA">this form</a>. (Of course you can unsubscribe at any time, and we will still love you. We promise.)</p>
-]]></content><link href="https://thephp.foundation/blog/2026/08/13/php-ambassadors-six-weeks-in/"/><id>https://thephp.foundation/blog/2026/08/13/php-ambassadors-six-weeks-in/</id><updated>Thu, 13 Aug 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Integrating Community Feedback into Foundation Strategy Part 2]]></title><content type="html"><![CDATA[<p>In April 2026, during the first weeks of my tenure as Executive Director, I conducted a listening tour with around 60 people from 18 countries spanning every part of the PHP ecosystem (see <em><a href="https://thephp.foundation/blog/2026/04/16/integrating-community-feedback-into-foundation-strategy-part1/">Integrating Community Feedback into Foundation Strategy: Part 1</a></em>). Since then, I have continued to listen and connect with those of you in the community who have something to share. The themes that have surfaced are <a href="https://thephp.foundation/blog/2026/04/16/integrating-community-feedback-into-foundation-strategy-part1/">clear, consistent, and actionable</a>. This document outlines how the PHP Foundation will respond in 2026.</p>
-
-<p>In short, the community loves PHP and believes in the Foundation's role, but is asking us to be clearer, more visible, and more coordinated in addressing existing and future challenges. The 2026 strategy answers those concerns through four themes:</p>
-
-<ol>
-<li><strong>Repositioning PHP</strong>: close the gap between today's PHP and the outdated perception that still shapes hiring and tech-stack decisions.</li>
-<li><strong>Initiatives with Community as Partners</strong>: scale our impact through six Special Interest Groups that address documented gaps.</li>
-<li><strong>Visibility &amp; Voice of the Foundation</strong>: consistently surface priorities, work, and impact to the community, sponsors, and the Board.</li>
-<li><strong>Language Stewardship</strong>: support the technical work that already happens around PHP core and the RFC process while staying clear about the Foundation's role as facilitator and resource, not the driver of decisions.</li>
-</ol>
-
-<p><a href="https://thephp.foundation/blog/2026/05/27/impact-and-transparency-report-2025/">Through our 2025 work</a>, and in addition to addressing community feedback, the Foundation set <a href="https://thephp.foundation/blog/2026/05/27/impact-and-transparency-report-2025/#looking-ahead%3A-goals-for-2026">goals for 2026</a>, which are also baked into this strategy.</p>
-
-<p>By the end of 2026, success looks like: a regular communication cadence for increased transparency; six operational <a href="https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/#community-special-interest-groups">Special Interest Groups</a> with active community engagement and clear goals; a more diversified sponsor base and a clear, repeatable story about modern PHP that the community can carry into rooms where decisions get made.</p>
-
-<h3 id="strategic-themes-for-2026">Strategic Themes for 2026</h3>
-
-<p>Four themes organize the 2026 plan. Each maps directly to a category of community feedback and 2026 goals. Together, they answer the dominant request from the listening tour: be more visible, more coordinated, and more clearly responsive to what the community has told us.</p>
-
-<h4 id="theme-1%3A-repositioning-php">Theme 1: Repositioning PHP</h4>
-
-<p>The PHP that people remember is not the PHP that exists today. Closing that gap is a multi-year effort. 2026 lays the groundwork: a coordinated voice, better assets for advocacy, and new platforms to tell the story of PHP at scale.</p>
-
-<p><strong>Initiatives</strong></p>
-
-<ul>
-<li><strong>Foundation-hosted podcast.</strong> A Foundation-hosted series surfacing the companies and engineering teams running modern PHP at scale. The target audience is decision-makers and engineers outside the PHP bubble.</li>
-<li><strong>PHP Ambassador Program.</strong> Brings together interested speakers; provides “State of Modern PHP” storytelling assets and CfP coordination that turn individual advocacy into a coordinated effort. More below.</li>
-</ul>
-
-<h4 id="theme-2%3A-initiatives-with-community-as-partners">Theme 2: Initiatives with Community as Partners</h4>
-
-<p>The Foundation has limited staff and limited budget, but the community has enormous capacity for making change. In 2026 we will create six structured Special Interest Groups that give community members multiple ways to contribute and focus their energy on the challenges that currently exist for the PHP ecosystem.</p>
-
-<p><strong>Initiatives</strong></p>
-
-<ul>
-<li><strong>Launch six Special Interest Groups.</strong> Build infrastructure to include interested community members in facing challenges across the ecosystem and from a variety of lenses. Details of these groups are below.</li>
-</ul>
-
-<h4 id="theme-3%3A-visibility-%26-voice-of-the-foundation">Theme 3: Visibility &amp; Voice of the Foundation</h4>
-
-<p>The PHP Foundation and Board will regularly articulate what they are doing and why, and they will be consistently accessible and engaged with the PHP community.</p>
-
-<p><strong>Initiatives</strong></p>
-
-<ul>
-<li><strong>Communication plan.</strong> Build a quarterly reporting cadence with a focus on bugs and issues we are prioritizing; revive the newsletter; publish Board minutes in a public repository.</li>
-<li><strong>Community engagement.</strong> Continue connection through community Discord channels; build a system to promote events where contractors and Board members will be; launch monthly Office Hours/Interviews with contractors/Board members.</li>
-<li><strong>Website clarity.</strong> Publish a clear articulation of Foundation priorities, the distribution of work across contractors, and the Foundation's role relative to the language and the community.</li>
-</ul>
-
-<h4 id="theme-4%3A-language-stewardship">Theme 4: Language Stewardship</h4>
-
-<p>This category contains the work the Foundation contributes to but does not own. The PHP codebase and the future of the language belong to the community. The Foundation's role is to support, facilitate, and convene, not to direct. In 2026, we will be explicit about that role and we will invest where the Foundation can meaningfully help.</p>
-
-<p><strong>Initiatives</strong></p>
-
-<ul>
-<li><strong>Contributor responsiveness and communication.</strong> Foundation contractors continue to lead in PR review and merge throughput; we will publish quarterly numbers so the community can see progress made by the team.</li>
-<li><strong>PHP core documentation.</strong> Identify and fund a focused effort to refresh the internals book and contributor onboarding documentation, in coordination with internals maintainers. Create a more maintainable system for keeping documentation up to date, moving forward.</li>
-<li><strong>PHP Security.</strong> The Alpha-Omega grant will position the Foundation at the center of a coordinated effort to improve security practices and procedures and fix security vulnerabilities across the PHP ecosystem.</li>
-</ul>
-
-<h3 id="community-special-interest-groups">Community Special Interest Groups</h3>
-
-<p>The PHP Foundation will launch six community special interest groups, with staggered launches from May through September. Each addresses one or more documented gaps from the listening tour, and each includes participation from the community, along with Foundation staff support. These are meant to be collaborative efforts with existing groups and individuals who have already spent time and energy addressing these topics.</p>
-
-<h4 id="%2A%2Aat-a-glance%3A%2A%2A"><strong>At a Glance:</strong></h4>
-
-<table>
-  <tr>
-   <td><strong>Group</strong>
-   </td>
-   <td><strong>Addresses</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>Ecosystem Security Team
-   </td>
-   <td>Cross-community security concerns, triage, disclosure, agentic-tooling assisted vulnerability research, maintainer support. 
-   </td>
-  </tr>
-  <tr>
-   <td>PHP Ambassador Program
-   </td>
-   <td>Advocacy, representation, marketing of PHP
-   </td>
-  </tr>
-  <tr>
-   <td>PHP Onboarding Initiative
-   </td>
-   <td>New user experience, learning resources, education
-   </td>
-  </tr>
-  <tr>
-   <td>Cryptography Special Interest Group
-   </td>
-   <td>Post-Quantum Cryptography readiness in PHP and related cryptography conversations
-   </td>
-  </tr>
-  <tr>
-   <td>Community Events Coalition
-   </td>
-   <td>User groups, conferences, growing the community
-   </td>
-  </tr>
-  <tr>
-   <td>PHP Accessibility & Inclusion Special Interest Group
-   </td>
-   <td>Inclusion, accessibility, language translations, helping the ecosystem build healthy community norms, being a resource for maintainers
-   </td>
-  </tr>
-</table>
-
-<h4 id="about-the-special-interest-groups%3A">About the Special Interest Groups:</h4>
-
-<h4 id="1.-ecosystem-security-team">1. Ecosystem Security Team</h4>
-
-<p><strong>Purpose:</strong> Improves security of the PHP ecosystem and helps maintainers as AI-assisted vulnerability research becomes more common. Proactively identifies vulnerabilities and triages vulnerability reports. Builds tooling to assess, classify, and address security issues. Assists maintainers in scanning projects and acts as a trusted resource to monitor and support them in critical scenarios. <em>Note: The Team has <a href="https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/">already launched</a></em> *. They have connected with 30 organizations and projects so far and performed over a thousand scans and affected changes in hundreds of repos. If you’re interested in a scan, or have questions for the team, <a href="https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/#:~:text=Get%20in%20touch%20via%20email%3A%20volker%40thephp.foundation.">get in touch</a>!*</p>
-
-<p><strong>Success in 2026:</strong> Documentation for maintainers on available tooling, best practices and report triage; sustainability plan for continuing the work at the end of the grant; 1000+ projects scanned across the PHP ecosystem.</p>
-
-<h4 id="2.-php-ambassador-program">2. PHP Ambassador Program</h4>
-
-<p><strong>Purpose:</strong> Advocacy for PHP <strong>outside</strong> the PHP ecosystem. Provides resources for people who want to give talks at open-source conferences and other open-source events; shares CfPs and maintains a calendar of conferences outside the PHP world; develops shared talk assets and messaging, including a maintained "State of Modern PHP" deck.</p>
-
-<p><strong>Success in 2026:</strong> at least 3 talks delivered by ambassadors at non-PHP open-source venues; a shared CfP calendar in active use;  at least 10 participating community members; regular cadence of virtual gatherings of participants established.</p>
-
-<h4 id="3.-php-onboarding-initiative">3. PHP Onboarding Initiative</h4>
-
-<p><strong>Purpose:</strong> Improves the experience of new users from first encounter through first deployment. Identifies setup pain points; coordinates education and learning resources; explores a structured mentorship program; documents a clear onboarding path that newcomers can follow; works with the php.net website team to improve documentation and experience.</p>
-
-<p><strong>Success in 2026:</strong> a published "getting started with PHP" path replacing the scattered resources currently in existence; a mentorship pilot with at least 5 mentor/mentee pairs; documented setup-time benchmarks against which 2027 progress can be measured; monthly virtual gatherings of participants established.</p>
-
-<h4 id="4.-cryptography-special-interest-group">4. Cryptography Special Interest Group</h4>
-
-<p><strong>Purpose</strong>: Provides a venue for Post-Quantum Cryptography discussions, and moves The PHP Foundation into a more active role in the PHP ecosystem's response; maps where cryptography exists across both PHP core and the wider ecosystem; tracks upstream developments in OpenSSL and libsodium; also provides a venue for related conversations and initiatives that may arise.</p>
-
-<p><strong>Success in 2026:</strong> a published "clear public readiness roadmap" that regulators, enterprise adopters, and the broader community can reference. Regular cadence of meetings is established.</p>
-
-<h4 id="5.-community-events-coalition">5. Community Events Coalition</h4>
-
-<p><strong>Purpose:</strong> Brings together user group leaders and conference organizers. Maintains a shared speaker pool; shares venue, sponsor, and operations resources; restores and maintains the PHP user group directory; helps promote new CfPs and new events; surfaces contribution opportunities for those looking to volunteer.</p>
-
-<p><strong>Success in 2026:</strong> the user group directory is current and active; at least one shared resource bundle (speaker pool, sponsor decks, venue tips) is in circulation; monthly virtual gatherings of organizers established.</p>
-
-<h4 id="6.-php-accessibility-%26-inclusion-special-interest-group">6. PHP Accessibility &amp; Inclusion Special Interest Group</h4>
-
-<p><strong>Purpose:</strong> Works to make the language, its documentation, and its learning resources more accessible to a wider range of people across abilities, geographies, languages, and career stages. Supports community leaders and maintainers in building healthy, inclusive communities, including helping draft codes of conduct, and providing peer support for CoC report responses.</p>
-
-<p>This group intentionally launches later, after the Foundation has demonstrated it can successfully implement and facilitate community-based Special Interest Groups. Sequencing should not be read as deprioritization: an interim advisory group will be convened in July-August to prepare the SIG’s goals and ensure that inclusion principles are baked into the charters of the earlier-launching groups.</p>
-
-<p><strong>Success in 2026:</strong> SIG is operational with an active roster and well-articulated goals; a shared code-of-conduct template and response plan for projects to use; an accessibility audit of the primary PHP web properties planned for implementation in 2027.</p>
-
-<h3 id="fundraising-%26-sustainability">Fundraising &amp; Sustainability</h3>
-
-<p>Fundraising is the single most consequential operational priority in 2026. The 2025 reserve drawdown is sustainable for now, but a multi-year drawdown would erode the Foundation's ability to maintain technical headcount. So although this was a measured and deliberate strategy, we are actively working to minimize the drawdown in 2026.</p>
-
-<h4 id="2026-priorities">2026 Priorities</h4>
-
-<ul>
-<li><strong>Sponsor research.</strong> Structured conversations with current and prospective sponsors in or before Q3 to understand what they value, what benefits would matter, and where the Foundation's value proposition is unclear.</li>
-<li><strong>Refreshed tiers and benefits, if needed.</strong> New or revised sponsorship tiers informed by the research, with clearer benefits and clearer reporting back to sponsors.</li>
-<li><strong>Fundraising Initiative.</strong> A fundraising initiative that is already in discussion will be launched. Target net contribution: $40,000.</li>
-<li><strong>Cross-ecosystem fundraising conversation.</strong> Active presence in the conversations that other foundations and policy bodies are having about open-source funding sustainability. PHP is not the only ecosystem facing harder fundraising; visibility in that conversation builds relationships and protects the Foundation's position.</li>
-<li><strong>Advisory Board engagement.</strong> Quarterly Advisory Board meetings, increased activity in internal channels, stronger collaboration on perception of PHP, storytelling, and technical strategy.</li>
-</ul>
-
-<h4 id="2026-financial-targets">2026 Financial Targets</h4>
-
-<ul>
-<li>Total raised irrespective of grants: $700,000+ (versus $625,000 in 2025)</li>
-<li>Open Collective active contributors: 600+ (versus 536 in 2025)</li>
-<li>Top-10 sponsor concentration: reduced from ~51% to &lt;45% of revenue</li>
-<li>At least 15 new Silver or higher level sponsors</li>
-<li>Reserve drawdown halted or materially reduced by Q1 2027</li>
-<li>Grant applications for 2027 where applicable</li>
-</ul>
-
-<h3 id="2026-timeline-for-implementation">2026 Timeline for Implementation</h3>
-
-<p>The timeline below includes high-level initiatives, but it should be noted that there will be many other smaller efforts along the way, driven by standard Foundation operations, individual goals of the community groups, and unforeseen developments and opportunities that emerge throughout the year. This is not a comprehensive list of everything the Foundation will do in 2026.</p>
-
-<h4 id="q2-2026">Q2 2026</h4>
-
-<table>
-  <tr>
-   <td>May
-   </td>
-   <td>
-<ul>
-
-<li>Alpha-Omega grant received and Ecosystem Security Team launched</li>
-</ul>
-   </td>
-  </tr>
-  <tr>
-   <td>June
-   </td>
-   <td>
-<ul>
-
-<li>PHP Ambassador Program launches</li>
-
-<li>Quarterly Advisory Board meetings begin</li>
-
-<li>Revive monthly newsletter</li>
-
-<li>Website content refresh</li>
-
-<li>State of PHP Survey launched</li>
-</ul>
-   </td>
-  </tr>
-</table>
-
-<h4 id="q3-2026">Q3 2026</h4>
-
-<table>
-  <tr>
-   <td>July
-   </td>
-   <td>
-<ul>
-
-<li>Foundation podcast launches</li>
-
-<li>PHP Onboarding Initiative launches</li>
-
-<li>Fundraising project launches</li>
-
-<li>Begin quarterly reports on contractor progress</li>
-</ul>
-   </td>
-  </tr>
-  <tr>
-   <td>August
-   </td>
-   <td>
-<ul>
-
-<li>Cryptography Special Interest Group launches</li>
-
-<li>Sponsor research ends, fundraising tiers refreshed</li>
-
-<li>Monthly Office Hours launches</li>
-</ul>
-   </td>
-  </tr>
-  <tr>
-   <td>September
-   </td>
-   <td>
-<ul>
-
-<li>Community Events Coalition launches</li>
-</ul>
-   </td>
-  </tr>
-</table>
-
-<h4 id="q4-2026">Q4 2026</h4>
-
-<table>
-  <tr>
-   <td>October
-   </td>
-   <td>
-<ul>
-
-<li>PHP Accessibility & Inclusion Special Interest Group launches</li>
-
-<li>Survey results released</li>
-</ul>
-   </td>
-  </tr>
-  <tr>
-   <td>November
-   </td>
-   <td>
-<ul>
-
-<li>EOY fundraising push for 2027. </li>
-<li>Ecosystem Security Grant ends.</li>
-</ul>
-   </td>
-  </tr>
-  <tr>
-   <td>December
-   </td>
-   <td>
-<ul>
-
-<li>Impact Report for 2026 published</li>
-</ul>
-   </td>
-  </tr>
-</table>
-
-<h3 id="risks-%26-mitigations">Risks &amp; Mitigations</h3>
-
-<table>
-  <tr>
-   <td><strong>Risk</strong>
-   </td>
-   <td><strong>Mitigation</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>Special Interest Groups stall or fail to attract engagement.
-   </td>
-   <td>Staggered launches give the Foundation operational headroom; ED-supported launch of each will have engagement as top priority.
-   </td>
-  </tr>
-  <tr>
-   <td>Accessibility & Inclusion SIG launch timing is read as deprioritization.
-   </td>
-   <td>Named in the framework announcement from day one; interim advisory grouping will convene in July; inclusion principles baked into earlier SIG infrastructure.
-   </td>
-  </tr>
-  <tr>
-   <td>Communication cadence not sustained.
-   </td>
-   <td>Quarterly reporting will be tied to Advisory Board cycles; newsletter will be sent on a regular schedule.
-   </td>
-  </tr>
-  <tr>
-   <td>Reserve drawdown continues if fundraising targets slip.
-   </td>
-   <td>Sponsor research front-loaded in Q3; Fundraising effort happens in July; Advisory Board engagement improves; cost discipline maintained.
-   </td>
-  </tr>
-  <tr>
-   <td>Sponsor concentration risk persists.
-   </td>
-   <td>Active outreach to mid-tier prospects; exploring new lower-cost tiers to widen the base; community fundraising to grow non-sponsor revenue.
-   </td>
-  </tr>
-</table>
-
-<h3 id="ongoing-operations">Ongoing Operations</h3>
-
-<p>Alongside the strategic initiatives above, the Foundation maintains an annual operating rhythm. These activities are not part of the 2026 strategic story but are essential to the Foundation's stability and to the community's experience of working with us.</p>
-
-<ul>
-<li><strong>Contractor applications and renewals.</strong> Annual review of existing contracts and evaluation of new applications. The 2026 round will be informed by the results of our findings— particularly contributor responsiveness, internals documentation, and ecosystem technical leadership. Renewal decisions intersect directly with the 2026 fundraising targets and the reserve picture, so this cycle is tracked alongside the financial plan.</li>
-<li><strong>Community survey partnership.</strong> The Foundation continues to partner on the running of community surveys. These provide quantitative signals that complement the qualitative listening tour and give us year-over-year measurement of the community's experience. Findings inform both the next year's strategy and public reporting.</li>
-<li><strong>End-of-year fundraising drive.</strong> The annual November/December campaign anchors the Open Collective contributor count and is the moment when the broadest swath of the community contributes. The 2026 campaign will lean into the year's narrative— listening tour, Special Interest Groups, and technical impact— to make the case for the Foundation as clearly as possible. There is also a potential to tap into the 5th anniversary of the Foundation itself.</li>
-<li><strong>Board minutes publication.</strong> Board minutes are published on an ongoing basis as part of the Foundation's governance transparency. This practice continues in 2026 alongside the broader push to make Foundation operations more legible to the community.</li>
-<li><strong>Monthly expense and contribution tracking.</strong> Monthly tracking and reporting of expenses and Open Collective contributions provides the public financial baseline.</li>
-</ul>
-
-<h3 id="gathering-more-data">Gathering More Data</h3>
-
-<p>It should be noted that these strategies and ideas are based on the <a href="https://thephp.foundation/blog/2026/04/16/integrating-community-feedback-into-foundation-strategy-part1/">initial findings</a>, and it would be wise to gather even more data that will inform future decisions and plans. We have recently launched a <a href="https://thephp.foundation/blog/2026/06/09/help-shape-the-future-of-php/">State of PHP Survey</a> in partnership with <a href="https://www.jetbrains.com/phpstorm/">PhpStorm</a> from JetBrains, and will be releasing the results later in the year. We will also be open to coordinating future surveys and means of data collection.</p>
-
-<h3 id="getting-involved">Getting Involved</h3>
-
-<p>If you're interested in joining or learning more about a Special Interest Group, the best place to start is by letting us know through this <a href="https://forms.gle/PqNRftrMGAhMCWBe9">general interest form.</a> We'll also be sharing more details about each group through our newsletter and social media accounts as they launch.</p>
-
-<p>We also want to encourage you to complete the survey as it will be helpful for the entire community to have more insight into how PHP is being used. Please go take the <a href="https://thephp.foundation/blog/2026/06/09/help-shape-the-future-of-php/">State of PHP Survey</a>.</p>
-
-<p>Lastly, as you know, <em>none</em> of this work is possible without the financial generosity of our community. We are incredibly grateful for all our individual and organizational supporters. If you would like to support The PHP Foundation's mission, please see our Open Collectives:</p>
-
-<ul>
-<li>To donate in USD: <a href="https://opencollective.com/phpfoundation">https://opencollective.com/phpfoundation</a></li>
-<li>To donate in EUR: <a href="https://opencollective.com/php-foundation-eur">https://opencollective.com/php-foundation-eur</a></li>
-</ul>
-
-<p>Whether you're an individual developer, a company that runs PHP, a community organizer, or other type of PHP community member, we would love to include you on this journey. PHP thrives when we all take part!</p>
-]]></content><link href="https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/"/><id>https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/</id><updated>Thu, 11 Jun 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Kicking off the PHP Onboarding Initiative Special Interest Group]]></title><content type="html"><![CDATA[<p>One of the most common pieces of feedback we hear from the PHP community is that the newcomer experience could use some improvement, and that we may be losing new users because of it. This is something that we as a community can address, and it's why The PHP Foundation made it part of our <a href="https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/#3.-php-onboarding-initiative">strategy document</a> for the rest of 2026. Improving that experience matters a lot to us, because a better new user experience means more community growth and retention. We are launching the PHP Onboarding Initiative Special Interest Group to provide space for collaborative problem solving in this area.</p>
-
-<p>Some of the identified issues in the PHP newcomer experience include:</p>
-
-<ul>
-<li><strong>Where to begin:</strong> It is difficult for new PHP users to know where to start. There are many resources and tutorials available, but it is hard to know which ones are updated and accurate, and the sheer number of them is overwhelming. Building and helping people find resources that cater to their needs is something that would be helpful for newcomers.</li>
-<li><strong>Minding the gap:</strong> The <a href="http://php.net/docs">php.net Manual</a> is a fantastic resource, but it is more of a reference than an educational resource for beginners that are learning to code. There is a current gap between documentation for complete beginners and users who already grasp the basics and use the manual differently.</li>
-<li><strong>Limited presence in formal education:</strong> PHP is largely missing in universities and bootcamps. Although there are some places in the world where PHP (or a related framework/project) is taught, the presence of PHP is inconsistent. There won't be a "one-size-fits-all" approach to building more partnerships with educational institutions. But this is something that we can figure out together. (Also, this may overlap with the mission of the <a href="https://github.com/ThePHPF/SIG-ambassadors">PHP Ambassadors</a> Special Interest Group that has already launched.)</li>
-<li><strong>Finding your people:</strong> The onboarding experience differs greatly among newcomers, with some having connections to the community, and others fending for themselves. It would be ideal if we could provide a more consistent approach to bringing newcomers together and connecting them with the community.</li>
-<li><strong>Mentorship is hard to find:</strong> Although there have been previous attempts at mentorship programs, those have proven challenging to sustain. But <a href="https://www.linuxfoundation.org/hubfs/LF%20Research/LFX%20Mentorship%20in%20Open%20Source%20-%20Report.pdf?hsLang=en">research shows</a> that mentorship can make all the difference when it comes to retaining users and turning them into potential contributors and community members, especially when it comes to those from marginalized and underrepresented groups.</li>
-<li><strong>Installation process</strong> Ensuring that this process is as easy and straightforward as possible, and centering the experience of new users is something that we should continue to be mindful of. Because this will likely involve the php.net website, this is another potential overlap with the mission of the <a href="https://github.com/ThePHPF/SIG-ambassadors">Marketing Subgroup of the PHP Ambassadors</a> Special Interest Group.</li>
-</ul>
-
-<p>These problems are not new and they aren't easy to solve, but one thing about the PHP community that I personally love is its dedication to sharing knowledge with new learners and helping newcomers find their way. This sense of community and support for newcomers is why many of us are still here (including myself!). Wouldn't it be great if we could come together and create a better and more consistent experience for newcomers to PHP?</p>
-
-<p>If this is something that is of interest to you, we are hosting a kick-off meeting on <strong>Monday, August 24 at 13:00 UTC</strong>. To request an invite to this meeting, please register your interest using <a href="https://forms.gle/VNmijQm4gWjuDjnJA">this form</a>. Note: if you have already indicated your interest through this form, you do not need to submit it again.</p>
-
-<p>If you cannot attend this meeting, that's okay! You are welcome to join the #the-php-foundation channel in the <a href="https://discord.phpc.social/">#phpc Discord server</a> for access to this and the other Special Interest Group chats. We also have a <a href="https://github.com/ThePHPF/SIG-onboarding">GitHub repository</a> where you can connect asynchronously.</p>
-]]></content><link href="https://thephp.foundation/blog/2026/08/03/kicking-off-the-php-onboarding-initiative/"/><id>https://thephp.foundation/blog/2026/08/03/kicking-off-the-php-onboarding-initiative/</id><updated>Mon, 03 Aug 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[The PHP Foundation’s Elizabeth Barron to keynote JetBrains PHPverse 2026]]></title><content type="html"><![CDATA[<p>PHP has undergone a remarkable transformation in recent years, and The PHP Foundation has played a major role in contributing to the development and maintenance of the language. The upcoming <a href="https://blog.jetbrains.com/phpstorm/2026/04/join-us-for-phpverse-2026-on-june-9/?utm_source=thephp.foundation&amp;utm_medium=referral&amp;utm_campaign=phpverse2026">JetBrains PHPverse conference</a> is a great opportunity to reflect on what has been done to reinforce PHP's position as a robust, modern language for web development.</p>
+<p>Please join us in welcoming Alexandre to The PHP Foundation team!</p>
+]]></content><link href="https://thephp.foundation/blog/2026/07/14/welcoming-alexandre-daubois/"/><id>https://thephp.foundation/blog/2026/07/14/welcoming-alexandre-daubois/</id><updated>Tue, 14 Jul 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[The PHP Foundation’s Elizabeth Barron to keynote JetBrains PHPverse 2026]]></title><content type="html"><![CDATA[<p>PHP has undergone a remarkable transformation in recent years, and The PHP Foundation has played a major role in contributing to the development and maintenance of the language. The upcoming <a href="https://blog.jetbrains.com/phpstorm/2026/04/join-us-for-phpverse-2026-on-june-9/?utm_source=thephp.foundation&amp;utm_medium=referral&amp;utm_campaign=phpverse2026">JetBrains PHPverse conference</a> is a great opportunity to reflect on what has been done to reinforce PHP's position as a robust, modern language for web development.</p>
 
 <p>Elizabeth Barron, <a href="https://thephp.foundation/blog/2026/02/27/welcoming-elizabeth-barron-new-executive-director/">The PHP Foundation’s Executive Director</a>, is joining the lineup of JetBrains PHPverse 2026 speakers with a keynote talk “Getting to Know The PHP Foundation”. <a href="https://lp.jetbrains.com/phpverse-2026/?utm_source=thephp.foundation&amp;utm_medium=referral&amp;utm_campaign=phpverse2026">Tune in</a> on <strong>June 9</strong> to learn what The PHP Foundation actually does, which initiatives are planned for the rest of 2026, and how the community can help support the PHP ecosystem.</p>
 
@@ -1119,60 +1213,7 @@ The goal is to gather representative input from PHP developers of all background
 <p>We also encourage you to join the <a href="https://discord.gg/uEUkSNhdd8">official Discord server</a> to ask questions and engage with the speakers and fellow developers.</p>
 
 <p>Looking forward to seeing you on June 9!</p>
-]]></content><link href="https://thephp.foundation/blog/2026/05/28/phpverse-keynote/"/><id>https://thephp.foundation/blog/2026/05/28/phpverse-keynote/</id><updated>Thu, 28 May 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Integrating Community Feedback into Foundation Strategy Part 1]]></title><content type="html"><![CDATA[<h2 id="integrating-community-input-into-foundation-strategy">Integrating Community Input Into Foundation Strategy</h2>
-
-<h3 id="part-1%3A-feedback-from-the-community">Part 1: Feedback from the Community</h3>
-
-<p>Oh my friends, we have so much to talk about.</p>
-
-<p>I’ve been with The PHP Foundation for a few weeks, and many people have asked me about my vision, goals, and strategy for the upcoming year. In my opinion, The PHP Foundation’s stated mission of <em>ensuring the long-term prosperity of the PHP language</em> can be interpreted many different ways. So what exactly does this mean in terms of actionable efforts that will impact the community in the ways that align with this mission?</p>
-
-<p>To answer that question, my goal was simple: listen to people who have a vested interest in the success of PHP and see what themes emerge. So I opened my calendar, messages, and email, and you all answered the call.</p>
-
-<p>So far, I have connected with around 60 people from 18 countries. I’ve heard from PHP community members, people working in the ecosystem, maintainers of PHP projects, consultants, sponsors, core developers, leaders of other open source foundations, user group organizers, and of course, our own Foundation staff and Board members. I am thrilled that you all had a lot to say, because as I’ve said before, apathy is a much harder problem to tackle.</p>
-
-<p>Before I share the findings, It is important to note a few things:</p>
-
-<ul>
-<li>Even though people identified many issues that could be better, there is still much love for PHP and the community.</li>
-<li>Some of the issues brought to me are not within the scope of The PHP Foundation’s authority. That being said, there are places where we can offer our support.</li>
-<li>These findings represent the concerns that were brought to me, and they aren’t presented as “fact” or official opinions of The PHP Foundation.</li>
-<li>Some of the findings may be of no surprise to you. And some of them may not resonate with you personally. I’d just ask that you keep in mind that the feedback is honestly presented as it was shared, and that these are also valid experiences from others.</li>
-</ul>
-
-<h3 id="high-level-summary-of-findings">High Level Summary of Findings</h3>
-
-<p>Overall, these were the biggest takeaways:</p>
-
-<ul>
-<li>PHP’s biggest challenges are perception, coordination, and onboarding, not technical capability</li>
-<li>The community loves the language and would choose PHP over other options, despite the challenges</li>
-<li>The ecosystem is large but fragmented</li>
-<li>The newcomer experience, education, and talent pipeline have room for improvement</li>
-<li>The PHP Foundation’s role and impact is not well understood</li>
-<li>Funding is a shared challenge across open source</li>
-<li>AI brings much uncertainty and many polarizing opinions, so agreeing upon a unified approach will be very challenging</li>
-</ul>
-
-<p>I've classified the feedback I received into four primary buckets:</p>
-
-<p><img src="/assets/post-images/2026/feedback-strategy-pt1/community-feedback-categories.jpg" alt="Categories" /></p>
-
-<p>I created this <a href="https://raw.githubusercontent.com/ThePHPF/talks/main/board-presentations/PHP%20Community%20Feedback%20Summary%20-%20April%202026.pdf">slide presentation</a> to share and summarize the feedback I received. You can also <a href="https://github.com/ThePHPF/talks/blob/main/board-presentations/PHP%20Community%20Feedback%20Summary%20-%20April%202026.pdf">view it on GitHub as a PDF</a> or <a href="https://github.com/ThePHPF/talks/blob/main/board-presentations/PHP%20Community%20Feedback%20Summary%20-%20April%202026.md">in Markdown</a>. I encourage you to take a look.</p>
-
-<h3 id="what%E2%80%99s-next%3F">What’s Next?</h3>
-
-<p>In a follow up blog post (Part 2), I will be sharing The PHP Foundation’s strategies that aim to address some of these issues. And as always, please don’t hesitate to reach out if you have input or feedback to share. You can reach me via <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#101;&#x6c;&#105;&#122;&#x61;b&#101;&#x74;&#x68;&#64;&#x74;&#x68;&#101;&#112;&#x68;&#112;&#46;&#x66;o&#117;&#x6e;&#x64;&#97;&#x74;&#x69;&#111;&#110;">email</a> or you can schedule some 1:1 time with me on my <a href="https://calendar.app.google/z2ckJ5LDn4qSyHCx7">calendar</a>.</p>
-]]></content><link href="https://thephp.foundation/blog/2026/04/16/integrating-community-feedback-into-foundation-strategy-part1/"/><id>https://thephp.foundation/blog/2026/04/16/integrating-community-feedback-into-foundation-strategy-part1/</id><updated>Thu, 16 Apr 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Welcoming Alexandre Daubois to The PHP Foundation]]></title><content type="html"><![CDATA[<p>As you know, the main objective of The PHP Foundation’s mission is the sustainability of the PHP language, and a large part of that mission is focused on PHP core maintenance tasks. Included in this maintenance body of work are tasks such as issue triage, code reviews, and bug fixes. We take this responsibility very seriously, especially when it comes to security.</p>
-
-<p>In recent months, there has been a marked increase in the number of security reports to <a href="https://github.com/php/php-src">php-src</a>, due to the increased availability of AI tools and the ease with which these reports can be generated. Some of these reports are not valid security issues or are basic duplicates of previously filed reports. But even so, every one of these reports must be triaged and validated, then if deemed valid, they must be classified, fixed, reviewed, and merged. There is a very small team that currently handles these reports, and it is becoming more difficult to not only keep up with the influx, but to address issues that already exist.</p>
-
-<p><img src="/assets/post-images/2026/alexandre-daubois/alexandre-daubois.jpg" width="300" alt="photo of alexandre daubois giving a talk" class="mb-4 sm:mr-4 sm:float-left"/>As a result, we are thrilled to add <a href="https://www.linkedin.com/in/alexandre-daubois/?locale=en">Alexandre Daubois</a> to our team of contracted developers, focused on security. Alexandre will be spending a few hours a week helping with triage and the handling and fixing of incoming security reports.</p>
-
-<p>As the current CTO of <a href="https://Les-Tilleuls.coop">Les-Tilleuls.coop</a>, Alexandre brings a wealth of experience in addressing and fixing security issues. He has deep knowledge of Symfony, FrankenPHP, PHP core, and Scrutineer, and has already been instrumental in implementing recommendations from The PHP Foundation’s Ecosystem Security Team. We are confident that his contributions will make a huge impact in our ability to process incoming reports and effectively harden the PHP language.</p>
-
-<p>Please join us in welcoming Alexandre to The PHP Foundation team!</p>
-]]></content><link href="https://thephp.foundation/blog/2026/07/14/welcoming-alexandre-daubois/"/><id>https://thephp.foundation/blog/2026/07/14/welcoming-alexandre-daubois/</id><updated>Tue, 14 Jul 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Anne McCarthy Joins The PHP Foundation Board]]></title><content type="html"><![CDATA[<p><img src="/assets/post-images/2026/anne-mccarthy/anne-mccarthy.jpg" width="300" alt="photo of anne mccarthy giving a presentation" class="mb-4 sm:mr-4 sm:float-left"/>The PHP Foundation Governing Board consists of a variety of folks from across the PHP ecosystem that share a vested interest in the success and sustainability of PHP. Representatives from the community, the core contribution team, and sponsors comprise this team to provide guidance and insight into the Foundation's objectives and initiatives. After a unanimous decision, we are incredibly pleased to be adding <a href="https://www.linkedin.com/in/anneguionmccarthy/">Anne McCarthy</a>, Architect and Open Source Director for Automattic, to our Board as a platinum sponsor representative.</p>
+]]></content><link href="https://thephp.foundation/blog/2026/05/28/phpverse-keynote/"/><id>https://thephp.foundation/blog/2026/05/28/phpverse-keynote/</id><updated>Thu, 28 May 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Anne McCarthy Joins The PHP Foundation Board]]></title><content type="html"><![CDATA[<p><img src="/assets/post-images/2026/anne-mccarthy/anne-mccarthy.jpg" width="300" alt="photo of anne mccarthy giving a presentation" class="mb-4 sm:mr-4 sm:float-left"/>The PHP Foundation Governing Board consists of a variety of folks from across the PHP ecosystem that share a vested interest in the success and sustainability of PHP. Representatives from the community, the core contribution team, and sponsors comprise this team to provide guidance and insight into the Foundation's objectives and initiatives. After a unanimous decision, we are incredibly pleased to be adding <a href="https://www.linkedin.com/in/anneguionmccarthy/">Anne McCarthy</a>, Architect and Open Source Director for Automattic, to our Board as a platinum sponsor representative.</p>
 
 <p>Anne brings 15 years of technical and open source experience, and has spent the last 12 years at Automattic, dedicated to improving the experience of the WordPress community of users and contributors alike. They bring a balanced mix of thoughtful empathy and deep technical knowledge and will be a tremendous asset to the Foundation moving forward.</p>
 
@@ -1181,45 +1222,4 @@ The goal is to gather representative input from PHP developers of all background
 </blockquote>
 
 <p>You can find Anne mostly in Seattle, WA where mountains and dogs both fill their soul with a special kind of joy. Please join us in welcoming Anne to The PHP Foundation Governing Board!</p>
-]]></content><link href="https://thephp.foundation/blog/2026/08/04/anne-mccarthy-joins-the-board/"/><id>https://thephp.foundation/blog/2026/08/04/anne-mccarthy-joins-the-board/</id><updated>Tue, 04 Aug 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Announcing the Ecosystem Security Team at The PHP Foundation]]></title><content type="html"><![CDATA[<p>The core <a href="https://thephp.foundation/#our-mission">mission</a> of the PHP Foundation is to ensure the long-term prosperity of the PHP language. Today, your, or your company's, financial contributions primarily fund developers working on the PHP language. In addition to sponsorships, the PHP Foundation uses grants to enable projects like last year's <a href="https://thephp.foundation/blog/2025/04/10/php-core-security-audit-results/">PHP Core Security Audit</a> funded by the <a href="https://www.sovereign.tech">Sovereign Tech Agency</a>.</p>
-
-<p>In March, the <a href="https://www.linuxfoundation.org/press/linux-foundation-announces-12.5-million-in-grant-funding-from-leading-organizations-to-advance-open-source-security">Linux Foundation announced a grant</a> with the goal of strengthening the security of the open source software ecosystem. This funding is managed by <a href="https://alpha-omega.dev">Alpha-Omega</a> and the Open Source Security Foundation <a href="https://openssf.org">(OpenSSF)</a>.</p>
-
-<p><strong>We're delighted to announce the PHP Foundation has been awarded a grant from <a href="https://alpha-omega.dev">Alpha-Omega</a> to help improve the security of the PHP open source ecosystem.</strong></p>
-
-<p>PHP is foundational to the modern web, and ensuring its security is essential for a significant portion of the web's functionality and integrity.</p>
-
-<p>New security tools making use of AI are accelerating the discovery of vulnerabilities in open source software. Initiatives like <a href="https://www.anthropic.com/glasswing">Project Glasswing</a> are attempting to prepare software for the increasing accessibility of such tooling to bad actors. A number of large PHP projects have already received and acted on credible audit reports and concrete issues found by these new tools.</p>
-
-<p>At the same time, many projects have been reporting a drastic increase in the volume of vulnerability reports they have to deal with, many bearing the hallmarks of lazy AI generation. These low-quality reports waste maintainers' time and overshadow legitimate issues.</p>
-
-<p>The PHP Foundation is creating a PHP Ecosystem Security Team to help our ecosystem maintainers with these new challenges. This new PHP Foundation team will help triage vulnerability reports and disclose them responsibly as necessary. It will work on tooling to discover, classify and remediate security vulnerabilities and share emerging techniques on using them effectively and help the PHP ecosystem adopt these tools. The team will respect maintainer bandwidth, provide high-quality reports, coordinate project access to new security tooling, support projects with only a few maintainers, and find solutions for projects with <a href="https://alpha-omega.dev/blog/weekend-at-bernies-which-of-your-dependencies-are-wearing-sunglasses/">no active maintainers at all</a>.</p>
-
-<p>We're excited our friends at the <a href="https://www.drupal.org/association">Drupal Association</a> were awarded a similar grant from Alpha-Omega to secure the Drupal ecosystem built on top of PHP. The PHP Foundation is looking forward to collaborating with the Drupal Security Team on shared approaches and we hope to be joined by more experts from individual PHP projects and subcommunities as we build out the new team.</p>
-
-<p>The PHP Foundation grant will fund a six-month full-time position titled "Ecosystem AI Security Engineer in Residence at the PHP Foundation" to lead this effort and to prepare a sustainability plan for the time after this initial phase. This person will act as a trusted intermediary between security researchers and maintainers in urgent, high-risk situations, and will collaborate with peers in similar roles across other language ecosystems. Additionally, grant funding will also be employed toward the team goals described above where they cannot be accomplished by the single paid lead position or with the help of PHP community volunteers.</p>
-
-<p>After many conversations with community leaders in the PHP ecosystem, known security experts and Foundation stakeholders, the PHP Foundation board voted unanimously to offer the position to <a href="https://phpc.social/@edorian">Volker Dusch (@edorian)</a>. We asked Volker to introduce himself.</p>
-
-<h2 id="meet-volker">Meet Volker</h2>
-
-<p><img src="/assets/post-images/2026/ecosystem-security/volker-dusch.png" width="300" alt="headshot of volker dusch" class="mb-4 sm:mr-4 sm:float-left"/>👋,</p>
-
-<p>Some of you may know me as one of the PHP 8.5 Release Managers, or might have met me at one of more than 100 PHP-related conferences I've visited or spoken at in the last 20 years.</p>
-
-<p>PHP has been the main programming language of my professional career, from helping maintain PHPUnit for a couple of years and more recently, working on various language RFCs.</p>
-
-<p>In the past, I've worked on a high-traffic social networking site, remote monitoring of solar plants and software for medical trials. Currently, I'm working on PHP performance and monitoring tooling at Tideways, which I'm grateful to for allowing me to take some time off to focus on this new challenge.</p>
-
-<h2 id="interested-in-hearing-from-me%3F-got-feedback%3F">Interested in hearing from me? Got feedback?</h2>
-
-<p>My goal is to be open and communicate early about how the Ecosystem Security Team is taking shape while making the most of the resources we have.</p>
-
-<p>Big projects and foundational libraries are on my radar for security analysis already, and I'm especially keen to hear from people who want to actively collaborate and have the bandwidth to do so.</p>
-
-<p>So if you want to put your project forward or have questions or comments for me, I'd love to hear from you!</p>
-
-<p>Get in touch via email: <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#x76;&#111;&#x6c;&#x6b;&#101;&#x72;&#64;&#x74;&#x68;&#101;&#x70;&#104;&#x70;&#x2e;&#102;&#x6f;&#117;&#x6e;&#x64;&#97;&#x74;&#105;&#x6f;&#x6e;">volker@thephp.foundation</a>.</p>
-
-<p>You can also find me on <a href="https://phpc.social/@edorian">Mastodon</a> and <a href="https://www.linkedin.com/in/volker-dusch/">LinkedIn</a>.</p>
-]]></content><link href="https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/"/><id>https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/</id><updated>Mon, 18 May 2026 00:00:00 +0000</updated></entry></feed>
+]]></content><link href="https://thephp.foundation/blog/2026/08/04/anne-mccarthy-joins-the-board/"/><id>https://thephp.foundation/blog/2026/08/04/anne-mccarthy-joins-the-board/</id><updated>Tue, 04 Aug 2026 00:00:00 +0000</updated></entry></feed>
