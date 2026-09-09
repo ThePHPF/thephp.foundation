@@ -20,7 +20,7 @@ class Team
             [
                 'title' => 'Core Developers',
                 'description' => 'The PHP Foundation contracts 13 full-time and part-time engineers to maintain and develop the PHP language and to support the PHP ecosystem.',
-                'members' => ['derick-rethans', 'gina-peter-banyard', 'ilija-tovilo', 'jakub-zelenka', 'mate-kocsis', 'arnaud-le-blanc', 'david-carlier', 'james-titcumb', 'saki-takamachi', 'shivam-mathur', 'joe-watkins', 'volker-dusch', 'alexandre-daubois'],
+                'members' => ['derick-rethans', 'gina-peter-banyard', 'ilija-tovilo', 'jakub-zelenka', 'mate-kocsis', 'arnaud-le-blanc', 'david-carlier', 'james-titcumb', 'saki-takamachi', 'shivam-mathur', 'joe-watkins', 'volker-dusch', 'alexandre-daubois', 'daniel-scherzer'],
             ],
             [
                 'title' => 'Community',
@@ -318,6 +318,14 @@ class Team
                 'linkedin' => 'https://www.linkedin.com/in/brent-roose-20b02a275/',
                 'mastodon' => 'https://phpc.social/@brendt',
                 'twitter' => 'https://x.com/brendt_gd',
+            ],
+            'daniel-scherzer' => [
+                'name' => 'Daniel Scherzer',
+                'image' => 'https://avatars.githubusercontent.com/u/179652704?v=4',
+                'job' => 'Core Developer',
+                'github' => 'https://github.com/DanielEScherzer',
+                'linkedin' => 'https://www.linkedin.com/in/daniel-e-scherzer/',
+                'url' => 'https://scherzer.dev/',
             ],
             'the-php-foundation' => [
                 'name' => 'The PHP Foundation',
