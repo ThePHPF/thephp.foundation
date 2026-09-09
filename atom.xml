@@ -3,9 +3,25 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2026-09-02T13:55:38+00:00</updated>
+    <updated>2026-09-09T22:21:37+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Welcoming Daniel Scherzer to the Ecosystem Security Team]]></title>
+            <link href="https://thephp.foundation/blog/2026/09/09/welcome-daniel-scherzer/"/>
+            <updated>2026-09-09T00:00:00+00:00</updated>
+            <id>https://thephp.foundation/blog/2026/09/09/welcome-daniel-scherzer/</id>
+            <content type="html"><![CDATA[<p>When the Ecosystem Security Team was established with funding from the <a href="https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/">Alpha-Omega “Security Engineer in Residence” grant</a>, its mission was to improve the security of all aspects of the PHP ecosystem. Under the leadership of Volker Dusch, the team has <a href="https://thephp.foundation/blog/2026/06/23/one-month-of-ecosystem-security-engineering/">accomplished many things</a>.</p>
+
+<p>As predicted, the increasing popularity of AI tools has brought an influx of security reports and PRs from the community to php-src itself. The triaging, reviewing, and handling of issues that do not fall within PHP’s definition of a <a href="https://github.com/php/php-src/blob/master/SECURITY.md">“security vulnerability,”</a> but that do improve the quality of PHP are tasks that are time-consuming for both php-src maintainers and for Volker and the team. Even if these are not security issues, they are useful hardening work and impactful nonetheless. These fixes also prevent future reports that would generate increased workload for the team.</p>
+
+<p><img src="/assets/post-images/2026/daniel-scherzer/daniel-scherzer.jpg" width="300" alt="headshot of daniel scherzer" class="mb-4 sm:mr-4 sm:float-left"/>To help manage this influx, the PHP Foundation is happy to add <a href="https://scherzer.dev/">Daniel Scherzer</a> to the Ecosystem Security Team on a short-term basis, as part of the aforementioned Alpha-Omega grant. Daniel will be working on this body of outstanding issues that harden PHP but that do not qualify as security vulnerabilities.</p>
+
+<p>Daniel got his start in open-source software by contributing to PHP, where he currently serves as the maintainer of the Reflection extension, as a release manager for PHP 8.5, and as the veteran release manager for PHP 8.6. Daniel will be a huge asset not only to the Ecosystem Security Team but also to the PHP community, through his work on hardening PHP itself.</p>
+
+<p>Welcome, Daniel!</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[Digital Sovereignty Is Written in PHP]]></title>
             <link href="https://thephp.foundation/blog/2026/09/02/digital-sovereignty-is-written-in-php/"/>
@@ -1218,22 +1234,6 @@ int(5)
 <hr />
 
 <p>We are happy to share these updates with you, and if you have any questions about what any of our contractors are working on, you can connect with us in The PHP Foundation Discord channel on the <a href="https://phpc.chat/">PHPC server</a>.</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Welcoming Alexandre Daubois to The PHP Foundation]]></title>
-            <link href="https://thephp.foundation/blog/2026/07/14/welcoming-alexandre-daubois/"/>
-            <updated>2026-07-14T00:00:00+00:00</updated>
-            <id>https://thephp.foundation/blog/2026/07/14/welcoming-alexandre-daubois/</id>
-            <content type="html"><![CDATA[<p>As you know, the main objective of The PHP Foundation’s mission is the sustainability of the PHP language, and a large part of that mission is focused on PHP core maintenance tasks. Included in this maintenance body of work are tasks such as issue triage, code reviews, and bug fixes. We take this responsibility very seriously, especially when it comes to security.</p>
-
-<p>In recent months, there has been a marked increase in the number of security reports to <a href="https://github.com/php/php-src">php-src</a>, due to the increased availability of AI tools and the ease with which these reports can be generated. Some of these reports are not valid security issues or are basic duplicates of previously filed reports. But even so, every one of these reports must be triaged and validated, then if deemed valid, they must be classified, fixed, reviewed, and merged. There is a very small team that currently handles these reports, and it is becoming more difficult to not only keep up with the influx, but to address issues that already exist.</p>
-
-<p><img src="/assets/post-images/2026/alexandre-daubois/alexandre-daubois.jpg" width="300" alt="photo of alexandre daubois giving a talk" class="mb-4 sm:mr-4 sm:float-left"/>As a result, we are thrilled to add <a href="https://www.linkedin.com/in/alexandre-daubois/?locale=en">Alexandre Daubois</a> to our team of contracted developers, focused on security. Alexandre will be spending a few hours a week helping with triage and the handling and fixing of incoming security reports.</p>
-
-<p>As the current CTO of <a href="https://Les-Tilleuls.coop">Les-Tilleuls.coop</a>, Alexandre brings a wealth of experience in addressing and fixing security issues. He has deep knowledge of Symfony, FrankenPHP, PHP core, and Scrutineer, and has already been instrumental in implementing recommendations from The PHP Foundation’s Ecosystem Security Team. We are confident that his contributions will make a huge impact in our ability to process incoming reports and effectively harden the PHP language.</p>
-
-<p>Please join us in welcoming Alexandre to The PHP Foundation team!</p>
 ]]></content>
         </entry>
     </feed>
