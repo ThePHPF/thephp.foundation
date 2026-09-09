@@ -321,8 +321,8 @@ class Team
             ],
             'daniel-scherzer' => [
                 'name' => 'Daniel Scherzer',
-                'image' => 'https://avatars.githubusercontent.com/u/6905297?v=4',
-                'job' => 'Ecosystem Security Team',
+                'image' => 'https://avatars.githubusercontent.com/u/179652704?v=4',
+                'job' => 'Core Developer',
                 'github' => 'https://github.com/DanielEScherzer',
                 'linkedin' => 'https://www.linkedin.com/in/daniel-e-scherzer/',
                 'url' => 'https://scherzer.dev/',
