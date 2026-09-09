@@ -319,6 +319,14 @@ class Team
                 'mastodon' => 'https://phpc.social/@brendt',
                 'twitter' => 'https://x.com/brendt_gd',
             ],
+            'daniel-scherzer' => [
+                'name' => 'Daniel Scherzer',
+                'image' => 'https://avatars.githubusercontent.com/u/6905297?v=4',
+                'job' => 'Ecosystem Security Team',
+                'github' => 'https://github.com/DanielEScherzer',
+                'linkedin' => 'https://www.linkedin.com/in/daniel-e-scherzer/',
+                'url' => 'https://scherzer.dev/',
+            ],
             'the-php-foundation' => [
                 'name' => 'The PHP Foundation',
                 'image' => '/assets/icons/php_foundation.svg',
