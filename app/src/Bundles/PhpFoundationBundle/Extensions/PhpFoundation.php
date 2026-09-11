@@ -102,13 +102,14 @@ class PhpFoundation extends AbstractExtension
                     'website' => 'https://chstudio.fr/',
                     'image' => '/assets/sponsors/chstudio.png',
                 ],
+                [
+                    'name' => 'TYPO3',
+                    'website' => 'https://typo3.com/',
+                    'image' => '/assets/sponsors/TYPO3-Logo-rgb.png',
+                ],
             ],
             'Gold' => [
-                [
-                    'name' => 'Laravel',
-                    'website' => 'https://laravel.com/',
-                    'image' => '/assets/sponsors/laravel-logo.svg',
-                ],
+                
                 [
                     'name' => 'GoDaddy.com',
                     'website' => 'https://www.godaddy.com/',
@@ -136,8 +137,17 @@ class PhpFoundation extends AbstractExtension
                     'website' => 'https://www.sovereign.tech/',
                     'image' => '/assets/sponsors/STA-Logo-Default-Black-RGB.svg',
                 ],
+                [
+                    'name' => 'Alpha-Omega',
+                    'website' => 'https://alpha-omega.dev/',
+                    'image' => '/assets/sponsors/a-o-logo.svg',
+                ],
             ],
             'Past' => [
+                [
+                    'name' => 'Laravel',
+                    'website' => 'https://laravel.com/',
+                ],
                 [
                     'name' => 'Livesport s.r.o.',
                     'website' => 'https://www.livesport.eu/',
