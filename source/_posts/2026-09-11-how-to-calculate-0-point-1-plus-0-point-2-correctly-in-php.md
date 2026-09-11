@@ -6,8 +6,10 @@ tags:
     - stories
 author:
   - weilin-du
-published_at: 26 August 2026
+published_at: 11 September 2026
 ---
+_The PHP Foundation thanks guest author Weilin Du for this post!_
+___
 
 Quick quiz before you read:
 
