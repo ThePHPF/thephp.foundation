@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-09-11T13:50:39+00:00</updated><entry><author><name>Weilin Du</name><uri>https://lamentxu.top/</uri></author><title type="html"><![CDATA[How to Calculate 0.1 Plus 0.2 Correctly in PHP?]]></title><content type="html"><![CDATA[<p><em>The PHP Foundation thanks guest author Weilin Du for this post!</em></p>
+
+<hr />
+
+<p>Quick quiz before you read:</p>
+
+<pre><code class="php">&lt;?php
+var_dump(0.1 + 0.2 === 0.3);
+</code></pre>
+
+<p><a href="https://3v4l.org/Qimvu">This returns false</a>. Now, as developers who proudly know <a href="https://en.wikipedia.org/wiki/IEEE_754">IEEE's floating rules</a>, many of you may take a sip of your coffee and say: Hey, that's not news anymore. We all know this classic case that warns generations of junior developers that calculating directly with floats might cause bugs.</p>
+
+<p>However, let's see this case here (64-bit):</p>
+
+<pre><code class="php">&lt;?php
+var_dump((9223372036854775808 - 1) === 9223372036854775807);
+</code></pre>
+
+<p>Well, obviously this is an integer calculation. This is surely not affected by any strange floating-point behavior and should return true. We don't need to consider using any high-precision math extensions (BCMath, GMP) here, right?</p>
+
+<p>Right?</p>
+
+<h1 id="how-php-floats-work">How PHP floats work</h1>
+
+<p>PHP's <code>float</code> type is platform-dependent, but it normally uses the IEEE 754 binary64 format which has a sign, an exponent and 53 bits of binary precision. The <a href="https://www.php.net/manual/en/language.types.float.php">PHP manual</a> describes the practical result as roughly 14 decimal digits of precision and a maximum relative rounding error on the order of <code>1.11e-16</code>.</p>
+
+<p>The important word is <strong>binary</strong>. A float represents a finite sum of powers of two. Fractions such as <code>0.5</code> (<code>1/2</code>) and <code>0.125</code> (<code>1/8</code>) have finite binary representations, so they can be stored exactly. <code>0.1</code> (<code>1/10</code>) cannot: its binary representation repeats forever, just as <code>1/3</code> repeats forever in decimal.</p>
+
+<p>PHP therefore stores the nearest representable binary value. We can make those approximations visible by printing enough digits:</p>
+
+<pre><code class="php">&lt;?php
+printf("%.17g\n", 0.1);         // 0.10000000000000001
+printf("%.17g\n", 0.2);         // 0.20000000000000001
+printf("%.17g\n", 0.1 + 0.2);   // 0.30000000000000004
+</code></pre>
+
+<h1 id="where-precision-gets-lost">Where precision gets lost</h1>
+
+<h2 id="playing-with-floats">Playing with floats</h2>
+
+<p>Both sides of the original comparison are floats, but they arrive at different nearby binary values:</p>
+
+<pre><code class="php">&lt;?php
+$sum = 0.1 + 0.2; // float(0.30000000000000004)
+
+var_dump($sum === 0.3);              // false
+var_dump(abs($sum - 0.3) &lt; 1e-12);   // true
+</code></pre>
+
+<h2 id="playing-with-big-integers">Playing with big integers</h2>
+
+<p>PHP integers are signed and platform-dependent. The maximum value of an integer is given by <a href="https://www.php.net/manual/en/reserved.constants.php#constant.php-int-max"><code>PHP_INT_MAX</code></a>.</p>
+
+<p>On a 64-bit build, their range normally ends at <code>9223372036854775807</code>. According to the manual's <a href="https://www.php.net/manual/en/language.types.integer.php#language.types.integer.overflow">integer overflow rules</a>, a literal or operation outside the integer range becomes a float:</p>
+
+<pre><code class="php">&lt;?php
+var_dump(PHP_INT_MAX);       // int(9223372036854775807)
+var_dump(PHP_INT_MAX + 1);   // float(9.223372036854776E+18)
+</code></pre>
+
+<p>Bingo! A binary64 float has enough range to hold a number of this magnitude, but not enough precision to distinguish every integer around it. So, let's go back to the example at the beginning.</p>
+
+<pre><code class="php">&lt;?php
+var_dump(((PHP_INT_MAX + 1) - 1) === PHP_INT_MAX);           // false
+var_dump((9223372036854775808 - 1) === 9223372036854775807); // false (64-bit)
+</code></pre>
+
+<p>Once an integer has overflowed into a float, converting it back cannot recover the lost low-order digits.</p>
+
+<h1 id="how-to-calculate-floats-in-php-correctly">How to calculate floats in PHP correctly</h1>
+
+<p>Fine fine fine, floats are strange, many may say. But, is there a way in PHP to do those calculations correctly? Surely yes!</p>
+
+<h2 id="working-safely-with-native-floats">Working safely with native floats</h2>
+
+<p>Floats are compact, fast, and well suited to approximate quantities. Using them correctly means accepting that their last digits are not exact. Here are some recommendations to work with PHP's native floats correctly:</p>
+
+<h3 id="do-not-blindly-cast-floats-to-integers%21">Do not blindly cast floats to integers!</h3>
+
+<p>Quiz time again! What does the following code output?</p>
+
+<pre><code class="php">&lt;?php
+
+$value = 0.58 * 100;
+
+echo $value, "\n";
+var_dump(intval($value));
+var_dump((int) $value);
+</code></pre>
+
+<p>The output value is:</p>
+
+<pre><code>58
+int(57)
+int(57)
+</code></pre>
+
+<p>Interesting, isn't it? <code>intval()</code> and an <code>(int)</code> cast do not round to the nearest integer. They discard the fractional part by rounding towards zero. If this particular calculation is supposed to produce the nearest whole number, calling <a href="https://www.php.net/manual/en/function.round.php"><code>round()</code></a> first gives the expected result:</p>
+
+<pre><code class="php">&lt;?php
+$value = 0.58 * 100;
+$result = (int) round($value);
+
+var_dump($result); // int(58)
+</code></pre>
+
+<p><em>So be careful when casting a float to an integer.</em></p>
+
+<p>One may ask: wait, why does <code>echo $value, "\n";</code> return <code>58</code> in this case? That leads to the second question:</p>
+
+<h3 id="the-ini-setting-%60precision%60-does-not-fix-the-calculation">The INI setting <code>precision</code> does NOT fix the calculation</h3>
+
+<pre><code class="php">&lt;?php
+ini_set('precision', '14'); // 14 is the default value.
+
+$value = 0.58 * 100;
+
+echo $value, "\n";        // 58
+var_dump(intval($value)); // int(57)
+</code></pre>
+
+<p>Why can the same value, displayed as <code>58</code> by echo, be converted to <code>57</code> here? Printing the value with <code>echo</code> uses the configured <code>precision</code> that "hides" the final digits. Integer conversion does not use that rounded text obviously. It reads the stored float directly, and the stored value is slightly smaller than <code>58</code>.</p>
+
+<p>The <a href="https://www.php.net/manual/en/ini.core.php#ini.precision"><code>precision</code> php.ini directive</a> only controls how many digits are used when a float is converted to a string. It does not change the value in memory or the arithmetic performed by the processor:</p>
+
+<pre><code class="php">&lt;?php
+$sum = 0.1 + 0.2;
+
+ini_set('precision', '17');
+echo $sum, "\n"; // 0.30000000000000004
+
+ini_set('precision', '14');
+echo $sum, "\n"; // 0.3
+
+var_dump($sum === 0.3); // bool(false)
+</code></pre>
+
+<p>Both <code>echo</code> statements read the same float. One representation hides the final digits and the other reveals them, but neither changes the result of the strict comparison.</p>
+
+<p>PHP also has a separate <code>serialize_precision</code> directive. Despite its name, it controls the textual representation of floats produced not only by <code>serialize()</code>, but also by functions such as <code>json_encode()</code> and <code>var_dump()</code>. It does not affect the arithmetic that produced them. <em>They are NOT math features.</em></p>
+
+<h3 id="comparing-floats-for-equality-based-on-tolerance">Comparing floats for equality based on tolerance</h3>
+
+<p>When approximate values are appropriate, the PHP manual recommends comparing them using an acceptable error bound instead of direct equality. The simple check shown earlier works when all values have a similar and known scale:</p>
+
+<pre><code class="php">&lt;?php
+$actual = 0.1 + 0.2;
+$expected = 0.3;
+
+var_dump(abs($actual - $expected) &lt; 1e-12); // bool(true)
+</code></pre>
+
+<p>The tolerance must come from the domain. <code>1e-12</code> is suitable for this small demo, but it is certainly not a magic value that fits every calculation.</p>
+
+<p><a href="https://www.php.net/manual/en/reserved.constants.php#constant.php-float-epsilon"><code>PHP_FLOAT_EPSILON</code></a> describes the spacing between representable floats around <code>1.0</code>; it is not automatically the right tolerance for every magnitude or every application. See the manual's guidance on <a href="https://www.php.net/manual/en/language.types.float.php#language.types.float.comparison">comparing floats</a> for the basic epsilon approach.</p>
+
+<h3 id="exact-fixed-scale-arithmetic-with-integers">Exact fixed-scale arithmetic with integers</h3>
+
+<p>When a value has a fixed smallest unit, storing that unit as an integer avoids binary fractions completely. For example, money is often stored as cents:</p>
+
+<pre><code class="php">&lt;?php
+$unitPriceInCents = 58;
+$quantity = 3;
+$totalInCents = $unitPriceInCents * $quantity;
+
+var_dump($totalInCents); // int(174)
+</code></pre>
+
+<p>The conversion into minor units must also be exact. Do not receive <code>0.58</code> as a float and assume <code>(int) ($value * 100)</code> is safe; that is the same conversion bug we saw above. Parse a validated decimal string or use decimal arithmetic at the input boundary.</p>
+
+<p>Native integers still have the <code>PHP_INT_MAX</code> limit. If the scaled values may exceed it, use an arbitrary-precision representation from the start.</p>
+
+<h2 id="core-extensions-can-help%21">Core extensions can help!</h2>
+
+<p>Yelk. I don't want to remember these rules nor convert all my floats to integers by changing the units for precision. Well, here come the core extensions that might help you.</p>
+
+<h2 id="playing-with-floats%3F-use-bcmath">Playing with floats? Use BCMath</h2>
+
+<p><a href="https://www.php.net/manual/en/book.bc.php">BCMath</a> performs arbitrary-precision decimal arithmetic. Its traditional functions receive and return strings, so the decimal input does not pass through a binary float first:</p>
+
+<pre><code class="php">&lt;?php
+$sum = bcadd('0.1', '0.2', 1);
+$scaled = bcmul('0.58', '100', 0);
+
+var_dump($sum);    // string(3) "0.3"
+var_dump($scaled); // string(2) "58"
+</code></pre>
+
+<p>PHP 8.4 and later also provide the immutable <a href="https://www.php.net/manual/en/class.bcmath-number.php"><code>BcMath\Number</code></a> object with support for ordinary arithmetic operators:</p>
+
+<pre><code class="php">&lt;?php
+use BcMath\Number;
+
+$sum = new Number('0.1') + new Number('0.2');
+
+echo $sum, "\n"; // 0.3
+</code></pre>
+
+<p>The quotation marks are important. Construct the calculation from decimal strings such as <code>'0.1'</code>, but NOT from floats that may have already lost precision. Converting an approximate float to a BCMath value later cannot reconstruct the original exact decimal input.</p>
+
+<p>BCMath is a good fit for prices, balances, rates, and other values where decimal places have an exact meaning.</p>
+
+<h2 id="playing-with-big-integers%3F-use-gmp">Playing with big integers? Use GMP</h2>
+
+<p>The <a href="https://www.php.net/manual/en/book.gmp.php">GMP extension</a> works with arbitrary-length integers. It is not enabled by default and requires the external GMP library. It can calculate the large-integer example from the beginning without overflowing into a float:</p>
+
+<pre><code class="php">&lt;?php
+$number = gmp_init('9223372036854775808', 10);
+$result = gmp_sub($number, '1');
+
+echo gmp_strval($result), "\n"; // 9223372036854775807
+</code></pre>
+
+<p>Likewise, large inputs must be strings. Writing <code>9223372036854775808</code> as a PHP numeric literal first would allow PHP to convert it to a float before GMP receives it, which is already too late.</p>
+
+<p>GMP represents integers rather than decimal fractions, so it cannot directly store <code>0.1</code>. It can handle fixed-scale values if the application represents every amount as an integer number of minor units. BCMath is usually clearer when the decimal scale itself is part of the data.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<h2 id="how-to-calculate-0.1-plus-0.2-correctly-in-php%3F">How to calculate 0.1 plus 0.2 correctly in PHP?</h2>
+
+<p>So, how should PHP calculate <code>0.1 + 0.2</code>? If the values are approximate, native float addition is already performing the expected binary calculation. Compare the result with an appropriate tolerance and format it for display. If the answer must be the exact decimal <code>0.3</code>, start with a decimal representation:</p>
+
+<pre><code class="php">&lt;?php
+echo bcadd('0.1', '0.2', 1); // 0.3
+</code></pre>
+
+<p>There is no <code>php.ini</code> switch that changes a binary float into an exact decimal. Correctness comes from choosing the representation before the calculation begins.</p>
+
+<h2 id="still-evolving">Still evolving</h2>
+
+<p>Both BCMath and GMP are in active development. For example, PHP 8.6 adds two new functions to GMP: <code>gmp_prev_prime</code> and <code>gmp_powm_sec</code>. Those are useful functions! The PHP language is moving fast to make every PHP developer's life easier.</p>
+
+<p>The PHP language is alive forever, with all the passion, work and pure love our dear contributors put in. Thank you for reading and using PHP!</p>
+]]></content><link href="https://thephp.foundation/blog/2026/09/11/how-to-calculate-0-point-1-plus-0-point-2-correctly-in-php/"/><id>https://thephp.foundation/blog/2026/09/11/how-to-calculate-0-point-1-plus-0-point-2-correctly-in-php/</id><updated>Fri, 11 Sep 2026 00:00:00 +0000</updated></entry></feed>

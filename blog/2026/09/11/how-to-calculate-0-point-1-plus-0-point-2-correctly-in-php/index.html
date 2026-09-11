@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Welcoming Daniel Scherzer to the Ecosystem Security Team &mdash; The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language</title>
-    <meta name="description" content="Daniel Scherzer is joining the Ecosystem Security Team">
+    <title>How to Calculate 0.1 Plus 0.2 Correctly in PHP? &mdash; The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language</title>
+    <meta name="description" content="A guide to correct floating-point and integer calculations in PHP">
     <meta charset="utf-8">
     <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,18 +19,18 @@
     <meta name="yandex-verification" content="6990192232fdf071" />
     <meta name="msvalidate.01" content="5D1EB82347E6BF271A01DCDBF7E59BED" />
 
-    <meta property="og:url" content="https://thephp.foundation/blog/2026/09/09/welcome-daniel-scherzer/">
+    <meta property="og:url" content="https://thephp.foundation/blog/2026/09/11/how-to-calculate-0-point-1-plus-0-point-2-correctly-in-php/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Welcoming Daniel Scherzer to the Ecosystem Security Team">
-    <meta property="og:description" content="Daniel Scherzer is joining the Ecosystem Security Team">
-    <meta property="og:image" content="https://thephp.foundation/assets/share/2026-09-09-welcome-daniel-scherzer.png">
+    <meta property="og:title" content="How to Calculate 0.1 Plus 0.2 Correctly in PHP?">
+    <meta property="og:description" content="A guide to correct floating-point and integer calculations in PHP">
+    <meta property="og:image" content="https://thephp.foundation/assets/share/2026-09-11-how-to-calculate-0-point-1-plus-0-point-2-correctly-in-php.png">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="https://thephp.foundation">
-    <meta property="twitter:url" content="https://thephp.foundation/blog/2026/09/09/welcome-daniel-scherzer/">
-    <meta name="twitter:title" content="Welcoming Daniel Scherzer to the Ecosystem Security Team">
-    <meta name="twitter:description" content="Daniel Scherzer is joining the Ecosystem Security Team">
-    <meta name="twitter:image" content="https://thephp.foundation/assets/share/2026-09-09-welcome-daniel-scherzer.png">
+    <meta property="twitter:url" content="https://thephp.foundation/blog/2026/09/11/how-to-calculate-0-point-1-plus-0-point-2-correctly-in-php/">
+    <meta name="twitter:title" content="How to Calculate 0.1 Plus 0.2 Correctly in PHP?">
+    <meta name="twitter:description" content="A guide to correct floating-point and integer calculations in PHP">
+    <meta name="twitter:image" content="https://thephp.foundation/assets/share/2026-09-11-how-to-calculate-0-point-1-plus-0-point-2-correctly-in-php.png">
 
     <link rel="apple-touch-startup-image" href="https://thephp.foundation/assets/icons/php_foundation.svg">
     <meta name="mobile-web-app-capable" content="yes">
@@ -157,62 +157,273 @@
 
 <div class="bg-white px-6 lg:px-8 my-16" itemscope itemtype="https://schema.org/Article">
     <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
-        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" itemprop="name">Welcoming Daniel Scherzer to the Ecosystem Security Team</h1>
+        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" itemprop="name">How to Calculate 0.1 Plus 0.2 Correctly in PHP?</h1>
 
         <div class="flex flex-col md:flex-row md:items-center gap-x-4 text-xs mt-2">
-            Published on <span itemprop="datePublished">Sep 09, 2026</span>
+            Published on <span itemprop="datePublished">Sep 11, 2026</span>
             <div>
                                 
                                 <span itemprop="publisher" itemscope itemtype="https://schema.org/Person"><a
-                        href="https://www.linkedin.com/in/elizabethn/" itemprop="url" class="no-underline" target="_blank"
-                        rel="noopener noreferrer"><span itemprop="name">Elizabeth Barron</span></a></span>                                            </div>
+                        href="https://lamentxu.top/" itemprop="url" class="no-underline" target="_blank"
+                        rel="noopener noreferrer"><span itemprop="name">Weilin Du</span></a></span>                                            </div>
         
                 <div class="flex gap-x-2 mt-2 md:mt-0">
-                        <a href="https://thephp.foundation/blog/tag/team"
+                        <a href="https://thephp.foundation/blog/tag/stories"
                class="rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
-                Team
-            </a>
-                        <a href="https://thephp.foundation/blog/tag/news"
-               class="rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
-                News
+                Stories
             </a>
                     </div>
                 </div>
 
         <div class="mt-6 text-xl leading-8" itemprop="text">
-            <p>When the Ecosystem Security Team was established with funding from the <a href="https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/">Alpha-Omega “Security Engineer in Residence” grant</a>, its mission was to improve the security of all aspects of the PHP ecosystem. Under the leadership of Volker Dusch, the team has <a href="https://thephp.foundation/blog/2026/06/23/one-month-of-ecosystem-security-engineering/">accomplished many things</a>.</p>
+            <p><em>The PHP Foundation thanks guest author Weilin Du for this post!</em></p>
 
-<p>As predicted, the increasing popularity of AI tools has brought an influx of security reports and PRs from the community to php-src itself. The triaging, reviewing, and handling of issues that do not fall within PHP’s definition of a <a href="https://github.com/php/php-src/blob/master/SECURITY.md">“security vulnerability,”</a> but that do improve the quality of PHP are tasks that are time-consuming for both php-src maintainers and for Volker and the team. Even if these are not security issues, they are useful hardening work and impactful nonetheless. These fixes also prevent future reports that would generate increased workload for the team.</p>
+<hr />
 
-<p><img src="/assets/post-images/2026/daniel-scherzer/daniel-scherzer.jpg" width="300" alt="headshot of daniel scherzer" class="mb-4 sm:mr-4 sm:float-left"/>To help manage this influx, the PHP Foundation is happy to add <a href="https://scherzer.dev/">Daniel Scherzer</a> to the Ecosystem Security Team on a short-term basis, as part of the aforementioned Alpha-Omega grant. Daniel will be working on this body of outstanding issues that harden PHP but that do not qualify as security vulnerabilities.</p>
+<p>Quick quiz before you read:</p>
 
-<p>Daniel got his start in open-source software by contributing to PHP, where he currently serves as the maintainer of the Reflection extension, as a release manager for PHP 8.5, and as the veteran release manager for PHP 8.6. Daniel will be a huge asset not only to the Ecosystem Security Team but also to the PHP community, through his work on hardening PHP itself.</p>
+<pre><code class="php">&lt;?php
+var_dump(0.1 + 0.2 === 0.3);
+</code></pre>
 
-<p>Welcome, Daniel!</p>
+<p><a href="https://3v4l.org/Qimvu">This returns false</a>. Now, as developers who proudly know <a href="https://en.wikipedia.org/wiki/IEEE_754">IEEE's floating rules</a>, many of you may take a sip of your coffee and say: Hey, that's not news anymore. We all know this classic case that warns generations of junior developers that calculating directly with floats might cause bugs.</p>
+
+<p>However, let's see this case here (64-bit):</p>
+
+<pre><code class="php">&lt;?php
+var_dump((9223372036854775808 - 1) === 9223372036854775807);
+</code></pre>
+
+<p>Well, obviously this is an integer calculation. This is surely not affected by any strange floating-point behavior and should return true. We don't need to consider using any high-precision math extensions (BCMath, GMP) here, right?</p>
+
+<p>Right?</p>
+
+<h1 id="how-php-floats-work">How PHP floats work</h1>
+
+<p>PHP's <code>float</code> type is platform-dependent, but it normally uses the IEEE 754 binary64 format which has a sign, an exponent and 53 bits of binary precision. The <a href="https://www.php.net/manual/en/language.types.float.php">PHP manual</a> describes the practical result as roughly 14 decimal digits of precision and a maximum relative rounding error on the order of <code>1.11e-16</code>.</p>
+
+<p>The important word is <strong>binary</strong>. A float represents a finite sum of powers of two. Fractions such as <code>0.5</code> (<code>1/2</code>) and <code>0.125</code> (<code>1/8</code>) have finite binary representations, so they can be stored exactly. <code>0.1</code> (<code>1/10</code>) cannot: its binary representation repeats forever, just as <code>1/3</code> repeats forever in decimal.</p>
+
+<p>PHP therefore stores the nearest representable binary value. We can make those approximations visible by printing enough digits:</p>
+
+<pre><code class="php">&lt;?php
+printf("%.17g\n", 0.1);         // 0.10000000000000001
+printf("%.17g\n", 0.2);         // 0.20000000000000001
+printf("%.17g\n", 0.1 + 0.2);   // 0.30000000000000004
+</code></pre>
+
+<h1 id="where-precision-gets-lost">Where precision gets lost</h1>
+
+<h2 id="playing-with-floats">Playing with floats</h2>
+
+<p>Both sides of the original comparison are floats, but they arrive at different nearby binary values:</p>
+
+<pre><code class="php">&lt;?php
+$sum = 0.1 + 0.2; // float(0.30000000000000004)
+
+var_dump($sum === 0.3);              // false
+var_dump(abs($sum - 0.3) &lt; 1e-12);   // true
+</code></pre>
+
+<h2 id="playing-with-big-integers">Playing with big integers</h2>
+
+<p>PHP integers are signed and platform-dependent. The maximum value of an integer is given by <a href="https://www.php.net/manual/en/reserved.constants.php#constant.php-int-max"><code>PHP_INT_MAX</code></a>.</p>
+
+<p>On a 64-bit build, their range normally ends at <code>9223372036854775807</code>. According to the manual's <a href="https://www.php.net/manual/en/language.types.integer.php#language.types.integer.overflow">integer overflow rules</a>, a literal or operation outside the integer range becomes a float:</p>
+
+<pre><code class="php">&lt;?php
+var_dump(PHP_INT_MAX);       // int(9223372036854775807)
+var_dump(PHP_INT_MAX + 1);   // float(9.223372036854776E+18)
+</code></pre>
+
+<p>Bingo! A binary64 float has enough range to hold a number of this magnitude, but not enough precision to distinguish every integer around it. So, let's go back to the example at the beginning.</p>
+
+<pre><code class="php">&lt;?php
+var_dump(((PHP_INT_MAX + 1) - 1) === PHP_INT_MAX);           // false
+var_dump((9223372036854775808 - 1) === 9223372036854775807); // false (64-bit)
+</code></pre>
+
+<p>Once an integer has overflowed into a float, converting it back cannot recover the lost low-order digits.</p>
+
+<h1 id="how-to-calculate-floats-in-php-correctly">How to calculate floats in PHP correctly</h1>
+
+<p>Fine fine fine, floats are strange, many may say. But, is there a way in PHP to do those calculations correctly? Surely yes!</p>
+
+<h2 id="working-safely-with-native-floats">Working safely with native floats</h2>
+
+<p>Floats are compact, fast, and well suited to approximate quantities. Using them correctly means accepting that their last digits are not exact. Here are some recommendations to work with PHP's native floats correctly:</p>
+
+<h3 id="do-not-blindly-cast-floats-to-integers%21">Do not blindly cast floats to integers!</h3>
+
+<p>Quiz time again! What does the following code output?</p>
+
+<pre><code class="php">&lt;?php
+
+$value = 0.58 * 100;
+
+echo $value, "\n";
+var_dump(intval($value));
+var_dump((int) $value);
+</code></pre>
+
+<p>The output value is:</p>
+
+<pre><code>58
+int(57)
+int(57)
+</code></pre>
+
+<p>Interesting, isn't it? <code>intval()</code> and an <code>(int)</code> cast do not round to the nearest integer. They discard the fractional part by rounding towards zero. If this particular calculation is supposed to produce the nearest whole number, calling <a href="https://www.php.net/manual/en/function.round.php"><code>round()</code></a> first gives the expected result:</p>
+
+<pre><code class="php">&lt;?php
+$value = 0.58 * 100;
+$result = (int) round($value);
+
+var_dump($result); // int(58)
+</code></pre>
+
+<p><em>So be careful when casting a float to an integer.</em></p>
+
+<p>One may ask: wait, why does <code>echo $value, "\n";</code> return <code>58</code> in this case? That leads to the second question:</p>
+
+<h3 id="the-ini-setting-%60precision%60-does-not-fix-the-calculation">The INI setting <code>precision</code> does NOT fix the calculation</h3>
+
+<pre><code class="php">&lt;?php
+ini_set('precision', '14'); // 14 is the default value.
+
+$value = 0.58 * 100;
+
+echo $value, "\n";        // 58
+var_dump(intval($value)); // int(57)
+</code></pre>
+
+<p>Why can the same value, displayed as <code>58</code> by echo, be converted to <code>57</code> here? Printing the value with <code>echo</code> uses the configured <code>precision</code> that "hides" the final digits. Integer conversion does not use that rounded text obviously. It reads the stored float directly, and the stored value is slightly smaller than <code>58</code>.</p>
+
+<p>The <a href="https://www.php.net/manual/en/ini.core.php#ini.precision"><code>precision</code> php.ini directive</a> only controls how many digits are used when a float is converted to a string. It does not change the value in memory or the arithmetic performed by the processor:</p>
+
+<pre><code class="php">&lt;?php
+$sum = 0.1 + 0.2;
+
+ini_set('precision', '17');
+echo $sum, "\n"; // 0.30000000000000004
+
+ini_set('precision', '14');
+echo $sum, "\n"; // 0.3
+
+var_dump($sum === 0.3); // bool(false)
+</code></pre>
+
+<p>Both <code>echo</code> statements read the same float. One representation hides the final digits and the other reveals them, but neither changes the result of the strict comparison.</p>
+
+<p>PHP also has a separate <code>serialize_precision</code> directive. Despite its name, it controls the textual representation of floats produced not only by <code>serialize()</code>, but also by functions such as <code>json_encode()</code> and <code>var_dump()</code>. It does not affect the arithmetic that produced them. <em>They are NOT math features.</em></p>
+
+<h3 id="comparing-floats-for-equality-based-on-tolerance">Comparing floats for equality based on tolerance</h3>
+
+<p>When approximate values are appropriate, the PHP manual recommends comparing them using an acceptable error bound instead of direct equality. The simple check shown earlier works when all values have a similar and known scale:</p>
+
+<pre><code class="php">&lt;?php
+$actual = 0.1 + 0.2;
+$expected = 0.3;
+
+var_dump(abs($actual - $expected) &lt; 1e-12); // bool(true)
+</code></pre>
+
+<p>The tolerance must come from the domain. <code>1e-12</code> is suitable for this small demo, but it is certainly not a magic value that fits every calculation.</p>
+
+<p><a href="https://www.php.net/manual/en/reserved.constants.php#constant.php-float-epsilon"><code>PHP_FLOAT_EPSILON</code></a> describes the spacing between representable floats around <code>1.0</code>; it is not automatically the right tolerance for every magnitude or every application. See the manual's guidance on <a href="https://www.php.net/manual/en/language.types.float.php#language.types.float.comparison">comparing floats</a> for the basic epsilon approach.</p>
+
+<h3 id="exact-fixed-scale-arithmetic-with-integers">Exact fixed-scale arithmetic with integers</h3>
+
+<p>When a value has a fixed smallest unit, storing that unit as an integer avoids binary fractions completely. For example, money is often stored as cents:</p>
+
+<pre><code class="php">&lt;?php
+$unitPriceInCents = 58;
+$quantity = 3;
+$totalInCents = $unitPriceInCents * $quantity;
+
+var_dump($totalInCents); // int(174)
+</code></pre>
+
+<p>The conversion into minor units must also be exact. Do not receive <code>0.58</code> as a float and assume <code>(int) ($value * 100)</code> is safe; that is the same conversion bug we saw above. Parse a validated decimal string or use decimal arithmetic at the input boundary.</p>
+
+<p>Native integers still have the <code>PHP_INT_MAX</code> limit. If the scaled values may exceed it, use an arbitrary-precision representation from the start.</p>
+
+<h2 id="core-extensions-can-help%21">Core extensions can help!</h2>
+
+<p>Yelk. I don't want to remember these rules nor convert all my floats to integers by changing the units for precision. Well, here come the core extensions that might help you.</p>
+
+<h2 id="playing-with-floats%3F-use-bcmath">Playing with floats? Use BCMath</h2>
+
+<p><a href="https://www.php.net/manual/en/book.bc.php">BCMath</a> performs arbitrary-precision decimal arithmetic. Its traditional functions receive and return strings, so the decimal input does not pass through a binary float first:</p>
+
+<pre><code class="php">&lt;?php
+$sum = bcadd('0.1', '0.2', 1);
+$scaled = bcmul('0.58', '100', 0);
+
+var_dump($sum);    // string(3) "0.3"
+var_dump($scaled); // string(2) "58"
+</code></pre>
+
+<p>PHP 8.4 and later also provide the immutable <a href="https://www.php.net/manual/en/class.bcmath-number.php"><code>BcMath\Number</code></a> object with support for ordinary arithmetic operators:</p>
+
+<pre><code class="php">&lt;?php
+use BcMath\Number;
+
+$sum = new Number('0.1') + new Number('0.2');
+
+echo $sum, "\n"; // 0.3
+</code></pre>
+
+<p>The quotation marks are important. Construct the calculation from decimal strings such as <code>'0.1'</code>, but NOT from floats that may have already lost precision. Converting an approximate float to a BCMath value later cannot reconstruct the original exact decimal input.</p>
+
+<p>BCMath is a good fit for prices, balances, rates, and other values where decimal places have an exact meaning.</p>
+
+<h2 id="playing-with-big-integers%3F-use-gmp">Playing with big integers? Use GMP</h2>
+
+<p>The <a href="https://www.php.net/manual/en/book.gmp.php">GMP extension</a> works with arbitrary-length integers. It is not enabled by default and requires the external GMP library. It can calculate the large-integer example from the beginning without overflowing into a float:</p>
+
+<pre><code class="php">&lt;?php
+$number = gmp_init('9223372036854775808', 10);
+$result = gmp_sub($number, '1');
+
+echo gmp_strval($result), "\n"; // 9223372036854775807
+</code></pre>
+
+<p>Likewise, large inputs must be strings. Writing <code>9223372036854775808</code> as a PHP numeric literal first would allow PHP to convert it to a float before GMP receives it, which is already too late.</p>
+
+<p>GMP represents integers rather than decimal fractions, so it cannot directly store <code>0.1</code>. It can handle fixed-scale values if the application represents every amount as an integer number of minor units. BCMath is usually clearer when the decimal scale itself is part of the data.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<h2 id="how-to-calculate-0.1-plus-0.2-correctly-in-php%3F">How to calculate 0.1 plus 0.2 correctly in PHP?</h2>
+
+<p>So, how should PHP calculate <code>0.1 + 0.2</code>? If the values are approximate, native float addition is already performing the expected binary calculation. Compare the result with an appropriate tolerance and format it for display. If the answer must be the exact decimal <code>0.3</code>, start with a decimal representation:</p>
+
+<pre><code class="php">&lt;?php
+echo bcadd('0.1', '0.2', 1); // 0.3
+</code></pre>
+
+<p>There is no <code>php.ini</code> switch that changes a binary float into an exact decimal. Correctness comes from choosing the representation before the calculation begins.</p>
+
+<h2 id="still-evolving">Still evolving</h2>
+
+<p>Both BCMath and GMP are in active development. For example, PHP 8.6 adds two new functions to GMP: <code>gmp_prev_prime</code> and <code>gmp_powm_sec</code>. Those are useful functions! The PHP language is moving fast to make every PHP developer's life easier.</p>
+
+<p>The PHP language is alive forever, with all the passion, work and pure love our dear contributors put in. Thank you for reading and using PHP!</p>
 
         </div>
 
         <ul role="list" class="border-t pt-5 my-5 divide-y divide-gray-200 xl:col-span-3">
                                                 <li class="flex flex-col gap-10 py-12 first:pt-0 last:pb-0 sm:flex-row">
-                <img src="/assets/team/elizabeth_barron.jpeg" alt="Elizabeth Barron"
+                <img src="https://avatars.githubusercontent.com/u/108666168?v=4" alt="Weilin Du"
                      class="w-16 h-16 rounded-full lg:w-20 lg:h-20"/>
                 <div class="max-w-xl flex-auto leading-6 space-y-1">
-                    <div class="text-lg/8 font-semibold tracking-tight text-gray-900">Elizabeth Barron</div>
-                                        <div class="text-base/7 text-[#7f52ff]">Executive Director</div>
+                    <div class="text-lg/8 font-semibold tracking-tight text-gray-900">Weilin Du</div>
+                                        <div class="text-base/7 text-[#7f52ff]">PHP Core Developer</div>
                                         <ul class="flex space-x-4 list-none p-0 m-0">
-                                                <li>
-                            <a href="https://www.linkedin.com/in/elizabethn"
-                               class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
-                               target="_blank" itemprop="url">
-                                <span class="sr-only">LinkedIn</span>
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                                </svg>
-                            </a>
-                        </li>
                         
                                                 <li>
-                            <a href="https://fosstodon.org/@elizabeth"
+                            <a href="https://phpc.social/@LamentXU"
                                class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
                                target="_blank" itemprop="url">
                                 <span class="sr-only">Mastodon</span>
@@ -223,6 +434,17 @@
                         </li>
                         
                         
+                                                <li>
+                            <a href="https://github.com/LamentXU123"
+                               class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
+                               target="_blank" itemprop="url">
+                                <span class="sr-only">GitHub</span>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"
+                                     aria-hidden="true">
+                                    <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
+                                </svg>
+                            </a>
+                        </li>
                                             </ul>
                 </div>
             </li>
@@ -233,7 +455,7 @@
     class="thread-container"
     data-reddit-thread=""
     data-reddit-search="PHP"
-    data-reddit-suggest-title="Welcoming Daniel Scherzer to the Ecosystem Security Team"
+    data-reddit-suggest-title="How to Calculate 0.1 Plus 0.2 Correctly in PHP?"
     data-reddit-max-depth="10"
     data-reddit-show-content="false"
     data-reddit-show-controls="true"
@@ -246,21 +468,16 @@
 
         <div class="border-t pt-5 my-5">
                         <nav class="flex flex-row justify-between article -mx-2 mb-5">
-                                <a href="https://thephp.foundation/blog/2026/09/02/digital-sovereignty-is-written-in-php/"
+                                <a href="https://thephp.foundation/blog/2026/09/09/welcome-daniel-scherzer/"
                    class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[#7f52ff] transition-all no-underline">
                     <div class="mb-1 text-sm text-gray-600 font-medium">Previous</div>
-                    <div class="font-bold text-blue-500">Digital Sovereignty Is Written in PHP</div>
+                    <div class="font-bold text-blue-500">Welcoming Daniel Scherzer to the Ecosystem Security Team</div>
                 </a>
                 
-                                <a href="https://thephp.foundation/blog/2026/09/11/how-to-calculate-0-point-1-plus-0-point-2-correctly-in-php/"
-                   class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[rgba(127,82,255,.8)] transition-all no-underline">
-                    <div class="mb-1 text-sm text-gray-600 font-medium">Next</div>
-                    <div class="font-bold text-blue-500">How to Calculate 0.1 Plus 0.2 Correctly in PHP?</div>
-                </a>
                             </nav>
             
             <div>
-                <a href="https://github.com/ThePHPF/thephp.foundation/edit/main/source/_posts/2026-09-09-welcome-daniel-scherzer.md"
+                <a href="https://github.com/ThePHPF/thephp.foundation/edit/main/source/_posts/2026-09-11-how-to-calculate-0-point-1-plus-0-point-2-correctly-in-php.md"
                    class="nav-org" rel="noopener noreferrer" target="_blank">Edit this page on GitHub</a>
             </div>
         </div>
