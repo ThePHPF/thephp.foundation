@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-09-27T18:57:40+00:00</updated><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Integrating Community Feedback into Foundation Strategy Part 1]]></title><content type="html"><![CDATA[<h2 id="integrating-community-input-into-foundation-strategy">Integrating Community Input Into Foundation Strategy</h2>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-09-28T19:14:24+00:00</updated><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Kicking Off the Community Events Coalition Special Interest Group]]></title><content type="html"><![CDATA[<p>Community events are the lifeblood of the PHP ecosystem. They're where people come to learn from each other, meet new people, expand their professional networks, build things together, strengthen friendships, sharpen their public speaking skills, and experience the power of belonging to a community. Most importantly, <strong>community events are where we build trust with each other</strong>.</p>
+
+<p>Trust has never been more important than it is today. It's always been a challenge in our industry, because so much of our work is done with people we've never met in person. Trust takes a long time to build, and it's the most valuable commodity we have. Without trust, there is no collaboration, and there is no open source. AI may make us faster or more productive at writing code, but it also makes it harder to trust the person (or non-person) on the other end of that username. In that way, AI actually slows us down. As AI adoption grows, <strong>trusting each other will only become more challenging</strong>.</p>
+
+<p>We counteract this growing trust problem through events, whether in person, hybrid, or online. We cannot allow these events to fade away. If we do, it will be the downfall of our industry.</p>
+
+<p>That's why I'm happy to announce that we're launching our third Special Interest Group, in line with the <a href="https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/">Strategy Document</a> we published earlier this year. Meet the <strong>Community Events Coalition SIG</strong>, a group dedicated to connecting community event leaders and organizers so they can tackle their shared challenges together.</p>
+
+<p>During my listening tour in March and April, I spoke with many event organizers, and several themes came up again and again. Challenges facing our user group leaders, meetup hosts, and conference organizers include:</p>
+
+<ul>
+<li>Decreasing attendance</li>
+<li>Rising costs for things like food and venue space</li>
+<li>Lack of sponsors</li>
+<li>Difficulty finding speakers</li>
+</ul>
+
+<p>This isn't an exhaustive list, but the group's goal is to find ways to solve these challenges together and share lessons learned across communities. We also see this group as a resource for anyone interested in starting a local user group or conference in their area.</p>
+
+<p>The kick-off meeting for this SIG will be on <strong>Wednesday, October 28, 2026, at 13:00 UTC</strong>. As with our other SIGs, if you're interested in joining, please complete this <a href="https://docs.google.com/forms/d/e/1FAIpQLSebw6h2OE-yvkUUkZsvPmYaix8WxHgmeFsZB16mi83-cAKFFA/viewform?usp=header">SIG Interest Form</a>, and we'll make sure you have the details before the meeting.</p>
+
+<p>Please join us if you're a user group leader, meetup host, or conference organizer, or if you simply want to help keep this crucial part of our ecosystem thriving.</p>
+]]></content><link href="https://thephp.foundation/blog/2026/09/28/kicking-off-the-community-events-coalition-sig/"/><id>https://thephp.foundation/blog/2026/09/28/kicking-off-the-community-events-coalition-sig/</id><updated>Mon, 28 Sep 2026 00:00:00 +0000</updated></entry><entry><author><name>Elizabeth Barron</name><uri>https://www.linkedin.com/in/elizabethn/</uri></author><title type="html"><![CDATA[Integrating Community Feedback into Foundation Strategy Part 1]]></title><content type="html"><![CDATA[<h2 id="integrating-community-input-into-foundation-strategy">Integrating Community Input Into Foundation Strategy</h2>
 
 <h3 id="part-1%3A-feedback-from-the-community">Part 1: Feedback from the Community</h3>
 

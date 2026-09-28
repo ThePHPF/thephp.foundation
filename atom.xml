@@ -3,9 +3,38 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2026-09-27T18:57:39+00:00</updated>
+    <updated>2026-09-28T19:14:24+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Kicking Off the Community Events Coalition Special Interest Group]]></title>
+            <link href="https://thephp.foundation/blog/2026/09/28/kicking-off-the-community-events-coalition-sig/"/>
+            <updated>2026-09-28T00:00:00+00:00</updated>
+            <id>https://thephp.foundation/blog/2026/09/28/kicking-off-the-community-events-coalition-sig/</id>
+            <content type="html"><![CDATA[<p>Community events are the lifeblood of the PHP ecosystem. They're where people come to learn from each other, meet new people, expand their professional networks, build things together, strengthen friendships, sharpen their public speaking skills, and experience the power of belonging to a community. Most importantly, <strong>community events are where we build trust with each other</strong>.</p>
+
+<p>Trust has never been more important than it is today. It's always been a challenge in our industry, because so much of our work is done with people we've never met in person. Trust takes a long time to build, and it's the most valuable commodity we have. Without trust, there is no collaboration, and there is no open source. AI may make us faster or more productive at writing code, but it also makes it harder to trust the person (or non-person) on the other end of that username. In that way, AI actually slows us down. As AI adoption grows, <strong>trusting each other will only become more challenging</strong>.</p>
+
+<p>We counteract this growing trust problem through events, whether in person, hybrid, or online. We cannot allow these events to fade away. If we do, it will be the downfall of our industry.</p>
+
+<p>That's why I'm happy to announce that we're launching our third Special Interest Group, in line with the <a href="https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/">Strategy Document</a> we published earlier this year. Meet the <strong>Community Events Coalition SIG</strong>, a group dedicated to connecting community event leaders and organizers so they can tackle their shared challenges together.</p>
+
+<p>During my listening tour in March and April, I spoke with many event organizers, and several themes came up again and again. Challenges facing our user group leaders, meetup hosts, and conference organizers include:</p>
+
+<ul>
+<li>Decreasing attendance</li>
+<li>Rising costs for things like food and venue space</li>
+<li>Lack of sponsors</li>
+<li>Difficulty finding speakers</li>
+</ul>
+
+<p>This isn't an exhaustive list, but the group's goal is to find ways to solve these challenges together and share lessons learned across communities. We also see this group as a resource for anyone interested in starting a local user group or conference in their area.</p>
+
+<p>The kick-off meeting for this SIG will be on <strong>Wednesday, October 28, 2026, at 13:00 UTC</strong>. As with our other SIGs, if you're interested in joining, please complete this <a href="https://docs.google.com/forms/d/e/1FAIpQLSebw6h2OE-yvkUUkZsvPmYaix8WxHgmeFsZB16mi83-cAKFFA/viewform?usp=header">SIG Interest Form</a>, and we'll make sure you have the details before the meeting.</p>
+
+<p>Please join us if you're a user group leader, meetup host, or conference organizer, or if you simply want to help keep this crucial part of our ecosystem thriving.</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[How to Calculate 0.1 Plus 0.2 Correctly in PHP?]]></title>
             <link href="https://thephp.foundation/blog/2026/09/11/how-to-calculate-0-point-1-plus-0-point-2-correctly-in-php/"/>
@@ -1378,31 +1407,6 @@ int(5)
 </blockquote>
 
 <p>You can find Anne mostly in Seattle, WA where mountains and dogs both fill their soul with a special kind of joy. Please join us in welcoming Anne to The PHP Foundation Governing Board!</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Kicking off the PHP Onboarding Initiative Special Interest Group]]></title>
-            <link href="https://thephp.foundation/blog/2026/08/03/kicking-off-the-php-onboarding-initiative/"/>
-            <updated>2026-08-03T00:00:00+00:00</updated>
-            <id>https://thephp.foundation/blog/2026/08/03/kicking-off-the-php-onboarding-initiative/</id>
-            <content type="html"><![CDATA[<p>One of the most common pieces of feedback we hear from the PHP community is that the newcomer experience could use some improvement, and that we may be losing new users because of it. This is something that we as a community can address, and it's why The PHP Foundation made it part of our <a href="https://thephp.foundation/blog/2026/06/11/integrating-community-feedback-into-foundation-strategy-part2/#3.-php-onboarding-initiative">strategy document</a> for the rest of 2026. Improving that experience matters a lot to us, because a better new user experience means more community growth and retention. We are launching the PHP Onboarding Initiative Special Interest Group to provide space for collaborative problem solving in this area.</p>
-
-<p>Some of the identified issues in the PHP newcomer experience include:</p>
-
-<ul>
-<li><strong>Where to begin:</strong> It is difficult for new PHP users to know where to start. There are many resources and tutorials available, but it is hard to know which ones are updated and accurate, and the sheer number of them is overwhelming. Building and helping people find resources that cater to their needs is something that would be helpful for newcomers.</li>
-<li><strong>Minding the gap:</strong> The <a href="http://php.net/docs">php.net Manual</a> is a fantastic resource, but it is more of a reference than an educational resource for beginners that are learning to code. There is a current gap between documentation for complete beginners and users who already grasp the basics and use the manual differently.</li>
-<li><strong>Limited presence in formal education:</strong> PHP is largely missing in universities and bootcamps. Although there are some places in the world where PHP (or a related framework/project) is taught, the presence of PHP is inconsistent. There won't be a "one-size-fits-all" approach to building more partnerships with educational institutions. But this is something that we can figure out together. (Also, this may overlap with the mission of the <a href="https://github.com/ThePHPF/SIG-ambassadors">PHP Ambassadors</a> Special Interest Group that has already launched.)</li>
-<li><strong>Finding your people:</strong> The onboarding experience differs greatly among newcomers, with some having connections to the community, and others fending for themselves. It would be ideal if we could provide a more consistent approach to bringing newcomers together and connecting them with the community.</li>
-<li><strong>Mentorship is hard to find:</strong> Although there have been previous attempts at mentorship programs, those have proven challenging to sustain. But <a href="https://www.linuxfoundation.org/hubfs/LF%20Research/LFX%20Mentorship%20in%20Open%20Source%20-%20Report.pdf?hsLang=en">research shows</a> that mentorship can make all the difference when it comes to retaining users and turning them into potential contributors and community members, especially when it comes to those from marginalized and underrepresented groups.</li>
-<li><strong>Installation process</strong> Ensuring that this process is as easy and straightforward as possible, and centering the experience of new users is something that we should continue to be mindful of. Because this will likely involve the php.net website, this is another potential overlap with the mission of the <a href="https://github.com/ThePHPF/SIG-ambassadors">Marketing Subgroup of the PHP Ambassadors</a> Special Interest Group.</li>
-</ul>
-
-<p>These problems are not new and they aren't easy to solve, but one thing about the PHP community that I personally love is its dedication to sharing knowledge with new learners and helping newcomers find their way. This sense of community and support for newcomers is why many of us are still here (including myself!). Wouldn't it be great if we could come together and create a better and more consistent experience for newcomers to PHP?</p>
-
-<p>If this is something that is of interest to you, we are hosting a kick-off meeting on <strong>Monday, August 24 at 13:00 UTC</strong>. To request an invite to this meeting, please register your interest using <a href="https://forms.gle/VNmijQm4gWjuDjnJA">this form</a>. Note: if you have already indicated your interest through this form, you do not need to submit it again.</p>
-
-<p>If you cannot attend this meeting, that's okay! You are welcome to join the #the-php-foundation channel in the <a href="https://discord.phpc.social/">#phpc Discord server</a> for access to this and the other Special Interest Group chats. We also have a <a href="https://github.com/ThePHPF/SIG-onboarding">GitHub repository</a> where you can connect asynchronously.</p>
 ]]></content>
         </entry>
     </feed>
