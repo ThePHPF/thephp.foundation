@@ -3,7 +3,7 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2026-09-29T20:00:08+00:00</updated>
+    <updated>2026-09-29T20:20:47+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
@@ -11,7 +11,7 @@
             <link href="https://thephp.foundation/blog/2026/09/29/meet-bunny-dot-net/"/>
             <updated>2026-09-29T00:00:00+00:00</updated>
             <id>https://thephp.foundation/blog/2026/09/29/meet-bunny-dot-net/</id>
-            <content type="html"><![CDATA[<p>Starting July 2026, <strong><a href="https://bunny.net">bunny.net</a></strong> joined the PHP Foundation as a <strong>Silver Sponsor</strong>, reinforcing its commitment to the open-source technologies that keep a huge share of the modern web online.</p>
+            <content type="html"><![CDATA[<p>Starting June 2026, <strong><a href="https://bunny.net">bunny.net</a></strong> joined the PHP Foundation as a <strong>Silver Sponsor</strong>, reinforcing its commitment to the open-source technologies that keep a huge share of the modern web online.</p>
 
 <p>bunny.net is a European web infrastructure platform with <strong>119 points of presence</strong> worldwide that brings together content delivery (DNS, CDN, video), security (WAF, DDoS and bot protection), and a developer platform (app containers, serverless functions, database and S3-compatible storage). In this way, bunny.net gives builders everything they need to build, secure, and deliver applications globally, with an EU sovereign foundation.</p>
 
