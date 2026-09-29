@@ -3,9 +3,46 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2026-09-28T19:14:24+00:00</updated>
+    <updated>2026-09-29T20:00:08+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Meet bunny.net: A PHP Foundation Sponsor supporting the language that powers the web it delivers]]></title>
+            <link href="https://thephp.foundation/blog/2026/09/29/meet-bunny-dot-net/"/>
+            <updated>2026-09-29T00:00:00+00:00</updated>
+            <id>https://thephp.foundation/blog/2026/09/29/meet-bunny-dot-net/</id>
+            <content type="html"><![CDATA[<p>Starting July 2026, <strong><a href="https://bunny.net">bunny.net</a></strong> joined the PHP Foundation as a <strong>Silver Sponsor</strong>, reinforcing its commitment to the open-source technologies that keep a huge share of the modern web online.</p>
+
+<p>bunny.net is a European web infrastructure platform with <strong>119 points of presence</strong> worldwide that brings together content delivery (DNS, CDN, video), security (WAF, DDoS and bot protection), and a developer platform (app containers, serverless functions, database and S3-compatible storage). In this way, bunny.net gives builders everything they need to build, secure, and deliver applications globally, with an EU sovereign foundation.</p>
+
+<h2 id="php%3A-at-the-core-of-what-bunny.net-delivers">PHP: at the core of what bunny.net delivers</h2>
+
+<p>A large share of the traffic bunny.net serves and secures every day is powered by PHP. From WordPress sites and eCommerce stores to custom applications and membership platforms, PHP sits behind a significant portion of the domains that terminate on bunny.net's edge. That is why support for the language runs through the platform:</p>
+
+<ul>
+<li><strong>WordPress</strong>: bunny.net maintains its own official WordPress plugin that integrates the majority of its products, making it easy for the millions of WordPress sites to make their sites fast and secure with the bunny.net platform.</li>
+<li><strong>Running PHP applications</strong>: Developers can deploy PHP apps directly on bunny.net using <strong>Magic Containers</strong>, with scaling across bunny.net's global network built in.</li>
+<li><strong>Security for PHP sites and apps</strong>: <strong>Bunny Shield</strong> protects PHP applications with DDoS mitigation, a Web Application Firewall, and bot protection.</li>
+<li><strong>Storage and data</strong>: <strong>Bunny Storage</strong> handles assets and backups, while <strong>Bunny Database</strong> provides SQLite on the edge for PHP workloads that need low-latency reads close to users.</li>
+<li><strong>Media</strong>: <strong>Bunny Stream</strong> takes care of video encoding, storage, and delivery for PHP-based course platforms, membership sites, and other media-heavy applications.</li>
+<li><strong>Global delivery</strong>: The <strong>Bunny CDN</strong> and <strong>DNS</strong> move PHP-generated pages, APIs, and assets closer to end users across all 119 PoPs.</li>
+</ul>
+
+<h2 id="giving-back-to-the-language-its-customers-rely-on">Giving back to the language its customers rely on</h2>
+
+<blockquote>
+  <p>"So much of the web we deliver and secure is built on PHP, so supporting the Foundation is a natural way to give back to a language our customers rely on every day."</p>
+  
+  <p><em>— Dino Kukic, Developer Growth Lead at bunny.net</em></p>
+</blockquote>
+
+<p>As a silver sponsor, bunny.net is putting tangible support behind the ongoing maintenance, security, and evolution of PHP. This helps ensure that the millions of applications running on it, including the ones flowing through bunny.net's network, have a strong foundation to build on for years to come.</p>
+
+<p>The PHP Foundation is grateful for bunny.net's support!</p>
+
+<p>Learn more about bunny.net: <a href="https://bunny.net">https://bunny.net</a></p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[Kicking Off the Community Events Coalition Special Interest Group]]></title>
             <link href="https://thephp.foundation/blog/2026/09/28/kicking-off-the-community-events-coalition-sig/"/>
@@ -1391,22 +1428,6 @@ int(5)
 </ul>
 
 <p>To be added to the mailing list where you will be kept up-to-date on all the PHP Ambassador news, register your interest using <a href="https://forms.gle/cAFDZ1gC22ajxx6VA">this form</a>. (Of course you can unsubscribe at any time, and we will still love you. We promise.)</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Anne McCarthy Joins The PHP Foundation Board]]></title>
-            <link href="https://thephp.foundation/blog/2026/08/04/anne-mccarthy-joins-the-board/"/>
-            <updated>2026-08-04T00:00:00+00:00</updated>
-            <id>https://thephp.foundation/blog/2026/08/04/anne-mccarthy-joins-the-board/</id>
-            <content type="html"><![CDATA[<p><img src="/assets/post-images/2026/anne-mccarthy/anne-mccarthy.jpg" width="300" alt="photo of anne mccarthy giving a presentation" class="mb-4 sm:mr-4 sm:float-left"/>The PHP Foundation Governing Board consists of a variety of folks from across the PHP ecosystem that share a vested interest in the success and sustainability of PHP. Representatives from the community, the core contribution team, and sponsors comprise this team to provide guidance and insight into the Foundation's objectives and initiatives. After a unanimous decision, we are incredibly pleased to be adding <a href="https://www.linkedin.com/in/anneguionmccarthy/">Anne McCarthy</a>, Architect and Open Source Director for Automattic, to our Board as a platinum sponsor representative.</p>
-
-<p>Anne brings 15 years of technical and open source experience, and has spent the last 12 years at Automattic, dedicated to improving the experience of the WordPress community of users and contributors alike. They bring a balanced mix of thoughtful empathy and deep technical knowledge and will be a tremendous asset to the Foundation moving forward.</p>
-
-<blockquote>
-  <p>Open source comes down to people trying, caring, and showing up to benefit the collective. This feels like an especially powerful act in today's world so it's a real honor to join the PHP Foundation Board to support those who have given so much to PHP and all the other projects built with it. -- Anne McCarthy</p>
-</blockquote>
-
-<p>You can find Anne mostly in Seattle, WA where mountains and dogs both fill their soul with a special kind of joy. Please join us in welcoming Anne to The PHP Foundation Governing Board!</p>
 ]]></content>
         </entry>
     </feed>
