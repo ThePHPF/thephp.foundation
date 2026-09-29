@@ -10,7 +10,7 @@ author:
 published_at: 29 September 2026
 ---
 
-Starting July 2026, **[bunny.net](https://bunny.net)** joined the PHP Foundation as a **Silver Sponsor**, reinforcing its commitment to the open-source technologies that keep a huge share of the modern web online.
+Starting June 2026, **[bunny.net](https://bunny.net)** joined the PHP Foundation as a **Silver Sponsor**, reinforcing its commitment to the open-source technologies that keep a huge share of the modern web online.
 
 bunny.net is a European web infrastructure platform with **119 points of presence** worldwide that brings together content delivery (DNS, CDN, video), security (WAF, DDoS and bot protection), and a developer platform (app containers, serverless functions, database and S3-compatible storage). In this way, bunny.net gives builders everything they need to build, secure, and deliver applications globally, with an EU sovereign foundation.
 
