@@ -11,7 +11,7 @@ published_at: 30 September 2026
 
 As we have done in past years, The PHP Foundation is opening applications for contractors for 2027. Foundation contractors are responsible for a variety of core development areas, and we are open to hearing your ideas. 
 
-The application form will be **open until October 20, 2026, end of day, Anywhere on Earth (AoE).**.
+The application form will be **open until October 20, 2026, end of day, Anywhere on Earth (AoE).**
 
 <p style="text-align: center;">
 <a href="https://forms.gle/91aUZ5YLqnezsViJ9" class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">Apply Now</a>
