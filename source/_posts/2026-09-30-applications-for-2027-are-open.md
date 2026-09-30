@@ -79,4 +79,3 @@ Submit your application now, and we will get back to you in the coming weeks. If
 <a href="https://forms.gle/91aUZ5YLqnezsViJ9" target="_blank" class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">Apply Now</a>
 </p>
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfuhe60oWeyeaUrv8ZX63JCQkxOj9VChIHXwDbjK7BM51Myzw/viewform?embedded=true" width="100%" height="1866" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
