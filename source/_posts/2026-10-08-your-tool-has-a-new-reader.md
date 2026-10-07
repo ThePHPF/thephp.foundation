@@ -7,7 +7,7 @@ tags:
     - SIGs
 author:
   - sebastian-bergmann
-published_at: 26 September 2026
+published_at: 8 October 2026
 ---
 
 Every PHP tool that prints to a terminal now has two readers, and most of us have only been writing for one of them.
