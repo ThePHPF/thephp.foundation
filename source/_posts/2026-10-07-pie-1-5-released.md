@@ -30,7 +30,7 @@ $ pie install \
   --select=redis=phpredis/phpredis
 ```
 
-This allows you to make concious and explicit decisions about which package to use for any missing extensions.
+This allows you to make conscious and explicit decisions about which package to use for any missing extensions.
 
 #### Upgrade all your PIE extensions
 ```bash
@@ -40,13 +40,13 @@ $ pie upgrade
 That's all it takes now to automatically upgrade all your PIE extensions, within the limits of the constraints you originally installed each extension with. For example:
 
 - you install `foo/bar:^1.1` using PIE and the latest version, 1.1.5, gets installed
-- the `foo/bar` extension later nreleases a new version 1.2.0
+- the `foo/bar` extension later releases a new version 1.2.0
 - you run `pie upgrade`, and `foo/bar` gets upgraded to 1.2.0, since that is within the original `^1.1` constraint.
-- subsequnetly, an all new `foo/bar` 2.0.0 is released
+- subsequently, an all new `foo/bar` 2.0.0 is released
 - when you run `pie upgrade`, `foo/bar` will *not* be upgraded, as 2.0.0 is not within the `^1.1` constraint.
 
 #### A huge update to the Attestation library
-For some time, PIE has used Sigstore framework to verify authenticity of PIE itself. The primary mechanism for this has been to invoke the `gh` CLI tooling, if available, and if not fall back to a basic foundational implementation of the Sigstore verification. After much work, we were able to implement the majority of the Sigstore conformance test suite, reaching 131 passed tests, 5 skipped (as the library is verification-only), and 4 expected failures. This was a huge undertaking, and we believe is the most comprehensive PHP implementation of the Sigstore verification suite. PIE can now take advantage of this more extensive verification when carrying out updates. Additionally, the library is no longer strictly coupled to GitHub's attestations and trusted root certificate, although both are included out of the box for convenience. This open source library is available for all under the BSD-3-Clause licence, on [github.com/ThePHPF/attestation](https://github.com/ThePHPF/attestation).
+For some time, PIE has used Sigstore framework to verify authenticity of PIE itself. The primary mechanism for this has been to invoke the `gh` CLI tooling, if available, and if not fall back to a basic foundational implementation of the Sigstore verification. After much work, we were able to implement the majority of the Sigstore conformance test suite, reaching 131 passed tests, 5 skipped (as the library is verification-only), and 4 expected failures. This was a huge undertaking, and we believe is the most comprehensive PHP implementation of the Sigstore verification suite. PIE can now take advantage of this more extensive verification when carrying out updates. Additionally, the library is no longer strictly coupled to GitHub's attestations and trusted root certificate, although both are included out of the box for convenience. This open source library is available for all under the BSD-3-Clause license, on [github.com/ThePHPF/attestation](https://github.com/ThePHPF/attestation).
 
 #### A summary of other new features...
  - The `--no-dev` option for `pie install` in a PHP project to skip dev extensions
