@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>2027 Applications for Contractors are Open &mdash; The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language</title>
-    <meta name="description" content="The PHP Foundation has opened the application period for new contractors for 2027.">
+    <title>PIE 1.5 Released &mdash; The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language</title>
+    <meta name="description" content="This is the release announcement for PIE 1.5">
     <meta charset="utf-8">
     <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,18 +19,18 @@
     <meta name="yandex-verification" content="6990192232fdf071" />
     <meta name="msvalidate.01" content="5D1EB82347E6BF271A01DCDBF7E59BED" />
 
-    <meta property="og:url" content="https://thephp.foundation/blog/2026/09/30/applications-for-2027-are-open/">
+    <meta property="og:url" content="https://thephp.foundation/blog/2026/10/07/pie-1-5-released/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="2027 Applications for Contractors are Open">
-    <meta property="og:description" content="The PHP Foundation has opened the application period for new contractors for 2027.">
-    <meta property="og:image" content="https://thephp.foundation/assets/share/2026-09-30-applications-for-2027-are-open.png">
+    <meta property="og:title" content="PIE 1.5 Released">
+    <meta property="og:description" content="This is the release announcement for PIE 1.5">
+    <meta property="og:image" content="https://thephp.foundation/assets/share/2026-10-07-pie-1-5-released.png">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="https://thephp.foundation">
-    <meta property="twitter:url" content="https://thephp.foundation/blog/2026/09/30/applications-for-2027-are-open/">
-    <meta name="twitter:title" content="2027 Applications for Contractors are Open">
-    <meta name="twitter:description" content="The PHP Foundation has opened the application period for new contractors for 2027.">
-    <meta name="twitter:image" content="https://thephp.foundation/assets/share/2026-09-30-applications-for-2027-are-open.png">
+    <meta property="twitter:url" content="https://thephp.foundation/blog/2026/10/07/pie-1-5-released/">
+    <meta name="twitter:title" content="PIE 1.5 Released">
+    <meta name="twitter:description" content="This is the release announcement for PIE 1.5">
+    <meta name="twitter:image" content="https://thephp.foundation/assets/share/2026-10-07-pie-1-5-released.png">
 
     <link rel="apple-touch-startup-image" href="https://thephp.foundation/assets/icons/php_foundation.svg">
     <meta name="mobile-web-app-capable" content="yes">
@@ -157,128 +157,95 @@
 
 <div class="bg-white px-6 lg:px-8 my-16" itemscope itemtype="https://schema.org/Article">
     <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
-        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" itemprop="name">2027 Applications for Contractors are Open</h1>
+        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" itemprop="name">PIE 1.5 Released</h1>
 
         <div class="flex flex-col md:flex-row md:items-center gap-x-4 text-xs mt-2">
-            Published on <span itemprop="datePublished">Sep 30, 2026</span>
+            Published on <span itemprop="datePublished">Oct 07, 2026</span>
             <div>
                                 
                                 <span itemprop="publisher" itemscope itemtype="https://schema.org/Person"><a
-                        href="https://www.linkedin.com/in/elizabethn/" itemprop="url" class="no-underline" target="_blank"
-                        rel="noopener noreferrer"><span itemprop="name">Elizabeth Barron</span></a></span>                                            </div>
+                        href="https://phpc.social/@asgrim" itemprop="url" class="no-underline" target="_blank"
+                        rel="noopener noreferrer"><span itemprop="name">James Titcumb</span></a></span>                                            </div>
         
                 <div class="flex gap-x-2 mt-2 md:mt-0">
                         <a href="https://thephp.foundation/blog/tag/news"
                class="rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
                 News
             </a>
+                        <a href="https://thephp.foundation/blog/tag/pie"
+               class="rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
+                Pie
+            </a>
                     </div>
                 </div>
 
         <div class="mt-6 text-xl leading-8" itemprop="text">
-            <p>As we have done in past years, The PHP Foundation is opening applications for contractors for 2027. Foundation contractors are responsible for a variety of core development areas, and we are open to hearing your ideas.</p>
+            <p>The PIE team is pleased to announce the release of the PHP Installer for Extensions 1.5 series, which has been in the works for around five months. There has been significant work gone into some internal improvements which has enabled us to deliver several long-awaited features for the tool. Lets dive into a few of these new features!</p>
 
-<p>The application form will be <strong>open until October 20, 2026, end of day, Anywhere on Earth (AoE).</strong></p>
+<h4 id="install-multiple-extensions">Install multiple extensions</h4>
 
-<p style="text-align: center;">
-<a href="https://forms.gle/91aUZ5YLqnezsViJ9" class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">Apply Now</a>
-</p>
+<p>You are now able to install multiple extensions at once, for example:</p>
 
-<h2 id="what-are-the-requirements%3F">What are the requirements?</h2>
+<pre><code class="bash">$ pie install php-amqp/php-amqp:^2.2 girgias/csv
+</code></pre>
 
-<p>Note: This is not a job for PHP developers or aspiring PHP developers. PHP is written in the C programming language, and as such, this role requires C and systems programming experience.</p>
+<p>This is helpful for setting up Docker images. Configure options may still be passed, and they will be automatically filtered off into the appropriate extension's <code>./configure</code> options.</p>
 
-<p>Ideally, you will have:</p>
+<h4 id="introduce-package-selections-with-%60--select%3D...%60-for-unattended-installs">Introduce package selections with <code>--select=...</code> for unattended installs</h4>
 
-<ul>
-<li>Pull requests or commits to php/php-src</li>
-<li>Experience writing PHP extensions</li>
-<li>Participation in the PHP mailing lists</li>
-<li>Contributions to other open-source projects</li>
-</ul>
+<p>When you're running <code>pie install</code> within a PHP project, in previous versions of PIE you could use <code>--allow-non-interactive-project-install</code> to automatically select packages for missing extensions. However, this approach was risky, as there are no guarantees which package a missing extension would actually resolve to. To eliminate this risk, you must now make explicit package selections in a non-interactive / unattended install:</p>
 
-<p>Because our fiscal host is Open Source Collective, you must also be legally eligible to receive funds from a US-based entity and be willing to provide personal information as required to ensure legal compliance in your country of residence.</p>
+<pre><code class="bash">$ pie install \  
+  --select=example_pie_extension=asgrim/example-pie-extension \  
+  --select=redis=phpredis/phpredis
+</code></pre>
 
-<h2 id="what-are-we-looking-for%3F">What are we looking for?</h2>
+<p>This allows you to make concious and explicit decisions about which package to use for any missing extensions.</p>
 
-<p>We are specifically looking for developers to help with:</p>
+<h4 id="upgrade-all-your-pie-extensions">Upgrade all your PIE extensions</h4>
 
-<ul>
-<li>Security</li>
-<li>Reviewing pull requests and submitting code for enhancements and bug fixes</li>
-<li>Responding to and triaging issues</li>
-<li>Support for currently unmaintained or under-resourced core areas and bundled extensions</li>
-<li>Collaborating with other projects in the PHP Ecosystem</li>
-</ul>
+<pre><code class="bash">$ pie upgrade
+</code></pre>
 
-<p>This is not a complete list, and we are also open to your unique ideas! We encourage you to provide a <strong>very detailed description</strong> of what you want to work on.</p>
-
-<p>We aim to improve the development experience as well as the sustainability and quality of the PHP language. Your proposal should indicate how your work will affect one or more of these areas.</p>
-
-<p><strong>Please note that opening applications does not guarantee we will hire any new contractors.</strong></p>
-
-<h2 id="what-aren%27t-we-looking-for%3F">What aren't we looking for?</h2>
-
-<p>Currently, we only hire contractors to work on the PHP core language. We do not have the capacity to hire for:</p>
+<p>That's all it takes now to automatically upgrade all your PIE extensions, within the limits of the constraints you originally installed each extension with. For example:</p>
 
 <ul>
-<li>Documentation</li>
-<li>Userland PHP packages</li>
-<li>Websites</li>
-<li>Translations</li>
+<li>you install <code>foo/bar:^1.1</code> using PIE and the latest version, 1.1.5, gets installed</li>
+<li>the <code>foo/bar</code> extension later nreleases a new version 1.2.0</li>
+<li>you run <code>pie upgrade</code>, and <code>foo/bar</code> gets upgraded to 1.2.0, since that is within the original <code>^1.1</code> constraint.</li>
+<li>subsequnetly, an all new <code>foo/bar</code> 2.0.0 is released</li>
+<li>when you run <code>pie upgrade</code>, <code>foo/bar</code> will <em>not</em> be upgraded, as 2.0.0 is not within the <code>^1.1</code> constraint.</li>
 </ul>
 
-<p>Although these areas are crucial, we are not able to hire for them at this time.</p>
+<h4 id="a-huge-update-to-the-attestation-library">A huge update to the Attestation library</h4>
 
-<h2 id="what-are-the-expectations-for-contractors-hired-by-the-php-foundation%3F">What are the expectations for contractors hired by The PHP Foundation?</h2>
+<p>For some time, PIE has used Sigstore framework to verify authenticity of PIE itself. The primary mechanism for this has been to invoke the <code>gh</code> CLI tooling, if available, and if not fall back to a basic foundational implementation of the Sigstore verification. After much work, we were able to implement the majority of the Sigstore conformance test suite, reaching 131 passed tests, 5 skipped (as the library is verification-only), and 4 expected failures. This was a huge undertaking, and we believe is the most comprehensive PHP implementation of the Sigstore verification suite. PIE can now take advantage of this more extensive verification when carrying out updates. Additionally, the library is no longer strictly coupled to GitHub's attestations and trusted root certificate, although both are included out of the box for convenience. This open source library is available for all under the BSD-3-Clause licence, on <a href="https://github.com/ThePHPF/attestation">github.com/ThePHPF/attestation</a>.</p>
 
-<p>Working for The PHP Foundation offers a level of flexibility and autonomy, but it also requires discipline, responsiveness, a collaborative attitude, good communication skills, and a high level of professionalism.</p>
+<h4 id="a-summary-of-other-new-features...">A summary of other new features...</h4>
 
-<p>Developing new RFCs and building new features is a fairly small part of the job. Most of the work is typical maintenance of an open-source project, such as triaging and responding to incoming issues, reviewing community PRs, writing fixes for open bugs, and focusing on reducing the backlog of existing issues and PRs.</p>
+<ul>
+<li>The <code>--no-dev</code> option for <code>pie install</code> in a PHP project to skip dev extensions</li>
+<li>You can <code>--suppress-download-url-method</code> to eliminate certain download URL methods, even if the extension supports it.</li>
+<li>A new <code>pie search ...</code> command to help locate packages providing extensions.</li>
+<li>You can optimistically check the prerequisite build tools are installed with <code>pie check-build-tools</code></li>
+<li>Support some placeholders for some PECL extensions that relied on this feature</li>
+</ul>
 
-<p>We are a fully distributed team. You can work from any place* and at any time. All communication is asynchronous via Slack, GitHub, and email. We meet for synchronous calls once a month and have occasional check-ins with the Executive Director.</p>
-
-<p>Your work should be in line with the foundation's mission statement, and we expect you to follow <a href="https://thephp.foundation/code-of-conduct/">the code of conduct</a> both internally and in public spaces where you have a well-known affiliation with The PHP Foundation..</p>
-
-<blockquote>
-  <p><strong>PHP Foundation Mission Statement</strong></p>
-  
-  <p>The PHP Foundation is a collective of people and organizations relying on the PHP language. Its mission is to ensure the long-term prosperity of the PHP language. The PHP Foundation focuses on providing financial support and guidance to PHP language developers to support its goals of improving the language for its users, providing high-quality maintenance, and improving the PHP language project to retain current contributors and to integrate new contributors. The PHP Foundation aims to promote the public image of the PHP language in the interest of retaining existing and gaining new users and contributors.</p>
-</blockquote>
-
-<p><em><strong>&#42;</strong> We do not consider applications from persons residing in sanctioned territories.</em></p>
-
-<h2 id="how-to-apply%3F">How to apply?</h2>
-
-<p>Submit your application now, and we will get back to you in the coming weeks. If you have any questions or suggestions, reach out to contact@thephp.foundation.</p>
-
-<p style="text-align: center;">
-<a href="https://forms.gle/91aUZ5YLqnezsViJ9" target="_blank" class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">Apply Now</a>
-</p>
+<p>As always, PIE development is ongoing, and The PHP Foundation team working on PIE is striving to make PHP extension management as easy as PIE. If you have ideas or suggestions, please join us on the <a href="https://github.com/php/pie/discussions">GitHub Discussions</a> to chat about your ideas. If you discover a bug, please do report it on our <a href="https://github.com/php/pie/issues">GitHub Issues tracker</a>.</p>
 
         </div>
 
         <ul role="list" class="border-t pt-5 my-5 divide-y divide-gray-200 xl:col-span-3">
                                                 <li class="flex flex-col gap-10 py-12 first:pt-0 last:pb-0 sm:flex-row">
-                <img src="/assets/team/elizabeth_barron.jpeg" alt="Elizabeth Barron"
+                <img src="https://avatars.githubusercontent.com/u/496145?s=200&amp;v=4" alt="James Titcumb"
                      class="w-16 h-16 rounded-full lg:w-20 lg:h-20"/>
                 <div class="max-w-xl flex-auto leading-6 space-y-1">
-                    <div class="text-lg/8 font-semibold tracking-tight text-gray-900">Elizabeth Barron</div>
-                                        <div class="text-base/7 text-[#7f52ff]">Executive Director</div>
+                    <div class="text-lg/8 font-semibold tracking-tight text-gray-900">James Titcumb</div>
+                                        <div class="text-base/7 text-[#7f52ff]">Core Developer</div>
                                         <ul class="flex space-x-4 list-none p-0 m-0">
-                                                <li>
-                            <a href="https://www.linkedin.com/in/elizabethn"
-                               class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
-                               target="_blank" itemprop="url">
-                                <span class="sr-only">LinkedIn</span>
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                                </svg>
-                            </a>
-                        </li>
                         
                                                 <li>
-                            <a href="https://fosstodon.org/@elizabeth"
+                            <a href="https://phpc.social/@asgrim"
                                class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
                                target="_blank" itemprop="url">
                                 <span class="sr-only">Mastodon</span>
@@ -289,6 +256,17 @@
                         </li>
                         
                         
+                                                <li>
+                            <a href="https://github.com/asgrim"
+                               class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
+                               target="_blank" itemprop="url">
+                                <span class="sr-only">GitHub</span>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"
+                                     aria-hidden="true">
+                                    <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
+                                </svg>
+                            </a>
+                        </li>
                                             </ul>
                 </div>
             </li>
@@ -299,7 +277,7 @@
     class="thread-container"
     data-reddit-thread=""
     data-reddit-search="PHP"
-    data-reddit-suggest-title="2027 Applications for Contractors are Open"
+    data-reddit-suggest-title="PIE 1.5 Released"
     data-reddit-max-depth="10"
     data-reddit-show-content="false"
     data-reddit-show-controls="true"
@@ -312,21 +290,16 @@
 
         <div class="border-t pt-5 my-5">
                         <nav class="flex flex-row justify-between article -mx-2 mb-5">
-                                <a href="https://thephp.foundation/blog/2026/09/29/meet-bunny-dot-net/"
+                                <a href="https://thephp.foundation/blog/2026/09/30/applications-for-2027-are-open/"
                    class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[#7f52ff] transition-all no-underline">
                     <div class="mb-1 text-sm text-gray-600 font-medium">Previous</div>
-                    <div class="font-bold text-blue-500">Meet bunny.net: A PHP Foundation Sponsor supporting the language that powers the web it delivers</div>
+                    <div class="font-bold text-blue-500">2027 Applications for Contractors are Open</div>
                 </a>
                 
-                                <a href="https://thephp.foundation/blog/2026/10/07/pie-1-5-released/"
-                   class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[rgba(127,82,255,.8)] transition-all no-underline">
-                    <div class="mb-1 text-sm text-gray-600 font-medium">Next</div>
-                    <div class="font-bold text-blue-500">PIE 1.5 Released</div>
-                </a>
                             </nav>
             
             <div>
-                <a href="https://github.com/ThePHPF/thephp.foundation/edit/main/source/_posts/2026-09-30-applications-for-2027-are-open.md"
+                <a href="https://github.com/ThePHPF/thephp.foundation/edit/main/source/_posts/2026-10-07-pie-1-5-released.md"
                    class="nav-org" rel="noopener noreferrer" target="_blank">Edit this page on GitHub</a>
             </div>
         </div>
