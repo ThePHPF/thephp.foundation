@@ -3,7 +3,7 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2026-10-09T11:56:35+00:00</updated>
+    <updated>2026-10-09T11:57:26+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
@@ -108,7 +108,7 @@
   --select=redis=phpredis/phpredis
 </code></pre>
 
-<p>This allows you to make concious and explicit decisions about which package to use for any missing extensions.</p>
+<p>This allows you to make conscious and explicit decisions about which package to use for any missing extensions.</p>
 
 <h4 id="upgrade-all-your-pie-extensions">Upgrade all your PIE extensions</h4>
 
@@ -119,15 +119,15 @@
 
 <ul>
 <li>you install <code>foo/bar:^1.1</code> using PIE and the latest version, 1.1.5, gets installed</li>
-<li>the <code>foo/bar</code> extension later nreleases a new version 1.2.0</li>
+<li>the <code>foo/bar</code> extension later releases a new version 1.2.0</li>
 <li>you run <code>pie upgrade</code>, and <code>foo/bar</code> gets upgraded to 1.2.0, since that is within the original <code>^1.1</code> constraint.</li>
-<li>subsequnetly, an all new <code>foo/bar</code> 2.0.0 is released</li>
+<li>subsequently, an all new <code>foo/bar</code> 2.0.0 is released</li>
 <li>when you run <code>pie upgrade</code>, <code>foo/bar</code> will <em>not</em> be upgraded, as 2.0.0 is not within the <code>^1.1</code> constraint.</li>
 </ul>
 
 <h4 id="a-huge-update-to-the-attestation-library">A huge update to the Attestation library</h4>
 
-<p>For some time, PIE has used Sigstore framework to verify authenticity of PIE itself. The primary mechanism for this has been to invoke the <code>gh</code> CLI tooling, if available, and if not fall back to a basic foundational implementation of the Sigstore verification. After much work, we were able to implement the majority of the Sigstore conformance test suite, reaching 131 passed tests, 5 skipped (as the library is verification-only), and 4 expected failures. This was a huge undertaking, and we believe is the most comprehensive PHP implementation of the Sigstore verification suite. PIE can now take advantage of this more extensive verification when carrying out updates. Additionally, the library is no longer strictly coupled to GitHub's attestations and trusted root certificate, although both are included out of the box for convenience. This open source library is available for all under the BSD-3-Clause licence, on <a href="https://github.com/ThePHPF/attestation">github.com/ThePHPF/attestation</a>.</p>
+<p>For some time, PIE has used Sigstore framework to verify authenticity of PIE itself. The primary mechanism for this has been to invoke the <code>gh</code> CLI tooling, if available, and if not fall back to a basic foundational implementation of the Sigstore verification. After much work, we were able to implement the majority of the Sigstore conformance test suite, reaching 131 passed tests, 5 skipped (as the library is verification-only), and 4 expected failures. This was a huge undertaking, and we believe is the most comprehensive PHP implementation of the Sigstore verification suite. PIE can now take advantage of this more extensive verification when carrying out updates. Additionally, the library is no longer strictly coupled to GitHub's attestations and trusted root certificate, although both are included out of the box for convenience. This open source library is available for all under the BSD-3-Clause license, on <a href="https://github.com/ThePHPF/attestation">github.com/ThePHPF/attestation</a>.</p>
 
 <h4 id="a-summary-of-other-new-features...">A summary of other new features...</h4>
 
