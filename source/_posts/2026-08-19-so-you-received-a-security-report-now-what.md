@@ -418,8 +418,10 @@ Order matters. On the day you have chosen for your release, follow these steps:
 1. **Merge** the fix from the private fork.
 2. **Tag and release** the fixed version(s), and confirm the release actually shows
    up on Packagist before continuing.
-3. **Publish the advisory.** From this moment the vulnerability is public, which is
-   fine, because the fix already is too.
+3. **Publish the advisory** and lock it as "final". From this moment the vulnerability
+   is public, which is fine, because the fix already is too.
+   Locking the advisory will prevent anyone, but repo admins, from making changes to
+   the advisory after publication.
 4. **Send a pull request to
    [`FriendsOfPHP/security-advisories`](https://github.com/FriendsOfPHP/security-advisories).**
    Do not skip this on the grounds that you have already filed a GHSA. Composer does
