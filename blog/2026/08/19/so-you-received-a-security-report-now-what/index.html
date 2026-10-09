@@ -618,8 +618,10 @@ a researcher's while.</li>
 <li><strong>Merge</strong> the fix from the private fork.</li>
 <li><strong>Tag and release</strong> the fixed version(s), and confirm the release actually shows
 up on Packagist before continuing.</li>
-<li><strong>Publish the advisory.</strong> From this moment the vulnerability is public, which is
-fine, because the fix already is too.</li>
+<li><strong>Publish the advisory</strong> and lock it as "final". From this moment the vulnerability
+is public, which is fine, because the fix already is too.
+Locking the advisory will prevent anyone, but repo admins, from making changes to
+the advisory after publication.</li>
 <li><strong>Send a pull request to
 <a href="https://github.com/FriendsOfPHP/security-advisories"><code>FriendsOfPHP/security-advisories</code></a>.</strong>
 Do not skip this on the grounds that you have already filed a GHSA. Composer does
