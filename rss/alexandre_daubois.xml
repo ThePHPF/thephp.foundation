@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-10-14T14:35:19+00:00</updated><entry><author><name>Alexandre Daubois</name><uri>https://www.linkedin.com/in/alexandre-daubois/?locale=en</uri></author><title type="html"><![CDATA[How the PHP Security Team Handles Your Reports]]></title><content type="html"><![CDATA[<p>If you've ever sent a security report to PHP and then refreshed the advisory page every morning for three weeks, hi, this one's for you, and yes, we read it. PHP runs a large share of the web, so keeping it secure and staying responsive matters far beyond this project, and we take that seriously. There is a small group of volunteers and PHP Foundation contractors doing its best to handle security for PHP core with the limited time and resources available, and this post will show how we are going about it. Considering the significance of PHP's security to many businesses, committing financial resources to The PHP Foundation enables us to help keep companies safe and adequately respond to threats. Without this financial support, we all face an increasingly greater risk of exploits, so we encourage you to partner with us through <a href="https://opencollective.com/phpfoundation">sponsorship</a>.</p>
+
+<h2 id="who%27s-on-the-other-end">Who's on the other end</h2>
+
+<p>I'm part of the PHP security team, which triages the reports that come in for php-src. The team is a mix of community members and developers funded by the PHP Foundation, and it runs on its own, separate from the Foundation. The Foundation's <a href="https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/">Ecosystem Security Team</a> works alongside us. No report gets a verdict until one of us has read it, tried to reproduce it and checked it against our classification policy.</p>
+
+<h2 id="what-we%27ve-shipped-since-july">What we've shipped since July</h2>
+
+<p>Since July 1st, we've published <strong>15 CVEs</strong>. We also closed <strong>106 reports</strong> after determining they did not constitute vulnerabilities, were duplicating something already in the queue, or didn't reproduce. Some came from very confident fuzzers running PHP in ways no production setup does. Each of those got a look before we closed it, so if yours was one of them, someone on the team read it. Closing a report doesn't always mean dropping the issue entirely. The ones that aren't vulnerabilities, but still classify as bugs or that would still make PHP sturdier, become hardening work. <a href="https://thephp.foundation/blog/2026/09/09/welcome-daniel-scherzer/">Daniel Scherzer joined the Ecosystem Security Team</a> recently to take on this work.</p>
+
+<p>The CVE IDs for our advisories come from us, too. The PHP Group is a CVE Numbering Authority with php-src as its scope, and it has assigned its own CVE IDs since 2019, so <strong>we don't wait on anyone else to get a CVE for a PHP vulnerability</strong>. That matters this year, because GitHub's advisory queue has grown to the point where reviews take weeks for a share of reports, and projects that rely on GitHub for their CVE IDs can end up waiting with it. We don't depend on that queue, so when a fix is ready, <strong>the advisory and its CVE go out on our schedule</strong>.</p>
+
+<p>There's still a backlog of security reports, and we'd rather tell you than pretend otherwise. We keep working through it, and <strong>a quiet advisory doesn't mean a forgotten one</strong>. If you're waiting, thanks for the patience, and please resist the urge to open a public issue to nudge us, because that tells everyone about the bug before there's a fix. But if your business depends on PHP's security and you are not yet a PHP Foundation sponsor, we urge you to become one to help us with this important work.</p>
+
+<h2 id="the-tooling">The tooling</h2>
+
+<p>AI tools have made security reports much cheaper to write over the last year, and php-src gets far more of them than it used to. Keeping up with that by hand isn't realistic, so we automate more of the work and use AI on our side too.</p>
+
+<p>We reproduce on Linux, macOS, Windows and whatever other platform a report needs. Our builds run AddressSanitizer and UndefinedBehaviorSanitizer and are set up like our CI. A crash that only shows up on one custom build doesn't tell us much about the PHP you deploy.</p>
+
+<p>We've also added <strong>Daybreak Red</strong> to the setup. It's the highest tier of OpenAI's Daybreak program, restricted to approved defenders and built for vulnerability research and exploit validation, so <strong>we're fully equipped for this kind of work</strong>. OpenAI opened it to the project as part of its support for open source maintainers. We use it in two ways: It helps us validate reports, following a proof of concept through the engine, and it checks whether the claimed impact holds up. It also helps us sort the queue by spotting reports that hit the same root cause from different ends and pointing us at the ones worth reading first.</p>
+
+<p>Earlier this year we also had access to <strong>Claude Mythos</strong>, the Anthropic model that led the field on security work at the time, and we put it to work on protecting PHP. That access came mostly through connections we made at <a href="https://alpha-omega.dev/">Alpha-Omega</a>, and we're grateful to them for it. Having an organization like the PHP Foundation behind us gives us structured access to resources like these.</p>
+
+<p><strong>The models don't make the calls, though.</strong> Every verdict is made by a person who sets the severity and writes or reviews every patch, and no reporter hears back about an analysis a person hasn't attempted to reproduce.</p>
+
+<h2 id="how-to-report-so-we-can-move-fast">How to report so we can move fast</h2>
+
+<p>Most importantly, use the <a href="https://github.com/php/php-src/security/advisories/new">GitHub security advisory form</a>. Please keep public issues, pull requests and social posts out of it.</p>
+
+<p>The reports that move fastest through our queue have the smallest PHP script that triggers the problem, the PHP version or commit, the OS and the configure flags, plus the full sanitizer output if available. Above all, the best reports tell us <strong>the impact</strong>: which input an attacker controls, in what kind of app, and what they get out of it. The impact is glossed over most often, and it's the part that decides the severity. However, please avoid unnecessarily long and overly dramatic reports that force us to spend a lot of time reading for what could be a simple investigation.</p>
+
+<p>Our <a href="https://github.com/php/policies/blob/main/security-classification.rst">security classification policy</a> lists what we don't treat as a vulnerability, and it's worth a read before you hit submit. Malicious code that is valid PHP, unsanitized input passed to functions like <code>mysqli_query()</code>, FFI, <code>open_basedir</code> bypasses, non-standard builds and the built-in web server all fall outside it. Plenty of those are still bugs, and the public issue tracker is happy to take them.</p>
+
+<h2 id="about-ai-written-reports">About AI-written reports</h2>
+
+<p>Reports found or written with AI tools are welcome, as long as you did what we'd ask of anyone: <strong>reproduce the issue on a PHP build</strong>, check it against the policy, and understand what you're sending. Raw model output with a crash that doesn't reproduce takes us just as long to rule out as a real bug takes to confirm, and we'll have to close it.</p>
+
+<h2 id="that%27s-it-from-us">That's it from us</h2>
+
+<p>Please fund our security work through a <a href="https://thephp.foundation/donate/">PHP Foundation sponsorship</a>. We'll keep shipping fixes and advisories, with volunteers and Foundation-funded developers working side by side. If you've found something, send it our way and one of us will read it. And if you already did, please bear with us. We'll get back to you soon!</p>
+]]></content><link href="https://thephp.foundation/blog/2026/10/14/how-the-php-security-team-handles-your-reports/"/><id>https://thephp.foundation/blog/2026/10/14/how-the-php-security-team-handles-your-reports/</id><updated>Wed, 14 Oct 2026 00:00:00 +0000</updated></entry></feed>
