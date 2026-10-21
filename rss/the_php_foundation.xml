@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-10-21T14:27:34+00:00</updated><entry><author><name>The PHP Foundation</name><uri>https://thephp.foundation</uri></author><title type="html"><![CDATA[Today's PHP Security Release, and How We're Strengthening PHP Security]]></title><content type="html"><![CDATA[<p>Earlier today, the PHP project released PHP 8.5.12, 8.4.27, 8.3.36, and 8.2.35. These releases fix two critical vulnerabilities that, under the right conditions, allow an unauthenticated attacker to execute code on servers running PHP. If you run PHP, it is imperative that you update now. The <a href="https://www.php.net/archive/2026.php#2026-10-21-5">announcement on php.net</a> contains and references technical details on the vulnerabilities, attack vectors, and instructions on how to update on which systems.</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-10-21T14:42:35+00:00</updated><entry><author><name>The PHP Foundation</name><uri>https://thephp.foundation</uri></author><title type="html"><![CDATA[Welcoming Elizabeth Barron as the New Executive Director of The PHP Foundation]]></title><content type="html"><![CDATA[<p>We're excited to welcome <a href="https://www.linkedin.com/in/elizabethn">Elizabeth Barron</a> as the next Executive Director of The PHP Foundation, following a thorough process led by our search committee of <a href="https://www.linkedin.com/in/nilsadermann/">Nils Adermann</a>, <a href="https://www.linkedin.com/in/sebastian-bergmann-phpunit">Sebastian Bergmann</a>, <a href="https://www.linkedin.com/in/lornajane/">Lorna Mitchell</a>, and <a href="https://www.linkedin.com/in/benramsey/">Ben Ramsey</a>.</p>
+
+<p>Elizabeth brings a rare combination of deep roots in the PHP community and proven leadership in open-source governance. She co-founded a volunteer-based nonprofit dedicated to supporting women and non-binary individuals in the PHP industry, served as Community Manager at GitHub where she led developer outreach programs including the Patchwork initiative, and has been active in CHAOSS – a project focused on open-source community health metrics.</p>
+
+<p>Her experience spanning community building, fundraising, outreach operations, and open-source strategy makes her a natural fit to lead the foundation into its next chapter.</p>
+
+<p>As previously announced, founding Executive Director <a href="https://www.linkedin.com/in/pronskiy/">Roman Pronskiy</a> is transitioning to focus on his growing role at <a href="https://www.jetbrains.com/">JetBrains</a>, while continuing to serve on the Board of Directors. Roman will work closely with Elizabeth to ensure a smooth handover.</p>
+
+<p><figure class="max-w-screen-md mx-auto text-center mb-6" id="quote-elizabeth-barron">
+    <svg class="w-10 h-10 mx-auto mb-3 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+        <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
+    </svg>
+    <blockquote>
+        <p class="italic text-gray-900">“In just a few years, The PHP Foundation has built something remarkable, and I'm honored to take on this role and continue that work. PHP powers a huge part of the web, and I'm excited to work with the Board, our core developers, and the broader PHP community to strengthen and expand the Foundation's impact so that together we can ensure PHP thrives for decades to come.”</p>
+    </blockquote>
+    <figcaption class="flex items-center justify-center mt-3 space-x-3 rtl:space-x-reverse">
+        <img class="w-10 h-10 rounded-full" src="/assets/team/elizabeth_barron.jpeg" alt="profile picture">
+        <div class="flex items-center">
+            <cite class="pl-0.5 font-medium text-gray-900">Elizabeth Barron, </cite>
+            <cite class="pl-1 text-gray-500">Executive Director, The PHP Foundation</cite>
+        </div>
+    </figcaption>
+</figure>
+</p>
+
+<p><br>
+Please join us in welcoming Elizabeth. We're looking forward to what's ahead.
+🐘💜</p>
+]]></content><link href="https://thephp.foundation/blog/2026/02/27/welcoming-elizabeth-barron-new-executive-director/"/><id>https://thephp.foundation/blog/2026/02/27/welcoming-elizabeth-barron-new-executive-director/</id><updated>Fri, 27 Feb 2026 00:00:00 +0000</updated></entry><entry><author><name>The PHP Foundation</name><uri>https://thephp.foundation</uri></author><title type="html"><![CDATA[Today's PHP Security Release, and How We're Strengthening PHP Security]]></title><content type="html"><![CDATA[<p>Earlier today, the PHP project released PHP 8.5.12, 8.4.27, 8.3.36, and 8.2.35. These releases fix two critical vulnerabilities that, under the right conditions, allow an unauthenticated attacker to execute code on servers running PHP. If you run PHP, it is imperative that you update now. The <a href="https://www.php.net/archive/2026.php#2026-10-21-5">announcement on php.net</a> contains and references technical details on the vulnerabilities, attack vectors, and instructions on how to update on which systems.</p>
 
 <p>This post isn't about how to update. It's about how these vulnerabilities were found and fixed, what has changed in how PHP security is handled over the past two years, and what we need from the organizations that depend on PHP to keep PHP's security work going.</p>
 
@@ -65,32 +93,4 @@
 <h2 id="thank-you">Thank you</h2>
 
 <p>Thank you to the PHP security team, volunteers and PHP Foundation contractors alike, the release managers, and the package maintainers at distributions and LTS vendors who made these releases possible. Thank you to Calif, especially Ryan A, Wiz, OpenAI Codex Security, especially Amy Burnett, OSTIF, and Quarkslab for their research and responsible disclosure; to Alpha-Omega, OpenAI, and Anthropic for giving the team access to their tools and funding some of the security work; to the Sovereign Tech Agency for funding the 2024 audit; and to all of our sponsors, whose support made this work possible.</p>
-]]></content><link href="https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/"/><id>https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/</id><updated>Wed, 21 Oct 2026 00:00:00 +0000</updated></entry><entry><author><name>The PHP Foundation</name><uri>https://thephp.foundation</uri></author><title type="html"><![CDATA[Welcoming Elizabeth Barron as the New Executive Director of The PHP Foundation]]></title><content type="html"><![CDATA[<p>We're excited to welcome <a href="https://www.linkedin.com/in/elizabethn">Elizabeth Barron</a> as the next Executive Director of The PHP Foundation, following a thorough process led by our search committee of <a href="https://www.linkedin.com/in/nilsadermann/">Nils Adermann</a>, <a href="https://www.linkedin.com/in/sebastian-bergmann-phpunit">Sebastian Bergmann</a>, <a href="https://www.linkedin.com/in/lornajane/">Lorna Mitchell</a>, and <a href="https://www.linkedin.com/in/benramsey/">Ben Ramsey</a>.</p>
-
-<p>Elizabeth brings a rare combination of deep roots in the PHP community and proven leadership in open-source governance. She co-founded a volunteer-based nonprofit dedicated to supporting women and non-binary individuals in the PHP industry, served as Community Manager at GitHub where she led developer outreach programs including the Patchwork initiative, and has been active in CHAOSS – a project focused on open-source community health metrics.</p>
-
-<p>Her experience spanning community building, fundraising, outreach operations, and open-source strategy makes her a natural fit to lead the foundation into its next chapter.</p>
-
-<p>As previously announced, founding Executive Director <a href="https://www.linkedin.com/in/pronskiy/">Roman Pronskiy</a> is transitioning to focus on his growing role at <a href="https://www.jetbrains.com/">JetBrains</a>, while continuing to serve on the Board of Directors. Roman will work closely with Elizabeth to ensure a smooth handover.</p>
-
-<p><figure class="max-w-screen-md mx-auto text-center mb-6" id="quote-elizabeth-barron">
-    <svg class="w-10 h-10 mx-auto mb-3 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
-        <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
-    </svg>
-    <blockquote>
-        <p class="italic text-gray-900">“In just a few years, The PHP Foundation has built something remarkable, and I'm honored to take on this role and continue that work. PHP powers a huge part of the web, and I'm excited to work with the Board, our core developers, and the broader PHP community to strengthen and expand the Foundation's impact so that together we can ensure PHP thrives for decades to come.”</p>
-    </blockquote>
-    <figcaption class="flex items-center justify-center mt-3 space-x-3 rtl:space-x-reverse">
-        <img class="w-10 h-10 rounded-full" src="/assets/team/elizabeth_barron.jpeg" alt="profile picture">
-        <div class="flex items-center">
-            <cite class="pl-0.5 font-medium text-gray-900">Elizabeth Barron, </cite>
-            <cite class="pl-1 text-gray-500">Executive Director, The PHP Foundation</cite>
-        </div>
-    </figcaption>
-</figure>
-</p>
-
-<p><br>
-Please join us in welcoming Elizabeth. We're looking forward to what's ahead.
-🐘💜</p>
-]]></content><link href="https://thephp.foundation/blog/2026/02/27/welcoming-elizabeth-barron-new-executive-director/"/><id>https://thephp.foundation/blog/2026/02/27/welcoming-elizabeth-barron-new-executive-director/</id><updated>Fri, 27 Feb 2026 00:00:00 +0000</updated></entry></feed>
+]]></content><link href="https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/"/><id>https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/</id><updated>Wed, 21 Oct 2026 00:00:00 +0000</updated></entry></feed>
