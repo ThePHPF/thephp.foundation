@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Today's PHP Security Release, and How We're Strengthening PHP Security &mdash; The PHP Foundation &mdash; Supporting, Advancing, and Developing the PHP Language</title>
+    <meta name="description" content="Describing the story behind how critical security vulnerabilities were found and fixed.">
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="index, follow">
+        <link href="https://phpc.social/@thephpf" rel="me" />
+    <link rel="stylesheet" href="https://thephp.foundation/assets/css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/base16/danqing.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+
+    <meta name="yandex-verification" content="6990192232fdf071" />
+    <meta name="msvalidate.01" content="5D1EB82347E6BF271A01DCDBF7E59BED" />
+
+    <meta property="og:url" content="https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Today's PHP Security Release, and How We're Strengthening PHP Security">
+    <meta property="og:description" content="Describing the story behind how critical security vulnerabilities were found and fixed.">
+    <meta property="og:image" content="https://thephp.foundation/assets/share/todays-php-security-release-and-how-were-strengthening-php-security.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="https://thephp.foundation">
+    <meta property="twitter:url" content="https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/">
+    <meta name="twitter:title" content="Today's PHP Security Release, and How We're Strengthening PHP Security">
+    <meta name="twitter:description" content="Describing the story behind how critical security vulnerabilities were found and fixed.">
+    <meta name="twitter:image" content="https://thephp.foundation/assets/share/todays-php-security-release-and-how-were-strengthening-php-security.png">
+
+    <link rel="apple-touch-startup-image" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" sizes="76x76" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="120x120" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="128x128" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="152x152" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="196x196" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="512x512" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="1024x1024" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="shortcut icon" sizes="2048x2048" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="128x128" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="196x196" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="512x512" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+    <link rel="apple-touch-icon" sizes="2048x2048" href="https://thephp.foundation/assets/icons/php_foundation.svg">
+
+    <link rel="alternate" type="application/atom+xml" href="https://thephp.foundation/atom.xml"
+          title="The PHP Foundation activity feed"/>
+                <script src="//cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+    </head>
+<body class="bg-white">
+
+<div role="region" aria-label="PHPverse 2025 announcement" class="w-full bg-green-500 text-white text-center py-1 text-sm font-medium z-50 hover:text-white hidden">
+    <a href="banner link stub" target="_blank" rel="noopener noreferrer" class="text-white no-underline hover:underline hover:text-white visited:hover:text-white">banner text stub</a>
+</div>
+
+<header x-data="{ isOpen: false }" @keydown.escape="isOpen = false" @click.away="isOpen = false" itemscope
+        itemtype="https://schema.org/WPHeader">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between relative">
+        <div class="absolute inset-x-0 bottom-0 h-px bg-slate-900/5"></div>
+        <div class="flex lg:flex-1 items-center gap-4">
+            <a href="https://thephp.foundation/" class="-m-1.5 p-1.5">
+                <img class="h-16 w-auto" src="https://thephp.foundation/assets/icons/php_foundation.svg"
+                     alt="PHP Foundation">
+            </a>
+            <span class="text-[#27282c] font-semibold text-sm md:text-xl" itemprop="headline">The PHP Foundation</span>
+        </div>
+        <div class="flex lg:hidden">
+            <button type="button"
+                    @click="isOpen = true"
+                    class="m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                     aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                </svg>
+            </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12" itemscope itemtype="https://schema.org/SiteNavigationElement">
+            <a href="https://thephp.foundation/structure" class="text-gray-700 hover:underline" itemprop="url">Who we are</a>
+
+            <a href="https://thephp.foundation/foundation" class="text-gray-700 hover:underline" itemprop="url">What we do</a>
+
+            <a href="https://thephp.foundation/blog" class="text-gray-700 hover:underline" itemprop="url">News</a>
+
+            <a href="https://thephp.foundation/presentations" class="text-gray-700 hover:underline" itemprop="url">Talks</a>
+
+            <a href="https://thephp.foundation/contact" class="text-gray-700 hover:underline" itemprop="url">Contact</a>
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-8">
+            <a href="https://php.net" target="_blank" rel="noopener noreferrer"
+               class="text-sm font-semibold leading-6 text-gray-700 nav-org hover:border-none hover:underline">
+                php.net</a>
+
+            <a href="/sponsor" class="button-link">Sponsor</a>
+        </div>
+    </nav>
+    <div x-show="isOpen" x-cloak>
+        <div class="fixed inset-0 z-50"></div>
+        <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="mx-auto flex max-w-7xl items-center justify-between relative">
+                <div class="flex lg:flex-1 items-center gap-4">
+                    <a href="https://thephp.foundation/" class="-m-1.5 p-1.5">
+                        <img class="h-16 w-auto" src="https://thephp.foundation/assets/icons/php_foundation.svg"
+                             alt="PHP Foundation">
+                    </a>
+                    <span class="text-[#27282c] font-semibold text-sm md:text-xl">The PHP Foundation</span>
+                </div>
+                <div class="flex">
+                    <button type="button"
+                            @click="isOpen = false"
+                            class="m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                             aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <nav class="mt-6 flow-root px-6 py-6">
+                <div class="-my-6 divide-y divide-gray-500/10">
+                    <div class="space-y-2 py-6" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                        <a href="https://thephp.foundation/structure" itemprop="url"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Who
+                            we are</a>
+
+                        <a href="https://thephp.foundation/foundation" itemprop="url"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">What
+                            we do</a>
+
+                        <a href="https://thephp.foundation/blog" itemprop="url"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">News</a>
+
+                        <a href="https://thephp.foundation/presentations" itemprop="url"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Talks</a>
+
+                        <a href="https://thephp.foundation/contact" itemprop="url"
+                           class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 no-underline">Contact</a>
+                    </div>
+                    <div class="py-6">
+                        <a href="/sponsor" rel="noopener noreferrer"
+                           class="block py-2 text-center no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">Sponsor</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div class="bg-white px-6 lg:px-8 my-16" itemscope itemtype="https://schema.org/Article">
+    <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
+        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" itemprop="name">Today's PHP Security Release, and How We're Strengthening PHP Security</h1>
+
+        <div class="flex flex-col md:flex-row md:items-center gap-x-4 text-xs mt-2">
+            Published on <span itemprop="datePublished">Oct 21, 2026</span>
+            <div>
+                                
+                                <span itemprop="publisher" itemscope itemtype="https://schema.org/Person"><a
+                        href="https://thephp.foundation" itemprop="url" class="no-underline" target="_blank"
+                        rel="noopener noreferrer"><span itemprop="name">The PHP Foundation</span></a></span>                                            </div>
+        
+                <div class="flex gap-x-2 mt-2 md:mt-0">
+                        <a href="https://thephp.foundation/blog/tag/news"
+               class="rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
+                News
+            </a>
+                        <a href="https://thephp.foundation/blog/tag/security"
+               class="rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100 no-underline">
+                Security
+            </a>
+                    </div>
+                </div>
+
+        <div class="mt-6 text-xl leading-8" itemprop="text">
+            <p>Earlier today, the PHP project released PHP 8.5.12, 8.4.27, 8.3.36, and 8.2.35. These releases fix two critical vulnerabilities that, under the right conditions, allow an unauthenticated attacker to execute code on servers running PHP. If you run PHP, it is imperative that you update now. The <a href="https://www.php.net/archive/2026.php#2026-10-21-5">announcement on php.net</a> contains and references technical details on the vulnerabilities, attack vectors, and instructions on how to update on which systems.</p>
+
+<p>This post isn't about how to update. It's about how these vulnerabilities were found and fixed, what has changed in how PHP security is handled over the past two years, and what we need from the organizations that depend on PHP to keep PHP's security work going.</p>
+
+<h2 id="two-related-critical-remote-code-execution-vulnerabilities">Two related critical remote code execution vulnerabilities</h2>
+
+<ul>
+<li>CVE-2026-109618 / <a href="https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w">GHSA-w8hw-w9fx-j79w</a>: <strong>RCE via OOM corruption</strong> (out-of-memory): If a request reached PHP's memory&#95;limit at exactly the wrong moment, PHP could leave partially initialized internal data behind and later treat it as valid, corrupting memory. On Apache with mod&#95;php, an unauthenticated request can trigger this before any application code runs, and full remote code execution was demonstrated with default settings. Remote code execution was also confirmed on PHP-FPM through application-level code paths.</li>
+<li>CVE-2026-109619 / <a href="https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp">GHSA-6wmf-4rv5-p3rp</a>: <strong>RCE via stale state</strong>: A fatal error at the wrong point could leave internal state pointing to memory that belonged to a previous request. A later request handled by the same worker could then use that freed memory. A use-after-free and worker crash were confirmed, and the reporter demonstrated remote code execution against a real-world application running on Apache with mod&#95;php.</li>
+</ul>
+
+<p>Both issues sit in parts of PHP that nearly every request touches: memory management and error handling. Their central place in PHP is what made both vulnerabilities serious, and also so hard to fix without breaking compatibility, hurting performance, or forcing changes on the large ecosystem of third-party extensions.</p>
+
+<h2 id="a-first-external-audit-and-increased-security-focus">A first external audit and increased security focus</h2>
+
+<p>In 2024, PHP underwent its first <a href="https://thephp.foundation/blog/2025/04/10/php-core-security-audit-results/">external security audit</a> in years. The PHP Foundation secured funding from the Sovereign Tech Agency to organize this audit through <a href="https://ostif.org/">OSTIF</a>, and it was carried out by <a href="https://www.quarkslab.com/">Quarkslab</a>. While fixing one of the issues Quarkslab reported, a PHP core developer contracted by the PHP Foundation found the first signs of the OOM problem behind CVE-2026-109618. In 2024, a potential exploit for the OOM problem was theorized, but no concrete vectors were found and other concrete issues with clear impact overshadowed these concerns.</p>
+
+<p>To fix the OOM problem, the PHP security team developed several competing approaches, but each came with its own trade-offs: backward compatibility breaks, new denial-of-service potential, or requiring changes to many third-party extensions which seemed impossible to coordinate. The PHP security team, operating on consensus, struggled to choose between these and feared the repercussions of shipping the wrong choice. Combined with the lack of a known path to remote code execution and the small team of core developers with the necessary deep knowledge of the engine occupied with many responsibilities, this decision process caused work on a fix to stall and restart repeatedly over months. We won't pretend otherwise: the delay was a structural failure, caused by both the security team's decision process and its lack of resources. The security team has since started changing its processes, and that work continues, so that decisions can be made by majority and compromises are encouraged.</p>
+
+<h2 id="building-a-sustainable-professional-security-organization">Building a sustainable professional security organization</h2>
+
+<p>Over the last months the way PHP security work is organized has changed considerably. In May 2026, the PHP Foundation created the <a href="https://thephp.foundation/blog/2026/05/18/announcing-ecosystem-security-team/">Ecosystem Security Team</a>, which works alongside the PHP security team on triage, coordination, and hardening. Volker Dusch's work as AI Security Engineer in Residence at the PHP Foundation has significantly improved communication and collaboration between the PHP security team and the Foundation. <a href="https://thephp.foundation/blog/2026/07/14/welcoming-alexandre-daubois/">Alexandre Daubois joined</a> the PHP Foundation in July to help the PHP security team triage, handle, and fix security reports and <a href="https://thephp.foundation/blog/2026/09/09/welcome-daniel-scherzer/">Daniel Scherzer joined</a> in September to take on hardening work.</p>
+
+<p>Earlier this year, we worked with <a href="https://alpha-omega.dev/">Alpha-Omega</a> to scan PHP with Anthropic's Claude Mythos. But since the Mythos scan, we have added other tools, including OpenAI's Daybreak Red for validating reports and exploits, alongside sanitizer builds and reproduction environments that match our CI on every platform PHP supports.</p>
+
+<p>The PHP Foundation got the PHP project into the <a href="https://openai.com/index/patch-the-planet/">Patch the Planet</a> program, as part of which security firm <a href="https://calif.io/">Calif</a> began an audit of PHP on July 30th, 2026&#46; On August 11th  researcher Ryan A at Calif reported an unconditional remote code execution with the same root cause as the OOM problem we had found in 2024&#46; <a href="https://openai.com/">OpenAI</a> independently reported the same root cause on the same day, followed by further attack vectors from OpenAI on September 18th and from <a href="https://www.wiz.io/">Wiz</a> on August 24th. More recently, <a href="https://trailofbits.com/">Trail of Bits</a> has also been auditing PHP. The reports from Calif, OpenAI, and Wiz made the full impact of the OOM problem clear, and from August 11th onward, fixing it became the top priority for all of the PHP Foundation's team working on security. Without the Foundation’s funding it would have been impossible to have multiple people work on this issue full time, eventually through weekends and around the clock to coordinate and communicate with other involved parties.</p>
+
+<p>The growth of AI-assisted research also means the PHP security team receives far more reports than before. As Alexandre Daubois described last week in <a href="https://thephp.foundation/blog/2026/10/14/how-the-php-security-team-handles-your-reports/">How the PHP Security Team Handles Your Reports</a>, the team has published 15 CVEs since July 1st and worked through more than 100 reports that turned out to be invalid, duplicates, or not reproducible. AI helps the team validate reports and group reports sharing the same root cause, but a person makes every call and works on every patch.</p>
+
+<h2 id="leak-and-disrupted-disclosure">Leak and disrupted disclosure</h2>
+
+<p>The coordinated disclosure of these vulnerabilities worked well until 2 days ahead of the targeted release date.</p>
+
+<p>On Tuesday, October 20th, at around 15:00 UTC, the two CVE IDs began circulating on online forums and social media. They came with a wrong release time and a wrong CVSS score of 10.0 (the actual score is 9.2). No technical details leaked. In response, the PHP project brought its pre-announcement forward and <a href="https://www.php.net/archive/2026.php#2026-10-20-1">published it at 19:30 UTC</a>. It also moved the release from October 22nd, 14:00 UTC, to October 21st, 14:00 UTC. Distributors were still packaging the fix, so releasing immediately would have left many users without an easy way to update. Moving the release forward by one day was the best compromise between acting quickly, giving people time to prepare, and making sure everyone had a simple update path when the vulnerabilities were disclosed.</p>
+
+<p>As a result of the leak and pre-announcement around 20:00 UTC, Calif, one of the security firms that had reported the issues mistakenly published a video. It showed their proof of concept working against a number of targets and revealed a few additional, though limited, details about the vulnerabilities. Copies of the deleted video started circulating on social media soon after. The video contributed to accelerated development of various PoCs (exploitation proof of concepts), which then increased circulation on October 21st.</p>
+
+<p>Mitigation advice we started providing to a few critical infrastructure providers around Oct 20th 23:00 UTC, may have leaked as well. The PHP security team closely monitored and inspected appearing PoCs after the leak but did not identify any functional exploits at the time of release/public disclosure.</p>
+
+<p>On October 21st at 07:41 UTC, more than six hours before the coordinated release, Chainguard unilaterally broke the embargo and published built images containing the fix. Like other distributors, Chainguard had received the patch in advance so its users could update the moment the vulnerabilities were disclosed. Any attacker could now study the fix in binary form while every other PHP user was still waiting for the release. This disregarded weeks of work by many parties toward a coordinated disclosure.</p>
+
+<h2 id="a-cautiously-optimistic-outlook">A cautiously optimistic outlook</h2>
+
+<p>Today's release shows the progress we’re making in how PHP security is handled. Once the full impact of the OOM problem was understood in August, the security team, the foundation, and the release managers delivered a fix for this deeply rooted problem across all supported branches, and distributions and LTS vendors received the patch ahead of time so their users can update quickly.</p>
+
+<p>We are confident that a serious vulnerability with a fix stuck on hard trade-offs would now reach the PHP Foundation leadership much sooner, as we’re changing processes so leadership can help steer the situation to a timely resolution. We are now prioritizing measures to make sure vulnerabilities that need similarly complex fixes get resolved faster when they are reported in the future. The PHP Foundation and the PHP security team learned a lot in the last weeks and will work to turn their experiences into lasting repeatable processes.</p>
+
+<h2 id="what-we-need-from-you">What we need from you</h2>
+
+<p>PHP runs a large share of the web, including government services, online stores, banks, media sites, and much of the software that businesses rely on every day. Yet security work on PHP itself still depends on a small group of foundation-funded developers and a little volunteer help.</p>
+
+<p>Tools now find bugs faster than ever, for defenders and attackers alike, and the number of reports will keep growing. What tools cannot do is decide on the right fix for a long-standing design decision in the engine, weigh the compatibility trade-offs, and review the patch. Making those decisions takes experienced engineers who know the entire PHP codebase, and today there are too few of them.</p>
+
+<p>A core part of the PHP Foundation's mission is to grow the number of engineers with deep knowledge of the PHP codebase and give the security team the resources it needs. We can only achieve this goal with funding from those who depend on PHP:</p>
+
+<ul>
+<li>Companies that build products and services on PHP: please sponsor the PHP Foundation at a level that reflects how much you rely on it.</li>
+<li>Hosting providers, cloud platforms, and distributions that deliver PHP to millions of users.</li>
+<li>Governments and public institutions whose services run on PHP. The German Sovereign Tech Agency's funding of the 2024 audit shows what public investment can achieve, and we need more of it, on a sustained basis.</li>
+</ul>
+
+<p>Sponsoring the PHP Foundation is the most direct way to ensure structural issues like the OOM vulnerability are addressed sustainably, before they turn into emergencies. Become a sponsor at <a href="https://thephp.foundation/sponsor/">thephp.foundation/sponsor</a>, and if your organization would like to talk about a larger commitment, <a href="https://thephp.foundation/contact">get in touch</a>.</p>
+
+<h2 id="thank-you">Thank you</h2>
+
+<p>Thank you to the PHP security team, volunteers and PHP Foundation contractors alike, the release managers, and the package maintainers at distributions and LTS vendors who made these releases possible. Thank you to Calif, especially Ryan A, Wiz, OpenAI Codex Security, especially Amy Burnett, OSTIF, and Quarkslab for their research and responsible disclosure; to Alpha-Omega, OpenAI, and Anthropic for giving the team access to their tools and funding some of the security work; to the Sovereign Tech Agency for funding the 2024 audit; and to all of our sponsors, whose support made this work possible.</p>
+
+        </div>
+
+        <ul role="list" class="border-t pt-5 my-5 divide-y divide-gray-200 xl:col-span-3">
+                                                <li class="flex flex-col gap-10 py-12 first:pt-0 last:pb-0 sm:flex-row">
+                <img src="/assets/icons/php_foundation.svg" alt="The PHP Foundation"
+                     class="w-16 h-16 rounded-full lg:w-20 lg:h-20"/>
+                <div class="max-w-xl flex-auto leading-6 space-y-1">
+                    <div class="text-lg/8 font-semibold tracking-tight text-gray-900">The PHP Foundation</div>
+                                        <ul class="flex space-x-4 list-none p-0 m-0">
+                                                <li>
+                            <a href="https://www.linkedin.com/company/phpfoundation/"
+                               class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
+                               target="_blank" itemprop="url">
+                                <span class="sr-only">LinkedIn</span>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        
+                                                <li>
+                            <a href="https://phpc.social/@thephpf"
+                               class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
+                               target="_blank" itemprop="url">
+                                <span class="sr-only">Mastodon</span>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        
+                                                <li>
+                            <a href="https://twitter.com/thephpf"
+                               class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
+                               target="_blank" itemprop="url">
+                                <span class="sr-only">X</span>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        
+                                                <li>
+                            <a href="https://github.com/ThePHPF/"
+                               class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
+                               target="_blank" itemprop="url">
+                                <span class="sr-only">GitHub</span>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"
+                                     aria-hidden="true">
+                                    <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                                            </ul>
+                </div>
+            </li>
+                                </ul>
+
+        <div class="border-t pt-5 my-5">
+            <div
+    class="thread-container"
+    data-reddit-thread=""
+    data-reddit-search="PHP"
+    data-reddit-suggest-title="Today&#039;s PHP Security Release, and How We&#039;re Strengthening PHP Security"
+    data-reddit-max-depth="10"
+    data-reddit-show-content="false"
+    data-reddit-show-controls="true"
+></div>
+<script>window.REDDITIFY_PROXY_URL = 'https://redditify-proxy.root-8f3.workers.dev';</script>
+<link rel="stylesheet" href="https://unpkg.com/redditify/dist/redditify.css">
+<script src="https://unpkg.com/redditify/dist/redditify.min.js"></script>
+
+        </div>
+
+        <div class="border-t pt-5 my-5">
+                        <nav class="flex flex-row justify-between article -mx-2 mb-5">
+                                <a href="https://thephp.foundation/blog/2026/10/14/how-the-php-security-team-handles-your-reports/"
+                   class="flex flex-col w-1/2 border p-2 mx-2 rounded hover:border-[#7f52ff] transition-all no-underline">
+                    <div class="mb-1 text-sm text-gray-600 font-medium">Previous</div>
+                    <div class="font-bold text-blue-500">How the PHP Security Team Handles Your Reports</div>
+                </a>
+                
+                            </nav>
+            
+            <div>
+                <a href="https://github.com/ThePHPF/thephp.foundation/edit/main/source/_posts/todays-php-security-release-and-how-were-strengthening-php-security.md"
+                   class="nav-org" rel="noopener noreferrer" target="_blank">Edit this page on GitHub</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-gray-900">
+    <div class="mx-auto max-w-7xl overflow-hidden px-6 py-12 lg:px-8">
+        <ul class="list-none grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-1 max-w-xl mx-auto text-sm leading-6 text-gray-400" >
+            <li><a href="/sponsor"          class="text-gray-400 hover:text-gray-100 no-underline">Sponsor</a></li>
+            <li><a href="/structure"        class="text-gray-400 hover:text-gray-100 no-underline">Structure</a></li>
+            <li><a href="/structure#admins" class="text-gray-400 hover:text-gray-100 no-underline">Board</a></li>
+            <li><a href="/structure#core_developers"        class="text-gray-400 hover:text-gray-100 no-underline">Developers</a></li>
+            <li><a href="/blog"             class="text-gray-400 hover:text-gray-100 no-underline">News</a></li>
+            <li><a href="/presentations"    class="text-gray-400 hover:text-gray-100 no-underline">Talks</a></li>
+            <li><a href="/branding"         class="text-gray-400 hover:text-gray-100 no-underline">Brand Guide</a></li>
+            <li><a href="/governance"       class="text-gray-400 hover:text-gray-100 no-underline">Governance</a></li>
+            <li><a href="/code-of-conduct"  class="text-gray-400 hover:text-gray-100 no-underline">Code of Conduct</a></li>
+            <li><a href="/contact"          class="text-gray-400 hover:text-gray-100 no-underline">Contact</a></li>
+        </ul>
+
+        <div class="mt-10 flex justify-center space-x-10 items-center">
+            <a href="https://twitter.com/thephpf" target="_blank" rel="noopener noreferrer"
+               class="text-gray-400 hover:text-gray-500">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                    <g>
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                    </g>
+                </svg>
+            </a>
+
+            <a href="https://github.com/ThePHPF/thephp.foundation" class="text-gray-400 hover:text-gray-500"
+               target="_blank" rel="noopener noreferrer">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                          clip-rule="evenodd"/>
+                </svg>
+            </a>
+
+            <a href="https://phpc.social/@thephpf" class="text-gray-400 hover:text-gray-500" target="_blank"
+               rel="noopener noreferrer">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"/>
+                </svg>
+            </a>
+
+            <a href="https://www.linkedin.com/company/phpfoundation/" class="text-gray-400 hover:text-gray-500"
+               target="_blank" rel="noopener noreferrer">
+                <svg class="h-6 w-6"
+                     viewBox="0 0 56.693 56.693" fill="currentColor"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <path d="M30.071,27.101v-0.077c-0.016,0.026-0.033,0.052-0.05,0.077H30.071z"/>
+                        <path
+                                d="M49.265,4.667H7.145c-2.016,0-3.651,1.596-3.651,3.563v42.613c0,1.966,1.635,3.562,3.651,3.562h42.12   c2.019,0,3.654-1.597,3.654-3.562V8.23C52.919,6.262,51.283,4.667,49.265,4.667z M18.475,46.304h-7.465V23.845h7.465V46.304z    M14.743,20.777h-0.05c-2.504,0-4.124-1.725-4.124-3.88c0-2.203,1.67-3.88,4.223-3.88c2.554,0,4.125,1.677,4.175,3.88   C18.967,19.052,17.345,20.777,14.743,20.777z M45.394,46.304h-7.465V34.286c0-3.018-1.08-5.078-3.781-5.078   c-2.062,0-3.29,1.389-3.831,2.731c-0.197,0.479-0.245,1.149-0.245,1.821v12.543h-7.465c0,0,0.098-20.354,0-22.459h7.465v3.179   c0.992-1.53,2.766-3.709,6.729-3.709c4.911,0,8.594,3.211,8.594,10.11V46.304z"/>
+                    </g>
+                </svg>
+            </a>
+        </div>
+        <div class="mt-10 text-center text-xs leading-5 text-gray-500" itemprop="copyrightHolder">&copy; The PHP Foundation</div>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const anchors = new AnchorJS()
+        anchors.add()
+
+        for (const element of document.getElementsByClassName('anchorjs-link')) {
+            element.addEventListener('click', function () {
+                navigator.clipboard.writeText(window.location.origin + window.location.pathname + element.getAttribute('href'))
+            })
+        }
+    })
+</script>
+
+
+<script>hljs.highlightAll();</script>
+
+<script src="https://cdn.usefathom.com/script.js" data-site="PJKRZUTE" defer></script>
+<!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="https://analytics.thephp.foundation/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '1']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+<noscript><p><img referrerpolicy="no-referrer-when-downgrade" src="https://analytics.thephp.foundation/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Matomo Code -->
+
+</body>
+</html>
