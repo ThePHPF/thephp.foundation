@@ -16,7 +16,7 @@ There are many ways you can support the development of the PHP language through&
 * [Bank Transfer (ACH direct debit or wire transfer)](https://opencollective.com/phpfoundation/contribute)
 * [GitHub Sponsors](https://github.com/sponsors/ThePHPF)
 
-All financial contributions that we receive and our expenses are [public and fully transparent](https://opencollective.com/phpfoundation#category-BUDGET).
+All contributors will automatically receive a receipt for business expensing, and invoices can be sent upon [request](/contact). And all financial contributions that we receive, and our expenses, are [public and fully transparent](https://opencollective.com/phpfoundation#category-BUDGET). 
 
 ## Become a Company Member of The PHP Foundation
 
@@ -39,16 +39,16 @@ For example, if you contribute $1,500 monthly in 2024, your total contribution b
 
 <div class="flex mt-12 mb-12 border-b border-t pt-4">
   <div class="flex-initial w-1/2 pr-2">
-<h2 id="membership-deck">Want to learn more?</h2>
+    <h2 id="membership-deck">Want to learn more?</h2>
 
-See our presentation with the latest information <br>
-and insights about The PHP Foundation.
+    See our presentation with the latest information <br>
+    and insights about The PHP Foundation.
 
-<div class="mt-6">
-<a href="https://docs.google.com/presentation/d/1MT7wqcu31DZ7IHheCxWg_Bm01usP0Sh1hBwlqHuqiUE/export/pdf" class="button-link">Sponsorship Deck</a>
-</div>
-</div>
-  <div class="flex-initial w-1/2 ...">
+    <div class="mt-6">
+      <a href="https://docs.google.com/presentation/d/1MT7wqcu31DZ7IHheCxWg_Bm01usP0Sh1hBwlqHuqiUE/export/pdf" class="button-link">Sponsorship Deck</a>
+    </div>
+  </div>
+  <div class="flex-initial w-1/2">
     <img src="/assets/images/slides_img_join.png" alt="">
   </div>
 </div>
