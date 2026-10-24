@@ -1,18 +1,13 @@
 {% extends 'default' %}
 
 {% block content_wrapper %}
-<section class="mx-auto my-16 max-w-4xl w-full bg-white px-4 md:px-0" itemscope itemtype="https://schema.org/Article">
-    <div class="max-w-4xl">
-        <header class="mb-8">
-            <h1 class="text-4xl font-bold" itemprop="title">{{ page.title }}</h1>
-            {% if page.subtitle %}
-            <h3 class="text-xl font-medium text-gray-600 mt-4">{{ page.subtitle }}</h3>
-            {% endif %}
-        </header>
+<article itemscope itemtype="https://schema.org/Article">
+    {{ include('page-hero.html', { title: page.title, lead: page.subtitle ?? null, eyebrow: page.eyebrow ?? null }) }}
 
-        <div class="mx-auto text-base leading-7 text-gray-700" itemprop="text">
+    <div class="container-wide pb-20">
+        <div class="section-rule pt-12 max-w-3xl prose-content text-base leading-7" itemprop="text">
             {{ page.blocks.content|raw }}
         </div>
     </div>
-</section>
+</article>
 {% endblock content_wrapper %}

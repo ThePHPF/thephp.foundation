@@ -68,13 +68,16 @@
     <a href="banner link stub" target="_blank" rel="noopener noreferrer" class="text-white no-underline hover:underline hover:text-white visited:hover:text-white">banner text stub</a>
 </div>
 
-<header x-data="{ isOpen: false }" @keydown.escape="isOpen = false" @click.away="isOpen = false" itemscope
-        itemtype="https://schema.org/WPHeader">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between relative">
-        <div class="absolute inset-x-0 bottom-0 h-px bg-slate-900/5"></div>
-        <div class="flex lg:flex-1 items-center gap-4">
-            <a href="{{ site.url }}/" class="-m-1.5 p-1.5">
-                <img class="h-16 w-auto" src="{{ site.url }}/assets/icons/php_foundation.svg"
+<header x-data="{ isOpen: false, scrolled: false }" x-init="scrolled = window.scrollY > 4"
+        @scroll.window.passive="scrolled = window.scrollY > 4"
+        @keydown.escape="isOpen = false" @click.away="isOpen = false" itemscope
+        itemtype="https://schema.org/WPHeader"
+        class="sticky top-0 z-40 bg-white border-b border-gray-200 transition-shadow duration-200"
+        :class="scrolled && 'shadow-[0_2px_12px_-4px_rgba(25,25,28,0.12)]'">
+    <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-8">
+                <div class="flex lg:flex-1 items-center gap-4">
+            <a href="{{ site.url }}/" class="shrink-0">
+                <img class="block h-16 w-auto" src="{{ site.url }}/assets/icons/php_foundation.svg"
                      alt="PHP Foundation">
             </a>
             <span class="text-[#27282c] font-semibold text-sm md:text-xl" itemprop="headline">The PHP Foundation</span>
@@ -82,7 +85,7 @@
         <div class="flex lg:hidden">
             <button type="button"
                     @click="isOpen = true"
-                    class="m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                    class="-mr-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
                 <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                      aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -90,21 +93,21 @@
                 </svg>
             </button>
         </div>
-        <div class="hidden lg:flex lg:gap-x-12" itemscope itemtype="https://schema.org/SiteNavigationElement">
-            <a href="{{ site.url }}/structure" class="text-gray-700 hover:underline" itemprop="url">Who we are</a>
-
-            <a href="{{ site.url }}/foundation" class="text-gray-700 hover:underline" itemprop="url">What we do</a>
-
-            <a href="{{ site.url }}/blog" class="text-gray-700 hover:underline" itemprop="url">News</a>
-
-            <a href="{{ site.url }}/presentations" class="text-gray-700 hover:underline" itemprop="url">Talks</a>
-
-            <a href="{{ site.url }}/contact" class="text-gray-700 hover:underline" itemprop="url">Contact</a>
+        <div class="hidden lg:flex lg:gap-x-1" itemscope itemtype="https://schema.org/SiteNavigationElement">
+            {% set nav = [
+                { url: '/structure', label: 'Who we are' },
+                { url: '/foundation', label: 'What we do' },
+                { url: '/blog', label: 'News' },
+                { url: '/presentations', label: 'Talks' },
+                { url: '/contact', label: 'Contact' },
+            ] %}
+            {% for item in nav %}
+            <a href="{{ site.url }}{{ item.url }}" class="nav-link {{ page.url is defined and page.url starts with item.url ? 'nav-link-active' }}" itemprop="url">{{ item.label }}</a>
+            {% endfor %}
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-8">
             <a href="https://php.net" target="_blank" rel="noopener noreferrer"
-               class="text-sm font-semibold leading-6 text-gray-700 nav-org hover:border-none hover:underline">
-                php.net</a>
+               class="nav-link">php.net ↗</a>
 
             <a href="/sponsor" class="button-link">Sponsor</a>
         </div>
@@ -153,7 +156,7 @@
                     </div>
                     <div class="py-6">
                         <a href="/sponsor" rel="noopener noreferrer"
-                           class="block py-2 text-center no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">Sponsor</a>
+                           class="button-link button-block">Sponsor</a>
                     </div>
                 </div>
             </nav>
@@ -163,24 +166,38 @@
 
 {%block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
 
-<footer class="bg-gray-900">
-    <div class="mx-auto max-w-7xl overflow-hidden px-6 py-12 lg:px-8">
-        <ul class="list-none grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-1 max-w-xl mx-auto text-sm leading-6 text-gray-400" >
-            <li><a href="/sponsor"          class="text-gray-400 hover:text-gray-100 no-underline">Sponsor</a></li>
-            <li><a href="/structure"        class="text-gray-400 hover:text-gray-100 no-underline">Structure</a></li>
-            <li><a href="/structure#admins" class="text-gray-400 hover:text-gray-100 no-underline">Board</a></li>
-            <li><a href="/structure#core_developers"        class="text-gray-400 hover:text-gray-100 no-underline">Developers</a></li>
-            <li><a href="/blog"             class="text-gray-400 hover:text-gray-100 no-underline">News</a></li>
-            <li><a href="/presentations"    class="text-gray-400 hover:text-gray-100 no-underline">Talks</a></li>
-            <li><a href="/branding"         class="text-gray-400 hover:text-gray-100 no-underline">Brand Guide</a></li>
-            <li><a href="/governance"       class="text-gray-400 hover:text-gray-100 no-underline">Governance</a></li>
-            <li><a href="/code-of-conduct"  class="text-gray-400 hover:text-gray-100 no-underline">Code of Conduct</a></li>
-            <li><a href="/contact"          class="text-gray-400 hover:text-gray-100 no-underline">Contact</a></li>
+<footer class="bg-[#19191c] relative overflow-hidden border-t border-white/10">
+    <div class="relative mx-auto max-w-7xl px-6 pt-16 pb-10 lg:px-8">
+        <div class="grid grid-cols-1 gap-10 lg:grid-cols-12 border-b border-white/30 pb-12">
+            <div class="lg:col-span-5">
+                <div class="flex items-center gap-3">
+                    <img class="h-10 w-10 rounded-lg" src="{{ site.url }}/assets/icons/php_foundation.svg" alt="">
+                    <span class="text-lg font-semibold text-white">The PHP Foundation</span>
+                </div>
+                <p class="mt-4 mb-6 max-w-sm text-sm leading-6 text-gray-400">We advance, develop, and support the PHP language by funding the people who maintain it.</p>
+                <a href="/sponsor" class="button-link">Sponsor PHP</a>
+            </div>
+            <div class="lg:col-span-7">
+<ul class="list-none grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-3 m-0 text-sm leading-6 text-gray-400" >
+            <li><a href="/sponsor"          class="text-gray-400 hover:text-white no-underline">Sponsor</a></li>
+            <li><a href="/structure"        class="text-gray-400 hover:text-white no-underline">Structure</a></li>
+            <li><a href="/structure#board" class="text-gray-400 hover:text-white no-underline">Board</a></li>
+            <li><a href="/structure#core_developers"        class="text-gray-400 hover:text-white no-underline">Developers</a></li>
+            <li><a href="/blog"             class="text-gray-400 hover:text-white no-underline">News</a></li>
+            <li><a href="/presentations"    class="text-gray-400 hover:text-white no-underline">Talks</a></li>
+            <li><a href="/branding"         class="text-gray-400 hover:text-white no-underline">Brand Guide</a></li>
+            <li><a href="/governance"       class="text-gray-400 hover:text-white no-underline">Governance</a></li>
+            <li><a href="/code-of-conduct"  class="text-gray-400 hover:text-white no-underline">Code of Conduct</a></li>
+            <li><a href="/contact"          class="text-gray-400 hover:text-white no-underline">Contact</a></li>
         </ul>
+            </div>
+        </div>
 
-        <div class="mt-10 flex justify-center space-x-10 items-center">
+        <div class="mt-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-6">
+        <div class="text-xs leading-5 text-gray-500" itemprop="copyrightHolder">&copy; The PHP Foundation</div>
+        <div class="flex justify-center space-x-6 items-center">
             <a href="https://twitter.com/thephpf" target="_blank" rel="noopener noreferrer"
-               class="text-gray-400 hover:text-gray-500">
+               class="text-gray-400 hover:text-white">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
                     <g>
                         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
@@ -188,7 +205,7 @@
                 </svg>
             </a>
 
-            <a href="https://github.com/ThePHPF/thephp.foundation" class="text-gray-400 hover:text-gray-500"
+            <a href="https://github.com/ThePHPF/thephp.foundation" class="text-gray-400 hover:text-white"
                target="_blank" rel="noopener noreferrer">
                 <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path fill-rule="evenodd"
@@ -197,14 +214,14 @@
                 </svg>
             </a>
 
-            <a href="https://phpc.social/@thephpf" class="text-gray-400 hover:text-gray-500" target="_blank"
+            <a href="https://phpc.social/@thephpf" class="text-gray-400 hover:text-white" target="_blank"
                rel="noopener noreferrer">
                 <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 16 16">
                     <path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"/>
                 </svg>
             </a>
 
-            <a href="https://www.linkedin.com/company/phpfoundation/" class="text-gray-400 hover:text-gray-500"
+            <a href="https://www.linkedin.com/company/phpfoundation/" class="text-gray-400 hover:text-white"
                target="_blank" rel="noopener noreferrer">
                 <svg class="h-6 w-6"
                      viewBox="0 0 56.693 56.693" fill="currentColor"
@@ -217,7 +234,7 @@
                 </svg>
             </a>
         </div>
-        <div class="mt-10 text-center text-xs leading-5 text-gray-500" itemprop="copyrightHolder">&copy; The PHP Foundation</div>
+        </div>
     </div>
 </footer>
 
@@ -225,7 +242,7 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const anchors = new AnchorJS()
-        anchors.add()
+        anchors.add('.prose-content h2, .prose-content h3, .prose-content h4')
 
         for (const element of document.getElementsByClassName('anchorjs-link')) {
             element.addEventListener('click', function () {

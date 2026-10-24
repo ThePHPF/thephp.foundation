@@ -1,0 +1,34 @@
+{# Blog post card. Params: post, featured (optional) #}
+{% set featured = featured|default(false) %}
+<article class="item-rule group relative flex w-full flex-col pt-6" itemscope itemtype="https://schema.org/Article">
+    <div class="flex flex-wrap items-center gap-2 text-xs text-gray-500">
+        <time itemprop="datePublished">{{ post.published_at|date("M d, Y") }}</time>
+        {% if post.tags is defined %}
+        {% for tag in post.tags %}
+        <a href="{{ site.url }}/blog/tag/{{ tag|url_encode(true) }}" class="tag-pill relative z-10">{{ tag|capitalize }}</a>
+        {% endfor %}
+        {% endif %}
+    </div>
+    <h3 class="mt-4 mb-3 font-bold tracking-tight text-gray-900 {{ featured ? 'text-2xl sm:text-4xl max-w-4xl' : 'text-lg leading-snug' }}">
+        <a href="{{ site.url }}{{ post.url }}" class="text-gray-900 no-underline group-hover:text-[#5646e0]" itemprop="url">
+            <span class="absolute inset-0"></span>
+            <span itemprop="name">{{ post.title|raw }}</span>
+        </a>
+    </h3>
+    <p class="mb-0 text-sm leading-6 text-gray-600 {{ featured ? 'sm:text-lg sm:leading-8 max-w-3xl line-clamp-3' : 'line-clamp-3' }}" itemprop="text">
+        {{ post.description ?: (post.content|striptags|length > 160 ? (post.content|striptags|slice(0, 160) ~ '…') : post.content|striptags)|raw }}
+    </p>
+    <div class="mt-auto pt-5 flex items-center gap-3">
+        <div class="flex -space-x-2">
+            {% for item in post.author %}
+            {% set author = fetch_member_by_code(item) %}
+            {% if author %}
+            <img src="{{ author.image }}" alt="{{ author.name }}" class="h-7 w-7 rounded-full ring-2 ring-white grayscale" loading="lazy">
+            {% endif %}
+            {% endfor %}
+        </div>
+        <div class="text-xs text-gray-600">
+            {% for item in post.author %}{% set author = fetch_member_by_code(item) %}{% if author %}<span itemprop="author">{{ author.name }}</span>{% if not loop.last %}, {% endif %}{% endif %}{% endfor %}
+        </div>
+    </div>
+</article>

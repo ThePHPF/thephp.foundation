@@ -3,6 +3,8 @@ title: Governance of the PHP Foundation
 description: The PHP Foundation Governance Model
 permalink: governance
 layout: page
+eyebrow: Governance
+subtitle: "How The PHP Foundation is organized, how decisions are made and who is responsible for what."
 ---
 
 ## 1. Overview
