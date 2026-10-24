@@ -1,0 +1,30 @@
+{# "The people you fund" grid. Expects `people` (set in sponsor-page.html). #}
+
+<section class="container-wide pb-20" id="people">
+    <div class="section-rule pt-12">
+        <div class="max-w-3xl">
+            <p class="eyebrow">People</p>
+            <h2 class="section-title">The people you fund</h2>
+            <p class="text-lg text-gray-700">
+                Your money goes to engineers working on PHP itself. Each of them maintains code that runs in production on millions of servers every day.
+            </p>
+        </div>
+        <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-12">
+            {% for p in people %}
+            {% set m = fetch_member_by_code(p.code) %}
+            {% if m %}
+            <a href="{{ m.url ?? m.github }}" target="_blank" rel="noopener noreferrer"
+               class="group flex flex-col items-start no-underline">
+                <span class="avatar-duotone w-20 h-20 mb-5"><img src="{{ m.image }}" alt="{{ m.name }}" loading="lazy"></span>
+                <span class="text-lg font-bold text-gray-900 group-hover:text-[#5646e0]">{{ m.name }}</span>
+                <span class="mt-1 text-sm text-[#6858f6]">{{ m.job }}</span>
+                <span class="mt-2 text-sm text-gray-600">Works on: {{ p.claim }}</span>
+            </a>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <p class="mt-8 mb-0 text-sm text-gray-600">
+            See the <a href="/structure#core_developers">whole team</a> and <a href="/blog">what they shipped recently</a>.
+        </p>
+    </div>
+</section>

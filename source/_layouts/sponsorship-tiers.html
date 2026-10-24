@@ -1,134 +1,51 @@
-<div class="flex flex-col items-center justify-center space-y-8 lg:flex-row lg:items-stretch lg:space-x-8 lg:space-y-0">
-    <section class="flex flex-col w-full max-w-sm p-12 pt-8 space-y-6 bg-white rounded-lg shadow-md border-t-gray-400 align-middle">
-        <!-- Name -->
-        <div class="flex-shrink-0">
-            <div class="text-4xl font-medium tracking-tight text-gray-500"
-            >Silver</div>
-        </div>
+{#
+    Partnership levels. Platinum is the flagship and gets the dark card.
+    Each level has a metallic medallion so the levels read at a glance.
+    Expects `tiers` from _partials/sponsor-page.html (the sponsor box uses the same data).
+#}
+<div class="grid grid-cols-1 gap-6 md:grid-cols-3 lg:gap-8">
+    {% for t in tiers %}
+    {% set dark = t.featured|default(false) %}
+    <section class="relative flex flex-col overflow-hidden rounded-2xl p-8 lg:p-10 border {{ dark ? 'border-[#19191c] bg-[#19191c] text-white' : 'border-zinc-700 bg-white' }}">
+        {# Metallic hairline on top of the card #}
+        <span class="absolute inset-x-0 top-0 h-1" style="background: {{ t.metal }}" aria-hidden="true"></span>
 
-        <!-- Price -->
-        <div class="flex-shrink-0 pb-6 space-y-2 border-b">
-            <span class="text-2xl font-normal">$12,000</span>
-            <span class="text-gray-400">/year</span>
-            <div class="flex-shrink-0 space-y-2 text-xs text-gray-400">
-                Or <span class="font-normal">$1,000</span>
-                <span class="group relative">
-                    <div class="absolute bottom-[calc(100%+0.5rem)] left-[50%] -translate-x-[50%] hidden group-hover:block w-auto">
-                      <div class="bottom-full right-0 rounded bg-black px-4 py-1 text-xs text-white whitespace-nowrap">
-                        After 12 months.
-                        <svg class="absolute left-0 top-full h-2 w-full text-black" x="0px" y="0px" viewBox="0 0 255 255" xml:space="preserve"><polygon class="fill-current" points="0,0 127.5,127.5 255,0" /></svg>
-                      </div>
-                    </div>
-                      <span class="">/month <a class="underline cursor-pointer text-gray-400" href="#yearly-and-monthly-sponsorships-for-the-php-foundation">*</a></span>
-                  </span>
+        <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="h-8 w-8 rounded-full shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_1px_3px_rgba(0,0,0,0.25)]" style="background: {{ t.metal }}" aria-hidden="true"></span>
+                <h3 class="m-0 text-2xl font-bold tracking-tight {{ dark ? 'text-white' : 'text-gray-900' }}">{{ t.name }}</h3>
             </div>
+            {% if dark %}
+            <span class="rounded-full border border-white/25 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-indigo-200">Flagship</span>
+            {% endif %}
         </div>
 
+        <div class="mt-8">
+            <p class="m-0 flex items-baseline gap-1.5">
+                <span class="text-4xl lg:text-5xl font-bold tracking-tight {{ dark ? 'text-white' : 'text-gray-900' }}">{{ t.yearly }}</span>
+                <span class="{{ dark ? 'text-gray-400' : 'text-gray-500' }}">/year</span>
+            </p>
+            <p class="mt-2 mb-0 text-sm {{ dark ? 'text-gray-400' : 'text-gray-500' }}">
+                or {{ t.monthly }}/month ·
+                <a href="#yearly-and-monthly-sponsorships-for-the-php-foundation" class="{{ dark ? 'text-gray-300 decoration-white/30 hover:text-white' : 'text-gray-600' }}">How it counts</a>
+            </p>
+        </div>
 
-        <ul class="flex-1 space-y-0 ml-0">
-            <li>Your logo on our website</li>
-            <li>Use of our logo on your website</li>
-            <li>Mention on Social Media</li>
-            <li>Mention in Newsletter</li>
-            <li>Mention in "new sponsors" post</li>
-            <li>Advisory Board seat</li>
+        <div class="my-8 h-px {{ dark ? 'bg-white/20' : 'bg-zinc-700' }}"></div>
+
+        {% if t.includes %}
+        <p class="mt-0 mb-4 text-xs font-semibold uppercase tracking-wider {{ dark ? 'text-indigo-200' : 'text-[#5646e0]' }}">Everything in {{ t.includes }}, plus</p>
+        {% endif %}
+        <ul class="m-0 flex-1 list-none space-y-3">
+            {% for perk in t.perks %}
+            <li class="m-0 flex gap-3 text-[15px] leading-6 {{ dark ? 'text-gray-200' : 'text-gray-700' }}">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 {{ dark ? 'text-[#a59bff]' : 'text-[#6858f6]' }}" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.704 5.29a1 1 0 0 1 .006 1.414l-7.25 7.3a1 1 0 0 1-1.42 0l-3.75-3.775a1 1 0 1 1 1.42-1.41l3.04 3.062 6.54-6.585a1 1 0 0 1 1.414-.006Z" clip-rule="evenodd"/></svg>
+                {{ perk }}
+            </li>
+            {% endfor %}
         </ul>
 
-        <!-- Button -->
-        <div class="flex-shrink-0 pt-4">
-            <a class="inline-flex items-center justify-center w-full max-w-xs px-4 py-2 transition-colors border rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer no-underline text-gray-500 nav-org"
-               href="https://opencollective.com/phpfoundation/contribute/major-sponsors-34207/checkout?interval=year&amount=12000&contributeAs=me"
-            >Join Silver</a>
-        </div>
-
+        <a class="button-link button-block mt-10" href="{{ t.href }}">Become a {{ t.name }} partner</a>
     </section>
-
-    <section class="flex flex-col w-full max-w-sm p-12 pt-8 space-y-6 bg-white rounded-lg shadow-md border-t-gray-400">
-        <!-- Name -->
-        <div class="flex-shrink-0">
-            <div class="text-4xl font-medium tracking-tight text-orange-500"
-            >Gold</div>
-        </div>
-
-        <!-- Price -->
-        <div class="flex-shrink-0 pb-6 space-y-2 border-b">
-            <span class="text-2xl font-normal">$24,000</span>
-            <span class="text-gray-400">/year</span>
-            <div class="flex-shrink-0 space-y-2 text-xs text-gray-400">
-                Or <span class="font-normal">$2,000</span>
-                <span class="group relative">
-                    <div class="absolute bottom-[calc(100%+0.5rem)] left-[50%] -translate-x-[50%] hidden group-hover:block w-auto">
-                      <div class="bottom-full right-0 rounded bg-black px-4 py-1 text-xs text-white whitespace-nowrap">
-                        After 12 months.
-                        <svg class="absolute left-0 top-full h-2 w-full text-black" x="0px" y="0px" viewBox="0 0 255 255" xml:space="preserve"><polygon class="fill-current" points="0,0 127.5,127.5 255,0" /></svg>
-                      </div>
-                    </div>
-                      <span class="">/month <a class="underline cursor-pointer text-gray-400" href="#yearly-and-monthly-sponsorships-for-the-php-foundation">*</a></span>
-                  </span>
-            </div>
-        </div>
-
-        <ul class="flex-1 space-y-0 ml-0">
-            <li class="italic">All in Silver, plus:</li>
-            <li>Membership intro post</li>
-            <li>Logo in GitHub README</li>
-            <li>Listed in reports</li>
-            <li>Your logo on presentation slides made by Foundation members</li>
-        </ul>
-
-        <!-- Button -->
-        <div class="flex-shrink-0 pt-4">
-            <a class="inline-flex items-center justify-center w-full max-w-xs px-4 py-2 transition-colors border rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer no-underline text-orange-500 nav-org"
-               href="https://opencollective.com/phpfoundation/contribute/gold-sponsor-68774/checkout?interval=year&amount=24000&contributeAs=me"
-            >Join Gold</a>
-        </div>
-
-    </section>
-
-    <section class="flex flex-col w-full max-w-sm p-12 pt-8 space-y-6 bg-white rounded-lg shadow-md border-t-gray-400">
-        <!-- Name -->
-        <div class="flex-shrink-0">
-            <div class="text-4xl font-medium tracking-tight text-blue-600"
-            >Platinum</div>
-        </div>
-
-        <!-- Price -->
-        <div class="flex-shrink-0 pb-6 space-y-2 border-b">
-            <span class="text-2xl font-normal">$100,000</span>
-            <span class="text-gray-400">/year</span>
-            <div class="flex-shrink-0 space-y-2 text-xs text-gray-400">
-                Or <span class="font-normal">$8,500</span>
-                <span class="group relative">
-                    <div class="absolute bottom-[calc(100%+0.5rem)] left-[50%] -translate-x-[50%] hidden group-hover:block w-auto">
-                      <div class="bottom-full right-0 rounded bg-black px-4 py-1 text-xs text-white whitespace-nowrap">
-                        After 12 months.
-                        <svg class="absolute left-0 top-full h-2 w-full text-black" x="0px" y="0px" viewBox="0 0 255 255" xml:space="preserve"><polygon class="fill-current" points="0,0 127.5,127.5 255,0" /></svg>
-                      </div>
-                    </div>
-                      <span class="">/month <a class="underline cursor-pointer text-gray-400" href="#yearly-and-monthly-sponsorships-for-the-php-foundation">*</a></span>
-                  </span>
-            </div>
-        </div>
-
-        <ul class="flex-1 space-y-0 ml-0">
-            <li class="italic">All in Gold, plus:</li>
-            <li>Social media (1/quarter)</li>
-            <li>Sponsor co-authored case study</li>
-        </ul>
-
-        <!-- Button -->
-        <div class="flex-shrink-0 pt-4">
-            <a class="inline-flex items-center justify-center w-full max-w-xs px-4 py-2 transition-colors border rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer no-underline text-blue-600 nav-org"
-               href="https://opencollective.com/phpfoundation/contribute/platinum-sponsor-68775/checkout?interval=year&amount=100000&contributeAs=me"
-            >Join Platinum</a>
-        </div>
-
-    </section>
-</div>
-
-<h2>We welcome contributions of any size!</h2>
-Every donation helps us maintain and develop PHP further. You can choose an amount that suits your budget.
-
-<div class="mt-4">
-    <a class="inline-flex items-center justify-center w-full max-w-md px-4 py-2 transition-colors border rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer no-underline text-blue-600 nav-org" href="https://opencollective.com/phpfoundation#category-CONTRIBUTE">Sponsor us with any amount via OpenCollective</a>
+    {% endfor %}
 </div>

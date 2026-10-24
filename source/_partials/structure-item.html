@@ -1,21 +1,21 @@
-<div class="flex items-center space-x-4 lg:space-x-6" itemscope itemtype="https://schema.org/Person">
-    <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20" itemprop="image"
-         src="{{ image }}"
-         alt="{{ name }}">
+<div class="group flex items-center gap-4" itemscope itemtype="https://schema.org/Person">
+    <span class="avatar-duotone w-16 h-16">
+        <img itemprop="image" loading="lazy" src="{{ image }}" alt="{{ name }}">
+    </span>
     <div class="leading-6 space-y-1">
-        <div class="text-lg font-bold text-black" itemprop="name">{{ name }}</div>
+        <div class="text-lg font-bold text-gray-900" itemprop="name">{{ name }}</div>
         {% if company %}
-            <div class="text-black" itemprop="company">{{ company }}</div>
+            <div class="text-sm text-gray-600" itemprop="company">{{ company }}</div>
         {% endif %}
         {% if job %}
-        <div class="text-[#7f52ff]" itemprop="jobTitle">{{ job }}</div>
+        <div class="text-sm text-[#5646e0]" itemprop="jobTitle">{{ job }}</div>
         {% endif %}
-        <ul class="flex space-x-4 list-none p-0 m-0">
+        <ul class="flex space-x-3 list-none p-0 m-0 pt-1">
             
             {% if linkedin %}
             <li>
                 <a href="{{ linkedin }}"
-                   class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
+                   class="text-gray-400 hover:text-[#6858f6]" rel="noreferrer noopener"
                    target="_blank" itemprop="url">
                     <span class="sr-only">LinkedIn</span>
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -28,7 +28,7 @@
             {% if mastodon %}
             <li>
                 <a href="{{ mastodon }}"
-                   class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
+                   class="text-gray-400 hover:text-[#6858f6]" rel="noreferrer noopener"
                    target="_blank" itemprop="url">
                     <span class="sr-only">Mastodon</span>
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16">
@@ -41,7 +41,7 @@
             {% if twitter %}
             <li>
                 <a href="{{ twitter }}"
-                   class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
+                   class="text-gray-400 hover:text-[#6858f6]" rel="noreferrer noopener"
                    target="_blank" itemprop="url">
                     <span class="sr-only">X</span>
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -54,7 +54,7 @@
             {% if github %}
             <li>
                 <a href="{{ github }}"
-                   class="text-gray-400 hover:text-gray-500" rel="noreferrer noopener"
+                   class="text-gray-400 hover:text-[#6858f6]" rel="noreferrer noopener"
                    target="_blank" itemprop="url">
                     <span class="sr-only">GitHub</span>
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"

@@ -8,165 +8,130 @@ pagination:
 use:
     - posts
 ---
+{% set devs = ['derick-rethans', 'gina-peter-banyard', 'ilija-tovilo', 'jakub-zelenka', 'arnaud-le-blanc', 'saki-takamachi', 'shivam-mathur', 'volker-dusch'] %}
 
-<section class="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20">
-    <div class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:-mr-80 lg:-mr-96"></div>
-    <div class="mx-auto max-w-7xl px-6 py-8 lg:py-24 lg:px-4">
-        <div class="flex flex-col md:flex-row justify-between">
-            <div class="mt-0 max-w-xl md:mt-10 md:ml-4 lg:mt-10  mr-4">
-                <h1 class="mt-0 mb-0 max-w-2xl text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-7xl">
-                    We advance,<br>develop,<br>and support<br>the PHP Language
-                </h1>
-                <div class="mt-6 flex flex-row gap-4">
-                    <a href="/sponsor" class="inline-block lg:hidden text-xl py-2 no-underline px-6 !text-white bg-[#6858f6] rounded-3xl hover:bg-[rgba(104,88,246,.8)]">
-                        Sponsor
-                    </a>
-                </div>
-            </div>
-            <div class="mt-6 max-w-xl lg:mt-0">
-                <img src="{{ site.url }}/assets/icons/php_foundation.svg"
-                     alt="PHP Foundation"
-                     class="object-cover">
-            </div>
+<section class="container-wide pt-16 pb-20 lg:pt-24 lg:pb-28">
+    <p class="eyebrow">Sustaining the PHP language since 2021</p>
+    <h1 class="mt-0 mb-0 max-w-4xl text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl">
+        We advance, develop, and support the PHP&nbsp;Language
+    </h1>
+    <p class="mt-6 mb-0 max-w-2xl text-lg sm:text-xl leading-relaxed text-gray-600">
+        The PHP Foundation is a collective of people and organizations relying on the PHP language. Its mission is to ensure the long-term prosperity of the PHP language.
+    </p>
+    <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="/sponsor" class="button-link button-lg">Sponsor PHP</a>
+        <a href="/foundation" class="button-link-border button-lg">What we do</a>
+    </div>
+    <a href="/structure#core_developers" class="mt-12 flex flex-wrap items-center gap-4 no-underline group">
+        <span class="flex shrink-0 -space-x-3">
+            {% for code in devs %}
+            {% set m = fetch_member_by_code(code) %}
+            {% if m %}<span class="avatar-duotone h-10 w-10 ring-2 ring-white {{ loop.index > 5 ? 'hidden sm:inline-block' }}"><img src="{{ m.image }}" alt="{{ m.name }}"></span>{% endif %}
+            {% endfor %}
+        </span>
+        <span class="text-sm text-gray-600 group-hover:text-gray-900">Meet the developers we fund to work on PHP →</span>
+    </a>
+</section>
+
+<section class="container-wide pb-20 lg:pb-28">
+    <div class="section-rule pt-12">
+        <p class="eyebrow">Our mission</p>
+        <h2 class="section-title">How we work toward our mission</h2>
+        <p class="section-lead">Read our <a href="https://blog.jetbrains.com/phpstorm/2021/11/the-php-foundation/">announcement</a> for more information about the inspiration behind the launch of The PHP Foundation.</p>
+    </div>
+    <div class="mt-14 grid grid-cols-1 gap-x-10 gap-y-12 md:grid-cols-3">
+        <div>
+            <div class="mb-5"><svg class="h-6 w-6 text-[#6858f6]" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"/></svg></div>
+            <h3 class="mt-0 mb-3 text-xl">Financial Support for Core Developers</h3>
+            <p class="mb-0 text-gray-600">The PHP Foundation provides financial support and guidance to PHP language developers who improve the language in the areas of high-quality maintenance, security, and the implementation of new features approved through the PHP community's RFC process.</p>
         </div>
-    </div>
-    <div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32"></div>
-</section>
-
-<section class="border-t">
-    <div class="mx-auto max-w-4xl px-6 lg:px-0 py-12">
-        <div class="text-2xl leading-8 text-white">
-            <h2>Our Mission</h2>
-            <p class="text-lg" ><strong>The PHP Foundation</strong> is a collective of people and organizations relying on the PHP language. Its mission is to ensure the long-term prosperity of the PHP language.</p>
-            
-            <p class="text-lg">The PHP Foundation works toward its mission through the following: </p>
-
-            <ul>
-                <li><p class="text-lg"><strong>Financial Support for Core Developers</strong>: The PHP Foundation provides financial support and guidance to PHP language developers who improve the language in the areas of high-quality maintenance, security, and the implementation of new features approved through the PHP community's RFC process.</p></li>
-            
-                <li><p class="text-lg"><strong>Community Growth</strong>: In the interest of retaining existing and gaining new contributors and users, The PHP Foundation aims to:
-
-                    <ul>
-                    <li>promote the public image of the PHP language</li>
-                    <li>improve the onboarding experience for new users</li>
-                    <li>encourage the prioritization of accessibility and inclusion in the PHP community</li>
-                    </ul></p>
-                </li>
-
-                <li><p class="text-lg"><strong>PHP Representation</strong>: The PHP Foundation also represents the interests of the PHP language and community in open source policy discussions and collaborative partnerships across the open source landscape.</p>
-                </li>
-        </ul>
-
-            <p class="text-lg">Read our <a href="https://blog.jetbrains.com/phpstorm/2021/11/the-php-foundation/">announcement</a> for more information about the inspiration behind the launch of The PHP Foundation.</p>
+        <div>
+            <div class="mb-5"><svg class="h-6 w-6 text-[#6858f6]" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"/></svg></div>
+            <h3 class="mt-0 mb-3 text-xl">Community Growth</h3>
+            <p class="text-gray-600">In the interest of retaining existing and gaining new contributors and users, The PHP Foundation aims to:</p>
+            <ul class="mb-0">
+                <li class="text-gray-600">promote the public image of the PHP language</li>
+                <li class="text-gray-600">improve the onboarding experience for new users</li>
+                <li class="text-gray-600">encourage the prioritization of accessibility and inclusion in the PHP community</li>
+            </ul>
         </div>
-    </div>
-</section>
-
-<section class="mx-auto max-w-4xl px-6 lg:px-0 border-t border-gray-200 pt-12">
-    <h2 class="mt-0">Latest news</h2>
-    <div class="mx-auto grid max-w-4xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3 py-0">
-        {% for post in page.pagination.items %}
-        <article class="flex max-w-xl flex-col items-start">
-            <div class="group relative">
-                <div class="flex items-center gap-x-4 text-xs">
-                    <div class="text-gray-500">{{ post.published_at|date("M d, Y") }}</div>
-                </div>
-                <h3 class="mt-3 mb-2 text-lg font-semibold leading-6">
-                    <a href="{{ site.url }}{{ post.url }}" class="no-underline border-b">
-                        {{ post.title|raw }}
-                    </a>
-                </h3>
-                <div class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
-                    {{ post.content|striptags|length > 100 ? (post.content|striptags|slice(0, 100) ~ '...')|raw :
-                    post.content|striptags|raw }}
-                </div>
-            </div>
-        </article>
-        {% endfor %}
-    </div>
-</section>
-
-<section class="mt-12 pb-4">
-    {% include "newsletter.html" %}
-</section>
-
-<section class="">
-    <div class="mx-auto max-w-4xl px-6 lg:px-0 pb-12">
-        <div class="text-lg leading-8 text-white">
-            <h2>Our Work</h2>
-            <p class="text-lg">The foundation contracts <a href="/structure#core_developers">a team of part- and full-time developers</a> who work on maintenance, security, and new features for PHP. </p>
-            <p class="text-lg">The foundation team contributes in many forms: filing issues, reviewing pull requests, participating in discussions on mailing lists, triaging issues, submitting RFC proposals, writing documentation, maintaining project infrastructure, fixing bugs, and implementing features.</p>
+        <div>
+            <div class="mb-5"><svg class="h-6 w-6 text-[#6858f6]" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/></svg></div>
+            <h3 class="mt-0 mb-3 text-xl">PHP Representation</h3>
+            <p class="mb-0 text-gray-600">The PHP Foundation also represents the interests of the PHP language and community in open source policy discussions and collaborative partnerships across the open source landscape.</p>
         </div>
     </div>
 </section>
 
-<section class="bg-gray-900 py-24">
-    <div class="mx-auto max-w-7xl px-6 lg:px-0">
-        <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3 items-center">
-            <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-                <dt class="text-base leading-7 text-gray-400">Total by The PHP Foundation in 2025</dt>
-                <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">2929 commits</dd>
+<section class="bg-[#19191c]">
+    <div class="container-wide py-20 lg:py-28">
+        <p class="eyebrow text-indigo-300">Our work</p>
+        <h2 class="mt-0 mb-5 text-3xl sm:text-4xl font-bold tracking-tight text-white">Real work on PHP, every day</h2>
+        <div class="max-w-3xl">
+            <p class="text-gray-300">The foundation contracts <a href="/structure#core_developers" class="text-white decoration-white/40 hover:text-white">a team of part- and full-time developers</a> who work on maintenance, security, and new features for PHP. </p>
+            <p class="text-gray-300">The foundation team contributes in many forms: filing issues, reviewing pull requests, participating in discussions on mailing lists, triaging issues, submitting RFC proposals, writing documentation, maintaining project infrastructure, fixing bugs, and implementing features.</p>
+        </div>
+        <dl class="mt-14 grid grid-cols-1 gap-x-10 gap-y-10 md:grid-cols-3">
+            <div class="border-t border-white/50 pt-6">
+                <dd class="m-0 text-5xl font-bold tracking-tight text-white">2929</dd>
+                <dt class="mt-2 text-base font-semibold text-white">commits</dt>
+                <dt class="mt-1 text-sm leading-6 text-gray-400">Total by The PHP Foundation in 2025</dt>
             </div>
-
-            <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-                <dt class="text-base leading-7 text-gray-400">Total by The PHP Foundation in 2025</dt>
-                <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">1685 code reviews</dd>
+            <div class="border-t border-white/50 pt-6">
+                <dd class="m-0 text-5xl font-bold tracking-tight text-white">1685</dd>
+                <dt class="mt-2 text-base font-semibold text-white">code reviews</dt>
+                <dt class="mt-1 text-sm leading-6 text-gray-400">Total by The PHP Foundation in 2025</dt>
             </div>
-
-            <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-                <dt class="text-base leading-7 text-gray-400">
-                    Total by The PHP Foundation developers in 2025
-                </dt>
-                <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">662 authored PRs merged</dd>
+            <div class="border-t border-white/50 pt-6">
+                <dd class="m-0 text-5xl font-bold tracking-tight text-white">662</dd>
+                <dt class="mt-2 text-base font-semibold text-white">authored PRs merged</dt>
+                <dt class="mt-1 text-sm leading-6 text-gray-400">Total by The PHP Foundation developers in 2025</dt>
             </div>
         </dl>
-
-        <div class="text-center mt-12">
-            <a href="/blog/2026/05/27/impact-and-transparency-report-2025/"
-               class="inline-block py-2 no-underline px-6 !text-white border-white border rounded-3xl hover:bg-white hover:!text-gray-900 transition-all">
-                2025 Impact Report</a>
-        </div>
+        <a href="/blog/2026/05/27/impact-and-transparency-report-2025/" class="button-link-light mt-12">2025 Impact Report</a>
     </div>
 </section>
 
-<section class="border-t">
-    <div class="mx-auto max-w-4xl px-6 lg:px-0">
-        <div class="text-lg leading-8 text-white">
-            <h2 id="sponsors">Our Members</h2>
-            <p class="text-lg">In alphabetical order, the ten founding members of the foundation are: <a href="https://www.acquia.com/">Acquia</a>, <a href="https://automattic.com/">Automattic</a>, <a href="https://craftcms.com/">Craft CMS</a>, <a href="https://www.jetbrains.com/">JetBrains</a>, <a href="https://laravel.com/">Laravel</a>, <a href="https://prestashop.com/">PrestaShop</a>, <a href="https://packagist.com/">Private Packagist</a>, <a href="https://symfony.com/">Symfony</a>, <a href="https://tideways.com/">Tideways</a>, <a href="https://www.zend.com/">Zend by Perforce</a>.</p>
-
-            <p class="text-lg">In addition to the <a href="https://thephp.foundation/structure/">Governing Board</a>, The PHP Foundation has an <a href="https://thephp.foundation/blog/2023/03/31/php-foundation-update-march-2023/#a-new-benefit-for-major-sponsors-%E2%80%93-advisory-board-membership">Advisory Board</a> with representatives from Automattic, JetBrains, Private Packagist, Symfony, Tideways, Zend by Perforce, Moodle, Shopware, Laravel, Ardennes-étape, Les-Tilleuls.coop / API Platform, Aternos GmbH, PrestaShop, CraftCMS, Manychat, Team.blue, and TYPO3.
-.</p>
-
-            <p class="text-lg">The foundation is always open to new sponsors. If your company has been benefiting from PHP over the years, but not sure how it might give back to the ecosystem, now there's a clear and obvious choice.</p>
-            
+<section class="container-wide py-20 lg:py-28">
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
+        <div>
+            <p class="eyebrow">News</p>
+            <h2 class="section-title mb-0">Latest news</h2>
         </div>
+        <a href="/blog" class="button-link-border">All news →</a>
+    </div>
+    <div class="grid grid-cols-1 gap-x-10 gap-y-14 md:grid-cols-3">
+        {% for post in page.pagination.items %}
+        <div class="flex">
+            {{ include('post-card.html', { post: post }) }}
+        </div>
+        {% endfor %}
+    </div>
+    <div class="mt-20">
+        {% include "newsletter.html" %}
     </div>
 </section>
 
-<section class="">
-    <div class="mx-auto max-w-4xl px-6 lg:px-0 pt-8">
-        <div class="text-lg leading-8">
-            {% include('sponsors.html') %}
-        </div>
-    </div>
+<section class="container-wide pb-20 lg:pb-28">
+    <div class="section-rule pt-12">
+        <p class="eyebrow">Members</p>
+        <h2 class="section-title" id="sponsors">Our Members</h2>
+        <div class="max-w-3xl">
+            <p class="text-gray-600">In alphabetical order, the ten founding members of the foundation are: <a href="https://www.acquia.com/">Acquia</a>, <a href="https://automattic.com/">Automattic</a>, <a href="https://craftcms.com/">Craft CMS</a>, <a href="https://www.jetbrains.com/">JetBrains</a>, <a href="https://laravel.com/">Laravel</a>, <a href="https://prestashop.com/">PrestaShop</a>, <a href="https://packagist.com/">Private Packagist</a>, <a href="https://symfony.com/">Symfony</a>, <a href="https://tideways.com/">Tideways</a>, <a href="https://www.zend.com/">Zend by Perforce</a>.</p>
 
-    <div x-show="isLoaded" x-cloak>
-        <div class="font-medium text-xl my-4"><span x-text="sponsorsCount"></span> organizations support the PHP Foundation
+            <p class="text-gray-600">In addition to the <a href="https://thephp.foundation/structure/">Governing Board</a>, The PHP Foundation has an <a href="https://thephp.foundation/blog/2023/03/31/php-foundation-update-march-2023/#a-new-benefit-for-major-sponsors-%E2%80%93-advisory-board-membership">Advisory Board</a> with representatives from Automattic, JetBrains, Private Packagist, Symfony, Tideways, Zend by Perforce, Moodle, Shopware, Laravel, Ardennes-étape, Les-Tilleuls.coop / API Platform, Aternos GmbH, PrestaShop, CraftCMS, Manychat, Team.blue, and TYPO3.</p>
+
+            <p class="text-gray-600">The foundation is always open to new sponsors. If your company has been benefiting from PHP over the years, but not sure how it might give back to the ecosystem, now there's a clear and obvious choice.</p>
         </div>
+        <a href="/sponsor" class="button-link button-lg mt-2">Become a sponsor</a>
     </div>
-    
-    <div class="mb-14 text-center">
-        <a href="https://opencollective.com/phpfoundation/contribute/major-sponsors-34207/checkout?interval=year&amount=12000&contributeAs=me" target="_blank"
-           class="inline-block text-xl py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">
-            Become a sponsor of The PHP Foundation
-        </a>
+    <div class="mt-16">
+        {% include('sponsors.html') %}
     </div>
 </section>
 
-<section class="text-center">
-<!--    <div class="mx-auto max-w-4xl px-6 lg:px-0 pt-8">-->
-    <div class="mx-auto max-w-full px-4">
+<section class="container-wide pb-24">
+    <div class="section-rule pt-12">
         
         <div x-data="{
             sponsors: [],
@@ -183,23 +148,24 @@ use:
                         this.isLoaded = true
                     });
             }
-        }" x-init="fetchSponsoringUsers()" class="mt-8">
+        }" x-init="fetchSponsoringUsers()">
             <div x-show="isLoaded" x-cloak>
-                <div class="font-medium text-xl mb-8 mt-14">More than <span x-text="sponsorsCount"></span> individuals support The PHP Foundation</div>
-                <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 xl:grid-cols-10 gap-4">
+                <p class="eyebrow">Individuals</p>
+                <div class="section-title mb-10">More than <span x-text="sponsorsCount"></span> individuals support The PHP Foundation</div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-10 gap-y-2">
                     <template x-for="sponsor in sponsors">
                         <a :href="sponsor.website ?? sponsor.profile"
-                           class="block no-underline hover:underline" target="_blank"
+                           class="block py-1 no-underline text-gray-700 hover:text-[#5646e0]" target="_blank"
                            rel="noopener noreferrer">
-                            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-gray-900 mb-4"
+                            <div class="overflow-hidden overflow-ellipsis whitespace-nowrap text-sm"
                                  x-text="sponsor.name"></div>
                         </a>
                     </template>
                 </div>
 
-                <div class="my-6">
+                <div class="my-10">
                     <a href="https://opencollective.com/phpfoundation/contribute/backers-34283/checkout?interval=month&amount=10&contributeAs=me" target="_blank" rel="noopener noreferrer"
-                       class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">Join the movement</a>
+                       class="button-link">Join the movement</a>
                 </div>
             </div>
             <div x-show="!isLoaded" x-cloak>
