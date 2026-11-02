@@ -138,9 +138,8 @@ compatibility promise means that there rarely is a second attempt. Once
 something has made it into a stable release even the tiniest break in
 compatibility means thousands of affected users at PHP’s scale.
 
-The introduction of namespaces to PHP after a large part of PHP’s existing
-standard library was built provided a rare opportunity for a second attempt by
-allowing us to build the replacement API in an empty namespace without touching
+Since namespaces were introduced after a large part of PHP’s existing
+standard library was built, they provide a rare opportunity for a second attempt. The replacement API can sit in an as yet empty namespace without touching
 the behavior of the existing API that PHP developers have come to rely on.
 Users are then able to migrate to the new API at their own pace. This
 methodology was previously used for the Random extension (`Random\*` replacing
