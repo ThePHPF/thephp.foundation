@@ -52,8 +52,8 @@ type level indication. For sorting arrays there are pairs of functions that
 only differ in the sort direction. Userland libraries use strings like `'ASC'`
 or `bool` parameters to describe the same idea and libraries targeting PHP 8.1
 created their own enum. A GitHub search for `SortDirection` revealed more than
-150 different, mutually incompatible hits, not counting differently
-named enums such as Doctrine’s `Order` enum.
+150 different, mutually incompatible hits, not counting differently named enums
+such as Doctrine’s `Order` enum.
 
 ## Two New Dictionary Entries
 
@@ -81,15 +81,13 @@ $query->orderBy('created_at', SortDirection::Descending);
 
 `Time\Duration` represents a period of time as measured by a stopwatch, from a
 single nanosecond up to more than a hundred years with nanosecond precision
-across the entire range. Its named constructors spell out the desired unit
-and do exactly what they say on the tin, so there is no more
-guessing whether a `$timeout` parameter expects seconds, milliseconds, or moon
-phases.
+across the entire range. Its named constructors spell out the desired unit and
+do exactly what they say on the tin, so there is no more guessing whether a
+`$timeout` parameter expects seconds, milliseconds, or moon phases.
 
 Similarly, reading the value uses a pair of properties called `->seconds` and
-`->nanoseconds` with an explicit `->negative` flag, avoiding the
-“magic number” problem. The new polling API that was developed as part of the
-“[Streams
+`->nanoseconds` with an explicit `->negative` flag, avoiding the “magic number”
+problem. The new polling API that was developed as part of the “[Streams
 Project](https://thephp.foundation/blog/2025/10/30/php-streams-evolution/)” and
 that is also included starting with PHP 8.6 is the first one to accept it.
 
@@ -138,14 +136,14 @@ compatibility promise means that there rarely is a second attempt. Once
 something has made it into a stable release even the tiniest break in
 compatibility means thousands of affected users at PHP’s scale.
 
-Since namespaces were introduced after a large part of PHP’s existing
-standard library was built, they provide a rare opportunity for a second attempt. The replacement API can sit in an as yet empty namespace without touching
-the behavior of the existing API that PHP developers have come to rely on.
-Users are then able to migrate to the new API at their own pace. This
-methodology was previously used for the Random extension (`Random\*` replacing
-`mt_rand()`, `shuffle()` et al), the DOM extension (`Dom\*` replacing `DOM*`)
-and the URI extension (`Uri\*` replacing `parse_url()`) mentioned in the
-introduction.
+Since namespaces were introduced after a large part of PHP’s existing standard
+library was built, they provide a rare opportunity for a second attempt. The
+replacement API can sit in an as yet empty namespace without touching the
+behavior of the existing API that PHP developers have come to rely on.  Users
+are then able to migrate to the new API at their own pace. This methodology was
+previously used for the Random extension (`Random\*` replacing `mt_rand()`,
+`shuffle()` et al), the DOM extension (`Dom\*` replacing `DOM*`) and the URI
+extension (`Uri\*` replacing `parse_url()`) mentioned in the introduction.
 
 To make the most of this opportunity the RFCs are deliberately taking small
 steps, with a clearly spelled out future scope to allow for long-term planning
