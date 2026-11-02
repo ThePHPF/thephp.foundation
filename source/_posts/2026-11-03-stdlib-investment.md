@@ -32,7 +32,7 @@ their value greatly exceeds their size.
 
 When a concept as common as measuring elapsed time or sorting things in
 different directions has no type in the standard library, every project tends
-to invent its own solution to this common problem. Looked at individually each
+to invent its own solution to this common problem. Looked at individually, each
 of these inventions makes sense. But combining them into a coherent application
 means that glue code needs to be added whenever crossing a boundary between two
 different libraries. It also means that every developer needs to learn which
@@ -52,7 +52,7 @@ type level indication. For sorting arrays there are pairs of functions that
 only differ in the sort direction. Userland libraries use strings like `'ASC'`
 or `bool` parameters to describe the same idea and libraries targeting PHP 8.1
 created their own enum. A GitHub search for `SortDirection` revealed more than
-150 different \- incompatible with each other \- hits, not counting differently
+150 different, mutually incompatible hits, not counting differently
 named enums such as Doctrine’s `Order` enum.
 
 ## Two New Dictionary Entries
@@ -81,13 +81,13 @@ $query->orderBy('created_at', SortDirection::Descending);
 
 `Time\Duration` represents a period of time as measured by a stopwatch, from a
 single nanosecond up to more than a hundred years with nanosecond precision
-across the entire range. Its named constructors include the desired unit in
-their name and do exactly what they say on the tin, so there is no more
+across the entire range. Its named constructors spell out the desired unit
+and do exactly what they say on the tin, so there is no more
 guessing whether a `$timeout` parameter expects seconds, milliseconds, or moon
 phases.
 
-Reading the value uses a pair of properties called `->seconds` and
-`->nanoseconds` with an explicit `->negative` flag, similarly avoiding the
+Similarly, reading the value uses a pair of properties called `->seconds` and
+`->nanoseconds` with an explicit `->negative` flag, avoiding the
 “magic number” problem. The new polling API that was developed as part of the
 “[Streams
 Project](https://thephp.foundation/blog/2025/10/30/php-streams-evolution/)” and
