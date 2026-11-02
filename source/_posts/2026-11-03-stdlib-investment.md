@@ -129,6 +129,9 @@ incompatible with each other. A single design discussion on PHP Internals, even
 if it comes with a higher initial investment, replaces all these efforts and
 gives the ecosystem something to converge on.
 
+
+## Planning for the Next Decades
+
 Having the discussion is important, since getting the design right matters more
 for the standard library than for any userland package. PHP’s strong backwards
 compatibility promise means that there rarely is a second attempt. Once
@@ -171,6 +174,9 @@ convenience functionality, leaving those as future scope. The result is a new
 class representing a generic concept that is useful *today* even if future
 parts do not materialize, while leaving room for `Time\Instant` and whatever
 follows.
+
+
+## Making It Sustainable
 
 All this work is not free. Building functionality that unites the ecosystem
 requires RFC authors doing research, coming up with a design and managing the
