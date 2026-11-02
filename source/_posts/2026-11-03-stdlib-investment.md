@@ -28,7 +28,7 @@ continues to expand the vocabulary of its standard library by adding a
 others. Both of these are small and intentionally so. This post explores why
 their value greatly exceeds their size.
 
-# Everyone Reinvents the Wheel
+## Everyone Reinvents the Wheel
 
 When a concept as common as measuring elapsed time or sorting things in
 different directions has no type in the standard library, every project tends
@@ -41,7 +41,7 @@ different libraries. It also means that every developer needs to learn which
 PHP itself is no exception.
 
 To pass an “amount of time”, PHP’s own standard library uses seconds
-(`sleep()`), milliseconds (`CURLOPT_TIMEOUT_MS`) microseconds (`usleep()`),
+(`sleep()`), milliseconds (`CURLOPT_TIMEOUT_MS`), microseconds (`usleep()`),
 nanoseconds (`hrtime()`), pairs of integers indicating seconds \+ a number of
 fractional seconds (`stream_set_timeout()`), and floats (`microtime(true)`).
 
@@ -55,7 +55,7 @@ created their own enum. A GitHub search for `SortDirection` revealed more than
 150 different \- incompatible with each other \- hits, not counting differently
 named enums such as Doctrine’s `Order` enum.
 
-# Two New Dictionary Entries
+## Two New Dictionary Entries
 
 `SortDirection` is an enum with exactly two cases (`Ascending` and
 `Descending`) and no associated behavior. It is fully described by four lines
@@ -79,7 +79,7 @@ serializing it for use in a SQL query or HTTP API.
 $query->orderBy('created_at', SortDirection::Descending);
 ```
 
-`Time\Duration` represents a period of time as measured by a stop-watch, from a
+`Time\Duration` represents a period of time as measured by a stopwatch, from a
 single nanosecond up to more than a hundred years with nanosecond precision
 across the entire range. Its named constructors include the desired unit in
 their name and do exactly what they say on the tin, so there is no more
@@ -97,7 +97,7 @@ that is also included starting with PHP 8.6 is the first one to accept it.
 $events = $pollContext->wait(Time\Duration::fromMilliseconds(250));
 ```
 
-# A Foundation for More to Come
+## A Foundation for More to Come
 
 `Time\Duration` is already usable by itself, but is only intended to be the
 first building block of a new date and time API built with the capabilities of
@@ -110,7 +110,7 @@ between two `Time\Instant`s is a `Time\Duration` and moving the point in time
 takes a `Time\Duration` as input, building on the foundation already built and
 fitting together like two well-oiled gears.
 
-# The Standard Library Is Worth the Investment
+## The Standard Library Is Worth the Investment
 
 An enum that can be written in just four lines of PHP and a class with three
 properties and a handful of methods might not look like they deserve a
@@ -123,7 +123,7 @@ already exists.
 
 The demand for these types was already there. There were more than 150
 different hits for the 4-line enum and there are multiple userland libraries
-and extensions that provide a class to measure stop-watch time. They are all
+and extensions that provide a class to measure stopwatch time. They are all
 well-intentioned solutions to the same common problem. They are also all
 incompatible with each other. A single design discussion on PHP Internals, even
 if it comes with a higher initial investment, replaces all these efforts and
@@ -192,7 +192,7 @@ Here’s how *you* can help:
 period](https://thephp.foundation/blog/2026/08/17/how-to-contribute-to-php/#1.-test-prereleases),
 focusing on new functionality, such as `Time\Duration`, and report any issues
 you find, to help the feature make a good first impression on the community at
-large after the gold release.
+large after the stable release.
 2. Accept it: Where possible, widen APIs in libraries you maintain to accept
 the new types. A union type in a parameter allows you to do so without a
 breaking change. This allows PHP developers to benefit from the clearer
