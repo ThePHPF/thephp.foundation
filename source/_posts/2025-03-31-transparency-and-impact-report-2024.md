@@ -382,7 +382,7 @@ The PHP language is a living entity and, as such, requires continuous support to
 
 Based on the strong third year of the foundation, we are excited to continue and multiply the efforts in the next years.
 
-With [**your help**](https://thephp.foundation/sponsor/), we continue the mission to advance, develop, and support the PHP language.
+With [**your help**](https://thephp.foundation/sponsor/), we continue the mission to support, advance, and develop the PHP language.
 
 <section class="text-center mt-6">
     <div class="mb-14">

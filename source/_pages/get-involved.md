@@ -5,7 +5,7 @@ permalink: get-involved
 layout: page
 ---
 
-The PHP Foundation exists to advance, develop, and support the PHP language. It's an organization with a budget and donors, but the vast majority of its effort comes from the work of volunteer members of the community.
+The PHP Foundation exists to support, advance, and develop the PHP language. It's an organization with a budget and donors, but the vast majority of its effort comes from the work of volunteer members of the community.
 
 PHP thrives when we all take part, and there are many ways to contribute, whether you write code or not. Below are the main opportunities to get involved, from our Special Interest Groups and community Discord to contributing to PHP itself and supporting the Foundation financially.
 

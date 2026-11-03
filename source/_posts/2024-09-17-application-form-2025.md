@@ -11,7 +11,7 @@ published_at: 17 September 2024
 
 ---
 
-The PHP Foundation is a non-profit organization, started in 2021 by Acquia, Automattic, Craft CMS, JetBrains, Laravel, PrestaShop, Private Packagist, Symfony, Tideways, and Zend by Perforce with a mission to advance, develop, and support the PHP language.
+The PHP Foundation is a non-profit organization, started in 2021 by Acquia, Automattic, Craft CMS, JetBrains, Laravel, PrestaShop, Private Packagist, Symfony, Tideways, and Zend by Perforce with a mission to support, advance, and develop the PHP language.
 
 The foundation pays [10 developers](https://thephp.foundation/structure/#core_developers) to work on the language. See what the foundation achieved in 2023 in the [Impact and transparency report](https://thephp.foundation/blog/2024/02/26/transparency-and-impact-report-2023/).
 
