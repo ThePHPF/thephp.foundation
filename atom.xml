@@ -3,9 +3,213 @@
     <title><![CDATA[The PHP Foundation]]></title>
     <link href="https://thephp.foundation/atom.xml" rel="self"/>
     <link href="https://thephp.foundation/"/>
-    <updated>2026-10-22T20:16:57+00:00</updated>
+    <updated>2026-11-03T15:48:08+00:00</updated>
     <id>https://thephp.foundation/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Designed Once, Usable Everywhere: An Investment in PHP’s Standard Library]]></title>
+            <link href="https://thephp.foundation/blog/2026/11/03/stdlib-investment/"/>
+            <updated>2026-11-03T00:00:00+00:00</updated>
+            <id>https://thephp.foundation/blog/2026/11/03/stdlib-investment/</id>
+            <content type="html"><![CDATA[<p>All PHP projects have one thing in common, regardless of whether they are built
+on a full-stack framework, on a microservice framework with carefully selected
+standalone libraries, or as an extension for a CMS: the PHP standard library.
+Functions such as <code>str_replace()</code> or <code>array_map()</code> and classes like
+<code>DateTimeImmutable</code> or <code>Uri\Rfc3986\Uri</code> from PHP 8.5 are always available,
+always work the same, and always have the same meaning. This makes PHP’s
+standard library a “lingua franca”, enabling specialized standalone libraries
+to seamlessly integrate into full-stack frameworks and allowing developers to
+transfer knowledge and experience across the different parts of PHP’s
+ecosystem.</p>
+
+<p>After the Random extension in PHP 8.2, the new DOM API in PHP 8.4 and the <a href="https://thephp.foundation/blog/2025/10/10/php-85-uri-extension/">URI
+extension in PHP
+8.5</a>, PHP 8.6
+continues to expand the vocabulary of its standard library by adding a
+<a href="https://wiki.php.net/rfc/sort_direction_enum"><code>SortDirection</code> enum</a> and the
+<a href="https://wiki.php.net/rfc/duration_class"><code>Time\Duration</code> class</a> amongst
+others. Both of these are small and intentionally so. This post explores why
+their value greatly exceeds their size.</p>
+
+<h2 id="everyone-reinvents-the-wheel">Everyone Reinvents the Wheel</h2>
+
+<p>When a concept as common as measuring elapsed time or sorting things in
+different directions has no type in the standard library, every project tends
+to invent its own solution to this common problem. Looked at individually, each
+of these inventions makes sense. But combining them into a coherent application
+means that glue code needs to be added whenever crossing a boundary between two
+different libraries. It also means that every developer needs to learn which
+“dialect” a given library speaks.</p>
+
+<p>PHP itself is no exception.</p>
+
+<p>To pass an “amount of time”, PHP’s own standard library uses seconds
+(<code>sleep()</code>), milliseconds (<code>CURLOPT_TIMEOUT_MS</code>), microseconds (<code>usleep()</code>),
+nanoseconds (<code>hrtime()</code>), pairs of integers indicating seconds &#43; a number of
+fractional seconds (<code>stream_set_timeout()</code>), and floats (<code>microtime(true)</code>).</p>
+
+<p>For indicating the direction of sorting the situation is similar. In PHP’s
+standard library there are integer constants <code>SORT_ASC</code> and
+<code>SCANDIR_SORT_ASCENDING</code> that only work with specific functions, without any
+type level indication. For sorting arrays there are pairs of functions that
+only differ in the sort direction. Userland libraries use strings like <code>'ASC'</code>
+or <code>bool</code> parameters to describe the same idea and libraries targeting PHP 8.1
+created their own enum. A GitHub search for <code>SortDirection</code> revealed more than
+150 different, mutually incompatible hits, not counting differently named enums
+such as Doctrine’s <code>Order</code> enum.</p>
+
+<h2 id="two-new-dictionary-entries">Two New Dictionary Entries</h2>
+
+<p><code>SortDirection</code> is an enum with exactly two cases (<code>Ascending</code> and
+<code>Descending</code>) and no associated behavior. It is fully described by four lines
+of PHP code:</p>
+
+<pre><code class="php">enum SortDirection {
+    case Ascending;
+    case Descending;
+}
+</code></pre>
+
+<p>Implementing it in one’s own library is trivial, but using it across libraries
+that each implement their own <code>SortDirection</code> enum would require complicated
+babelfishes that map between the different enums. Since <code>SortDirection</code> is
+guaranteed to always be available in PHP 8.6, libraries can use it in their
+public APIs, only needing to translate it to a different representation when
+serializing it for use in a SQL query or HTTP API.</p>
+
+<pre><code class="php">$query-&gt;orderBy('created_at', SortDirection::Descending);
+</code></pre>
+
+<p><code>Time\Duration</code> represents a period of time as measured by a stopwatch, from a
+single nanosecond up to more than a hundred years with nanosecond precision
+across the entire range. Its named constructors spell out the desired unit and
+do exactly what they say on the tin, so there is no more guessing whether a
+<code>$timeout</code> parameter expects seconds, milliseconds, or moon phases.</p>
+
+<p>Similarly, reading the value uses a pair of properties called <code>-&gt;seconds</code> and
+<code>-&gt;nanoseconds</code> with an explicit <code>-&gt;negative</code> flag, avoiding the “magic number”
+problem. The new polling API that was developed as part of the “<a href="https://thephp.foundation/blog/2025/10/30/php-streams-evolution/">Streams
+Project</a>” and
+that is also included starting with PHP 8.6 is the first one to accept it.</p>
+
+<pre><code class="php">$events = $pollContext-&gt;wait(Time\Duration::fromMilliseconds(250));
+</code></pre>
+
+<h2 id="a-foundation-for-more-to-come">A Foundation for More to Come</h2>
+
+<p><code>Time\Duration</code> is already usable by itself, but is only intended to be the
+first building block of a new date and time API built with the capabilities of
+modern PHP. The next part of this new API is <a href="https://news-web.php.net/php.internals/132588">already under
+discussion</a>. The <a href="https://wiki.php.net/rfc/time_instant_class">Time&#92;Instant
+and Time&#92;Clock RFC</a> proposes a
+<code>Time\Instant</code> class representing points in time, together with a <code>Time\Clock</code>
+interface to make testing time-dependent functionality easier. The distance
+between two <code>Time\Instant</code>s is a <code>Time\Duration</code> and moving the point in time
+takes a <code>Time\Duration</code> as input, building on the foundation already built and
+fitting together like two well-oiled gears.</p>
+
+<h2 id="the-standard-library-is-worth-the-investment">The Standard Library Is Worth the Investment</h2>
+
+<p>An enum that can be written in just four lines of PHP and a class with three
+properties and a handful of methods might not look like they deserve a
+potentially lengthy RFC discussion on the PHP Internals mailing list when you
+could build them yourself in less than an afternoon without coordinating with
+anyone else. I think they are exactly the work that pays off the most in the
+long run, because they give the ecosystem something new to rely on that
+replaces custom implementations, rather than just a different way to write what
+already exists.</p>
+
+<p>The demand for these types was already there. There were more than 150
+different hits for the 4-line enum and there are multiple userland libraries
+and extensions that provide a class to measure stopwatch time. They are all
+well-intentioned solutions to the same common problem. They are also all
+incompatible with each other. A single design discussion on PHP Internals, even
+if it comes with a higher initial investment, replaces all these efforts and
+gives the ecosystem something to converge on.</p>
+
+<h2 id="planning-for-the-next-decades">Planning for the Next Decades</h2>
+
+<p>Having the discussion is important, since getting the design right matters more
+for the standard library than for any userland package. PHP’s strong backwards
+compatibility promise means that there rarely is a second attempt. Once
+something has made it into a stable release even the tiniest break in
+compatibility means thousands of affected users at PHP’s scale.</p>
+
+<p>Since namespaces were introduced after a large part of PHP’s existing standard
+library was built, they provide a rare opportunity for a second attempt. The
+replacement API can sit in an as yet empty namespace without touching the
+behavior of the existing API that PHP developers have come to rely on.  Users
+are then able to migrate to the new API at their own pace. This methodology was
+previously used for the Random extension (<code>Random\*</code> replacing <code>mt_rand()</code>,
+<code>shuffle()</code> et al), the DOM extension (<code>Dom\*</code> replacing <code>DOM*</code>) and the URI
+extension (<code>Uri\*</code> replacing <code>parse_url()</code>) mentioned in the introduction.</p>
+
+<p>To make the most of this opportunity the RFCs are deliberately taking small
+steps, with a clearly spelled out future scope to allow for long-term planning
+without committing to decisions too early. Keeping PHP internally consistent
+means that every decision we make today constrains the ones that follow and
+potentially rules out some paths entirely. A small API that is correct and
+built with future evolution in mind is easy to extend. A large API that is
+slightly wrong will be a nuisance for decades to come.</p>
+
+<p>The <code>Time\Duration</code> RFC showed how this looks in practice. Derick Rethans,
+ext/date maintainer and a PHP Foundation contractor, and I wanted the new
+polling API to take a <code>Time\Duration</code> timeout instead of a <code>$timeoutSeconds</code>
+and <code>$timeoutMicroseconds</code> pair before the PHP 8.6 feature freeze made its
+signature permanent. This left us with about two months from when we first
+proposed the RFC. A sub-optimal API in a single method is a localized problem.
+Replacing it with a reusable building block that is not quite right would fix a
+small problem and create a big one. That’s why our proposal was limited to two
+kinds of functionality: the first being the parts that we were confident about,
+erring on the side of caution, the second being functionality that future
+additions would rely on, but that could not be added later without breaking
+existing expectations, such as support for negative durations. We also clearly
+communicated this when starting the discussion, asking the PHP Internals
+community to focus on real issues in their review rather than optional
+convenience functionality, leaving those as future scope. The result is a new
+class representing a generic concept that is useful <em>today</em> even if future
+parts do not materialize, while leaving room for <code>Time\Instant</code> and whatever
+follows.</p>
+
+<h2 id="making-it-sustainable">Making It Sustainable</h2>
+
+<p>All this work is not free. Building functionality that unites the ecosystem
+requires RFC authors doing research, coming up with a design and managing the
+discussion. It also requires reviewers that are willing to spend their time
+reading the RFC, providing insight based on their experience and use case and
+potentially discussing naming for the third time until an agreement is reached.
+The implementation of the discussion results needs to be written, reviewed and
+maintained for long after. In the interest of transparency, <a href="https://tideways.com/open-source">I work at
+Tideways</a>, which is a founding member and
+silver sponsor of The PHP Foundation, and which sponsored part of my time
+working on the <code>SortDirection</code>, <code>Time\Duration</code> and the current <code>Time\Instant</code>
+RFCs. The PHP Foundation funds developers, like my co-author Derick, to do this
+kind of work and it is a large part of why PHP’s standard library has kept
+getting better in the last few years.</p>
+
+<p>Here’s how <em>you</em> can help:</p>
+
+<ol>
+<li>Try it: <a href="https://thephp.foundation/blog/2026/08/17/how-to-contribute-to-php/#1.-test-prereleases">Test PHP versions during their pre-release
+period</a>,
+focusing on new functionality, such as <code>Time\Duration</code>, and report any issues
+you find, to help the feature make a good first impression on the community at
+large after the stable release.</li>
+<li>Accept it: Where possible, widen APIs in libraries you maintain to accept
+the new types. A union type in a parameter allows you to do so without a
+breaking change. This allows PHP developers to benefit from the clearer
+terminology provided by the new classes, while continuing to rely on their
+trusted libraries.</li>
+<li>Shape it: Participate in the discussion of RFCs, such as <a href="https://news-web.php.net/php.internals/132588">the one for
+Time&#92;Instant</a>. Any opinion, big
+or small, provides value.</li>
+<li>Fund it: If you cannot spend the time for (1) to (3) yourself, you can pay
+others to spend the time, for example by convincing your employer to <a href="https://thephp.foundation/sponsor/">sponsor
+The PHP Foundation</a>. Any improvement to PHP
+itself will be paid back multiple times in improved developer experience.</li>
+</ol>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[Today's PHP Security Release, and How We're Strengthening PHP Security]]></title>
             <link href="https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/"/>
@@ -670,76 +874,6 @@ echo bcadd('0.1', '0.2', 1); // 0.3
 <p>Daniel got his start in open-source software by contributing to PHP, where he currently serves as the maintainer of the Reflection extension, as a release manager for PHP 8.5, and as the veteran release manager for PHP 8.6. Daniel will be a huge asset not only to the Ecosystem Security Team but also to the PHP community, through his work on hardening PHP itself.</p>
 
 <p>Welcome, Daniel!</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Digital Sovereignty Is Written in PHP]]></title>
-            <link href="https://thephp.foundation/blog/2026/09/02/digital-sovereignty-is-written-in-php/"/>
-            <updated>2026-09-02T00:00:00+00:00</updated>
-            <id>https://thephp.foundation/blog/2026/09/02/digital-sovereignty-is-written-in-php/</id>
-            <content type="html"><![CDATA[<p>Germany is spending €108 million to move its federal websites onto a PHP application.</p>
-
-<p>The money is the budget for the eleventh version of the Government Site Builder, the German federal administration's standard content management solution: <a href="https://www.plan2.net/blog-news/blogbeitrag/deutschland-investiert-108-millionen-euro-in-typo3">€26.88 million for product development and support, €73.2 million for migration and relaunch, €8 million for operations</a>, phased over four years. <a href="https://www.itzbund.de/DE/itloesungen/standardloesungen/gsb/gsb.html">More than 80 federal agencies and institutions already use it, and they have built well over 250 websites with it</a>.</p>
-
-<p>In 2025, The PHP Foundation received <a href="https://thephp.foundation/blog/2026/05/27/impact-and-transparency-report-2025/">$730,534 in total contributions</a>.</p>
-
-<p>I am not going to argue from those two numbers that PHP deserves better treatment. What I want to describe is something that has gone largely unnoticed, including by those of us who work on PHP: across Europe, public administrations have already decided what their digital infrastructure runs on. They decided it in procurement documents, framework agreements, and coalition agreements. And when those documents say "digital sovereignty", what they describe, over and over, is a PHP application.</p>
-
-<h2 id="where-citizens-actually-reach-their-governments">Where citizens actually reach their governments</h2>
-
-<p>The European Commission is the largest case: At the Drupal4Gov EU conference in Brussels in January 2026, the team behind the Europa Web Publishing Platform described what they operate: <a href="https://drunomics.com/en/blog/drupal4gov-eu-2026-how-drupal-powers-european-governments-247">770 live sites for 44 different Commission services, 700 million visits and 2.2 billion page views per year</a>. The move to a shared Drupal platform began in 2019, because letting each Directorate-General maintain its own customised codebase had made security patching and consistent user experience progressively harder. The reusable parts are public, in the <a href="https://github.com/openeuropa">OpenEuropa</a> and <a href="https://github.com/ec-europa">ec-europa</a> organisations on GitHub.</p>
-
-<p>The European Union Aviation Safety Agency runs its <a href="https://www.easa.europa.eu/en/domains/environment/sustainability-portal">Sustainability Portal</a> on Drupal: a regulatory compliance platform serving over 350 airlines and 31 national authorities for the ReFuelEU Aviation regulation. Analytics run on Matomo, email on Mautic. Three PHP applications carry an aviation compliance regime.</p>
-
-<p>In the Netherlands, DICTU's <a href="https://www.drupal.org/project/govnl_cms_project">GovNL CMS</a> brings government website deployment down from three months to ten minutes using design tokens, Drupal Recipes, and automated infrastructure. In France, the Drupal base theme for the state design system is <a href="https://www.drupal.org/project/dsfr">monitored by the Service d'Information du Gouvernement and DINUM</a>, so the French state supervises PHP code as part of its own design authority. In the United Kingdom and Ireland, <a href="https://localgovdrupal.org">LocalGov Drupal</a> has over 58 councils sharing a common codebase and pooling development budgets, with reported savings of 50 to 80 percent against building a council website from scratch. In Australia, <a href="https://www.govcms.gov.au/why-govcms">GovCMS</a> hosts more than 370 websites for 115 government agencies, has been running for over a decade, and holds an OFFICIAL:Sensitive security classification.</p>
-
-<p>Not one of these is a pilot project. Each of them carries the everyday traffic between a government and the people it serves.</p>
-
-<h2 id="germany%27s-shortlist-only-had-php-entries">Germany's shortlist only had PHP entries</h2>
-
-<p>The German case is worth looking at closely, because the decision is documented rather than inferred.</p>
-
-<p>The <a href="https://produkt.gsb.bund.de/gsb11">Government Site Builder (GSB)</a> became, in version 11, a measure under the federal Ministry of the Interior's service consolidation programme. It is <a href="https://de.wikipedia.org/wiki/Government_Site_Builder">built entirely from open-source components and published on the OpenCoDE platform</a>, and it is <a href="https://typo3.com/solutions/industries/public-sector/government-site-builder">based on TYPO3</a>. The evaluation that led there had narrowed the field to <a href="https://www.cms-garden.org/de/magazin/der-neue-government-site-builder-powered-by-typo3">Drupal and TYPO3</a>: the shortlist for the German federal government's standard content management system consisted exclusively of PHP applications. The work was then split. <a href="https://www.cps-it.de/aktuelles/open-source-fuer-den-bund">A consortium led by CPS, with 3pc, brandung, DFAU, in2code, THE BRETTINGHAMS and queo, develops GSB 11 itself</a> over four years. In March 2025, <a href="https://www.pagemachine.de/typo3-cms/government-site-builder-mit-typo3">a consortium of 17 TYPO3 agencies led by the Materna Group won the migration lot</a> and will move hundreds of federal websites across.</p>
-
-<p>The most telling detail is not German at all: When Swiss parliamentarians criticised their own federal administration for procuring a closed-source CMS, they held up the German decision as the model to follow: <a href="https://parldigi.ch/de/parldigi-direkt-open-source-in-der-verwaltung-deutschland-machts-vor/">"Deutschland machts vor"</a>, Germany is showing how it's done. A national decision to standardise on a PHP application is now cited in a foreign parliament as best practice.</p>
-
-<h2 id="the-sovereign-workplace-is-a-php-application">The sovereign workplace is a PHP application</h2>
-
-<p>In these programmes, digital sovereignty is described in practice by naming specific pieces of software.</p>
-
-<p>The ITZBund's Bundescloud includes the SIB-Box, <a href="https://www.itzbund.de/DE/itloesungen/egovernment/bundescloud/bundescloud.html">built on Nextcloud</a>, serving <a href="https://www.linux-magazin.de/news/bundesverwaltung-setzt-auf-nextcloud/">roughly 300,000 federal users</a>. <a href="https://opendesk.eu/blog/opendesk-1-0-veroeffentlicht/">openDesk</a>, the sovereign workplace built by the Zentrum für Digitale Souveränität, integrates Nextcloud alongside Collabora, Element, Open-Xchange, OpenProject, and XWiki. It is <a href="https://bmds.bund.de/themen/digitale-souveraenitaet/digitale-souveraenitaet-in-der-oeffentlichen-verwaltung/souveraener-arbeitsplatz">anchored in the German coalition agreement: by October 2028 the federal administration is to have a digitally sovereign alternative to proprietary IT workplaces</a>. The state of Baden-Württemberg has already <a href="https://www.btc-ag.com/cloud-blog/der-souveraene-arbeitsplatz-opendesk-nextcloud-workspace/">migrated close to 60,000 teacher workplaces</a>; the Bundeswehr has a framework agreement; the Robert Koch Institute and several ministries run components in production. The International Criminal Court in The Hague intends to adopt it.</p>
-
-<p>Nextcloud Server is a PHP application: versions 33 and 34 <a href="https://github.com/nextcloud/server/wiki/Releases-and-PHP-versions">support PHP 8.2 through 8.5</a>, and the <a href="https://docs.nextcloud.com/server/stable/admin_manual/installation/php_configuration.html">administration manual</a> still opens the installation chapter with PHP configuration. That claim needs a caveat, because the picture has changed: the Files High Performance Backend is <a href="https://nextcloud.com/blog/nextcloud-faster-than-ever-introducing-files-high-performance-back-end/">written in Rust</a>, and the <a href="https://nextcloud.com/blog/a-new-data-access-architecture-for-nextcloud-introducing-the-ada-engine/">ADA engine announced in 2026</a> rewrites the file access layer in PHP, Go, and Rust. PHP carries the application and the business logic, but the I/O-bound paths increasingly do not. MediaWiki, which runs Wikipedia, is built the same way.</p>
-
-<h2 id="the-asymmetry">The asymmetry</h2>
-
-<p>€108 million for one national migration. 770 sites at the European Commission. 370 across the Australian government. Around 300,000 users in the German federal cloud. Tens of thousands of teacher workplaces in one German state alone.</p>
-
-<p>And $730,534 in contributions to The PHP Foundation in 2025, from <a href="https://thephp.foundation/blog/2026/05/27/impact-and-transparency-report-2025/">536 organisations and individuals, substantially fewer than the previous year, with expenses exceeding donations by roughly $139,000</a>, a deliberate choice to maintain technical headcount. <a href="https://thephp.foundation/structure/">Thirteen contracted engineers</a> maintain the language underneath all of it.</p>
-
-<p>I want to be careful about the conclusion here, because nobody in this story has acted badly. What the numbers show is a structural gap: the institutions most dependent on PHP have no established mechanism by which that dependency turns into maintenance funding. Nobody designed that gap; it is what happens when infrastructure is free at the point of use.</p>
-
-<p>One institution has already built the mechanism. The Sovereign Tech Agency, funded by the German government, commissioned work that produced the <a href="https://thephp.foundation/blog/2024/10/21/web-services-tool-for-php-fpm/">PHP-FPM Web Services Tool</a> and the <a href="https://thephp.foundation/blog/2025/10/30/php-streams-evolution/">evolution of PHP's stream layer for async, security and performance</a>. Public money went into the substrate and shipped capability came back out. The mechanism exists and it works. What it lacks is the habit of being used.</p>
-
-<h2 id="what-would-make-it-normal">What would make it normal</h2>
-
-<p>At Drupal4Gov EU, <a href="https://www.youtube.com/watch?v=dKBdQMQf1bw&amp;list=PLNubpNMwP36QH5Y3RlbOiV4f9hjlrxCOo&amp;index=15">Tiffany Farriss, now Interim CEO of the Drupal Association, proposed a set of procurement changes</a> that translate directly to any language ecosystem. They are worth repeating here because they require no goodwill, only a change to how tenders are scored, and because the first of them fits inside a framework that European procurement already uses:</p>
-
-<ol>
-<li><strong>A sovereignty criterion with real weight:</strong> Twenty percent of tender evaluation points awarded for verified open-source contributions, as a distinct assessment criterion under the MEAT framework, the Most Economically Advantageous Tender. That puts software transparency and digital sovereignty next to the qualitative, environmental and social criteria a tender is already allowed to score.</li>
-<li><strong>A maintenance line item:</strong> A share of contract value allocated to upstream maintenance of the components the delivery depends on, budgeted at the outset rather than found later. Farriss deliberately does not fix the number and would rather see one settled in public: her own estimate is 2 to 5 percent, depending on the budget and the duration of the project, and up to 10 percent on complex ones.</li>
-<li><strong>A 30-day upstream rule:</strong> Non-sensitive code developed under public contract contributed back within 30 days, so that the next administration inherits it instead of paying for it again.</li>
-</ol>
-
-<p>An administration that adopts these does not need to know or care that its CMS is written in PHP. It only needs to accept that the code it depends on has maintainers, and that maintainers have budgets.</p>
-
-<h2 id="what-we-are-asking">What we are asking</h2>
-
-<p>If you work in or with a public administration: the software your organisation depends on almost certainly includes several PHP applications, and quite possibly the ones your sovereignty strategy is built around. The three proposals above belong in your next tender rather than in your next strategy document.</p>
-
-<p>If you are an agency delivering these contracts: put the line item in the bid. You are in a better position than anyone to make upstream maintenance a normal cost of delivery rather than an act of charity.</p>
-
-<p>And if you know a case we have missed, a ministry, a municipality, a health service, a statistics office running on PHP, tell us. This article covers Europe and one Australian platform because that is as far as the research went. We would like to publish those cases here, written by the people who built them.</p>
 ]]></content>
         </entry>
     </feed>

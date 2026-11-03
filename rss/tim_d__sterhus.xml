@@ -1,5 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-10-22T20:16:57+00:00</updated><entry><author><name>Tim Düsterhus</name><uri>https://github.com/TimWolla/</uri></author><title type="html"><![CDATA[PHP’s New URI Extension: An Open Source Success Story]]></title><content type="html"><![CDATA[<p>URLs are a fundamental building block of the Web we rely on every day.</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-11-03T15:48:08+00:00</updated><entry><author><name>Tim Düsterhus</name><uri>https://github.com/TimWolla/</uri></author><title type="html"><![CDATA[Designed Once, Usable Everywhere: An Investment in PHP’s Standard Library]]></title><content type="html"><![CDATA[<p>All PHP projects have one thing in common, regardless of whether they are built
+on a full-stack framework, on a microservice framework with carefully selected
+standalone libraries, or as an extension for a CMS: the PHP standard library.
+Functions such as <code>str_replace()</code> or <code>array_map()</code> and classes like
+<code>DateTimeImmutable</code> or <code>Uri\Rfc3986\Uri</code> from PHP 8.5 are always available,
+always work the same, and always have the same meaning. This makes PHP’s
+standard library a “lingua franca”, enabling specialized standalone libraries
+to seamlessly integrate into full-stack frameworks and allowing developers to
+transfer knowledge and experience across the different parts of PHP’s
+ecosystem.</p>
+
+<p>After the Random extension in PHP 8.2, the new DOM API in PHP 8.4 and the <a href="https://thephp.foundation/blog/2025/10/10/php-85-uri-extension/">URI
+extension in PHP
+8.5</a>, PHP 8.6
+continues to expand the vocabulary of its standard library by adding a
+<a href="https://wiki.php.net/rfc/sort_direction_enum"><code>SortDirection</code> enum</a> and the
+<a href="https://wiki.php.net/rfc/duration_class"><code>Time\Duration</code> class</a> amongst
+others. Both of these are small and intentionally so. This post explores why
+their value greatly exceeds their size.</p>
+
+<h2 id="everyone-reinvents-the-wheel">Everyone Reinvents the Wheel</h2>
+
+<p>When a concept as common as measuring elapsed time or sorting things in
+different directions has no type in the standard library, every project tends
+to invent its own solution to this common problem. Looked at individually, each
+of these inventions makes sense. But combining them into a coherent application
+means that glue code needs to be added whenever crossing a boundary between two
+different libraries. It also means that every developer needs to learn which
+“dialect” a given library speaks.</p>
+
+<p>PHP itself is no exception.</p>
+
+<p>To pass an “amount of time”, PHP’s own standard library uses seconds
+(<code>sleep()</code>), milliseconds (<code>CURLOPT_TIMEOUT_MS</code>), microseconds (<code>usleep()</code>),
+nanoseconds (<code>hrtime()</code>), pairs of integers indicating seconds &#43; a number of
+fractional seconds (<code>stream_set_timeout()</code>), and floats (<code>microtime(true)</code>).</p>
+
+<p>For indicating the direction of sorting the situation is similar. In PHP’s
+standard library there are integer constants <code>SORT_ASC</code> and
+<code>SCANDIR_SORT_ASCENDING</code> that only work with specific functions, without any
+type level indication. For sorting arrays there are pairs of functions that
+only differ in the sort direction. Userland libraries use strings like <code>'ASC'</code>
+or <code>bool</code> parameters to describe the same idea and libraries targeting PHP 8.1
+created their own enum. A GitHub search for <code>SortDirection</code> revealed more than
+150 different, mutually incompatible hits, not counting differently named enums
+such as Doctrine’s <code>Order</code> enum.</p>
+
+<h2 id="two-new-dictionary-entries">Two New Dictionary Entries</h2>
+
+<p><code>SortDirection</code> is an enum with exactly two cases (<code>Ascending</code> and
+<code>Descending</code>) and no associated behavior. It is fully described by four lines
+of PHP code:</p>
+
+<pre><code class="php">enum SortDirection {
+    case Ascending;
+    case Descending;
+}
+</code></pre>
+
+<p>Implementing it in one’s own library is trivial, but using it across libraries
+that each implement their own <code>SortDirection</code> enum would require complicated
+babelfishes that map between the different enums. Since <code>SortDirection</code> is
+guaranteed to always be available in PHP 8.6, libraries can use it in their
+public APIs, only needing to translate it to a different representation when
+serializing it for use in a SQL query or HTTP API.</p>
+
+<pre><code class="php">$query-&gt;orderBy('created_at', SortDirection::Descending);
+</code></pre>
+
+<p><code>Time\Duration</code> represents a period of time as measured by a stopwatch, from a
+single nanosecond up to more than a hundred years with nanosecond precision
+across the entire range. Its named constructors spell out the desired unit and
+do exactly what they say on the tin, so there is no more guessing whether a
+<code>$timeout</code> parameter expects seconds, milliseconds, or moon phases.</p>
+
+<p>Similarly, reading the value uses a pair of properties called <code>-&gt;seconds</code> and
+<code>-&gt;nanoseconds</code> with an explicit <code>-&gt;negative</code> flag, avoiding the “magic number”
+problem. The new polling API that was developed as part of the “<a href="https://thephp.foundation/blog/2025/10/30/php-streams-evolution/">Streams
+Project</a>” and
+that is also included starting with PHP 8.6 is the first one to accept it.</p>
+
+<pre><code class="php">$events = $pollContext-&gt;wait(Time\Duration::fromMilliseconds(250));
+</code></pre>
+
+<h2 id="a-foundation-for-more-to-come">A Foundation for More to Come</h2>
+
+<p><code>Time\Duration</code> is already usable by itself, but is only intended to be the
+first building block of a new date and time API built with the capabilities of
+modern PHP. The next part of this new API is <a href="https://news-web.php.net/php.internals/132588">already under
+discussion</a>. The <a href="https://wiki.php.net/rfc/time_instant_class">Time&#92;Instant
+and Time&#92;Clock RFC</a> proposes a
+<code>Time\Instant</code> class representing points in time, together with a <code>Time\Clock</code>
+interface to make testing time-dependent functionality easier. The distance
+between two <code>Time\Instant</code>s is a <code>Time\Duration</code> and moving the point in time
+takes a <code>Time\Duration</code> as input, building on the foundation already built and
+fitting together like two well-oiled gears.</p>
+
+<h2 id="the-standard-library-is-worth-the-investment">The Standard Library Is Worth the Investment</h2>
+
+<p>An enum that can be written in just four lines of PHP and a class with three
+properties and a handful of methods might not look like they deserve a
+potentially lengthy RFC discussion on the PHP Internals mailing list when you
+could build them yourself in less than an afternoon without coordinating with
+anyone else. I think they are exactly the work that pays off the most in the
+long run, because they give the ecosystem something new to rely on that
+replaces custom implementations, rather than just a different way to write what
+already exists.</p>
+
+<p>The demand for these types was already there. There were more than 150
+different hits for the 4-line enum and there are multiple userland libraries
+and extensions that provide a class to measure stopwatch time. They are all
+well-intentioned solutions to the same common problem. They are also all
+incompatible with each other. A single design discussion on PHP Internals, even
+if it comes with a higher initial investment, replaces all these efforts and
+gives the ecosystem something to converge on.</p>
+
+<h2 id="planning-for-the-next-decades">Planning for the Next Decades</h2>
+
+<p>Having the discussion is important, since getting the design right matters more
+for the standard library than for any userland package. PHP’s strong backwards
+compatibility promise means that there rarely is a second attempt. Once
+something has made it into a stable release even the tiniest break in
+compatibility means thousands of affected users at PHP’s scale.</p>
+
+<p>Since namespaces were introduced after a large part of PHP’s existing standard
+library was built, they provide a rare opportunity for a second attempt. The
+replacement API can sit in an as yet empty namespace without touching the
+behavior of the existing API that PHP developers have come to rely on.  Users
+are then able to migrate to the new API at their own pace. This methodology was
+previously used for the Random extension (<code>Random\*</code> replacing <code>mt_rand()</code>,
+<code>shuffle()</code> et al), the DOM extension (<code>Dom\*</code> replacing <code>DOM*</code>) and the URI
+extension (<code>Uri\*</code> replacing <code>parse_url()</code>) mentioned in the introduction.</p>
+
+<p>To make the most of this opportunity the RFCs are deliberately taking small
+steps, with a clearly spelled out future scope to allow for long-term planning
+without committing to decisions too early. Keeping PHP internally consistent
+means that every decision we make today constrains the ones that follow and
+potentially rules out some paths entirely. A small API that is correct and
+built with future evolution in mind is easy to extend. A large API that is
+slightly wrong will be a nuisance for decades to come.</p>
+
+<p>The <code>Time\Duration</code> RFC showed how this looks in practice. Derick Rethans,
+ext/date maintainer and a PHP Foundation contractor, and I wanted the new
+polling API to take a <code>Time\Duration</code> timeout instead of a <code>$timeoutSeconds</code>
+and <code>$timeoutMicroseconds</code> pair before the PHP 8.6 feature freeze made its
+signature permanent. This left us with about two months from when we first
+proposed the RFC. A sub-optimal API in a single method is a localized problem.
+Replacing it with a reusable building block that is not quite right would fix a
+small problem and create a big one. That’s why our proposal was limited to two
+kinds of functionality: the first being the parts that we were confident about,
+erring on the side of caution, the second being functionality that future
+additions would rely on, but that could not be added later without breaking
+existing expectations, such as support for negative durations. We also clearly
+communicated this when starting the discussion, asking the PHP Internals
+community to focus on real issues in their review rather than optional
+convenience functionality, leaving those as future scope. The result is a new
+class representing a generic concept that is useful <em>today</em> even if future
+parts do not materialize, while leaving room for <code>Time\Instant</code> and whatever
+follows.</p>
+
+<h2 id="making-it-sustainable">Making It Sustainable</h2>
+
+<p>All this work is not free. Building functionality that unites the ecosystem
+requires RFC authors doing research, coming up with a design and managing the
+discussion. It also requires reviewers that are willing to spend their time
+reading the RFC, providing insight based on their experience and use case and
+potentially discussing naming for the third time until an agreement is reached.
+The implementation of the discussion results needs to be written, reviewed and
+maintained for long after. In the interest of transparency, <a href="https://tideways.com/open-source">I work at
+Tideways</a>, which is a founding member and
+silver sponsor of The PHP Foundation, and which sponsored part of my time
+working on the <code>SortDirection</code>, <code>Time\Duration</code> and the current <code>Time\Instant</code>
+RFCs. The PHP Foundation funds developers, like my co-author Derick, to do this
+kind of work and it is a large part of why PHP’s standard library has kept
+getting better in the last few years.</p>
+
+<p>Here’s how <em>you</em> can help:</p>
+
+<ol>
+<li>Try it: <a href="https://thephp.foundation/blog/2026/08/17/how-to-contribute-to-php/#1.-test-prereleases">Test PHP versions during their pre-release
+period</a>,
+focusing on new functionality, such as <code>Time\Duration</code>, and report any issues
+you find, to help the feature make a good first impression on the community at
+large after the stable release.</li>
+<li>Accept it: Where possible, widen APIs in libraries you maintain to accept
+the new types. A union type in a parameter allows you to do so without a
+breaking change. This allows PHP developers to benefit from the clearer
+terminology provided by the new classes, while continuing to rely on their
+trusted libraries.</li>
+<li>Shape it: Participate in the discussion of RFCs, such as <a href="https://news-web.php.net/php.internals/132588">the one for
+Time&#92;Instant</a>. Any opinion, big
+or small, provides value.</li>
+<li>Fund it: If you cannot spend the time for (1) to (3) yourself, you can pay
+others to spend the time, for example by convincing your employer to <a href="https://thephp.foundation/sponsor/">sponsor
+The PHP Foundation</a>. Any improvement to PHP
+itself will be paid back multiple times in improved developer experience.</li>
+</ol>
+]]></content><link href="https://thephp.foundation/blog/2026/11/03/stdlib-investment/"/><id>https://thephp.foundation/blog/2026/11/03/stdlib-investment/</id><updated>Tue, 03 Nov 2026 00:00:00 +0000</updated></entry><entry><author><name>Tim Düsterhus</name><uri>https://github.com/TimWolla/</uri></author><title type="html"><![CDATA[PHP’s New URI Extension: An Open Source Success Story]]></title><content type="html"><![CDATA[<p>URLs are a fundamental building block of the Web we rely on every day.</p>
 
 <p>Their familiarity makes them appear deceptively simple: Seemingly clearly
 delineated components like scheme, hostname, path, and some others suggest that
