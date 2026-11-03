@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-11-03T20:35:22+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[FrankenPHP Is Now Officially Supported by&nbsp;The&nbsp;PHP&nbsp;Foundation]]></title><content type="html"><![CDATA[<p><a href="https://frankenphp.dev">FrankenPHP</a>, a modern high-performance PHP application server created by <a href="https://dunglas.dev">Kévin Dunglas</a> and sponsored by <a href="http://Les-Tilleuls.coop">Les-Tilleuls.coop</a>, is now officially supported by the PHP Foundation. FrankenPHP integrates PHP directly into Go and Caddy, simplifying deployment, improving performance, and reducing costs. It powers real-time features, supports advanced hosting scenarios, and offers a performance-boosting “worker mode” already integrated by Laravel, Symfony, and Yii. The PHP Foundation will actively contribute to FrankenPHP’s development and host its code on the official PHP GitHub, marking a major step toward modernizing the PHP ecosystem while keeping governance with the original maintainers.</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title><![CDATA[The PHP Foundation]]></title><description><![CDATA[Supporting, Advancing, and Developing the PHP Language]]></description><updated>2026-11-03T20:35:54+00:00</updated><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><title type="html"><![CDATA[FrankenPHP Is Now Officially Supported by&nbsp;The&nbsp;PHP&nbsp;Foundation]]></title><content type="html"><![CDATA[<p><a href="https://frankenphp.dev">FrankenPHP</a>, a modern high-performance PHP application server created by <a href="https://dunglas.dev">Kévin Dunglas</a> and sponsored by <a href="http://Les-Tilleuls.coop">Les-Tilleuls.coop</a>, is now officially supported by the PHP Foundation. FrankenPHP integrates PHP directly into Go and Caddy, simplifying deployment, improving performance, and reducing costs. It powers real-time features, supports advanced hosting scenarios, and offers a performance-boosting “worker mode” already integrated by Laravel, Symfony, and Yii. The PHP Foundation will actively contribute to FrankenPHP’s development and host its code on the official PHP GitHub, marking a major step toward modernizing the PHP ecosystem while keeping governance with the original maintainers.</p>
 
 <p><img src="/assets/post-images/2025/2025-05-15-frankenphp.png" alt="FrankenPHP-PHP-Foundation" /></p>
 
@@ -214,7 +214,7 @@ So it defines 4 priorities of the foundation:</p>
 
 <p>In 2023, we renamed the Administration group to the <strong>Governing Board</strong> to avoid confusions and better align with industry standards.</p>
 
-<p><a href="https://thephp.foundation/structure/#admins">The lineup</a> of the group has not changed and consists of veteran PHP community leaders, representatives of the founding companies, and other key stakeholders.</p>
+<p><a href="https://thephp.foundation/structure/#board">The lineup</a> of the group has not changed and consists of veteran PHP community leaders, representatives of the founding companies, and other key stakeholders.</p>
 
 <p>One notable change compared to the previous year is a full-time operations manager sponsored by JetBrains in addition to the financial contribution.</p>
 
@@ -289,7 +289,7 @@ We did not grow in 2023 strictly speaking, but the work done in 2023 helped to b
 <li><strong>Grow the community of the foundation. ✅</strong><br/>
 The foundation’s Slack became a hub for the community and helped to move initiatives.<br/><br/></li>
 <li><strong>Improve communication and provide clear benefits for sponsors. ✅</strong> <br/>
-We created a <a href="https://thephp.foundation/join/#membership-deck">deck with benefits for sponsors</a> and started the advisory board initiative. <br/><br/></li>
+We created a <a href="https://thephp.foundation/sponsor/#membership-deck">deck with benefits for sponsors</a> and started the advisory board initiative. <br/><br/></li>
 <li><strong>Explore strategic partnerships and marketing opportunities. ✅ / ❌</strong><br/>
 We received investment from the Sovereign Tech Fund and started collaboration with OSTIF.<br/>
 We did not explore any marketing opportunities. And there is a room for many more strategic partnerships.</li>
@@ -1054,7 +1054,7 @@ Office hours call: <a href="http://cal.com/pronskiy/php-foundation-office-hours"
 
 <p>The PHP Foundation is a non-profit organization, started in 2021 by Acquia, Automattic, Craft CMS, JetBrains, Laravel, PrestaShop, Private Packagist, Symfony, Tideways, and Zend by Perforce with a mission to support, advance, and develop the PHP language.</p>
 
-<p>Since April 2022, the foundation pays <a href="https://thephp.foundation/structure/#core_developers">six developers</a> to work on the language. See what the foundation accomplished in 2022 in the <a href="https://thephp.foundation/blog/2022/11/22/transparency-and-impact-report-2022/">Impact and transparency report</a>.</p>
+<p>Since April 2022, the foundation pays <a href="https://thephp.foundation/structure/#core-developers">six developers</a> to work on the language. See what the foundation accomplished in 2022 in the <a href="https://thephp.foundation/blog/2022/11/22/transparency-and-impact-report-2022/">Impact and transparency report</a>.</p>
 
 <h2 id="we-are-opening-applications-for-new-positions-at%26nbsp%3Bthe%26nbsp%3Bphp%26nbsp%3Bfoundation">We are opening applications for new positions at&nbsp;the&nbsp;PHP&nbsp;Foundation</h2>
 
@@ -1816,7 +1816,7 @@ JetBrains, Automattic, Sovereign Tech Agency, Craft CMS, Private Packagist, Tide
 🐘💜</p>
 ]]></content><link href="https://thephp.foundation/blog/2024/11/22/php-foundation-turns-three/"/><id>https://thephp.foundation/blog/2024/11/22/php-foundation-turns-three/</id><updated>Fri, 22 Nov 2024 00:00:00 +0000</updated></entry><entry><author><name>Roman Pronskiy</name><uri>https://twitter.com/pronskiy</uri></author><author><name>Nils Adermann</name><uri>https://twitter.com/naderman</uri></author><title type="html"><![CDATA[The PHP Foundation application form for 2025 is now open]]></title><content type="html"><![CDATA[<p>The PHP Foundation is a non-profit organization, started in 2021 by Acquia, Automattic, Craft CMS, JetBrains, Laravel, PrestaShop, Private Packagist, Symfony, Tideways, and Zend by Perforce with a mission to support, advance, and develop the PHP language.</p>
 
-<p>The foundation pays <a href="https://thephp.foundation/structure/#core_developers">10 developers</a> to work on the language. See what the foundation achieved in 2023 in the <a href="https://thephp.foundation/blog/2024/02/26/transparency-and-impact-report-2023/">Impact and transparency report</a>.</p>
+<p>The foundation pays <a href="https://thephp.foundation/structure/#core-developers">10 developers</a> to work on the language. See what the foundation achieved in 2023 in the <a href="https://thephp.foundation/blog/2024/02/26/transparency-and-impact-report-2023/">Impact and transparency report</a>.</p>
 
 <p>We’re opening a new round of applications for developer positions. We intend to decide on who we will hire by the end of October. If selected, you would start your work January 1st, 2025&#46;</p>
 
@@ -2080,7 +2080,7 @@ The development of PHP is done in the С programming language, and requires prof
   
   <p>Current major sponsors include JetBrains, Automattic, Sovereign Tech Agency, Laravel, GoDaddy.com, Private Packagist, Craft CMS, Zend by Perforce, Tideways, Symfony, Mercari Inc., Les-Tilleuls.coop, pixiv Inc., Aternos GmbH, Sentry, Cybozu, Manychat, and Passbolt.</p>
   
-  <p>The foundation pays <a href="https://thephp.foundation/structure/#core_developers">11 developers</a> to work on the language. See what the foundation achieved in 2024 in the <a href="https://thephp.foundation/blog/2025/03/31/transparency-and-impact-report-2024/">Impact and transparency report</a>. You can also watch <a href="https://www.youtube.com/watch?v=2qTJgx2QF9M">Roman Pronskiy's video overview</a> of what the Foundation is working on.</p>
+  <p>The foundation pays <a href="https://thephp.foundation/structure/#core-developers">11 developers</a> to work on the language. See what the foundation achieved in 2024 in the <a href="https://thephp.foundation/blog/2025/03/31/transparency-and-impact-report-2024/">Impact and transparency report</a>. You can also watch <a href="https://www.youtube.com/watch?v=2qTJgx2QF9M">Roman Pronskiy's video overview</a> of what the Foundation is working on.</p>
 </blockquote>
 
 <p>We're opening a regular round of applications for developer positions. We intend to decide on whom we will hire by the end of November. If selected, you would start your work January 1st, 2026.</p>
