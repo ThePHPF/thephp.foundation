@@ -302,7 +302,7 @@ The PHP Foundation represents a community of core PHP developers and advocates f
 * 12,546 Twitter followers [https://twitter.com/thephpf](https://twitter.com/thephpf)
 * 18,337 LinkedIn page followers [https://www.linkedin.com/company/phpfoundation](https://www.linkedin.com/company/phpfoundation)
 * 1,060 Mastodon followers [https://phpc.social/@thephpf](https://phpc.social/@thephpf)
-* 1,029 Bluesky followers [https://bsky.app/profile/thephpf.bsky.social](https://bsky.app/profile/thephpf.bsky.social)
+* 1,029 Bluesky followers [https://bsky.app/profile/thephpf.bsky.social](https://bsky.app/profile/did:plc:pf7h6uw6knk2taujthxvdt4l)
 
 PHP Foundation developers and board members gave talks at multiple conferences throughout the year:
 
