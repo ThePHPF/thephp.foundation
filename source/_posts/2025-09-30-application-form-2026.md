@@ -9,7 +9,7 @@ published_at: 30 September 2025
 
 ---
 
-> The PHP Foundation is a non-profit organization with a mission to support, advance, and develop the PHP language. 
+> The PHP Foundation is a non-profit organization with a mission to advance, develop, and support the PHP language. 
 
 > Current major sponsors include JetBrains, Automattic, Sovereign Tech Agency, Laravel, GoDaddy.com, Private Packagist, Craft CMS, Zend by Perforce, Tideways, Symfony, Mercari Inc., Les-Tilleuls.coop, pixiv Inc., Aternos GmbH, Sentry, Cybozu, Manychat, and Passbolt.
 
