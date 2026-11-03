@@ -45,6 +45,7 @@ class Team
                 'name' => 'Ben Marks',
                 'image' => '/assets/team/ben_marks.jpeg',
                 'job' => 'Director (Fundraising)',
+                'bluesky' => 'https://bsky.app/profile/did:plc:iwvlykwbd66vk2xb3knfdrj4', // @benmarks.bsky.social
                 'twitter' => 'https://twitter.com/benmarks',
                 'github' => 'https://github.com/benmarks',
                 'url' => 'https://www.linkedin.com/in/bhmarks/',
@@ -64,6 +65,7 @@ class Team
                 'job' => 'Board member',
                 'linkedin' => 'https://www.linkedin.com/in/nilsadermann',
                 'mastodon' => 'https://phpc.social/@naderman',
+                'bluesky' => 'https://bsky.app/profile/did:plc:q7lbleibz6bjjqvwlvt3mmex', // @naderman.de
                 'twitter' => 'https://twitter.com/naderman',
                 'github' => 'https://github.com/naderman',
                 'url' => 'https://twitter.com/naderman',
@@ -81,6 +83,7 @@ class Team
                 'name' => 'Josepha Haden',
                 'image' => 'https://2.gravatar.com/avatar/b1384df9e94641211dd00e4e8203d80c?s=200',
                 'job' => 'Board member',
+                'bluesky' => 'https://bsky.app/profile/did:plc:mmbhkgdatakmcoxzjmb664lt', // @chanthaboune.bsky.social
                 'twitter' => 'https://twitter.com/JosephaHaden',
                 'url' => 'https://twitter.com/JosephaHaden',
             ],
@@ -89,6 +92,7 @@ class Team
                 'company' => 'JetBrains',
                 'image' => 'https://avatars.githubusercontent.com/u/1196825?s=200&v=4',
                 'job' => 'Emeritus Board member',
+                'bluesky' => 'https://bsky.app/profile/did:plc:2r5w27xkc77gxqgh7xtgrjnz', // @pronskiy.bsky.social
                 'twitter' => 'https://twitter.com/pronskiy',
                 'github' => 'https://github.com/pronskiy',
                 'url' => 'https://twitter.com/pronskiy',
@@ -98,6 +102,7 @@ class Team
                 'company' => 'Symfony',
                 'image' => 'https://avatars.githubusercontent.com/u/243674?s=200&v=4',
                 'job' => 'Board member',
+                'bluesky' => 'https://bsky.app/profile/did:plc:7pfek2evfhn33zodsmapx3cq', // @nicolasgrekas.bsky.social
                 'twitter' => 'https://twitter.com/nicolasgrekas',
                 'github' => 'https://github.com/nicolas-grekas/',
                 'url' => 'https://twitter.com/nicolasgrekas',
@@ -107,6 +112,7 @@ class Team
                 'image' => 'https://avatars.githubusercontent.com/u/812538?s=200&v=4',
                 'job' => 'Board member',
                 'mastodon' => 'https://phpc.social/@pollita',
+                'bluesky' => 'https://bsky.app/profile/did:plc:thhikcfcatg2273fkzz4wygc', // @sara.golemon.com
                 'github' => 'https://github.com/sgolemon',
                 'url' => 'https://phpc.social/@pollita',
             ],
@@ -124,6 +130,7 @@ class Team
                 'company' => 'Tighten',
                 'image' => 'https://avatars.githubusercontent.com/u/151829?s=200&v=4',
                 'job' => 'Board member',
+                'bluesky' => 'https://bsky.app/profile/did:plc:gqad6zzm4ogotl7cqcuyivyb', // @mattstauffer.com
                 'github' => 'https://github.com/mattstauffer',
                 'url' => 'https://github.com/mattstauffer',
             ],
@@ -132,6 +139,7 @@ class Team
                 'image' => 'https://avatars.githubusercontent.com/u/208074?s=200&v=4',
                 'job' => 'Core Developer',
                 'mastodon' => 'https://phpc.social/@derickr',
+                'bluesky' => 'https://bsky.app/profile/did:plc:mpx5q7txq73t7tl5zce5sv3u', // @derickr.bsky.social
                 'github' => 'https://github.com/derickr',
                 'url' => 'https://derickrethans.nl',
             ],
@@ -187,6 +195,7 @@ class Team
                 'image' => 'https://avatars.githubusercontent.com/u/496145?s=200&v=4',
                 'job' => 'Core Developer',
                 'mastodon' => 'https://phpc.social/@asgrim',
+                'bluesky' => 'https://bsky.app/profile/did:plc:dw4kk4jxzb6h24mqqw63czgk', // @asgrim.dev
                 'github' => 'https://github.com/asgrim',
                 'url' => 'https://phpc.social/@asgrim',
             ],
@@ -210,6 +219,7 @@ class Team
                 'name' => 'Joe Watkins',
                 'image' => 'https://avatars.githubusercontent.com/u/2236138?s=200&v=4',
                 'job' => 'Core Developer',
+                'bluesky' => 'https://bsky.app/profile/did:plc:3psbahcjmbwtjbh32s3kzrym', // @krakjoe.bsky.social
                 'twitter' => 'https://twitter.com/krakjoe',
                 'github' => 'https://github.com/krakjoe',
                 'url' => 'https://github.com/krakjoe',
@@ -219,6 +229,7 @@ class Team
                 'image' => 'https://avatars.githubusercontent.com/u/247397?s=200&v=4',
                 'job' => 'Ecosystem AI Security Engineer in Residence',
                 'mastodon' => 'https://phpc.social/@edorian',
+                'bluesky' => 'https://bsky.app/profile/did:plc:xw7lwdfxq4h6cql34ozdtjsh', // @edorian.bsky.social
                 'github' => 'https://github.com/edorian',
                 'url' => 'https://de.linkedin.com/in/volker-dusch',
             ],
@@ -226,6 +237,7 @@ class Team
                 'name' => 'Alexandre Daubois',
                 'image' => 'https://avatars.githubusercontent.com/u/2144837?s=200&v=4',
                 'job' => 'Core Developer',
+                'bluesky' => 'https://bsky.app/profile/did:plc:tcu4w7vj5yiq6chffuautaok', // @alexdaubois.bsky.social
                 'github' => 'https://github.com/alexandre-daubois',
                 'url' => 'https://www.linkedin.com/in/alexandre-daubois/?locale=en',
             ],
@@ -265,6 +277,7 @@ class Team
                 'name' => 'Tobias Nyholm',
                 'image' => 'https://avatars.githubusercontent.com/u/1275206?s=200&v=4',
                 'job' => 'Code of Conduct Team',
+                'bluesky' => 'https://bsky.app/profile/did:plc:ftqfq2sw5qa2l273bt5m2sxk', // @nyholm.bsky.social
                 'twitter' => 'https://twitter.com/TobiasNyholm',
                 'github' => 'https://github.com/Nyholm',
                 'url' => 'https://twitter.com/TobiasNyholm',
@@ -290,6 +303,7 @@ class Team
                 'image' => 'https://avatars.githubusercontent.com/u/209270?v=4',
                 'job' => null,
                 'mastodon' => 'https://phpc.social/@timwolla',
+                'bluesky' => 'https://bsky.app/profile/did:plc:4ylvlb5uifyeol7lpdxlqhzc', // @timwolla.bsky.social
                 'github' => 'https://github.com/timwolla',
                 'url' => 'https://github.com/TimWolla/',
             ],
@@ -298,6 +312,7 @@ class Team
                 'image' => 'https://avatars.githubusercontent.com/u/595597?v=4',
                 'job' => null,
                 'mastodon' => 'https://dragonscave.space/@menelion',
+                'bluesky' => 'https://bsky.app/profile/did:plc:v3k6g2o7a6sqkxiwy4e25426', // @menelion.bsky.social
                 'github' => 'https://github.com/menelion',
                 'url' => 'https://oire.org/about',
             ],
@@ -325,6 +340,7 @@ class Team
                 'github' => 'https://github.com/brendt',
                 'linkedin' => 'https://www.linkedin.com/in/brent-roose-20b02a275/',
                 'mastodon' => 'https://phpc.social/@brendt',
+                'bluesky' => 'https://bsky.app/profile/did:plc:dntqr2mxt5z3z6gljrhn4y5u', // @stitcher.io
                 'twitter' => 'https://x.com/brendt_gd',
             ],
             'daniel-scherzer' => [
@@ -340,6 +356,7 @@ class Team
                 'image' => '/assets/icons/php_foundation.svg',
                 'job' => null,
                 'mastodon' => 'https://phpc.social/@thephpf',
+                'bluesky' => 'https://bsky.app/profile/did:plc:pf7h6uw6knk2taujthxvdt4l', // @thephpf.bsky.social
                 'linkedin' => 'https://www.linkedin.com/company/phpfoundation/',
                 'github' => 'https://github.com/ThePHPF/',
                 'twitter' => 'https://twitter.com/thephpf',
