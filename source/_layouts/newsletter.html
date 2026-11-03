@@ -1,26 +1,26 @@
-<div class="mx-auto max-w-4xl px-6 border-b border-t border-gray-200 lg:px-0 pt-3">
-    <div class="bg-white py-8">
-        <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
-            <div class="max-w-xl text-4xl font-medium tracking-tight text-gray-900 lg:col-span-6">
+<div class="relative isolate overflow-hidden rounded-3xl bg-[#19191c] px-6 py-10 sm:px-10 lg:py-12">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-center">
+        <div class="lg:col-span-6">
+            <div class="eyebrow text-indigo-300">Newsletter</div>
+            <div class="text-2xl sm:text-3xl font-bold tracking-tight text-white">
                 Subscribe to The PHP Foundation newsletter
             </div>
-            <form method="POST"
-                  action="https://php-foundation.mailcoach.app/subscribe/9be4e2bd-f9d8-475c-b00e-2dcc4cf90056"
-                  class="w-full max-w-md lg:col-span-6">
-                <div class="flex gap-x-4">
-                    <label for="email-address" class="sr-only">Email address</label>
-                    <input id="email-address" name="email" type="email" autocomplete="email" required
-                           class="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                           placeholder="Enter your email">
-                    <button type="submit"
-                            class="inline-block py-2 no-underline px-6 !text-white bg-[#7f52ff] rounded-3xl hover:bg-[rgba(127,82,255,.8)]">
-                        Subscribe
-                    </button>
-                </div>
-                <div class="mt-4 text-sm leading-6 text-gray-900">
-                    No spam. We only send 1–2 emails per month.
-                </div>
-            </form>
         </div>
+        <form method="POST"
+              action="https://php-foundation.mailcoach.app/subscribe/9be4e2bd-f9d8-475c-b00e-2dcc4cf90056"
+              class="w-full lg:col-span-6">
+            <div class="flex flex-col sm:flex-row gap-3">
+                <label for="email-address" class="sr-only">Email address</label>
+                <input id="email-address" name="email" type="email" autocomplete="email" required
+                       class="min-w-0 flex-auto rounded-full border-0 bg-white/10 px-5 py-3 text-white ring-1 ring-inset ring-white/20 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#6858f6] sm:text-sm"
+                       placeholder="Enter your email">
+                <button type="submit" class="button-link button-lg">
+                    Subscribe
+                </button>
+            </div>
+            <div class="mt-3 mb-0 text-sm leading-6 text-gray-400">
+                No spam. We only send 1–2 emails per month.
+            </div>
+        </form>
     </div>
 </div>

@@ -1,0 +1,384 @@
+{#
+    The whole sponsor page, shared by /sponsor (company), /sponsor/individual and /sponsor/partnerships.
+    The page content stays the same, only the box on the right switches. Each option keeps its own
+    URL, so it can be linked directly. Param: mode ('individual' | 'company' | 'partnership').
+
+    TODO (PHPF): the hourly rate, impact examples and claims below are PLACEHOLDERS.
+    Please check them with the team / finance before publishing.
+#}
+{% set oc = 'https://opencollective.com/phpfoundation' %}
+{% set backers = oc ~ '/contribute/backers-34283/checkout' %}
+{% set deck = 'https://docs.google.com/presentation/d/1MT7wqcu31DZ7IHheCxWg_Bm01usP0Sh1hBwlqHuqiUE/export/pdf' %}
+{% set invoice_mail = 'mailto:contact@thephp.foundation?subject=' ~ ('Invoice request: PHP Foundation sponsorship'|url_encode) %}
+{% set hourly_rate = 100 %}
+
+{% set nils = fetch_member_by_code('nils-adermann') %}
+{% set ben = fetch_member_by_code('ben-marks') %}
+{% set sponsors = fetch_sponsors() %}
+
+{% set finance_subject = 'PHP Foundation sponsorship: payment details' %}
+{% set finance_body = "Hi,\n\nwe'd like to sponsor The PHP Foundation, which maintains the PHP language our products run on.\n\nPayee: Open Source Collective (fiscal host of The PHP Foundation)\nPay online (card, bank transfer, ACH, PayPal): " ~ oc ~ "/contribute\nTax ID, W-9, address: https://docs.oscollective.org/about/official-info-and-docs\nReceipts are issued automatically for every payment. If we need an invoice first, we can request one from contact@thephp.foundation.\n\nAmount: ______ per ______\n\nThanks!" %}
+
+{# TODO (PHPF): "Works on" claims are placeholders, please confirm with each developer #}
+{% set people = [
+    { code: 'derick-rethans',     claim: 'Xdebug, date/time & core maintenance' },
+    { code: 'jakub-zelenka',      claim: 'OpenSSL, FPM & security releases' },
+    { code: 'gina-peter-banyard', claim: 'Type system & language consistency' },
+    { code: 'arnaud-le-blanc',    claim: 'Lazy objects, JIT & performance' },
+    { code: 'saki-takamachi',     claim: 'BCMath & precise number handling' },
+    { code: 'shivam-mathur',      claim: 'setup-php, CI & Windows builds' },
+    { code: 'volker-dusch',       claim: 'Ecosystem security' },
+    { code: 'ilija-tovilo',       claim: 'Property hooks & the PHP engine' },
+] %}
+
+{# Partnership levels, used by the Partner box and the cards further down #}
+{% set oc_checkout = 'https://opencollective.com/phpfoundation/contribute/' %}
+{% set tiers = [
+    {
+        name: 'Silver',
+        yearly: '$12,000',
+        monthly: '$1,000',
+        metal: 'linear-gradient(135deg, #f4f4f5 0%, #a1a1aa 45%, #e4e4e7 70%, #71717a 100%)',
+        includes: null,
+        short: 'Logo on our website, Advisory Board seat',
+        perks: ['Your logo on our website', 'Use of our logo on your website', 'Mention on social media', 'Mention in our newsletter', 'Mention in the "new sponsors" post', 'Advisory Board seat'],
+        href: oc_checkout ~ 'major-sponsors-34207/checkout?interval=year&amount=12000&contributeAs=me',
+    },
+    {
+        name: 'Gold',
+        yearly: '$24,000',
+        monthly: '$2,000',
+        metal: 'linear-gradient(135deg, #fde68a 0%, #d4a017 45%, #fcd34d 70%, #a16207 100%)',
+        includes: 'Silver',
+        short: 'Plus GitHub README and our reports',
+        perks: ['Membership intro post', 'Logo in our GitHub README', 'Listed in our reports', 'Your logo on slides by Foundation members'],
+        href: oc_checkout ~ 'gold-sponsor-68774/checkout?interval=year&amount=24000&contributeAs=me',
+    },
+    {
+        name: 'Platinum',
+        yearly: '$100,000',
+        monthly: '$8,500',
+        metal: 'linear-gradient(135deg, #ffffff 0%, #c7c2ff 40%, #8a7df8 65%, #e9e7ff 100%)',
+        includes: 'Gold',
+        short: 'Plus quarterly post and a case study',
+        perks: ['Dedicated social media post every quarter', 'Co-authored case study'],
+        href: oc_checkout ~ 'platinum-sponsor-68775/checkout?interval=year&amount=100000&contributeAs=me',
+        featured: true,
+    },
+] %}
+
+{% set sponsor_options = [
+    { id: 'individual', label: 'Person', href: '/sponsor/individual' },
+    { id: 'company', label: 'Company', href: '/sponsor' },
+    { id: 'partnership', label: 'Partner', href: '/sponsor/partnerships' },
+] %}
+
+{# ───────────── Hero: above the fold ───────────── #}
+<section class="relative bg-white">
+    <div class="container-wide pt-14 pb-16 lg:pt-20 lg:pb-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            <div class="lg:col-span-7 lg:self-center">
+                <p class="eyebrow">Sponsor The PHP Foundation</p>
+                <h1 class="page-title">PHP works for you.<br class="hidden sm:inline"> Help keep it fast and secure.</h1>
+                <p class="page-lead max-w-xl">Fund the engineers who maintain the PHP language. As a developer, as a company or as a long-term partner, from $5 a month.</p>
+                <ul class="mt-8 mb-0 ml-0 list-none flex flex-wrap gap-x-6 gap-y-2">
+                    {% for c in ['Receipts & invoices handled', 'Card, bank or PayPal', 'Transparent finances'] %}
+                    <li class="m-0 whitespace-nowrap text-sm text-gray-600"><span class="text-[#6858f6]">✓</span> {{ c }}</li>
+                    {% endfor %}
+                </ul>
+
+                {# The people behind it, like on the home page #}
+                <a href="#people" class="group mt-12 flex max-w-xl items-center gap-5 border-t border-zinc-200 pt-8 no-underline">
+                    <span class="flex shrink-0 -space-x-3">
+                        {% for p in people|slice(0, 5) %}
+                        {% set m = fetch_member_by_code(p.code) %}
+                        {% if m %}<span class="avatar-duotone h-12 w-12 ring-2 ring-white"><img src="{{ m.image }}" alt=""></span>{% endif %}
+                        {% endfor %}
+                    </span>
+                    <span class="text-sm leading-6 text-gray-600">
+                        <strong class="block text-gray-900">Your money pays the people who build PHP</strong>
+                        <span class="group-hover:text-[#5646e0]">Meet the developers you fund →</span>
+                    </span>
+                </a>
+            </div>
+
+            <div id="give" class="lg:col-span-5"
+                 x-data="{ mode: '{{ mode }}', urls: { {% for o in sponsor_options %}{{ o.id }}: '{{ o.href }}'{{ loop.last ? '' : ', ' }}{% endfor %} } }">
+                {# Fixed height on desktop, so switching options never moves the page #}
+                <div class="sponsor-box flex flex-col rounded-2xl p-6 lg:p-8 lg:h-[29rem]">
+                    <fieldset class="m-0 border-0 p-0">
+                        <legend class="mb-3 text-lg font-bold tracking-tight text-gray-900">I want to sponsor The PHP Foundation as</legend>
+                        <div class="sponsor-segment grid-cols-3" role="radiogroup">
+                            {% for o in sponsor_options %}
+                            {% set checked = o.id == mode %}
+                            {# Real links without JS; with JS the box switches in place and the URL follows #}
+                            <a href="{{ site.url }}{{ o.href }}" role="radio" aria-checked="{{ checked ? 'true' : 'false' }}"
+                               @click.prevent="mode = '{{ o.id }}'; history.replaceState(null, '', urls.{{ o.id }})"
+                               :aria-checked="(mode === '{{ o.id }}').toString()" :class="{ 'is-active': mode === '{{ o.id }}' }"
+                               class="sponsor-segment-item gap-2 no-underline {{ checked ? 'is-active' : '' }}">
+                                <span class="sponsor-radio" aria-hidden="true"><span></span></span>
+                                {{ o.label }}
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </fieldset>
+
+                    {# ── Person ── #}
+                    <div x-show="mode === 'individual'"{{ mode == 'individual' ? '' : ' x-cloak' }} class="flex flex-1 flex-col"
+                         x-data="{ amount: 10, presets: [5, 10, 25, 50], get url() { return '{{ backers }}?interval=month&amount=' + this.amount + '&contributeAs=me' } }">
+                        <p class="sponsor-label mt-7">Monthly amount</p>
+                        <div class="grid grid-cols-4 gap-2">
+                            <template x-for="p in presets" :key="p">
+                                <button type="button" @click="amount = p" :class="amount === p && 'is-active'" class="sponsor-amount" x-text="'$' + p"></button>
+                            </template>
+                        </div>
+                        <p class="sponsor-note mt-6">Every contribution goes straight to the people who maintain the language.</p>
+                        <div class="mt-auto"></div>
+                        <a :href="url" href="{{ backers }}?interval=month&amount=10&contributeAs=me" class="button-link button-lg button-block"><span x-text="'Sponsor $' + amount + ' a month'">Sponsor $10 a month</span> <span aria-hidden="true">→</span></a>
+                        <p class="sponsor-footnote">
+                            Secure checkout via <a href="{{ oc }}">Open Collective</a> · Cancel any time<br>
+                            Prefer to <a href="{{ oc }}/donate">give once</a> or use <a href="https://github.com/sponsors/ThePHPF">GitHub Sponsors</a>?
+                        </p>
+                    </div>
+
+                    {# ── Company ── #}
+                    <div x-show="mode === 'company'"{{ mode == 'company' ? '' : ' x-cloak' }} class="flex flex-1 flex-col"
+                         x-data="{
+                            interval: 'month',
+                            amount: 500,
+                            custom: '',
+                            useCustom: false,
+                            rate: {{ hourly_rate }},
+                            presets: [100, 250, 500, 1000],
+                            impact: {
+                                100:  'triaging and reproducing incoming bug reports',
+                                250:  'reviewing pull requests from community contributors',
+                                500:  'analysing, fixing and backporting a security issue',
+                                1000: 'about a day of core development each month',
+                                2000: 'steady, long-term maintenance of a PHP extension',
+                            },
+                            get value() { if (!this.useCustom) return this.amount; const c = parseInt(this.custom, 10); return c > 0 ? c : 0 },
+                            get hours() { return Math.max(1, Math.round(this.value / this.rate)) },
+                            get yearly() { return this.interval === 'month' ? this.value * 12 : this.value },
+                            get tier() {
+                                if (this.yearly >= 100000) return 'Platinum';
+                                if (this.yearly >= 24000) return 'Gold';
+                                if (this.yearly >= 12000) return 'Silver';
+                                return null;
+                            },
+                            get impactText() {
+                                const keys = Object.keys(this.impact).map(Number).filter(k => k <= this.value);
+                                return keys.length ? this.impact[Math.max(...keys)] : this.impact[100];
+                            },
+                            {# TODO (PHPF): confirm Open Collective accepts amount/interval on /donate #}
+                            get url() { return '{{ oc }}/donate?amount=' + this.value + '&interval=' + this.interval },
+                            get ctaText() {
+                                if (!this.value) return 'Continue to checkout';
+                                return 'Sponsor ' + this.fmt(this.value) + ({ month: ' a month', year: ' a year', oneTime: ' once' })[this.interval];
+                            },
+                            fmt(n) { return '$' + n.toLocaleString('en-US') },
+                         }">
+                        <div class="sponsor-segment grid-cols-3 mt-6 mb-2">
+                            <button type="button" @click="interval = 'month'" :class="interval === 'month' && 'is-active'" class="sponsor-segment-item">Monthly</button>
+                            <button type="button" @click="interval = 'year'" :class="interval === 'year' && 'is-active'" class="sponsor-segment-item">Yearly</button>
+                            <button type="button" @click="interval = 'oneTime'" :class="interval === 'oneTime' && 'is-active'" class="sponsor-segment-item">One-time</button>
+                        </div>
+                        {# Four presets plus a free amount in one row #}
+                        <div class="grid grid-cols-5 gap-2">
+                            <template x-for="p in presets" :key="p">
+                                <button type="button" @click="amount = p; custom = ''; useCustom = false" :class="!useCustom && amount === p && 'is-active'" class="sponsor-amount px-1" x-text="fmt(p)"></button>
+                            </template>
+                            <label class="sponsor-input px-2" :class="useCustom && 'is-active'">
+                                <input type="number" min="1" step="1" x-model="custom" @focus="useCustom = true" @input="useCustom = true" placeholder="Other" aria-label="Other amount in US dollars" class="text-center">
+                            </label>
+                        </div>
+                        <p class="sponsor-note mt-5" x-show="!value" x-cloak>Enter the amount you'd like to give.</p>
+                        <p class="sponsor-note mt-5" x-show="value">
+                            <strong class="text-gray-900"><span x-text="fmt(value)">$500</span><span x-show="interval === 'month'">/month</span><span x-show="interval === 'year'" x-cloak>/year</span></strong>
+                            ≈ <span x-text="hours + (hours === 1 ? ' hour' : ' hours')">5 hours</span> of core development:
+                            <span x-text="impactText">analysing, fixing and backporting a security issue</span>.
+                            <span class="block mt-1 font-semibold text-[#5646e0]" x-show="tier" x-cloak>Includes <a href="#tiers"><span x-text="tier"></span> partnership</a> and your logo.</span>
+                        </p>
+                        <div class="mt-auto"></div>
+                        <a :href="value ? url : '{{ oc }}/contribute'" href="{{ oc }}/contribute" class="button-link button-lg button-block"><span x-text="ctaText">Sponsor $500 a month</span> <span aria-hidden="true">→</span></a>
+                        <p class="sponsor-footnote">
+                            Secure checkout via <a href="{{ oc }}">Open Collective</a> · Need an invoice? <a href="{{ invoice_mail }}">Email us</a>
+                        </p>
+                    </div>
+
+                    {# ── Partner ── #}
+                    <div x-show="mode === 'partnership'"{{ mode == 'partnership' ? '' : ' x-cloak' }} class="flex flex-1 flex-col"
+                         x-data="{ level: 'Gold', hrefs: { {% for t in tiers %}{{ t.name }}: '{{ t.href }}'{{ loop.last ? '' : ', ' }}{% endfor %} } }">
+                        <p class="sponsor-label mt-6">Partner level, billed yearly</p>
+                        <div class="grid gap-1.5" role="radiogroup" aria-label="Partner level">
+                            {% for t in tiers %}
+                            <button type="button" role="radio" @click="level = '{{ t.name }}'"
+                                    :aria-checked="(level === '{{ t.name }}').toString()" :class="{ 'is-active': level === '{{ t.name }}' }"
+                                    class="sponsor-option {{ t.name == 'Gold' ? 'is-active' : '' }}">
+                                <span class="sponsor-radio" aria-hidden="true"><span></span></span>
+                                <span class="h-4 w-4 shrink-0 rounded-full shadow-[inset_0_1px_1px_rgba(255,255,255,0.8),0_1px_2px_rgba(0,0,0,0.25)]" style="background: {{ t.metal }}" aria-hidden="true"></span>
+                                <span class="min-w-0 flex-1">
+                                    <span class="block font-semibold text-gray-900">{{ t.name }}</span>
+                                    <span class="block truncate text-xs text-gray-600">{{ t.short }}</span>
+                                </span>
+                                <span class="font-semibold text-gray-900">{{ t.yearly }}</span>
+                            </button>
+                            {% endfor %}
+                        </div>
+                        <div class="mt-auto"></div>
+                        <a :href="hrefs[level]" href="{{ tiers[1].href }}" class="button-link button-lg button-block mt-4"><span x-text="'Become a ' + level + ' partner'">Become a Gold partner</span> <span aria-hidden="true">→</span></a>
+                        <p class="sponsor-footnote">
+                            or <a href="mailto:contact@thephp.foundation?subject={{ 'Partnership with The PHP Foundation'|url_encode }}">Email {{ ben ? ben.name|split(' ')|first : 'us' }}</a>
+                            · <a href="#tiers">Compare Partner levels</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{# ───────────── Peer voice: dark full-width band, like "Real work on PHP" on the home page ───────────── #}
+{% if nils %}
+<section class="bg-[#19191c]">
+    <div class="container-wide py-16 lg:py-24">
+    <figure class="m-0 grid grid-cols-1 gap-8 md:grid-cols-12 md:items-center">
+        <span class="avatar-duotone w-24 h-24 md:w-28 md:h-28 md:col-span-2 bg-zinc-800"><img src="{{ nils.image }}" alt="{{ nils.name }}"></span>
+        <div class="md:col-span-10">
+            <blockquote class="m-0 bg-transparent border-0 rounded-none p-0 text-2xl sm:text-3xl lg:text-4xl font-semibold leading-snug tracking-tight text-white">
+                “Every company using PHP applications depends on a small group of people who keep the language secure. Funding them is the cheapest insurance your stack will ever have.”
+            </blockquote>
+            <figcaption class="mt-6 text-sm text-gray-400">
+                <strong class="text-white">{{ nils.name }}</strong> · Co-creator of Composer &amp; Packagist, {{ nils.company }} · PHP Foundation Board
+            </figcaption>
+        </div>
+    </figure>
+    </div>
+</section>
+{% endif %}
+
+{# ───────────── Social proof: logos ───────────── #}
+<section class="container-wide pt-14 pb-20">
+    <div>
+        <p class="eyebrow text-gray-500">Companies already sponsoring PHP</p>
+        <div class="mt-6 flex flex-wrap items-center gap-x-12 gap-y-8">
+            {% for sponsor in sponsors['Platinum'] | merge(sponsors['Gold']) | merge(sponsors['Silver'] | filter(s => s.name)) %}
+            <a href="{{ sponsor.website }}" title="{{ sponsor.name }}" target="_blank" rel="noopener noreferrer" class="no-underline">
+                <img class="h-8 lg:h-9 w-auto max-w-[140px] object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition" src="{{ sponsor.image }}" alt="{{ sponsor.name }}">
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{# ───────────── People ───────────── #}
+{% include "sponsor-people.html" %}
+
+{# ───────────── No paperwork ───────────── #}
+<section class="container-wide pb-20">
+    <div class="section-rule pt-12 grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <div>
+            <h2 class="mt-0">No accounting overhead</h2>
+            <p class="text-lg text-gray-700">
+                You shouldn't have to chase anyone for a proper invoice. Sponsoring PHP should be as easy as paying for any other SaaS subscription.
+            </p>
+            <a href="mailto:?subject={{ finance_subject|url_encode }}&body={{ finance_body|url_encode }}"
+               class="button-link-border mt-2">
+                ✉ Forward to your finance team
+            </a>
+        </div>
+        <dl class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-8">
+            <div>
+                <dt class="font-bold text-gray-900">Automatic receipts</dt>
+                <dd class="mt-1 text-gray-700">Every payment gets a receipt with your company name and address, ready to expense.</dd>
+            </div>
+            <div>
+                <dt class="font-bold text-gray-900">Invoice before you pay</dt>
+                <dd class="mt-1 text-gray-700">If your process needs a PO or an invoice first, <a href="{{ invoice_mail }}">email us</a> and we'll send one.</dd>
+            </div>
+            <div>
+                <dt class="font-bold text-gray-900">Pay your way</dt>
+                <dd class="mt-1 text-gray-700">Credit card, bank transfer (ACH or wire), PayPal, or through <a href="https://github.com/sponsors/ThePHPF">GitHub Sponsors</a> on your existing GitHub bill.</dd>
+            </div>
+            <div>
+                <dt class="font-bold text-gray-900">Vendor documents ready</dt>
+                <dd class="mt-1 text-gray-700"><a href="https://docs.oscollective.org/about/official-info-and-docs#tax-id-and-w9">Tax ID &amp; W-9</a> and <a href="https://docs.oscollective.org/about/official-info-and-docs#address-and-contact-info">address</a> come from our fiscal host, <a href="https://www.oscollective.org/">Open Source Collective</a>.</dd>
+            </div>
+            <div>
+                <dt class="font-bold text-gray-900">Fully transparent</dt>
+                <dd class="mt-1 text-gray-700">Every incoming and outgoing dollar is <a href="{{ oc }}#category-BUDGET">public on Open Collective</a>.</dd>
+            </div>
+            <div>
+                <dt class="font-bold text-gray-900">No contract, no lock-in</dt>
+                <dd class="mt-1 text-gray-700">Monthly contributions can be changed or cancelled at any time from your Open Collective account.</dd>
+            </div>
+        </dl>
+    </div>
+</section>
+
+{# ───────────── Partnership levels ───────────── #}
+<section class="container-wide pb-20" id="tiers">
+    <div class="section-rule pt-12">
+        <p class="eyebrow">Partnerships</p>
+        <h2 class="section-title" id="membership">Silver, Gold or Platinum</h2>
+        <p class="section-lead mb-10">You reach a level with one payment or with monthly contributions over the year.</p>
+        {% include "sponsorship-tiers.html" %}
+    </div>
+</section>
+
+<section class="container-wide pb-20" id="yearly-and-monthly-sponsorships-for-the-php-foundation">
+    <div class="section-rule pt-12 grid grid-cols-1 gap-10 md:grid-cols-12">
+        <div class="md:col-span-4">
+            <p class="eyebrow">How it works</p>
+            <h2 class="section-title text-2xl sm:text-3xl">How yearly and monthly contributions count</h2>
+        </div>
+        <div class="md:col-span-8 text-gray-700">
+            <ul>
+                <li>As soon as your total contributions pass a level's threshold, through one donation or monthly payments added up, you become a sponsor at that level.</li>
+                <li>Sponsors are removed from the list at the end of each calendar year if their total contributions for that year are below the threshold for their level.</li>
+            </ul>
+            <p class="mb-0">For example, if you contribute $1,000 monthly starting in January, your total reaches $12,000 in December. That makes you a Silver member for the rest of the year and all of the next.</p>
+        </div>
+    </div>
+</section>
+
+{# ───────────── Deck + FAQ ───────────── #}
+<section class="container-wide pb-24">
+    <div class="section-rule pt-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+            <h2 class="mt-0">Common questions</h2>
+            <div class="divide-y divide-zinc-700 border-b border-zinc-700">
+                <details class="py-4">
+                    <summary class="cursor-pointer font-semibold text-gray-900">Is a small amount worth it?</summary>
+                    <p class="mt-3 mb-0">Yes. A lot of PHP development is paid for by many small contributions. $100 a month from a few hundred companies keeps several engineers working full time.</p>
+                </details>
+                <details class="py-4">
+                    <summary class="cursor-pointer font-semibold text-gray-900">Who do we actually pay?</summary>
+                    <p class="mt-3 mb-0">The PHP Foundation operates under <a href="https://www.oscollective.org/">Open Source Collective</a>, which handles banking, taxes and legal work. Payments go through <a href="{{ oc }}">Open Collective</a>. <a href="https://docs.oscollective.org/about/official-info-and-docs">Official info &amp; docs</a>.</p>
+                </details>
+                <details class="py-4">
+                    <summary class="cursor-pointer font-semibold text-gray-900">Can we get an invoice instead of paying by card?</summary>
+                    <p class="mt-3 mb-0">Yes. <a href="{{ invoice_mail }}">Email us</a> your company details and the amount, and we'll send an invoice you can pay by bank transfer.</p>
+                </details>
+                <details class="py-4">
+                    <summary class="cursor-pointer font-semibold text-gray-900">Is this tax-deductible?</summary>
+                    <p class="mt-3 mb-0">No. Our fiscal host, Open Source Collective, is a US 501(c)(6) non-profit, so contributions are not charitable donations. Most companies book them as a business expense or sponsorship. Please check with your accountant how this applies in your country.</p>
+                </details>
+                <details class="py-4">
+                    <summary class="cursor-pointer font-semibold text-gray-900">How is the money spent?</summary>
+                    <p class="mt-3 mb-0">Mostly on paying core developers to maintain PHP, fix security issues and build new features. All expenses are <a href="{{ oc }}#category-BUDGET">public</a>.</p>
+                </details>
+                <details class="py-4">
+                    <summary class="cursor-pointer font-semibold text-gray-900">Will our logo be shown?</summary>
+                    <p class="mt-3 mb-0">Companies reaching <a href="#tiers">Silver, Gold or Platinum</a> get their logo on our website. Every contributor is listed on our Open Collective page.</p>
+                </details>
+            </div>
+        </div>
+        <div class="rounded-2xl border border-zinc-700 bg-white p-6 lg:p-8">
+            <h2 class="mt-0" id="membership-deck">Need to convince someone internally?</h2>
+            <p>Our sponsorship deck covers what the Foundation does, what it has achieved and how sponsorship works.</p>
+            <a href="{{ deck }}" class="button-link-border">Download the sponsorship deck</a>
+            <img class="mt-6 rounded-lg" src="/assets/images/slides_img_join.png" alt="" loading="lazy">
+        </div>
+    </div>
+</section>

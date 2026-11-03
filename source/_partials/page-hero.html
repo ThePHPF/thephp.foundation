@@ -1,0 +1,10 @@
+{# Shared page header. Params: title, lead (optional), eyebrow (optional), narrow (optional) #}
+<section class="page-hero">
+    <div class="container-wide pt-14 pb-10 lg:pt-20 lg:pb-12">
+        <p class="eyebrow">{{ eyebrow ?? 'The PHP Foundation' }}</p>
+        <h1 class="page-title" itemprop="name">{{ title|raw }}</h1>
+        {% if lead|default(false) %}
+        <p class="page-lead">{{ lead|raw }}</p>
+        {% endif %}
+    </div>
+</section>

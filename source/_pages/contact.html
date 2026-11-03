@@ -1,0 +1,103 @@
+---
+title: Contact The PHP Foundation
+permalink: contact
+layout: default
+description: "Questions about sponsorship, the Foundation or PHP? Talk to the people behind The PHP Foundation."
+---
+{#
+    TODO (PHPF): please confirm who should be featured for which topic.
+    All requests go to contact@thephp.foundation; the subject line routes them.
+#}
+{% set contacts = [
+    {
+        code: 'elizabeth-barron',
+        topic: 'The Foundation, partnerships & press',
+        text: 'Questions about what we do, collaborations with other organizations, interviews and talks.',
+        subject: 'Question for Elizabeth Barron',
+    },
+    {
+        code: 'ben-marks',
+        topic: 'Sponsorship, invoices & membership',
+        text: 'Becoming a sponsor, getting an invoice before you pay, or anything about your existing contribution.',
+        subject: 'Sponsorship: question for Ben Marks',
+    },
+    {
+        code: 'alexandre-daubois',
+        topic: 'Security reports',
+        text: 'Found a vulnerability in PHP? Please follow the process the PHP security team uses, so your report gets handled quickly.',
+        link: '/blog/2026/10/14/how-the-php-security-team-handles-your-reports/',
+        link_label: 'How to report a security issue',
+    },
+] %}
+
+{{ include('page-hero.html', { title: 'Talk to the people behind PHP', eyebrow: 'Contact', lead: 'Questions about sponsorship, the Foundation or PHP? Write to us at <a href="mailto:contact@thephp.foundation">contact@thephp.foundation</a>. We will get back to you as soon as possible.' }) }}
+
+<section class="container-wide pb-20">
+    <div class="section-rule pt-12">
+        <p class="eyebrow">Who to talk to</p>
+        <h2 class="section-title">Real people, quick answers</h2>
+    </div>
+
+    <div class="mt-12 grid grid-cols-1 gap-x-10 gap-y-14 md:grid-cols-3">
+        {% for c in contacts %}
+        {% set m = fetch_member_by_code(c.code) %}
+        {% if m %}
+        <div class="group flex flex-col" itemscope itemtype="https://schema.org/Person">
+            <span class="avatar-duotone w-28 h-28 mb-6"><img src="{{ m.image }}" alt="{{ m.name }}" itemprop="image" loading="lazy"></span>
+            <p class="eyebrow mb-2">{{ c.topic }}</p>
+            <h3 class="mt-0 mb-1 text-xl" itemprop="name">{{ m.name }}</h3>
+            <p class="mb-4 text-sm text-gray-500" itemprop="jobTitle">{{ m.job }}</p>
+            <p class="mb-6 text-gray-600">{{ c.text }}</p>
+            <div class="mt-auto">
+                {% if c.link is defined %}
+                <a href="{{ c.link }}" class="button-link-border">{{ c.link_label }} →</a>
+                {% else %}
+                <a href="mailto:contact@thephp.foundation?subject={{ c.subject|url_encode }}" class="button-link-border">Email {{ m.name|split(' ')|first }}</a>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</section>
+
+<section class="container-wide pb-20">
+    <div class="section-rule pt-12 grid grid-cols-1 gap-x-10 gap-y-12 md:grid-cols-3">
+        <div>
+            <p class="eyebrow">Community</p>
+            <h2 class="section-title text-2xl sm:text-3xl">Follow and join us</h2>
+            <p class="text-gray-600 mb-0">News, releases and discussions with the PHP community.</p>
+        </div>
+        <ul class="md:col-span-2 list-none m-0 grid grid-cols-1 sm:grid-cols-2 gap-x-10">
+            {% set icons = {
+                mastodon: '<svg viewBox="0 0 16 16" fill="currentColor" class="h-5 w-5" aria-hidden="true"><path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"/></svg>',
+                x: '<svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>',
+                discord: '<svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5" aria-hidden="true"><path d="M20.317 4.37a19.79 19.79 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.865-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.74 19.74 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.1 13.1 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.292a.074.074 0 0 1 .078-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.3 12.3 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.363 1.225 1.993a.076.076 0 0 0 .084.028 19.84 19.84 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>',
+                linkedin: '<svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>',
+            } %}
+            {% for s in [
+                { icon: 'mastodon', label: 'Mastodon', handle: '@ThePHPF@phpc.social', url: 'https://phpc.social/@ThePHPF' },
+                { icon: 'x', label: 'X', handle: '@ThePHPF', url: 'https://x.com/thephpf' },
+                { icon: 'discord', label: 'Discord', handle: 'PHPc #the-php-foundation', url: 'https://discord.gg/S6tS6UTvaF' },
+                { icon: 'linkedin', label: 'LinkedIn', handle: 'The PHP Foundation', url: 'https://www.linkedin.com/company/phpfoundation/' },
+            ] %}
+            <li class="m-0 border-b border-zinc-700">
+                <a href="{{ s.url }}" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-4 py-4 no-underline">
+                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-zinc-300 bg-white text-gray-800 transition-colors group-hover:border-[#6858f6] group-hover:bg-[#6858f6] group-hover:text-white">
+                        {{ icons[s.icon]|raw }}
+                    </span>
+                    <span class="flex-1">
+                        <span class="block text-sm text-gray-500">{{ s.label }}</span>
+                        <span class="block font-semibold text-gray-900 group-hover:text-[#5646e0]">{{ s.handle }}</span>
+                    </span>
+                    <span class="text-gray-400 group-hover:text-[#5646e0]" aria-hidden="true">↗</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+
+<section class="container-wide pb-24">
+    {% include "newsletter.html" %}
+</section>

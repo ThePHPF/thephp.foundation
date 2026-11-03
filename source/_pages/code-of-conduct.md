@@ -3,6 +3,8 @@ title: Code of Conduct
 description: The PHP Foundation Code of Conduct
 permalink: code-of-conduct
 layout: page
+eyebrow: Community
+subtitle: "Our pledge for a welcoming, respectful and harassment-free community."
 ---
 
 ### Our Pledge

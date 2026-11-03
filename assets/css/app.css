@@ -56,20 +56,24 @@
     }
 
     blockquote {
-        @apply bg-yellow-50 ;
+        @apply bg-indigo-50/60 border-l-4 border-[#6858f6] rounded-r-xl;
     }
 
     blockquote p {
-        @apply p-4 pl-8 pr-8;
+        @apply p-4 pl-6 pr-6;
         @apply mb-0;
     }
 
     a {
-        @apply text-blue-600 underline
+        @apply text-[#5646e0] underline decoration-[#6858f6]/30 underline-offset-2 transition-colors;
     }
 
     a:hover, a:visited:hover {
-        @apply text-zinc-400;
+        @apply text-[#3d2fc4] decoration-[#6858f6];
+    }
+
+    ::selection {
+        @apply bg-[#6858f6]/20;
     }
 }
 
@@ -130,17 +134,230 @@
     .button-next:hover {
         @apply bg-slate-900 opacity-10 text-slate-900
     }
+
+    /* ---------- Shared design system ---------- */
+
+    .container-wide {
+        @apply mx-auto max-w-7xl px-6 lg:px-8;
+    }
+
+    .eyebrow {
+        @apply mb-3 text-sm font-semibold uppercase tracking-wider text-[#6858f6];
+    }
+
+    .page-hero {
+        @apply relative bg-white;
+    }
+
+    .page-title {
+        @apply mt-0 mb-0 text-4xl sm:text-5xl font-bold tracking-tight text-gray-900;
+    }
+
+    .page-lead {
+        @apply mt-5 mb-0 max-w-2xl text-lg sm:text-xl leading-relaxed text-gray-600;
+    }
+
+    .section-title {
+        @apply mt-0 mb-4 text-3xl sm:text-4xl font-bold tracking-tight text-gray-900;
+    }
+
+    .section-lead {
+        @apply mb-0 max-w-2xl text-lg leading-relaxed text-gray-600;
+    }
+
+    .card {
+        @apply rounded-2xl bg-gray-50 transition-colors;
+    }
+
+    .card-hover {
+        @apply hover:bg-indigo-50/60;
+    }
+
+    /* Thin rule that starts and ends on the content grid, never full-bleed */
+    .section-rule {
+        @apply border-t border-[#8a7df8];
+    }
+
+    /* Plain divider for repeated items (cards, list rows) */
+    .item-rule {
+        @apply border-t border-zinc-700;
+    }
+
+    /* Sponsor box: white card in the style of Stripe Checkout, soft shadow, hairline inputs, purple selection */
+    .sponsor-box {
+        @apply border border-zinc-200/80 bg-white shadow-[0_15px_35px_rgba(60,66,87,0.08),0_5px_15px_rgba(0,0,0,0.06)];
+    }
+
+    .sponsor-label {
+        @apply mb-2 text-sm font-medium text-gray-700;
+    }
+
+    .sponsor-note {
+        @apply mb-0 border-l-2 border-[#8a7df8] pl-3 text-sm leading-6 text-gray-700;
+    }
+
+    .sponsor-footnote {
+        @apply mt-3 mb-0 text-center text-xs leading-5 text-gray-500;
+    }
+
+    .sponsor-box a:not(.button-link):not(.sponsor-segment-item) {
+        @apply text-gray-600 hover:text-gray-900;
+    }
+
+    .sponsor-segment {
+        @apply grid gap-1 rounded-xl bg-zinc-100 p-1;
+    }
+
+    .sponsor-segment-item {
+        @apply flex items-center justify-center rounded-lg px-2 py-2 text-sm font-medium !text-gray-700 no-underline transition-colors hover:bg-white/70 hover:!text-gray-900;
+    }
+
+    .sponsor-segment-item.is-active {
+        @apply bg-white font-semibold !text-[#3d2fc4] shadow-[0_1px_3px_rgba(0,0,0,0.12)] hover:bg-white;
+    }
+
+    .sponsor-radio {
+        @apply flex h-3.5 w-3.5 shrink-0 items-center justify-center rounded-full border-2 border-gray-400 transition-colors;
+    }
+
+    /* The dot follows .is-active only, so it can never get out of sync with the highlight */
+    .sponsor-radio > span {
+        @apply hidden h-1.5 w-1.5 rounded-full bg-[#6858f6];
+    }
+
+    .is-active > .sponsor-radio {
+        @apply border-[#6858f6];
+    }
+
+    .is-active > .sponsor-radio > span {
+        @apply block;
+    }
+
+    .sponsor-amount {
+        @apply rounded-lg border border-zinc-200 bg-white shadow-[0_1px_2px_rgba(0,0,0,0.05)] py-2.5 font-semibold text-gray-900 transition-colors hover:border-[#6858f6];
+    }
+
+    .sponsor-amount.is-active {
+        @apply border-[#6858f6] text-[#3d2fc4] ring-1 ring-[#6858f6];
+    }
+
+    /* Larger choice row, used for the partner levels */
+    .sponsor-option {
+        @apply flex w-full items-center gap-3 rounded-lg border border-zinc-200 bg-white shadow-[0_1px_2px_rgba(0,0,0,0.05)] px-4 py-2 text-left text-sm transition-colors hover:border-[#6858f6];
+    }
+
+    .sponsor-option.is-active {
+        @apply border-[#6858f6] ring-1 ring-[#6858f6];
+    }
+
+    .sponsor-input {
+        @apply flex items-center gap-2 rounded-lg border border-zinc-200 bg-white shadow-[0_1px_2px_rgba(0,0,0,0.05)] px-3 py-2.5 transition-colors hover:border-[#6858f6] focus-within:border-[#6858f6] focus-within:ring-1 focus-within:ring-[#6858f6];
+    }
+
+    .sponsor-input.is-active {
+        @apply border-[#6858f6] ring-1 ring-[#6858f6];
+    }
+
+    .sponsor-input input {
+        @apply w-full min-w-0 bg-transparent font-semibold text-[#3d2fc4] outline-none placeholder:font-normal placeholder:text-gray-500 [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none;
+    }
+
+    .tag-pill {
+        @apply inline-block rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-[#5646e0] no-underline hover:bg-indigo-100;
+    }
+
+    .nav-link {
+        @apply rounded-full px-3 py-1.5 text-sm font-medium text-gray-700 no-underline hover:bg-gray-100 hover:text-gray-900;
+    }
+
+    .nav-link-active {
+        @apply bg-indigo-50 text-[#5646e0] hover:bg-indigo-50 hover:text-[#5646e0];
+    }
+
+    /* Black & white portraits, original colours on hover */
+    .avatar-duotone {
+        @apply relative inline-block shrink-0 overflow-hidden rounded-full bg-gray-100;
+    }
+
+    .avatar-duotone img {
+        @apply block h-full w-full object-cover grayscale contrast-125 transition duration-300;
+    }
+
+    .group:hover .avatar-duotone img, .avatar-duotone:hover img {
+        @apply grayscale-0 contrast-100;
+    }
+
+    /* Long-form content (Markdown pages and posts) */
+    .prose-content {
+        @apply text-gray-700;
+    }
+
+    .prose-content > :first-child {
+        @apply mt-0;
+    }
+
+    .prose-content h2 {
+        @apply mt-14 mb-5 text-2xl sm:text-3xl tracking-tight text-gray-900;
+    }
+
+    .prose-content h3 {
+        @apply mt-10 mb-4 text-xl sm:text-2xl tracking-tight text-gray-900;
+    }
+
+    .prose-content h4 {
+        @apply mt-8 mb-3 text-lg text-gray-900;
+    }
+
+    .prose-content p, .prose-content li {
+        @apply text-gray-700 leading-relaxed;
+    }
+
+    .prose-lg p, .prose-lg li {
+        @apply text-lg leading-8;
+    }
+
+    .prose-content ul > li::marker {
+        @apply text-[#6858f6];
+    }
+
+    .prose-content ol > li::marker {
+        @apply text-[#6858f6] font-semibold;
+    }
+
+    .prose-content hr {
+        @apply my-12 border-zinc-700;
+    }
+
+    .prose-content img {
+        @apply rounded-xl;
+    }
+
+    .prose-content pre {
+        @apply mb-6 rounded-xl overflow-x-auto text-sm;
+    }
+
+    .prose-content pre code {
+        @apply bg-transparent p-0 text-inherit;
+    }
+
+    .prose-content table {
+        @apply mb-6 w-full overflow-hidden rounded-xl text-left;
+    }
+
+    .prose-content table th {
+        @apply bg-gray-50;
+    }
 }
 
 :target {
-    scroll-margin-top: 64px;
+    scroll-margin-top: 88px;
 }
 
 :target::before {
     content: "";
     display: block;
-    margin-top: -64px;
-    height: 64px;
+    margin-top: -88px;
+    height: 88px;
     width: 1px;
 }
 
@@ -173,12 +390,33 @@ code {
     @apply bg-red-100 border border-red-400  px-4 py-3 pt-4 pb-4 mb-8 text-base;
 }
 
+.button-link, .button-link-border, .button-link-light {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 px-6 py-2 font-medium leading-6 text-center no-underline transition-colors duration-200 ease-out;
+    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6858f6];
+}
+
 .button-link {
-    @apply inline-block py-2 no-underline px-6 !text-white bg-[#6858f6] rounded-3xl hover:bg-[rgba(104,88,246,.8)];
+    @apply border-transparent bg-[#6858f6] !text-white;
+    @apply hover:bg-[#4a3bd1];
 }
 
 .button-link-border {
-    @apply inline-block py-2 no-underline px-6 hover:text-white text-[#6858f6] bg-white border-2 border-[#6858f6] rounded-3xl hover:bg-[#6858f6];
+    @apply border-[#6858f6] bg-white text-[#6858f6];
+    @apply hover:bg-[#6858f6] hover:!text-white;
+}
+
+/* Outline button for dark backgrounds */
+.button-link-light {
+    @apply border-white/40 bg-transparent !text-white;
+    @apply hover:border-white hover:bg-white hover:!text-gray-900 focus-visible:outline-white;
+}
+
+.button-lg {
+    @apply text-lg px-7 py-3;
+}
+
+.button-block {
+    @apply flex w-full;
 }
 
 table tr th {
@@ -186,7 +424,7 @@ table tr th {
 }
 
 table tr td, table tr th {
-    @apply border-solid border border-gray-300 p-1.5;
+    @apply border-solid border border-zinc-400 px-3 py-2;
 }
 
 table tr, td {

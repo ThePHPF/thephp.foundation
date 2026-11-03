@@ -2,6 +2,8 @@
 title: What we do
 permalink: foundation
 layout: page
+eyebrow: About
+subtitle: "We fund the people who maintain and develop the PHP language, transparently and with clear governance."
 ---
 
 ## Governance
