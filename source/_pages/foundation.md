@@ -42,3 +42,57 @@ We established the following timeline for team review.
 * November 2024: Renew contracts with existing developers, potentially sign contracts with new developers.  
 
 And in 2025 we start the cycle again.
+
+## Talks
+
+<div class="my-16 gap-8 flex flex-col">
+    {{ include('presentations-item.html', {
+        iframe: 'https://www.youtube.com/embed/ltoPWEzPqEQ',
+        date: 'Jun 09, 2026',
+        place: 'Amsterdam, Netherlands',
+        conference: 'JetBrains PHPverse 2026',
+        title: 'Getting to Know The PHP Foundation',
+        description: 'Many know The PHP Foundation exists; few know what it actually does. In this talk, Elizabeth explains why the Foundation was founded, what it works on, and how it supports the PHP ecosystem.',
+        team: ['elizabeth-barron']
+    }) }}
+
+    {{ include('presentations-item.html', {
+        iframe: 'https://www.youtube.com/embed/XE4g1Tl6RQw',
+        date: 'Feb 05-06, 2024',
+        place: 'Amsterdam, Netherlands',
+        conference: 'Laracon EU 2024',
+        title: 'The PHP Foundation',
+        description: 'The PHP Foundation is a non-profit organization formed in 2021 by well-known PHP folks as well as major companies from the PHP ecosystem. What we have achieved since then and what we are planning next.',
+        team: ['roman-pronskiy']
+    }) }}
+
+    {{ include('presentations-item.html', {
+        iframe: 'https://speakerdeck.com/player/a151df6d6f35473589cebb7b17caa92d',
+        date: 'Dec 07-08, 2023',
+        place: 'Brussels, Belgium',
+        conference: 'SymfonyCon 2023',
+        title: 'Symfony, PHP and its Foundation',
+        description: 'The PHP Foundation supports PHP\'s growth and core developers, emphasizing its vital link with Symfony to ensure the language\'s evolution and relevance.',
+        team: ['nicolas-grekas'],
+    }) }}
+
+    {{ include('presentations-item.html', {
+        iframe: 'https://media.ccc.de/v/froscon2023-2859-the_php_foundation/oembed',
+        date: 'Aug 05-06, 2023',
+        place: 'Sankt Augustin, Germany',
+        conference: 'FrOSCon 2023',
+        title: 'The PHP Foundation',
+        description: 'The PHP Foundation is a non-profit organization formed in 2021 by well-known PHP folks as well as major companies from the PHP ecosystem. What we have achieved since then and what we are planning next.',
+        team: ['sebastian-bergmann'],
+    }) }}
+
+    {{ include('presentations-item.html', {
+        iframe: 'https://www.youtube.com/embed/JBPtPy9iSP0',
+        date: 'Oct 13-14, 2022',
+        place: 'Paris, France',
+        conference: 'Forum PHP 2022',
+        title: 'The PHP Foundation: The Past, the Present, and the Future',
+        description: 'A complex saga of developers scattered around the world, all living under the rule of the elePHPant technology.',
+        team: ['roman-pronskiy', 'sebastian-bergmann'],
+    }) }}
+</div>
