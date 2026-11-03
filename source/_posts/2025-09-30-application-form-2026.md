@@ -13,7 +13,7 @@ published_at: 30 September 2025
 
 > Current major sponsors include JetBrains, Automattic, Sovereign Tech Agency, Laravel, GoDaddy.com, Private Packagist, Craft CMS, Zend by Perforce, Tideways, Symfony, Mercari Inc., Les-Tilleuls.coop, pixiv Inc., Aternos GmbH, Sentry, Cybozu, Manychat, and Passbolt.
 
-> The foundation pays [11 developers](https://thephp.foundation/structure/#core_developers) to work on the language. See what the foundation achieved in 2024 in the [Impact and transparency report](https://thephp.foundation/blog/2025/03/31/transparency-and-impact-report-2024/). You can also watch [Roman Pronskiy's video overview](https://www.youtube.com/watch?v=2qTJgx2QF9M) of what the Foundation is working on.
+> The foundation pays [11 developers](https://thephp.foundation/structure/#core-developers) to work on the language. See what the foundation achieved in 2024 in the [Impact and transparency report](https://thephp.foundation/blog/2025/03/31/transparency-and-impact-report-2024/). You can also watch [Roman Pronskiy's video overview](https://www.youtube.com/watch?v=2qTJgx2QF9M) of what the Foundation is working on.
 
 We're opening a regular round of applications for developer positions. We intend to decide on whom we will hire by the end of November. If selected, you would start your work January 1st, 2026.
 

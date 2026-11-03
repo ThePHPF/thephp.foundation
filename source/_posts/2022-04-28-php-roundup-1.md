@@ -92,7 +92,7 @@ Every major change to PHP is discussed and implemented with the consensus of the
 
 ## Merged PRs and Commits
 
-Some of the minor changes made to PHP are first made as a pull request to the [PHP GitHub project](github.com/php/php-src), and if deemed acceptable by PHP core maintainers, they are merged without going through a formal RFC process. We have automatic tests in place to flag PRs that break existing functionality. The majority of the minor changes from the community are made through PRs.
+Some of the minor changes made to PHP are first made as a pull request to the [PHP GitHub project](https://github.com/php/php-src), and if deemed acceptable by PHP core maintainers, they are merged without going through a formal RFC process. We have automatic tests in place to flag PRs that break existing functionality. The majority of the minor changes from the community are made through PRs.
 
 
 
