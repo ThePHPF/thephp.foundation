@@ -8,7 +8,7 @@ permalink: structure
 <div class="my-16 mb-24">
     <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
         <div class="space-y-5 sm:space-y-4">
-            <h2 class="text-3xl text-gray-800 font-bold tracking-tight mt-0" id="{{ group.title }}">{{ group.title
+            <h2 class="text-3xl text-gray-800 font-bold tracking-tight mt-0" id="{{ group.title|lower|replace({' ': '-'}) }}">{{ group.title
                 }}</h2>
             <div class="text-xl text-gray-500">
                 {{ group.description }}

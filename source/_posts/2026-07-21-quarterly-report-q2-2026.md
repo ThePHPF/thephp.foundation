@@ -9,7 +9,7 @@ author:
   - elizabeth-barron
 published_at: 21 July 2026
 ---
-Our [team of core developers](https://thephp.foundation/structure/#Core%20Developers) works very hard to strengthen and improve the PHP language. In an effort to improve the way we communicate this work, from now on, we will be posting quarterly updates regarding their individual projects and efforts.
+Our [team of core developers](https://thephp.foundation/structure/#core-developers) works very hard to strengthen and improve the PHP language. In an effort to improve the way we communicate this work, from now on, we will be posting quarterly updates regarding their individual projects and efforts.
 
 Our core team consists of 13 people, distributed across 8 countries. Most of our contractors work part-time for The PHP Foundation and have other ventures aside from working on the PHP core. Also, this report is not meant to be a comprehensive list of everything our contractors shipped, but a high-level summary of their most impactful work.
 
