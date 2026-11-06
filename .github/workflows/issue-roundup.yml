@@ -25,6 +25,7 @@ jobs:
               - [ ] Twitter
               - [ ] LinkedIn
               - [ ] Mastodon
+              - [ ] Bluesky
             - [ ] Send out email newsletter
             
           pinned: false
