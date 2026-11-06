@@ -11,6 +11,7 @@ We will get back to you as soon as possible.
 Follow us on social media:
 
 - Mastodon: [@ThePHPF@phpc.social](https://phpc.social/@ThePHPF)
+- Bluesky: [The PHP Foundation](https://bsky.app/profile/did:plc:pf7h6uw6knk2taujthxvdt4l)
 - X: [@ThePHPF](https://x.com/thephpf)
 - Discord: [PHPc #the-php-foundation](https://discord.gg/S6tS6UTvaF)
 - LinkedIn: [The PHP Foundation](https://www.linkedin.com/company/phpfoundation/)
