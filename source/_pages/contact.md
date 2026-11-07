@@ -12,6 +12,7 @@ Follow us on social media:
 
 - Mastodon: [@ThePHPF@phpc.social](https://phpc.social/@ThePHPF)
 - X: [@ThePHPF](https://x.com/thephpf)
+- Bluesky: [@thephpf.bsky.social](https://bsky.app/profile/thephpf.bsky.social)
 - Discord: [PHPc #the-php-foundation](https://discord.gg/S6tS6UTvaF)
 - LinkedIn: [The PHP Foundation](https://www.linkedin.com/company/phpfoundation/)
 
