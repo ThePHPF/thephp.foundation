@@ -11,7 +11,7 @@ permalink: structure
             <h2 class="text-3xl text-gray-800 font-bold tracking-tight mt-0" id="{{ group.title|lower|replace({' ': '-'}) }}">{{ group.title
                 }}</h2>
             <div class="text-xl text-gray-500">
-                {{ group.description }}
+                {{ group.description|raw }}
             </div>
         </div>
         <div class="lg:col-span-2">
@@ -24,3 +24,34 @@ permalink: structure
     </div>
 </div>
 {% endfor %}
+
+<div class="my-16 mb-24">
+    <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
+        <div class="space-y-5 sm:space-y-4">
+            <h2 class="text-3xl text-gray-800 font-bold tracking-tight mt-0" id="governance">Governance</h2>
+            <div class="text-xl text-gray-500">
+                How the PHP Foundation operates and makes decisions.
+            </div>
+        </div>
+        <div class="lg:col-span-2 text-base leading-7 text-gray-700">
+            <p>The PHP Foundation operates with a structured governance model designed to ensure transparency, accountability, and effective stewardship of resources dedicated to the PHP language.</p>
+
+            <p>Our governance structure consists of four key entities:</p>
+
+            <ul>
+                <li><strong>Board of Directors</strong> – Provides strategic oversight, sets the Foundation's goals, and makes final decisions on major matters. The Board consists of 5-10 members representing platinum sponsors, other sponsors, and community representatives.</li>
+                <li><strong>Executive Director</strong> – Manages day-to-day operations, implements the approved strategy, and serves as the bridge between the Board and staff.</li>
+                <li><strong>Advisory Board</strong> – Provides high-value input and strategic foresight from major sponsors (Silver tier and above), founding companies, and community leaders.</li>
+                <li><strong>Developers (Staff)</strong> – Execute technical work, maintain the PHP codebase, and support community needs.</li>
+            </ul>
+
+            <p>The Board of Directors meets monthly and makes decisions by consensus when possible, moving to formal votes when needed. All board members and staff are expected to abide by the <a href="/code-of-conduct">Code of Conduct</a>.</p>
+
+            <p>To promote transparency, we operate as a <a href="https://opencollective.com/phpfoundation">collective on the Open Collective platform</a>, through which we manage activities such as selection and financing of PHP core developers. The Foundation operates through Open Source Collective as its fiscal host.</p>
+
+            <p><strong>Important:</strong> The Request for Comments (RFC) process is not affiliated with the PHP Foundation. Language decisions remain the matter of the PHP Internals community.</p>
+
+            <p>Learn more about our <a href="/governance">governance model</a>.</p>
+        </div>
+    </div>
+</div>
