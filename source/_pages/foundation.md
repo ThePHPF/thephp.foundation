@@ -6,23 +6,41 @@ layout: page
 
 ## Foundation Activities
 
+The primary goal of The PHP Foundation is to ensure the long-term sustainability and viability of the PHP language. Our activities support this goal in three areas:
+
+* Language Development
+* Community Engagement
+* PHP Representation
+
+You can read about our efforts in each of these areas below.
+
+## Language Development
+
 The primary task of the PHP Foundation is to fund developers to work on PHP. Funds collected
 through the Open Collective platform may be used in the first place to engage the services of
 PHP developers to further advance the development and maintenance of the language.
 
 PHP’s Request for Comments (RFC) process operates independently of the PHP Foundation. Decisions regarding the language are made through this community-driven process, as outlined [here](https://wiki.php.net/rfc/howto).
 
+## Community Engagement
+
+The PHP Foundation invests in the people and programs that keep the PHP community healthy, connected, and growing. This includes initiatives such as the PHP Ambassador program, our monthly newsletter, the State of PHP survey, and support for community events. All of these are aimed at strengthening collaboration and communication across the ecosystem.
+
+## PHP Representation
+
+The PHP Foundation represents the interests of PHP and its community in the broader technology landscape. We advocate for PHP’s role in the open-source world, highlight its importance to digital infrastructure and sovereignty, and speak about the language and the Foundation’s work at conferences and events.
+
 ## Team Timeline
 
 We established the following timeline for team review. 
 
-* January 2024: Developers start work according to the new contracts.  
-* May 2024: Evaluate new developers, contracts are extended, expanded, or terminated after the first 6 months.  
-* September 2024: Open applications for new developers, evaluate performance of the current group of developers.  
-* October 2024: Evaluate applications, work out updates to compensation, decide on a budget.  
-* November 2024: Renew contracts with existing developers, potentially sign contracts with new developers.  
+* January: Developers start work according to the new contracts.  
+* May: Evaluate new developers, contracts are extended, expanded, or terminated after the first 6 months.  
+* September: Open applications for new developers, evaluate performance of the current group of developers.  
+* October: Evaluate applications, work out updates to compensation, decide on a budget.  
+* November: Renew contracts with existing developers, potentially sign contracts with new developers.  
 
-And in 2025 we start the cycle again.
+And then we start the cycle again.
 
 ## Talks
 
