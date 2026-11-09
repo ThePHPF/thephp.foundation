@@ -84,6 +84,7 @@ You don't need to be a C developer to contribute to PHP. There are many ways to 
 - **Help existing open-source projects**, teach and mentor developers, and strengthen your local PHP communities.
 
 For a thorough, friendly walkthrough of each of these—and where to turn when you get stuck—see our guide: [How to contribute to PHP](https://thephp.foundation/blog/2026/08/17/how-to-contribute-to-php/).
+You will find more practical advice for contributors and maintainers on our [Guides](https://thephp.foundation/guides) page.
 
 When you need to get unstuck, the [PHP Community Discord](https://phpc.chat/) has channels ranging from beginner questions (`#php-src-help`) to core development (`#php-internals`), and the [internals mailing list](https://www.php.net/mailing-lists.php) is the canonical venue for development discussion.
 
