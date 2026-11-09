@@ -222,11 +222,13 @@ class Team
                 'github' => 'https://github.com/edorian',
                 'url' => 'https://de.linkedin.com/in/volker-dusch',
             ],
-              'alexandre-daubois' => [
+            'alexandre-daubois' => [
                 'name' => 'Alexandre Daubois',
                 'image' => 'https://avatars.githubusercontent.com/u/2144837?s=200&v=4',
                 'job' => 'Core Developer',
                 'github' => 'https://github.com/alexandre-daubois',
+                'linkedin' => 'https://www.linkedin.com/in/alexandre-daubois/',
+                'twitter' => 'https://x.com/alexdaubois',
                 'url' => 'https://www.linkedin.com/in/alexandre-daubois/?locale=en',
             ],
             'rasmus-lerdorf' => [
