@@ -35,17 +35,24 @@ You can achieve Silver, Gold, or Platinum status by making financial contributio
 
 - Sponsors are removed from the list at the end of each calendar year if their total contributions for that year do not meet the threshold for their level.
 
-For example, if you contribute $1,500 monthly in 2024, your total contribution by September will be $12,000, qualifying you as a Silver member for the rest of 2024 and all of 2025.
+For example, if you contribute $1,500 monthly beginning in January, your total contribution by September will be $12,000, qualifying you as a Silver member for the _rest of the calendar year and the next_.
 
 <div class="flex mt-12 mb-12 border-b border-t pt-4">
   <div class="flex-initial w-1/2 pr-2">
     <h2 id="membership-deck">Want to learn more?</h2>
 
-    See our presentation with the latest information <br>
-    and insights about The PHP Foundation.
+    Read our annual Impact &amp; Transparency Reports for a detailed look <br>
+    at what The PHP Foundation has accomplished and how funds are used.
 
     <div class="mt-6">
-      <a href="https://docs.google.com/presentation/d/1MT7wqcu31DZ7IHheCxWg_Bm01usP0Sh1hBwlqHuqiUE/export/pdf" class="button-link">Sponsorship Deck</a>
+      <a href="/blog/2026/05/27/impact-and-transparency-report-2025/" class="button-link">2025 Impact Report</a>
+    </div>
+
+    <div class="mt-4">
+      Previous reports:
+      <a href="/blog/2025/03/31/transparency-and-impact-report-2024/">2024</a> ·
+      <a href="/blog/2024/02/26/transparency-and-impact-report-2023/">2023</a> ·
+      <a href="/blog/2022/11/22/transparency-and-impact-report-2022/">2022</a>
     </div>
   </div>
   <div class="flex-initial w-1/2">
