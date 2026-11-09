@@ -179,7 +179,7 @@ At The PHP Foundation, we support, promote, and advance the PHP language. We fin
 
 A big thanks to all our sponsors — PHP Foundation is all of us!
 
-Follow us on Twitter/X [@ThePHPF](https://twitter.com/thephpf), [Mastodon](https://phpc.social/@thephpf), [LinkedIn](https://www.linkedin.com/company/phpfoundation/), and [Bluesky](https://bsky.app/profile/thephpf.bsky.social) to get the latest updates from the Foundation.
+Follow us on Twitter/X [@ThePHPF](https://twitter.com/thephpf), [Mastodon](https://phpc.social/@thephpf), [LinkedIn](https://www.linkedin.com/company/phpfoundation/), and [Bluesky](https://bsky.app/profile/did:plc:pf7h6uw6knk2taujthxvdt4l) to get the latest updates from the Foundation.
 
 💜️ 🐘
 
