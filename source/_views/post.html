@@ -32,6 +32,12 @@
         {% endif %}
         </div>
 
+        {% if page.guide %}
+        <p class="mt-4 mb-0 text-sm text-gray-600">
+            This post is part of our <a href="{{ site.url }}/guides#{{ page.guide }}">Guides</a>.
+        </p>
+        {% endif %}
+
         <div class="mt-6 text-xl leading-8" itemprop="text">
             {{ page.blocks.content|raw }}
         </div>
