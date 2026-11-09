@@ -1,0 +1,58 @@
+---
+title: Guides
+subtitle: Practical guidance for people who contribute to PHP and maintain PHP projects.
+description: Practical guidance from The PHP Foundation for people who contribute to PHP and maintain PHP projects.
+layout: page
+permalink: guides
+use:
+    - posts
+---
+{#
+    A blog post appears on this page when its front matter has a `guide` key
+    whose value is one of the section keys below, for example:
+
+        guide: maintaining
+#}
+{% set sections = {
+    'contributing': {
+        'title': 'Contributing to PHP',
+        'intro': 'There are many ways to give back to PHP and its ecosystem, and most of them do not require writing C.',
+    },
+    'maintaining': {
+        'title': 'Maintaining PHP projects',
+        'intro': 'Guidance for maintainers of PHP libraries, frameworks, and tools.',
+    },
+} %}
+
+<p>These guides first appeared on our <a href="{{ site.url }}/blog">blog</a>. This page groups them by topic so that you can find them when you need them.</p>
+
+{% for key, section in sections %}
+{% set guides = data.posts|filter(post => post.guide == key) %}
+{% if guides is not empty %}
+<h2 id="{{ key }}">{{ section.title }}</h2>
+
+<p>{{ section.intro }}</p>
+
+<div class="space-y-8">
+    {% for post in guides %}
+    <article>
+        <h3 class="mt-0 mb-2 text-lg font-semibold leading-6">
+            <a href="{{ site.url }}{{ post.url }}" class="no-underline border-b">{{ post.title|raw }}</a>
+        </h3>
+
+        {% if post.description %}
+        <p class="mb-2 text-sm leading-6 text-gray-600">{{ post.description }}</p>
+        {% endif %}
+
+        <div class="text-xs text-gray-500">
+            Published on {{ post.published_at|date("M d, Y") }}
+            {%- for item in post.author %}
+            {% set author = fetch_member_by_code(item) %}
+            {% if author %}{% if loop.first %} by {% endif %}<a href="{{ author.url }}" class="no-underline" target="_blank" rel="noopener noreferrer">{{ author.name }}</a>{% if loop.last == false %}, {% endif %}{% endif %}
+            {% endfor %}
+        </div>
+    </article>
+    {% endfor %}
+</div>
+{% endif %}
+{% endfor %}
