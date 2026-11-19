@@ -7,6 +7,7 @@ tags:
     - SIGs
 author:
   - sebastian-bergmann
+guide: maintaining
 published_at: 8 October 2026
 ---
 

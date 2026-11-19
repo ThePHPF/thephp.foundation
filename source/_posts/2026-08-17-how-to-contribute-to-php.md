@@ -7,6 +7,7 @@ tags:
     - community
 author:
   - matt-stauffer
+guide: contributing
 published_at: 17 August 2026
 ---
 
