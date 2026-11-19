@@ -59,9 +59,3 @@
 </div>
 {% endif %}
 
-<h3 id="past_sponsors">Past Sponsors</h3>
-<div class="text-base mb-8">
-    {{ sponsors['Past'] | map((sponsor) => 
-        "<a class=\"no-underline text-inherit\" href=\"#{sponsor.website}\">#{sponsor.name}</a>")
-    | join(', ') | raw }}.
-</div>
