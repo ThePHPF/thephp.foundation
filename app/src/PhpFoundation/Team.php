@@ -14,7 +14,7 @@ class Team
             ],
             [
                 'title' => 'Board',
-                'description' => 'The Board of Directors consists of veteran PHP core developers, PHP community leaders, representatives of sponsors, and other key stakeholders. The PHP Foundation does not compensate board members.',
+                'description' => 'The Board of Directors consists of veteran PHP core developers, PHP community leaders, representatives of sponsors, and other key stakeholders. The PHP Foundation does not compensate board members. <a href="https://github.com/ThePHPF/foundation/tree/main/board%20minutes">Board meeting minutes</a> are published publicly on GitHub.',
                 'members' => ['sebastian-bergmann', 'nils-adermann', 'benjamin-eberlei', 'josepha-haden', 'nicolas-grekas', 'sara-golemon', 'matthew-weier-o-phinney', 'matt-stauffer', 'anne-mccarthy', 'brent-roose'],
             ],
             [
@@ -25,7 +25,7 @@ class Team
             [
                 'title' => 'Community',
                 'description' => 'Active community members who help the PHP Foundation.',
-                'members' => ['rasmus-lerdorf', 'dmitry-stogov', 'nikita-popov', 'ayesh-karunaratne', 'tobias-nyholm', 'sergey-panteleev','roman-pronskiy'],
+                'members' => ['dmitry-stogov', 'tobias-nyholm', 'sergey-panteleev', 'roman-pronskiy', 'tim-dusterhus', 'joe-ferguson', 'larry-garfield', 'rasmus-lerdorf', 'nikita-popov', 'ayesh-karunaratne'],
             ],
         ];
     }
@@ -126,6 +126,8 @@ class Team
                 'job' => 'Board member',
                 'github' => 'https://github.com/mattstauffer',
                 'url' => 'https://github.com/mattstauffer',
+                'twitter' => 'https://x.com/mattstauffer',
+                'linkedin' => 'https://www.linkedin.com/in/mattstauffer',
             ],
             'derick-rethans' => [
                 'name' => 'Derick Rethans',
@@ -278,6 +280,13 @@ class Team
                 'twitter' => 'https://twitter.com/s_panteleev',
                 'github' => 'https://github.com/saundefined',
                 'url' => 'https://sergeypanteleev.com',
+            ],
+            'joe-ferguson' => [
+                'name' => 'Joe Ferguson',
+                'image' => 'https://avatars.githubusercontent.com/u/967362?s=200&v=4',
+                'job' => null,
+                'github' => 'https://github.com/svpernova09',
+                'url' => 'https://www.joeferguson.me',
             ],
             'larry-garfield' => [
                 'name' => 'Larry Garfield',
