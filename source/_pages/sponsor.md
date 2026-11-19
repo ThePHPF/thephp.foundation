@@ -49,10 +49,7 @@ For example, if you contribute $1,500 monthly beginning in January, your total c
     </div>
 
     <div class="mt-4">
-      Previous reports:
-      <a href="/blog/2025/03/31/transparency-and-impact-report-2024/">2024</a> ·
-      <a href="/blog/2024/02/26/transparency-and-impact-report-2023/">2023</a> ·
-      <a href="/blog/2022/11/22/transparency-and-impact-report-2022/">2022</a>
+      <a href="/blog/tag/report/">See all reports</a>
     </div>
   </div>
   <div class="flex-initial w-1/2">

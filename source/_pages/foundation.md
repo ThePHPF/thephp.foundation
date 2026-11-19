@@ -6,7 +6,7 @@ layout: page
 
 ## Foundation Activities
 
-The primary goal of The PHP Foundation is to ensure the long-term sustainability and viability of the PHP language. Our activities support this goal in three areas:
+The mission of The PHP Foundation is to ensure the long-term prosperity of the PHP language. Our activities support this mission in three areas:
 
 * Language Development
 * Community Engagement
